@@ -1,1010 +1,2225 @@
 {
-    "commands": {
-        "afk": {
-            "command_description": "Check if a user is AFK."
-        },
-        "auto": {
-            "command_description": "desc",
-            "command_name": "auto",
-            "params": {
-                "proxy": {
-                    "parameter_description": "proxy_desc",
-                    "parameter_name": "proxy"
-                }
-            }
-        },
-        "avatar": {
-            "command_description": "desc",
-            "command_name": "avatar",
-            "params": {
-                "avatar": {
-                    "parameter_description": "avatar_desc",
-                    "parameter_name": "avatar"
-                },
-                "proxy": {
-                    "parameter_description": "proxy_desc",
-                    "parameter_name": "proxy"
-                }
-            }
-        },
-        "birthday": {
-            "command_description": "desc",
-            "command_name": "birthday",
-            "params": {
-                "birthday": {
-                    "parameter_description": "birthday_desc",
-                    "parameter_name": "birthday"
-                },
-                "proxy": {
-                    "parameter_description": "proxy_desc",
-                    "parameter_name": "proxy"
-                }
-            }
-        },
-        "check_permissions": {
-            "command_description": "desc",
-            "command_name": "check_permissions"
-        },
-        "color": {
-            "command_description": "Set a color for a proxy."
-        },
-        "create": {
-            "command_description": "desc",
-            "command_name": "create",
-            "params": {
-                "image": {
-                    "parameter_description": "image_desc",
-                    "parameter_name": "image"
-                },
-                "prefixes": {
-                    "parameter_description": "Prefixes e.g. A:text, |text|, etc."
-                }
-            }
-        },
-        "delete": {
-            "command_description": "desc",
-            "command_name": "delete",
-            "params": {
-                "proxy": {
-                    "parameter_description": "proxy_desc",
-                    "parameter_name": "proxy"
-                }
-            }
-        },
-        "description": {
-            "command_description": "desc",
-            "command_name": "description",
-            "params": {
-                "proxy": {
-                    "parameter_description": "proxy_desc",
-                    "parameter_name": "proxy"
-                },
-                "text": {
-                    "parameter_description": "text_desc",
-                    "parameter_name": "text"
-                }
-            }
-        },
-        "detail": {
-            "command_description": "desc",
-            "command_name": "detail",
-            "params": {
-                "proxy": {
-                    "parameter_description": "proxy_desc",
-                    "parameter_name": "proxy"
-                }
-            }
-        },
-        "exec": {
-            "command_description": "Execute a command."
-        },
-        "export": {
-            "command_description": "desc",
-            "command_name": "export",
-            "params": {
-                "format": {
-                    "choices": {
-                        "Default": "Default",
-                        "PluralKit": "PluralKit",
-                        "Tupperbox": "Tupperbox"
-                    },
-                    "parameter_description": "format_desc",
-                    "parameter_name": "format"
-                },
-                "new_token": {
-                    "parameter_description": "new_token_desc",
-                    "parameter_name": "new_token"
-                }
-            }
-        },
-        "group": {
-            "command_description": "desc",
-            "command_name": "group",
-            "params": {
-                "group": {
-                    "parameter_description": "group_desc",
-                    "parameter_name": "group"
-                },
-                "proxy": {
-                    "parameter_description": "proxy_desc",
-                    "parameter_name": "proxy"
-                }
-            }
-        },
-        "help": {
-            "command_description": "desc",
-            "command_name": "help",
-            "params": {
-                "search": {
-                    "parameter_description": "search_desc",
-                    "parameter_name": "search"
-                }
-            }
-        },
-        "import": {
-            "command_description": "desc",
-            "command_name": "import",
-            "params": {
-                "data": {
-                    "parameter_description": "data_desc",
-                    "parameter_name": "data"
-                },
-                "deleting_from_token": {
-                    "parameter_description": "deleting_from_token_desc",
-                    "parameter_name": "deleting_from_token"
-                },
-                "token": {
-                    "parameter_description": "token_desc",
-                    "parameter_name": "token"
-                }
-            }
-        },
-        "latch": {
-            "command_description": "desc",
-            "command_name": "latch",
-            "params": {
-                "auto_remove": {
-                    "parameter_description": "auto_remove"
-                },
-                "enable": {
-                    "parameter_description": "enable"
-                }
-            }
-        },
-        "list": {
-            "command_description": "desc",
-            "command_name": "list",
-            "params": {
-                "group": {
-                    "parameter_description": "group_desc",
-                    "parameter_name": "group"
-                }
-            }
-        },
-        "local": {
-            "command_description": "desc",
-            "command_name": "local",
-            "params": {
-                "avatar": {
-                    "parameter_description": "image_desc",
-                    "parameter_name": "image"
-                },
-                "nickname": {
-                    "parameter_description": "nickname_desc",
-                    "parameter_name": "nickname"
-                },
-                "proxy": {
-                    "parameter_description": "proxy_desc",
-                    "parameter_name": "proxy"
-                }
-            }
-        },
-        "nickname": {
-            "command_description": "desc",
-            "command_name": "nickname",
-            "params": {
-                "nickname": {
-                    "parameter_description": "nickname_desc",
-                    "parameter_name": "nickname"
-                },
-                "proxy": {
-                    "parameter_description": "proxy_desc",
-                    "parameter_name": "proxy"
-                }
-            }
-        },
-        "npc": {
-            "command_description": "desc",
-            "command_name": "npc",
-            "params": {
-                "emotion": {
-                    "choices": {
-                        "Angry": "Angry",
-                        "Crying": "Crying",
-                        "Determined": "Determined",
-                        "Dizzy": "Dizzy",
-                        "Happy": "Happy",
-                        "Inspired": "Inspired",
-                        "Joyous": "Joyous",
-                        "Normal": "Normal",
-                        "Pain": "Pain",
-                        "Sad": "Sad",
-                        "Shouting": "Shouting",
-                        "Sigh": "Sigh",
-                        "Special0": "Special0",
-                        "Special1": "Special1",
-                        "Special2": "Special2",
-                        "Special3": "Special3",
-                        "Stunned": "Stunned",
-                        "Surprised": "Surprised",
-                        "TearyEyed": "TearyEyed",
-                        "Worried": "Worried"
-                    },
-                    "parameter_description": "emotion_desc",
-                    "parameter_name": "emotion"
-                },
-                "franchise": {
-                    "choices": {
-                        "D&D": "D&D",
-                        "Digimon": "Digimon",
-                        "Palworld": "Palworld",
-                        "Pokemon": "Pokemon",
-                        "Pokemon Shiny": "Pokemon Shiny",
-                        "Trainer": "Trainer"
-                    },
-                    "parameter_description": "franchise_desc",
-                    "parameter_name": "franchise"
-                },
-                "image": {
-                    "parameter_description": "image_desc",
-                    "parameter_name": "image"
-                },
-                "nickname": {
-                    "parameter_description": "nickname_desc",
-                    "parameter_name": "nickname"
-                },
-                "npc": {
-                    "parameter_description": "npc_desc",
-                    "parameter_name": "npc"
-                },
-                "text": {
-                    "parameter_description": "text",
-                    "parameter_name": "text"
-                }
-            }
-        },
-        "nsfw": {
-            "command_description": "desc",
-            "command_name": "nsfw",
-            "params": {
-                "nsfw": {
-                    "parameter_description": "nsfw_desc",
-                    "parameter_name": "nsfw"
-                },
-                "proxy": {
-                    "parameter_description": "proxy_desc",
-                    "parameter_name": "proxy"
-                }
-            }
-        },
-        "prefix": {
-            "command_description": "desc",
-            "command_name": "prefix",
-            "params": {
-                "prefixes": {
-                    "parameter_description": "prefixes_desc",
-                    "parameter_name": "prefixes"
-                },
-                "proxy": {
-                    "parameter_description": "proxy_desc",
-                    "parameter_name": "proxy"
-                }
-            }
-        },
-        "proxy": {
-            "command_description": "desc",
-            "command_name": "proxy",
-            "params": {
-                "enable": {
-                    "parameter_description": "enable_desc",
-                    "parameter_name": "enable"
-                }
-            }
-        },
-        "proxy-to-variant": {
-            "command_description": "desc",
-            "command_name": "proxy-to-variant",
-            "params": {
-                "base": {
-                    "parameter_description": "base_desc",
-                    "parameter_name": "base"
-                },
-                "original": {
-                    "parameter_description": "original_desc",
-                    "parameter_name": "original"
-                }
-            }
-        },
-        "prune": {
-            "command_description": "desc",
-            "command_name": "prune",
-            "params": {
-                "time": {
-                    "parameter_description": "time"
-                }
-            }
-        },
-        "purge": {
-            "command_description": "desc",
-            "command_name": "purge",
-            "params": {
-                "confirmation": {
-                    "parameter_description": "confirmation",
-                    "parameter_name": "confirmation"
-                }
-            }
-        },
-        "read": {
-            "command_description": "desc",
-            "command_name": "read",
-            "params": {
-                "proxy": {
-                    "parameter_description": "proxy_desc",
-                    "parameter_name": "proxy"
-                }
-            }
-        },
-        "rename": {
-            "command_description": "desc",
-            "command_name": "rename",
-            "params": {
-                "name": {
-                    "parameter_description": "name_desc",
-                    "parameter_name": "name"
-                },
-                "proxy": {
-                    "parameter_description": "proxy_desc",
-                    "parameter_name": "proxy"
-                }
-            }
-        },
-        "roll": {
-            "command_description": "Roll a dice."
-        },
-        "say": {
-            "command_description": "Say something.",
-            "params": {
-                "text": {
-                    "parameter_description": "text",
-                    "parameter_name": "text"
-                }
-            }
-        },
-        "server_wiki": {
-            "command_description": "desc",
-            "command_name": "server_wiki",
-            "params": {
-                "search": {
-                    "parameter_description": "search_desc",
-                    "parameter_name": "search"
-                }
-            }
-        },
-        "set": {
-            "command_description": "Set a proxy as the current one."
-        },
-        "settings": {
-            "command_description": "desc",
-            "command_name": "settings",
-            "params": {
-                "menu": {
-                    "choices": {
-                        "Member": "Member",
-                        "Server": "Server",
-                        "User": "User"
-                    },
-                    "parameter_description": "menu_desc",
-                    "parameter_name": "menu"
-                }
-            }
-        },
-        "shared": {
-            "group": {
-                "auto": {
-                    "command_description": "desc",
-                    "command_name": "auto",
-                    "params": {
-                        "proxy": {
-                            "parameter_description": "proxy_desc",
-                            "parameter_name": "proxy"
-                        }
-                    }
-                },
-                "avatar": {
-                    "command_description": "desc",
-                    "command_name": "avatar",
-                    "params": {
-                        "avatar": {
-                            "parameter_description": "avatar_desc",
-                            "parameter_name": "avatar"
-                        },
-                        "proxy": {
-                            "parameter_description": "proxy_desc",
-                            "parameter_name": "proxy"
-                        }
-                    }
-                },
-                "birthday": {
-                    "command_description": "desc",
-                    "command_name": "birthday",
-                    "params": {
-                        "birthday": {
-                            "parameter_description": "birthday_desc",
-                            "parameter_name": "birthday"
-                        },
-                        "proxy": {
-                            "parameter_description": "proxy_desc",
-                            "parameter_name": "proxy"
-                        }
-                    }
-                },
-                "color": {
-                    "command_description": "Set the color for a proxy."
-                },
-                "create": {
-                    "command_description": "desc",
-                    "command_name": "create",
-                    "params": {
-                        "image": {
-                            "parameter_description": "image_desc",
-                            "parameter_name": "image"
-                        }
-                    }
-                },
-                "delete": {
-                    "command_description": "desc",
-                    "command_name": "delete",
-                    "params": {
-                        "proxy": {
-                            "parameter_description": "proxy_desc",
-                            "parameter_name": "proxy"
-                        }
-                    }
-                },
-                "description": {
-                    "command_description": "desc",
-                    "command_name": "description",
-                    "params": {
-                        "proxy": {
-                            "parameter_description": "proxy_desc",
-                            "parameter_name": "proxy"
-                        },
-                        "text": {
-                            "parameter_description": "text_desc",
-                            "parameter_name": "text"
-                        }
-                    }
-                },
-                "detail": {
-                    "command_description": "desc",
-                    "command_name": "detail",
-                    "params": {
-                        "proxy": {
-                            "parameter_description": "proxy_desc",
-                            "parameter_name": "proxy"
-                        }
-                    }
-                },
-                "find": {
-                    "command_description": "Find a proxy."
-                },
-                "group": {
-                    "command_description": "desc",
-                    "command_name": "group",
-                    "params": {
-                        "group": {
-                            "parameter_description": "group_desc",
-                            "parameter_name": "group"
-                        },
-                        "proxy": {
-                            "parameter_description": "proxy_desc",
-                            "parameter_name": "proxy"
-                        }
-                    }
-                },
-                "image": {
-                    "command_description": "Set the image for a proxy.",
-                    "params": {
-                        "avatar": {
-                            "parameter_description": "avatar_desc",
-                            "parameter_name": "avatar"
-                        },
-                        "proxy": {
-                            "parameter_description": "proxy_desc",
-                            "parameter_name": "proxy"
-                        }
-                    }
-                },
-                "list": {
-                    "command_description": "List all proxies."
-                },
-                "local": {
-                    "command_description": "desc",
-                    "command_name": "local",
-                    "params": {
-                        "avatar": {
-                            "parameter_description": "image_desc",
-                            "parameter_name": "image"
-                        },
-                        "nickname": {
-                            "parameter_description": "nickname_desc",
-                            "parameter_name": "nickname"
-                        },
-                        "proxy": {
-                            "parameter_description": "proxy_desc",
-                            "parameter_name": "proxy"
-                        }
-                    }
-                },
-                "nickname": {
-                    "command_description": "desc",
-                    "command_name": "nickname",
-                    "params": {
-                        "nickname": {
-                            "parameter_description": "nickname_desc",
-                            "parameter_name": "nickname"
-                        },
-                        "proxy": {
-                            "parameter_description": "proxy_desc",
-                            "parameter_name": "proxy"
-                        }
-                    }
-                },
-                "nsfw": {
-                    "command_description": "desc",
-                    "command_name": "nsfw",
-                    "params": {
-                        "nsfw": {
-                            "parameter_description": "nsfw_desc",
-                            "parameter_name": "nsfw"
-                        },
-                        "proxy": {
-                            "parameter_description": "proxy_desc",
-                            "parameter_name": "proxy"
-                        }
-                    }
-                },
-                "prefix": {
-                    "command_description": "desc",
-                    "command_name": "prefix",
-                    "params": {
-                        "prefixes": {
-                            "parameter_description": "prefixes_desc",
-                            "parameter_name": "prefixes"
-                        },
-                        "proxy": {
-                            "parameter_description": "proxy_desc",
-                            "parameter_name": "proxy"
-                        }
-                    }
-                },
-                "prune": {
-                    "command_description": "desc",
-                    "command_name": "prune",
-                    "params": {
-                        "time": {
-                            "parameter_description": "time"
-                        }
-                    }
-                },
-                "purge": {
-                    "command_description": "desc",
-                    "command_name": "purge",
-                    "params": {
-                        "confirmation": {
-                            "parameter_description": "confirmation",
-                            "parameter_name": "confirmation"
-                        }
-                    }
-                },
-                "read": {
-                    "command_description": "desc",
-                    "command_name": "read",
-                    "params": {
-                        "proxy": {
-                            "parameter_description": "proxy_desc",
-                            "parameter_name": "proxy"
-                        }
-                    }
-                },
-                "rename": {
-                    "command_description": "desc",
-                    "command_name": "rename",
-                    "params": {
-                        "name": {
-                            "parameter_description": "name_desc",
-                            "parameter_name": "name"
-                        },
-                        "proxy": {
-                            "parameter_description": "proxy_desc",
-                            "parameter_name": "proxy"
-                        }
-                    }
-                },
-                "set": {
-                    "command_description": "Set a proxy as the current one."
-                },
-                "update": {
-                    "command_description": "desc",
-                    "command_name": "update",
-                    "params": {
-                        "image": {
-                            "parameter_description": "image_desc",
-                            "parameter_name": "image"
-                        },
-                        "proxy": {
-                            "parameter_description": "proxy_desc",
-                            "parameter_name": "proxy"
-                        }
-                    }
-                },
-                "use": {
-                    "command_description": "Use a proxy."
-                }
-            },
-            "group_description": "Shared proxy commands."
-        },
-        "store": {
-            "params": {
-                "storage": {
-                    "choices": {
-                        "Global": "Global",
-                        "Local": "Local"
-                    }
-                }
-            }
-        },
-        "update": {
-            "command_description": "desc",
-            "command_name": "update",
-            "params": {
-                "image": {
-                    "parameter_description": "image_desc",
-                    "parameter_name": "image"
-                },
-                "proxy": {
-                    "parameter_description": "proxy_desc",
-                    "parameter_name": "proxy"
-                }
-            }
-        },
-        "use": {
-            "command_description": "Use a proxy.",
-            "params": {
-                "text": {
-                    "parameter_description": "text",
-                    "parameter_name": "text"
-                }
-            }
-        },
-        "var": {
-            "group": {
-                "auto": {
-                    "command_description": "desc",
-                    "command_name": "auto",
-                    "params": {
-                        "proxy": {
-                            "parameter_description": "proxy_desc",
-                            "parameter_name": "proxy"
-                        },
-                        "variant": {
-                            "parameter_description": "variant_desc",
-                            "parameter_name": "variant"
-                        }
-                    }
-                },
-                "avatar": {
-                    "command_description": "desc",
-                    "command_name": "avatar",
-                    "params": {
-                        "avatar": {
-                            "parameter_description": "avatar_desc",
-                            "parameter_name": "avatar"
-                        },
-                        "proxy": {
-                            "parameter_description": "proxy_desc",
-                            "parameter_name": "proxy"
-                        },
-                        "variant": {
-                            "parameter_description": "variant_desc",
-                            "parameter_name": "variant"
-                        }
-                    }
-                },
-                "birthday": {
-                    "command_description": "desc",
-                    "command_name": "birthday",
-                    "params": {
-                        "birthday": {
-                            "parameter_description": "birthday_desc",
-                            "parameter_name": "birthday"
-                        },
-                        "proxy": {
-                            "parameter_description": "proxy_desc",
-                            "parameter_name": "proxy"
-                        },
-                        "variant": {
-                            "parameter_description": "variant_desc",
-                            "parameter_name": "variant"
-                        }
-                    }
-                },
-                "color": {
-                    "command_description": "Change the color of a variant."
-                },
-                "create": {
-                    "command_description": "desc",
-                    "command_name": "create",
-                    "params": {
-                        "image": {
-                            "parameter_description": "image_desc",
-                            "parameter_name": "image"
-                        },
-                        "prefixes": {
-                            "parameter_description": "Prefixes e.g. A:text, |text|, etc."
-                        },
-                        "proxy": {
-                            "parameter_description": "proxy_desc",
-                            "parameter_name": "proxy"
-                        }
-                    }
-                },
-                "delete": {
-                    "command_description": "desc_var",
-                    "command_name": "delete",
-                    "params": {
-                        "proxy": {
-                            "parameter_description": "proxy_desc",
-                            "parameter_name": "proxy"
-                        },
-                        "variant": {
-                            "parameter_description": "variant_desc",
-                            "parameter_name": "variant"
-                        }
-                    }
-                },
-                "description": {
-                    "command_description": "desc",
-                    "command_name": "description",
-                    "params": {
-                        "proxy": {
-                            "parameter_description": "proxy_desc",
-                            "parameter_name": "proxy"
-                        },
-                        "text": {
-                            "parameter_description": "text_desc",
-                            "parameter_name": "text"
-                        },
-                        "variant": {
-                            "parameter_description": "variant_desc",
-                            "parameter_name": "variant"
-                        }
-                    }
-                },
-                "detail": {
-                    "command_description": "desc",
-                    "command_name": "detail",
-                    "params": {
-                        "proxy": {
-                            "parameter_description": "proxy_desc",
-                            "parameter_name": "proxy"
-                        },
-                        "variant": {
-                            "parameter_description": "variant_desc",
-                            "parameter_name": "variant"
-                        }
-                    }
-                },
-                "find": {
-                    "command_description": "Find a variant."
-                },
-                "group": {
-                    "command_description": "desc",
-                    "command_name": "group",
-                    "params": {
-                        "group": {
-                            "parameter_description": "group_desc",
-                            "parameter_name": "group"
-                        },
-                        "proxy": {
-                            "parameter_description": "proxy_desc",
-                            "parameter_name": "proxy"
-                        },
-                        "variant": {
-                            "parameter_description": "variant_desc",
-                            "parameter_name": "variant"
-                        }
-                    }
-                },
-                "list": {
-                    "command_description": "List all variants."
-                },
-                "local": {
-                    "command_description": "desc",
-                    "command_name": "local",
-                    "params": {
-                        "avatar": {
-                            "parameter_description": "image_desc",
-                            "parameter_name": "image"
-                        },
-                        "nickname": {
-                            "parameter_description": "nickname_desc",
-                            "parameter_name": "nickname"
-                        },
-                        "proxy": {
-                            "parameter_description": "proxy_desc",
-                            "parameter_name": "proxy"
-                        },
-                        "variant": {
-                            "parameter_description": "variant_desc",
-                            "parameter_name": "variant"
-                        }
-                    }
-                },
-                "nickname": {
-                    "command_description": "desc",
-                    "command_name": "nickname",
-                    "params": {
-                        "nickname": {
-                            "parameter_description": "nickname_desc",
-                            "parameter_name": "nickname"
-                        },
-                        "proxy": {
-                            "parameter_description": "proxy_desc",
-                            "parameter_name": "proxy"
-                        },
-                        "variant": {
-                            "parameter_description": "variant_desc",
-                            "parameter_name": "variant"
-                        }
-                    }
-                },
-                "nsfw": {
-                    "command_description": "desc",
-                    "command_name": "nsfw",
-                    "params": {
-                        "nsfw": {
-                            "parameter_description": "nsfw_desc",
-                            "parameter_name": "nsfw"
-                        },
-                        "proxy": {
-                            "parameter_description": "proxy_desc",
-                            "parameter_name": "proxy"
-                        },
-                        "variant": {
-                            "parameter_description": "variant_desc",
-                            "parameter_name": "variant"
-                        }
-                    }
-                },
-                "prefix": {
-                    "command_description": "desc",
-                    "command_name": "prefix",
-                    "params": {
-                        "prefixes": {
-                            "parameter_description": "prefixes_desc",
-                            "parameter_name": "prefixes"
-                        },
-                        "proxy": {
-                            "parameter_description": "proxy_desc",
-                            "parameter_name": "proxy"
-                        },
-                        "variant": {
-                            "parameter_description": "variant_desc",
-                            "parameter_name": "variant"
-                        }
-                    }
-                },
-                "prune": {
-                    "command_description": "desc",
-                    "command_name": "prune",
-                    "params": {
-                        "proxy": {
-                            "parameter_description": "proxy"
-                        },
-                        "time": {
-                            "parameter_description": "time"
-                        }
-                    }
-                },
-                "purge": {
-                    "command_description": "desc",
-                    "command_name": "purge",
-                    "params": {
-                        "confirmation": {
-                            "parameter_description": "confirmation",
-                            "parameter_name": "confirmation"
-                        },
-                        "proxy": {
-                            "parameter_description": "proxy",
-                            "parameter_name": "proxy"
-                        }
-                    }
-                },
-                "read": {
-                    "command_description": "desc",
-                    "command_name": "read",
-                    "params": {
-                        "proxy": {
-                            "parameter_description": "proxy_desc",
-                            "parameter_name": "proxy"
-                        },
-                        "variant": {
-                            "parameter_description": "variant_desc",
-                            "parameter_name": "variant"
-                        }
-                    }
-                },
-                "rename": {
-                    "command_description": "desc",
-                    "command_name": "rename",
-                    "params": {
-                        "name": {
-                            "parameter_description": "name_desc",
-                            "parameter_name": "name"
-                        },
-                        "proxy": {
-                            "parameter_description": "proxy_desc",
-                            "parameter_name": "proxy"
-                        },
-                        "variant": {
-                            "parameter_description": "variant_desc",
-                            "parameter_name": "variant"
-                        }
-                    }
-                },
-                "set": {
-                    "command_description": "Set a variant."
-                },
-                "update": {
-                    "command_description": "desc",
-                    "command_name": "update",
-                    "params": {
-                        "image": {
-                            "parameter_description": "image_desc",
-                            "parameter_name": "image"
-                        },
-                        "proxy": {
-                            "parameter_description": "proxy_desc",
-                            "parameter_name": "proxy"
-                        }
-                    }
-                },
-                "use": {
-                    "command_description": "Use a variant."
-                }
-            },
-            "group_description": "Variant commands.",
-            "group_name": "var"
-        },
-        "variant-to-proxy": {
-            "command_description": "desc",
-            "command_name": "variant-to-proxy",
-            "params": {
-                "proxy": {
-                    "parameter_description": "proxy_desc",
-                    "parameter_name": "proxy"
-                },
-                "variant": {
-                    "parameter_description": "variant_desc",
-                    "parameter_name": "variant"
-                }
-            }
-        }
-    },
-    "interactions": {
-        "context_menu": {
-            "command_name": "context_menu"
-        }
-    }
+	"commands": {
+		"afk": {
+			"command_description": "Check if a user is AFK."
+		},
+		"auto": {
+			"command_description": "desc",
+			"command_name": "auto",
+			"params": {
+				"proxy": {
+					"parameter_description": "proxy_desc",
+					"parameter_name": "proxy"
+				}
+			}
+		},
+		"avatar": {
+			"command_description": "desc",
+			"command_name": "avatar",
+			"params": {
+				"avatar": {
+					"parameter_description": "avatar_desc",
+					"parameter_name": "avatar"
+				},
+				"proxy": {
+					"parameter_description": "proxy_desc",
+					"parameter_name": "proxy"
+				}
+			}
+		},
+		"birthday": {
+			"command_description": "desc",
+			"command_name": "birthday",
+			"params": {
+				"birthday": {
+					"parameter_description": "birthday_desc",
+					"parameter_name": "birthday"
+				},
+				"proxy": {
+					"parameter_description": "proxy_desc",
+					"parameter_name": "proxy"
+				}
+			}
+		},
+		"check_permissions": {
+			"command_description": "desc",
+			"command_name": "check_permissions"
+		},
+		"color": {
+			"command_description": "Set a color for a proxy."
+		},
+		"create": {
+			"command_description": "desc",
+			"command_name": "create",
+			"params": {
+				"image": {
+					"parameter_description": "image_desc",
+					"parameter_name": "image"
+				},
+				"prefixes": {
+					"parameter_description": "Prefixes e.g. A:text, |text|, etc."
+				}
+			}
+		},
+		"delete": {
+			"command_description": "desc",
+			"command_name": "delete",
+			"params": {
+				"proxy": {
+					"parameter_description": "proxy_desc",
+					"parameter_name": "proxy"
+				}
+			}
+		},
+		"description": {
+			"command_description": "desc",
+			"command_name": "description",
+			"params": {
+				"proxy": {
+					"parameter_description": "proxy_desc",
+					"parameter_name": "proxy"
+				},
+				"text": {
+					"parameter_description": "text_desc",
+					"parameter_name": "text"
+				}
+			}
+		},
+		"detail": {
+			"command_description": "desc",
+			"command_name": "detail",
+			"params": {
+				"proxy": {
+					"parameter_description": "proxy_desc",
+					"parameter_name": "proxy"
+				}
+			}
+		},
+		"exec": {
+			"command_description": "Execute a command."
+		},
+		"export": {
+			"command_description": "desc",
+			"command_name": "export",
+			"params": {
+				"format": {
+					"choices": {
+						"Default": "Default",
+						"PluralKit": "PluralKit",
+						"Tupperbox": "Tupperbox"
+					},
+					"parameter_description": "format_desc",
+					"parameter_name": "format"
+				},
+				"new_token": {
+					"parameter_description": "new_token_desc",
+					"parameter_name": "new_token"
+				}
+			}
+		},
+		"group": {
+			"command_description": "desc",
+			"command_name": "group",
+			"params": {
+				"group": {
+					"parameter_description": "group_desc",
+					"parameter_name": "group"
+				},
+				"proxy": {
+					"parameter_description": "proxy_desc",
+					"parameter_name": "proxy"
+				}
+			}
+		},
+		"help": {
+			"command_description": "desc",
+			"command_name": "help",
+			"params": {
+				"search": {
+					"parameter_description": "search_desc",
+					"parameter_name": "search"
+				}
+			}
+		},
+		"import": {
+			"command_description": "desc",
+			"command_name": "import",
+			"params": {
+				"data": {
+					"parameter_description": "data_desc",
+					"parameter_name": "data"
+				},
+				"deleting_from_token": {
+					"parameter_description": "deleting_from_token_desc",
+					"parameter_name": "deleting_from_token"
+				},
+				"token": {
+					"parameter_description": "token_desc",
+					"parameter_name": "token"
+				}
+			}
+		},
+		"latch": {
+			"command_description": "desc",
+			"command_name": "latch",
+			"params": {
+				"auto_remove": {
+					"parameter_description": "auto_remove"
+				},
+				"enable": {
+					"parameter_description": "enable"
+				}
+			}
+		},
+		"list": {
+			"command_description": "desc",
+			"command_name": "list",
+			"params": {
+				"group": {
+					"parameter_description": "group_desc",
+					"parameter_name": "group"
+				}
+			}
+		},
+		"local": {
+			"command_description": "desc",
+			"command_name": "local",
+			"params": {
+				"avatar": {
+					"parameter_description": "image_desc",
+					"parameter_name": "image"
+				},
+				"nickname": {
+					"parameter_description": "nickname_desc",
+					"parameter_name": "nickname"
+				},
+				"proxy": {
+					"parameter_description": "proxy_desc",
+					"parameter_name": "proxy"
+				}
+			}
+		},
+		"nickname": {
+			"command_description": "desc",
+			"command_name": "nickname",
+			"params": {
+				"nickname": {
+					"parameter_description": "nickname_desc",
+					"parameter_name": "nickname"
+				},
+				"proxy": {
+					"parameter_description": "proxy_desc",
+					"parameter_name": "proxy"
+				}
+			}
+		},
+		"npc": {
+			"command_description": "desc",
+			"command_name": "npc",
+			"params": {
+				"emotion": {
+					"choices": {
+						"Angry": "Angry",
+						"Crying": "Crying",
+						"Determined": "Determined",
+						"Dizzy": "Dizzy",
+						"Happy": "Happy",
+						"Inspired": "Inspired",
+						"Joyous": "Joyous",
+						"Normal": "Normal",
+						"Pain": "Pain",
+						"Sad": "Sad",
+						"Shouting": "Shouting",
+						"Sigh": "Sigh",
+						"Special0": "Special0",
+						"Special1": "Special1",
+						"Special2": "Special2",
+						"Special3": "Special3",
+						"Stunned": "Stunned",
+						"Surprised": "Surprised",
+						"TearyEyed": "TearyEyed",
+						"Worried": "Worried"
+					},
+					"parameter_description": "emotion_desc",
+					"parameter_name": "emotion"
+				},
+				"franchise": {
+					"choices": {
+						"D&D": "D&D",
+						"Digimon": "Digimon",
+						"Palworld": "Palworld",
+						"Pokemon": "Pokemon",
+						"Pokemon Shiny": "Pokemon Shiny",
+						"Trainer": "Trainer"
+					},
+					"parameter_description": "franchise_desc",
+					"parameter_name": "franchise"
+				},
+				"image": {
+					"parameter_description": "image_desc",
+					"parameter_name": "image"
+				},
+				"nickname": {
+					"parameter_description": "nickname_desc",
+					"parameter_name": "nickname"
+				},
+				"npc": {
+					"parameter_description": "npc_desc",
+					"parameter_name": "npc"
+				},
+				"text": {
+					"parameter_description": "text",
+					"parameter_name": "text"
+				}
+			}
+		},
+		"nsfw": {
+			"command_description": "desc",
+			"command_name": "nsfw",
+			"params": {
+				"nsfw": {
+					"parameter_description": "nsfw_desc",
+					"parameter_name": "nsfw"
+				},
+				"proxy": {
+					"parameter_description": "proxy_desc",
+					"parameter_name": "proxy"
+				}
+			}
+		},
+		"prefix": {
+			"command_description": "desc",
+			"command_name": "prefix",
+			"params": {
+				"prefixes": {
+					"parameter_description": "prefixes_desc",
+					"parameter_name": "prefixes"
+				},
+				"proxy": {
+					"parameter_description": "proxy_desc",
+					"parameter_name": "proxy"
+				}
+			}
+		},
+		"proxy": {
+			"command_description": "desc",
+			"command_name": "proxy",
+			"params": {
+				"enable": {
+					"parameter_description": "enable_desc",
+					"parameter_name": "enable"
+				}
+			}
+		},
+		"proxy-to-variant": {
+			"command_description": "desc",
+			"command_name": "proxy-to-variant",
+			"params": {
+				"base": {
+					"parameter_description": "base_desc",
+					"parameter_name": "base"
+				},
+				"original": {
+					"parameter_description": "original_desc",
+					"parameter_name": "original"
+				}
+			}
+		},
+		"prune": {
+			"command_description": "desc",
+			"command_name": "prune",
+			"params": {
+				"time": {
+					"parameter_description": "time"
+				}
+			}
+		},
+		"purge": {
+			"command_description": "desc",
+			"command_name": "purge",
+			"params": {
+				"confirmation": {
+					"parameter_description": "confirmation",
+					"parameter_name": "confirmation"
+				}
+			}
+		},
+		"read": {
+			"command_description": "desc",
+			"command_name": "read",
+			"params": {
+				"proxy": {
+					"parameter_description": "proxy_desc",
+					"parameter_name": "proxy"
+				}
+			}
+		},
+		"rename": {
+			"command_description": "desc",
+			"command_name": "rename",
+			"params": {
+				"name": {
+					"parameter_description": "name_desc",
+					"parameter_name": "name"
+				},
+				"proxy": {
+					"parameter_description": "proxy_desc",
+					"parameter_name": "proxy"
+				}
+			}
+		},
+		"roll": {
+			"command_description": "Roll a dice."
+		},
+		"say": {
+			"command_description": "Say something.",
+			"params": {
+				"text": {
+					"parameter_description": "text",
+					"parameter_name": "text"
+				}
+			}
+		},
+		"server_wiki": {
+			"command_description": "desc",
+			"command_name": "server_wiki",
+			"params": {
+				"search": {
+					"parameter_description": "search_desc",
+					"parameter_name": "search"
+				}
+			}
+		},
+		"set": {
+			"command_description": "Set a proxy as the current one."
+		},
+		"settings": {
+			"command_description": "desc",
+			"command_name": "settings",
+			"params": {
+				"menu": {
+					"choices": {
+						"Member": "Member",
+						"Server": "Server",
+						"User": "User"
+					},
+					"parameter_description": "menu_desc",
+					"parameter_name": "menu"
+				}
+			}
+		},
+		"shared": {
+			"group": {
+				"auto": {
+					"command_description": "desc",
+					"command_name": "auto",
+					"params": {
+						"proxy": {
+							"parameter_description": "proxy_desc",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"avatar": {
+					"command_description": "desc",
+					"command_name": "avatar",
+					"params": {
+						"avatar": {
+							"parameter_description": "avatar_desc",
+							"parameter_name": "avatar"
+						},
+						"proxy": {
+							"parameter_description": "proxy_desc",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"birthday": {
+					"command_description": "desc",
+					"command_name": "birthday",
+					"params": {
+						"birthday": {
+							"parameter_description": "birthday_desc",
+							"parameter_name": "birthday"
+						},
+						"proxy": {
+							"parameter_description": "proxy_desc",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"color": {
+					"command_description": "Set the color for a proxy."
+				},
+				"create": {
+					"command_description": "desc",
+					"command_name": "create",
+					"params": {
+						"image": {
+							"parameter_description": "image_desc",
+							"parameter_name": "image"
+						}
+					}
+				},
+				"delete": {
+					"command_description": "desc",
+					"command_name": "delete",
+					"params": {
+						"proxy": {
+							"parameter_description": "proxy_desc",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"description": {
+					"command_description": "desc",
+					"command_name": "description",
+					"params": {
+						"proxy": {
+							"parameter_description": "proxy_desc",
+							"parameter_name": "proxy"
+						},
+						"text": {
+							"parameter_description": "text_desc",
+							"parameter_name": "text"
+						}
+					}
+				},
+				"detail": {
+					"command_description": "desc",
+					"command_name": "detail",
+					"params": {
+						"proxy": {
+							"parameter_description": "proxy_desc",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"find": {
+					"command_description": "Find a proxy."
+				},
+				"group": {
+					"command_description": "desc",
+					"command_name": "group",
+					"params": {
+						"group": {
+							"parameter_description": "group_desc",
+							"parameter_name": "group"
+						},
+						"proxy": {
+							"parameter_description": "proxy_desc",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"image": {
+					"command_description": "Set the image for a proxy.",
+					"params": {
+						"avatar": {
+							"parameter_description": "avatar_desc",
+							"parameter_name": "avatar"
+						},
+						"proxy": {
+							"parameter_description": "proxy_desc",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"list": {
+					"command_description": "List all proxies."
+				},
+				"local": {
+					"command_description": "desc",
+					"command_name": "local",
+					"params": {
+						"avatar": {
+							"parameter_description": "image_desc",
+							"parameter_name": "image"
+						},
+						"nickname": {
+							"parameter_description": "nickname_desc",
+							"parameter_name": "nickname"
+						},
+						"proxy": {
+							"parameter_description": "proxy_desc",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"nickname": {
+					"command_description": "desc",
+					"command_name": "nickname",
+					"params": {
+						"nickname": {
+							"parameter_description": "nickname_desc",
+							"parameter_name": "nickname"
+						},
+						"proxy": {
+							"parameter_description": "proxy_desc",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"nsfw": {
+					"command_description": "desc",
+					"command_name": "nsfw",
+					"params": {
+						"nsfw": {
+							"parameter_description": "nsfw_desc",
+							"parameter_name": "nsfw"
+						},
+						"proxy": {
+							"parameter_description": "proxy_desc",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"prefix": {
+					"command_description": "desc",
+					"command_name": "prefix",
+					"params": {
+						"prefixes": {
+							"parameter_description": "prefixes_desc",
+							"parameter_name": "prefixes"
+						},
+						"proxy": {
+							"parameter_description": "proxy_desc",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"prune": {
+					"command_description": "desc",
+					"command_name": "prune",
+					"params": {
+						"time": {
+							"parameter_description": "time"
+						}
+					}
+				},
+				"purge": {
+					"command_description": "desc",
+					"command_name": "purge",
+					"params": {
+						"confirmation": {
+							"parameter_description": "confirmation",
+							"parameter_name": "confirmation"
+						}
+					}
+				},
+				"read": {
+					"command_description": "desc",
+					"command_name": "read",
+					"params": {
+						"proxy": {
+							"parameter_description": "proxy_desc",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"rename": {
+					"command_description": "desc",
+					"command_name": "rename",
+					"params": {
+						"name": {
+							"parameter_description": "name_desc",
+							"parameter_name": "name"
+						},
+						"proxy": {
+							"parameter_description": "proxy_desc",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"set": {
+					"command_description": "Set a proxy as the current one."
+				},
+				"update": {
+					"command_description": "desc",
+					"command_name": "update",
+					"params": {
+						"image": {
+							"parameter_description": "image_desc",
+							"parameter_name": "image"
+						},
+						"proxy": {
+							"parameter_description": "proxy_desc",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"use": {
+					"command_description": "Use a proxy."
+				}
+			},
+			"group_description": "Shared proxy commands."
+		},
+		"store": {
+			"params": {
+				"storage": {
+					"choices": {
+						"Global": "Global",
+						"Local": "Local"
+					}
+				}
+			}
+		},
+		"update": {
+			"command_description": "desc",
+			"command_name": "update",
+			"params": {
+				"image": {
+					"parameter_description": "image_desc",
+					"parameter_name": "image"
+				},
+				"proxy": {
+					"parameter_description": "proxy_desc",
+					"parameter_name": "proxy"
+				}
+			}
+		},
+		"use": {
+			"command_description": "Use a proxy.",
+			"params": {
+				"text": {
+					"parameter_description": "text",
+					"parameter_name": "text"
+				}
+			}
+		},
+		"var": {
+			"group": {
+				"auto": {
+					"command_description": "desc",
+					"command_name": "auto",
+					"params": {
+						"proxy": {
+							"parameter_description": "proxy_desc",
+							"parameter_name": "proxy"
+						},
+						"variant": {
+							"parameter_description": "variant_desc",
+							"parameter_name": "variant"
+						}
+					}
+				},
+				"avatar": {
+					"command_description": "desc",
+					"command_name": "avatar",
+					"params": {
+						"avatar": {
+							"parameter_description": "avatar_desc",
+							"parameter_name": "avatar"
+						},
+						"proxy": {
+							"parameter_description": "proxy_desc",
+							"parameter_name": "proxy"
+						},
+						"variant": {
+							"parameter_description": "variant_desc",
+							"parameter_name": "variant"
+						}
+					}
+				},
+				"birthday": {
+					"command_description": "desc",
+					"command_name": "birthday",
+					"params": {
+						"birthday": {
+							"parameter_description": "birthday_desc",
+							"parameter_name": "birthday"
+						},
+						"proxy": {
+							"parameter_description": "proxy_desc",
+							"parameter_name": "proxy"
+						},
+						"variant": {
+							"parameter_description": "variant_desc",
+							"parameter_name": "variant"
+						}
+					}
+				},
+				"color": {
+					"command_description": "Change the color of a variant."
+				},
+				"create": {
+					"command_description": "desc",
+					"command_name": "create",
+					"params": {
+						"image": {
+							"parameter_description": "image_desc",
+							"parameter_name": "image"
+						},
+						"prefixes": {
+							"parameter_description": "Prefixes e.g. A:text, |text|, etc."
+						},
+						"proxy": {
+							"parameter_description": "proxy_desc",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"delete": {
+					"command_description": "desc_var",
+					"command_name": "delete",
+					"params": {
+						"proxy": {
+							"parameter_description": "proxy_desc",
+							"parameter_name": "proxy"
+						},
+						"variant": {
+							"parameter_description": "variant_desc",
+							"parameter_name": "variant"
+						}
+					}
+				},
+				"description": {
+					"command_description": "desc",
+					"command_name": "description",
+					"params": {
+						"proxy": {
+							"parameter_description": "proxy_desc",
+							"parameter_name": "proxy"
+						},
+						"text": {
+							"parameter_description": "text_desc",
+							"parameter_name": "text"
+						},
+						"variant": {
+							"parameter_description": "variant_desc",
+							"parameter_name": "variant"
+						}
+					}
+				},
+				"detail": {
+					"command_description": "desc",
+					"command_name": "detail",
+					"params": {
+						"proxy": {
+							"parameter_description": "proxy_desc",
+							"parameter_name": "proxy"
+						},
+						"variant": {
+							"parameter_description": "variant_desc",
+							"parameter_name": "variant"
+						}
+					}
+				},
+				"find": {
+					"command_description": "Find a variant."
+				},
+				"group": {
+					"command_description": "desc",
+					"command_name": "group",
+					"params": {
+						"group": {
+							"parameter_description": "group_desc",
+							"parameter_name": "group"
+						},
+						"proxy": {
+							"parameter_description": "proxy_desc",
+							"parameter_name": "proxy"
+						},
+						"variant": {
+							"parameter_description": "variant_desc",
+							"parameter_name": "variant"
+						}
+					}
+				},
+				"list": {
+					"command_description": "List all variants."
+				},
+				"local": {
+					"command_description": "desc",
+					"command_name": "local",
+					"params": {
+						"avatar": {
+							"parameter_description": "image_desc",
+							"parameter_name": "image"
+						},
+						"nickname": {
+							"parameter_description": "nickname_desc",
+							"parameter_name": "nickname"
+						},
+						"proxy": {
+							"parameter_description": "proxy_desc",
+							"parameter_name": "proxy"
+						},
+						"variant": {
+							"parameter_description": "variant_desc",
+							"parameter_name": "variant"
+						}
+					}
+				},
+				"nickname": {
+					"command_description": "desc",
+					"command_name": "nickname",
+					"params": {
+						"nickname": {
+							"parameter_description": "nickname_desc",
+							"parameter_name": "nickname"
+						},
+						"proxy": {
+							"parameter_description": "proxy_desc",
+							"parameter_name": "proxy"
+						},
+						"variant": {
+							"parameter_description": "variant_desc",
+							"parameter_name": "variant"
+						}
+					}
+				},
+				"nsfw": {
+					"command_description": "desc",
+					"command_name": "nsfw",
+					"params": {
+						"nsfw": {
+							"parameter_description": "nsfw_desc",
+							"parameter_name": "nsfw"
+						},
+						"proxy": {
+							"parameter_description": "proxy_desc",
+							"parameter_name": "proxy"
+						},
+						"variant": {
+							"parameter_description": "variant_desc",
+							"parameter_name": "variant"
+						}
+					}
+				},
+				"prefix": {
+					"command_description": "desc",
+					"command_name": "prefix",
+					"params": {
+						"prefixes": {
+							"parameter_description": "prefixes_desc",
+							"parameter_name": "prefixes"
+						},
+						"proxy": {
+							"parameter_description": "proxy_desc",
+							"parameter_name": "proxy"
+						},
+						"variant": {
+							"parameter_description": "variant_desc",
+							"parameter_name": "variant"
+						}
+					}
+				},
+				"prune": {
+					"command_description": "desc",
+					"command_name": "prune",
+					"params": {
+						"proxy": {
+							"parameter_description": "proxy"
+						},
+						"time": {
+							"parameter_description": "time"
+						}
+					}
+				},
+				"purge": {
+					"command_description": "desc",
+					"command_name": "purge",
+					"params": {
+						"confirmation": {
+							"parameter_description": "confirmation",
+							"parameter_name": "confirmation"
+						},
+						"proxy": {
+							"parameter_description": "proxy",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"read": {
+					"command_description": "desc",
+					"command_name": "read",
+					"params": {
+						"proxy": {
+							"parameter_description": "proxy_desc",
+							"parameter_name": "proxy"
+						},
+						"variant": {
+							"parameter_description": "variant_desc",
+							"parameter_name": "variant"
+						}
+					}
+				},
+				"rename": {
+					"command_description": "desc",
+					"command_name": "rename",
+					"params": {
+						"name": {
+							"parameter_description": "name_desc",
+							"parameter_name": "name"
+						},
+						"proxy": {
+							"parameter_description": "proxy_desc",
+							"parameter_name": "proxy"
+						},
+						"variant": {
+							"parameter_description": "variant_desc",
+							"parameter_name": "variant"
+						}
+					}
+				},
+				"set": {
+					"command_description": "Set a variant."
+				},
+				"update": {
+					"command_description": "desc",
+					"command_name": "update",
+					"params": {
+						"image": {
+							"parameter_description": "image_desc",
+							"parameter_name": "image"
+						},
+						"proxy": {
+							"parameter_description": "proxy_desc",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"use": {
+					"command_description": "Use a variant."
+				}
+			},
+			"group_description": "Variant commands.",
+			"group_name": "var"
+		},
+		"variant-to-proxy": {
+			"command_description": "desc",
+			"command_name": "variant-to-proxy",
+			"params": {
+				"proxy": {
+					"parameter_description": "proxy_desc",
+					"parameter_name": "proxy"
+				},
+				"variant": {
+					"parameter_description": "variant_desc",
+					"parameter_name": "variant"
+				}
+			}
+		}
+	},
+	"interactions": {
+		"context_menu": {
+			"command_name": "context_menu"
+		}
+	},
+	"Pokemon": {
+		"Move": {
+			"10,000,000 Volt Thunderbolt": "Qiānwàn Fútè / Chīnmaahn Fuhkdahk",
+			"Absorb": "吸取",
+			"Accelerock": "衝岩 / 冲岩",
+			"Acid": "溶解液",
+			"Acid Armor": "溶化",
+			"Acid Downpour": "強酸劇毒滅絕雨 / 强酸剧毒灭绝雨",
+			"Acid Spray": "酸液炸彈 / 酸液炸弹",
+			"Acrobatics": "雜技 / 杂技",
+			"Acupressure": "點穴 / 点穴",
+			"Aerial Ace": "燕返",
+			"Aeroblast": "氣旋攻擊 / 气旋攻击",
+			"After You": "您先請 / 您先请",
+			"Agility": "高速移動 / 高速移动",
+			"Air Cutter": "空氣利刃 / 空气利刃",
+			"Air Slash": "空氣斬 / 空气斩",
+			"All-Out Pummeling": "全力無雙激烈拳 / 全力无双激烈拳",
+			"Ally Switch": "交換場地 / 交换场地",
+			"Amnesia": "瞬間失憶 / 瞬间失忆",
+			"Anchor Shot": "擲錨 / 掷锚",
+			"Ancient Power": "原始之力",
+			"Apple Acid": "蘋果酸 / 苹果酸",
+			"Aqua Cutter": "水波刀",
+			"Aqua Jet": "水流噴射 / 水流喷射",
+			"Aqua Ring": "水流環 / 水流环",
+			"Aqua Step": "流水旋舞",
+			"Aqua Tail": "水流尾",
+			"Arm Thrust": "猛推",
+			"Armor Cannon": "鎧農炮 / 铠农炮",
+			"Aromatherapy": "芳香治療 / 芳香治疗",
+			"Aromatic Mist": "芳香薄霧 / 芳香薄雾",
+			"Assist": "借助",
+			"Assurance": "惡意追擊 / 恶意追击",
+			"Astonish": "驚嚇 / 惊吓",
+			"Astral Barrage": "星碎",
+			"Attack Order": "攻擊指令 / 攻击指令",
+			"Attract": "迷人",
+			"Aura Sphere": "波導彈 / 波导弹",
+			"Aura Wheel": "氣場輪 / 气场轮",
+			"Aurora Beam": "極光束 / 极光束",
+			"Aurora Veil": "極光幕 / 极光幕",
+			"Autotomize": "身體輕量化 / 身体轻量化",
+			"Avalanche": "雪崩",
+			"Axe Kick": "下壓踢 / 下压踢",
+			"Baby-Doll Eyes": "圓瞳 / 圆瞳",
+			"Baddy Bad": "壞壞領域 / 坏坏领域",
+			"Baneful Bunker": "碉堡",
+			"Barb Barrage": "毒千針 / 毒千针",
+			"Barrage": "投球",
+			"Barrier": "屏障",
+			"Baton Pass": "接棒",
+			"Beak Blast": "鳥嘴加農炮 / 鸟嘴加农炮",
+			"Beat Up": "圍攻 / 围攻",
+			"Behemoth Bash": "巨獸彈 / 巨兽弹",
+			"Behemoth Blade": "巨獸斬 / 巨兽斩",
+			"Belch": "打嗝",
+			"Belly Drum": "腹鼓",
+			"Bestow": "傳遞禮物 / 传递礼物",
+			"Bide": "忍耐",
+			"Bind": "綁緊 / 绑紧",
+			"Bite": "咬住",
+			"Bitter Blade": "悔念劍 / 悔念剑",
+			"Bitter Malice": "冤冤相報 / 冤冤相报",
+			"Black Hole Eclipse": "黑洞吞噬萬物滅 / 黑洞吞噬万物灭",
+			"Blast Burn": "爆炸烈焰",
+			"Blaze Kick": "火焰踢",
+			"Blazing Torque": "灼熱暴衝",
+			"Bleakwind Storm": "枯葉風暴 / 枯叶风暴",
+			"Blizzard": "暴風雪 / 暴风雪",
+			"Block": "擋路 / 挡路",
+			"Bloom Doom": "絢爛繽紛花怒放 / 绚烂缤纷花怒放",
+			"Blue Flare": "青焰",
+			"Body Press": "撲擊 / 扑击",
+			"Body Slam": "泰山壓頂 / 泰山压顶",
+			"Bolt Beak": "電喙 / 电喙",
+			"Bolt Strike": "雷擊 / 雷击",
+			"Bone Club": "骨棒",
+			"Bone Rush": "骨棒亂打 / 骨棒乱打",
+			"Bonemerang": "骨頭回力鏢 / 骨头回力镖",
+			"Boomburst": "爆音波",
+			"Bounce": "彈跳 / 弹跳",
+			"Bouncy Bubble": "活活氣泡 / 活活气泡",
+			"Branch Poke": "木枝突刺",
+			"Brave Bird": "勇鳥猛攻 / 勇鸟猛攻",
+			"Breaking Swipe": "廣域破壞 / 广域破坏",
+			"Breakneck Blitz": "究極無敵大衝撞 / 究极无敌大冲撞",
+			"Brick Break": "劈瓦",
+			"Brine": "鹽水 / 盐水",
+			"Brutal Swing": "狂舞揮打 / 狂舞挥打",
+			"Bubble": "泡沫",
+			"Bubble Beam": "泡沫光線 / 泡沫光线",
+			"Bug Bite": "蟲咬 / 虫咬",
+			"Bug Buzz": "蟲鳴 / 虫鸣",
+			"Bulk Up": "健美",
+			"Bulldoze": "重踏",
+			"Bullet Punch": "子彈拳 / 子弹拳",
+			"Bullet Seed": "種子機關槍 / 种子机关枪",
+			"Burn Up": "燃盡 / 燃尽",
+			"Burning Jealousy": "妒火",
+			"Buzzy Buzz": "麻麻電擊 / 麻麻电击",
+			"Calm Mind": "冥想",
+			"Camouflage": "保護色 / 保护色",
+			"Captivate": "誘惑 / 诱惑",
+			"Catastropika": "皮卡皮卡必殺擊 / 皮卡皮卡必杀击",
+			"Ceaseless Edge": "秘劍・千重濤 / 秘剑・千重涛",
+			"Celebrate": "慶祝 / 庆祝",
+			"Charge": "充電 / 充电",
+			"Charge Beam": "充電光束 / 充电光束",
+			"Charm": "撒嬌 / 撒娇",
+			"Chatter": "喋喋不休",
+			"Chilling Water": "潑冷水 / 泼冷水",
+			"Chilly Reception": "冷笑話 / 冷笑话",
+			"Chip Away": "逐步擊破 / 逐步击破",
+			"Chloroblast": "葉綠爆震 / 叶绿爆震",
+			"Circle Throw": "巴投",
+			"Clamp": "貝殼夾擊 / 贝壳夹击",
+			"Clanging Scales": "鱗片噪音 / 鳞片噪音",
+			"Clangorous Soul": "魂舞烈音爆",
+			"Clangorous Soulblaze": "熾魂熱舞烈音爆 / 炽魂热舞烈音爆",
+			"Clear Smog": "清除之煙 / 清除之烟",
+			"Close Combat": "近身戰 / 近身战",
+			"Coaching": "指導 / 指导",
+			"Coil": "盤蜷 / 盘蜷",
+			"Collision Course": "全開猛撞 / 全开猛撞",
+			"Combat Torque": "格鬥暴衝",
+			"Comet Punch": "連續拳 / 连续拳",
+			"Comeuppance": "復仇 / 复仇",
+			"Confide": "密語 / 密语",
+			"Confuse Ray": "奇異之光 / 奇异之光",
+			"Confusion": "念力",
+			"Constrict": "纏繞 / 缠绕",
+			"Continental Crush": "毀天滅地巨岩墜 / 毁天灭地巨岩坠",
+			"Conversion": "紋理 / 纹理",
+			"Conversion 2": "紋理２ / 纹理２",
+			"Copycat": "仿效",
+			"Core Enforcer": "核心懲罰者 / 核心惩罚者",
+			"Corkscrew Crash": "超絕螺旋連擊 / 超绝螺旋连击",
+			"Corrosive Gas": "腐蝕氣體 / 腐蚀气体",
+			"Cosmic Power": "宇宙力量",
+			"Cotton Guard": "棉花防守",
+			"Cotton Spore": "棉孢子",
+			"Counter": "雙倍奉還 / 双倍奉还",
+			"Court Change": "換場 / 换场",
+			"Covet": "渴望",
+			"Crabhammer": "蟹鉗錘 / 蟹钳锤",
+			"Crafty Shield": "戲法防守 / 戏法防守",
+			"Cross Chop": "十字劈",
+			"Cross Poison": "十字毒刃",
+			"Crunch": "咬碎",
+			"Crush Claw": "撕裂爪",
+			"Crush Grip": "捏碎",
+			"Curse": "詛咒 / 诅咒",
+			"Cut": "居合斬 / 居合斩",
+			"Dark Pulse": "惡之波動 / 恶之波动",
+			"Dark Void": "暗黑洞",
+			"Darkest Lariat": "ＤＤ金勾臂",
+			"Dazzling Gleam": "魔法閃耀 / 魔法闪耀",
+			"Decorate": "裝飾 / 装饰",
+			"Defend Order": "防禦指令 / 防御指令",
+			"Defense Curl": "變圓 / 变圆",
+			"Defog": "清除濃霧 / 清除浓雾",
+			"Destiny Bond": "同命",
+			"Detect": "看穿",
+			"Devastating Drake": "究極巨龍震天地 / 究极巨龙震天地",
+			"Diamond Storm": "鑽石風暴 / 钻石风暴",
+			"Dig": "挖洞",
+			"Dire Claw": "剋命爪 / 克命爪",
+			"Disable": "定身法",
+			"Disarming Voice": "魅惑之聲 / 魅惑之声",
+			"Discharge": "放電 / 放电",
+			"Dive": "潛水 / 潜水",
+			"Dizzy Punch": "迷昏拳",
+			"Doodle": "描繪 / 描绘",
+			"Doom Desire": "破滅之願 / 破灭之愿",
+			"Double Hit": "二連擊 / 二连击",
+			"Double Iron Bash": "鋼拳雙擊 / 钢拳双击",
+			"Double Kick": "二連踢 / 二连踢",
+			"Double Shock": "電光雙擊 / 电光双击",
+			"Double Slap": "連環巴掌 / 连环巴掌",
+			"Double Team": "影子分身",
+			"Double-Edge": "捨身衝撞 / 舍身冲撞",
+			"Draco Meteor": "流星群",
+			"Dragon Ascent": "畫龍點睛 / 画龙点睛",
+			"Dragon Breath": "龍息 / 龙息",
+			"Dragon Claw": "龍爪 / 龙爪",
+			"Dragon Dance": "龍之舞 / 龙之舞",
+			"Dragon Darts": "龍箭 / 龙箭",
+			"Dragon Energy": "巨龍威能 / 巨龙威能",
+			"Dragon Hammer": "龍錘 / 龙锤",
+			"Dragon Pulse": "龍之波動 / 龙之波动",
+			"Dragon Rage": "龍之怒 / 龙之怒",
+			"Dragon Rush": "龍之俯衝 / 龙之俯冲",
+			"Dragon Tail": "龍尾 / 龙尾",
+			"Drain Punch": "吸取拳",
+			"Draining Kiss": "吸取之吻",
+			"Dream Eater": "食夢 / 食梦",
+			"Drill Peck": "啄鑽 / 啄钻",
+			"Drill Run": "直衝鑽 / 直冲钻",
+			"Drum Beating": "鼓擊 / 鼓击",
+			"Dual Chop": "二連劈 / 二连劈",
+			"Dual Wingbeat": "雙翼 / 双翼",
+			"Dynamax Cannon": "極巨炮 / 极巨炮",
+			"Dynamic Punch": "爆裂拳",
+			"Earth Power": "大地之力",
+			"Earthquake": "地震",
+			"Echoed Voice": "回聲 / 回声",
+			"Eerie Impulse": "怪異電波 / 怪异电波",
+			"Eerie Spell": "詭異咒語 / 诡异咒语",
+			"Egg Bomb": "炸蛋",
+			"Electric Terrain": "電氣場地 / 电气场地",
+			"Electrify": "輸電 / 输电",
+			"Electro Ball": "電球 / 电球",
+			"Electro Drift": "閃電猛衝 / 闪电猛冲",
+			"Electroweb": "電網 / 电网",
+			"Embargo": "查封",
+			"Ember": "火花",
+			"Encore": "再來一次 / 再来一次",
+			"Endeavor": "蠻幹 / 蛮干",
+			"Endure": "挺住",
+			"Energy Ball": "能量球",
+			"Entrainment": "找夥伴 / 找伙伴",
+			"Eruption": "噴火 / 喷火",
+			"Esper Wing": "氣場之翼 / 气场之翼",
+			"Eternabeam": "無極光束 / 无极光束",
+			"Expanding Force": "廣域戰力 / 广域战力",
+			"Explosion": "大爆炸",
+			"Extrasensory": "神通力",
+			"Extreme Evoboost": "九彩昇華齊聚頂 / 九彩升华齐聚顶",
+			"Extreme Speed": "神速",
+			"Facade": "硬撐 / 硬撑",
+			"Fairy Lock": "妖精之鎖 / 妖精之锁",
+			"Fairy Wind": "妖精之風 / 妖精之风",
+			"Fake Out": "擊掌奇襲 / 击掌奇袭",
+			"Fake Tears": "假哭",
+			"False Surrender": "假跪真撞",
+			"False Swipe": "點到為止 / 点到为止",
+			"Feather Dance": "羽毛舞",
+			"Feint": "佯攻",
+			"Feint Attack": "出奇一擊 / 出奇一击",
+			"Fell Stinger": "致命針刺 / 致命针刺",
+			"Fiery Dance": "火之舞",
+			"Fiery Wrath": "怒火中燒 / 怒火中烧",
+			"Fillet Away": "甩肉",
+			"Final Gambit": "搏命",
+			"Fire Blast": "大字爆炎",
+			"Fire Fang": "火焰牙",
+			"Fire Lash": "火焰鞭",
+			"Fire Pledge": "火之誓約 / 火之誓约",
+			"Fire Punch": "火焰拳",
+			"Fire Spin": "火焰旋渦 / 火焰旋涡",
+			"First Impression": "迎頭一擊 / 迎头一击",
+			"Fishious Rend": "鰓咬 / 鳃咬",
+			"Fissure": "地裂",
+			"Flail": "抓狂",
+			"Flame Burst": "烈焰濺射 / 烈焰溅射",
+			"Flame Charge": "蓄能焰襲 / 蓄能焰袭",
+			"Flame Wheel": "火焰輪 / 火焰轮",
+			"Flamethrower": "噴射火焰 / 喷射火焰",
+			"Flare Blitz": "閃焰衝鋒 / 闪焰冲锋",
+			"Flash": "閃光 / 闪光",
+			"Flash Cannon": "加農光炮 / 加农光炮",
+			"Flatter": "吹捧",
+			"Fleur Cannon": "花朵加農炮 / 花朵加农炮",
+			"Fling": "投擲 / 投掷",
+			"Flip Turn": "快速折返",
+			"Floaty Fall": "飄飄墜落 / 飘飘坠落",
+			"Floral Healing": "花療 / 花疗",
+			"Flower Shield": "鮮花防守 / 鲜花防守",
+			"Flower Trick": "千變萬花 / 千变万花",
+			"Fly": "飛翔 / 飞翔",
+			"Flying Press": "飛身重壓 / 飞身重压",
+			"Focus Blast": "真氣彈 / 真气弹",
+			"Focus Energy": "聚氣 / 聚气",
+			"Focus Punch": "真氣拳 / 真气拳",
+			"Follow Me": "看我嘛",
+			"Force Palm": "發勁 / 发劲",
+			"Foresight": "識破 / 识破",
+			"Forest's Curse": "森林詛咒 / 森林诅咒",
+			"Foul Play": "欺詐 / 欺诈",
+			"Freeze Shock": "冰凍伏特 / 冰冻伏特",
+			"Freeze-Dry": "冷凍乾燥 / 冷冻干燥",
+			"Freezing Glare": "冰冷視線 / 冰冷视线",
+			"Freezy Frost": "冰冰霜凍 / 冰冰霜冻",
+			"Frenzy Plant": "瘋狂植物 / 疯狂植物",
+			"Frost Breath": "冰息",
+			"Frustration": "遷怒 / 迁怒",
+			"Fury Attack": "亂擊 / 乱击",
+			"Fury Cutter": "連斬 / 连斩",
+			"Fury Swipes": "亂抓 / 乱抓",
+			"Fusion Bolt": "交錯閃電 / 交错闪电",
+			"Fusion Flare": "交錯火焰 / 交错火焰",
+			"Future Sight": "預知未來 / 预知未来",
+			"Gastro Acid": "胃液",
+			"Gear Grind": "齒輪飛盤 / 齿轮飞盘",
+			"Gear Up": "輔助齒輪 / 辅助齿轮",
+			"Genesis Supernova": "起源超新星大爆炸",
+			"Geomancy": "大地掌控",
+			"Giga Drain": "終極吸取 / 终极吸取",
+			"Giga Impact": "終極衝擊 / 终极冲击",
+			"Gigaton Hammer": "巨力錘 / 巨力锤",
+			"Gigavolt Havoc": "終極伏特狂雷閃 / 终极伏特狂雷闪",
+			"Glacial Lance": "雪矛",
+			"Glaciate": "冰封世界",
+			"Glaive Rush": "巨劍突擊",
+			"Glare": "大蛇瞪眼",
+			"Glitzy Glow": "嘩嘩氣場 / 哗哗气场",
+			"Grass Knot": "打草結 / 打草结",
+			"Grass Pledge": "草之誓約 / 草之誓约",
+			"Grass Whistle": "草笛 / 草笛",
+			"Grassy Glide": "青草滑梯",
+			"Grassy Terrain": "青草場地 / 青草场地",
+			"Grav Apple": "萬有引力 / 万有引力",
+			"Gravity": "重力",
+			"Growl": "叫聲 / 叫声",
+			"Growth": "生長 / 生长",
+			"Grudge": "怨念",
+			"Guard Split": "防守平分",
+			"Guard Swap": "防守互換 / 防守互换",
+			"Guardian of Alola": "巨人衛士・阿羅拉 / 巨人卫士・阿罗拉",
+			"Guillotine": "斷頭鉗 / 断头钳",
+			"Gunk Shot": "垃圾射擊 / 垃圾射击",
+			"Gust": "起風 / 起风",
+			"Gyro Ball": "陀螺球",
+			"Hail": "冰雹",
+			"Hammer Arm": "臂錘 / 臂锤",
+			"Happy Hour": "歡樂時光 / 欢乐时光",
+			"Harden": "變硬 / 变硬",
+			"Haze": "黑霧 / 黑雾",
+			"Head Charge": "爆炸頭突擊 / 爆炸头突击",
+			"Head Smash": "雙刃頭錘 / 双刃头锤",
+			"Headbutt": "頭錘 / 头锤",
+			"Headlong Rush": "突飛猛撲 / 突飞猛扑",
+			"Heal Bell": "治癒鈴聲 / 治愈铃声",
+			"Heal Block": "回復封鎖 / 回复封锁",
+			"Heal Order": "回復指令 / 回复指令",
+			"Heal Pulse": "治癒波動 / 治愈波动",
+			"Healing Wish": "治癒之願 / 治愈之愿",
+			"Heart Stamp": "愛心印章 / 爱心印章",
+			"Heart Swap": "心靈互換 / 心灵互换",
+			"Heat Crash": "高溫重壓 / 高温重压",
+			"Heat Wave": "熱風 / 热风",
+			"Heavy Slam": "重磅衝撞 / 重磅冲撞",
+			"Helping Hand": "幫助 / 帮助",
+			"Hex": "禍不單行 / 祸不单行",
+			"Hidden Power": "覺醒力量 / 觉醒力量",
+			"High Horsepower": "十萬馬力 / 十万马力",
+			"High Jump Kick": "飛膝踢 / 飞膝踢",
+			"Hold Back": "手下留情",
+			"Hold Hands": "牽手 / 牵手",
+			"Hone Claws": "磨爪",
+			"Horn Attack": "角撞",
+			"Horn Drill": "角鑽 / 角钻",
+			"Horn Leech": "木角",
+			"Howl": "長嚎 / 长嚎",
+			"Hurricane": "暴風 / 暴风",
+			"Hydro Cannon": "加農水炮 / 加农水炮",
+			"Hydro Pump": "水炮",
+			"Hydro Vortex": "超級水流大漩渦 / 超级水流大漩涡",
+			"Hyper Beam": "破壞光線 / 破坏光线",
+			"Hyper Drill": "強力鑽 / 强力钻",
+			"Hyper Fang": "必殺門牙 / 必杀门牙",
+			"Hyper Voice": "巨聲 / 巨声",
+			"Hyperspace Fury": "異次元猛攻 / 异次元猛攻",
+			"Hyperspace Hole": "異次元洞 / 异次元洞",
+			"Hypnosis": "催眠術 / 催眠术",
+			"Ice Ball": "冰球",
+			"Ice Beam": "冰凍光束 / 冰冻光束",
+			"Ice Burn": "極寒冷焰 / 极寒冷焰",
+			"Ice Fang": "冰凍牙 / 冰冻牙",
+			"Ice Hammer": "冰錘 / 冰锤",
+			"Ice Punch": "冰凍拳 / 冰冻拳",
+			"Ice Shard": "冰礫 / 冰砾",
+			"Ice Spinner": "冰旋",
+			"Icicle Crash": "冰柱墜擊 / 冰柱坠击",
+			"Icicle Spear": "冰錐 / 冰锥",
+			"Icy Wind": "冰凍之風 / 冰冻之风",
+			"Imprison": "封印",
+			"Incinerate": "燒盡 / 烧尽",
+			"Infernal Parade": "群魔亂舞 / 群魔乱舞",
+			"Inferno": "煉獄 / 炼狱",
+			"Inferno Overdrive": "超強極限爆焰彈 / 超强极限爆焰弹",
+			"Infestation": "死纏爛打 / 死缠烂打",
+			"Ingrain": "扎根",
+			"Instruct": "號令 / 号令",
+			"Ion Deluge": "等離子浴 / 等离子浴",
+			"Iron Defense": "鐵壁 / 铁壁",
+			"Iron Head": "鐵頭 / 铁头",
+			"Iron Tail": "鐵尾 / 铁尾",
+			"Jaw Lock": "緊咬不放 / 紧咬不放",
+			"Jet Punch": "噴射拳 / 喷射拳",
+			"Judgment": "制裁光礫 / 制裁光砾",
+			"Jump Kick": "飛踢 / 飞踢",
+			"Jungle Healing": "叢林治療 / 丛林治疗",
+			"Karate Chop": "空手劈",
+			"Kinesis": "折彎湯匙 / 折弯汤匙",
+			"King's Shield": "王者盾牌",
+			"Knock Off": "拍落",
+			"Kowtow Cleave": "仆斬 / 仆刀",
+			"Land's Wrath": "大地神力",
+			"Laser Focus": "磨礪 / 磨砺",
+			"Lash Out": "洩憤 / 泄愤",
+			"Last Resort": "珍藏",
+			"Last Respects": "掃墓 / 扫墓",
+			"Lava Plume": "噴煙 / 喷烟",
+			"Leaf Blade": "葉刃 / 叶刃",
+			"Leaf Storm": "飛葉風暴 / 飞叶风暴",
+			"Leaf Tornado": "青草攪拌器 / 青草搅拌器",
+			"Leafage": "樹葉 / 树叶",
+			"Leech Life": "吸血",
+			"Leech Seed": "寄生種子 / 寄生种子",
+			"Leer": "瞪眼",
+			"Let's Snuggle Forever": "親密無間大亂揍 / 亲密无间大乱揍",
+			"Lick": "舌舔",
+			"Life Dew": "生命水滴",
+			"Light Screen": "光牆 / 光墙",
+			"Light That Burns the Sky": "焚天滅世熾光爆 / 焚天灭世炽光爆",
+			"Light of Ruin": "破滅之光 / 破灭之光",
+			"Liquidation": "水流裂破",
+			"Lock-On": "鎖定 / 锁定",
+			"Lovely Kiss": "惡魔之吻",
+			"Low Kick": "踢倒",
+			"Low Sweep": "下盤踢 / 下盘踢",
+			"Lucky Chant": "幸運咒語 / 幸运咒语",
+			"Lumina Crash": "琉光衝激 / 琉光冲激",
+			"Lunar Blessing": "新月祈禱 / 新月祈祷",
+			"Lunar Dance": "新月舞",
+			"Lunge": "猛撲 / 猛扑",
+			"Luster Purge": "潔淨光芒 / 洁净光芒",
+			"Mach Punch": "音速拳",
+			"Magic Coat": "魔法反射",
+			"Magic Powder": "魔法粉",
+			"Magic Room": "魔法空間 / 魔法空间",
+			"Magical Leaf": "魔法葉 / 魔法叶",
+			"Magical Torque": "魔法暴衝",
+			"Magma Storm": "熔岩風暴 / 熔岩风暴",
+			"Magnet Bomb": "磁鐵炸彈 / 磁铁炸弹",
+			"Magnet Rise": "電磁飄浮 / 电磁飘浮",
+			"Magnetic Flux": "磁場操控 / 磁场操控",
+			"Magnitude": "震級 / 震级",
+			"Make It Rain": "淘金潮",
+			"Malicious Moonsault": "極惡飛躍粉碎擊 / 极恶飞跃粉碎击",
+			"Mat Block": "掀榻榻米",
+			"Max Airstream": "極巨飛衝 / 极巨飞冲",
+			"Max Darkness": "極巨惡霸 / 极巨恶霸",
+			"Max Flare": "極巨火爆 / 极巨火爆",
+			"Max Flutterby": "極巨蟲蠱 / 极巨虫蛊",
+			"Max Geyser": "極巨水流 / 极巨水流",
+			"Max Guard": "極巨防壁 / 极巨防壁",
+			"Max Hailstorm": "極巨寒冰 / 极巨寒冰",
+			"Max Knuckle": "極巨拳鬥 / 极巨拳斗",
+			"Max Lightning": "極巨閃電 / 极巨闪电",
+			"Max Mindstorm": "極巨超能 / 极巨超能",
+			"Max Ooze": "極巨酸毒 / 极巨酸毒",
+			"Max Overgrowth": "極巨草原 / 极巨草原",
+			"Max Phantasm": "極巨幽魂 / 极巨幽魂",
+			"Max Quake": "極巨大地 / 极巨大地",
+			"Max Rockfall": "極巨岩石 / 极巨岩石",
+			"Max Starfall": "極巨妖精 / 极巨妖精",
+			"Max Steelspike": "極巨鋼鐵 / 极巨钢铁",
+			"Max Strike": "極巨攻擊 / 极巨攻击",
+			"Max Wyrmwind": "極巨龍騎 / 极巨龙骑",
+			"Me First": "搶先一步 / 抢先一步",
+			"Mean Look": "黑色目光",
+			"Meditate": "瑜伽姿勢 / 瑜伽姿势",
+			"Mega Drain": "超級吸取 / 超级吸取",
+			"Mega Kick": "百萬噸重踢 / 百万吨重踢",
+			"Mega Punch": "百萬噸重拳 / 百万吨重拳",
+			"Megahorn": "超級角擊 / 超级角击",
+			"Memento": "臨別禮物 / 临别礼物",
+			"Menacing Moonraze Maelstrom": "月華飛濺落靈霄 / 月华飞溅落灵霄",
+			"Metal Burst": "金屬爆炸 / 金属爆炸",
+			"Metal Claw": "金屬爪 / 金属爪",
+			"Metal Sound": "金屬音 / 金属音",
+			"Meteor Assault": "流星突擊 / 流星突击",
+			"Meteor Beam": "流星光束",
+			"Meteor Mash": "彗星拳",
+			"Metronome": "揮指 / 挥指",
+			"Milk Drink": "喝牛奶",
+			"Mimic": "模仿",
+			"Mind Blown": "驚爆大頭 / 惊爆大头",
+			"Mind Reader": "心之眼",
+			"Minimize": "變小 / 变小",
+			"Miracle Eye": "奇跡之眼 / 奇迹之眼",
+			"Mirror Coat": "鏡面反射 / 镜面反射",
+			"Mirror Move": "鸚鵡學舌 / 鹦鹉学舌",
+			"Mirror Shot": "鏡光射擊 / 镜光射击",
+			"Mist": "白霧 / 白雾",
+			"Mist Ball": "薄霧球 / 薄雾球",
+			"Misty Explosion": "薄霧炸裂 / 薄雾炸裂",
+			"Misty Terrain": "薄霧場地 / 薄雾场地",
+			"Moonblast": "月亮之力",
+			"Moongeist Beam": "暗影之光",
+			"Moonlight": "月光",
+			"Morning Sun": "晨光",
+			"Mortal Spin": "晶光轉轉 / 晶光转转",
+			"Mountain Gale": "冰山風 / 冰山风",
+			"Mud Bomb": "泥巴炸彈 / 泥巴炸弹",
+			"Mud Shot": "泥巴射擊 / 泥巴射击",
+			"Mud Sport": "玩泥巴",
+			"Mud-Slap": "擲泥 / 掷泥",
+			"Muddy Water": "濁流 / 浊流",
+			"Multi-Attack": "多屬性攻擊 / 多属性攻击",
+			"Mystical Fire": "魔法火焰",
+			"Mystical Power": "神秘之力",
+			"Nasty Plot": "詭計 / 诡计",
+			"Natural Gift": "自然之恩",
+			"Nature Power": "自然之力",
+			"Nature's Madness": "自然之怒",
+			"Needle Arm": "尖刺臂",
+			"Never-Ending Nightmare": "無盡暗夜之誘惑 / 无尽暗夜之诱惑",
+			"Night Daze": "暗黑爆破",
+			"Night Shade": "黑夜魔影",
+			"Night Slash": "暗襲要害 / 暗袭要害",
+			"Nightmare": "惡夢 / 恶梦",
+			"No Retreat": "背水一戰 / 背水一战",
+			"Noble Roar": "戰吼 / 战吼",
+			"Noxious Torque": "劇毒暴衝",
+			"Nuzzle": "蹭蹭臉頰 / 蹭蹭脸颊",
+			"Oblivion Wing": "死亡之翼",
+			"Obstruct": "攔堵 / 拦堵",
+			"Oceanic Operetta": "海神莊嚴交響樂 / 海神庄严交响乐",
+			"Octazooka": "章魚桶炮 / 章鱼桶炮",
+			"Octolock": "蛸固",
+			"Odor Sleuth": "氣味偵測 / 气味侦测",
+			"Ominous Wind": "奇異之風 / 奇异之风",
+			"Order Up": "上菜",
+			"Origin Pulse": "根源波動 / 根源波动",
+			"Outrage": "逆鱗 / 逆鳞",
+			"Overdrive": "破音",
+			"Overheat": "過熱 / 过热",
+			"Pain Split": "分擔痛楚 / 分担痛楚",
+			"Parabolic Charge": "拋物面充電 / 抛物面充电",
+			"Parting Shot": "拋下狠話 / 抛下狠话",
+			"Pay Day": "聚寶功 / 聚宝功",
+			"Payback": "以牙還牙 / 以牙还牙",
+			"Peck": "啄",
+			"Perish Song": "滅亡之歌 / 灭亡之歌",
+			"Petal Blizzard": "落英繽紛 / 落英缤纷",
+			"Petal Dance": "花瓣舞",
+			"Phantom Force": "潛靈奇襲 / 潜灵奇袭",
+			"Photon Geyser": "光子噴湧 / 光子喷涌",
+			"Pika Papow": "閃閃雷光 / 闪闪雷光",
+			"Pin Missile": "飛彈針 / 飞弹针",
+			"Plasma Fists": "等離子閃電拳 / 等离子闪电拳",
+			"Play Nice": "和睦相處 / 和睦相处",
+			"Play Rough": "嬉鬧 / 嬉闹",
+			"Pluck": "啄食",
+			"Poison Fang": "劇毒牙 / 剧毒牙",
+			"Poison Gas": "毒瓦斯",
+			"Poison Jab": "毒擊 / 毒击",
+			"Poison Powder": "毒粉",
+			"Poison Sting": "毒針 / 毒针",
+			"Poison Tail": "毒尾",
+			"Pollen Puff": "花粉團 / 花粉团",
+			"Poltergeist": "靈騷 / 灵骚",
+			"Population Bomb": "鼠數兒 / 鼠数儿",
+			"Pounce": "蟲撲 / 虫扑",
+			"Pound": "拍擊 / 拍击",
+			"Powder": "粉塵 / 粉尘",
+			"Powder Snow": "細雪 / 细雪",
+			"Power Gem": "力量寶石",
+			"Power Shift": "力量轉換 / 力量转换",
+			"Power Split": "力量平分",
+			"Power Swap": "力量互換 / 力量互换",
+			"Power Trick": "力量戲法 / 力量戏法",
+			"Power Trip": "囂張 / 嚣张",
+			"Power Whip": "強力鞭打 / 强力鞭打",
+			"Power-Up Punch": "增強拳 / 增强拳",
+			"Precipice Blades": "斷崖之劍 / 断崖之剑",
+			"Present": "禮物 / 礼物",
+			"Prismatic Laser": "稜鏡鐳射 / 棱镜镭射",
+			"Protect": "守住",
+			"Psybeam": "幻象光線 / 幻象光线",
+			"Psych Up": "自我暗示",
+			"Psychic": "精神強念 / 精神强念",
+			"Psychic Fangs": "精神之牙",
+			"Psychic Terrain": "精神場地 / 精神场地",
+			"Psycho Boost": "精神突進 / 精神突进",
+			"Psycho Cut": "精神利刃",
+			"Psycho Shift": "精神轉移 / 精神转移",
+			"Psyshield Bash": "屏障猛攻",
+			"Psyshock": "精神衝擊 / 精神冲击",
+			"Psystrike": "精神擊破 / 精神击破",
+			"Psywave": "精神波",
+			"Pulverizing Pancake": "認真起來大爆擊 / 认真起来大爆击",
+			"Punishment": "懲罰 / 惩罚",
+			"Purify": "淨化 / 净化",
+			"Pursuit": "追打",
+			"Pyro Ball": "火焰球",
+			"Quash": "延後 / 延后",
+			"Quick Attack": "電光一閃 / 电光一闪",
+			"Quick Guard": "快速防守",
+			"Quiver Dance": "蝶舞",
+			"Rage": "憤怒 / 愤怒",
+			"Rage Fist": "憤怒之拳 / 愤怒之拳",
+			"Rage Powder": "憤怒粉 / 愤怒粉",
+			"Raging Bull": "怒牛",
+			"Raging Fury": "大憤慨 / 大愤慨",
+			"Rain Dance": "求雨",
+			"Rapid Spin": "高速旋轉 / 高速旋转",
+			"Razor Leaf": "飛葉快刀 / 飞叶快刀",
+			"Razor Shell": "貝殼刃 / 贝壳刃",
+			"Razor Wind": "旋風刀 / 旋风刀",
+			"Recover": "自我再生",
+			"Recycle": "回收利用",
+			"Reflect": "反射壁",
+			"Reflect Type": "鏡面屬性 / 镜面属性",
+			"Refresh": "煥然一新 / 焕然一新",
+			"Relic Song": "古老之歌",
+			"Rest": "睡覺 / 睡觉",
+			"Retaliate": "報仇 / 报仇",
+			"Return": "報恩 / 报恩",
+			"Revelation Dance": "覺醒之舞 / 觉醒之舞",
+			"Revenge": "報復 / 报复",
+			"Reversal": "起死回生",
+			"Revival Blessing": "復生祈禱 / 复生祈祷",
+			"Rising Voltage": "電力上升 / 电力上升",
+			"Roar": "吼叫",
+			"Roar of Time": "時光咆哮 / 时光咆哮",
+			"Rock Blast": "岩石爆擊 / 岩石爆击",
+			"Rock Climb": "攀岩",
+			"Rock Polish": "岩石打磨",
+			"Rock Slide": "岩崩",
+			"Rock Smash": "碎岩",
+			"Rock Throw": "落石",
+			"Rock Tomb": "岩石封鎖 / 岩石封锁",
+			"Rock Wrecker": "岩石炮",
+			"Role Play": "扮演",
+			"Rolling Kick": "迴旋踢 / 回旋踢",
+			"Rollout": "滾動 / 滚动",
+			"Roost": "羽棲 / 羽栖",
+			"Rototiller": "耕地",
+			"Round": "輪唱 / 轮唱",
+			"Ruination": "大災難 / 大灾难",
+			"Sacred Fire": "神聖之火 / 神圣之火",
+			"Sacred Sword": "聖劍 / 圣剑",
+			"Safeguard": "神秘守護 / 神秘守护",
+			"Salt Cure": "鹽醃 / 盐腌",
+			"Sand Attack": "潑沙 / 泼沙",
+			"Sand Tomb": "流沙地獄 / 流沙地狱",
+			"Sandsear Storm": "熱沙風暴 / 热沙风暴",
+			"Sandstorm": "沙暴",
+			"Sappy Seed": "茁茁轟炸 / 茁茁轰炸",
+			"Savage Spin-Out": "絕對捕食迴旋斬 / 绝对捕食回旋斩",
+			"Scald": "熱水 / 热水",
+			"Scale Shot": "鱗射 / 鳞射",
+			"Scary Face": "鬼面",
+			"Scorching Sands": "熱沙大地 / 热沙大地",
+			"Scratch": "抓",
+			"Screech": "刺耳聲 / 刺耳声",
+			"Searing Shot": "火焰彈 / 火焰弹",
+			"Searing Sunraze Smash": "日光迴旋下蒼穹 / 日光回旋下苍穹",
+			"Secret Power": "秘密之力",
+			"Secret Sword": "神秘之劍 / 神秘之剑",
+			"Seed Bomb": "種子炸彈 / 种子炸弹",
+			"Seed Flare": "種子閃光 / 种子闪光",
+			"Seismic Toss": "地球上投",
+			"Self-Destruct": "自爆",
+			"Shadow Ball": "暗影球",
+			"Shadow Bone": "暗影之骨",
+			"Shadow Claw": "暗影爪",
+			"Shadow Force": "暗影潛襲 / 暗影潜袭",
+			"Shadow Punch": "暗影拳",
+			"Shadow Sneak": "影子偷襲 / 影子偷袭",
+			"Sharpen": "棱角化",
+			"Shattered Psyche": "至高精神破壞波 / 至高精神破坏波",
+			"Shed Tail": "斷尾 / 断尾",
+			"Sheer Cold": "絕對零度 / 绝对零度",
+			"Shell Side Arm": "臂貝武器 / 臂贝武器",
+			"Shell Smash": "破殼 / 破壳",
+			"Shell Trap": "陷阱甲殼 / 陷阱甲壳",
+			"Shelter": "閉關 / 闭关",
+			"Shift Gear": "換檔 / 换挡",
+			"Shock Wave": "電擊波 / 电击波",
+			"Shore Up": "集沙",
+			"Signal Beam": "信號光束 / 信号光束",
+			"Silk Trap": "線阱 / 线阱",
+			"Silver Wind": "銀色旋風 / 银色旋风",
+			"Simple Beam": "單純光束 / 单纯光束",
+			"Sing": "唱歌",
+			"Sinister Arrow Raid": "遮天蔽日暗影箭",
+			"Sizzly Slide": "熊熊火爆",
+			"Sketch": "寫生 / 写生",
+			"Skill Swap": "特性互換 / 特性互换",
+			"Skitter Smack": "爬擊 / 爬击",
+			"Skull Bash": "火箭頭錘 / 火箭头锤",
+			"Sky Attack": "神鳥猛擊 / 神鸟猛击",
+			"Sky Drop": "自由落體 / 自由落体",
+			"Sky Uppercut": "衝天拳 / 冲天拳",
+			"Slack Off": "偷懶 / 偷懒",
+			"Slam": "摔打",
+			"Slash": "劈開 / 劈开",
+			"Sleep Powder": "催眠粉",
+			"Sleep Talk": "夢話 / 梦话",
+			"Sludge": "污泥攻擊 / 污泥攻击",
+			"Sludge Bomb": "污泥炸彈 / 污泥炸弹",
+			"Sludge Wave": "污泥波",
+			"Smack Down": "擊落 / 击落",
+			"Smart Strike": "修長之角 / 修长之角",
+			"Smelling Salts": "清醒",
+			"Smog": "濁霧 / 浊雾",
+			"Smokescreen": "煙幕 / 烟幕",
+			"Snap Trap": "捕獸夾 / 捕兽夹",
+			"Snarl": "大聲咆哮 / 大声咆哮",
+			"Snatch": "搶奪 / 抢夺",
+			"Snipe Shot": "狙擊 / 狙击",
+			"Snore": "打鼾",
+			"Snowscape": "雪景",
+			"Soak": "浸水",
+			"Soft-Boiled": "生蛋",
+			"Solar Beam": "日光束",
+			"Solar Blade": "日光刃",
+			"Sonic Boom": "音爆",
+			"Soul-Stealing 7-Star Strike": "七星奪魂腿 / 七星夺魂腿",
+			"Spacial Rend": "亞空裂斬 / 亚空裂斩",
+			"Spark": "電光 / 电光",
+			"Sparkling Aria": "泡影的詠歎調 / 泡影的咏叹调",
+			"Sparkly Swirl": "亮亮風暴 / 亮亮风暴",
+			"Spectral Thief": "暗影偷盜 / 暗影偷盗",
+			"Speed Swap": "速度互換 / 速度互换",
+			"Spicy Extract": "辣椒精華 / 辣椒精华",
+			"Spider Web": "蛛網 / 蛛网",
+			"Spike Cannon": "尖刺加農炮 / 尖刺加农炮",
+			"Spikes": "撒菱",
+			"Spiky Shield": "尖刺防守",
+			"Spin Out": "疾速轉輪 / 疾速转轮",
+			"Spirit Break": "靈魂衝擊 / 灵魂冲击",
+			"Spirit Shackle": "縫影 / 缝影",
+			"Spit Up": "噴出 / 喷出",
+			"Spite": "怨恨",
+			"Splash": "躍起 / 跃起",
+			"Splintered Stormshards": "狼嘯石牙颶風暴 / 狼啸石牙飓风暴",
+			"Splishy Splash": "滔滔衝浪 / 滔滔冲浪",
+			"Spore": "蘑菇孢子",
+			"Spotlight": "聚光燈 / 聚光灯",
+			"Springtide Storm": "陽春風暴 / 阳春风暴",
+			"Stealth Rock": "隱形岩 / 隐形岩",
+			"Steam Eruption": "蒸汽爆炸",
+			"Steamroller": "瘋狂滾壓 / 疯狂滚压",
+			"Steel Beam": "鐵蹄光線 / 铁蹄光线",
+			"Steel Roller": "鐵滾輪 / 铁滚轮",
+			"Steel Wing": "鋼翼 / 钢翼",
+			"Sticky Web": "黏黏網 / 黏黏网",
+			"Stockpile": "蓄力",
+			"Stoked Sparksurfer": "駕雷馭電戲衝浪 / 驾雷驭电戏冲浪",
+			"Stomp": "踩踏",
+			"Stomping Tantrum": "跺腳 / 跺脚",
+			"Stone Axe": "岩斧",
+			"Stone Edge": "尖石攻擊 / 尖石攻击",
+			"Stored Power": "輔助力量 / 辅助力量",
+			"Storm Throw": "山嵐摔 / 山岚摔",
+			"Strange Steam": "神奇蒸汽",
+			"Strength": "怪力",
+			"Strength Sap": "吸取力量",
+			"String Shot": "吐絲 / 吐丝",
+			"Struggle": "掙扎 / 挣扎",
+			"Struggle Bug": "蟲之抵抗 / 虫之抵抗",
+			"Stuff Cheeks": "大快朵頤 / 大快朵颐",
+			"Stun Spore": "麻痺粉",
+			"Submission": "地獄翻滾 / 地狱翻滚",
+			"Substitute": "替身",
+			"Subzero Slammer": "激狂大地萬里冰 / 激狂大地万里冰",
+			"Sucker Punch": "突襲 / 突袭",
+			"Sunny Day": "大晴天",
+			"Sunsteel Strike": "流星閃衝 / 流星闪冲",
+			"Super Fang": "憤怒門牙 / 愤怒门牙",
+			"Superpower": "蠻力 / 蛮力",
+			"Supersonic": "超音波",
+			"Supersonic Skystrike": "極速俯衝轟烈撞 / 极速俯冲轰烈撞",
+			"Surf": "衝浪 / 冲浪",
+			"Surging Strikes": "水流連打 / 水流连打",
+			"Swagger": "虛張聲勢 / 虚张声势",
+			"Swallow": "吞下",
+			"Sweet Kiss": "天使之吻",
+			"Sweet Scent": "甜甜香氣 / 甜甜香气",
+			"Swift": "高速星星",
+			"Switcheroo": "掉包",
+			"Swords Dance": "劍舞 / 剑舞",
+			"Synchronoise": "同步干擾 / 同步干扰",
+			"Synthesis": "光合作用",
+			"Tackle": "撞擊 / 撞击",
+			"Tail Glow": "螢火 / 萤火",
+			"Tail Slap": "掃尾拍打 / 扫尾拍打",
+			"Tail Whip": "搖尾巴 / 摇尾巴",
+			"Tailwind": "順風 / 顺风",
+			"Take Down": "猛撞",
+			"Take Heart": "勇氣填充 / 勇气填充",
+			"Tar Shot": "瀝青射擊 / 沥青射击",
+			"Taunt": "挑釁 / 挑衅",
+			"Tearful Look": "淚眼汪汪 / 泪眼汪汪",
+			"Teatime": "茶會 / 茶会",
+			"Techno Blast": "高科技光炮",
+			"Tectonic Rage": "地隆嘯天大終結 / 地隆啸天大终结",
+			"Teeter Dance": "搖晃舞 / 摇晃舞",
+			"Telekinesis": "意念移物",
+			"Teleport": "瞬間移動 / 瞬间移动",
+			"Tera Blast": "太晶爆發 / 太晶爆发",
+			"Terrain Pulse": "大地波動 / 大地波动",
+			"Thief": "小偷",
+			"Thousand Arrows": "千箭齊發 / 千箭齐发",
+			"Thousand Waves": "千波激盪 / 千波激荡",
+			"Thrash": "大鬧一番 / 大闹一番",
+			"Throat Chop": "地獄突刺 / 地狱突刺",
+			"Thunder": "打雷",
+			"Thunder Cage": "雷電囚籠 / 雷电囚笼",
+			"Thunder Fang": "雷電牙",
+			"Thunder Punch": "雷電拳 / 雷电拳",
+			"Thunder Shock": "電擊 / 电击",
+			"Thunder Wave": "電磁波 / 电磁波",
+			"Thunderbolt": "十萬伏特 / 十万伏特",
+			"Thunderous Kick": "雷鳴蹴擊 / 雷鸣蹴击",
+			"Tickle": "撓癢 / 挠痒",
+			"Tidy Up": "大掃除 / 大扫除",
+			"Topsy-Turvy": "顛倒 / 颠倒",
+			"Torch Song": "閃焰高歌 / 闪焰高歌",
+			"Torment": "無理取鬧 / 无理取闹",
+			"Toxic": "劇毒 / 剧毒",
+			"Toxic Spikes": "毒菱",
+			"Toxic Thread": "毒絲 / 毒丝",
+			"Trailblaze": "起草",
+			"Transform": "變身 / 变身",
+			"Tri Attack": "三重攻擊 / 三重攻击",
+			"Trick": "戲法 / 戏法",
+			"Trick Room": "戲法空間 / 戏法空间",
+			"Trick-or-Treat": "萬聖夜 / 万圣夜",
+			"Triple Arrows": "三連箭 / 三连箭",
+			"Triple Axel": "三旋擊 / 三旋击",
+			"Triple Dive": "三連鑽 / 三连钻",
+			"Triple Kick": "三連踢 / 三连踢",
+			"Trop Kick": "熱帶踢 / 热带踢",
+			"Trump Card": "王牌",
+			"Twin Beam": "雙光束 / 双光束",
+			"Twineedle": "雙針 / 双针",
+			"Twinkle Tackle": "可愛星星飛天撞 / 可爱星星飞天撞",
+			"Twister": "龍捲風 / 龙卷风",
+			"U-turn": "急速折返",
+			"Uproar": "吵鬧 / 吵闹",
+			"V-create": "Ｖ熱焰 / Ｖ热焰",
+			"Vacuum Wave": "真空波",
+			"Veevee Volley": "砰砰擊破 / 砰砰击破",
+			"Venom Drench": "毒液陷阱",
+			"Venoshock": "毒液衝擊 / 毒液冲击",
+			"Victory Dance": "勝利之舞 / 胜利之舞",
+			"Vine Whip": "藤鞭",
+			"Vise Grip": "夾住 / 夹住",
+			"Vital Throw": "借力摔",
+			"Volt Switch": "伏特替換 / 伏特替换",
+			"Volt Tackle": "伏特攻擊 / 伏特攻击",
+			"Wake-Up Slap": "喚醒巴掌 / 唤醒巴掌",
+			"Water Gun": "水槍 / 水枪",
+			"Water Pledge": "水之誓約 / 水之誓约",
+			"Water Pulse": "水之波動 / 水之波动",
+			"Water Shuriken": "飛水手裡劍 / 飞水手里剑",
+			"Water Sport": "玩水",
+			"Water Spout": "噴水 / 喷水",
+			"Waterfall": "攀瀑",
+			"Wave Crash": "波動衝 / 波动冲",
+			"Psyblade": "精神剑",
+			"Hydro Steam": "水蒸气",
+			"Weather Ball": "氣象球 / 气象球",
+			"Whirlpool": "潮旋",
+			"Whirlwind": "吹飛 / 吹飞",
+			"Wicked Blow": "暗冥強擊 / 暗冥强击",
+			"Wicked Torque": "黑暗暴衝",
+			"Wide Guard": "廣域防守 / 广域防守",
+			"Wild Charge": "瘋狂伏特 / 疯狂伏特",
+			"Wildbolt Storm": "鳴雷風暴 / 鸣雷风暴",
+			"Will-O-Wisp": "鬼火",
+			"Wing Attack": "翅膀攻擊 / 翅膀攻击",
+			"Wish": "祈願 / 祈愿",
+			"Withdraw": "縮入殼中 / 缩入壳中",
+			"Wonder Room": "奇妙空間 / 奇妙空间",
+			"Wood Hammer": "木槌",
+			"Work Up": "自我激勵 / 自我激励",
+			"Worry Seed": "煩惱種子 / 烦恼种子",
+			"Wrap": "緊束 / 紧束",
+			"Wring Out": "絞緊 / 绞紧",
+			"X-Scissor": "十字剪",
+			"Yawn": "哈欠",
+			"Zap Cannon": "電磁炮 / 电磁炮",
+			"Zen Headbutt": "意念頭錘 / 意念头锤",
+			"Zing Zap": "麻麻刺刺",
+			"Zippy Zap": "電電加速 / 电电加速"
+		},
+		"Type": {
+			"Bug": {
+				"Name": "漏洞",
+				"MaxMove": "马克斯·弗拉特比",
+				"MaxEffect": "使目标及其友军的特攻降低一级。",
+				"ZMove": "野蛮分拆"
+			},
+			"Dark": {
+				"Name": "黑暗的",
+				"MaxMove": "最大黑暗",
+				"MaxEffect": "降低目标及其友军一级特防。",
+				"ZMove": "黑洞日食"
+			},
+			"Dragon": {
+				"Name": "龙",
+				"MaxMove": "最大龙风",
+				"MaxEffect": "降低目标及其友军一级的攻击力。",
+				"ZMove": "毁灭性幼龙"
+			},
+			"Electric": {
+				"Name": "电的",
+				"MaxMove": "最大闪电",
+				"MaxEffect": "创造 Electric Terrain 五回合。",
+				"ZMove": "千兆伏破坏"
+			},
+			"Fairy": {
+				"Name": "仙女",
+				"MaxMove": "最大星落",
+				"MaxEffect": "创造迷雾地形五回合。",
+				"ZMove": "闪烁铲球"
+			},
+			"Fighting": {
+				"Name": "斗争",
+				"MaxMove": "马克斯·纳克尔",
+				"MaxEffect": "使使用者及其盟友的攻击力增加一个阶段。",
+				"ZMove": "全力以赴"
+			},
+			"Fire": {
+				"Name": "火",
+				"MaxMove": "最大耀斑",
+				"MaxEffect": "创造刺眼的阳光五回合。",
+				"ZMove": "地狱超速"
+			},
+			"Flying": {
+				"Name": "飞行",
+				"MaxMove": "最大气流",
+				"MaxEffect": "将使用者及其盟友的速度提高一个阶段。",
+				"ZMove": "超音速天击"
+			},
+			"Ghost": {
+				"Name": "鬼",
+				"MaxMove": "最大幻想",
+				"MaxEffect": "降低目标及其友军一级的防御力。",
+				"ZMove": "永无止境的噩梦"
+			},
+			"Grass": {
+				"Name": "草",
+				"MaxMove": "最大过度生长",
+				"MaxEffect": "创造 Grassy Terrain 五回合。",
+				"ZMove": "布卢厄姆"
+			},
+			"Ground": {
+				"Name": "地面",
+				"MaxMove": "最大地震",
+				"MaxEffect": "自身及友军特防提升一级",
+				"ZMove": "构造之怒"
+			},
+			"Ice": {
+				"Name": "冰",
+				"MaxMove": "最大冰雹",
+				"MaxEffect": "制造冰雹五回合。",
+				"ZMove": "零下猛击者"
+			},
+			"Normal": {
+				"Name": "普通的",
+				"MaxMove": "最大打击",
+				"MaxEffect": "使目标及其盟友的速度降低一个阶段。",
+				"ZMove": "极速闪电战"
+			},
+			"Poison": {
+				"Name": "毒",
+				"MaxMove": "最大软泥",
+				"MaxEffect": "使使用者及其盟友的特攻提高一个阶段。",
+				"ZMove": "酸性倾盆大雨"
+			},
+			"Psychic": {
+				"Name": "精神",
+				"MaxMove": "最大头脑风暴",
+				"MaxEffect": "创造心灵地形五回合。",
+				"ZMove": "破碎的灵魂"
+			},
+			"Rock": {
+				"Name": "岩石",
+				"MaxMove": "最大落石",
+				"MaxEffect": "制造沙尘暴五回合。",
+				"ZMove": "大陆美眉"
+			},
+			"Steel": {
+				"Name": "钢",
+				"MaxMove": "最大钢钉",
+				"MaxEffect": "使自己及其友军的防御力上升一级。",
+				"ZMove": "开瓶器崩溃"
+			},
+			"Water": {
+				"Name": "水",
+				"MaxMove": "马克斯间歇泉",
+				"MaxEffect": "制造雨水五回合。",
+				"ZMove": "水力漩涡"
+			}
+		},
+		"MoveEmbed": {
+			"Power": "移动有 {power} 基础力量",
+			"Accuracy": {
+				"True": "移动有 {acc} 准确度",
+				"False": "绕过准确性检查以始终命中"
+			},
+			"PP": {
+				"True": "Move 有 {pp} PP",
+				"False": "这是一个噱头，所以没有使用PP"
+			},
+			"Priority": "移动具有 {priority:+} 优先级",
+			"MinHits": "打击至少 {min_hits} 次",
+			"MaxHits": "最多攻击 {max_hits} 次",
+			"CritStage": {
+				"1": "12.5% 暴击率",
+				"2": "50% 暴击率",
+				"6": "总是暴击"
+			},
+			"Stat": {
+				"Attack": "{stages:+} 攻击阶段的 {chance}%",
+				"Defense": "{stages:+} 防御阶段的 {chance}%",
+				"Sp_Atk": "{stages:+} sp 的 {chance}%。",
+				"Sp_Def": "{stages:+} sp 的 {chance}%。",
+				"Speed": "{stages:+} 速度阶段的 {chance}%",
+				"Accuracy": "{stages:+} 准确度阶段的 {chance}%",
+				"Evasiveness": "{stages:+} 规避阶段的 {chance}%",
+				"All": "{chance}% ATK{stages:+}, DEF{stages:+}, SPA{stages:+}, SPD{stages:+}, SPE{stages:+}"
+			},
+			"Target": [
+				"可能会影响与用户相邻的任何人",
+				"可能会影响用户或相邻的盟友",
+				"影响相邻盟友",
+				"可能会影响任何相邻的敌人，但不会影响盟友",
+				"影响与使用者相邻的所有宝可梦",
+				"影响所有相邻的敌人但不影响盟友",
+				"影响使用者和所有盟友",
+				"影响用户",
+				"影响场上所有宝可梦",
+				"完成后，用户因疲劳而变得迷茫",
+				"影响场上所有宝可梦",
+				"影响所有敌人",
+				"影响使用者一方和所有盟友",
+				"增加敌人最后一次攻击造成的伤害"
+			],
+			"Original_Type": "原始类型：{type}",
+			"Flinch": "有 {chance}% 的机会退缩",
+			"Recoil": "有 {damage}% 的后坐力",
+			"Healing": "治疗 {drain}% 最大生命值",
+			"Drain": "移除 {drain}% 最大生命值",
+			"Flag": {
+				"Contact": "建立联系",
+				"Charge": "第一回合收费",
+				"Recharge": "在下一回合充电",
+				"Protect": "受保护影响",
+				"Reflect": "受反射影响",
+				"Snatch": "受抢夺影响",
+				"Mirror": "受镜像移动影响",
+				"Punch": "受铁拳影响",
+				"Sound": "受隔音影响",
+				"Dance": "受舞者影响",
+				"Gravity": "受重力影响",
+				"Defrost": "解冻用户",
+				"DistanceTriple": "可以使用弹跳、挖掘、俯冲、飞行、暗影之力、天降或天上勾拳击中目标",
+				"IgnoreSubstitute": "绕过目标的替身",
+				"FailSkyBattle": "如果在空战中使用失败",
+				"AnimateAlly": "动画用户的盟友",
+				"Bite": "受强颚影响",
+				"Metronome": {
+					"True": "受节拍器影响",
+					"False": "节拍器无法使用"
+				},
+				"FailEncore": "如果目标已经处于 Encore 效果下则失败",
+				"FailMeFirst": "如果目标已经处于“我优先”效果下则失败",
+				"FutureAttack": "一段时间后罢工",
+				"Pressure": "可能导致野生神奇宝贝呼救",
+				"Combo": "可以组合使用",
+				"NoSleepTalk": "Sleep Talk 无法使用",
+				"Powder": "受大衣影响",
+				"Bullet": "受防弹影响",
+				"Heal": "这是一个治愈的举动",
+				"FailCopycat": "如果目标已经处于模仿效果下则失败",
+				"FailMimic": "如果目标已经处于模仿效果下则失败",
+				"FailInstruct": "如果目标已经在 Instruct 效果下则失败",
+				"NoMultiHit": "不能用于连击连击",
+				"NoEffectiveness": "忽略类型有效性",
+				"SheerForce": "受纯粹力量影响",
+				"Slicing": "受有色镜片影响",
+				"Wind": "受烈风之翼影响",
+				"CantUseTwice": "不能连续使用两次"
+			},
+			"Inflict": {
+				"1": "{chance}% 几率造成麻痹",
+				"2": "{chance}% 几率造成睡眠",
+				"3": "{chance}% 几率造成冰冻",
+				"4": "{chance}% 几率造成灼伤",
+				"5": "{chance}% 几率造成中毒",
+				"6": "{chance}% 几率造成混乱",
+				"7": "{chance}% 几率造成迷恋",
+				"8": "{chance}% 几率造成缠绕/困住",
+				"9": "沉睡者每回合损失 1/4 HP",
+				"12": "激怒敌人，使其无法连续使用相同的招式",
+				"13": "使敌人的最后一招失效",
+				"14": "让目标下回合打哈欠并睡着",
+				"15": "五回合内阻止敌人使用任何HP恢复招式",
+				"17": "使用户能够使用任何类型的移动击中幽灵类型",
+				"18": "{chance}% 每回合从目标身上窃取一些 HP",
+				"19": "它可以防止敌人使用其持有的物品",
+				"20": "使用者和敌人在 3 回合内晕倒",
+				"21": "扎根恢复 HP。",
+				"24": "防止目标在两回合内使用基于声音的动作",
+				"42": "目标对火系招式变弱",
+				"46": "每回合造成目标最大 HP 的 1/8（如果是钢或水类型则为 1/4）的伤害",
+				"47": "{chance}% 使目标中毒、麻痹或昏昏欲睡",
+				"5a": "{chance}% 几率造成严重中毒"
+			},
+			"Max Power": "最大功率",
+			"Max Move": "最大移动",
+			"Z Move": "Z移动",
+			"Z Effect": "Z效应"
+		},
+		"Z-Effect": [
+			{
+				"Short": "Z-移动",
+				"Long": "调用 Z 招式"
+			},
+			{
+				"Short": "没有任何",
+				"Long": "没有效果"
+			},
+			{
+				"Short": "攻击↑",
+				"Long": "提升使用者1级攻击力"
+			},
+			{
+				"Short": "攻击↑↑↑",
+				"Long": "将使用者的攻击提升3级"
+			},
+			{
+				"Short": "攻击↑↑",
+				"Long": "使使用者的攻击上升2级，召唤Z招式"
+			},
+			{
+				"Short": "防守↑",
+				"Long": "防御提升1级"
+			},
+			{
+				"Short": "特殊攻击↑",
+				"Long": "特攻提升1级"
+			},
+			{
+				"Short": "特殊攻击↑↑",
+				"Long": "特攻提升2级"
+			},
+			{
+				"Short": "特防↑",
+				"Long": "特防提升1级"
+			},
+			{
+				"Short": "特防↑↑",
+				"Long": "特防提升2级"
+			},
+			{
+				"Short": "速度↑",
+				"Long": "速度提升1级"
+			},
+			{
+				"Short": "速度↑↑",
+				"Long": "将速度提高 2 个阶段"
+			},
+			{
+				"Short": "速度↑↑",
+				"Long": "速度提升 2 级，Z 招式"
+			},
+			{
+				"Short": "准确度↑",
+				"Long": "精度提高 1 级"
+			},
+			{
+				"Short": "准确度↑",
+				"Long": "精度提升 1 级，调用 Z 招式"
+			},
+			{
+				"Short": "回避↑",
+				"Long": "回避度提升1级"
+			},
+			{
+				"Short": "统计资料↑",
+				"Long": "提高攻击、防御、SP。"
+			},
+			{
+				"Short": "提升暴击率",
+				"Long": "暴击率提升2级"
+			},
+			{
+				"Short": "重置统计数据",
+				"Long": "重置用户降低的统计数据"
+			},
+			{
+				"Short": "恢复生命值",
+				"Long": "完全恢复使用者的HP"
+			},
+			{
+				"Short": "恢复替代者的 HP",
+				"Long": "完全恢复开启的盟友的HP"
+			},
+			{
+				"Short": "关注的焦点",
+				"Long": "用户成为关注中心"
+			},
+			{
+				"Short": "根据类型变化",
+				"Long": "完全恢复使用者的HP（幽灵型）"
+			}
+		],
+		"Category": {
+			"Physical": "身体的",
+			"Special": "特别的",
+			"Status": "地位"
+		}
+	}
 }
