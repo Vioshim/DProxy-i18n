@@ -1,0 +1,963 @@
+{
+    "commands": {
+        "exec": {
+            "command_description": "Execute a command."
+        },
+        "proxy": {
+            "command_name": "πληρεξούσιο",
+            "command_description": "Απενεργοποίηση χαρακτήρων σε διακομιστή",
+            "params": {
+                "enable": {
+                    "parameter_name": "επιτρέπω",
+                    "parameter_description": "Ενεργοποίηση ή απενεργοποίηση χαρακτήρων, από προεπιλεγμένους διακόπτες"
+                }
+            }
+        },
+        "set": {
+            "command_description": "Set a proxy as the current one."
+        },
+        "use": {
+            "params": {
+                "text": {
+                    "parameter_name": "κείμενο",
+                    "parameter_description": "κείμενο"
+                }
+            }
+        },
+        "say": {
+            "params": {
+                "text": {
+                    "parameter_name": "κείμενο",
+                    "parameter_description": "κείμενο"
+                }
+            }
+        },
+        "npc": {
+            "command_name": "npc",
+            "command_description": "Δημιουργήστε ένα νέο μήνυμα NPC",
+            "params": {
+                "franchise": {
+                    "parameter_name": "franchise",
+                    "parameter_description": "Franchise προς χρήση",
+                    "choices": {
+                        "Pokemon": "Pokemon",
+                        "Pokemon Shiny": "Pokemon Shiny",
+                        "Trainer": "Trainer",
+                        "Digimon": "Digimon",
+                        "Palworld": "Palworld",
+                        "D&D": "D&D"
+                    }
+                },
+                "npc": {
+                    "parameter_name": "npc",
+                    "parameter_description": "NPC για χρήση"
+                },
+                "nickname": {
+                    "parameter_name": "παρατσούκλι",
+                    "parameter_description": "Ψευδώνυμο, από προεπιλογή Κανένα"
+                },
+                "emotion": {
+                    "parameter_name": "συναισθημα",
+                    "parameter_description": "Συναίσθημα, από προεπιλογή Κανονικό",
+                    "choices": {
+                        "Normal": "Normal",
+                        "Happy": "Happy",
+                        "Pain": "Pain",
+                        "Angry": "Angry",
+                        "Worried": "Worried",
+                        "Sad": "Sad",
+                        "Crying": "Crying",
+                        "Shouting": "Shouting",
+                        "TearyEyed": "TearyEyed",
+                        "Determined": "Determined",
+                        "Joyous": "Joyous",
+                        "Inspired": "Inspired",
+                        "Surprised": "Surprised",
+                        "Dizzy": "Dizzy",
+                        "Sigh": "Sigh",
+                        "Stunned": "Stunned",
+                        "Special0": "Special0",
+                        "Special1": "Special1",
+                        "Special2": "Special2",
+                        "Special3": "Special3"
+                    }
+                },
+                "image": {
+                    "parameter_name": "εικόνα",
+                    "parameter_description": "Εικόνα, από προεπιλογή Καμία"
+                },
+                "text": {
+                    "parameter_name": "κείμενο",
+                    "parameter_description": "κείμενο"
+                }
+            }
+        },
+        "create": {
+            "command_description": "Create a new proxy.",
+            "params": {
+                "prefixes": {
+                    "parameter_description": "Prefixes e.g. A:text, |text|, etc."
+                }
+            }
+        },
+        "delete": {
+            "command_name": "διαγράφω",
+            "command_description": "Διαγραφή χαρακτήρα",
+            "params": {
+                "proxy": {
+                    "parameter_name": "πληρεξούσιο",
+                    "parameter_description": "Διακομιστής μεσολάβησης για διαγραφή της παραλλαγής"
+                }
+            }
+        },
+        "read": {
+            "command_name": "ανάγνωση",
+            "command_description": "Διαβάστε έναν χαρακτήρα",
+            "params": {
+                "proxy": {
+                    "parameter_name": "πληρεξούσιο",
+                    "parameter_description": "Χαρακτήρας από τον οποίο μπορείτε να διαβάσετε την παραλλαγή"
+                }
+            }
+        },
+        "nickname": {
+            "command_name": "παρατσούκλι",
+            "command_description": "Ορίστε το ψευδώνυμο για έναν χαρακτήρα",
+            "params": {
+                "proxy": {
+                    "parameter_name": "πληρεξούσιο",
+                    "parameter_description": "Χαρακτήρας για να ορίσετε το ψευδώνυμο"
+                },
+                "nickname": {
+                    "parameter_name": "παρατσούκλι",
+                    "parameter_description": "Ψευδώνυμο που θα ορίσετε για τον χαρακτήρα"
+                }
+            }
+        },
+        "local": {
+            "command_name": "τοπικός",
+            "command_description": "Ορίστε το τοπικό για έναν χαρακτήρα",
+            "params": {
+                "proxy": {
+                    "parameter_name": "πληρεξούσιο",
+                    "parameter_description": "Χαρακτήρας για να ορίσετε το τοπικό"
+                },
+                "avatar": {
+                    "parameter_name": "εικόνα",
+                    "parameter_description": "Εικόνα, από προεπιλογή Καμία"
+                },
+                "nickname": {
+                    "parameter_name": "παρατσούκλι",
+                    "parameter_description": "Ψευδώνυμο, από προεπιλογή Κανένα"
+                }
+            }
+        },
+        "avatar": {
+            "command_name": "avatar",
+            "command_description": "Ορίστε το avatar για έναν χαρακτήρα",
+            "params": {
+                "proxy": {
+                    "parameter_name": "πληρεξούσιο",
+                    "parameter_description": "Χαρακτήρας για να ορίσετε το avatar"
+                },
+                "avatar": {
+                    "parameter_name": "avatar",
+                    "parameter_description": "Διεύθυνση URL εικόνας, από προεπιλογή Καμία"
+                }
+            }
+        },
+        "prefix": {
+            "command_name": "πρόθεμα",
+            "command_description": "Ορίστε τα προθέματα για έναν χαρακτήρα.",
+            "params": {
+                "proxy": {
+                    "parameter_name": "πληρεξούσιο",
+                    "parameter_description": "Χαρακτήρας για να ορίσετε το πρόθεμα"
+                },
+                "prefixes": {
+                    "parameter_name": "προθέματα",
+                    "parameter_description": "Τα προθέματα π.χ. "
+                }
+            }
+        },
+        "birthday": {
+            "command_name": "γενέθλια",
+            "command_description": "Ορίστε τα γενέθλια για έναν χαρακτήρα",
+            "params": {
+                "proxy": {
+                    "parameter_name": "πληρεξούσιο",
+                    "parameter_description": "Χαρακτήρας για να ορίσετε τα γενέθλια"
+                },
+                "birthday": {
+                    "parameter_name": "γενέθλια",
+                    "parameter_description": "Γενέθλια, από προεπιλογή Κανένα"
+                }
+            }
+        },
+        "description": {
+            "command_name": "περιγραφή",
+            "command_description": "Ορίστε την περιγραφή για έναν χαρακτήρα",
+            "params": {
+                "proxy": {
+                    "parameter_name": "πληρεξούσιο",
+                    "parameter_description": "Χαρακτήρας για να ορίσετε την περιγραφή"
+                },
+                "text": {
+                    "parameter_name": "κείμενο",
+                    "parameter_description": "Περιγραφή για ορισμό του χαρακτήρα"
+                }
+            }
+        },
+        "rename": {
+            "command_name": "μετονομάζω",
+            "command_description": "Μετονομάστε έναν χαρακτήρα",
+            "params": {
+                "proxy": {
+                    "parameter_name": "πληρεξούσιο",
+                    "parameter_description": "Χαρακτήρας για μετονομασία"
+                },
+                "name": {
+                    "parameter_name": "όνομα",
+                    "parameter_description": "Νέο όνομα για τον χαρακτήρα"
+                }
+            }
+        },
+        "group": {
+            "command_name": "ομάδα",
+            "command_description": "Ορίστε την ομάδα για έναν χαρακτήρα",
+            "params": {
+                "proxy": {
+                    "parameter_name": "πληρεξούσιο",
+                    "parameter_description": "Χαρακτήρας για να ορίσετε την ομάδα"
+                },
+                "group": {
+                    "parameter_name": "ομάδα",
+                    "parameter_description": "Ομάδα, από προεπιλογή Κανένα"
+                }
+            }
+        },
+        "nsfw": {
+            "command_name": "nsfw",
+            "command_description": "Ορίστε εάν ένας χαρακτήρας είναι NSFW",
+            "params": {
+                "proxy": {
+                    "parameter_name": "πληρεξούσιο",
+                    "parameter_description": "Χαρακτήρας για να ορίσετε το NSFW"
+                },
+                "nsfw": {
+                    "parameter_name": "nsfw",
+                    "parameter_description": "NSFW, από προεπιλογή αλλάζει σε αντίθετη τιμή"
+                }
+            }
+        },
+        "auto": {
+            "command_name": "αυτο",
+            "command_description": "Ρυθμίστε το αυτόματο για έναν χαρακτήρα",
+            "params": {
+                "proxy": {
+                    "parameter_name": "πληρεξούσιο",
+                    "parameter_description": "Ο χαρακτήρας, από προεπιλογή απενεργοποιεί το auto"
+                }
+            }
+        },
+        "list": {
+            "command_name": "list",
+            "command_description": "Καταχωρίστε όλους τους χαρακτήρες ",
+            "params": {
+                "group": {
+                    "parameter_name": "ομάδα",
+                    "parameter_description": "Ομάδα για λίστα χαρακτήρων"
+                }
+            }
+        },
+        "latch": {
+            "command_name": "latch",
+            "command_description": "Ενεργοποίηση ή απενεργοποίηση της λειτουργίας κλειδώματος",
+            "params": {
+                "enable": {
+                    "parameter_description": "Ενεργοποίηση ή απενεργοποίηση της λειτουργίας κλειδώματος"
+                },
+                "auto_remove": {
+                    "parameter_description": "Είτε θα διατηρηθεί το αυτόματο για το τρέχον κανάλι είτε όχι, από προεπιλογή True"
+                }
+            }
+        },
+        "export": {
+            "command_name": "export",
+            "command_description": "Εξάγετε τους χαρακτήρες σας σε ένα αρχείο JSON",
+            "params": {
+                "format": {
+                    "parameter_name": "μορφή",
+                    "parameter_description": "Μορφοποίηση για εξαγωγή σε, από προεπιλογή JSON"
+                },
+                "new_token": {
+                    "parameter_name": "new_token",
+                    "parameter_description": "Εάν θέλετε να δημιουργήσετε ένα νέο διακριτικό"
+                }
+            }
+        },
+        "prune": {
+            "command_name": "prune",
+            "command_description": "Κλαδέψτε χαρακτήρες που δεν χρησιμοποιούνται για ορισμένο χρόνο.",
+            "params": {
+                "time": {
+                    "parameter_description": "Ημερομηνία για κλάδεμα πριν, από προεπιλογή Καμία"
+                }
+            }
+        },
+        "purge": {
+            "command_name": "purge",
+            "command_description": "Εκκαθάριση όλων των δεδομένων σας (εκτός από τα αρχεία καταγραφής μηνυμάτων)",
+            "params": {
+                "confirmation": {
+                    "parameter_name": "επιβεβαίωση",
+                    "parameter_description": "επιβεβαίωση"
+                }
+            }
+        },
+        "proxy-to-variant": {
+            "command_name": "proxy-to-variant",
+            "command_description": "Μετατροπή χαρακτήρα σε παραλλαγή",
+            "params": {
+                "original": {
+                    "parameter_name": "πρωτότυπο",
+                    "parameter_description": "Χαρακτήρας για μετατροπή"
+                },
+                "base": {
+                    "parameter_name": "βάση",
+                    "parameter_description": "Νέα βάση για τον χαρακτήρα"
+                }
+            }
+        },
+        "variant-to-proxy": {
+            "command_name": "variant-to-proxy",
+            "command_description": "Μετατροπή μιας παραλλαγής σε χαρακτήρα",
+            "params": {
+                "proxy": {
+                    "parameter_name": "πληρεξούσιο",
+                    "parameter_description": "Διακομιστής μεσολάβησης για μετατροπή"
+                },
+                "variant": {
+                    "parameter_name": "παραλαγή",
+                    "parameter_description": "Παραλλαγή για μετατροπή"
+                }
+            }
+        },
+        "update": {
+            "command_name": "εκσυγχρονίζω",
+            "command_description": "Ενημερώστε έναν διακομιστή μεσολάβησης. ",
+            "params": {
+                "proxy": {
+                    "parameter_name": "πληρεξούσιο",
+                    "parameter_description": "Χαρακτήρας προς ενημέρωση"
+                },
+                "image": {
+                    "parameter_name": "εικόνα",
+                    "parameter_description": "Εικόνα, από προεπιλογή Καμία"
+                }
+            }
+        },
+        "detail": {
+            "command_name": "λεπτομέρεια",
+            "command_description": "Λάβετε λεπτομέρειες ενός χαρακτήρα",
+            "params": {
+                "proxy": {
+                    "parameter_name": "πληρεξούσιο",
+                    "parameter_description": "Αναλυτικά ένας πληρεξούσιος. "
+                }
+            }
+        },
+        "import": {
+            "command_name": "εισαγωγή",
+            "command_description": "Εισαγάγετε τους χαρακτήρες σας από ένα αρχείο ή διακριτικό",
+            "params": {
+                "data": {
+                    "parameter_name": "δεδομένα",
+                    "parameter_description": "Αρχείο για εισαγωγή από"
+                },
+                "token": {
+                    "parameter_name": "ένδειξη",
+                    "parameter_description": "Token για χρήση για εισαγωγή"
+                },
+                "deleting_from_token": {
+                    "parameter_name": "deleting_from_token",
+                    "parameter_description": "Διαγράψτε χαρακτήρες από το διακριτικό"
+                }
+            }
+        },
+        "var": {
+            "group_name": "var",
+            "group_description": "Variant commands.",
+            "groupset": {
+                "command_description": "Set a variant."
+            },
+            "groupuse": {
+                "command_description": "Use a variant."
+            },
+            "groupcreate": {
+                "command_name": "δημιουργώ",
+                "command_description": "Δημιουργήστε έναν νέο χαρακτήρα.",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "πληρεξούσιο",
+                        "parameter_description": " Διακομιστής μεσολάβησης για τη δημιουργία της παραλλαγής"
+                    },
+                    "image": {
+                        "parameter_name": "εικόνα",
+                        "parameter_description": "Εικόνα, από προεπιλογή Καμία"
+                    },
+                    "prefixes": {
+                        "parameter_description": "Prefixes e.g. A:text, |text|, etc."
+                    }
+                }
+            },
+            "groupdelete": {
+                "command_name": "διαγράφω",
+                "command_description": "Διαγραφή παραλλαγής χαρακτήρα",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "πληρεξούσιο",
+                        "parameter_description": "Διακομιστής μεσολάβησης για διαγραφή της παραλλαγής"
+                    },
+                    "variant": {
+                        "parameter_name": "παραλαγή",
+                        "parameter_description": "Παραλλαγή προς διαγραφή"
+                    }
+                }
+            },
+            "groupread": {
+                "command_name": "ανάγνωση",
+                "command_description": "Διαβάστε έναν χαρακτήρα",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "πληρεξούσιο",
+                        "parameter_description": "Χαρακτήρας από τον οποίο μπορείτε να διαβάσετε την παραλλαγή"
+                    },
+                    "variant": {
+                        "parameter_name": "παραλαγή",
+                        "parameter_description": "Παραλλαγή για ανάγνωση"
+                    }
+                }
+            },
+            "groupnickname": {
+                "command_name": "παρατσούκλι",
+                "command_description": "Ορίστε το ψευδώνυμο για έναν χαρακτήρα",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "πληρεξούσιο",
+                        "parameter_description": "Χαρακτήρας για να ορίσετε το ψευδώνυμο"
+                    },
+                    "variant": {
+                        "parameter_name": "παραλαγή",
+                        "parameter_description": "Παραλλαγή για να ορίσετε το ψευδώνυμο"
+                    },
+                    "nickname": {
+                        "parameter_name": "παρατσούκλι",
+                        "parameter_description": "Ψευδώνυμο που θα ορίσετε για τον χαρακτήρα"
+                    }
+                }
+            },
+            "grouplocal": {
+                "command_name": "τοπικός",
+                "command_description": "Ορίστε το τοπικό για έναν χαρακτήρα",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "πληρεξούσιο",
+                        "parameter_description": "Χαρακτήρας για να ορίσετε το τοπικό"
+                    },
+                    "variant": {
+                        "parameter_name": "παραλαγή",
+                        "parameter_description": "Παραλλαγή για να ορίσετε το τοπικό για"
+                    },
+                    "avatar": {
+                        "parameter_name": "εικόνα",
+                        "parameter_description": "Εικόνα, από προεπιλογή Καμία"
+                    },
+                    "nickname": {
+                        "parameter_name": "παρατσούκλι",
+                        "parameter_description": "Ψευδώνυμο, από προεπιλογή Κανένα"
+                    }
+                }
+            },
+            "groupprefix": {
+                "command_name": "πρόθεμα",
+                "command_description": "Ορίστε τα προθέματα για έναν χαρακτήρα.",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "πληρεξούσιο",
+                        "parameter_description": "Χαρακτήρας για να ορίσετε το πρόθεμα"
+                    },
+                    "variant": {
+                        "parameter_name": "παραλαγή",
+                        "parameter_description": "Παραλλαγή για να ορίσετε το πρόθεμα"
+                    },
+                    "prefixes": {
+                        "parameter_name": "προθέματα",
+                        "parameter_description": "Τα προθέματα π.χ. "
+                    }
+                }
+            },
+            "groupbirthday": {
+                "command_name": "γενέθλια",
+                "command_description": "Ορίστε τα γενέθλια για έναν χαρακτήρα",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "πληρεξούσιο",
+                        "parameter_description": "Χαρακτήρας για να ορίσετε τα γενέθλια"
+                    },
+                    "variant": {
+                        "parameter_name": "παραλαγή",
+                        "parameter_description": "Παραλλαγή για να ορίσετε τα γενέθλια"
+                    },
+                    "birthday": {
+                        "parameter_name": "γενέθλια",
+                        "parameter_description": "Γενέθλια, από προεπιλογή Κανένα"
+                    }
+                }
+            },
+            "groupdescription": {
+                "command_name": "περιγραφή",
+                "command_description": "Ορίστε την περιγραφή για έναν χαρακτήρα",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "πληρεξούσιο",
+                        "parameter_description": "Χαρακτήρας για να ορίσετε την περιγραφή"
+                    },
+                    "variant": {
+                        "parameter_name": "παραλαγή",
+                        "parameter_description": "Παραλλαγή για να ορίσετε την περιγραφή"
+                    },
+                    "text": {
+                        "parameter_name": "κείμενο",
+                        "parameter_description": "Περιγραφή για ορισμό του χαρακτήρα"
+                    }
+                }
+            },
+            "grouprename": {
+                "command_name": "μετονομάζω",
+                "command_description": "Μετονομάστε έναν χαρακτήρα",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "πληρεξούσιο",
+                        "parameter_description": "Χαρακτήρας για μετονομασία"
+                    },
+                    "variant": {
+                        "parameter_name": "παραλαγή",
+                        "parameter_description": "Παραλλαγή μετονομασίας"
+                    },
+                    "name": {
+                        "parameter_name": "όνομα",
+                        "parameter_description": "Νέο όνομα για τον χαρακτήρα"
+                    }
+                }
+            },
+            "groupgroup": {
+                "command_name": "ομάδα",
+                "command_description": "Ορίστε την ομάδα για έναν χαρακτήρα",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "πληρεξούσιο",
+                        "parameter_description": "Χαρακτήρας για να ορίσετε την ομάδα"
+                    },
+                    "variant": {
+                        "parameter_name": "παραλαγή",
+                        "parameter_description": "Παραλλαγή για να ορίσετε την ομάδα"
+                    },
+                    "group": {
+                        "parameter_name": "ομάδα",
+                        "parameter_description": "Ομάδα, από προεπιλογή Κανένα"
+                    }
+                }
+            },
+            "groupnsfw": {
+                "command_name": "nsfw",
+                "command_description": "Ορίστε εάν ένας χαρακτήρας είναι NSFW",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "πληρεξούσιο",
+                        "parameter_description": "Χαρακτήρας για να ορίσετε το NSFW"
+                    },
+                    "variant": {
+                        "parameter_name": "παραλαγή",
+                        "parameter_description": "Παραλλαγή για τη ρύθμιση του NSFW"
+                    },
+                    "nsfw": {
+                        "parameter_name": "nsfw",
+                        "parameter_description": "NSFW, από προεπιλογή αλλάζει σε αντίθετη τιμή"
+                    }
+                }
+            },
+            "groupauto": {
+                "command_name": "αυτο",
+                "command_description": "Ρυθμίστε το αυτόματο για έναν χαρακτήρα",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "πληρεξούσιο",
+                        "parameter_description": "Ο χαρακτήρας, από προεπιλογή απενεργοποιεί το auto"
+                    },
+                    "variant": {
+                        "parameter_name": "παραλαγή",
+                        "parameter_description": "Παραλλαγή για τη ρύθμιση της αυτόματης λειτουργίας"
+                    }
+                }
+            },
+            "groupavatar": {
+                "command_name": "avatar",
+                "command_description": "Ορίστε το avatar για έναν χαρακτήρα",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "πληρεξούσιο",
+                        "parameter_description": "Χαρακτήρας για να ορίσετε το avatar"
+                    },
+                    "variant": {
+                        "parameter_name": "παραλαγή",
+                        "parameter_description": "Παραλλαγή για να ορίσετε το avatar"
+                    },
+                    "avatar": {
+                        "parameter_name": "avatar",
+                        "parameter_description": "Διεύθυνση URL εικόνας, από προεπιλογή Καμία"
+                    }
+                }
+            },
+            "grouplist": {
+                "command_description": "List all variants."
+            },
+            "groupfind": {
+                "command_description": "Find a variant."
+            },
+            "groupupdate": {
+                "command_name": "εκσυγχρονίζω",
+                "command_description": "Ενημερώστε έναν διακομιστή μεσολάβησης. ",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "πληρεξούσιο",
+                        "parameter_description": "Χαρακτήρας προς ενημέρωση"
+                    },
+                    "image": {
+                        "parameter_name": "εικόνα",
+                        "parameter_description": "Εικόνα, από προεπιλογή Καμία"
+                    }
+                }
+            },
+            "groupdetail": {
+                "command_name": "λεπτομέρεια",
+                "command_description": "Λάβετε λεπτομέρειες ενός χαρακτήρα",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "πληρεξούσιο",
+                        "parameter_description": "Αναλυτικά ένας πληρεξούσιος. "
+                    },
+                    "variant": {
+                        "parameter_name": "παραλαγή",
+                        "parameter_description": "Παραλλαγή στη λεπτομέρεια"
+                    }
+                }
+            },
+            "groupprune": {
+                "command_name": "prune",
+                "command_description": "Κλαδέψτε χαρακτήρες που δεν χρησιμοποιούνται για ορισμένο χρόνο.",
+                "params": {
+                    "proxy": {
+                        "parameter_description": "πληρεξούσιο"
+                    },
+                    "time": {
+                        "parameter_description": "Ημερομηνία για κλάδεμα πριν, από προεπιλογή Καμία"
+                    }
+                }
+            },
+            "grouppurge": {
+                "command_name": "purge",
+                "command_description": "Εκκαθάριση όλων των δεδομένων σας (εκτός από τα αρχεία καταγραφής μηνυμάτων)",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "πληρεξούσιο",
+                        "parameter_description": "πληρεξούσιο"
+                    },
+                    "confirmation": {
+                        "parameter_name": "επιβεβαίωση",
+                        "parameter_description": "επιβεβαίωση"
+                    }
+                }
+            }
+        },
+        "shared": {
+            "group_description": "Shared proxy commands.",
+            "groupset": {
+                "command_description": "Set a proxy as the current one."
+            },
+            "groupcreate": {
+                "command_name": "δημιουργώ",
+                "command_description": "Δημιουργήστε έναν νέο χαρακτήρα.",
+                "params": {
+                    "image": {
+                        "parameter_name": "εικόνα",
+                        "parameter_description": "Εικόνα, από προεπιλογή Καμία"
+                    }
+                }
+            },
+            "groupdelete": {
+                "command_name": "διαγράφω",
+                "command_description": "Διαγραφή χαρακτήρα",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "πληρεξούσιο",
+                        "parameter_description": "Διακομιστής μεσολάβησης για διαγραφή της παραλλαγής"
+                    }
+                }
+            },
+            "groupread": {
+                "command_name": "ανάγνωση",
+                "command_description": "Διαβάστε έναν χαρακτήρα",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "πληρεξούσιο",
+                        "parameter_description": "Χαρακτήρας από τον οποίο μπορείτε να διαβάσετε την παραλλαγή"
+                    }
+                }
+            },
+            "groupauto": {
+                "command_name": "αυτο",
+                "command_description": "Ρυθμίστε το αυτόματο για έναν χαρακτήρα",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "πληρεξούσιο",
+                        "parameter_description": "Ο χαρακτήρας, από προεπιλογή απενεργοποιεί το auto"
+                    }
+                }
+            },
+            "groupprefix": {
+                "command_name": "πρόθεμα",
+                "command_description": "Ορίστε τα προθέματα για έναν χαρακτήρα.",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "πληρεξούσιο",
+                        "parameter_description": "Χαρακτήρας για να ορίσετε το πρόθεμα"
+                    },
+                    "prefixes": {
+                        "parameter_name": "προθέματα",
+                        "parameter_description": "Τα προθέματα π.χ. "
+                    }
+                }
+            },
+            "groupbirthday": {
+                "command_name": "γενέθλια",
+                "command_description": "Ορίστε τα γενέθλια για έναν χαρακτήρα",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "πληρεξούσιο",
+                        "parameter_description": "Χαρακτήρας για να ορίσετε τα γενέθλια"
+                    },
+                    "birthday": {
+                        "parameter_name": "γενέθλια",
+                        "parameter_description": "Γενέθλια, από προεπιλογή Κανένα"
+                    }
+                }
+            },
+            "groupdescription": {
+                "command_name": "περιγραφή",
+                "command_description": "Ορίστε την περιγραφή για έναν χαρακτήρα",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "πληρεξούσιο",
+                        "parameter_description": "Χαρακτήρας για να ορίσετε την περιγραφή"
+                    },
+                    "text": {
+                        "parameter_name": "κείμενο",
+                        "parameter_description": "Περιγραφή για ορισμό του χαρακτήρα"
+                    }
+                }
+            },
+            "grouprename": {
+                "command_name": "μετονομάζω",
+                "command_description": "Μετονομάστε έναν χαρακτήρα",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "πληρεξούσιο",
+                        "parameter_description": "Χαρακτήρας για μετονομασία"
+                    },
+                    "name": {
+                        "parameter_name": "όνομα",
+                        "parameter_description": "Νέο όνομα για τον χαρακτήρα"
+                    }
+                }
+            },
+            "groupnickname": {
+                "command_name": "παρατσούκλι",
+                "command_description": "Ορίστε το ψευδώνυμο για έναν χαρακτήρα",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "πληρεξούσιο",
+                        "parameter_description": "Χαρακτήρας για να ορίσετε το ψευδώνυμο"
+                    },
+                    "nickname": {
+                        "parameter_name": "παρατσούκλι",
+                        "parameter_description": "Ψευδώνυμο που θα ορίσετε για τον χαρακτήρα"
+                    }
+                }
+            },
+            "groupgroup": {
+                "command_name": "ομάδα",
+                "command_description": "Ορίστε την ομάδα για έναν χαρακτήρα",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "πληρεξούσιο",
+                        "parameter_description": "Χαρακτήρας για να ορίσετε την ομάδα"
+                    },
+                    "group": {
+                        "parameter_name": "ομάδα",
+                        "parameter_description": "Ομάδα, από προεπιλογή Κανένα"
+                    }
+                }
+            },
+            "groupnsfw": {
+                "command_name": "nsfw",
+                "command_description": "Ορίστε εάν ένας χαρακτήρας είναι NSFW",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "πληρεξούσιο",
+                        "parameter_description": "Χαρακτήρας για να ορίσετε το NSFW"
+                    },
+                    "nsfw": {
+                        "parameter_name": "nsfw",
+                        "parameter_description": "NSFW, από προεπιλογή αλλάζει σε αντίθετη τιμή"
+                    }
+                }
+            },
+            "groupavatar": {
+                "command_name": "avatar",
+                "command_description": "Ορίστε το avatar για έναν χαρακτήρα",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "πληρεξούσιο",
+                        "parameter_description": "Χαρακτήρας για να ορίσετε το avatar"
+                    },
+                    "avatar": {
+                        "parameter_name": "avatar",
+                        "parameter_description": "Διεύθυνση URL εικόνας, από προεπιλογή Καμία"
+                    }
+                }
+            },
+            "groupimage": {
+                "params": {
+                    "proxy": {
+                        "parameter_name": "πληρεξούσιο",
+                        "parameter_description": "Χαρακτήρας για να ορίσετε το avatar"
+                    },
+                    "avatar": {
+                        "parameter_name": "avatar",
+                        "parameter_description": "Διεύθυνση URL εικόνας, από προεπιλογή Καμία"
+                    }
+                }
+            },
+            "grouplocal": {
+                "command_name": "τοπικός",
+                "command_description": "Ορίστε το τοπικό για έναν χαρακτήρα",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "πληρεξούσιο",
+                        "parameter_description": "Χαρακτήρας για να ορίσετε το τοπικό"
+                    },
+                    "avatar": {
+                        "parameter_name": "εικόνα",
+                        "parameter_description": "Εικόνα, από προεπιλογή Καμία"
+                    },
+                    "nickname": {
+                        "parameter_name": "παρατσούκλι",
+                        "parameter_description": "Ψευδώνυμο, από προεπιλογή Κανένα"
+                    }
+                }
+            },
+            "groupupdate": {
+                "command_name": "εκσυγχρονίζω",
+                "command_description": "Ενημερώστε έναν διακομιστή μεσολάβησης. ",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "πληρεξούσιο",
+                        "parameter_description": "Χαρακτήρας προς ενημέρωση"
+                    },
+                    "image": {
+                        "parameter_name": "εικόνα",
+                        "parameter_description": "Εικόνα, από προεπιλογή Καμία"
+                    }
+                }
+            },
+            "groupdetail": {
+                "command_name": "λεπτομέρεια",
+                "command_description": "Λάβετε λεπτομέρειες ενός χαρακτήρα",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "πληρεξούσιο",
+                        "parameter_description": "Αναλυτικά ένας πληρεξούσιος. "
+                    }
+                }
+            },
+            "groupprune": {
+                "command_name": "prune",
+                "command_description": "Κλαδέψτε χαρακτήρες που δεν χρησιμοποιούνται για ορισμένο χρόνο.",
+                "params": {
+                    "time": {
+                        "parameter_description": "Ημερομηνία για κλάδεμα πριν, από προεπιλογή Καμία"
+                    }
+                }
+            },
+            "grouppurge": {
+                "command_name": "purge",
+                "command_description": "Εκκαθάριση όλων των δεδομένων σας (εκτός από τα αρχεία καταγραφής μηνυμάτων)",
+                "params": {
+                    "confirmation": {
+                        "parameter_name": "επιβεβαίωση",
+                        "parameter_description": "επιβεβαίωση"
+                    }
+                }
+            }
+        },
+        "check_permissions": {
+            "command_name": "check_perms",
+            "command_description": "Ελέγξτε εάν το bot μπορεί να λειτουργήσει στο παρεχόμενο κανάλι"
+        },
+        "roll": {
+            "command_description": "Roll a dice."
+        },
+        "afk": {
+            "command_description": "Check if a user is AFK."
+        },
+        "help": {
+            "command_name": "βοήθεια",
+            "command_description": "Ενσωματωμένη Βοήθεια Bot",
+            "params": {
+                "search": {
+                    "parameter_name": "αναζήτηση",
+                    "parameter_description": "Όρος αναζήτησης"
+                }
+            }
+        },
+        "server_wiki": {
+            "command_name": "server_wiki",
+            "command_description": "Wiki διακομιστή που ορίζεται από το χρήστη",
+            "params": {
+                "search": {
+                    "parameter_name": "αναζήτηση",
+                    "parameter_description": "Όρος αναζήτησης"
+                }
+            }
+        },
+        "settings": {
+            "command_name": "ρυθμίσεις",
+            "command_description": "Ρυθμίσεις Bot",
+            "params": {
+                "menu": {
+                    "parameter_name": "μενού",
+                    "parameter_description": "Μενού για άνοιγμα για ρυθμίσεις",
+                    "choices": {
+                        "Server": "Υπηρέτης",
+                        "Member": "Μέλος",
+                        "User": "Χρήστης"
+                    }
+                }
+            }
+        },
+        "context_menu": {
+            "command_name": "Πληρεξούσιο"
+        }
+    }
+}

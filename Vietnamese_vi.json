@@ -1,0 +1,963 @@
+{
+    "commands": {
+        "exec": {
+            "command_description": "Execute a command."
+        },
+        "proxy": {
+            "command_name": "proxy",
+            "command_description": "Vô hiệu hóa các ký tự trong máy chủ",
+            "params": {
+                "enable": {
+                    "parameter_name": "enable",
+                    "parameter_description": "Bật hoặc tắt các ký tự, theo mặc định"
+                }
+            }
+        },
+        "set": {
+            "command_description": "Set a proxy as the current one."
+        },
+        "use": {
+            "params": {
+                "text": {
+                    "parameter_name": "chữ",
+                    "parameter_description": "chữ"
+                }
+            }
+        },
+        "say": {
+            "params": {
+                "text": {
+                    "parameter_name": "chữ",
+                    "parameter_description": "chữ"
+                }
+            }
+        },
+        "npc": {
+            "command_name": "npc",
+            "command_description": "Tạo tin nhắn NPC mới",
+            "params": {
+                "franchise": {
+                    "parameter_name": "franchise",
+                    "parameter_description": "Nhượng quyền sử dụng",
+                    "choices": {
+                        "Pokemon": "Pokemon",
+                        "Pokemon Shiny": "Pokemon Shiny",
+                        "Trainer": "Trainer",
+                        "Digimon": "Digimon",
+                        "Palworld": "Palworld",
+                        "D&D": "D&D"
+                    }
+                },
+                "npc": {
+                    "parameter_name": "npc",
+                    "parameter_description": "NPC để sử dụng"
+                },
+                "nickname": {
+                    "parameter_name": "nick",
+                    "parameter_description": "Biệt danh, theo mặc định Không có"
+                },
+                "emotion": {
+                    "parameter_name": "emotion",
+                    "parameter_description": "Cảm xúc, theo mặc định Bình thường",
+                    "choices": {
+                        "Normal": "Normal",
+                        "Happy": "Happy",
+                        "Pain": "Pain",
+                        "Angry": "Angry",
+                        "Worried": "Worried",
+                        "Sad": "Sad",
+                        "Crying": "Crying",
+                        "Shouting": "Shouting",
+                        "TearyEyed": "TearyEyed",
+                        "Determined": "Determined",
+                        "Joyous": "Joyous",
+                        "Inspired": "Inspired",
+                        "Surprised": "Surprised",
+                        "Dizzy": "Dizzy",
+                        "Sigh": "Sigh",
+                        "Stunned": "Stunned",
+                        "Special0": "Special0",
+                        "Special1": "Special1",
+                        "Special2": "Special2",
+                        "Special3": "Special3"
+                    }
+                },
+                "image": {
+                    "parameter_name": "image",
+                    "parameter_description": "Hình ảnh, theo mặc định Không có"
+                },
+                "text": {
+                    "parameter_name": "chữ",
+                    "parameter_description": "chữ"
+                }
+            }
+        },
+        "create": {
+            "command_description": "Create a new proxy.",
+            "params": {
+                "prefixes": {
+                    "parameter_description": "Prefixes e.g. A:text, |text|, etc."
+                }
+            }
+        },
+        "delete": {
+            "command_name": "delete",
+            "command_description": "Xóa một ký tự",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Proxy để xóa biến thể khỏi"
+                }
+            }
+        },
+        "read": {
+            "command_name": "đọc",
+            "command_description": "Đọc một ký tự",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Ký tự để đọc biến thể từ"
+                }
+            }
+        },
+        "nickname": {
+            "command_name": "nick",
+            "command_description": "Đặt biệt danh cho nhân vật",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Nhân vật để đặt biệt hiệu"
+                },
+                "nickname": {
+                    "parameter_name": "nick",
+                    "parameter_description": "Biệt danh để đặt cho nhân vật"
+                }
+            }
+        },
+        "local": {
+            "command_name": "local",
+            "command_description": "Đặt cục bộ cho Nhân vật",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Ký tự để đặt cục bộ cho"
+                },
+                "avatar": {
+                    "parameter_name": "image",
+                    "parameter_description": "Hình ảnh, theo mặc định Không có"
+                },
+                "nickname": {
+                    "parameter_name": "nick",
+                    "parameter_description": "Biệt danh, theo mặc định Không có"
+                }
+            }
+        },
+        "avatar": {
+            "command_name": "avatar",
+            "command_description": "Đặt avatar cho nhân vật",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Nhân vật để đặt avatar cho"
+                },
+                "avatar": {
+                    "parameter_name": "avatar",
+                    "parameter_description": "URL hình ảnh, theo mặc định Không có"
+                }
+            }
+        },
+        "prefix": {
+            "command_name": "prefix",
+            "command_description": "Đặt tiền tố cho một ký tự.",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Ký tự để đặt tiền tố cho"
+                },
+                "prefixes": {
+                    "parameter_name": "tiền_tố",
+                    "parameter_description": "Tiền tố, ví dụ: "
+                }
+            }
+        },
+        "birthday": {
+            "command_name": "birthday",
+            "command_description": "Đặt ngày sinh cho nhân vật",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Nhân vật đặt ngày sinh cho"
+                },
+                "birthday": {
+                    "parameter_name": "birthday",
+                    "parameter_description": "Sinh nhật, theo mặc định Không có"
+                }
+            }
+        },
+        "description": {
+            "command_name": "description",
+            "command_description": "Đặt mô tả cho Nhân vật",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Ký tự để đặt mô tả cho"
+                },
+                "text": {
+                    "parameter_name": "chữ",
+                    "parameter_description": "Mô tả để đặt cho ký tự"
+                }
+            }
+        },
+        "rename": {
+            "command_name": "rename",
+            "command_description": "Đổi tên một nhân vật",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Nhân vật cần đổi tên"
+                },
+                "name": {
+                    "parameter_name": "tên",
+                    "parameter_description": "Tên mới cho nhân vật"
+                }
+            }
+        },
+        "group": {
+            "command_name": "nhóm",
+            "command_description": "Đặt nhóm cho Nhân vật",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Nhân vật để thiết lập nhóm cho"
+                },
+                "group": {
+                    "parameter_name": "nhóm",
+                    "parameter_description": "Nhóm, theo mặc định Không có"
+                }
+            }
+        },
+        "nsfw": {
+            "command_name": "nsfw",
+            "command_description": "Đặt xem Ký tự có phải là NSFW hay không",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Ký tự để đặt NSFW cho"
+                },
+                "nsfw": {
+                    "parameter_name": "nsfw",
+                    "parameter_description": "NSFW, theo mặc định chuyển sang giá trị ngược lại"
+                }
+            }
+        },
+        "auto": {
+            "command_name": "auto",
+            "command_description": "Đặt tự động cho nhân vật",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Ký tự, theo mặc định vô hiệu hóa tự động"
+                }
+            }
+        },
+        "list": {
+            "command_name": "list",
+            "command_description": "Liệt kê tất cả các ký tự ",
+            "params": {
+                "group": {
+                    "parameter_name": "nhóm",
+                    "parameter_description": "Nhóm để liệt kê các ký tự từ"
+                }
+            }
+        },
+        "latch": {
+            "command_name": "chốt_cửa",
+            "command_description": "Bật hoặc tắt chế độ chốt",
+            "params": {
+                "enable": {
+                    "parameter_description": "Bật hoặc tắt chế độ chốt"
+                },
+                "auto_remove": {
+                    "parameter_description": "Theo mặc định, có giữ tự động cho kênh hiện tại hay không Đúng"
+                }
+            }
+        },
+        "export": {
+            "command_name": "export",
+            "command_description": "Xuất các ký tự của bạn sang tệp JSON",
+            "params": {
+                "format": {
+                    "parameter_name": "format",
+                    "parameter_description": "Định dạng để xuất sang JSON theo mặc định"
+                },
+                "new_token": {
+                    "parameter_name": "new_token",
+                    "parameter_description": "Nếu bạn muốn tạo mã thông báo mới"
+                }
+            }
+        },
+        "prune": {
+            "command_name": "cắt_tỉa",
+            "command_description": "Cắt bớt các ký tự không được sử dụng trong một thời gian nhất định.",
+            "params": {
+                "time": {
+                    "parameter_description": "Ngày cắt tỉa trước, theo mặc định Không có"
+                }
+            }
+        },
+        "purge": {
+            "command_name": "thanh_lọc",
+            "command_description": "Xóa tất cả dữ liệu của bạn (ngoại trừ nhật ký tin nhắn)",
+            "params": {
+                "confirmation": {
+                    "parameter_name": "confirmation",
+                    "parameter_description": "confirmation"
+                }
+            }
+        },
+        "proxy-to-variant": {
+            "command_name": "proxy-cho-biến-thể",
+            "command_description": "Chuyển đổi một ký tự thành một biến thể",
+            "params": {
+                "original": {
+                    "parameter_name": "original",
+                    "parameter_description": "Ký tự cần chuyển đổi"
+                },
+                "base": {
+                    "parameter_name": "base",
+                    "parameter_description": "Căn cứ mới cho nhân vật"
+                }
+            }
+        },
+        "variant-to-proxy": {
+            "command_name": "variant-to-proxy",
+            "command_description": "Chuyển đổi một biến thể thành một ký tự",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Proxy để chuyển đổi sang"
+                },
+                "variant": {
+                    "parameter_name": "variant",
+                    "parameter_description": "Biến thể để chuyển đổi"
+                }
+            }
+        },
+        "update": {
+            "command_name": "update",
+            "command_description": "Cập nhật proxy. ",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Nhân vật cần cập nhật"
+                },
+                "image": {
+                    "parameter_name": "image",
+                    "parameter_description": "Hình ảnh, theo mặc định Không có"
+                }
+            }
+        },
+        "detail": {
+            "command_name": "detail",
+            "command_description": "Nhận thông tin chi tiết về một nhân vật",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Chi tiết một proxy. "
+                }
+            }
+        },
+        "import": {
+            "command_name": "nhập-khẩu",
+            "command_description": "Nhập ký tự của bạn từ tệp hoặc mã thông báo",
+            "params": {
+                "data": {
+                    "parameter_name": "data",
+                    "parameter_description": "Tệp để nhập từ"
+                },
+                "token": {
+                    "parameter_name": "token",
+                    "parameter_description": "Mã thông báo được sử dụng để nhập"
+                },
+                "deleting_from_token": {
+                    "parameter_name": "xóa_from_token",
+                    "parameter_description": "Xóa ký tự khỏi mã thông báo"
+                }
+            }
+        },
+        "var": {
+            "group_name": "var",
+            "group_description": "Variant commands.",
+            "groupset": {
+                "command_description": "Set a variant."
+            },
+            "groupuse": {
+                "command_description": "Use a variant."
+            },
+            "groupcreate": {
+                "command_name": "create",
+                "command_description": "Tạo một nhân vật mới.",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": " Proxy để tạo biến thể cho"
+                    },
+                    "image": {
+                        "parameter_name": "image",
+                        "parameter_description": "Hình ảnh, theo mặc định Không có"
+                    },
+                    "prefixes": {
+                        "parameter_description": "Prefixes e.g. A:text, |text|, etc."
+                    }
+                }
+            },
+            "groupdelete": {
+                "command_name": "delete",
+                "command_description": "Xóa biến thể của Nhân vật",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Proxy để xóa biến thể khỏi"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Biến thể cần xóa"
+                    }
+                }
+            },
+            "groupread": {
+                "command_name": "đọc",
+                "command_description": "Đọc một ký tự",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Ký tự để đọc biến thể từ"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Biến thể để đọc"
+                    }
+                }
+            },
+            "groupnickname": {
+                "command_name": "nick",
+                "command_description": "Đặt biệt danh cho nhân vật",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Nhân vật để đặt biệt hiệu"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Biến thể để đặt biệt hiệu cho"
+                    },
+                    "nickname": {
+                        "parameter_name": "nick",
+                        "parameter_description": "Biệt danh để đặt cho nhân vật"
+                    }
+                }
+            },
+            "grouplocal": {
+                "command_name": "local",
+                "command_description": "Đặt cục bộ cho Nhân vật",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Ký tự để đặt cục bộ cho"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Biến thể để đặt cục bộ cho"
+                    },
+                    "avatar": {
+                        "parameter_name": "image",
+                        "parameter_description": "Hình ảnh, theo mặc định Không có"
+                    },
+                    "nickname": {
+                        "parameter_name": "nick",
+                        "parameter_description": "Biệt danh, theo mặc định Không có"
+                    }
+                }
+            },
+            "groupprefix": {
+                "command_name": "prefix",
+                "command_description": "Đặt tiền tố cho một ký tự.",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Ký tự để đặt tiền tố cho"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Biến thể để đặt tiền tố cho"
+                    },
+                    "prefixes": {
+                        "parameter_name": "tiền_tố",
+                        "parameter_description": "Tiền tố, ví dụ: "
+                    }
+                }
+            },
+            "groupbirthday": {
+                "command_name": "birthday",
+                "command_description": "Đặt ngày sinh cho nhân vật",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Nhân vật đặt ngày sinh cho"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Biến thể để đặt ngày sinh cho"
+                    },
+                    "birthday": {
+                        "parameter_name": "birthday",
+                        "parameter_description": "Sinh nhật, theo mặc định Không có"
+                    }
+                }
+            },
+            "groupdescription": {
+                "command_name": "description",
+                "command_description": "Đặt mô tả cho Nhân vật",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Ký tự để đặt mô tả cho"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Biến thể để đặt mô tả cho"
+                    },
+                    "text": {
+                        "parameter_name": "chữ",
+                        "parameter_description": "Mô tả để đặt cho ký tự"
+                    }
+                }
+            },
+            "grouprename": {
+                "command_name": "rename",
+                "command_description": "Đổi tên một nhân vật",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Nhân vật cần đổi tên"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Biến thể để đổi tên"
+                    },
+                    "name": {
+                        "parameter_name": "tên",
+                        "parameter_description": "Tên mới cho nhân vật"
+                    }
+                }
+            },
+            "groupgroup": {
+                "command_name": "nhóm",
+                "command_description": "Đặt nhóm cho Nhân vật",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Nhân vật để thiết lập nhóm cho"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Biến thể để thiết lập nhóm cho"
+                    },
+                    "group": {
+                        "parameter_name": "nhóm",
+                        "parameter_description": "Nhóm, theo mặc định Không có"
+                    }
+                }
+            },
+            "groupnsfw": {
+                "command_name": "nsfw",
+                "command_description": "Đặt xem Ký tự có phải là NSFW hay không",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Ký tự để đặt NSFW cho"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Biến thể để đặt NSFW cho"
+                    },
+                    "nsfw": {
+                        "parameter_name": "nsfw",
+                        "parameter_description": "NSFW, theo mặc định chuyển sang giá trị ngược lại"
+                    }
+                }
+            },
+            "groupauto": {
+                "command_name": "auto",
+                "command_description": "Đặt tự động cho nhân vật",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Ký tự, theo mặc định vô hiệu hóa tự động"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Biến thể để đặt tự động cho"
+                    }
+                }
+            },
+            "groupavatar": {
+                "command_name": "avatar",
+                "command_description": "Đặt avatar cho nhân vật",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Nhân vật để đặt avatar cho"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Biến thể để đặt hình đại diện cho"
+                    },
+                    "avatar": {
+                        "parameter_name": "avatar",
+                        "parameter_description": "URL hình ảnh, theo mặc định Không có"
+                    }
+                }
+            },
+            "grouplist": {
+                "command_description": "List all variants."
+            },
+            "groupfind": {
+                "command_description": "Find a variant."
+            },
+            "groupupdate": {
+                "command_name": "update",
+                "command_description": "Cập nhật proxy. ",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Nhân vật cần cập nhật"
+                    },
+                    "image": {
+                        "parameter_name": "image",
+                        "parameter_description": "Hình ảnh, theo mặc định Không có"
+                    }
+                }
+            },
+            "groupdetail": {
+                "command_name": "detail",
+                "command_description": "Nhận thông tin chi tiết về một nhân vật",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Chi tiết một proxy. "
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Biến thể đến từng chi tiết"
+                    }
+                }
+            },
+            "groupprune": {
+                "command_name": "cắt_tỉa",
+                "command_description": "Cắt bớt các ký tự không được sử dụng trong một thời gian nhất định.",
+                "params": {
+                    "proxy": {
+                        "parameter_description": "proxy"
+                    },
+                    "time": {
+                        "parameter_description": "Ngày cắt tỉa trước, theo mặc định Không có"
+                    }
+                }
+            },
+            "grouppurge": {
+                "command_name": "thanh_lọc",
+                "command_description": "Xóa tất cả dữ liệu của bạn (ngoại trừ nhật ký tin nhắn)",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "proxy"
+                    },
+                    "confirmation": {
+                        "parameter_name": "confirmation",
+                        "parameter_description": "confirmation"
+                    }
+                }
+            }
+        },
+        "shared": {
+            "group_description": "Shared proxy commands.",
+            "groupset": {
+                "command_description": "Set a proxy as the current one."
+            },
+            "groupcreate": {
+                "command_name": "create",
+                "command_description": "Tạo một nhân vật mới.",
+                "params": {
+                    "image": {
+                        "parameter_name": "image",
+                        "parameter_description": "Hình ảnh, theo mặc định Không có"
+                    }
+                }
+            },
+            "groupdelete": {
+                "command_name": "delete",
+                "command_description": "Xóa một ký tự",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Proxy để xóa biến thể khỏi"
+                    }
+                }
+            },
+            "groupread": {
+                "command_name": "đọc",
+                "command_description": "Đọc một ký tự",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Ký tự để đọc biến thể từ"
+                    }
+                }
+            },
+            "groupauto": {
+                "command_name": "auto",
+                "command_description": "Đặt tự động cho nhân vật",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Ký tự, theo mặc định vô hiệu hóa tự động"
+                    }
+                }
+            },
+            "groupprefix": {
+                "command_name": "prefix",
+                "command_description": "Đặt tiền tố cho một ký tự.",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Ký tự để đặt tiền tố cho"
+                    },
+                    "prefixes": {
+                        "parameter_name": "tiền_tố",
+                        "parameter_description": "Tiền tố, ví dụ: "
+                    }
+                }
+            },
+            "groupbirthday": {
+                "command_name": "birthday",
+                "command_description": "Đặt ngày sinh cho nhân vật",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Nhân vật đặt ngày sinh cho"
+                    },
+                    "birthday": {
+                        "parameter_name": "birthday",
+                        "parameter_description": "Sinh nhật, theo mặc định Không có"
+                    }
+                }
+            },
+            "groupdescription": {
+                "command_name": "description",
+                "command_description": "Đặt mô tả cho Nhân vật",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Ký tự để đặt mô tả cho"
+                    },
+                    "text": {
+                        "parameter_name": "chữ",
+                        "parameter_description": "Mô tả để đặt cho ký tự"
+                    }
+                }
+            },
+            "grouprename": {
+                "command_name": "rename",
+                "command_description": "Đổi tên một nhân vật",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Nhân vật cần đổi tên"
+                    },
+                    "name": {
+                        "parameter_name": "tên",
+                        "parameter_description": "Tên mới cho nhân vật"
+                    }
+                }
+            },
+            "groupnickname": {
+                "command_name": "nick",
+                "command_description": "Đặt biệt danh cho nhân vật",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Nhân vật để đặt biệt hiệu"
+                    },
+                    "nickname": {
+                        "parameter_name": "nick",
+                        "parameter_description": "Biệt danh để đặt cho nhân vật"
+                    }
+                }
+            },
+            "groupgroup": {
+                "command_name": "nhóm",
+                "command_description": "Đặt nhóm cho Nhân vật",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Nhân vật để thiết lập nhóm cho"
+                    },
+                    "group": {
+                        "parameter_name": "nhóm",
+                        "parameter_description": "Nhóm, theo mặc định Không có"
+                    }
+                }
+            },
+            "groupnsfw": {
+                "command_name": "nsfw",
+                "command_description": "Đặt xem Ký tự có phải là NSFW hay không",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Ký tự để đặt NSFW cho"
+                    },
+                    "nsfw": {
+                        "parameter_name": "nsfw",
+                        "parameter_description": "NSFW, theo mặc định chuyển sang giá trị ngược lại"
+                    }
+                }
+            },
+            "groupavatar": {
+                "command_name": "avatar",
+                "command_description": "Đặt avatar cho nhân vật",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Nhân vật để đặt avatar cho"
+                    },
+                    "avatar": {
+                        "parameter_name": "avatar",
+                        "parameter_description": "URL hình ảnh, theo mặc định Không có"
+                    }
+                }
+            },
+            "groupimage": {
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Nhân vật để đặt avatar cho"
+                    },
+                    "avatar": {
+                        "parameter_name": "avatar",
+                        "parameter_description": "URL hình ảnh, theo mặc định Không có"
+                    }
+                }
+            },
+            "grouplocal": {
+                "command_name": "local",
+                "command_description": "Đặt cục bộ cho Nhân vật",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Ký tự để đặt cục bộ cho"
+                    },
+                    "avatar": {
+                        "parameter_name": "image",
+                        "parameter_description": "Hình ảnh, theo mặc định Không có"
+                    },
+                    "nickname": {
+                        "parameter_name": "nick",
+                        "parameter_description": "Biệt danh, theo mặc định Không có"
+                    }
+                }
+            },
+            "groupupdate": {
+                "command_name": "update",
+                "command_description": "Cập nhật proxy. ",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Nhân vật cần cập nhật"
+                    },
+                    "image": {
+                        "parameter_name": "image",
+                        "parameter_description": "Hình ảnh, theo mặc định Không có"
+                    }
+                }
+            },
+            "groupdetail": {
+                "command_name": "detail",
+                "command_description": "Nhận thông tin chi tiết về một nhân vật",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Chi tiết một proxy. "
+                    }
+                }
+            },
+            "groupprune": {
+                "command_name": "cắt_tỉa",
+                "command_description": "Cắt bớt các ký tự không được sử dụng trong một thời gian nhất định.",
+                "params": {
+                    "time": {
+                        "parameter_description": "Ngày cắt tỉa trước, theo mặc định Không có"
+                    }
+                }
+            },
+            "grouppurge": {
+                "command_name": "thanh_lọc",
+                "command_description": "Xóa tất cả dữ liệu của bạn (ngoại trừ nhật ký tin nhắn)",
+                "params": {
+                    "confirmation": {
+                        "parameter_name": "confirmation",
+                        "parameter_description": "confirmation"
+                    }
+                }
+            }
+        },
+        "check_permissions": {
+            "command_name": "check_perms",
+            "command_description": "Kiểm tra xem bot có thể hoạt động trong kênh được cung cấp không"
+        },
+        "roll": {
+            "command_description": "Roll a dice."
+        },
+        "afk": {
+            "command_description": "Check if a user is AFK."
+        },
+        "help": {
+            "command_name": "giúp_đỡ",
+            "command_description": "Trợ giúp Bot tích hợp",
+            "params": {
+                "search": {
+                    "parameter_name": "search",
+                    "parameter_description": "Thuật ngữ tra cứu"
+                }
+            }
+        },
+        "server_wiki": {
+            "command_name": "máy_chủ_wiki",
+            "command_description": "Wiki máy chủ do người dùng xác định",
+            "params": {
+                "search": {
+                    "parameter_name": "search",
+                    "parameter_description": "Thuật ngữ tra cứu"
+                }
+            }
+        },
+        "settings": {
+            "command_name": "cài_đặt",
+            "command_description": "Cài đặt bot",
+            "params": {
+                "menu": {
+                    "parameter_name": "menu",
+                    "parameter_description": "Menu để mở để cài đặt",
+                    "choices": {
+                        "Server": "Máy chủ",
+                        "Member": "Thành viên",
+                        "User": "Người dùng"
+                    }
+                }
+            }
+        },
+        "context_menu": {
+            "command_name": "Proxy"
+        }
+    }
+}

@@ -1,0 +1,963 @@
+{
+    "commands": {
+        "exec": {
+            "command_description": "Execute a command."
+        },
+        "proxy": {
+            "command_name": "proxy",
+            "command_description": "Deaktivieren Sie Charaktere auf einem Server",
+            "params": {
+                "enable": {
+                    "parameter_name": "aktivieren",
+                    "parameter_description": "Aktivieren oder deaktivieren Sie Zeichen standardmäßig"
+                }
+            }
+        },
+        "set": {
+            "command_description": "Set a proxy as the current one."
+        },
+        "use": {
+            "params": {
+                "text": {
+                    "parameter_name": "text",
+                    "parameter_description": "text"
+                }
+            }
+        },
+        "say": {
+            "params": {
+                "text": {
+                    "parameter_name": "text",
+                    "parameter_description": "text"
+                }
+            }
+        },
+        "npc": {
+            "command_name": "npc",
+            "command_description": "Erstellen Sie eine neue NPC-Nachricht",
+            "params": {
+                "franchise": {
+                    "parameter_name": "franchise",
+                    "parameter_description": "Franchise zur Nutzung",
+                    "choices": {
+                        "Pokemon": "Pokemon",
+                        "Pokemon Shiny": "Pokemon Shiny",
+                        "Trainer": "Trainer",
+                        "Digimon": "Digimon",
+                        "Palworld": "Palworld",
+                        "D&D": "D&D"
+                    }
+                },
+                "npc": {
+                    "parameter_name": "npc",
+                    "parameter_description": "Zu verwendender NPC"
+                },
+                "nickname": {
+                    "parameter_name": "spitzname",
+                    "parameter_description": "Spitzname, standardmäßig Keiner"
+                },
+                "emotion": {
+                    "parameter_name": "emotion",
+                    "parameter_description": "Emotion, standardmäßig Normal",
+                    "choices": {
+                        "Normal": "Normal",
+                        "Happy": "Happy",
+                        "Pain": "Pain",
+                        "Angry": "Angry",
+                        "Worried": "Worried",
+                        "Sad": "Sad",
+                        "Crying": "Crying",
+                        "Shouting": "Shouting",
+                        "TearyEyed": "TearyEyed",
+                        "Determined": "Determined",
+                        "Joyous": "Joyous",
+                        "Inspired": "Inspired",
+                        "Surprised": "Surprised",
+                        "Dizzy": "Dizzy",
+                        "Sigh": "Sigh",
+                        "Stunned": "Stunned",
+                        "Special0": "Special0",
+                        "Special1": "Special1",
+                        "Special2": "Special2",
+                        "Special3": "Special3"
+                    }
+                },
+                "image": {
+                    "parameter_name": "bild",
+                    "parameter_description": "Bild, standardmäßig Keines"
+                },
+                "text": {
+                    "parameter_name": "text",
+                    "parameter_description": "text"
+                }
+            }
+        },
+        "create": {
+            "command_description": "Create a new proxy.",
+            "params": {
+                "prefixes": {
+                    "parameter_description": "Prefixes e.g. A:text, |text|, etc."
+                }
+            }
+        },
+        "delete": {
+            "command_name": "löschen",
+            "command_description": "Einen Charakter löschen",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Proxy, aus dem die Variante gelöscht werden soll"
+                }
+            }
+        },
+        "read": {
+            "command_name": "lesen",
+            "command_description": "Lies einen Charakter",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Zeichen, aus dem die Variante gelesen werden soll"
+                }
+            }
+        },
+        "nickname": {
+            "command_name": "spitzname",
+            "command_description": "Legen Sie den Spitznamen für einen Charakter fest",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Zeichen, für das der Spitzname festgelegt werden soll"
+                },
+                "nickname": {
+                    "parameter_name": "spitzname",
+                    "parameter_description": "Spitzname, der für den Charakter festgelegt werden soll"
+                }
+            }
+        },
+        "local": {
+            "command_name": "lokal",
+            "command_description": "Legen Sie den lokalen Wert für einen Charakter fest",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Zeichen, für das das Lokal festgelegt werden soll"
+                },
+                "avatar": {
+                    "parameter_name": "bild",
+                    "parameter_description": "Bild, standardmäßig Keines"
+                },
+                "nickname": {
+                    "parameter_name": "spitzname",
+                    "parameter_description": "Spitzname, standardmäßig Keiner"
+                }
+            }
+        },
+        "avatar": {
+            "command_name": "benutzerbild",
+            "command_description": "Legen Sie den Avatar für einen Charakter fest",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Charakter, für den der Avatar festgelegt werden soll"
+                },
+                "avatar": {
+                    "parameter_name": "benutzerbild",
+                    "parameter_description": "Bild-URL, standardmäßig Keine"
+                }
+            }
+        },
+        "prefix": {
+            "command_name": "präfix",
+            "command_description": "Legen Sie die Präfixe für ein Zeichen fest.",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Zeichen, für das das Präfix festgelegt werden soll"
+                },
+                "prefixes": {
+                    "parameter_name": "präfixe",
+                    "parameter_description": "Präfixe z.B. "
+                }
+            }
+        },
+        "birthday": {
+            "command_name": "geburtstag",
+            "command_description": "Legen Sie den Geburtstag für einen Charakter fest",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Charakter, für den der Geburtstag festgelegt werden soll"
+                },
+                "birthday": {
+                    "parameter_name": "geburtstag",
+                    "parameter_description": "Geburtstag, standardmäßig Keiner"
+                }
+            }
+        },
+        "description": {
+            "command_name": "beschreibung",
+            "command_description": "Legen Sie die Beschreibung für einen Charakter fest",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Zeichen, für das die Beschreibung festgelegt werden soll"
+                },
+                "text": {
+                    "parameter_name": "text",
+                    "parameter_description": "Beschreibung, die für das Zeichen festgelegt werden soll"
+                }
+            }
+        },
+        "rename": {
+            "command_name": "umbenennen",
+            "command_description": "Benennen Sie einen Charakter um",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Zeichen zum Umbenennen"
+                },
+                "name": {
+                    "parameter_name": "name",
+                    "parameter_description": "Neuer Name für den Charakter"
+                }
+            }
+        },
+        "group": {
+            "command_name": "gruppe",
+            "command_description": "Legen Sie die Gruppe für einen Charakter fest",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Zeichen, für das die Gruppe festgelegt werden soll"
+                },
+                "group": {
+                    "parameter_name": "gruppe",
+                    "parameter_description": "Gruppe, standardmäßig Keine"
+                }
+            }
+        },
+        "nsfw": {
+            "command_name": "nsfw",
+            "command_description": "Legen Sie fest, ob ein Charakter NSFW ist",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Zeichen, für das das NSFW festgelegt werden soll"
+                },
+                "nsfw": {
+                    "parameter_name": "nsfw",
+                    "parameter_description": "NSFW, standardmäßig auf den entgegengesetzten Wert umschalten"
+                }
+            }
+        },
+        "auto": {
+            "command_name": "auto",
+            "command_description": "Legen Sie die automatische Einstellung für einen Charakter fest",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Zeichen, deaktiviert standardmäßig die automatische Aktivierung"
+                }
+            }
+        },
+        "list": {
+            "command_name": "liste",
+            "command_description": "Listen Sie alle Charaktere auf ",
+            "params": {
+                "group": {
+                    "parameter_name": "gruppe",
+                    "parameter_description": "Gruppe, aus der Zeichen aufgelistet werden sollen"
+                }
+            }
+        },
+        "latch": {
+            "command_name": "verriegeln",
+            "command_description": "Aktivieren oder deaktivieren Sie den Latch-Modus",
+            "params": {
+                "enable": {
+                    "parameter_description": "Aktivieren oder deaktivieren Sie den Latch-Modus"
+                },
+                "auto_remove": {
+                    "parameter_description": "Aktuelle Kanaleinstellungen beibehalten? Standardmäßig: True."
+                }
+            }
+        },
+        "export": {
+            "command_name": "export",
+            "command_description": "Exportieren Sie Ihre Charaktere in eine JSON-Datei",
+            "params": {
+                "format": {
+                    "parameter_name": "format",
+                    "parameter_description": "Format für den Export, standardmäßig JSON"
+                },
+                "new_token": {
+                    "parameter_name": "neues_token",
+                    "parameter_description": "Wenn Sie ein neues Token generieren möchten"
+                }
+            }
+        },
+        "prune": {
+            "command_name": "prune",
+            "command_description": "Beseitigen Sie Zeichen, die für eine bestimmte Zeit nicht verwendet werden.",
+            "params": {
+                "time": {
+                    "parameter_description": "Datum, vor dem die Bereinigung erfolgen soll, standardmäßig Keines"
+                }
+            }
+        },
+        "purge": {
+            "command_name": "säubern",
+            "command_description": "Löschen Sie alle Ihre Daten (außer Nachrichtenprotokolle)",
+            "params": {
+                "confirmation": {
+                    "parameter_name": "bestätigung",
+                    "parameter_description": "bestätigung"
+                }
+            }
+        },
+        "proxy-to-variant": {
+            "command_name": "proxy-zu-variante",
+            "command_description": "Konvertieren Sie ein Zeichen in eine Variante",
+            "params": {
+                "original": {
+                    "parameter_name": "original",
+                    "parameter_description": "Zu konvertierendes Zeichen"
+                },
+                "base": {
+                    "parameter_name": "base",
+                    "parameter_description": "Neue Basis für den Charakter"
+                }
+            }
+        },
+        "variant-to-proxy": {
+            "command_name": "variante-zu-proxy",
+            "command_description": "Wandeln Sie eine Variante in ein Zeichen um",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Proxy, in den konvertiert werden soll"
+                },
+                "variant": {
+                    "parameter_name": "variante",
+                    "parameter_description": "Variante zum Konvertieren"
+                }
+            }
+        },
+        "update": {
+            "command_name": "aktualisieren",
+            "command_description": "Aktualisieren Sie einen Proxy. ",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Zu aktualisierender Charakter"
+                },
+                "image": {
+                    "parameter_name": "bild",
+                    "parameter_description": "Bild, standardmäßig Keines"
+                }
+            }
+        },
+        "detail": {
+            "command_name": "detail",
+            "command_description": "Erhalten Sie Details zu einem Charakter",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Detaillieren Sie einen Proxy. "
+                }
+            }
+        },
+        "import": {
+            "command_name": "importieren",
+            "command_description": "Importieren Sie Ihre Charaktere aus einer Datei oder einem Token",
+            "params": {
+                "data": {
+                    "parameter_name": "daten",
+                    "parameter_description": "Datei, aus der importiert werden soll"
+                },
+                "token": {
+                    "parameter_name": "zeichen",
+                    "parameter_description": "Für den Import zu verwendendes Token"
+                },
+                "deleting_from_token": {
+                    "parameter_name": "deleting_from_token",
+                    "parameter_description": "Zeichen aus dem Token löschen"
+                }
+            }
+        },
+        "var": {
+            "group_name": "var",
+            "group_description": "Variant commands.",
+            "groupset": {
+                "command_description": "Set a variant."
+            },
+            "groupuse": {
+                "command_description": "Use a variant."
+            },
+            "groupcreate": {
+                "command_name": "erstellen",
+                "command_description": "Erstelle einen neuen Charakter.",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": " Proxy, für den die Variante erstellt werden soll"
+                    },
+                    "image": {
+                        "parameter_name": "bild",
+                        "parameter_description": "Bild, standardmäßig Keines"
+                    },
+                    "prefixes": {
+                        "parameter_description": "Prefixes e.g. A:text, |text|, etc."
+                    }
+                }
+            },
+            "groupdelete": {
+                "command_name": "löschen",
+                "command_description": "Löschen Sie die Variante eines Charakters",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Proxy, aus dem die Variante gelöscht werden soll"
+                    },
+                    "variant": {
+                        "parameter_name": "variante",
+                        "parameter_description": "Variante zum Löschen"
+                    }
+                }
+            },
+            "groupread": {
+                "command_name": "lesen",
+                "command_description": "Lies einen Charakter",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Zeichen, aus dem die Variante gelesen werden soll"
+                    },
+                    "variant": {
+                        "parameter_name": "variante",
+                        "parameter_description": "Variante zum Lesen"
+                    }
+                }
+            },
+            "groupnickname": {
+                "command_name": "spitzname",
+                "command_description": "Legen Sie den Spitznamen für einen Charakter fest",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Zeichen, für das der Spitzname festgelegt werden soll"
+                    },
+                    "variant": {
+                        "parameter_name": "variante",
+                        "parameter_description": "Variante, für die der Spitzname festgelegt werden soll"
+                    },
+                    "nickname": {
+                        "parameter_name": "spitzname",
+                        "parameter_description": "Spitzname, der für den Charakter festgelegt werden soll"
+                    }
+                }
+            },
+            "grouplocal": {
+                "command_name": "lokal",
+                "command_description": "Legen Sie den lokalen Wert für einen Charakter fest",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Zeichen, für das das Lokal festgelegt werden soll"
+                    },
+                    "variant": {
+                        "parameter_name": "variante",
+                        "parameter_description": "Variante, für die das Lokal festgelegt werden soll"
+                    },
+                    "avatar": {
+                        "parameter_name": "bild",
+                        "parameter_description": "Bild, standardmäßig Keines"
+                    },
+                    "nickname": {
+                        "parameter_name": "spitzname",
+                        "parameter_description": "Spitzname, standardmäßig Keiner"
+                    }
+                }
+            },
+            "groupprefix": {
+                "command_name": "präfix",
+                "command_description": "Legen Sie die Präfixe für ein Zeichen fest.",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Zeichen, für das das Präfix festgelegt werden soll"
+                    },
+                    "variant": {
+                        "parameter_name": "variante",
+                        "parameter_description": "Variante, für die das Präfix festgelegt werden soll"
+                    },
+                    "prefixes": {
+                        "parameter_name": "präfixe",
+                        "parameter_description": "Präfixe z.B. "
+                    }
+                }
+            },
+            "groupbirthday": {
+                "command_name": "geburtstag",
+                "command_description": "Legen Sie den Geburtstag für einen Charakter fest",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Charakter, für den der Geburtstag festgelegt werden soll"
+                    },
+                    "variant": {
+                        "parameter_name": "variante",
+                        "parameter_description": "Variante zum Festlegen des Geburtstages"
+                    },
+                    "birthday": {
+                        "parameter_name": "geburtstag",
+                        "parameter_description": "Geburtstag, standardmäßig Keiner"
+                    }
+                }
+            },
+            "groupdescription": {
+                "command_name": "beschreibung",
+                "command_description": "Legen Sie die Beschreibung für einen Charakter fest",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Zeichen, für das die Beschreibung festgelegt werden soll"
+                    },
+                    "variant": {
+                        "parameter_name": "variante",
+                        "parameter_description": "Variante, für die die Beschreibung festgelegt werden soll"
+                    },
+                    "text": {
+                        "parameter_name": "text",
+                        "parameter_description": "Beschreibung, die für das Zeichen festgelegt werden soll"
+                    }
+                }
+            },
+            "grouprename": {
+                "command_name": "umbenennen",
+                "command_description": "Benennen Sie einen Charakter um",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Zeichen zum Umbenennen"
+                    },
+                    "variant": {
+                        "parameter_name": "variante",
+                        "parameter_description": "Variante zum Umbenennen"
+                    },
+                    "name": {
+                        "parameter_name": "name",
+                        "parameter_description": "Neuer Name für den Charakter"
+                    }
+                }
+            },
+            "groupgroup": {
+                "command_name": "gruppe",
+                "command_description": "Legen Sie die Gruppe für einen Charakter fest",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Zeichen, für das die Gruppe festgelegt werden soll"
+                    },
+                    "variant": {
+                        "parameter_name": "variante",
+                        "parameter_description": "Variante, für die die Gruppe festgelegt werden soll"
+                    },
+                    "group": {
+                        "parameter_name": "gruppe",
+                        "parameter_description": "Gruppe, standardmäßig Keine"
+                    }
+                }
+            },
+            "groupnsfw": {
+                "command_name": "nsfw",
+                "command_description": "Legen Sie fest, ob ein Charakter NSFW ist",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Zeichen, für das das NSFW festgelegt werden soll"
+                    },
+                    "variant": {
+                        "parameter_name": "variante",
+                        "parameter_description": "Variante, für die die NSFW festgelegt werden soll"
+                    },
+                    "nsfw": {
+                        "parameter_name": "nsfw",
+                        "parameter_description": "NSFW, standardmäßig auf den entgegengesetzten Wert umschalten"
+                    }
+                }
+            },
+            "groupauto": {
+                "command_name": "auto",
+                "command_description": "Legen Sie die automatische Einstellung für einen Charakter fest",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Zeichen, deaktiviert standardmäßig die automatische Aktivierung"
+                    },
+                    "variant": {
+                        "parameter_name": "variante",
+                        "parameter_description": "Variante, für die das Auto eingestellt werden soll"
+                    }
+                }
+            },
+            "groupavatar": {
+                "command_name": "benutzerbild",
+                "command_description": "Legen Sie den Avatar für einen Charakter fest",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Charakter, für den der Avatar festgelegt werden soll"
+                    },
+                    "variant": {
+                        "parameter_name": "variante",
+                        "parameter_description": "Variante, für die der Avatar festgelegt werden soll"
+                    },
+                    "avatar": {
+                        "parameter_name": "benutzerbild",
+                        "parameter_description": "Bild-URL, standardmäßig Keine"
+                    }
+                }
+            },
+            "grouplist": {
+                "command_description": "List all variants."
+            },
+            "groupfind": {
+                "command_description": "Find a variant."
+            },
+            "groupupdate": {
+                "command_name": "aktualisieren",
+                "command_description": "Aktualisieren Sie einen Proxy. ",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Zu aktualisierender Charakter"
+                    },
+                    "image": {
+                        "parameter_name": "bild",
+                        "parameter_description": "Bild, standardmäßig Keines"
+                    }
+                }
+            },
+            "groupdetail": {
+                "command_name": "detail",
+                "command_description": "Erhalten Sie Details zu einem Charakter",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Detaillieren Sie einen Proxy. "
+                    },
+                    "variant": {
+                        "parameter_name": "variante",
+                        "parameter_description": "Variante zum Detail"
+                    }
+                }
+            },
+            "groupprune": {
+                "command_name": "prune",
+                "command_description": "Beseitigen Sie Zeichen, die für eine bestimmte Zeit nicht verwendet werden.",
+                "params": {
+                    "proxy": {
+                        "parameter_description": "proxy"
+                    },
+                    "time": {
+                        "parameter_description": "Datum, vor dem die Bereinigung erfolgen soll, standardmäßig Keines"
+                    }
+                }
+            },
+            "grouppurge": {
+                "command_name": "säubern",
+                "command_description": "Löschen Sie alle Ihre Daten (außer Nachrichtenprotokolle)",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "proxy"
+                    },
+                    "confirmation": {
+                        "parameter_name": "bestätigung",
+                        "parameter_description": "bestätigung"
+                    }
+                }
+            }
+        },
+        "shared": {
+            "group_description": "Shared proxy commands.",
+            "groupset": {
+                "command_description": "Set a proxy as the current one."
+            },
+            "groupcreate": {
+                "command_name": "erstellen",
+                "command_description": "Erstelle einen neuen Charakter.",
+                "params": {
+                    "image": {
+                        "parameter_name": "bild",
+                        "parameter_description": "Bild, standardmäßig Keines"
+                    }
+                }
+            },
+            "groupdelete": {
+                "command_name": "löschen",
+                "command_description": "Einen Charakter löschen",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Proxy, aus dem die Variante gelöscht werden soll"
+                    }
+                }
+            },
+            "groupread": {
+                "command_name": "lesen",
+                "command_description": "Lies einen Charakter",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Zeichen, aus dem die Variante gelesen werden soll"
+                    }
+                }
+            },
+            "groupauto": {
+                "command_name": "auto",
+                "command_description": "Legen Sie die automatische Einstellung für einen Charakter fest",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Zeichen, deaktiviert standardmäßig die automatische Aktivierung"
+                    }
+                }
+            },
+            "groupprefix": {
+                "command_name": "präfix",
+                "command_description": "Legen Sie die Präfixe für ein Zeichen fest.",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Zeichen, für das das Präfix festgelegt werden soll"
+                    },
+                    "prefixes": {
+                        "parameter_name": "präfixe",
+                        "parameter_description": "Präfixe z.B. "
+                    }
+                }
+            },
+            "groupbirthday": {
+                "command_name": "geburtstag",
+                "command_description": "Legen Sie den Geburtstag für einen Charakter fest",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Charakter, für den der Geburtstag festgelegt werden soll"
+                    },
+                    "birthday": {
+                        "parameter_name": "geburtstag",
+                        "parameter_description": "Geburtstag, standardmäßig Keiner"
+                    }
+                }
+            },
+            "groupdescription": {
+                "command_name": "beschreibung",
+                "command_description": "Legen Sie die Beschreibung für einen Charakter fest",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Zeichen, für das die Beschreibung festgelegt werden soll"
+                    },
+                    "text": {
+                        "parameter_name": "text",
+                        "parameter_description": "Beschreibung, die für das Zeichen festgelegt werden soll"
+                    }
+                }
+            },
+            "grouprename": {
+                "command_name": "umbenennen",
+                "command_description": "Benennen Sie einen Charakter um",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Zeichen zum Umbenennen"
+                    },
+                    "name": {
+                        "parameter_name": "name",
+                        "parameter_description": "Neuer Name für den Charakter"
+                    }
+                }
+            },
+            "groupnickname": {
+                "command_name": "spitzname",
+                "command_description": "Legen Sie den Spitznamen für einen Charakter fest",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Zeichen, für das der Spitzname festgelegt werden soll"
+                    },
+                    "nickname": {
+                        "parameter_name": "spitzname",
+                        "parameter_description": "Spitzname, der für den Charakter festgelegt werden soll"
+                    }
+                }
+            },
+            "groupgroup": {
+                "command_name": "gruppe",
+                "command_description": "Legen Sie die Gruppe für einen Charakter fest",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Zeichen, für das die Gruppe festgelegt werden soll"
+                    },
+                    "group": {
+                        "parameter_name": "gruppe",
+                        "parameter_description": "Gruppe, standardmäßig Keine"
+                    }
+                }
+            },
+            "groupnsfw": {
+                "command_name": "nsfw",
+                "command_description": "Legen Sie fest, ob ein Charakter NSFW ist",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Zeichen, für das das NSFW festgelegt werden soll"
+                    },
+                    "nsfw": {
+                        "parameter_name": "nsfw",
+                        "parameter_description": "NSFW, standardmäßig auf den entgegengesetzten Wert umschalten"
+                    }
+                }
+            },
+            "groupavatar": {
+                "command_name": "benutzerbild",
+                "command_description": "Legen Sie den Avatar für einen Charakter fest",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Charakter, für den der Avatar festgelegt werden soll"
+                    },
+                    "avatar": {
+                        "parameter_name": "benutzerbild",
+                        "parameter_description": "Bild-URL, standardmäßig Keine"
+                    }
+                }
+            },
+            "groupimage": {
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Charakter, für den der Avatar festgelegt werden soll"
+                    },
+                    "avatar": {
+                        "parameter_name": "benutzerbild",
+                        "parameter_description": "Bild-URL, standardmäßig Keine"
+                    }
+                }
+            },
+            "grouplocal": {
+                "command_name": "lokal",
+                "command_description": "Legen Sie den lokalen Wert für einen Charakter fest",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Zeichen, für das das Lokal festgelegt werden soll"
+                    },
+                    "avatar": {
+                        "parameter_name": "bild",
+                        "parameter_description": "Bild, standardmäßig Keines"
+                    },
+                    "nickname": {
+                        "parameter_name": "spitzname",
+                        "parameter_description": "Spitzname, standardmäßig Keiner"
+                    }
+                }
+            },
+            "groupupdate": {
+                "command_name": "aktualisieren",
+                "command_description": "Aktualisieren Sie einen Proxy. ",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Zu aktualisierender Charakter"
+                    },
+                    "image": {
+                        "parameter_name": "bild",
+                        "parameter_description": "Bild, standardmäßig Keines"
+                    }
+                }
+            },
+            "groupdetail": {
+                "command_name": "detail",
+                "command_description": "Erhalten Sie Details zu einem Charakter",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Detaillieren Sie einen Proxy. "
+                    }
+                }
+            },
+            "groupprune": {
+                "command_name": "prune",
+                "command_description": "Beseitigen Sie Zeichen, die für eine bestimmte Zeit nicht verwendet werden.",
+                "params": {
+                    "time": {
+                        "parameter_description": "Datum, vor dem die Bereinigung erfolgen soll, standardmäßig Keines"
+                    }
+                }
+            },
+            "grouppurge": {
+                "command_name": "säubern",
+                "command_description": "Löschen Sie alle Ihre Daten (außer Nachrichtenprotokolle)",
+                "params": {
+                    "confirmation": {
+                        "parameter_name": "bestätigung",
+                        "parameter_description": "bestätigung"
+                    }
+                }
+            }
+        },
+        "check_permissions": {
+            "command_name": "check_perms",
+            "command_description": "Überprüfen Sie, ob der Bot im bereitgestellten Kanal arbeiten kann"
+        },
+        "roll": {
+            "command_description": "Roll a dice."
+        },
+        "afk": {
+            "command_description": "Check if a user is AFK."
+        },
+        "help": {
+            "command_name": "helfen",
+            "command_description": "Integrierte Bot-Hilfe",
+            "params": {
+                "search": {
+                    "parameter_name": "suchen",
+                    "parameter_description": "Suchbegriff"
+                }
+            }
+        },
+        "server_wiki": {
+            "command_name": "server_wiki",
+            "command_description": "Benutzerdefiniertes Server-Wiki",
+            "params": {
+                "search": {
+                    "parameter_name": "suchen",
+                    "parameter_description": "Suchbegriff"
+                }
+            }
+        },
+        "settings": {
+            "command_name": "einstellungen",
+            "command_description": "Bot-Einstellungen",
+            "params": {
+                "menu": {
+                    "parameter_name": "speisekarte",
+                    "parameter_description": "Menü zum Öffnen für Einstellungen",
+                    "choices": {
+                        "Server": "Server",
+                        "Member": "Mitglied",
+                        "User": "Benutzer"
+                    }
+                }
+            }
+        },
+        "context_menu": {
+            "command_name": "Stellvertreter"
+        }
+    }
+}

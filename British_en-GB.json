@@ -1,0 +1,963 @@
+{
+	"commands": {
+		"exec": {
+			"command_description": "Execute a command."
+		},
+		"proxy": {
+			"command_name": "proxy",
+			"command_description": "Disable characters in a server",
+			"params": {
+				"enable": {
+					"parameter_name": "enable",
+					"parameter_description": "Enable or disable characters, by default switches"
+				}
+			}
+		},
+		"set": {
+			"command_description": "Set a proxy as the current one."
+		},
+		"use": {
+			"params": {
+				"text": {
+					"parameter_name": "text",
+					"parameter_description": "text"
+				}
+			}
+		},
+		"say": {
+			"params": {
+				"text": {
+					"parameter_name": "text",
+					"parameter_description": "text"
+				}
+			}
+		},
+		"npc": {
+			"command_name": "npc",
+			"command_description": "Create a new NPC message",
+			"params": {
+				"franchise": {
+					"parameter_name": "franchise",
+					"parameter_description": "Franchise to use",
+					"choices": {
+						"Pokemon": "Pokemon",
+						"Pokemon Shiny": "Pokemon Shiny",
+						"Trainer": "Trainer",
+						"Digimon": "Digimon",
+						"Palworld": "Palworld",
+						"D&D": "D&D"
+					}
+				},
+				"npc": {
+					"parameter_name": "npc",
+					"parameter_description": "NPC to use"
+				},
+				"nickname": {
+					"parameter_name": "nickname",
+					"parameter_description": "Nickname, by default None"
+				},
+				"emotion": {
+					"parameter_name": "emotion",
+					"parameter_description": "Emotion, by default Normal",
+					"choices": {
+						"Normal": "Normal",
+						"Happy": "Happy",
+						"Pain": "Pain",
+						"Angry": "Angry",
+						"Worried": "Worried",
+						"Sad": "Sad",
+						"Crying": "Crying",
+						"Shouting": "Shouting",
+						"TearyEyed": "TearyEyed",
+						"Determined": "Determined",
+						"Joyous": "Joyous",
+						"Inspired": "Inspired",
+						"Surprised": "Surprised",
+						"Dizzy": "Dizzy",
+						"Sigh": "Sigh",
+						"Stunned": "Stunned",
+						"Special0": "Special0",
+						"Special1": "Special1",
+						"Special2": "Special2",
+						"Special3": "Special3"
+					}
+				},
+				"image": {
+					"parameter_name": "image",
+					"parameter_description": "Image, by default None"
+				},
+				"text": {
+					"parameter_name": "text",
+					"parameter_description": "text"
+				}
+			}
+		},
+		"create": {
+			"command_description": "Create a new proxy.",
+			"params": {
+				"prefixes": {
+					"parameter_description": "Prefixes e.g. A:text, |text|, etc."
+				}
+			}
+		},
+		"delete": {
+			"command_name": "delete",
+			"command_description": "Delete a Character",
+			"params": {
+				"proxy": {
+					"parameter_name": "proxy",
+					"parameter_description": "Proxy to delete the variant from"
+				}
+			}
+		},
+		"read": {
+			"command_name": "read",
+			"command_description": "Read a Character",
+			"params": {
+				"proxy": {
+					"parameter_name": "proxy",
+					"parameter_description": "Character to read the variant from"
+				}
+			}
+		},
+		"nickname": {
+			"command_name": "nickname",
+			"command_description": "Set the nickname for a Character",
+			"params": {
+				"proxy": {
+					"parameter_name": "proxy",
+					"parameter_description": "Character to set the nickname for"
+				},
+				"nickname": {
+					"parameter_name": "nickname",
+					"parameter_description": "Nickname to set for the character"
+				}
+			}
+		},
+		"local": {
+			"command_name": "local",
+			"command_description": "Set the local for a Character",
+			"params": {
+				"proxy": {
+					"parameter_name": "proxy",
+					"parameter_description": "Character to set the local for"
+				},
+				"avatar": {
+					"parameter_name": "image",
+					"parameter_description": "Image, by default None"
+				},
+				"nickname": {
+					"parameter_name": "nickname",
+					"parameter_description": "Nickname, by default None"
+				}
+			}
+		},
+		"avatar": {
+			"command_name": "avatar",
+			"command_description": "Set the avatar for a Character",
+			"params": {
+				"proxy": {
+					"parameter_name": "proxy",
+					"parameter_description": "Character to set the avatar for"
+				},
+				"avatar": {
+					"parameter_name": "avatar",
+					"parameter_description": "Image URL, by default None"
+				}
+			}
+		},
+		"prefix": {
+			"command_name": "prefix",
+			"command_description": "Set the prefixes for a character.",
+			"params": {
+				"proxy": {
+					"parameter_name": "proxy",
+					"parameter_description": "Character to set the prefix for"
+				},
+				"prefixes": {
+					"parameter_name": "prefixes",
+					"parameter_description": "Prefixes e.g. A:text, |text|, etc. by default None"
+				}
+			}
+		},
+		"birthday": {
+			"command_name": "birthday",
+			"command_description": "Set the birthday for a Character",
+			"params": {
+				"proxy": {
+					"parameter_name": "proxy",
+					"parameter_description": "Character to set the birthday for"
+				},
+				"birthday": {
+					"parameter_name": "birthday",
+					"parameter_description": "Birthday, by default None"
+				}
+			}
+		},
+		"description": {
+			"command_name": "description",
+			"command_description": "Set the description for a Character",
+			"params": {
+				"proxy": {
+					"parameter_name": "proxy",
+					"parameter_description": "Character to set the description for"
+				},
+				"text": {
+					"parameter_name": "text",
+					"parameter_description": "Description to set for the character"
+				}
+			}
+		},
+		"rename": {
+			"command_name": "rename",
+			"command_description": "Rename a Character",
+			"params": {
+				"proxy": {
+					"parameter_name": "proxy",
+					"parameter_description": "Character to rename"
+				},
+				"name": {
+					"parameter_name": "name",
+					"parameter_description": "New name for the character"
+				}
+			}
+		},
+		"group": {
+			"command_name": "group",
+			"command_description": "Set the group for a Character",
+			"params": {
+				"proxy": {
+					"parameter_name": "proxy",
+					"parameter_description": "Character to set the group for"
+				},
+				"group": {
+					"parameter_name": "group",
+					"parameter_description": "Group, by default None"
+				}
+			}
+		},
+		"nsfw": {
+			"command_name": "nsfw",
+			"command_description": "Set whether a Character is NSFW",
+			"params": {
+				"proxy": {
+					"parameter_name": "proxy",
+					"parameter_description": "Character to set the NSFW for"
+				},
+				"nsfw": {
+					"parameter_name": "nsfw",
+					"parameter_description": "NSFW, by default switch to opposite value"
+				}
+			}
+		},
+		"auto": {
+			"command_name": "auto",
+			"command_description": "Set the auto for a Character",
+			"params": {
+				"proxy": {
+					"parameter_name": "proxy",
+					"parameter_description": "Character, by default disables auto"
+				}
+			}
+		},
+		"list": {
+			"command_name": "list",
+			"command_description": "List all characters ",
+			"params": {
+				"group": {
+					"parameter_name": "group",
+					"parameter_description": "Group to list characters from"
+				}
+			}
+		},
+		"latch": {
+			"command_name": "latch",
+			"command_description": "Enable or disable latch mode",
+			"params": {
+				"enable": {
+					"parameter_description": "Enable or disable latch mode"
+				},
+				"auto_remove": {
+					"parameter_description": "Whether to keep the auto for current channel or not, by default True"
+				}
+			}
+		},
+		"export": {
+			"command_name": "export",
+			"command_description": "Export your characters to a JSON file",
+			"params": {
+				"format": {
+					"parameter_name": "format",
+					"parameter_description": "Format to export to, by default JSON"
+				},
+				"new_token": {
+					"parameter_name": "new_token",
+					"parameter_description": "If you want to generate a new token"
+				}
+			}
+		},
+		"prune": {
+			"command_name": "prune",
+			"command_description": "Prune characters unused for a certain time.",
+			"params": {
+				"time": {
+					"parameter_description": "Date to prune before, by default None"
+				}
+			}
+		},
+		"purge": {
+			"command_name": "purge",
+			"command_description": "Purge all of your data (except message logs)",
+			"params": {
+				"confirmation": {
+					"parameter_name": "confirmation",
+					"parameter_description": "confirmation"
+				}
+			}
+		},
+		"proxy-to-variant": {
+			"command_name": "proxy-to-variant",
+			"command_description": "Convert a character to a variant",
+			"params": {
+				"original": {
+					"parameter_name": "original",
+					"parameter_description": "Character to convert"
+				},
+				"base": {
+					"parameter_name": "base",
+					"parameter_description": "New base for the character"
+				}
+			}
+		},
+		"variant-to-proxy": {
+			"command_name": "variant-to-proxy",
+			"command_description": "Convert a variant to a character",
+			"params": {
+				"proxy": {
+					"parameter_name": "proxy",
+					"parameter_description": "Proxy to convert to"
+				},
+				"variant": {
+					"parameter_name": "variant",
+					"parameter_description": "Variant to convert"
+				}
+			}
+		},
+		"update": {
+			"command_name": "update",
+			"command_description": "Update a proxy. Old way of updating proxies.",
+			"params": {
+				"proxy": {
+					"parameter_name": "proxy",
+					"parameter_description": "Character to update"
+				},
+				"image": {
+					"parameter_name": "image",
+					"parameter_description": "Image, by default None"
+				}
+			}
+		},
+		"detail": {
+			"command_name": "detail",
+			"command_description": "Get details of a character",
+			"params": {
+				"proxy": {
+					"parameter_name": "proxy",
+					"parameter_description": "Detail a proxy. Old way of editing proxies."
+				}
+			}
+		},
+		"import": {
+			"command_name": "import",
+			"command_description": "Import your characters from a file or token",
+			"params": {
+				"data": {
+					"parameter_name": "data",
+					"parameter_description": "File to import from"
+				},
+				"token": {
+					"parameter_name": "token",
+					"parameter_description": "Token to use for importing"
+				},
+				"deleting_from_token": {
+					"parameter_name": "deleting_from_token",
+					"parameter_description": "Delete characters from the token"
+				}
+			}
+		},
+		"var": {
+			"group_name": "var",
+			"group_description": "Variant commands.",
+			"groupset": {
+				"command_description": "Set a variant."
+			},
+			"groupuse": {
+				"command_description": "Use a variant."
+			},
+			"groupcreate": {
+				"command_name": "create",
+				"command_description": "Create a new character.",
+				"params": {
+					"proxy": {
+						"parameter_name": "proxy",
+						"parameter_description": " Proxy to create the variant for"
+					},
+					"image": {
+						"parameter_name": "image",
+						"parameter_description": "Image, by default None"
+					},
+					"prefixes": {
+						"parameter_description": "Prefixes e.g. A:text, |text|, etc."
+					}
+				}
+			},
+			"groupdelete": {
+				"command_name": "delete",
+				"command_description": "Delete a Character's variant",
+				"params": {
+					"proxy": {
+						"parameter_name": "proxy",
+						"parameter_description": "Proxy to delete the variant from"
+					},
+					"variant": {
+						"parameter_name": "variant",
+						"parameter_description": "Variant to delete"
+					}
+				}
+			},
+			"groupread": {
+				"command_name": "read",
+				"command_description": "Read a Character",
+				"params": {
+					"proxy": {
+						"parameter_name": "proxy",
+						"parameter_description": "Character to read the variant from"
+					},
+					"variant": {
+						"parameter_name": "variant",
+						"parameter_description": "Variant to read"
+					}
+				}
+			},
+			"groupnickname": {
+				"command_name": "nickname",
+				"command_description": "Set the nickname for a Character",
+				"params": {
+					"proxy": {
+						"parameter_name": "proxy",
+						"parameter_description": "Character to set the nickname for"
+					},
+					"variant": {
+						"parameter_name": "variant",
+						"parameter_description": "Variant to set the nickname for"
+					},
+					"nickname": {
+						"parameter_name": "nickname",
+						"parameter_description": "Nickname to set for the character"
+					}
+				}
+			},
+			"grouplocal": {
+				"command_name": "local",
+				"command_description": "Set the local for a Character",
+				"params": {
+					"proxy": {
+						"parameter_name": "proxy",
+						"parameter_description": "Character to set the local for"
+					},
+					"variant": {
+						"parameter_name": "variant",
+						"parameter_description": "Variant to set the local for"
+					},
+					"avatar": {
+						"parameter_name": "image",
+						"parameter_description": "Image, by default None"
+					},
+					"nickname": {
+						"parameter_name": "nickname",
+						"parameter_description": "Nickname, by default None"
+					}
+				}
+			},
+			"groupprefix": {
+				"command_name": "prefix",
+				"command_description": "Set the prefixes for a character.",
+				"params": {
+					"proxy": {
+						"parameter_name": "proxy",
+						"parameter_description": "Character to set the prefix for"
+					},
+					"variant": {
+						"parameter_name": "variant",
+						"parameter_description": "Variant to set the prefix for"
+					},
+					"prefixes": {
+						"parameter_name": "prefixes",
+						"parameter_description": "Prefixes e.g. A:text, |text|, etc. by default None"
+					}
+				}
+			},
+			"groupbirthday": {
+				"command_name": "birthday",
+				"command_description": "Set the birthday for a Character",
+				"params": {
+					"proxy": {
+						"parameter_name": "proxy",
+						"parameter_description": "Character to set the birthday for"
+					},
+					"variant": {
+						"parameter_name": "variant",
+						"parameter_description": "Variant to set the birthday for"
+					},
+					"birthday": {
+						"parameter_name": "birthday",
+						"parameter_description": "Birthday, by default None"
+					}
+				}
+			},
+			"groupdescription": {
+				"command_name": "description",
+				"command_description": "Set the description for a Character",
+				"params": {
+					"proxy": {
+						"parameter_name": "proxy",
+						"parameter_description": "Character to set the description for"
+					},
+					"variant": {
+						"parameter_name": "variant",
+						"parameter_description": "Variant to set the description for"
+					},
+					"text": {
+						"parameter_name": "text",
+						"parameter_description": "Description to set for the character"
+					}
+				}
+			},
+			"grouprename": {
+				"command_name": "rename",
+				"command_description": "Rename a Character",
+				"params": {
+					"proxy": {
+						"parameter_name": "proxy",
+						"parameter_description": "Character to rename"
+					},
+					"variant": {
+						"parameter_name": "variant",
+						"parameter_description": "Variant to rename"
+					},
+					"name": {
+						"parameter_name": "name",
+						"parameter_description": "New name for the character"
+					}
+				}
+			},
+			"groupgroup": {
+				"command_name": "group",
+				"command_description": "Set the group for a Character",
+				"params": {
+					"proxy": {
+						"parameter_name": "proxy",
+						"parameter_description": "Character to set the group for"
+					},
+					"variant": {
+						"parameter_name": "variant",
+						"parameter_description": "Variant to set the group for"
+					},
+					"group": {
+						"parameter_name": "group",
+						"parameter_description": "Group, by default None"
+					}
+				}
+			},
+			"groupnsfw": {
+				"command_name": "nsfw",
+				"command_description": "Set whether a Character is NSFW",
+				"params": {
+					"proxy": {
+						"parameter_name": "proxy",
+						"parameter_description": "Character to set the NSFW for"
+					},
+					"variant": {
+						"parameter_name": "variant",
+						"parameter_description": "Variant to set the NSFW for"
+					},
+					"nsfw": {
+						"parameter_name": "nsfw",
+						"parameter_description": "NSFW, by default switch to opposite value"
+					}
+				}
+			},
+			"groupauto": {
+				"command_name": "auto",
+				"command_description": "Set the auto for a Character",
+				"params": {
+					"proxy": {
+						"parameter_name": "proxy",
+						"parameter_description": "Character, by default disables auto"
+					},
+					"variant": {
+						"parameter_name": "variant",
+						"parameter_description": "Variant to set the auto for"
+					}
+				}
+			},
+			"groupavatar": {
+				"command_name": "avatar",
+				"command_description": "Set the avatar for a Character",
+				"params": {
+					"proxy": {
+						"parameter_name": "proxy",
+						"parameter_description": "Character to set the avatar for"
+					},
+					"variant": {
+						"parameter_name": "variant",
+						"parameter_description": "Variant to set the avatar for"
+					},
+					"avatar": {
+						"parameter_name": "avatar",
+						"parameter_description": "Image URL, by default None"
+					}
+				}
+			},
+			"grouplist": {
+				"command_description": "List all variants."
+			},
+			"groupfind": {
+				"command_description": "Find a variant."
+			},
+			"groupupdate": {
+				"command_name": "update",
+				"command_description": "Update a proxy. Old way of updating proxies.",
+				"params": {
+					"proxy": {
+						"parameter_name": "proxy",
+						"parameter_description": "Character to update"
+					},
+					"image": {
+						"parameter_name": "image",
+						"parameter_description": "Image, by default None"
+					}
+				}
+			},
+			"groupdetail": {
+				"command_name": "detail",
+				"command_description": "Get details of a character",
+				"params": {
+					"proxy": {
+						"parameter_name": "proxy",
+						"parameter_description": "Detail a proxy. Old way of editing proxies."
+					},
+					"variant": {
+						"parameter_name": "variant",
+						"parameter_description": "Variant to detail"
+					}
+				}
+			},
+			"groupprune": {
+				"command_name": "prune",
+				"command_description": "Prune characters unused for a certain time.",
+				"params": {
+					"proxy": {
+						"parameter_description": "proxy"
+					},
+					"time": {
+						"parameter_description": "Date to prune before, by default None"
+					}
+				}
+			},
+			"grouppurge": {
+				"command_name": "purge",
+				"command_description": "Purge all of your data (except message logs)",
+				"params": {
+					"proxy": {
+						"parameter_name": "proxy",
+						"parameter_description": "proxy"
+					},
+					"confirmation": {
+						"parameter_name": "confirmation",
+						"parameter_description": "confirmation"
+					}
+				}
+			}
+		},
+		"shared": {
+			"group_description": "Shared proxy commands.",
+			"groupset": {
+				"command_description": "Set a proxy as the current one."
+			},
+			"groupcreate": {
+				"command_name": "create",
+				"command_description": "Create a new character.",
+				"params": {
+					"image": {
+						"parameter_name": "image",
+						"parameter_description": "Image, by default None"
+					}
+				}
+			},
+			"groupdelete": {
+				"command_name": "delete",
+				"command_description": "Delete a Character",
+				"params": {
+					"proxy": {
+						"parameter_name": "proxy",
+						"parameter_description": "Proxy to delete the variant from"
+					}
+				}
+			},
+			"groupread": {
+				"command_name": "read",
+				"command_description": "Read a Character",
+				"params": {
+					"proxy": {
+						"parameter_name": "proxy",
+						"parameter_description": "Character to read the variant from"
+					}
+				}
+			},
+			"groupauto": {
+				"command_name": "auto",
+				"command_description": "Set the auto for a Character",
+				"params": {
+					"proxy": {
+						"parameter_name": "proxy",
+						"parameter_description": "Character, by default disables auto"
+					}
+				}
+			},
+			"groupprefix": {
+				"command_name": "prefix",
+				"command_description": "Set the prefixes for a character.",
+				"params": {
+					"proxy": {
+						"parameter_name": "proxy",
+						"parameter_description": "Character to set the prefix for"
+					},
+					"prefixes": {
+						"parameter_name": "prefixes",
+						"parameter_description": "Prefixes e.g. A:text, |text|, etc. by default None"
+					}
+				}
+			},
+			"groupbirthday": {
+				"command_name": "birthday",
+				"command_description": "Set the birthday for a Character",
+				"params": {
+					"proxy": {
+						"parameter_name": "proxy",
+						"parameter_description": "Character to set the birthday for"
+					},
+					"birthday": {
+						"parameter_name": "birthday",
+						"parameter_description": "Birthday, by default None"
+					}
+				}
+			},
+			"groupdescription": {
+				"command_name": "description",
+				"command_description": "Set the description for a Character",
+				"params": {
+					"proxy": {
+						"parameter_name": "proxy",
+						"parameter_description": "Character to set the description for"
+					},
+					"text": {
+						"parameter_name": "text",
+						"parameter_description": "Description to set for the character"
+					}
+				}
+			},
+			"grouprename": {
+				"command_name": "rename",
+				"command_description": "Rename a Character",
+				"params": {
+					"proxy": {
+						"parameter_name": "proxy",
+						"parameter_description": "Character to rename"
+					},
+					"name": {
+						"parameter_name": "name",
+						"parameter_description": "New name for the character"
+					}
+				}
+			},
+			"groupnickname": {
+				"command_name": "nickname",
+				"command_description": "Set the nickname for a Character",
+				"params": {
+					"proxy": {
+						"parameter_name": "proxy",
+						"parameter_description": "Character to set the nickname for"
+					},
+					"nickname": {
+						"parameter_name": "nickname",
+						"parameter_description": "Nickname to set for the character"
+					}
+				}
+			},
+			"groupgroup": {
+				"command_name": "group",
+				"command_description": "Set the group for a Character",
+				"params": {
+					"proxy": {
+						"parameter_name": "proxy",
+						"parameter_description": "Character to set the group for"
+					},
+					"group": {
+						"parameter_name": "group",
+						"parameter_description": "Group, by default None"
+					}
+				}
+			},
+			"groupnsfw": {
+				"command_name": "nsfw",
+				"command_description": "Set whether a Character is NSFW",
+				"params": {
+					"proxy": {
+						"parameter_name": "proxy",
+						"parameter_description": "Character to set the NSFW for"
+					},
+					"nsfw": {
+						"parameter_name": "nsfw",
+						"parameter_description": "NSFW, by default switch to opposite value"
+					}
+				}
+			},
+			"groupavatar": {
+				"command_name": "avatar",
+				"command_description": "Set the avatar for a Character",
+				"params": {
+					"proxy": {
+						"parameter_name": "proxy",
+						"parameter_description": "Character to set the avatar for"
+					},
+					"avatar": {
+						"parameter_name": "avatar",
+						"parameter_description": "Image URL, by default None"
+					}
+				}
+			},
+			"groupimage": {
+				"params": {
+					"proxy": {
+						"parameter_name": "proxy",
+						"parameter_description": "Character to set the avatar for"
+					},
+					"avatar": {
+						"parameter_name": "avatar",
+						"parameter_description": "Image URL, by default None"
+					}
+				}
+			},
+			"grouplocal": {
+				"command_name": "local",
+				"command_description": "Set the local for a Character",
+				"params": {
+					"proxy": {
+						"parameter_name": "proxy",
+						"parameter_description": "Character to set the local for"
+					},
+					"avatar": {
+						"parameter_name": "image",
+						"parameter_description": "Image, by default None"
+					},
+					"nickname": {
+						"parameter_name": "nickname",
+						"parameter_description": "Nickname, by default None"
+					}
+				}
+			},
+			"groupupdate": {
+				"command_name": "update",
+				"command_description": "Update a proxy. Old way of updating proxies.",
+				"params": {
+					"proxy": {
+						"parameter_name": "proxy",
+						"parameter_description": "Character to update"
+					},
+					"image": {
+						"parameter_name": "image",
+						"parameter_description": "Image, by default None"
+					}
+				}
+			},
+			"groupdetail": {
+				"command_name": "detail",
+				"command_description": "Get details of a character",
+				"params": {
+					"proxy": {
+						"parameter_name": "proxy",
+						"parameter_description": "Detail a proxy. Old way of editing proxies."
+					}
+				}
+			},
+			"groupprune": {
+				"command_name": "prune",
+				"command_description": "Prune characters unused for a certain time.",
+				"params": {
+					"time": {
+						"parameter_description": "Date to prune before, by default None"
+					}
+				}
+			},
+			"grouppurge": {
+				"command_name": "purge",
+				"command_description": "Purge all of your data (except message logs)",
+				"params": {
+					"confirmation": {
+						"parameter_name": "confirmation",
+						"parameter_description": "confirmation"
+					}
+				}
+			}
+		},
+		"check_permissions": {
+			"command_name": "check_perms",
+			"command_description": "Check if bot can operate in the provided channel"
+		},
+		"roll": {
+			"command_description": "Roll a dice."
+		},
+		"afk": {
+			"command_description": "Check if a user is AFK."
+		},
+		"help": {
+			"command_name": "help",
+			"command_description": "Built-in Bot Help",
+			"params": {
+				"search": {
+					"parameter_name": "search",
+					"parameter_description": "Lookup term"
+				}
+			}
+		},
+		"server_wiki": {
+			"command_name": "server_wiki",
+			"command_description": "User defined server wiki",
+			"params": {
+				"search": {
+					"parameter_name": "search",
+					"parameter_description": "Lookup term"
+				}
+			}
+		},
+		"settings": {
+			"command_name": "settings",
+			"command_description": "Bot Settings",
+			"params": {
+				"menu": {
+					"parameter_name": "menu",
+					"parameter_description": "Menu to open for settings",
+					"choices": {
+						"Server": "Server",
+						"Member": "Member",
+						"User": "User"
+					}
+				}
+			}
+		},
+		"context_menu": {
+			"command_name": "Proxy"
+		}
+	}
+}

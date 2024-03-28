@@ -1,0 +1,963 @@
+{
+    "commands": {
+        "exec": {
+            "command_description": "Execute a command."
+        },
+        "proxy": {
+            "command_name": "volmacht",
+            "command_description": "Schakel tekens op een server uit",
+            "params": {
+                "enable": {
+                    "parameter_name": "inschakelen",
+                    "parameter_description": "Tekens in- of uitschakelen, standaard schakelaars"
+                }
+            }
+        },
+        "set": {
+            "command_description": "Set a proxy as the current one."
+        },
+        "use": {
+            "params": {
+                "text": {
+                    "parameter_name": "tekst",
+                    "parameter_description": "tekst"
+                }
+            }
+        },
+        "say": {
+            "params": {
+                "text": {
+                    "parameter_name": "tekst",
+                    "parameter_description": "tekst"
+                }
+            }
+        },
+        "npc": {
+            "command_name": "npc",
+            "command_description": "Maak een nieuw NPC-bericht",
+            "params": {
+                "franchise": {
+                    "parameter_name": "franchise",
+                    "parameter_description": "Franchise om te gebruiken",
+                    "choices": {
+                        "Pokemon": "Pokemon",
+                        "Pokemon Shiny": "Pokemon Shiny",
+                        "Trainer": "Trainer",
+                        "Digimon": "Digimon",
+                        "Palworld": "Palworld",
+                        "D&D": "D&D"
+                    }
+                },
+                "npc": {
+                    "parameter_name": "npc",
+                    "parameter_description": "NPC te gebruiken"
+                },
+                "nickname": {
+                    "parameter_name": "bijnaam",
+                    "parameter_description": "Bijnaam, standaard Geen"
+                },
+                "emotion": {
+                    "parameter_name": "emotie",
+                    "parameter_description": "Emotie, standaard Normaal",
+                    "choices": {
+                        "Normal": "Normal",
+                        "Happy": "Happy",
+                        "Pain": "Pain",
+                        "Angry": "Angry",
+                        "Worried": "Worried",
+                        "Sad": "Sad",
+                        "Crying": "Crying",
+                        "Shouting": "Shouting",
+                        "TearyEyed": "TearyEyed",
+                        "Determined": "Determined",
+                        "Joyous": "Joyous",
+                        "Inspired": "Inspired",
+                        "Surprised": "Surprised",
+                        "Dizzy": "Dizzy",
+                        "Sigh": "Sigh",
+                        "Stunned": "Stunned",
+                        "Special0": "Special0",
+                        "Special1": "Special1",
+                        "Special2": "Special2",
+                        "Special3": "Special3"
+                    }
+                },
+                "image": {
+                    "parameter_name": "afbeelding",
+                    "parameter_description": "Afbeelding, standaard Geen"
+                },
+                "text": {
+                    "parameter_name": "tekst",
+                    "parameter_description": "tekst"
+                }
+            }
+        },
+        "create": {
+            "command_description": "Create a new proxy.",
+            "params": {
+                "prefixes": {
+                    "parameter_description": "Prefixes e.g. A:text, |text|, etc."
+                }
+            }
+        },
+        "delete": {
+            "command_name": "verwijderen",
+            "command_description": "Verwijder een karakter",
+            "params": {
+                "proxy": {
+                    "parameter_name": "volmacht",
+                    "parameter_description": "Proxy waaruit de variant moet worden verwijderd"
+                }
+            }
+        },
+        "read": {
+            "command_name": "lezen",
+            "command_description": "Lees een karakter",
+            "params": {
+                "proxy": {
+                    "parameter_name": "volmacht",
+                    "parameter_description": "Karakter waaruit de variant kan worden gelezen"
+                }
+            }
+        },
+        "nickname": {
+            "command_name": "bijnaam",
+            "command_description": "Stel de bijnaam voor een personage in",
+            "params": {
+                "proxy": {
+                    "parameter_name": "volmacht",
+                    "parameter_description": "Teken waarvoor u de bijnaam wilt instellen"
+                },
+                "nickname": {
+                    "parameter_name": "bijnaam",
+                    "parameter_description": "Bijnaam die voor het personage moet worden ingesteld"
+                }
+            }
+        },
+        "local": {
+            "command_name": "lokaal",
+            "command_description": "Stel de lokale waarde in voor een teken",
+            "params": {
+                "proxy": {
+                    "parameter_name": "volmacht",
+                    "parameter_description": "Teken waarvoor u de lokale waarde wilt instellen"
+                },
+                "avatar": {
+                    "parameter_name": "afbeelding",
+                    "parameter_description": "Afbeelding, standaard Geen"
+                },
+                "nickname": {
+                    "parameter_name": "bijnaam",
+                    "parameter_description": "Bijnaam, standaard Geen"
+                }
+            }
+        },
+        "avatar": {
+            "command_name": "avatar",
+            "command_description": "Stel de avatar voor een personage in",
+            "params": {
+                "proxy": {
+                    "parameter_name": "volmacht",
+                    "parameter_description": "Karakter waarvoor de avatar moet worden ingesteld"
+                },
+                "avatar": {
+                    "parameter_name": "avatar",
+                    "parameter_description": "Afbeeldings-URL, standaard Geen"
+                }
+            }
+        },
+        "prefix": {
+            "command_name": "voorvoegsel",
+            "command_description": "Stel de voorvoegsels voor een teken in.",
+            "params": {
+                "proxy": {
+                    "parameter_name": "volmacht",
+                    "parameter_description": "Teken waarvoor u het voorvoegsel wilt instellen"
+                },
+                "prefixes": {
+                    "parameter_name": "voorvoegsels",
+                    "parameter_description": "Voorvoegsels bijv. "
+                }
+            }
+        },
+        "birthday": {
+            "command_name": "verjaardag",
+            "command_description": "Stel de verjaardag van een personage in",
+            "params": {
+                "proxy": {
+                    "parameter_name": "volmacht",
+                    "parameter_description": "Karakter om de verjaardag voor in te stellen"
+                },
+                "birthday": {
+                    "parameter_name": "verjaardag",
+                    "parameter_description": "Verjaardag, standaard Geen"
+                }
+            }
+        },
+        "description": {
+            "command_name": "beschrijving",
+            "command_description": "Stel de beschrijving voor een personage in",
+            "params": {
+                "proxy": {
+                    "parameter_name": "volmacht",
+                    "parameter_description": "Teken waarvoor u de beschrijving wilt instellen"
+                },
+                "text": {
+                    "parameter_name": "tekst",
+                    "parameter_description": "Beschrijving die voor het personage moet worden ingesteld"
+                }
+            }
+        },
+        "rename": {
+            "command_name": "hernoemen",
+            "command_description": "Hernoem een ​​karakter",
+            "params": {
+                "proxy": {
+                    "parameter_name": "volmacht",
+                    "parameter_description": "Karakter om te hernoemen"
+                },
+                "name": {
+                    "parameter_name": "naam",
+                    "parameter_description": "Nieuwe naam voor het personage"
+                }
+            }
+        },
+        "group": {
+            "command_name": "groep",
+            "command_description": "Stel de groep in voor een personage",
+            "params": {
+                "proxy": {
+                    "parameter_name": "volmacht",
+                    "parameter_description": "Karakter om de groep voor in te stellen"
+                },
+                "group": {
+                    "parameter_name": "groep",
+                    "parameter_description": "Groep, standaard Geen"
+                }
+            }
+        },
+        "nsfw": {
+            "command_name": "nsfw",
+            "command_description": "Stel in of een teken NSFW is",
+            "params": {
+                "proxy": {
+                    "parameter_name": "volmacht",
+                    "parameter_description": "Karakter waarvoor de NSFW moet worden ingesteld"
+                },
+                "nsfw": {
+                    "parameter_name": "nsfw",
+                    "parameter_description": "NSFW, schakelt standaard over naar de tegenovergestelde waarde"
+                }
+            }
+        },
+        "auto": {
+            "command_name": "auto",
+            "command_description": "Stel de auto in voor een teken",
+            "params": {
+                "proxy": {
+                    "parameter_name": "volmacht",
+                    "parameter_description": "Karakter schakelt automatisch automatisch uit"
+                }
+            }
+        },
+        "list": {
+            "command_name": "lijst",
+            "command_description": "Maak een lijst van alle karakters ",
+            "params": {
+                "group": {
+                    "parameter_name": "groep",
+                    "parameter_description": "Groep waaruit tekens moeten worden weergegeven"
+                }
+            }
+        },
+        "latch": {
+            "command_name": "grendel",
+            "command_description": "Schakel de vergrendelingsmodus in of uit",
+            "params": {
+                "enable": {
+                    "parameter_description": "Schakel de vergrendelingsmodus in of uit"
+                },
+                "auto_remove": {
+                    "parameter_description": "Of de auto voor het huidige kanaal wel of niet behouden moet blijven, standaard True"
+                }
+            }
+        },
+        "export": {
+            "command_name": "exporteren",
+            "command_description": "Exporteer uw karakters naar een JSON-bestand",
+            "params": {
+                "format": {
+                    "parameter_name": "formaat",
+                    "parameter_description": "Indeling om naar te exporteren, standaard JSON"
+                },
+                "new_token": {
+                    "parameter_name": "nieuw_token",
+                    "parameter_description": "Als u een nieuw token wilt genereren"
+                }
+            }
+        },
+        "prune": {
+            "command_name": "gedroogde_pruim",
+            "command_description": "Snoei karakters die een bepaalde tijd niet worden gebruikt.",
+            "params": {
+                "time": {
+                    "parameter_description": "Datum waarop u eerder moet snoeien, standaard Geen"
+                }
+            }
+        },
+        "purge": {
+            "command_name": "zuiveren",
+            "command_description": "Al uw gegevens opschonen (behalve berichtenlogboeken)",
+            "params": {
+                "confirmation": {
+                    "parameter_name": "bevestiging",
+                    "parameter_description": "bevestiging"
+                }
+            }
+        },
+        "proxy-to-variant": {
+            "command_name": "proxy-naar-variant",
+            "command_description": "Converteer een teken naar een variant",
+            "params": {
+                "original": {
+                    "parameter_name": "origineel",
+                    "parameter_description": "Karakter om te converteren"
+                },
+                "base": {
+                    "parameter_name": "baseren",
+                    "parameter_description": "Nieuwe basis voor het personage"
+                }
+            }
+        },
+        "variant-to-proxy": {
+            "command_name": "variant-naar-proxy",
+            "command_description": "Converteer een variant naar een teken",
+            "params": {
+                "proxy": {
+                    "parameter_name": "volmacht",
+                    "parameter_description": "Proxy waarnaar moet worden geconverteerd"
+                },
+                "variant": {
+                    "parameter_name": "variant",
+                    "parameter_description": "Variant om te converteren"
+                }
+            }
+        },
+        "update": {
+            "command_name": "update",
+            "command_description": "Een proxy bijwerken. ",
+            "params": {
+                "proxy": {
+                    "parameter_name": "volmacht",
+                    "parameter_description": "Karakter om bij te werken"
+                },
+                "image": {
+                    "parameter_name": "afbeelding",
+                    "parameter_description": "Afbeelding, standaard Geen"
+                }
+            }
+        },
+        "detail": {
+            "command_name": "detail",
+            "command_description": "Krijg details van een personage",
+            "params": {
+                "proxy": {
+                    "parameter_name": "volmacht",
+                    "parameter_description": "Detailleer een proxy. "
+                }
+            }
+        },
+        "import": {
+            "command_name": "importeren",
+            "command_description": "Importeer uw karakters uit een bestand of token",
+            "params": {
+                "data": {
+                    "parameter_name": "gegevens",
+                    "parameter_description": "Bestand waaruit u wilt importeren"
+                },
+                "token": {
+                    "parameter_name": "teken",
+                    "parameter_description": "Token om te gebruiken voor het importeren"
+                },
+                "deleting_from_token": {
+                    "parameter_name": "verwijderen_van_token",
+                    "parameter_description": "Verwijder tekens van het token"
+                }
+            }
+        },
+        "var": {
+            "group_name": "var",
+            "group_description": "Variant commands.",
+            "groupset": {
+                "command_description": "Set a variant."
+            },
+            "groupuse": {
+                "command_description": "Use a variant."
+            },
+            "groupcreate": {
+                "command_name": "creëren",
+                "command_description": "Creëer een nieuw karakter.",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "volmacht",
+                        "parameter_description": " Proxy om de variant voor te maken"
+                    },
+                    "image": {
+                        "parameter_name": "afbeelding",
+                        "parameter_description": "Afbeelding, standaard Geen"
+                    },
+                    "prefixes": {
+                        "parameter_description": "Prefixes e.g. A:text, |text|, etc."
+                    }
+                }
+            },
+            "groupdelete": {
+                "command_name": "verwijderen",
+                "command_description": "Verwijder de variant van een personage",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "volmacht",
+                        "parameter_description": "Proxy waaruit de variant moet worden verwijderd"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Variant om te verwijderen"
+                    }
+                }
+            },
+            "groupread": {
+                "command_name": "lezen",
+                "command_description": "Lees een karakter",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "volmacht",
+                        "parameter_description": "Karakter waaruit de variant kan worden gelezen"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Variant om te lezen"
+                    }
+                }
+            },
+            "groupnickname": {
+                "command_name": "bijnaam",
+                "command_description": "Stel de bijnaam voor een personage in",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "volmacht",
+                        "parameter_description": "Teken waarvoor u de bijnaam wilt instellen"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Variant waarvoor u de bijnaam wilt instellen"
+                    },
+                    "nickname": {
+                        "parameter_name": "bijnaam",
+                        "parameter_description": "Bijnaam die voor het personage moet worden ingesteld"
+                    }
+                }
+            },
+            "grouplocal": {
+                "command_name": "lokaal",
+                "command_description": "Stel de lokale waarde in voor een teken",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "volmacht",
+                        "parameter_description": "Teken waarvoor u de lokale waarde wilt instellen"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Variant waarvoor u de lokale waarde wilt instellen"
+                    },
+                    "avatar": {
+                        "parameter_name": "afbeelding",
+                        "parameter_description": "Afbeelding, standaard Geen"
+                    },
+                    "nickname": {
+                        "parameter_name": "bijnaam",
+                        "parameter_description": "Bijnaam, standaard Geen"
+                    }
+                }
+            },
+            "groupprefix": {
+                "command_name": "voorvoegsel",
+                "command_description": "Stel de voorvoegsels voor een teken in.",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "volmacht",
+                        "parameter_description": "Teken waarvoor u het voorvoegsel wilt instellen"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Variant waarvoor het voorvoegsel moet worden ingesteld"
+                    },
+                    "prefixes": {
+                        "parameter_name": "voorvoegsels",
+                        "parameter_description": "Voorvoegsels bijv. "
+                    }
+                }
+            },
+            "groupbirthday": {
+                "command_name": "verjaardag",
+                "command_description": "Stel de verjaardag van een personage in",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "volmacht",
+                        "parameter_description": "Karakter om de verjaardag voor in te stellen"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Variant om de verjaardag voor in te stellen"
+                    },
+                    "birthday": {
+                        "parameter_name": "verjaardag",
+                        "parameter_description": "Verjaardag, standaard Geen"
+                    }
+                }
+            },
+            "groupdescription": {
+                "command_name": "beschrijving",
+                "command_description": "Stel de beschrijving voor een personage in",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "volmacht",
+                        "parameter_description": "Teken waarvoor u de beschrijving wilt instellen"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Variant waarvoor u de beschrijving wilt instellen"
+                    },
+                    "text": {
+                        "parameter_name": "tekst",
+                        "parameter_description": "Beschrijving die voor het personage moet worden ingesteld"
+                    }
+                }
+            },
+            "grouprename": {
+                "command_name": "hernoemen",
+                "command_description": "Hernoem een ​​karakter",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "volmacht",
+                        "parameter_description": "Karakter om te hernoemen"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Variant om te hernoemen"
+                    },
+                    "name": {
+                        "parameter_name": "naam",
+                        "parameter_description": "Nieuwe naam voor het personage"
+                    }
+                }
+            },
+            "groupgroup": {
+                "command_name": "groep",
+                "command_description": "Stel de groep in voor een personage",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "volmacht",
+                        "parameter_description": "Karakter om de groep voor in te stellen"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Variant waarvoor u de groep wilt instellen"
+                    },
+                    "group": {
+                        "parameter_name": "groep",
+                        "parameter_description": "Groep, standaard Geen"
+                    }
+                }
+            },
+            "groupnsfw": {
+                "command_name": "nsfw",
+                "command_description": "Stel in of een teken NSFW is",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "volmacht",
+                        "parameter_description": "Karakter waarvoor de NSFW moet worden ingesteld"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Variant waarvoor u de NSFW instelt"
+                    },
+                    "nsfw": {
+                        "parameter_name": "nsfw",
+                        "parameter_description": "NSFW, schakelt standaard over naar de tegenovergestelde waarde"
+                    }
+                }
+            },
+            "groupauto": {
+                "command_name": "auto",
+                "command_description": "Stel de auto in voor een teken",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "volmacht",
+                        "parameter_description": "Karakter schakelt automatisch automatisch uit"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Variant waarvoor u de auto wilt instellen"
+                    }
+                }
+            },
+            "groupavatar": {
+                "command_name": "avatar",
+                "command_description": "Stel de avatar voor een personage in",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "volmacht",
+                        "parameter_description": "Karakter waarvoor de avatar moet worden ingesteld"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Variant waarvoor de avatar moet worden ingesteld"
+                    },
+                    "avatar": {
+                        "parameter_name": "avatar",
+                        "parameter_description": "Afbeeldings-URL, standaard Geen"
+                    }
+                }
+            },
+            "grouplist": {
+                "command_description": "List all variants."
+            },
+            "groupfind": {
+                "command_description": "Find a variant."
+            },
+            "groupupdate": {
+                "command_name": "update",
+                "command_description": "Een proxy bijwerken. ",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "volmacht",
+                        "parameter_description": "Karakter om bij te werken"
+                    },
+                    "image": {
+                        "parameter_name": "afbeelding",
+                        "parameter_description": "Afbeelding, standaard Geen"
+                    }
+                }
+            },
+            "groupdetail": {
+                "command_name": "detail",
+                "command_description": "Krijg details van een personage",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "volmacht",
+                        "parameter_description": "Detailleer een proxy. "
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Variant tot detail"
+                    }
+                }
+            },
+            "groupprune": {
+                "command_name": "gedroogde_pruim",
+                "command_description": "Snoei karakters die een bepaalde tijd niet worden gebruikt.",
+                "params": {
+                    "proxy": {
+                        "parameter_description": "volmacht"
+                    },
+                    "time": {
+                        "parameter_description": "Datum waarop u eerder moet snoeien, standaard Geen"
+                    }
+                }
+            },
+            "grouppurge": {
+                "command_name": "zuiveren",
+                "command_description": "Al uw gegevens opschonen (behalve berichtenlogboeken)",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "volmacht",
+                        "parameter_description": "volmacht"
+                    },
+                    "confirmation": {
+                        "parameter_name": "bevestiging",
+                        "parameter_description": "bevestiging"
+                    }
+                }
+            }
+        },
+        "shared": {
+            "group_description": "Shared proxy commands.",
+            "groupset": {
+                "command_description": "Set a proxy as the current one."
+            },
+            "groupcreate": {
+                "command_name": "creëren",
+                "command_description": "Creëer een nieuw karakter.",
+                "params": {
+                    "image": {
+                        "parameter_name": "afbeelding",
+                        "parameter_description": "Afbeelding, standaard Geen"
+                    }
+                }
+            },
+            "groupdelete": {
+                "command_name": "verwijderen",
+                "command_description": "Verwijder een karakter",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "volmacht",
+                        "parameter_description": "Proxy waaruit de variant moet worden verwijderd"
+                    }
+                }
+            },
+            "groupread": {
+                "command_name": "lezen",
+                "command_description": "Lees een karakter",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "volmacht",
+                        "parameter_description": "Karakter waaruit de variant kan worden gelezen"
+                    }
+                }
+            },
+            "groupauto": {
+                "command_name": "auto",
+                "command_description": "Stel de auto in voor een teken",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "volmacht",
+                        "parameter_description": "Karakter schakelt automatisch automatisch uit"
+                    }
+                }
+            },
+            "groupprefix": {
+                "command_name": "voorvoegsel",
+                "command_description": "Stel de voorvoegsels voor een teken in.",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "volmacht",
+                        "parameter_description": "Teken waarvoor u het voorvoegsel wilt instellen"
+                    },
+                    "prefixes": {
+                        "parameter_name": "voorvoegsels",
+                        "parameter_description": "Voorvoegsels bijv. "
+                    }
+                }
+            },
+            "groupbirthday": {
+                "command_name": "verjaardag",
+                "command_description": "Stel de verjaardag van een personage in",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "volmacht",
+                        "parameter_description": "Karakter om de verjaardag voor in te stellen"
+                    },
+                    "birthday": {
+                        "parameter_name": "verjaardag",
+                        "parameter_description": "Verjaardag, standaard Geen"
+                    }
+                }
+            },
+            "groupdescription": {
+                "command_name": "beschrijving",
+                "command_description": "Stel de beschrijving voor een personage in",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "volmacht",
+                        "parameter_description": "Teken waarvoor u de beschrijving wilt instellen"
+                    },
+                    "text": {
+                        "parameter_name": "tekst",
+                        "parameter_description": "Beschrijving die voor het personage moet worden ingesteld"
+                    }
+                }
+            },
+            "grouprename": {
+                "command_name": "hernoemen",
+                "command_description": "Hernoem een ​​karakter",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "volmacht",
+                        "parameter_description": "Karakter om te hernoemen"
+                    },
+                    "name": {
+                        "parameter_name": "naam",
+                        "parameter_description": "Nieuwe naam voor het personage"
+                    }
+                }
+            },
+            "groupnickname": {
+                "command_name": "bijnaam",
+                "command_description": "Stel de bijnaam voor een personage in",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "volmacht",
+                        "parameter_description": "Teken waarvoor u de bijnaam wilt instellen"
+                    },
+                    "nickname": {
+                        "parameter_name": "bijnaam",
+                        "parameter_description": "Bijnaam die voor het personage moet worden ingesteld"
+                    }
+                }
+            },
+            "groupgroup": {
+                "command_name": "groep",
+                "command_description": "Stel de groep in voor een personage",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "volmacht",
+                        "parameter_description": "Karakter om de groep voor in te stellen"
+                    },
+                    "group": {
+                        "parameter_name": "groep",
+                        "parameter_description": "Groep, standaard Geen"
+                    }
+                }
+            },
+            "groupnsfw": {
+                "command_name": "nsfw",
+                "command_description": "Stel in of een teken NSFW is",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "volmacht",
+                        "parameter_description": "Karakter waarvoor de NSFW moet worden ingesteld"
+                    },
+                    "nsfw": {
+                        "parameter_name": "nsfw",
+                        "parameter_description": "NSFW, schakelt standaard over naar de tegenovergestelde waarde"
+                    }
+                }
+            },
+            "groupavatar": {
+                "command_name": "avatar",
+                "command_description": "Stel de avatar voor een personage in",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "volmacht",
+                        "parameter_description": "Karakter waarvoor de avatar moet worden ingesteld"
+                    },
+                    "avatar": {
+                        "parameter_name": "avatar",
+                        "parameter_description": "Afbeeldings-URL, standaard Geen"
+                    }
+                }
+            },
+            "groupimage": {
+                "params": {
+                    "proxy": {
+                        "parameter_name": "volmacht",
+                        "parameter_description": "Karakter waarvoor de avatar moet worden ingesteld"
+                    },
+                    "avatar": {
+                        "parameter_name": "avatar",
+                        "parameter_description": "Afbeeldings-URL, standaard Geen"
+                    }
+                }
+            },
+            "grouplocal": {
+                "command_name": "lokaal",
+                "command_description": "Stel de lokale waarde in voor een teken",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "volmacht",
+                        "parameter_description": "Teken waarvoor u de lokale waarde wilt instellen"
+                    },
+                    "avatar": {
+                        "parameter_name": "afbeelding",
+                        "parameter_description": "Afbeelding, standaard Geen"
+                    },
+                    "nickname": {
+                        "parameter_name": "bijnaam",
+                        "parameter_description": "Bijnaam, standaard Geen"
+                    }
+                }
+            },
+            "groupupdate": {
+                "command_name": "update",
+                "command_description": "Een proxy bijwerken. ",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "volmacht",
+                        "parameter_description": "Karakter om bij te werken"
+                    },
+                    "image": {
+                        "parameter_name": "afbeelding",
+                        "parameter_description": "Afbeelding, standaard Geen"
+                    }
+                }
+            },
+            "groupdetail": {
+                "command_name": "detail",
+                "command_description": "Krijg details van een personage",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "volmacht",
+                        "parameter_description": "Detailleer een proxy. "
+                    }
+                }
+            },
+            "groupprune": {
+                "command_name": "gedroogde_pruim",
+                "command_description": "Snoei karakters die een bepaalde tijd niet worden gebruikt.",
+                "params": {
+                    "time": {
+                        "parameter_description": "Datum waarop u eerder moet snoeien, standaard Geen"
+                    }
+                }
+            },
+            "grouppurge": {
+                "command_name": "zuiveren",
+                "command_description": "Al uw gegevens opschonen (behalve berichtenlogboeken)",
+                "params": {
+                    "confirmation": {
+                        "parameter_name": "bevestiging",
+                        "parameter_description": "bevestiging"
+                    }
+                }
+            }
+        },
+        "check_permissions": {
+            "command_name": "check_permanentes",
+            "command_description": "Controleer of de bot in het opgegeven kanaal kan werken"
+        },
+        "roll": {
+            "command_description": "Roll a dice."
+        },
+        "afk": {
+            "command_description": "Check if a user is AFK."
+        },
+        "help": {
+            "command_name": "hulp",
+            "command_description": "Ingebouwde Bot-help",
+            "params": {
+                "search": {
+                    "parameter_name": "zoekopdracht",
+                    "parameter_description": "Zoekterm"
+                }
+            }
+        },
+        "server_wiki": {
+            "command_name": "server_wiki",
+            "command_description": "Door de gebruiker gedefinieerde serverwiki",
+            "params": {
+                "search": {
+                    "parameter_name": "zoekopdracht",
+                    "parameter_description": "Zoekterm"
+                }
+            }
+        },
+        "settings": {
+            "command_name": "instellingen",
+            "command_description": "Bot-instellingen",
+            "params": {
+                "menu": {
+                    "parameter_name": "menu",
+                    "parameter_description": "Menu om te openen voor instellingen",
+                    "choices": {
+                        "Server": "Server",
+                        "Member": "Lid",
+                        "User": "Gebruiker"
+                    }
+                }
+            }
+        },
+        "context_menu": {
+            "command_name": "Volmacht"
+        }
+    }
+}

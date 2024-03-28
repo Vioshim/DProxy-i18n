@@ -1,0 +1,963 @@
+{
+    "commands": {
+        "exec": {
+            "command_description": "Execute a command."
+        },
+        "proxy": {
+            "command_name": "проксі",
+            "command_description": "Вимкнути символи на сервері",
+            "params": {
+                "enable": {
+                    "parameter_name": "включити",
+                    "parameter_description": "Увімкнути або вимкнути символи, перемикачі за замовчуванням"
+                }
+            }
+        },
+        "set": {
+            "command_description": "Set a proxy as the current one."
+        },
+        "use": {
+            "params": {
+                "text": {
+                    "parameter_name": "текст",
+                    "parameter_description": "текст"
+                }
+            }
+        },
+        "say": {
+            "params": {
+                "text": {
+                    "parameter_name": "текст",
+                    "parameter_description": "текст"
+                }
+            }
+        },
+        "npc": {
+            "command_name": "npc",
+            "command_description": "Створіть нове повідомлення NPC",
+            "params": {
+                "franchise": {
+                    "parameter_name": "franchise",
+                    "parameter_description": "Франшиза для використання",
+                    "choices": {
+                        "Pokemon": "Pokemon",
+                        "Pokemon Shiny": "Pokemon Shiny",
+                        "Trainer": "Trainer",
+                        "Digimon": "Digimon",
+                        "Palworld": "Palworld",
+                        "D&D": "D&D"
+                    }
+                },
+                "npc": {
+                    "parameter_name": "npc",
+                    "parameter_description": "NPC для використання"
+                },
+                "nickname": {
+                    "parameter_name": "псевдонім",
+                    "parameter_description": "Псевдонім, за замовчуванням Немає"
+                },
+                "emotion": {
+                    "parameter_name": "емоція",
+                    "parameter_description": "Емоція, за замовчуванням Нормальна",
+                    "choices": {
+                        "Normal": "Normal",
+                        "Happy": "Happy",
+                        "Pain": "Pain",
+                        "Angry": "Angry",
+                        "Worried": "Worried",
+                        "Sad": "Sad",
+                        "Crying": "Crying",
+                        "Shouting": "Shouting",
+                        "TearyEyed": "TearyEyed",
+                        "Determined": "Determined",
+                        "Joyous": "Joyous",
+                        "Inspired": "Inspired",
+                        "Surprised": "Surprised",
+                        "Dizzy": "Dizzy",
+                        "Sigh": "Sigh",
+                        "Stunned": "Stunned",
+                        "Special0": "Special0",
+                        "Special1": "Special1",
+                        "Special2": "Special2",
+                        "Special3": "Special3"
+                    }
+                },
+                "image": {
+                    "parameter_name": "зображення",
+                    "parameter_description": "Зображення, за замовчуванням Немає"
+                },
+                "text": {
+                    "parameter_name": "текст",
+                    "parameter_description": "текст"
+                }
+            }
+        },
+        "create": {
+            "command_description": "Create a new proxy.",
+            "params": {
+                "prefixes": {
+                    "parameter_description": "Prefixes e.g. A:text, |text|, etc."
+                }
+            }
+        },
+        "delete": {
+            "command_name": "видалити",
+            "command_description": "Видалити символ",
+            "params": {
+                "proxy": {
+                    "parameter_name": "проксі",
+                    "parameter_description": "Проксі, з якого потрібно видалити варіант"
+                }
+            }
+        },
+        "read": {
+            "command_name": "читати",
+            "command_description": "Прочитайте персонажа",
+            "params": {
+                "proxy": {
+                    "parameter_name": "проксі",
+                    "parameter_description": "Символ, з якого читається варіант"
+                }
+            }
+        },
+        "nickname": {
+            "command_name": "псевдонім",
+            "command_description": "Встановіть псевдонім для персонажа",
+            "params": {
+                "proxy": {
+                    "parameter_name": "проксі",
+                    "parameter_description": "Символ, для якого потрібно встановити псевдонім"
+                },
+                "nickname": {
+                    "parameter_name": "псевдонім",
+                    "parameter_description": "Псевдонім для персонажа"
+                }
+            }
+        },
+        "local": {
+            "command_name": "місцевий",
+            "command_description": "Встановіть локальний параметр для персонажа",
+            "params": {
+                "proxy": {
+                    "parameter_name": "проксі",
+                    "parameter_description": "Символ, для якого потрібно встановити локальний"
+                },
+                "avatar": {
+                    "parameter_name": "зображення",
+                    "parameter_description": "Зображення, за замовчуванням Немає"
+                },
+                "nickname": {
+                    "parameter_name": "псевдонім",
+                    "parameter_description": "Псевдонім, за замовчуванням Немає"
+                }
+            }
+        },
+        "avatar": {
+            "command_name": "аватар",
+            "command_description": "Встановіть аватар для персонажа",
+            "params": {
+                "proxy": {
+                    "parameter_name": "проксі",
+                    "parameter_description": "Персонаж для встановлення аватара"
+                },
+                "avatar": {
+                    "parameter_name": "аватар",
+                    "parameter_description": "URL-адреса зображення, за умовчанням Немає"
+                }
+            }
+        },
+        "prefix": {
+            "command_name": "префікс",
+            "command_description": "Встановіть префікси для символу.",
+            "params": {
+                "proxy": {
+                    "parameter_name": "проксі",
+                    "parameter_description": "Символ, для якого потрібно встановити префікс"
+                },
+                "prefixes": {
+                    "parameter_name": "префікси",
+                    "parameter_description": "префікси напр. "
+                }
+            }
+        },
+        "birthday": {
+            "command_name": "birthday",
+            "command_description": "Встановіть день народження для персонажа",
+            "params": {
+                "proxy": {
+                    "parameter_name": "проксі",
+                    "parameter_description": "Персонаж для встановлення дня народження"
+                },
+                "birthday": {
+                    "parameter_name": "birthday",
+                    "parameter_description": "День народження, за замовчуванням Немає"
+                }
+            }
+        },
+        "description": {
+            "command_name": "опис",
+            "command_description": "Встановіть опис для персонажа",
+            "params": {
+                "proxy": {
+                    "parameter_name": "проксі",
+                    "parameter_description": "Символ для опису"
+                },
+                "text": {
+                    "parameter_name": "текст",
+                    "parameter_description": "Опис для персонажа"
+                }
+            }
+        },
+        "rename": {
+            "command_name": "перейменувати",
+            "command_description": "Перейменування персонажа",
+            "params": {
+                "proxy": {
+                    "parameter_name": "проксі",
+                    "parameter_description": "Символ для перейменування"
+                },
+                "name": {
+                    "parameter_name": "назва",
+                    "parameter_description": "Нове ім'я для персонажа"
+                }
+            }
+        },
+        "group": {
+            "command_name": "група",
+            "command_description": "Встановіть групу для персонажа",
+            "params": {
+                "proxy": {
+                    "parameter_name": "проксі",
+                    "parameter_description": "Символ для встановлення групи"
+                },
+                "group": {
+                    "parameter_name": "група",
+                    "parameter_description": "Група, за замовчуванням Немає"
+                }
+            }
+        },
+        "nsfw": {
+            "command_name": "nsfw",
+            "command_description": "Встановіть, чи є символ NSFW",
+            "params": {
+                "proxy": {
+                    "parameter_name": "проксі",
+                    "parameter_description": "Символ для встановлення NSFW"
+                },
+                "nsfw": {
+                    "parameter_name": "nsfw",
+                    "parameter_description": "NSFW, за замовчуванням перемикається на протилежне значення"
+                }
+            }
+        },
+        "auto": {
+            "command_name": "авто",
+            "command_description": "Встановіть авто для персонажа",
+            "params": {
+                "proxy": {
+                    "parameter_name": "проксі",
+                    "parameter_description": "Символ, за замовчуванням вимикає авто"
+                }
+            }
+        },
+        "list": {
+            "command_name": "список",
+            "command_description": "Перелічіть усіх персонажів ",
+            "params": {
+                "group": {
+                    "parameter_name": "група",
+                    "parameter_description": "Згрупуйте символи для списку"
+                }
+            }
+        },
+        "latch": {
+            "command_name": "засувка",
+            "command_description": "Увімкнути або вимкнути режим фіксації",
+            "params": {
+                "enable": {
+                    "parameter_description": "Увімкнути або вимкнути режим фіксації"
+                },
+                "auto_remove": {
+                    "parameter_description": "Зберігати авто для поточного каналу чи ні, за замовчуванням True"
+                }
+            }
+        },
+        "export": {
+            "command_name": "експорт",
+            "command_description": "Експортуйте своїх персонажів у файл JSON",
+            "params": {
+                "format": {
+                    "parameter_name": "формат",
+                    "parameter_description": "Формат для експорту, за замовчуванням JSON"
+                },
+                "new_token": {
+                    "parameter_name": "новий_токен",
+                    "parameter_description": "Якщо ви хочете створити новий маркер"
+                }
+            }
+        },
+        "prune": {
+            "command_name": "чорнослив",
+            "command_description": "Вирізати символи, які не використовуються протягом певного часу.",
+            "params": {
+                "time": {
+                    "parameter_description": "Дата скорочення раніше, за замовчуванням Немає"
+                }
+            }
+        },
+        "purge": {
+            "command_name": "чистка",
+            "command_description": "Очистити всі ваші дані (крім журналів повідомлень)",
+            "params": {
+                "confirmation": {
+                    "parameter_name": "підтвердження",
+                    "parameter_description": "підтвердження"
+                }
+            }
+        },
+        "proxy-to-variant": {
+            "command_name": "проксі-варіант",
+            "command_description": "Перетворення символу на варіант",
+            "params": {
+                "original": {
+                    "parameter_name": "оригінальний",
+                    "parameter_description": "Символ для перетворення"
+                },
+                "base": {
+                    "parameter_name": "база",
+                    "parameter_description": "Нова основа для персонажа"
+                }
+            }
+        },
+        "variant-to-proxy": {
+            "command_name": "варіант-проксі",
+            "command_description": "Перетворіть варіант на символ",
+            "params": {
+                "proxy": {
+                    "parameter_name": "проксі",
+                    "parameter_description": "Проксі для перетворення"
+                },
+                "variant": {
+                    "parameter_name": "варіант",
+                    "parameter_description": "Варіант конвертації"
+                }
+            }
+        },
+        "update": {
+            "command_name": "оновлення",
+            "command_description": "Оновіть проксі. ",
+            "params": {
+                "proxy": {
+                    "parameter_name": "проксі",
+                    "parameter_description": "Персонаж для оновлення"
+                },
+                "image": {
+                    "parameter_name": "зображення",
+                    "parameter_description": "Зображення, за замовчуванням Немає"
+                }
+            }
+        },
+        "detail": {
+            "command_name": "деталь",
+            "command_description": "Отримайте деталі персонажа",
+            "params": {
+                "proxy": {
+                    "parameter_name": "проксі",
+                    "parameter_description": "Деталізуйте проксі. "
+                }
+            }
+        },
+        "import": {
+            "command_name": "імпорт",
+            "command_description": "Імпортуйте символи з файлу або маркера",
+            "params": {
+                "data": {
+                    "parameter_name": "даних",
+                    "parameter_description": "Файл для імпорту"
+                },
+                "token": {
+                    "parameter_name": "жетон",
+                    "parameter_description": "Маркер для імпорту"
+                },
+                "deleting_from_token": {
+                    "parameter_name": "deleting_from_token",
+                    "parameter_description": "Видалити символи з маркера"
+                }
+            }
+        },
+        "var": {
+            "group_name": "вар",
+            "group_description": "Variant commands.",
+            "groupset": {
+                "command_description": "Set a variant."
+            },
+            "groupuse": {
+                "command_description": "Use a variant."
+            },
+            "groupcreate": {
+                "command_name": "створити",
+                "command_description": "Створіть нового персонажа.",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "проксі",
+                        "parameter_description": " Проксі, для якого потрібно створити варіант"
+                    },
+                    "image": {
+                        "parameter_name": "зображення",
+                        "parameter_description": "Зображення, за замовчуванням Немає"
+                    },
+                    "prefixes": {
+                        "parameter_description": "Prefixes e.g. A:text, |text|, etc."
+                    }
+                }
+            },
+            "groupdelete": {
+                "command_name": "видалити",
+                "command_description": "Видалити варіант персонажа",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "проксі",
+                        "parameter_description": "Проксі, з якого потрібно видалити варіант"
+                    },
+                    "variant": {
+                        "parameter_name": "варіант",
+                        "parameter_description": "Варіант для видалення"
+                    }
+                }
+            },
+            "groupread": {
+                "command_name": "читати",
+                "command_description": "Прочитайте персонажа",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "проксі",
+                        "parameter_description": "Символ, з якого читається варіант"
+                    },
+                    "variant": {
+                        "parameter_name": "варіант",
+                        "parameter_description": "Варіант для читання"
+                    }
+                }
+            },
+            "groupnickname": {
+                "command_name": "псевдонім",
+                "command_description": "Встановіть псевдонім для персонажа",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "проксі",
+                        "parameter_description": "Символ, для якого потрібно встановити псевдонім"
+                    },
+                    "variant": {
+                        "parameter_name": "варіант",
+                        "parameter_description": "Варіант встановлення псевдоніма"
+                    },
+                    "nickname": {
+                        "parameter_name": "псевдонім",
+                        "parameter_description": "Псевдонім для персонажа"
+                    }
+                }
+            },
+            "grouplocal": {
+                "command_name": "місцевий",
+                "command_description": "Встановіть локальний параметр для персонажа",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "проксі",
+                        "parameter_description": "Символ, для якого потрібно встановити локальний"
+                    },
+                    "variant": {
+                        "parameter_name": "варіант",
+                        "parameter_description": "Варіант для встановлення локального"
+                    },
+                    "avatar": {
+                        "parameter_name": "зображення",
+                        "parameter_description": "Зображення, за замовчуванням Немає"
+                    },
+                    "nickname": {
+                        "parameter_name": "псевдонім",
+                        "parameter_description": "Псевдонім, за замовчуванням Немає"
+                    }
+                }
+            },
+            "groupprefix": {
+                "command_name": "префікс",
+                "command_description": "Встановіть префікси для символу.",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "проксі",
+                        "parameter_description": "Символ, для якого потрібно встановити префікс"
+                    },
+                    "variant": {
+                        "parameter_name": "варіант",
+                        "parameter_description": "Варіант встановлення префікса"
+                    },
+                    "prefixes": {
+                        "parameter_name": "префікси",
+                        "parameter_description": "префікси напр. "
+                    }
+                }
+            },
+            "groupbirthday": {
+                "command_name": "birthday",
+                "command_description": "Встановіть день народження для персонажа",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "проксі",
+                        "parameter_description": "Персонаж для встановлення дня народження"
+                    },
+                    "variant": {
+                        "parameter_name": "варіант",
+                        "parameter_description": "Варіант призначення дня народження"
+                    },
+                    "birthday": {
+                        "parameter_name": "birthday",
+                        "parameter_description": "День народження, за замовчуванням Немає"
+                    }
+                }
+            },
+            "groupdescription": {
+                "command_name": "опис",
+                "command_description": "Встановіть опис для персонажа",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "проксі",
+                        "parameter_description": "Символ для опису"
+                    },
+                    "variant": {
+                        "parameter_name": "варіант",
+                        "parameter_description": "Варіант для встановлення опису"
+                    },
+                    "text": {
+                        "parameter_name": "текст",
+                        "parameter_description": "Опис для персонажа"
+                    }
+                }
+            },
+            "grouprename": {
+                "command_name": "перейменувати",
+                "command_description": "Перейменування персонажа",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "проксі",
+                        "parameter_description": "Символ для перейменування"
+                    },
+                    "variant": {
+                        "parameter_name": "варіант",
+                        "parameter_description": "Варіант перейменування"
+                    },
+                    "name": {
+                        "parameter_name": "назва",
+                        "parameter_description": "Нове ім'я для персонажа"
+                    }
+                }
+            },
+            "groupgroup": {
+                "command_name": "група",
+                "command_description": "Встановіть групу для персонажа",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "проксі",
+                        "parameter_description": "Символ для встановлення групи"
+                    },
+                    "variant": {
+                        "parameter_name": "варіант",
+                        "parameter_description": "Варіант для створення групи"
+                    },
+                    "group": {
+                        "parameter_name": "група",
+                        "parameter_description": "Група, за замовчуванням Немає"
+                    }
+                }
+            },
+            "groupnsfw": {
+                "command_name": "nsfw",
+                "command_description": "Встановіть, чи є символ NSFW",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "проксі",
+                        "parameter_description": "Символ для встановлення NSFW"
+                    },
+                    "variant": {
+                        "parameter_name": "варіант",
+                        "parameter_description": "Варіант для встановлення NSFW"
+                    },
+                    "nsfw": {
+                        "parameter_name": "nsfw",
+                        "parameter_description": "NSFW, за замовчуванням перемикається на протилежне значення"
+                    }
+                }
+            },
+            "groupauto": {
+                "command_name": "авто",
+                "command_description": "Встановіть авто для персонажа",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "проксі",
+                        "parameter_description": "Символ, за замовчуванням вимикає авто"
+                    },
+                    "variant": {
+                        "parameter_name": "варіант",
+                        "parameter_description": "Варіант для встановлення авто"
+                    }
+                }
+            },
+            "groupavatar": {
+                "command_name": "аватар",
+                "command_description": "Встановіть аватар для персонажа",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "проксі",
+                        "parameter_description": "Персонаж для встановлення аватара"
+                    },
+                    "variant": {
+                        "parameter_name": "варіант",
+                        "parameter_description": "Варіант для встановлення аватара"
+                    },
+                    "avatar": {
+                        "parameter_name": "аватар",
+                        "parameter_description": "URL-адреса зображення, за умовчанням Немає"
+                    }
+                }
+            },
+            "grouplist": {
+                "command_description": "List all variants."
+            },
+            "groupfind": {
+                "command_description": "Find a variant."
+            },
+            "groupupdate": {
+                "command_name": "оновлення",
+                "command_description": "Оновіть проксі. ",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "проксі",
+                        "parameter_description": "Персонаж для оновлення"
+                    },
+                    "image": {
+                        "parameter_name": "зображення",
+                        "parameter_description": "Зображення, за замовчуванням Немає"
+                    }
+                }
+            },
+            "groupdetail": {
+                "command_name": "деталь",
+                "command_description": "Отримайте деталі персонажа",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "проксі",
+                        "parameter_description": "Деталізуйте проксі. "
+                    },
+                    "variant": {
+                        "parameter_name": "варіант",
+                        "parameter_description": "Варіант до деталей"
+                    }
+                }
+            },
+            "groupprune": {
+                "command_name": "чорнослив",
+                "command_description": "Вирізати символи, які не використовуються протягом певного часу.",
+                "params": {
+                    "proxy": {
+                        "parameter_description": "проксі"
+                    },
+                    "time": {
+                        "parameter_description": "Дата скорочення раніше, за замовчуванням Немає"
+                    }
+                }
+            },
+            "grouppurge": {
+                "command_name": "чистка",
+                "command_description": "Очистити всі ваші дані (крім журналів повідомлень)",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "проксі",
+                        "parameter_description": "проксі"
+                    },
+                    "confirmation": {
+                        "parameter_name": "підтвердження",
+                        "parameter_description": "підтвердження"
+                    }
+                }
+            }
+        },
+        "shared": {
+            "group_description": "Shared proxy commands.",
+            "groupset": {
+                "command_description": "Set a proxy as the current one."
+            },
+            "groupcreate": {
+                "command_name": "створити",
+                "command_description": "Створіть нового персонажа.",
+                "params": {
+                    "image": {
+                        "parameter_name": "зображення",
+                        "parameter_description": "Зображення, за замовчуванням Немає"
+                    }
+                }
+            },
+            "groupdelete": {
+                "command_name": "видалити",
+                "command_description": "Видалити символ",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "проксі",
+                        "parameter_description": "Проксі, з якого потрібно видалити варіант"
+                    }
+                }
+            },
+            "groupread": {
+                "command_name": "читати",
+                "command_description": "Прочитайте персонажа",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "проксі",
+                        "parameter_description": "Символ, з якого читається варіант"
+                    }
+                }
+            },
+            "groupauto": {
+                "command_name": "авто",
+                "command_description": "Встановіть авто для персонажа",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "проксі",
+                        "parameter_description": "Символ, за замовчуванням вимикає авто"
+                    }
+                }
+            },
+            "groupprefix": {
+                "command_name": "префікс",
+                "command_description": "Встановіть префікси для символу.",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "проксі",
+                        "parameter_description": "Символ, для якого потрібно встановити префікс"
+                    },
+                    "prefixes": {
+                        "parameter_name": "префікси",
+                        "parameter_description": "префікси напр. "
+                    }
+                }
+            },
+            "groupbirthday": {
+                "command_name": "birthday",
+                "command_description": "Встановіть день народження для персонажа",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "проксі",
+                        "parameter_description": "Персонаж для встановлення дня народження"
+                    },
+                    "birthday": {
+                        "parameter_name": "birthday",
+                        "parameter_description": "День народження, за замовчуванням Немає"
+                    }
+                }
+            },
+            "groupdescription": {
+                "command_name": "опис",
+                "command_description": "Встановіть опис для персонажа",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "проксі",
+                        "parameter_description": "Символ для опису"
+                    },
+                    "text": {
+                        "parameter_name": "текст",
+                        "parameter_description": "Опис для персонажа"
+                    }
+                }
+            },
+            "grouprename": {
+                "command_name": "перейменувати",
+                "command_description": "Перейменування персонажа",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "проксі",
+                        "parameter_description": "Символ для перейменування"
+                    },
+                    "name": {
+                        "parameter_name": "назва",
+                        "parameter_description": "Нове ім'я для персонажа"
+                    }
+                }
+            },
+            "groupnickname": {
+                "command_name": "псевдонім",
+                "command_description": "Встановіть псевдонім для персонажа",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "проксі",
+                        "parameter_description": "Символ, для якого потрібно встановити псевдонім"
+                    },
+                    "nickname": {
+                        "parameter_name": "псевдонім",
+                        "parameter_description": "Псевдонім для персонажа"
+                    }
+                }
+            },
+            "groupgroup": {
+                "command_name": "група",
+                "command_description": "Встановіть групу для персонажа",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "проксі",
+                        "parameter_description": "Символ для встановлення групи"
+                    },
+                    "group": {
+                        "parameter_name": "група",
+                        "parameter_description": "Група, за замовчуванням Немає"
+                    }
+                }
+            },
+            "groupnsfw": {
+                "command_name": "nsfw",
+                "command_description": "Встановіть, чи є символ NSFW",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "проксі",
+                        "parameter_description": "Символ для встановлення NSFW"
+                    },
+                    "nsfw": {
+                        "parameter_name": "nsfw",
+                        "parameter_description": "NSFW, за замовчуванням перемикається на протилежне значення"
+                    }
+                }
+            },
+            "groupavatar": {
+                "command_name": "аватар",
+                "command_description": "Встановіть аватар для персонажа",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "проксі",
+                        "parameter_description": "Персонаж для встановлення аватара"
+                    },
+                    "avatar": {
+                        "parameter_name": "аватар",
+                        "parameter_description": "URL-адреса зображення, за умовчанням Немає"
+                    }
+                }
+            },
+            "groupimage": {
+                "params": {
+                    "proxy": {
+                        "parameter_name": "проксі",
+                        "parameter_description": "Персонаж для встановлення аватара"
+                    },
+                    "avatar": {
+                        "parameter_name": "аватар",
+                        "parameter_description": "URL-адреса зображення, за умовчанням Немає"
+                    }
+                }
+            },
+            "grouplocal": {
+                "command_name": "місцевий",
+                "command_description": "Встановіть локальний параметр для персонажа",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "проксі",
+                        "parameter_description": "Символ, для якого потрібно встановити локальний"
+                    },
+                    "avatar": {
+                        "parameter_name": "зображення",
+                        "parameter_description": "Зображення, за замовчуванням Немає"
+                    },
+                    "nickname": {
+                        "parameter_name": "псевдонім",
+                        "parameter_description": "Псевдонім, за замовчуванням Немає"
+                    }
+                }
+            },
+            "groupupdate": {
+                "command_name": "оновлення",
+                "command_description": "Оновіть проксі. ",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "проксі",
+                        "parameter_description": "Персонаж для оновлення"
+                    },
+                    "image": {
+                        "parameter_name": "зображення",
+                        "parameter_description": "Зображення, за замовчуванням Немає"
+                    }
+                }
+            },
+            "groupdetail": {
+                "command_name": "деталь",
+                "command_description": "Отримайте деталі персонажа",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "проксі",
+                        "parameter_description": "Деталізуйте проксі. "
+                    }
+                }
+            },
+            "groupprune": {
+                "command_name": "чорнослив",
+                "command_description": "Вирізати символи, які не використовуються протягом певного часу.",
+                "params": {
+                    "time": {
+                        "parameter_description": "Дата скорочення раніше, за замовчуванням Немає"
+                    }
+                }
+            },
+            "grouppurge": {
+                "command_name": "чистка",
+                "command_description": "Очистити всі ваші дані (крім журналів повідомлень)",
+                "params": {
+                    "confirmation": {
+                        "parameter_name": "підтвердження",
+                        "parameter_description": "підтвердження"
+                    }
+                }
+            }
+        },
+        "check_permissions": {
+            "command_name": "check_perms",
+            "command_description": "Перевірте, чи може бот працювати у наданому каналі"
+        },
+        "roll": {
+            "command_description": "Roll a dice."
+        },
+        "afk": {
+            "command_description": "Check if a user is AFK."
+        },
+        "help": {
+            "command_name": "допомогти",
+            "command_description": "Вбудована довідка бота",
+            "params": {
+                "search": {
+                    "parameter_name": "пошук",
+                    "parameter_description": "Термін пошуку"
+                }
+            }
+        },
+        "server_wiki": {
+            "command_name": "server_wiki",
+            "command_description": "Вікі-сервер, визначений користувачем",
+            "params": {
+                "search": {
+                    "parameter_name": "пошук",
+                    "parameter_description": "Термін пошуку"
+                }
+            }
+        },
+        "settings": {
+            "command_name": "налаштування",
+            "command_description": "Налаштування бота",
+            "params": {
+                "menu": {
+                    "parameter_name": "меню",
+                    "parameter_description": "Меню для відкриття налаштувань",
+                    "choices": {
+                        "Server": "Сервер",
+                        "Member": "Член",
+                        "User": "Користувач"
+                    }
+                }
+            }
+        },
+        "context_menu": {
+            "command_name": "Проксі"
+        }
+    }
+}

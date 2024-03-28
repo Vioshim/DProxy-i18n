@@ -1,0 +1,963 @@
+{
+    "commands": {
+        "exec": {
+            "command_description": "Execute a command."
+        },
+        "proxy": {
+            "command_name": "meghatalmazott",
+            "command_description": "Karakterek letiltása a szerveren",
+            "params": {
+                "enable": {
+                    "parameter_name": "engedélyezze",
+                    "parameter_description": "A karakterek engedélyezése vagy letiltása alapértelmezés szerint kapcsolók"
+                }
+            }
+        },
+        "set": {
+            "command_description": "Set a proxy as the current one."
+        },
+        "use": {
+            "params": {
+                "text": {
+                    "parameter_name": "szöveg",
+                    "parameter_description": "szöveg"
+                }
+            }
+        },
+        "say": {
+            "params": {
+                "text": {
+                    "parameter_name": "szöveg",
+                    "parameter_description": "szöveg"
+                }
+            }
+        },
+        "npc": {
+            "command_name": "npc",
+            "command_description": "Hozzon létre egy új NPC-üzenetet",
+            "params": {
+                "franchise": {
+                    "parameter_name": "franchise",
+                    "parameter_description": "Franchise használható",
+                    "choices": {
+                        "Pokemon": "Pokemon",
+                        "Pokemon Shiny": "Pokemon Shiny",
+                        "Trainer": "Trainer",
+                        "Digimon": "Digimon",
+                        "Palworld": "Palworld",
+                        "D&D": "D&D"
+                    }
+                },
+                "npc": {
+                    "parameter_name": "npc",
+                    "parameter_description": "NPC használni"
+                },
+                "nickname": {
+                    "parameter_name": "becenév",
+                    "parameter_description": "Becenév, alapértelmezés szerint Nincs"
+                },
+                "emotion": {
+                    "parameter_name": "érzelem",
+                    "parameter_description": "Érzelem, alapértelmezés szerint Normál",
+                    "choices": {
+                        "Normal": "Normal",
+                        "Happy": "Happy",
+                        "Pain": "Pain",
+                        "Angry": "Angry",
+                        "Worried": "Worried",
+                        "Sad": "Sad",
+                        "Crying": "Crying",
+                        "Shouting": "Shouting",
+                        "TearyEyed": "TearyEyed",
+                        "Determined": "Determined",
+                        "Joyous": "Joyous",
+                        "Inspired": "Inspired",
+                        "Surprised": "Surprised",
+                        "Dizzy": "Dizzy",
+                        "Sigh": "Sigh",
+                        "Stunned": "Stunned",
+                        "Special0": "Special0",
+                        "Special1": "Special1",
+                        "Special2": "Special2",
+                        "Special3": "Special3"
+                    }
+                },
+                "image": {
+                    "parameter_name": "kép",
+                    "parameter_description": "Kép, alapértelmezés szerint Nincs"
+                },
+                "text": {
+                    "parameter_name": "szöveg",
+                    "parameter_description": "szöveg"
+                }
+            }
+        },
+        "create": {
+            "command_description": "Create a new proxy.",
+            "params": {
+                "prefixes": {
+                    "parameter_description": "Prefixes e.g. A:text, |text|, etc."
+                }
+            }
+        },
+        "delete": {
+            "command_name": "töröl",
+            "command_description": "Karakter törlése",
+            "params": {
+                "proxy": {
+                    "parameter_name": "meghatalmazott",
+                    "parameter_description": "Proxy a változat törléséhez"
+                }
+            }
+        },
+        "read": {
+            "command_name": "olvas",
+            "command_description": "Olvass el egy karaktert",
+            "params": {
+                "proxy": {
+                    "parameter_name": "meghatalmazott",
+                    "parameter_description": "Karakter, amelyből kiolvasható a változat"
+                }
+            }
+        },
+        "nickname": {
+            "command_name": "becenév",
+            "command_description": "Állítsa be a karakter becenevét",
+            "params": {
+                "proxy": {
+                    "parameter_name": "meghatalmazott",
+                    "parameter_description": "Becenév beállításához szükséges karakter"
+                },
+                "nickname": {
+                    "parameter_name": "becenév",
+                    "parameter_description": "A karakterhez beállítandó becenév"
+                }
+            }
+        },
+        "local": {
+            "command_name": "helyi",
+            "command_description": "Állítsa be a helyi karaktert",
+            "params": {
+                "proxy": {
+                    "parameter_name": "meghatalmazott",
+                    "parameter_description": "A lokális beállítandó karakter"
+                },
+                "avatar": {
+                    "parameter_name": "kép",
+                    "parameter_description": "Kép, alapértelmezés szerint Nincs"
+                },
+                "nickname": {
+                    "parameter_name": "becenév",
+                    "parameter_description": "Becenév, alapértelmezés szerint Nincs"
+                }
+            }
+        },
+        "avatar": {
+            "command_name": "avatar",
+            "command_description": "Állítsd be az avatárt egy karakterhez",
+            "params": {
+                "proxy": {
+                    "parameter_name": "meghatalmazott",
+                    "parameter_description": "Karakter, amelyhez beállíthatja az avatart"
+                },
+                "avatar": {
+                    "parameter_name": "avatar",
+                    "parameter_description": "A kép URL-je, alapértelmezés szerint Nincs"
+                }
+            }
+        },
+        "prefix": {
+            "command_name": "előtag",
+            "command_description": "Állítsa be a karakter előtagjait.",
+            "params": {
+                "proxy": {
+                    "parameter_name": "meghatalmazott",
+                    "parameter_description": "Karakter, amelyhez beállíthatja az előtagot"
+                },
+                "prefixes": {
+                    "parameter_name": "előtagok",
+                    "parameter_description": "Előtagok pl. "
+                }
+            }
+        },
+        "birthday": {
+            "command_name": "születésnap",
+            "command_description": "Állítsa be a karakter születésnapját",
+            "params": {
+                "proxy": {
+                    "parameter_name": "meghatalmazott",
+                    "parameter_description": "Karakter, amelyre beállíthatja a születésnapját"
+                },
+                "birthday": {
+                    "parameter_name": "születésnap",
+                    "parameter_description": "Születésnap, alapértelmezés szerint Nincs"
+                }
+            }
+        },
+        "description": {
+            "command_name": "leírás",
+            "command_description": "Állítsa be a karakter leírását",
+            "params": {
+                "proxy": {
+                    "parameter_name": "meghatalmazott",
+                    "parameter_description": "Karakter a leíráshoz"
+                },
+                "text": {
+                    "parameter_name": "szöveg",
+                    "parameter_description": "A karakterhez beállítandó leírás"
+                }
+            }
+        },
+        "rename": {
+            "command_name": "átnevezni",
+            "command_description": "Karakter átnevezése",
+            "params": {
+                "proxy": {
+                    "parameter_name": "meghatalmazott",
+                    "parameter_description": "Átnevezendő karakter"
+                },
+                "name": {
+                    "parameter_name": "név",
+                    "parameter_description": "Új név a karakternek"
+                }
+            }
+        },
+        "group": {
+            "command_name": "csoport",
+            "command_description": "Állítsa be a csoportot egy karakterhez",
+            "params": {
+                "proxy": {
+                    "parameter_name": "meghatalmazott",
+                    "parameter_description": "Karakter, amelyre beállíthatja a csoportot"
+                },
+                "group": {
+                    "parameter_name": "csoport",
+                    "parameter_description": "Csoport, alapértelmezés szerint Nincs"
+                }
+            }
+        },
+        "nsfw": {
+            "command_name": "nsfw",
+            "command_description": "Állítsa be, hogy egy karakter NSFW-e",
+            "params": {
+                "proxy": {
+                    "parameter_name": "meghatalmazott",
+                    "parameter_description": "Az NSFW beállításához szükséges karakter"
+                },
+                "nsfw": {
+                    "parameter_name": "nsfw",
+                    "parameter_description": "NSFW, alapértelmezés szerint váltson ellentétes értékre"
+                }
+            }
+        },
+        "auto": {
+            "command_name": "auto",
+            "command_description": "Állítsa be az automatikus karaktert",
+            "params": {
+                "proxy": {
+                    "parameter_name": "meghatalmazott",
+                    "parameter_description": "Karakter, alapértelmezés szerint letiltja az automatikus funkciót"
+                }
+            }
+        },
+        "list": {
+            "command_name": "lista",
+            "command_description": "Sorolja fel az összes karaktert ",
+            "params": {
+                "group": {
+                    "parameter_name": "csoport",
+                    "parameter_description": "Csoport a karakterek listázásához"
+                }
+            }
+        },
+        "latch": {
+            "command_name": "retesz",
+            "command_description": "Reteszelő mód engedélyezése vagy letiltása",
+            "params": {
+                "enable": {
+                    "parameter_description": "Reteszelő mód engedélyezése vagy letiltása"
+                },
+                "auto_remove": {
+                    "parameter_description": "Alapértelmezés szerint megtartja az aktuális csatorna automatikus beállítását? True."
+                }
+            }
+        },
+        "export": {
+            "command_name": "export",
+            "command_description": "Exportálja a karaktereket JSON-fájlba",
+            "params": {
+                "format": {
+                    "parameter_name": "formátum",
+                    "parameter_description": "Formátum az exportáláshoz, alapértelmezés szerint JSON"
+                },
+                "new_token": {
+                    "parameter_name": "new_token",
+                    "parameter_description": "Ha új tokent szeretne létrehozni"
+                }
+            }
+        },
+        "prune": {
+            "command_name": "aszalt_szilva",
+            "command_description": "Egy bizonyos ideig használaton kívüli karakterek metszése.",
+            "params": {
+                "time": {
+                    "parameter_description": "A metszés előtti dátum, alapértelmezés szerint Nincs"
+                }
+            }
+        },
+        "purge": {
+            "command_name": "kitisztítás",
+            "command_description": "Az összes adat törlése (kivéve az üzenetnaplókat)",
+            "params": {
+                "confirmation": {
+                    "parameter_name": "megerősítés",
+                    "parameter_description": "megerősítés"
+                }
+            }
+        },
+        "proxy-to-variant": {
+            "command_name": "proxy-to-variáns",
+            "command_description": "Karakter konvertálása variánssá",
+            "params": {
+                "original": {
+                    "parameter_name": "eredeti",
+                    "parameter_description": "Átalakítandó karakter"
+                },
+                "base": {
+                    "parameter_name": "bázis",
+                    "parameter_description": "Új alap a karakterhez"
+                }
+            }
+        },
+        "variant-to-proxy": {
+            "command_name": "változat-proxy",
+            "command_description": "Változat konvertálása karakterré",
+            "params": {
+                "proxy": {
+                    "parameter_name": "meghatalmazott",
+                    "parameter_description": "Proxy a konvertáláshoz"
+                },
+                "variant": {
+                    "parameter_name": "változat",
+                    "parameter_description": "Átalakítandó változat"
+                }
+            }
+        },
+        "update": {
+            "command_name": "frissítés",
+            "command_description": "Frissítsen egy proxyt. ",
+            "params": {
+                "proxy": {
+                    "parameter_name": "meghatalmazott",
+                    "parameter_description": "Frissítendő karakter"
+                },
+                "image": {
+                    "parameter_name": "kép",
+                    "parameter_description": "Kép, alapértelmezés szerint Nincs"
+                }
+            }
+        },
+        "detail": {
+            "command_name": "részlet",
+            "command_description": "Ismerje meg a karakter részleteit",
+            "params": {
+                "proxy": {
+                    "parameter_name": "meghatalmazott",
+                    "parameter_description": "Részletes proxy. "
+                }
+            }
+        },
+        "import": {
+            "command_name": "import",
+            "command_description": "Importálja a karaktereket fájlból vagy tokenből",
+            "params": {
+                "data": {
+                    "parameter_name": "adat",
+                    "parameter_description": "Importálandó fájl"
+                },
+                "token": {
+                    "parameter_name": "jelképes",
+                    "parameter_description": "Importáláshoz használható token"
+                },
+                "deleting_from_token": {
+                    "parameter_name": "törlés_tokenből",
+                    "parameter_description": "Karakterek törlése a tokenből"
+                }
+            }
+        },
+        "var": {
+            "group_name": "var",
+            "group_description": "Variant commands.",
+            "groupset": {
+                "command_description": "Set a variant."
+            },
+            "groupuse": {
+                "command_description": "Use a variant."
+            },
+            "groupcreate": {
+                "command_name": "teremt",
+                "command_description": "Hozz létre egy új karaktert.",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "meghatalmazott",
+                        "parameter_description": " Proxy a változat létrehozásához"
+                    },
+                    "image": {
+                        "parameter_name": "kép",
+                        "parameter_description": "Kép, alapértelmezés szerint Nincs"
+                    },
+                    "prefixes": {
+                        "parameter_description": "Prefixes e.g. A:text, |text|, etc."
+                    }
+                }
+            },
+            "groupdelete": {
+                "command_name": "töröl",
+                "command_description": "Karakterváltozat törlése",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "meghatalmazott",
+                        "parameter_description": "Proxy a változat törléséhez"
+                    },
+                    "variant": {
+                        "parameter_name": "változat",
+                        "parameter_description": "Törölendő változat"
+                    }
+                }
+            },
+            "groupread": {
+                "command_name": "olvas",
+                "command_description": "Olvass el egy karaktert",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "meghatalmazott",
+                        "parameter_description": "Karakter, amelyből kiolvasható a változat"
+                    },
+                    "variant": {
+                        "parameter_name": "változat",
+                        "parameter_description": "Olvasható változat"
+                    }
+                }
+            },
+            "groupnickname": {
+                "command_name": "becenév",
+                "command_description": "Állítsa be a karakter becenevét",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "meghatalmazott",
+                        "parameter_description": "Becenév beállításához szükséges karakter"
+                    },
+                    "variant": {
+                        "parameter_name": "változat",
+                        "parameter_description": "Változat a becenév beállításához"
+                    },
+                    "nickname": {
+                        "parameter_name": "becenév",
+                        "parameter_description": "A karakterhez beállítandó becenév"
+                    }
+                }
+            },
+            "grouplocal": {
+                "command_name": "helyi",
+                "command_description": "Állítsa be a helyi karaktert",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "meghatalmazott",
+                        "parameter_description": "A lokális beállítandó karakter"
+                    },
+                    "variant": {
+                        "parameter_name": "változat",
+                        "parameter_description": "Változat a helyi beállításhoz"
+                    },
+                    "avatar": {
+                        "parameter_name": "kép",
+                        "parameter_description": "Kép, alapértelmezés szerint Nincs"
+                    },
+                    "nickname": {
+                        "parameter_name": "becenév",
+                        "parameter_description": "Becenév, alapértelmezés szerint Nincs"
+                    }
+                }
+            },
+            "groupprefix": {
+                "command_name": "előtag",
+                "command_description": "Állítsa be a karakter előtagjait.",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "meghatalmazott",
+                        "parameter_description": "Karakter, amelyhez beállíthatja az előtagot"
+                    },
+                    "variant": {
+                        "parameter_name": "változat",
+                        "parameter_description": "Változat az előtag beállításához"
+                    },
+                    "prefixes": {
+                        "parameter_name": "előtagok",
+                        "parameter_description": "Előtagok pl. "
+                    }
+                }
+            },
+            "groupbirthday": {
+                "command_name": "születésnap",
+                "command_description": "Állítsa be a karakter születésnapját",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "meghatalmazott",
+                        "parameter_description": "Karakter, amelyre beállíthatja a születésnapját"
+                    },
+                    "variant": {
+                        "parameter_name": "változat",
+                        "parameter_description": "Változat a születésnap beállításához"
+                    },
+                    "birthday": {
+                        "parameter_name": "születésnap",
+                        "parameter_description": "Születésnap, alapértelmezés szerint Nincs"
+                    }
+                }
+            },
+            "groupdescription": {
+                "command_name": "leírás",
+                "command_description": "Állítsa be a karakter leírását",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "meghatalmazott",
+                        "parameter_description": "Karakter a leíráshoz"
+                    },
+                    "variant": {
+                        "parameter_name": "változat",
+                        "parameter_description": "Változat a leírás beállításához"
+                    },
+                    "text": {
+                        "parameter_name": "szöveg",
+                        "parameter_description": "A karakterhez beállítandó leírás"
+                    }
+                }
+            },
+            "grouprename": {
+                "command_name": "átnevezni",
+                "command_description": "Karakter átnevezése",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "meghatalmazott",
+                        "parameter_description": "Átnevezendő karakter"
+                    },
+                    "variant": {
+                        "parameter_name": "változat",
+                        "parameter_description": "Átnevezendő változat"
+                    },
+                    "name": {
+                        "parameter_name": "név",
+                        "parameter_description": "Új név a karakternek"
+                    }
+                }
+            },
+            "groupgroup": {
+                "command_name": "csoport",
+                "command_description": "Állítsa be a csoportot egy karakterhez",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "meghatalmazott",
+                        "parameter_description": "Karakter, amelyre beállíthatja a csoportot"
+                    },
+                    "variant": {
+                        "parameter_name": "változat",
+                        "parameter_description": "Változat a csoport beállításához"
+                    },
+                    "group": {
+                        "parameter_name": "csoport",
+                        "parameter_description": "Csoport, alapértelmezés szerint Nincs"
+                    }
+                }
+            },
+            "groupnsfw": {
+                "command_name": "nsfw",
+                "command_description": "Állítsa be, hogy egy karakter NSFW-e",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "meghatalmazott",
+                        "parameter_description": "Az NSFW beállításához szükséges karakter"
+                    },
+                    "variant": {
+                        "parameter_name": "változat",
+                        "parameter_description": "Változat az NSFW beállításához"
+                    },
+                    "nsfw": {
+                        "parameter_name": "nsfw",
+                        "parameter_description": "NSFW, alapértelmezés szerint váltson ellentétes értékre"
+                    }
+                }
+            },
+            "groupauto": {
+                "command_name": "auto",
+                "command_description": "Állítsa be az automatikus karaktert",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "meghatalmazott",
+                        "parameter_description": "Karakter, alapértelmezés szerint letiltja az automatikus funkciót"
+                    },
+                    "variant": {
+                        "parameter_name": "változat",
+                        "parameter_description": "Változat az automatikus beállításhoz"
+                    }
+                }
+            },
+            "groupavatar": {
+                "command_name": "avatar",
+                "command_description": "Állítsd be az avatárt egy karakterhez",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "meghatalmazott",
+                        "parameter_description": "Karakter, amelyhez beállíthatja az avatart"
+                    },
+                    "variant": {
+                        "parameter_name": "változat",
+                        "parameter_description": "Változat az avatar beállításához"
+                    },
+                    "avatar": {
+                        "parameter_name": "avatar",
+                        "parameter_description": "A kép URL-je, alapértelmezés szerint Nincs"
+                    }
+                }
+            },
+            "grouplist": {
+                "command_description": "List all variants."
+            },
+            "groupfind": {
+                "command_description": "Find a variant."
+            },
+            "groupupdate": {
+                "command_name": "frissítés",
+                "command_description": "Frissítsen egy proxyt. ",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "meghatalmazott",
+                        "parameter_description": "Frissítendő karakter"
+                    },
+                    "image": {
+                        "parameter_name": "kép",
+                        "parameter_description": "Kép, alapértelmezés szerint Nincs"
+                    }
+                }
+            },
+            "groupdetail": {
+                "command_name": "részlet",
+                "command_description": "Ismerje meg a karakter részleteit",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "meghatalmazott",
+                        "parameter_description": "Részletes proxy. "
+                    },
+                    "variant": {
+                        "parameter_name": "változat",
+                        "parameter_description": "Változat a részletekig"
+                    }
+                }
+            },
+            "groupprune": {
+                "command_name": "aszalt_szilva",
+                "command_description": "Egy bizonyos ideig használaton kívüli karakterek metszése.",
+                "params": {
+                    "proxy": {
+                        "parameter_description": "meghatalmazott"
+                    },
+                    "time": {
+                        "parameter_description": "A metszés előtti dátum, alapértelmezés szerint Nincs"
+                    }
+                }
+            },
+            "grouppurge": {
+                "command_name": "kitisztítás",
+                "command_description": "Az összes adat törlése (kivéve az üzenetnaplókat)",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "meghatalmazott",
+                        "parameter_description": "meghatalmazott"
+                    },
+                    "confirmation": {
+                        "parameter_name": "megerősítés",
+                        "parameter_description": "megerősítés"
+                    }
+                }
+            }
+        },
+        "shared": {
+            "group_description": "Shared proxy commands.",
+            "groupset": {
+                "command_description": "Set a proxy as the current one."
+            },
+            "groupcreate": {
+                "command_name": "teremt",
+                "command_description": "Hozz létre egy új karaktert.",
+                "params": {
+                    "image": {
+                        "parameter_name": "kép",
+                        "parameter_description": "Kép, alapértelmezés szerint Nincs"
+                    }
+                }
+            },
+            "groupdelete": {
+                "command_name": "töröl",
+                "command_description": "Karakter törlése",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "meghatalmazott",
+                        "parameter_description": "Proxy a változat törléséhez"
+                    }
+                }
+            },
+            "groupread": {
+                "command_name": "olvas",
+                "command_description": "Olvass el egy karaktert",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "meghatalmazott",
+                        "parameter_description": "Karakter, amelyből kiolvasható a változat"
+                    }
+                }
+            },
+            "groupauto": {
+                "command_name": "auto",
+                "command_description": "Állítsa be az automatikus karaktert",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "meghatalmazott",
+                        "parameter_description": "Karakter, alapértelmezés szerint letiltja az automatikus funkciót"
+                    }
+                }
+            },
+            "groupprefix": {
+                "command_name": "előtag",
+                "command_description": "Állítsa be a karakter előtagjait.",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "meghatalmazott",
+                        "parameter_description": "Karakter, amelyhez beállíthatja az előtagot"
+                    },
+                    "prefixes": {
+                        "parameter_name": "előtagok",
+                        "parameter_description": "Előtagok pl. "
+                    }
+                }
+            },
+            "groupbirthday": {
+                "command_name": "születésnap",
+                "command_description": "Állítsa be a karakter születésnapját",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "meghatalmazott",
+                        "parameter_description": "Karakter, amelyre beállíthatja a születésnapját"
+                    },
+                    "birthday": {
+                        "parameter_name": "születésnap",
+                        "parameter_description": "Születésnap, alapértelmezés szerint Nincs"
+                    }
+                }
+            },
+            "groupdescription": {
+                "command_name": "leírás",
+                "command_description": "Állítsa be a karakter leírását",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "meghatalmazott",
+                        "parameter_description": "Karakter a leíráshoz"
+                    },
+                    "text": {
+                        "parameter_name": "szöveg",
+                        "parameter_description": "A karakterhez beállítandó leírás"
+                    }
+                }
+            },
+            "grouprename": {
+                "command_name": "átnevezni",
+                "command_description": "Karakter átnevezése",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "meghatalmazott",
+                        "parameter_description": "Átnevezendő karakter"
+                    },
+                    "name": {
+                        "parameter_name": "név",
+                        "parameter_description": "Új név a karakternek"
+                    }
+                }
+            },
+            "groupnickname": {
+                "command_name": "becenév",
+                "command_description": "Állítsa be a karakter becenevét",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "meghatalmazott",
+                        "parameter_description": "Becenév beállításához szükséges karakter"
+                    },
+                    "nickname": {
+                        "parameter_name": "becenév",
+                        "parameter_description": "A karakterhez beállítandó becenév"
+                    }
+                }
+            },
+            "groupgroup": {
+                "command_name": "csoport",
+                "command_description": "Állítsa be a csoportot egy karakterhez",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "meghatalmazott",
+                        "parameter_description": "Karakter, amelyre beállíthatja a csoportot"
+                    },
+                    "group": {
+                        "parameter_name": "csoport",
+                        "parameter_description": "Csoport, alapértelmezés szerint Nincs"
+                    }
+                }
+            },
+            "groupnsfw": {
+                "command_name": "nsfw",
+                "command_description": "Állítsa be, hogy egy karakter NSFW-e",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "meghatalmazott",
+                        "parameter_description": "Az NSFW beállításához szükséges karakter"
+                    },
+                    "nsfw": {
+                        "parameter_name": "nsfw",
+                        "parameter_description": "NSFW, alapértelmezés szerint váltson ellentétes értékre"
+                    }
+                }
+            },
+            "groupavatar": {
+                "command_name": "avatar",
+                "command_description": "Állítsd be az avatárt egy karakterhez",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "meghatalmazott",
+                        "parameter_description": "Karakter, amelyhez beállíthatja az avatart"
+                    },
+                    "avatar": {
+                        "parameter_name": "avatar",
+                        "parameter_description": "A kép URL-je, alapértelmezés szerint Nincs"
+                    }
+                }
+            },
+            "groupimage": {
+                "params": {
+                    "proxy": {
+                        "parameter_name": "meghatalmazott",
+                        "parameter_description": "Karakter, amelyhez beállíthatja az avatart"
+                    },
+                    "avatar": {
+                        "parameter_name": "avatar",
+                        "parameter_description": "A kép URL-je, alapértelmezés szerint Nincs"
+                    }
+                }
+            },
+            "grouplocal": {
+                "command_name": "helyi",
+                "command_description": "Állítsa be a helyi karaktert",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "meghatalmazott",
+                        "parameter_description": "A lokális beállítandó karakter"
+                    },
+                    "avatar": {
+                        "parameter_name": "kép",
+                        "parameter_description": "Kép, alapértelmezés szerint Nincs"
+                    },
+                    "nickname": {
+                        "parameter_name": "becenév",
+                        "parameter_description": "Becenév, alapértelmezés szerint Nincs"
+                    }
+                }
+            },
+            "groupupdate": {
+                "command_name": "frissítés",
+                "command_description": "Frissítsen egy proxyt. ",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "meghatalmazott",
+                        "parameter_description": "Frissítendő karakter"
+                    },
+                    "image": {
+                        "parameter_name": "kép",
+                        "parameter_description": "Kép, alapértelmezés szerint Nincs"
+                    }
+                }
+            },
+            "groupdetail": {
+                "command_name": "részlet",
+                "command_description": "Ismerje meg a karakter részleteit",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "meghatalmazott",
+                        "parameter_description": "Részletes proxy. "
+                    }
+                }
+            },
+            "groupprune": {
+                "command_name": "aszalt_szilva",
+                "command_description": "Egy bizonyos ideig használaton kívüli karakterek metszése.",
+                "params": {
+                    "time": {
+                        "parameter_description": "A metszés előtti dátum, alapértelmezés szerint Nincs"
+                    }
+                }
+            },
+            "grouppurge": {
+                "command_name": "kitisztítás",
+                "command_description": "Az összes adat törlése (kivéve az üzenetnaplókat)",
+                "params": {
+                    "confirmation": {
+                        "parameter_name": "megerősítés",
+                        "parameter_description": "megerősítés"
+                    }
+                }
+            }
+        },
+        "check_permissions": {
+            "command_name": "check_perms",
+            "command_description": "Ellenőrizze, hogy a bot képes-e működni a megadott csatornán"
+        },
+        "roll": {
+            "command_description": "Roll a dice."
+        },
+        "afk": {
+            "command_description": "Check if a user is AFK."
+        },
+        "help": {
+            "command_name": "segítség",
+            "command_description": "Beépített bot súgó",
+            "params": {
+                "search": {
+                    "parameter_name": "keresés",
+                    "parameter_description": "Keresési kifejezés"
+                }
+            }
+        },
+        "server_wiki": {
+            "command_name": "szerver_wiki",
+            "command_description": "Felhasználó által definiált szerver wiki",
+            "params": {
+                "search": {
+                    "parameter_name": "keresés",
+                    "parameter_description": "Keresési kifejezés"
+                }
+            }
+        },
+        "settings": {
+            "command_name": "beállítások",
+            "command_description": "Bot beállítások",
+            "params": {
+                "menu": {
+                    "parameter_name": "menü",
+                    "parameter_description": "Menü a beállításokhoz",
+                    "choices": {
+                        "Server": "szerver",
+                        "Member": "Tag",
+                        "User": "Felhasználó"
+                    }
+                }
+            }
+        },
+        "context_menu": {
+            "command_name": "Meghatalmazott"
+        }
+    }
+}

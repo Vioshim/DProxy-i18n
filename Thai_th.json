@@ -1,0 +1,963 @@
+{
+    "commands": {
+        "exec": {
+            "command_description": "Execute a command."
+        },
+        "proxy": {
+            "command_name": "พร็อกซี",
+            "command_description": "ปิดการใช้งานอักขระในเซิร์ฟเวอร์",
+            "params": {
+                "enable": {
+                    "parameter_name": "เปิดใช้งาน",
+                    "parameter_description": "เปิดหรือปิดใช้งานอักขระตามสวิตช์เริ่มต้น"
+                }
+            }
+        },
+        "set": {
+            "command_description": "Set a proxy as the current one."
+        },
+        "use": {
+            "params": {
+                "text": {
+                    "parameter_name": "ข้อความ",
+                    "parameter_description": "ข้อความ"
+                }
+            }
+        },
+        "say": {
+            "params": {
+                "text": {
+                    "parameter_name": "ข้อความ",
+                    "parameter_description": "ข้อความ"
+                }
+            }
+        },
+        "npc": {
+            "command_name": "เอ็นพีซี",
+            "command_description": "สร้างข้อความ NPC ใหม่",
+            "params": {
+                "franchise": {
+                    "parameter_name": "franchise",
+                    "parameter_description": "แฟรนไชส์น่าใช้",
+                    "choices": {
+                        "Pokemon": "Pokemon",
+                        "Pokemon Shiny": "Pokemon Shiny",
+                        "Trainer": "Trainer",
+                        "Digimon": "Digimon",
+                        "Palworld": "Palworld",
+                        "D&D": "D&D"
+                    }
+                },
+                "npc": {
+                    "parameter_name": "เอ็นพีซี",
+                    "parameter_description": "NPC ที่จะใช้"
+                },
+                "nickname": {
+                    "parameter_name": "ชื่อเล่น",
+                    "parameter_description": "ชื่อเล่นตามค่าเริ่มต้น ไม่มี"
+                },
+                "emotion": {
+                    "parameter_name": "อารมณ์",
+                    "parameter_description": "อารมณ์ตามค่าเริ่มต้น ปกติ",
+                    "choices": {
+                        "Normal": "Normal",
+                        "Happy": "Happy",
+                        "Pain": "Pain",
+                        "Angry": "Angry",
+                        "Worried": "Worried",
+                        "Sad": "Sad",
+                        "Crying": "Crying",
+                        "Shouting": "Shouting",
+                        "TearyEyed": "TearyEyed",
+                        "Determined": "Determined",
+                        "Joyous": "Joyous",
+                        "Inspired": "Inspired",
+                        "Surprised": "Surprised",
+                        "Dizzy": "Dizzy",
+                        "Sigh": "Sigh",
+                        "Stunned": "Stunned",
+                        "Special0": "Special0",
+                        "Special1": "Special1",
+                        "Special2": "Special2",
+                        "Special3": "Special3"
+                    }
+                },
+                "image": {
+                    "parameter_name": "ภาพ",
+                    "parameter_description": "รูปภาพตามค่าเริ่มต้น ไม่มี"
+                },
+                "text": {
+                    "parameter_name": "ข้อความ",
+                    "parameter_description": "ข้อความ"
+                }
+            }
+        },
+        "create": {
+            "command_description": "Create a new proxy.",
+            "params": {
+                "prefixes": {
+                    "parameter_description": "Prefixes e.g. A:text, |text|, etc."
+                }
+            }
+        },
+        "delete": {
+            "command_name": "ลบ",
+            "command_description": "ลบตัวละคร",
+            "params": {
+                "proxy": {
+                    "parameter_name": "พร็อกซี",
+                    "parameter_description": "พร็อกซีที่จะลบตัวแปรออก"
+                }
+            }
+        },
+        "read": {
+            "command_name": "อ่าน",
+            "command_description": "อ่านตัวละคร",
+            "params": {
+                "proxy": {
+                    "parameter_name": "พร็อกซี",
+                    "parameter_description": "ตัวละครที่จะอ่านตัวแปรจาก"
+                }
+            }
+        },
+        "nickname": {
+            "command_name": "ชื่อเล่น",
+            "command_description": "ตั้งชื่อเล่นให้กับตัวละคร",
+            "params": {
+                "proxy": {
+                    "parameter_name": "พร็อกซี",
+                    "parameter_description": "ตัวละครที่จะตั้งชื่อเล่นให้"
+                },
+                "nickname": {
+                    "parameter_name": "ชื่อเล่น",
+                    "parameter_description": "ชื่อเล่นที่จะตั้งให้ตัวละคร"
+                }
+            }
+        },
+        "local": {
+            "command_name": "ท้องถิ่น",
+            "command_description": "ตั้งค่าท้องถิ่นสำหรับตัวละคร",
+            "params": {
+                "proxy": {
+                    "parameter_name": "พร็อกซี",
+                    "parameter_description": "ตัวละครที่จะกำหนดท้องถิ่นสำหรับ"
+                },
+                "avatar": {
+                    "parameter_name": "ภาพ",
+                    "parameter_description": "รูปภาพตามค่าเริ่มต้น ไม่มี"
+                },
+                "nickname": {
+                    "parameter_name": "ชื่อเล่น",
+                    "parameter_description": "ชื่อเล่นตามค่าเริ่มต้น ไม่มี"
+                }
+            }
+        },
+        "avatar": {
+            "command_name": "สัญลักษณ์",
+            "command_description": "ตั้งค่าอวาตาร์ให้กับตัวละคร",
+            "params": {
+                "proxy": {
+                    "parameter_name": "พร็อกซี",
+                    "parameter_description": "ตัวละครที่จะกำหนดอวตารให้"
+                },
+                "avatar": {
+                    "parameter_name": "สัญลักษณ์",
+                    "parameter_description": "URL รูปภาพตามค่าเริ่มต้น ไม่มี"
+                }
+            }
+        },
+        "prefix": {
+            "command_name": "คำนำหน้า",
+            "command_description": "ตั้งค่าคำนำหน้าให้กับตัวละคร",
+            "params": {
+                "proxy": {
+                    "parameter_name": "พร็อกซี",
+                    "parameter_description": "ตัวละครที่จะตั้งค่าคำนำหน้า"
+                },
+                "prefixes": {
+                    "parameter_name": "คำนำหน้า",
+                    "parameter_description": "คำนำหน้าเช่น "
+                }
+            }
+        },
+        "birthday": {
+            "command_name": "วันเกิด",
+            "command_description": "กำหนดวันเกิดให้กับตัวละคร",
+            "params": {
+                "proxy": {
+                    "parameter_name": "พร็อกซี",
+                    "parameter_description": "ตัวละครที่จะกำหนดวันเกิดให้"
+                },
+                "birthday": {
+                    "parameter_name": "วันเกิด",
+                    "parameter_description": "วันเกิดตามค่าเริ่มต้น ไม่มี"
+                }
+            }
+        },
+        "description": {
+            "command_name": "คำอธิบาย",
+            "command_description": "กำหนดคำอธิบายสำหรับตัวละคร",
+            "params": {
+                "proxy": {
+                    "parameter_name": "พร็อกซี",
+                    "parameter_description": "ตัวละครที่จะกำหนดคำอธิบาย"
+                },
+                "text": {
+                    "parameter_name": "ข้อความ",
+                    "parameter_description": "คำอธิบายสำหรับการตั้งค่าตัวละคร"
+                }
+            }
+        },
+        "rename": {
+            "command_name": "เปลี่ยนชื่อ",
+            "command_description": "เปลี่ยนชื่อตัวละคร",
+            "params": {
+                "proxy": {
+                    "parameter_name": "พร็อกซี",
+                    "parameter_description": "ตัวละครที่จะเปลี่ยนชื่อ"
+                },
+                "name": {
+                    "parameter_name": "ชื่อ",
+                    "parameter_description": "ชื่อใหม่สำหรับตัวละคร"
+                }
+            }
+        },
+        "group": {
+            "command_name": "กลุ่ม",
+            "command_description": "กำหนดกลุ่มสำหรับตัวละคร",
+            "params": {
+                "proxy": {
+                    "parameter_name": "พร็อกซี",
+                    "parameter_description": "ตัวละครที่จะตั้งกลุ่มให้"
+                },
+                "group": {
+                    "parameter_name": "กลุ่ม",
+                    "parameter_description": "จัดกลุ่มตามค่าเริ่มต้น ไม่มี"
+                }
+            }
+        },
+        "nsfw": {
+            "command_name": "ไม่",
+            "command_description": "ตั้งค่าว่าตัวละครจะเป็น NSFW หรือไม่",
+            "params": {
+                "proxy": {
+                    "parameter_name": "พร็อกซี",
+                    "parameter_description": "ตัวละครที่จะตั้งค่า NSFW สำหรับ"
+                },
+                "nsfw": {
+                    "parameter_name": "ไม่",
+                    "parameter_description": "NSFW โดยค่าเริ่มต้นจะสลับเป็นค่าตรงกันข้าม"
+                }
+            }
+        },
+        "auto": {
+            "command_name": "อัตโนมัติ",
+            "command_description": "ตั้งค่าอัตโนมัติสำหรับตัวละคร",
+            "params": {
+                "proxy": {
+                    "parameter_name": "พร็อกซี",
+                    "parameter_description": "ตัวละครโดยค่าเริ่มต้นจะปิดใช้งานอัตโนมัติ"
+                }
+            }
+        },
+        "list": {
+            "command_name": "รายการ",
+            "command_description": "รายชื่อตัวละครทั้งหมด ",
+            "params": {
+                "group": {
+                    "parameter_name": "กลุ่ม",
+                    "parameter_description": "จัดกลุ่มเพื่อแสดงรายการอักขระจาก"
+                }
+            }
+        },
+        "latch": {
+            "command_name": "สลัก",
+            "command_description": "เปิดหรือปิดโหมดสลัก",
+            "params": {
+                "enable": {
+                    "parameter_description": "เปิดหรือปิดโหมดสลัก"
+                },
+                "auto_remove": {
+                    "parameter_description": "ไม่ว่าจะเก็บอัตโนมัติสำหรับช่องปัจจุบันหรือไม่ โดยค่าเริ่มต้นเป็น True"
+                }
+            }
+        },
+        "export": {
+            "command_name": "ส่งออก",
+            "command_description": "ส่งออกอักขระของคุณเป็นไฟล์ JSON",
+            "params": {
+                "format": {
+                    "parameter_name": "รูปแบบ",
+                    "parameter_description": "รูปแบบที่จะส่งออกเป็น JSON เริ่มต้น"
+                },
+                "new_token": {
+                    "parameter_name": "new_token",
+                    "parameter_description": "หากคุณต้องการสร้างโทเค็นใหม่"
+                }
+            }
+        },
+        "prune": {
+            "command_name": "พรุน",
+            "command_description": "ตัดอักขระที่ไม่ได้ใช้มาระยะหนึ่งแล้ว",
+            "params": {
+                "time": {
+                    "parameter_description": "วันที่ที่จะตัดก่อน โดยค่าเริ่มต้น ไม่มี"
+                }
+            }
+        },
+        "purge": {
+            "command_name": "ล้าง",
+            "command_description": "ล้างข้อมูลทั้งหมดของคุณ (ยกเว้นบันทึกข้อความ)",
+            "params": {
+                "confirmation": {
+                    "parameter_name": "การยืนยัน",
+                    "parameter_description": "การยืนยัน"
+                }
+            }
+        },
+        "proxy-to-variant": {
+            "command_name": "พร็อกซีเป็นตัวแปร",
+            "command_description": "แปลงอักขระเป็นตัวแปร",
+            "params": {
+                "original": {
+                    "parameter_name": "ต้นฉบับ",
+                    "parameter_description": "ตัวละครที่จะแปลง"
+                },
+                "base": {
+                    "parameter_name": "ฐาน",
+                    "parameter_description": "ฐานใหม่สำหรับตัวละคร"
+                }
+            }
+        },
+        "variant-to-proxy": {
+            "command_name": "ตัวแปรต่อพร็อกซี",
+            "command_description": "แปลงตัวแปรให้เป็นตัวละคร",
+            "params": {
+                "proxy": {
+                    "parameter_name": "พร็อกซี",
+                    "parameter_description": "พร็อกซีที่จะแปลงเป็น"
+                },
+                "variant": {
+                    "parameter_name": "ตัวแปร",
+                    "parameter_description": "ตัวแปรที่จะแปลง"
+                }
+            }
+        },
+        "update": {
+            "command_name": "อัปเดต",
+            "command_description": "อัปเดตพร็อกซี ",
+            "params": {
+                "proxy": {
+                    "parameter_name": "พร็อกซี",
+                    "parameter_description": "ตัวละครที่จะอัพเดต"
+                },
+                "image": {
+                    "parameter_name": "ภาพ",
+                    "parameter_description": "รูปภาพตามค่าเริ่มต้น ไม่มี"
+                }
+            }
+        },
+        "detail": {
+            "command_name": "รายละเอียด",
+            "command_description": "รับรายละเอียดของตัวละคร",
+            "params": {
+                "proxy": {
+                    "parameter_name": "พร็อกซี",
+                    "parameter_description": "รายละเอียดการมอบฉันทะ "
+                }
+            }
+        },
+        "import": {
+            "command_name": "นำเข้า",
+            "command_description": "นำเข้าตัวละครของคุณจากไฟล์หรือโทเค็น",
+            "params": {
+                "data": {
+                    "parameter_name": "ข้อมูล",
+                    "parameter_description": "ไฟล์ที่จะนำเข้าจาก"
+                },
+                "token": {
+                    "parameter_name": "โทเค็น",
+                    "parameter_description": "โทเค็นที่จะใช้สำหรับการนำเข้า"
+                },
+                "deleting_from_token": {
+                    "parameter_name": "ลบ_จาก_token",
+                    "parameter_description": "ลบอักขระออกจากโทเค็น"
+                }
+            }
+        },
+        "var": {
+            "group_name": "var",
+            "group_description": "Variant commands.",
+            "groupset": {
+                "command_description": "Set a variant."
+            },
+            "groupuse": {
+                "command_description": "Use a variant."
+            },
+            "groupcreate": {
+                "command_name": "สร้าง",
+                "command_description": "สร้างตัวละครใหม่",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "พร็อกซี",
+                        "parameter_description": " พร็อกซีสำหรับสร้างตัวแปรให้"
+                    },
+                    "image": {
+                        "parameter_name": "ภาพ",
+                        "parameter_description": "รูปภาพตามค่าเริ่มต้น ไม่มี"
+                    },
+                    "prefixes": {
+                        "parameter_description": "Prefixes e.g. A:text, |text|, etc."
+                    }
+                }
+            },
+            "groupdelete": {
+                "command_name": "ลบ",
+                "command_description": "ลบตัวแปรของตัวละคร",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "พร็อกซี",
+                        "parameter_description": "พร็อกซีที่จะลบตัวแปรออก"
+                    },
+                    "variant": {
+                        "parameter_name": "ตัวแปร",
+                        "parameter_description": "ตัวแปรที่จะลบ"
+                    }
+                }
+            },
+            "groupread": {
+                "command_name": "อ่าน",
+                "command_description": "อ่านตัวละคร",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "พร็อกซี",
+                        "parameter_description": "ตัวละครที่จะอ่านตัวแปรจาก"
+                    },
+                    "variant": {
+                        "parameter_name": "ตัวแปร",
+                        "parameter_description": "หลากหลายให้อ่าน"
+                    }
+                }
+            },
+            "groupnickname": {
+                "command_name": "ชื่อเล่น",
+                "command_description": "ตั้งชื่อเล่นให้กับตัวละคร",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "พร็อกซี",
+                        "parameter_description": "ตัวละครที่จะตั้งชื่อเล่นให้"
+                    },
+                    "variant": {
+                        "parameter_name": "ตัวแปร",
+                        "parameter_description": "ตัวแปรที่จะตั้งชื่อเล่นให้"
+                    },
+                    "nickname": {
+                        "parameter_name": "ชื่อเล่น",
+                        "parameter_description": "ชื่อเล่นที่จะตั้งให้ตัวละคร"
+                    }
+                }
+            },
+            "grouplocal": {
+                "command_name": "ท้องถิ่น",
+                "command_description": "ตั้งค่าท้องถิ่นสำหรับตัวละคร",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "พร็อกซี",
+                        "parameter_description": "ตัวละครที่จะกำหนดท้องถิ่นสำหรับ"
+                    },
+                    "variant": {
+                        "parameter_name": "ตัวแปร",
+                        "parameter_description": "ตัวแปรที่จะตั้งค่าท้องถิ่นสำหรับ"
+                    },
+                    "avatar": {
+                        "parameter_name": "ภาพ",
+                        "parameter_description": "รูปภาพตามค่าเริ่มต้น ไม่มี"
+                    },
+                    "nickname": {
+                        "parameter_name": "ชื่อเล่น",
+                        "parameter_description": "ชื่อเล่นตามค่าเริ่มต้น ไม่มี"
+                    }
+                }
+            },
+            "groupprefix": {
+                "command_name": "คำนำหน้า",
+                "command_description": "ตั้งค่าคำนำหน้าให้กับตัวละคร",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "พร็อกซี",
+                        "parameter_description": "ตัวละครที่จะตั้งค่าคำนำหน้า"
+                    },
+                    "variant": {
+                        "parameter_name": "ตัวแปร",
+                        "parameter_description": "ตัวแปรที่จะตั้งค่าคำนำหน้าสำหรับ"
+                    },
+                    "prefixes": {
+                        "parameter_name": "คำนำหน้า",
+                        "parameter_description": "คำนำหน้าเช่น "
+                    }
+                }
+            },
+            "groupbirthday": {
+                "command_name": "วันเกิด",
+                "command_description": "กำหนดวันเกิดให้กับตัวละคร",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "พร็อกซี",
+                        "parameter_description": "ตัวละครที่จะกำหนดวันเกิดให้"
+                    },
+                    "variant": {
+                        "parameter_name": "ตัวแปร",
+                        "parameter_description": "ตัวแปรที่จะตั้งวันเกิดให้"
+                    },
+                    "birthday": {
+                        "parameter_name": "วันเกิด",
+                        "parameter_description": "วันเกิดตามค่าเริ่มต้น ไม่มี"
+                    }
+                }
+            },
+            "groupdescription": {
+                "command_name": "คำอธิบาย",
+                "command_description": "กำหนดคำอธิบายสำหรับตัวละคร",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "พร็อกซี",
+                        "parameter_description": "ตัวละครที่จะกำหนดคำอธิบาย"
+                    },
+                    "variant": {
+                        "parameter_name": "ตัวแปร",
+                        "parameter_description": "ตัวแปรที่จะตั้งค่าคำอธิบายสำหรับ"
+                    },
+                    "text": {
+                        "parameter_name": "ข้อความ",
+                        "parameter_description": "คำอธิบายสำหรับการตั้งค่าตัวละคร"
+                    }
+                }
+            },
+            "grouprename": {
+                "command_name": "เปลี่ยนชื่อ",
+                "command_description": "เปลี่ยนชื่อตัวละคร",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "พร็อกซี",
+                        "parameter_description": "ตัวละครที่จะเปลี่ยนชื่อ"
+                    },
+                    "variant": {
+                        "parameter_name": "ตัวแปร",
+                        "parameter_description": "ตัวแปรที่จะเปลี่ยนชื่อ"
+                    },
+                    "name": {
+                        "parameter_name": "ชื่อ",
+                        "parameter_description": "ชื่อใหม่สำหรับตัวละคร"
+                    }
+                }
+            },
+            "groupgroup": {
+                "command_name": "กลุ่ม",
+                "command_description": "กำหนดกลุ่มสำหรับตัวละคร",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "พร็อกซี",
+                        "parameter_description": "ตัวละครที่จะตั้งกลุ่มให้"
+                    },
+                    "variant": {
+                        "parameter_name": "ตัวแปร",
+                        "parameter_description": "ตัวแปรที่จะตั้งกลุ่มสำหรับ"
+                    },
+                    "group": {
+                        "parameter_name": "กลุ่ม",
+                        "parameter_description": "จัดกลุ่มตามค่าเริ่มต้น ไม่มี"
+                    }
+                }
+            },
+            "groupnsfw": {
+                "command_name": "ไม่",
+                "command_description": "ตั้งค่าว่าตัวละครจะเป็น NSFW หรือไม่",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "พร็อกซี",
+                        "parameter_description": "ตัวละครที่จะตั้งค่า NSFW สำหรับ"
+                    },
+                    "variant": {
+                        "parameter_name": "ตัวแปร",
+                        "parameter_description": "ตัวแปรที่จะตั้งค่า NSFW สำหรับ"
+                    },
+                    "nsfw": {
+                        "parameter_name": "ไม่",
+                        "parameter_description": "NSFW โดยค่าเริ่มต้นจะสลับเป็นค่าตรงกันข้าม"
+                    }
+                }
+            },
+            "groupauto": {
+                "command_name": "อัตโนมัติ",
+                "command_description": "ตั้งค่าอัตโนมัติสำหรับตัวละคร",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "พร็อกซี",
+                        "parameter_description": "ตัวละครโดยค่าเริ่มต้นจะปิดใช้งานอัตโนมัติ"
+                    },
+                    "variant": {
+                        "parameter_name": "ตัวแปร",
+                        "parameter_description": "ตัวแปรที่จะตั้งค่าอัตโนมัติสำหรับ"
+                    }
+                }
+            },
+            "groupavatar": {
+                "command_name": "สัญลักษณ์",
+                "command_description": "ตั้งค่าอวาตาร์ให้กับตัวละคร",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "พร็อกซี",
+                        "parameter_description": "ตัวละครที่จะกำหนดอวตารให้"
+                    },
+                    "variant": {
+                        "parameter_name": "ตัวแปร",
+                        "parameter_description": "ตัวแปรที่จะตั้งค่าอวตารให้"
+                    },
+                    "avatar": {
+                        "parameter_name": "สัญลักษณ์",
+                        "parameter_description": "URL รูปภาพตามค่าเริ่มต้น ไม่มี"
+                    }
+                }
+            },
+            "grouplist": {
+                "command_description": "List all variants."
+            },
+            "groupfind": {
+                "command_description": "Find a variant."
+            },
+            "groupupdate": {
+                "command_name": "อัปเดต",
+                "command_description": "อัปเดตพร็อกซี ",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "พร็อกซี",
+                        "parameter_description": "ตัวละครที่จะอัพเดต"
+                    },
+                    "image": {
+                        "parameter_name": "ภาพ",
+                        "parameter_description": "รูปภาพตามค่าเริ่มต้น ไม่มี"
+                    }
+                }
+            },
+            "groupdetail": {
+                "command_name": "รายละเอียด",
+                "command_description": "รับรายละเอียดของตัวละคร",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "พร็อกซี",
+                        "parameter_description": "รายละเอียดการมอบฉันทะ "
+                    },
+                    "variant": {
+                        "parameter_name": "ตัวแปร",
+                        "parameter_description": "แตกต่างกันออกไปในรายละเอียด"
+                    }
+                }
+            },
+            "groupprune": {
+                "command_name": "พรุน",
+                "command_description": "ตัดอักขระที่ไม่ได้ใช้มาระยะหนึ่งแล้ว",
+                "params": {
+                    "proxy": {
+                        "parameter_description": "พร็อกซี"
+                    },
+                    "time": {
+                        "parameter_description": "วันที่ที่จะตัดก่อน โดยค่าเริ่มต้น ไม่มี"
+                    }
+                }
+            },
+            "grouppurge": {
+                "command_name": "ล้าง",
+                "command_description": "ล้างข้อมูลทั้งหมดของคุณ (ยกเว้นบันทึกข้อความ)",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "พร็อกซี",
+                        "parameter_description": "พร็อกซี"
+                    },
+                    "confirmation": {
+                        "parameter_name": "การยืนยัน",
+                        "parameter_description": "การยืนยัน"
+                    }
+                }
+            }
+        },
+        "shared": {
+            "group_description": "Shared proxy commands.",
+            "groupset": {
+                "command_description": "Set a proxy as the current one."
+            },
+            "groupcreate": {
+                "command_name": "สร้าง",
+                "command_description": "สร้างตัวละครใหม่",
+                "params": {
+                    "image": {
+                        "parameter_name": "ภาพ",
+                        "parameter_description": "รูปภาพตามค่าเริ่มต้น ไม่มี"
+                    }
+                }
+            },
+            "groupdelete": {
+                "command_name": "ลบ",
+                "command_description": "ลบตัวละคร",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "พร็อกซี",
+                        "parameter_description": "พร็อกซีที่จะลบตัวแปรออก"
+                    }
+                }
+            },
+            "groupread": {
+                "command_name": "อ่าน",
+                "command_description": "อ่านตัวละคร",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "พร็อกซี",
+                        "parameter_description": "ตัวละครที่จะอ่านตัวแปรจาก"
+                    }
+                }
+            },
+            "groupauto": {
+                "command_name": "อัตโนมัติ",
+                "command_description": "ตั้งค่าอัตโนมัติสำหรับตัวละคร",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "พร็อกซี",
+                        "parameter_description": "ตัวละครโดยค่าเริ่มต้นจะปิดใช้งานอัตโนมัติ"
+                    }
+                }
+            },
+            "groupprefix": {
+                "command_name": "คำนำหน้า",
+                "command_description": "ตั้งค่าคำนำหน้าให้กับตัวละคร",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "พร็อกซี",
+                        "parameter_description": "ตัวละครที่จะตั้งค่าคำนำหน้า"
+                    },
+                    "prefixes": {
+                        "parameter_name": "คำนำหน้า",
+                        "parameter_description": "คำนำหน้าเช่น "
+                    }
+                }
+            },
+            "groupbirthday": {
+                "command_name": "วันเกิด",
+                "command_description": "กำหนดวันเกิดให้กับตัวละคร",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "พร็อกซี",
+                        "parameter_description": "ตัวละครที่จะกำหนดวันเกิดให้"
+                    },
+                    "birthday": {
+                        "parameter_name": "วันเกิด",
+                        "parameter_description": "วันเกิดตามค่าเริ่มต้น ไม่มี"
+                    }
+                }
+            },
+            "groupdescription": {
+                "command_name": "คำอธิบาย",
+                "command_description": "กำหนดคำอธิบายสำหรับตัวละคร",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "พร็อกซี",
+                        "parameter_description": "ตัวละครที่จะกำหนดคำอธิบาย"
+                    },
+                    "text": {
+                        "parameter_name": "ข้อความ",
+                        "parameter_description": "คำอธิบายสำหรับการตั้งค่าตัวละคร"
+                    }
+                }
+            },
+            "grouprename": {
+                "command_name": "เปลี่ยนชื่อ",
+                "command_description": "เปลี่ยนชื่อตัวละคร",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "พร็อกซี",
+                        "parameter_description": "ตัวละครที่จะเปลี่ยนชื่อ"
+                    },
+                    "name": {
+                        "parameter_name": "ชื่อ",
+                        "parameter_description": "ชื่อใหม่สำหรับตัวละคร"
+                    }
+                }
+            },
+            "groupnickname": {
+                "command_name": "ชื่อเล่น",
+                "command_description": "ตั้งชื่อเล่นให้กับตัวละคร",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "พร็อกซี",
+                        "parameter_description": "ตัวละครที่จะตั้งชื่อเล่นให้"
+                    },
+                    "nickname": {
+                        "parameter_name": "ชื่อเล่น",
+                        "parameter_description": "ชื่อเล่นที่จะตั้งให้ตัวละคร"
+                    }
+                }
+            },
+            "groupgroup": {
+                "command_name": "กลุ่ม",
+                "command_description": "กำหนดกลุ่มสำหรับตัวละคร",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "พร็อกซี",
+                        "parameter_description": "ตัวละครที่จะตั้งกลุ่มให้"
+                    },
+                    "group": {
+                        "parameter_name": "กลุ่ม",
+                        "parameter_description": "จัดกลุ่มตามค่าเริ่มต้น ไม่มี"
+                    }
+                }
+            },
+            "groupnsfw": {
+                "command_name": "ไม่",
+                "command_description": "ตั้งค่าว่าตัวละครจะเป็น NSFW หรือไม่",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "พร็อกซี",
+                        "parameter_description": "ตัวละครที่จะตั้งค่า NSFW สำหรับ"
+                    },
+                    "nsfw": {
+                        "parameter_name": "ไม่",
+                        "parameter_description": "NSFW โดยค่าเริ่มต้นจะสลับเป็นค่าตรงกันข้าม"
+                    }
+                }
+            },
+            "groupavatar": {
+                "command_name": "สัญลักษณ์",
+                "command_description": "ตั้งค่าอวาตาร์ให้กับตัวละคร",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "พร็อกซี",
+                        "parameter_description": "ตัวละครที่จะกำหนดอวตารให้"
+                    },
+                    "avatar": {
+                        "parameter_name": "สัญลักษณ์",
+                        "parameter_description": "URL รูปภาพตามค่าเริ่มต้น ไม่มี"
+                    }
+                }
+            },
+            "groupimage": {
+                "params": {
+                    "proxy": {
+                        "parameter_name": "พร็อกซี",
+                        "parameter_description": "ตัวละครที่จะกำหนดอวตารให้"
+                    },
+                    "avatar": {
+                        "parameter_name": "สัญลักษณ์",
+                        "parameter_description": "URL รูปภาพตามค่าเริ่มต้น ไม่มี"
+                    }
+                }
+            },
+            "grouplocal": {
+                "command_name": "ท้องถิ่น",
+                "command_description": "ตั้งค่าท้องถิ่นสำหรับตัวละคร",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "พร็อกซี",
+                        "parameter_description": "ตัวละครที่จะกำหนดท้องถิ่นสำหรับ"
+                    },
+                    "avatar": {
+                        "parameter_name": "ภาพ",
+                        "parameter_description": "รูปภาพตามค่าเริ่มต้น ไม่มี"
+                    },
+                    "nickname": {
+                        "parameter_name": "ชื่อเล่น",
+                        "parameter_description": "ชื่อเล่นตามค่าเริ่มต้น ไม่มี"
+                    }
+                }
+            },
+            "groupupdate": {
+                "command_name": "อัปเดต",
+                "command_description": "อัปเดตพร็อกซี ",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "พร็อกซี",
+                        "parameter_description": "ตัวละครที่จะอัพเดต"
+                    },
+                    "image": {
+                        "parameter_name": "ภาพ",
+                        "parameter_description": "รูปภาพตามค่าเริ่มต้น ไม่มี"
+                    }
+                }
+            },
+            "groupdetail": {
+                "command_name": "รายละเอียด",
+                "command_description": "รับรายละเอียดของตัวละคร",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "พร็อกซี",
+                        "parameter_description": "รายละเอียดการมอบฉันทะ "
+                    }
+                }
+            },
+            "groupprune": {
+                "command_name": "พรุน",
+                "command_description": "ตัดอักขระที่ไม่ได้ใช้มาระยะหนึ่งแล้ว",
+                "params": {
+                    "time": {
+                        "parameter_description": "วันที่ที่จะตัดก่อน โดยค่าเริ่มต้น ไม่มี"
+                    }
+                }
+            },
+            "grouppurge": {
+                "command_name": "ล้าง",
+                "command_description": "ล้างข้อมูลทั้งหมดของคุณ (ยกเว้นบันทึกข้อความ)",
+                "params": {
+                    "confirmation": {
+                        "parameter_name": "การยืนยัน",
+                        "parameter_description": "การยืนยัน"
+                    }
+                }
+            }
+        },
+        "check_permissions": {
+            "command_name": "ตรวจสอบ_perms",
+            "command_description": "ตรวจสอบว่าบอทสามารถทำงานได้ในช่องที่ให้ไว้หรือไม่"
+        },
+        "roll": {
+            "command_description": "Roll a dice."
+        },
+        "afk": {
+            "command_description": "Check if a user is AFK."
+        },
+        "help": {
+            "command_name": "ช่วย",
+            "command_description": "วิธีใช้บอทในตัว",
+            "params": {
+                "search": {
+                    "parameter_name": "ค้นหา",
+                    "parameter_description": "คำค้นหา"
+                }
+            }
+        },
+        "server_wiki": {
+            "command_name": "เซิร์ฟเวอร์_วิกิ",
+            "command_description": "วิกิเซิร์ฟเวอร์ที่ผู้ใช้กำหนด",
+            "params": {
+                "search": {
+                    "parameter_name": "ค้นหา",
+                    "parameter_description": "คำค้นหา"
+                }
+            }
+        },
+        "settings": {
+            "command_name": "การตั้งค่า",
+            "command_description": "การตั้งค่าบอท",
+            "params": {
+                "menu": {
+                    "parameter_name": "เมนู",
+                    "parameter_description": "เมนูสำหรับเปิดการตั้งค่า",
+                    "choices": {
+                        "Server": "เซิร์ฟเวอร์",
+                        "Member": "สมาชิก",
+                        "User": "ผู้ใช้"
+                    }
+                }
+            }
+        },
+        "context_menu": {
+            "command_name": "หนังสือมอบฉันทะ"
+        }
+    }
+}

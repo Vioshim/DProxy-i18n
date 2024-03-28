@@ -1,0 +1,963 @@
+{
+    "commands": {
+        "exec": {
+            "command_description": "Execute a command."
+        },
+        "proxy": {
+            "command_name": "opunomoćenik",
+            "command_description": "Onemogući znakove na poslužitelju",
+            "params": {
+                "enable": {
+                    "parameter_name": "omogućiti",
+                    "parameter_description": "Omogućite ili onemogućite znakove, prema zadanim postavkama"
+                }
+            }
+        },
+        "set": {
+            "command_description": "Set a proxy as the current one."
+        },
+        "use": {
+            "params": {
+                "text": {
+                    "parameter_name": "tekst",
+                    "parameter_description": "tekst"
+                }
+            }
+        },
+        "say": {
+            "params": {
+                "text": {
+                    "parameter_name": "tekst",
+                    "parameter_description": "tekst"
+                }
+            }
+        },
+        "npc": {
+            "command_name": "npc",
+            "command_description": "Napravite novu NPC poruku",
+            "params": {
+                "franchise": {
+                    "parameter_name": "franchise",
+                    "parameter_description": "Franšiza za korištenje",
+                    "choices": {
+                        "Pokemon": "Pokemon",
+                        "Pokemon Shiny": "Pokemon Shiny",
+                        "Trainer": "Trainer",
+                        "Digimon": "Digimon",
+                        "Palworld": "Palworld",
+                        "D&D": "D&D"
+                    }
+                },
+                "npc": {
+                    "parameter_name": "npc",
+                    "parameter_description": "NPC za korištenje"
+                },
+                "nickname": {
+                    "parameter_name": "nadimak",
+                    "parameter_description": "Nadimak, prema zadanim postavkama Ništa"
+                },
+                "emotion": {
+                    "parameter_name": "emocija",
+                    "parameter_description": "Emocija, prema zadanim postavkama Normalno",
+                    "choices": {
+                        "Normal": "Normal",
+                        "Happy": "Happy",
+                        "Pain": "Pain",
+                        "Angry": "Angry",
+                        "Worried": "Worried",
+                        "Sad": "Sad",
+                        "Crying": "Crying",
+                        "Shouting": "Shouting",
+                        "TearyEyed": "TearyEyed",
+                        "Determined": "Determined",
+                        "Joyous": "Joyous",
+                        "Inspired": "Inspired",
+                        "Surprised": "Surprised",
+                        "Dizzy": "Dizzy",
+                        "Sigh": "Sigh",
+                        "Stunned": "Stunned",
+                        "Special0": "Special0",
+                        "Special1": "Special1",
+                        "Special2": "Special2",
+                        "Special3": "Special3"
+                    }
+                },
+                "image": {
+                    "parameter_name": "slika",
+                    "parameter_description": "Slika, prema zadanim postavkama Ništa"
+                },
+                "text": {
+                    "parameter_name": "tekst",
+                    "parameter_description": "tekst"
+                }
+            }
+        },
+        "create": {
+            "command_description": "Create a new proxy.",
+            "params": {
+                "prefixes": {
+                    "parameter_description": "Prefixes e.g. A:text, |text|, etc."
+                }
+            }
+        },
+        "delete": {
+            "command_name": "izbrisati",
+            "command_description": "Brisanje znaka",
+            "params": {
+                "proxy": {
+                    "parameter_name": "opunomoćenik",
+                    "parameter_description": "Proxy iz kojeg želite izbrisati varijantu"
+                }
+            }
+        },
+        "read": {
+            "command_name": "čitati",
+            "command_description": "Pročitajte lik",
+            "params": {
+                "proxy": {
+                    "parameter_name": "opunomoćenik",
+                    "parameter_description": "Znak iz kojeg se čita varijanta"
+                }
+            }
+        },
+        "nickname": {
+            "command_name": "nadimak",
+            "command_description": "Postavite nadimak za lik",
+            "params": {
+                "proxy": {
+                    "parameter_name": "opunomoćenik",
+                    "parameter_description": "Znak za postavljanje nadimka"
+                },
+                "nickname": {
+                    "parameter_name": "nadimak",
+                    "parameter_description": "Nadimak koji treba postaviti za lik"
+                }
+            }
+        },
+        "local": {
+            "command_name": "lokalni",
+            "command_description": "Postavite lokalno za znak",
+            "params": {
+                "proxy": {
+                    "parameter_name": "opunomoćenik",
+                    "parameter_description": "Znak za koji se postavlja lokalno"
+                },
+                "avatar": {
+                    "parameter_name": "slika",
+                    "parameter_description": "Slika, prema zadanim postavkama Ništa"
+                },
+                "nickname": {
+                    "parameter_name": "nadimak",
+                    "parameter_description": "Nadimak, prema zadanim postavkama Ništa"
+                }
+            }
+        },
+        "avatar": {
+            "command_name": "avatar",
+            "command_description": "Postavite avatar za lik",
+            "params": {
+                "proxy": {
+                    "parameter_name": "opunomoćenik",
+                    "parameter_description": "Lik za postavljanje avatara"
+                },
+                "avatar": {
+                    "parameter_name": "avatar",
+                    "parameter_description": "URL slike, prema zadanim postavkama Ništa"
+                }
+            }
+        },
+        "prefix": {
+            "command_name": "prefiks",
+            "command_description": "Postavite prefikse za znak.",
+            "params": {
+                "proxy": {
+                    "parameter_name": "opunomoćenik",
+                    "parameter_description": "Znak za postavljanje prefiksa"
+                },
+                "prefixes": {
+                    "parameter_name": "prefiksi",
+                    "parameter_description": "Prefiksi npr. "
+                }
+            }
+        },
+        "birthday": {
+            "command_name": "rođendan",
+            "command_description": "Postavite rođendan za lik",
+            "params": {
+                "proxy": {
+                    "parameter_name": "opunomoćenik",
+                    "parameter_description": "Lik za postavljanje rođendana"
+                },
+                "birthday": {
+                    "parameter_name": "rođendan",
+                    "parameter_description": "Rođendan, prema zadanim postavkama Ništa"
+                }
+            }
+        },
+        "description": {
+            "command_name": "opis",
+            "command_description": "Postavite opis za lik",
+            "params": {
+                "proxy": {
+                    "parameter_name": "opunomoćenik",
+                    "parameter_description": "Znak za postavljanje opisa"
+                },
+                "text": {
+                    "parameter_name": "tekst",
+                    "parameter_description": "Opis za postavljanje lika"
+                }
+            }
+        },
+        "rename": {
+            "command_name": "preimenovati",
+            "command_description": "Promjena naziva lika",
+            "params": {
+                "proxy": {
+                    "parameter_name": "opunomoćenik",
+                    "parameter_description": "Znak za preimenovanje"
+                },
+                "name": {
+                    "parameter_name": "ime",
+                    "parameter_description": "Novo ime za lik"
+                }
+            }
+        },
+        "group": {
+            "command_name": "skupina",
+            "command_description": "Postavite grupu za lik",
+            "params": {
+                "proxy": {
+                    "parameter_name": "opunomoćenik",
+                    "parameter_description": "Znak za postavljanje grupe"
+                },
+                "group": {
+                    "parameter_name": "skupina",
+                    "parameter_description": "Grupa, prema zadanim postavkama Ništa"
+                }
+            }
+        },
+        "nsfw": {
+            "command_name": "nsfw",
+            "command_description": "Postavite je li lik NSFW",
+            "params": {
+                "proxy": {
+                    "parameter_name": "opunomoćenik",
+                    "parameter_description": "Znak za postavljanje NSFW-a"
+                },
+                "nsfw": {
+                    "parameter_name": "nsfw",
+                    "parameter_description": "NSFW, prema zadanim postavkama prelazi na suprotnu vrijednost"
+                }
+            }
+        },
+        "auto": {
+            "command_name": "auto",
+            "command_description": "Postavite auto za lik",
+            "params": {
+                "proxy": {
+                    "parameter_name": "opunomoćenik",
+                    "parameter_description": "Znak, prema zadanim postavkama onemogućuje auto"
+                }
+            }
+        },
+        "list": {
+            "command_name": "popis",
+            "command_description": "Navedite sve likove ",
+            "params": {
+                "group": {
+                    "parameter_name": "skupina",
+                    "parameter_description": "Grupirajte znakove iz kojih se ispisuje"
+                }
+            }
+        },
+        "latch": {
+            "command_name": "zasun",
+            "command_description": "Omogućite ili onemogućite način zaključavanja",
+            "params": {
+                "enable": {
+                    "parameter_description": "Omogućite ili onemogućite način zaključavanja"
+                },
+                "auto_remove": {
+                    "parameter_description": "Želite li zadržati automatski za trenutni kanal ili ne, prema zadanim postavkama True"
+                }
+            }
+        },
+        "export": {
+            "command_name": "izvoz",
+            "command_description": "Izvezite svoje likove u JSON datoteku",
+            "params": {
+                "format": {
+                    "parameter_name": "format",
+                    "parameter_description": "Format za izvoz, prema zadanim postavkama JSON"
+                },
+                "new_token": {
+                    "parameter_name": "novi_token",
+                    "parameter_description": "Ako želite generirati novi token"
+                }
+            }
+        },
+        "prune": {
+            "command_name": "obrezati",
+            "command_description": "Skrati znakove koji se ne koriste određeno vrijeme.",
+            "params": {
+                "time": {
+                    "parameter_description": "Datum za obrezivanje prije, prema zadanim postavkama Ništa"
+                }
+            }
+        },
+        "purge": {
+            "command_name": "čistiti",
+            "command_description": "Brisanje svih vaših podataka (osim zapisa poruka)",
+            "params": {
+                "confirmation": {
+                    "parameter_name": "potvrda",
+                    "parameter_description": "potvrda"
+                }
+            }
+        },
+        "proxy-to-variant": {
+            "command_name": "proxy-za-varijantu",
+            "command_description": "Pretvorite znak u varijantu",
+            "params": {
+                "original": {
+                    "parameter_name": "izvornik",
+                    "parameter_description": "Znak za pretvaranje"
+                },
+                "base": {
+                    "parameter_name": "baza",
+                    "parameter_description": "Nova baza za lik"
+                }
+            }
+        },
+        "variant-to-proxy": {
+            "command_name": "varijanta-to-proxy",
+            "command_description": "Pretvorite varijantu u znak",
+            "params": {
+                "proxy": {
+                    "parameter_name": "opunomoćenik",
+                    "parameter_description": "Proxy za pretvaranje"
+                },
+                "variant": {
+                    "parameter_name": "varijanta",
+                    "parameter_description": "Varijanta za pretvorbu"
+                }
+            }
+        },
+        "update": {
+            "command_name": "ažuriraj",
+            "command_description": "Ažurirajte proxy. ",
+            "params": {
+                "proxy": {
+                    "parameter_name": "opunomoćenik",
+                    "parameter_description": "Lik za ažuriranje"
+                },
+                "image": {
+                    "parameter_name": "slika",
+                    "parameter_description": "Slika, prema zadanim postavkama Ništa"
+                }
+            }
+        },
+        "detail": {
+            "command_name": "detalj",
+            "command_description": "Dobijte detalje o liku",
+            "params": {
+                "proxy": {
+                    "parameter_name": "opunomoćenik",
+                    "parameter_description": "Detaljno opunomoćenik. "
+                }
+            }
+        },
+        "import": {
+            "command_name": "uvoz",
+            "command_description": "Uvezite svoje likove iz datoteke ili tokena",
+            "params": {
+                "data": {
+                    "parameter_name": "podaci",
+                    "parameter_description": "Datoteka iz koje se uvozi"
+                },
+                "token": {
+                    "parameter_name": "znak",
+                    "parameter_description": "Token koji se koristi za uvoz"
+                },
+                "deleting_from_token": {
+                    "parameter_name": "brisanje_iz_tokena",
+                    "parameter_description": "Brisanje znakova iz tokena"
+                }
+            }
+        },
+        "var": {
+            "group_name": "var",
+            "group_description": "Variant commands.",
+            "groupset": {
+                "command_description": "Set a variant."
+            },
+            "groupuse": {
+                "command_description": "Use a variant."
+            },
+            "groupcreate": {
+                "command_name": "stvoriti",
+                "command_description": "Stvorite novi lik.",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "opunomoćenik",
+                        "parameter_description": " Proxy za izradu varijante"
+                    },
+                    "image": {
+                        "parameter_name": "slika",
+                        "parameter_description": "Slika, prema zadanim postavkama Ništa"
+                    },
+                    "prefixes": {
+                        "parameter_description": "Prefixes e.g. A:text, |text|, etc."
+                    }
+                }
+            },
+            "groupdelete": {
+                "command_name": "izbrisati",
+                "command_description": "Brisanje varijante lika",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "opunomoćenik",
+                        "parameter_description": "Proxy iz kojeg želite izbrisati varijantu"
+                    },
+                    "variant": {
+                        "parameter_name": "varijanta",
+                        "parameter_description": "Varijanta za brisanje"
+                    }
+                }
+            },
+            "groupread": {
+                "command_name": "čitati",
+                "command_description": "Pročitajte lik",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "opunomoćenik",
+                        "parameter_description": "Znak iz kojeg se čita varijanta"
+                    },
+                    "variant": {
+                        "parameter_name": "varijanta",
+                        "parameter_description": "Varijanta za čitanje"
+                    }
+                }
+            },
+            "groupnickname": {
+                "command_name": "nadimak",
+                "command_description": "Postavite nadimak za lik",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "opunomoćenik",
+                        "parameter_description": "Znak za postavljanje nadimka"
+                    },
+                    "variant": {
+                        "parameter_name": "varijanta",
+                        "parameter_description": "Varijanta za postavljanje nadimka"
+                    },
+                    "nickname": {
+                        "parameter_name": "nadimak",
+                        "parameter_description": "Nadimak koji treba postaviti za lik"
+                    }
+                }
+            },
+            "grouplocal": {
+                "command_name": "lokalni",
+                "command_description": "Postavite lokalno za znak",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "opunomoćenik",
+                        "parameter_description": "Znak za koji se postavlja lokalno"
+                    },
+                    "variant": {
+                        "parameter_name": "varijanta",
+                        "parameter_description": "Varijanta za postavljanje lokalnog"
+                    },
+                    "avatar": {
+                        "parameter_name": "slika",
+                        "parameter_description": "Slika, prema zadanim postavkama Ništa"
+                    },
+                    "nickname": {
+                        "parameter_name": "nadimak",
+                        "parameter_description": "Nadimak, prema zadanim postavkama Ništa"
+                    }
+                }
+            },
+            "groupprefix": {
+                "command_name": "prefiks",
+                "command_description": "Postavite prefikse za znak.",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "opunomoćenik",
+                        "parameter_description": "Znak za postavljanje prefiksa"
+                    },
+                    "variant": {
+                        "parameter_name": "varijanta",
+                        "parameter_description": "Varijanta za postavljanje prefiksa"
+                    },
+                    "prefixes": {
+                        "parameter_name": "prefiksi",
+                        "parameter_description": "Prefiksi npr. "
+                    }
+                }
+            },
+            "groupbirthday": {
+                "command_name": "rođendan",
+                "command_description": "Postavite rođendan za lik",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "opunomoćenik",
+                        "parameter_description": "Lik za postavljanje rođendana"
+                    },
+                    "variant": {
+                        "parameter_name": "varijanta",
+                        "parameter_description": "Varijanta za postavljanje rođendana"
+                    },
+                    "birthday": {
+                        "parameter_name": "rođendan",
+                        "parameter_description": "Rođendan, prema zadanim postavkama Ništa"
+                    }
+                }
+            },
+            "groupdescription": {
+                "command_name": "opis",
+                "command_description": "Postavite opis za lik",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "opunomoćenik",
+                        "parameter_description": "Znak za postavljanje opisa"
+                    },
+                    "variant": {
+                        "parameter_name": "varijanta",
+                        "parameter_description": "Varijanta za postavljanje opisa"
+                    },
+                    "text": {
+                        "parameter_name": "tekst",
+                        "parameter_description": "Opis za postavljanje lika"
+                    }
+                }
+            },
+            "grouprename": {
+                "command_name": "preimenovati",
+                "command_description": "Promjena naziva lika",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "opunomoćenik",
+                        "parameter_description": "Znak za preimenovanje"
+                    },
+                    "variant": {
+                        "parameter_name": "varijanta",
+                        "parameter_description": "Varijanta za preimenovanje"
+                    },
+                    "name": {
+                        "parameter_name": "ime",
+                        "parameter_description": "Novo ime za lik"
+                    }
+                }
+            },
+            "groupgroup": {
+                "command_name": "skupina",
+                "command_description": "Postavite grupu za lik",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "opunomoćenik",
+                        "parameter_description": "Znak za postavljanje grupe"
+                    },
+                    "variant": {
+                        "parameter_name": "varijanta",
+                        "parameter_description": "Varijanta za postavljanje grupe"
+                    },
+                    "group": {
+                        "parameter_name": "skupina",
+                        "parameter_description": "Grupa, prema zadanim postavkama Ništa"
+                    }
+                }
+            },
+            "groupnsfw": {
+                "command_name": "nsfw",
+                "command_description": "Postavite je li lik NSFW",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "opunomoćenik",
+                        "parameter_description": "Znak za postavljanje NSFW-a"
+                    },
+                    "variant": {
+                        "parameter_name": "varijanta",
+                        "parameter_description": "Varijanta za postavljanje NSFW-a"
+                    },
+                    "nsfw": {
+                        "parameter_name": "nsfw",
+                        "parameter_description": "NSFW, prema zadanim postavkama prelazi na suprotnu vrijednost"
+                    }
+                }
+            },
+            "groupauto": {
+                "command_name": "auto",
+                "command_description": "Postavite auto za lik",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "opunomoćenik",
+                        "parameter_description": "Znak, prema zadanim postavkama onemogućuje auto"
+                    },
+                    "variant": {
+                        "parameter_name": "varijanta",
+                        "parameter_description": "Varijanta za postavljanje auto"
+                    }
+                }
+            },
+            "groupavatar": {
+                "command_name": "avatar",
+                "command_description": "Postavite avatar za lik",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "opunomoćenik",
+                        "parameter_description": "Lik za postavljanje avatara"
+                    },
+                    "variant": {
+                        "parameter_name": "varijanta",
+                        "parameter_description": "Varijanta za postavljanje avatara"
+                    },
+                    "avatar": {
+                        "parameter_name": "avatar",
+                        "parameter_description": "URL slike, prema zadanim postavkama Ništa"
+                    }
+                }
+            },
+            "grouplist": {
+                "command_description": "List all variants."
+            },
+            "groupfind": {
+                "command_description": "Find a variant."
+            },
+            "groupupdate": {
+                "command_name": "ažuriraj",
+                "command_description": "Ažurirajte proxy. ",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "opunomoćenik",
+                        "parameter_description": "Lik za ažuriranje"
+                    },
+                    "image": {
+                        "parameter_name": "slika",
+                        "parameter_description": "Slika, prema zadanim postavkama Ništa"
+                    }
+                }
+            },
+            "groupdetail": {
+                "command_name": "detalj",
+                "command_description": "Dobijte detalje o liku",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "opunomoćenik",
+                        "parameter_description": "Detaljno opunomoćenik. "
+                    },
+                    "variant": {
+                        "parameter_name": "varijanta",
+                        "parameter_description": "Varijanta do detalja"
+                    }
+                }
+            },
+            "groupprune": {
+                "command_name": "obrezati",
+                "command_description": "Skrati znakove koji se ne koriste određeno vrijeme.",
+                "params": {
+                    "proxy": {
+                        "parameter_description": "opunomoćenik"
+                    },
+                    "time": {
+                        "parameter_description": "Datum za obrezivanje prije, prema zadanim postavkama Ništa"
+                    }
+                }
+            },
+            "grouppurge": {
+                "command_name": "čistiti",
+                "command_description": "Brisanje svih vaših podataka (osim zapisa poruka)",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "opunomoćenik",
+                        "parameter_description": "opunomoćenik"
+                    },
+                    "confirmation": {
+                        "parameter_name": "potvrda",
+                        "parameter_description": "potvrda"
+                    }
+                }
+            }
+        },
+        "shared": {
+            "group_description": "Shared proxy commands.",
+            "groupset": {
+                "command_description": "Set a proxy as the current one."
+            },
+            "groupcreate": {
+                "command_name": "stvoriti",
+                "command_description": "Stvorite novi lik.",
+                "params": {
+                    "image": {
+                        "parameter_name": "slika",
+                        "parameter_description": "Slika, prema zadanim postavkama Ništa"
+                    }
+                }
+            },
+            "groupdelete": {
+                "command_name": "izbrisati",
+                "command_description": "Brisanje znaka",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "opunomoćenik",
+                        "parameter_description": "Proxy iz kojeg želite izbrisati varijantu"
+                    }
+                }
+            },
+            "groupread": {
+                "command_name": "čitati",
+                "command_description": "Pročitajte lik",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "opunomoćenik",
+                        "parameter_description": "Znak iz kojeg se čita varijanta"
+                    }
+                }
+            },
+            "groupauto": {
+                "command_name": "auto",
+                "command_description": "Postavite auto za lik",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "opunomoćenik",
+                        "parameter_description": "Znak, prema zadanim postavkama onemogućuje auto"
+                    }
+                }
+            },
+            "groupprefix": {
+                "command_name": "prefiks",
+                "command_description": "Postavite prefikse za znak.",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "opunomoćenik",
+                        "parameter_description": "Znak za postavljanje prefiksa"
+                    },
+                    "prefixes": {
+                        "parameter_name": "prefiksi",
+                        "parameter_description": "Prefiksi npr. "
+                    }
+                }
+            },
+            "groupbirthday": {
+                "command_name": "rođendan",
+                "command_description": "Postavite rođendan za lik",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "opunomoćenik",
+                        "parameter_description": "Lik za postavljanje rođendana"
+                    },
+                    "birthday": {
+                        "parameter_name": "rođendan",
+                        "parameter_description": "Rođendan, prema zadanim postavkama Ništa"
+                    }
+                }
+            },
+            "groupdescription": {
+                "command_name": "opis",
+                "command_description": "Postavite opis za lik",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "opunomoćenik",
+                        "parameter_description": "Znak za postavljanje opisa"
+                    },
+                    "text": {
+                        "parameter_name": "tekst",
+                        "parameter_description": "Opis za postavljanje lika"
+                    }
+                }
+            },
+            "grouprename": {
+                "command_name": "preimenovati",
+                "command_description": "Promjena naziva lika",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "opunomoćenik",
+                        "parameter_description": "Znak za preimenovanje"
+                    },
+                    "name": {
+                        "parameter_name": "ime",
+                        "parameter_description": "Novo ime za lik"
+                    }
+                }
+            },
+            "groupnickname": {
+                "command_name": "nadimak",
+                "command_description": "Postavite nadimak za lik",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "opunomoćenik",
+                        "parameter_description": "Znak za postavljanje nadimka"
+                    },
+                    "nickname": {
+                        "parameter_name": "nadimak",
+                        "parameter_description": "Nadimak koji treba postaviti za lik"
+                    }
+                }
+            },
+            "groupgroup": {
+                "command_name": "skupina",
+                "command_description": "Postavite grupu za lik",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "opunomoćenik",
+                        "parameter_description": "Znak za postavljanje grupe"
+                    },
+                    "group": {
+                        "parameter_name": "skupina",
+                        "parameter_description": "Grupa, prema zadanim postavkama Ništa"
+                    }
+                }
+            },
+            "groupnsfw": {
+                "command_name": "nsfw",
+                "command_description": "Postavite je li lik NSFW",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "opunomoćenik",
+                        "parameter_description": "Znak za postavljanje NSFW-a"
+                    },
+                    "nsfw": {
+                        "parameter_name": "nsfw",
+                        "parameter_description": "NSFW, prema zadanim postavkama prelazi na suprotnu vrijednost"
+                    }
+                }
+            },
+            "groupavatar": {
+                "command_name": "avatar",
+                "command_description": "Postavite avatar za lik",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "opunomoćenik",
+                        "parameter_description": "Lik za postavljanje avatara"
+                    },
+                    "avatar": {
+                        "parameter_name": "avatar",
+                        "parameter_description": "URL slike, prema zadanim postavkama Ništa"
+                    }
+                }
+            },
+            "groupimage": {
+                "params": {
+                    "proxy": {
+                        "parameter_name": "opunomoćenik",
+                        "parameter_description": "Lik za postavljanje avatara"
+                    },
+                    "avatar": {
+                        "parameter_name": "avatar",
+                        "parameter_description": "URL slike, prema zadanim postavkama Ništa"
+                    }
+                }
+            },
+            "grouplocal": {
+                "command_name": "lokalni",
+                "command_description": "Postavite lokalno za znak",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "opunomoćenik",
+                        "parameter_description": "Znak za koji se postavlja lokalno"
+                    },
+                    "avatar": {
+                        "parameter_name": "slika",
+                        "parameter_description": "Slika, prema zadanim postavkama Ništa"
+                    },
+                    "nickname": {
+                        "parameter_name": "nadimak",
+                        "parameter_description": "Nadimak, prema zadanim postavkama Ništa"
+                    }
+                }
+            },
+            "groupupdate": {
+                "command_name": "ažuriraj",
+                "command_description": "Ažurirajte proxy. ",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "opunomoćenik",
+                        "parameter_description": "Lik za ažuriranje"
+                    },
+                    "image": {
+                        "parameter_name": "slika",
+                        "parameter_description": "Slika, prema zadanim postavkama Ništa"
+                    }
+                }
+            },
+            "groupdetail": {
+                "command_name": "detalj",
+                "command_description": "Dobijte detalje o liku",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "opunomoćenik",
+                        "parameter_description": "Detaljno opunomoćenik. "
+                    }
+                }
+            },
+            "groupprune": {
+                "command_name": "obrezati",
+                "command_description": "Skrati znakove koji se ne koriste određeno vrijeme.",
+                "params": {
+                    "time": {
+                        "parameter_description": "Datum za obrezivanje prije, prema zadanim postavkama Ništa"
+                    }
+                }
+            },
+            "grouppurge": {
+                "command_name": "čistiti",
+                "command_description": "Brisanje svih vaših podataka (osim zapisa poruka)",
+                "params": {
+                    "confirmation": {
+                        "parameter_name": "potvrda",
+                        "parameter_description": "potvrda"
+                    }
+                }
+            }
+        },
+        "check_permissions": {
+            "command_name": "provjerite_dozvole",
+            "command_description": "Provjerite može li bot raditi na navedenom kanalu"
+        },
+        "roll": {
+            "command_description": "Roll a dice."
+        },
+        "afk": {
+            "command_description": "Check if a user is AFK."
+        },
+        "help": {
+            "command_name": "pomozite",
+            "command_description": "Ugrađena pomoć za botove",
+            "params": {
+                "search": {
+                    "parameter_name": "traži",
+                    "parameter_description": "Pojam traženja"
+                }
+            }
+        },
+        "server_wiki": {
+            "command_name": "server_wiki",
+            "command_description": "Wiki poslužitelj definiran korisnikom",
+            "params": {
+                "search": {
+                    "parameter_name": "traži",
+                    "parameter_description": "Pojam traženja"
+                }
+            }
+        },
+        "settings": {
+            "command_name": "postavke",
+            "command_description": "Postavke bota",
+            "params": {
+                "menu": {
+                    "parameter_name": "jelovnik",
+                    "parameter_description": "Izbornik za otvaranje postavki",
+                    "choices": {
+                        "Server": "poslužitelj",
+                        "Member": "Član",
+                        "User": "Korisnik"
+                    }
+                }
+            }
+        },
+        "context_menu": {
+            "command_name": "Proxy"
+        }
+    }
+}

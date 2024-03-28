@@ -1,0 +1,963 @@
+{
+    "commands": {
+        "exec": {
+            "command_description": "Execute a command."
+        },
+        "proxy": {
+            "command_name": "proxy",
+            "command_description": "Deaktiver tegn på en server",
+            "params": {
+                "enable": {
+                    "parameter_name": "muliggjøre",
+                    "parameter_description": "Aktiver eller deaktiver tegn, som standardbrytere"
+                }
+            }
+        },
+        "set": {
+            "command_description": "Set a proxy as the current one."
+        },
+        "use": {
+            "params": {
+                "text": {
+                    "parameter_name": "tekst",
+                    "parameter_description": "tekst"
+                }
+            }
+        },
+        "say": {
+            "params": {
+                "text": {
+                    "parameter_name": "tekst",
+                    "parameter_description": "tekst"
+                }
+            }
+        },
+        "npc": {
+            "command_name": "npc",
+            "command_description": "Opprett en ny NPC-melding",
+            "params": {
+                "franchise": {
+                    "parameter_name": "franchise",
+                    "parameter_description": "Franchise å bruke",
+                    "choices": {
+                        "Pokemon": "Pokemon",
+                        "Pokemon Shiny": "Pokemon Shiny",
+                        "Trainer": "Trainer",
+                        "Digimon": "Digimon",
+                        "Palworld": "Palworld",
+                        "D&D": "D&D"
+                    }
+                },
+                "npc": {
+                    "parameter_name": "npc",
+                    "parameter_description": "NPC å bruke"
+                },
+                "nickname": {
+                    "parameter_name": "kallenavn",
+                    "parameter_description": "Kallenavn, som standard Ingen"
+                },
+                "emotion": {
+                    "parameter_name": "følelse",
+                    "parameter_description": "Følelser, som standard Normal",
+                    "choices": {
+                        "Normal": "Normal",
+                        "Happy": "Happy",
+                        "Pain": "Pain",
+                        "Angry": "Angry",
+                        "Worried": "Worried",
+                        "Sad": "Sad",
+                        "Crying": "Crying",
+                        "Shouting": "Shouting",
+                        "TearyEyed": "TearyEyed",
+                        "Determined": "Determined",
+                        "Joyous": "Joyous",
+                        "Inspired": "Inspired",
+                        "Surprised": "Surprised",
+                        "Dizzy": "Dizzy",
+                        "Sigh": "Sigh",
+                        "Stunned": "Stunned",
+                        "Special0": "Special0",
+                        "Special1": "Special1",
+                        "Special2": "Special2",
+                        "Special3": "Special3"
+                    }
+                },
+                "image": {
+                    "parameter_name": "bilde",
+                    "parameter_description": "Bilde, som standard Ingen"
+                },
+                "text": {
+                    "parameter_name": "tekst",
+                    "parameter_description": "tekst"
+                }
+            }
+        },
+        "create": {
+            "command_description": "Create a new proxy.",
+            "params": {
+                "prefixes": {
+                    "parameter_description": "Prefixes e.g. A:text, |text|, etc."
+                }
+            }
+        },
+        "delete": {
+            "command_name": "slette",
+            "command_description": "Slett et tegn",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Fullmakt for å slette varianten fra"
+                }
+            }
+        },
+        "read": {
+            "command_name": "lese",
+            "command_description": "Les en karakter",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Karakter å lese varianten fra"
+                }
+            }
+        },
+        "nickname": {
+            "command_name": "kallenavn",
+            "command_description": "Angi kallenavnet for en karakter",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Tegn å angi kallenavnet for"
+                },
+                "nickname": {
+                    "parameter_name": "kallenavn",
+                    "parameter_description": "Kallenavn som skal angis for karakteren"
+                }
+            }
+        },
+        "local": {
+            "command_name": "lokale",
+            "command_description": "Angi det lokale for en karakter",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Karakter å sette den lokale for"
+                },
+                "avatar": {
+                    "parameter_name": "bilde",
+                    "parameter_description": "Bilde, som standard Ingen"
+                },
+                "nickname": {
+                    "parameter_name": "kallenavn",
+                    "parameter_description": "Kallenavn, som standard Ingen"
+                }
+            }
+        },
+        "avatar": {
+            "command_name": "avatar",
+            "command_description": "Angi avataren for en karakter",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Karakter å angi avataren for"
+                },
+                "avatar": {
+                    "parameter_name": "avatar",
+                    "parameter_description": "Bilde-URL, som standard Ingen"
+                }
+            }
+        },
+        "prefix": {
+            "command_name": "prefiks",
+            "command_description": "Angi prefikser for et tegn.",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Tegn å angi prefikset for"
+                },
+                "prefixes": {
+                    "parameter_name": "prefikser",
+                    "parameter_description": "Prefikser f.eks. "
+                }
+            }
+        },
+        "birthday": {
+            "command_name": "fødselsdag",
+            "command_description": "Angi fødselsdagen for en karakter",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Karakter å sette bursdagen til"
+                },
+                "birthday": {
+                    "parameter_name": "fødselsdag",
+                    "parameter_description": "Bursdag, som standard Ingen"
+                }
+            }
+        },
+        "description": {
+            "command_name": "beskrivelse",
+            "command_description": "Angi beskrivelsen for en karakter",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Tegn å angi beskrivelsen for"
+                },
+                "text": {
+                    "parameter_name": "tekst",
+                    "parameter_description": "Beskrivelse som skal angis for tegnet"
+                }
+            }
+        },
+        "rename": {
+            "command_name": "endre_navn",
+            "command_description": "Gi nytt navn til en karakter",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Tegn å gi nytt navn"
+                },
+                "name": {
+                    "parameter_name": "navn",
+                    "parameter_description": "Nytt navn på karakteren"
+                }
+            }
+        },
+        "group": {
+            "command_name": "gruppe",
+            "command_description": "Still inn gruppen for en karakter",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Karakter å sette gruppen for"
+                },
+                "group": {
+                    "parameter_name": "gruppe",
+                    "parameter_description": "Gruppe, som standard Ingen"
+                }
+            }
+        },
+        "nsfw": {
+            "command_name": "nsfw",
+            "command_description": "Angi om et tegn er NSFW",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Tegn å angi NSFW for"
+                },
+                "nsfw": {
+                    "parameter_name": "nsfw",
+                    "parameter_description": "NSFW, bytter som standard til motsatt verdi"
+                }
+            }
+        },
+        "auto": {
+            "command_name": "auto",
+            "command_description": "Still inn auto for et tegn",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Tegn, deaktiverer automatisk automatisk"
+                }
+            }
+        },
+        "list": {
+            "command_name": "liste",
+            "command_description": "List opp alle karakterene ",
+            "params": {
+                "group": {
+                    "parameter_name": "gruppe",
+                    "parameter_description": "Gruppe å liste tegn fra"
+                }
+            }
+        },
+        "latch": {
+            "command_name": "klinke",
+            "command_description": "Aktiver eller deaktiver låsemodus",
+            "params": {
+                "enable": {
+                    "parameter_description": "Aktiver eller deaktiver låsemodus"
+                },
+                "auto_remove": {
+                    "parameter_description": "Om du vil beholde auto for gjeldende kanal eller ikke, som standard True"
+                }
+            }
+        },
+        "export": {
+            "command_name": "eksport",
+            "command_description": "Eksporter karakterene dine til en JSON-fil",
+            "params": {
+                "format": {
+                    "parameter_name": "format",
+                    "parameter_description": "Format som skal eksporteres til, som standard JSON"
+                },
+                "new_token": {
+                    "parameter_name": "new_token",
+                    "parameter_description": "Hvis du vil generere et nytt token"
+                }
+            }
+        },
+        "prune": {
+            "command_name": "sviske",
+            "command_description": "Beskjær tegn ubrukt i en viss tid.",
+            "params": {
+                "time": {
+                    "parameter_description": "Dato å beskjære før, som standard Ingen"
+                }
+            }
+        },
+        "purge": {
+            "command_name": "rense",
+            "command_description": "Tøm alle dataene dine (unntatt meldingslogger)",
+            "params": {
+                "confirmation": {
+                    "parameter_name": "bekreftelse",
+                    "parameter_description": "bekreftelse"
+                }
+            }
+        },
+        "proxy-to-variant": {
+            "command_name": "proxy-til-variant",
+            "command_description": "Konverter et tegn til en variant",
+            "params": {
+                "original": {
+                    "parameter_name": "opprinnelig",
+                    "parameter_description": "Tegn å konvertere"
+                },
+                "base": {
+                    "parameter_name": "utgangspunkt",
+                    "parameter_description": "Ny base for karakteren"
+                }
+            }
+        },
+        "variant-to-proxy": {
+            "command_name": "variant-til-fullmektig",
+            "command_description": "Konverter en variant til en karakter",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Proxy å konvertere til"
+                },
+                "variant": {
+                    "parameter_name": "variant",
+                    "parameter_description": "Variant å konvertere"
+                }
+            }
+        },
+        "update": {
+            "command_name": "oppdater",
+            "command_description": "Oppdater en proxy. ",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Karakter å oppdatere"
+                },
+                "image": {
+                    "parameter_name": "bilde",
+                    "parameter_description": "Bilde, som standard Ingen"
+                }
+            }
+        },
+        "detail": {
+            "command_name": "detalj",
+            "command_description": "Få detaljer om en karakter",
+            "params": {
+                "proxy": {
+                    "parameter_name": "proxy",
+                    "parameter_description": "Detaljer en proxy. "
+                }
+            }
+        },
+        "import": {
+            "command_name": "import",
+            "command_description": "Importer tegnene dine fra en fil eller token",
+            "params": {
+                "data": {
+                    "parameter_name": "data",
+                    "parameter_description": "Fil å importere fra"
+                },
+                "token": {
+                    "parameter_name": "token",
+                    "parameter_description": "Token som skal brukes til import"
+                },
+                "deleting_from_token": {
+                    "parameter_name": "sletting_fra_token",
+                    "parameter_description": "Slett tegn fra tokenet"
+                }
+            }
+        },
+        "var": {
+            "group_name": "var",
+            "group_description": "Variant commands.",
+            "groupset": {
+                "command_description": "Set a variant."
+            },
+            "groupuse": {
+                "command_description": "Use a variant."
+            },
+            "groupcreate": {
+                "command_name": "skape",
+                "command_description": "Lag en ny karakter.",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": " Proxy for å lage varianten for"
+                    },
+                    "image": {
+                        "parameter_name": "bilde",
+                        "parameter_description": "Bilde, som standard Ingen"
+                    },
+                    "prefixes": {
+                        "parameter_description": "Prefixes e.g. A:text, |text|, etc."
+                    }
+                }
+            },
+            "groupdelete": {
+                "command_name": "slette",
+                "command_description": "Slett en karakters variant",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Fullmakt for å slette varianten fra"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Variant å slette"
+                    }
+                }
+            },
+            "groupread": {
+                "command_name": "lese",
+                "command_description": "Les en karakter",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Karakter å lese varianten fra"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Variant å lese"
+                    }
+                }
+            },
+            "groupnickname": {
+                "command_name": "kallenavn",
+                "command_description": "Angi kallenavnet for en karakter",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Tegn å angi kallenavnet for"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Variant å angi kallenavnet for"
+                    },
+                    "nickname": {
+                        "parameter_name": "kallenavn",
+                        "parameter_description": "Kallenavn som skal angis for karakteren"
+                    }
+                }
+            },
+            "grouplocal": {
+                "command_name": "lokale",
+                "command_description": "Angi det lokale for en karakter",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Karakter å sette den lokale for"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Variant å sette det lokale for"
+                    },
+                    "avatar": {
+                        "parameter_name": "bilde",
+                        "parameter_description": "Bilde, som standard Ingen"
+                    },
+                    "nickname": {
+                        "parameter_name": "kallenavn",
+                        "parameter_description": "Kallenavn, som standard Ingen"
+                    }
+                }
+            },
+            "groupprefix": {
+                "command_name": "prefiks",
+                "command_description": "Angi prefikser for et tegn.",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Tegn å angi prefikset for"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Variant å angi prefikset for"
+                    },
+                    "prefixes": {
+                        "parameter_name": "prefikser",
+                        "parameter_description": "Prefikser f.eks. "
+                    }
+                }
+            },
+            "groupbirthday": {
+                "command_name": "fødselsdag",
+                "command_description": "Angi fødselsdagen for en karakter",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Karakter å sette bursdagen til"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Variant for å angi fødselsdagen for"
+                    },
+                    "birthday": {
+                        "parameter_name": "fødselsdag",
+                        "parameter_description": "Bursdag, som standard Ingen"
+                    }
+                }
+            },
+            "groupdescription": {
+                "command_name": "beskrivelse",
+                "command_description": "Angi beskrivelsen for en karakter",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Tegn å angi beskrivelsen for"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Variant å angi beskrivelsen for"
+                    },
+                    "text": {
+                        "parameter_name": "tekst",
+                        "parameter_description": "Beskrivelse som skal angis for tegnet"
+                    }
+                }
+            },
+            "grouprename": {
+                "command_name": "endre_navn",
+                "command_description": "Gi nytt navn til en karakter",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Tegn å gi nytt navn"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Variant å gi nytt navn"
+                    },
+                    "name": {
+                        "parameter_name": "navn",
+                        "parameter_description": "Nytt navn på karakteren"
+                    }
+                }
+            },
+            "groupgroup": {
+                "command_name": "gruppe",
+                "command_description": "Still inn gruppen for en karakter",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Karakter å sette gruppen for"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Variant å sette gruppen for"
+                    },
+                    "group": {
+                        "parameter_name": "gruppe",
+                        "parameter_description": "Gruppe, som standard Ingen"
+                    }
+                }
+            },
+            "groupnsfw": {
+                "command_name": "nsfw",
+                "command_description": "Angi om et tegn er NSFW",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Tegn å angi NSFW for"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Variant å sette NSFW for"
+                    },
+                    "nsfw": {
+                        "parameter_name": "nsfw",
+                        "parameter_description": "NSFW, bytter som standard til motsatt verdi"
+                    }
+                }
+            },
+            "groupauto": {
+                "command_name": "auto",
+                "command_description": "Still inn auto for et tegn",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Tegn, deaktiverer automatisk automatisk"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Variant å stille inn auto for"
+                    }
+                }
+            },
+            "groupavatar": {
+                "command_name": "avatar",
+                "command_description": "Angi avataren for en karakter",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Karakter å angi avataren for"
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Variant å angi avataren for"
+                    },
+                    "avatar": {
+                        "parameter_name": "avatar",
+                        "parameter_description": "Bilde-URL, som standard Ingen"
+                    }
+                }
+            },
+            "grouplist": {
+                "command_description": "List all variants."
+            },
+            "groupfind": {
+                "command_description": "Find a variant."
+            },
+            "groupupdate": {
+                "command_name": "oppdater",
+                "command_description": "Oppdater en proxy. ",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Karakter å oppdatere"
+                    },
+                    "image": {
+                        "parameter_name": "bilde",
+                        "parameter_description": "Bilde, som standard Ingen"
+                    }
+                }
+            },
+            "groupdetail": {
+                "command_name": "detalj",
+                "command_description": "Få detaljer om en karakter",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Detaljer en proxy. "
+                    },
+                    "variant": {
+                        "parameter_name": "variant",
+                        "parameter_description": "Variant til detalj"
+                    }
+                }
+            },
+            "groupprune": {
+                "command_name": "sviske",
+                "command_description": "Beskjær tegn ubrukt i en viss tid.",
+                "params": {
+                    "proxy": {
+                        "parameter_description": "proxy"
+                    },
+                    "time": {
+                        "parameter_description": "Dato å beskjære før, som standard Ingen"
+                    }
+                }
+            },
+            "grouppurge": {
+                "command_name": "rense",
+                "command_description": "Tøm alle dataene dine (unntatt meldingslogger)",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "proxy"
+                    },
+                    "confirmation": {
+                        "parameter_name": "bekreftelse",
+                        "parameter_description": "bekreftelse"
+                    }
+                }
+            }
+        },
+        "shared": {
+            "group_description": "Shared proxy commands.",
+            "groupset": {
+                "command_description": "Set a proxy as the current one."
+            },
+            "groupcreate": {
+                "command_name": "skape",
+                "command_description": "Lag en ny karakter.",
+                "params": {
+                    "image": {
+                        "parameter_name": "bilde",
+                        "parameter_description": "Bilde, som standard Ingen"
+                    }
+                }
+            },
+            "groupdelete": {
+                "command_name": "slette",
+                "command_description": "Slett et tegn",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Fullmakt for å slette varianten fra"
+                    }
+                }
+            },
+            "groupread": {
+                "command_name": "lese",
+                "command_description": "Les en karakter",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Karakter å lese varianten fra"
+                    }
+                }
+            },
+            "groupauto": {
+                "command_name": "auto",
+                "command_description": "Still inn auto for et tegn",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Tegn, deaktiverer automatisk automatisk"
+                    }
+                }
+            },
+            "groupprefix": {
+                "command_name": "prefiks",
+                "command_description": "Angi prefikser for et tegn.",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Tegn å angi prefikset for"
+                    },
+                    "prefixes": {
+                        "parameter_name": "prefikser",
+                        "parameter_description": "Prefikser f.eks. "
+                    }
+                }
+            },
+            "groupbirthday": {
+                "command_name": "fødselsdag",
+                "command_description": "Angi fødselsdagen for en karakter",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Karakter å sette bursdagen til"
+                    },
+                    "birthday": {
+                        "parameter_name": "fødselsdag",
+                        "parameter_description": "Bursdag, som standard Ingen"
+                    }
+                }
+            },
+            "groupdescription": {
+                "command_name": "beskrivelse",
+                "command_description": "Angi beskrivelsen for en karakter",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Tegn å angi beskrivelsen for"
+                    },
+                    "text": {
+                        "parameter_name": "tekst",
+                        "parameter_description": "Beskrivelse som skal angis for tegnet"
+                    }
+                }
+            },
+            "grouprename": {
+                "command_name": "endre_navn",
+                "command_description": "Gi nytt navn til en karakter",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Tegn å gi nytt navn"
+                    },
+                    "name": {
+                        "parameter_name": "navn",
+                        "parameter_description": "Nytt navn på karakteren"
+                    }
+                }
+            },
+            "groupnickname": {
+                "command_name": "kallenavn",
+                "command_description": "Angi kallenavnet for en karakter",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Tegn å angi kallenavnet for"
+                    },
+                    "nickname": {
+                        "parameter_name": "kallenavn",
+                        "parameter_description": "Kallenavn som skal angis for karakteren"
+                    }
+                }
+            },
+            "groupgroup": {
+                "command_name": "gruppe",
+                "command_description": "Still inn gruppen for en karakter",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Karakter å sette gruppen for"
+                    },
+                    "group": {
+                        "parameter_name": "gruppe",
+                        "parameter_description": "Gruppe, som standard Ingen"
+                    }
+                }
+            },
+            "groupnsfw": {
+                "command_name": "nsfw",
+                "command_description": "Angi om et tegn er NSFW",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Tegn å angi NSFW for"
+                    },
+                    "nsfw": {
+                        "parameter_name": "nsfw",
+                        "parameter_description": "NSFW, bytter som standard til motsatt verdi"
+                    }
+                }
+            },
+            "groupavatar": {
+                "command_name": "avatar",
+                "command_description": "Angi avataren for en karakter",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Karakter å angi avataren for"
+                    },
+                    "avatar": {
+                        "parameter_name": "avatar",
+                        "parameter_description": "Bilde-URL, som standard Ingen"
+                    }
+                }
+            },
+            "groupimage": {
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Karakter å angi avataren for"
+                    },
+                    "avatar": {
+                        "parameter_name": "avatar",
+                        "parameter_description": "Bilde-URL, som standard Ingen"
+                    }
+                }
+            },
+            "grouplocal": {
+                "command_name": "lokale",
+                "command_description": "Angi det lokale for en karakter",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Karakter å sette den lokale for"
+                    },
+                    "avatar": {
+                        "parameter_name": "bilde",
+                        "parameter_description": "Bilde, som standard Ingen"
+                    },
+                    "nickname": {
+                        "parameter_name": "kallenavn",
+                        "parameter_description": "Kallenavn, som standard Ingen"
+                    }
+                }
+            },
+            "groupupdate": {
+                "command_name": "oppdater",
+                "command_description": "Oppdater en proxy. ",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Karakter å oppdatere"
+                    },
+                    "image": {
+                        "parameter_name": "bilde",
+                        "parameter_description": "Bilde, som standard Ingen"
+                    }
+                }
+            },
+            "groupdetail": {
+                "command_name": "detalj",
+                "command_description": "Få detaljer om en karakter",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "proxy",
+                        "parameter_description": "Detaljer en proxy. "
+                    }
+                }
+            },
+            "groupprune": {
+                "command_name": "sviske",
+                "command_description": "Beskjær tegn ubrukt i en viss tid.",
+                "params": {
+                    "time": {
+                        "parameter_description": "Dato å beskjære før, som standard Ingen"
+                    }
+                }
+            },
+            "grouppurge": {
+                "command_name": "rense",
+                "command_description": "Tøm alle dataene dine (unntatt meldingslogger)",
+                "params": {
+                    "confirmation": {
+                        "parameter_name": "bekreftelse",
+                        "parameter_description": "bekreftelse"
+                    }
+                }
+            }
+        },
+        "check_permissions": {
+            "command_name": "check_perms",
+            "command_description": "Sjekk om bot kan operere i den angitte kanalen"
+        },
+        "roll": {
+            "command_description": "Roll a dice."
+        },
+        "afk": {
+            "command_description": "Check if a user is AFK."
+        },
+        "help": {
+            "command_name": "hjelp",
+            "command_description": "Innebygd bot-hjelp",
+            "params": {
+                "search": {
+                    "parameter_name": "søk",
+                    "parameter_description": "Oppslagsterm"
+                }
+            }
+        },
+        "server_wiki": {
+            "command_name": "server_wiki",
+            "command_description": "Brukerdefinert server-wiki",
+            "params": {
+                "search": {
+                    "parameter_name": "søk",
+                    "parameter_description": "Oppslagsterm"
+                }
+            }
+        },
+        "settings": {
+            "command_name": "innstillinger",
+            "command_description": "Bot-innstillinger",
+            "params": {
+                "menu": {
+                    "parameter_name": "meny",
+                    "parameter_description": "Meny for å åpne for innstillinger",
+                    "choices": {
+                        "Server": "Server",
+                        "Member": "Medlem",
+                        "User": "Bruker"
+                    }
+                }
+            }
+        },
+        "context_menu": {
+            "command_name": "Fullmakt"
+        }
+    }
+}

@@ -1,0 +1,963 @@
+{
+    "commands": {
+        "exec": {
+            "command_description": "Execute a command."
+        },
+        "proxy": {
+            "command_name": "대리",
+            "command_description": "서버에서 캐릭터 비활성화",
+            "params": {
+                "enable": {
+                    "parameter_name": "enable",
+                    "parameter_description": "기본 스위치로 문자 활성화 또는 비활성화"
+                }
+            }
+        },
+        "set": {
+            "command_description": "Set a proxy as the current one."
+        },
+        "use": {
+            "params": {
+                "text": {
+                    "parameter_name": "텍스트",
+                    "parameter_description": "텍스트"
+                }
+            }
+        },
+        "say": {
+            "params": {
+                "text": {
+                    "parameter_name": "텍스트",
+                    "parameter_description": "텍스트"
+                }
+            }
+        },
+        "npc": {
+            "command_name": "npc",
+            "command_description": "새 NPC 메시지 만들기",
+            "params": {
+                "franchise": {
+                    "parameter_name": "franchise",
+                    "parameter_description": "사용할 프랜차이즈",
+                    "choices": {
+                        "Pokemon": "Pokemon",
+                        "Pokemon Shiny": "Pokemon Shiny",
+                        "Trainer": "Trainer",
+                        "Digimon": "Digimon",
+                        "Palworld": "Palworld",
+                        "D&D": "D&D"
+                    }
+                },
+                "npc": {
+                    "parameter_name": "npc",
+                    "parameter_description": "사용할 NPC"
+                },
+                "nickname": {
+                    "parameter_name": "별명",
+                    "parameter_description": "닉네임(기본적으로 없음)"
+                },
+                "emotion": {
+                    "parameter_name": "감정",
+                    "parameter_description": "감정, 기본적으로 보통",
+                    "choices": {
+                        "Normal": "Normal",
+                        "Happy": "Happy",
+                        "Pain": "Pain",
+                        "Angry": "Angry",
+                        "Worried": "Worried",
+                        "Sad": "Sad",
+                        "Crying": "Crying",
+                        "Shouting": "Shouting",
+                        "TearyEyed": "TearyEyed",
+                        "Determined": "Determined",
+                        "Joyous": "Joyous",
+                        "Inspired": "Inspired",
+                        "Surprised": "Surprised",
+                        "Dizzy": "Dizzy",
+                        "Sigh": "Sigh",
+                        "Stunned": "Stunned",
+                        "Special0": "Special0",
+                        "Special1": "Special1",
+                        "Special2": "Special2",
+                        "Special3": "Special3"
+                    }
+                },
+                "image": {
+                    "parameter_name": "영상",
+                    "parameter_description": "이미지(기본적으로 없음)"
+                },
+                "text": {
+                    "parameter_name": "텍스트",
+                    "parameter_description": "텍스트"
+                }
+            }
+        },
+        "create": {
+            "command_description": "Create a new proxy.",
+            "params": {
+                "prefixes": {
+                    "parameter_description": "Prefixes e.g. A:text, |text|, etc."
+                }
+            }
+        },
+        "delete": {
+            "command_name": "삭제",
+            "command_description": "캐릭터 삭제",
+            "params": {
+                "proxy": {
+                    "parameter_name": "대리",
+                    "parameter_description": "변형을 삭제할 프록시"
+                }
+            }
+        },
+        "read": {
+            "command_name": "읽다",
+            "command_description": "문자 읽기",
+            "params": {
+                "proxy": {
+                    "parameter_name": "대리",
+                    "parameter_description": "변형을 읽을 문자"
+                }
+            }
+        },
+        "nickname": {
+            "command_name": "별명",
+            "command_description": "캐릭터의 닉네임을 설정하세요",
+            "params": {
+                "proxy": {
+                    "parameter_name": "대리",
+                    "parameter_description": "닉네임을 설정할 캐릭터"
+                },
+                "nickname": {
+                    "parameter_name": "별명",
+                    "parameter_description": "캐릭터에 설정할 닉네임"
+                }
+            }
+        },
+        "local": {
+            "command_name": "현지의",
+            "command_description": "캐릭터의 로컬 설정",
+            "params": {
+                "proxy": {
+                    "parameter_name": "대리",
+                    "parameter_description": "로컬을 설정할 문자"
+                },
+                "avatar": {
+                    "parameter_name": "영상",
+                    "parameter_description": "이미지(기본적으로 없음)"
+                },
+                "nickname": {
+                    "parameter_name": "별명",
+                    "parameter_description": "닉네임(기본적으로 없음)"
+                }
+            }
+        },
+        "avatar": {
+            "command_name": "화신",
+            "command_description": "캐릭터의 아바타 설정",
+            "params": {
+                "proxy": {
+                    "parameter_name": "대리",
+                    "parameter_description": "아바타를 설정할 캐릭터"
+                },
+                "avatar": {
+                    "parameter_name": "화신",
+                    "parameter_description": "이미지 URL(기본적으로 없음)"
+                }
+            }
+        },
+        "prefix": {
+            "command_name": "접두사",
+            "command_description": "문자의 접두사를 설정합니다.",
+            "params": {
+                "proxy": {
+                    "parameter_name": "대리",
+                    "parameter_description": "접두사를 설정할 문자"
+                },
+                "prefixes": {
+                    "parameter_name": "접두사",
+                    "parameter_description": "접두사(예: "
+                }
+            }
+        },
+        "birthday": {
+            "command_name": "생일",
+            "command_description": "캐릭터의 생일을 설정하세요",
+            "params": {
+                "proxy": {
+                    "parameter_name": "대리",
+                    "parameter_description": "생일을 설정할 캐릭터"
+                },
+                "birthday": {
+                    "parameter_name": "생일",
+                    "parameter_description": "생일(기본적으로 없음)"
+                }
+            }
+        },
+        "description": {
+            "command_name": "설명",
+            "command_description": "캐릭터에 대한 설명 설정",
+            "params": {
+                "proxy": {
+                    "parameter_name": "대리",
+                    "parameter_description": "설명을 설정할 문자"
+                },
+                "text": {
+                    "parameter_name": "텍스트",
+                    "parameter_description": "캐릭터에 설정할 설명"
+                }
+            }
+        },
+        "rename": {
+            "command_name": "이름_바꾸기",
+            "command_description": "캐릭터 이름 바꾸기",
+            "params": {
+                "proxy": {
+                    "parameter_name": "대리",
+                    "parameter_description": "이름을 바꿀 캐릭터"
+                },
+                "name": {
+                    "parameter_name": "이름",
+                    "parameter_description": "캐릭터의 새 이름"
+                }
+            }
+        },
+        "group": {
+            "command_name": "그룹",
+            "command_description": "캐릭터 그룹 설정",
+            "params": {
+                "proxy": {
+                    "parameter_name": "대리",
+                    "parameter_description": "그룹을 설정할 캐릭터"
+                },
+                "group": {
+                    "parameter_name": "그룹",
+                    "parameter_description": "그룹(기본적으로 없음)"
+                }
+            }
+        },
+        "nsfw": {
+            "command_name": "nsfw",
+            "command_description": "캐릭터가 NSFW인지 여부 설정",
+            "params": {
+                "proxy": {
+                    "parameter_name": "대리",
+                    "parameter_description": "NSFW를 설정할 문자"
+                },
+                "nsfw": {
+                    "parameter_name": "nsfw",
+                    "parameter_description": "NSFW, 기본적으로 반대 값으로 전환"
+                }
+            }
+        },
+        "auto": {
+            "command_name": "자동",
+            "command_description": "캐릭터의 자동 설정",
+            "params": {
+                "proxy": {
+                    "parameter_name": "대리",
+                    "parameter_description": "캐릭터는 기본적으로 자동을 비활성화합니다."
+                }
+            }
+        },
+        "list": {
+            "command_name": "목록",
+            "command_description": "모든 문자 나열 ",
+            "params": {
+                "group": {
+                    "parameter_name": "그룹",
+                    "parameter_description": "문자를 나열할 그룹"
+                }
+            }
+        },
+        "latch": {
+            "command_name": "걸쇠",
+            "command_description": "래치 모드 활성화 또는 비활성화",
+            "params": {
+                "enable": {
+                    "parameter_description": "래치 모드 활성화 또는 비활성화"
+                },
+                "auto_remove": {
+                    "parameter_description": "현재 채널의 자동 유지 여부, 기본적으로 True"
+                }
+            }
+        },
+        "export": {
+            "command_name": "내보내다",
+            "command_description": "캐릭터를 JSON 파일로 내보내기",
+            "params": {
+                "format": {
+                    "parameter_name": "체재",
+                    "parameter_description": "내보낼 형식(기본적으로 JSON)"
+                },
+                "new_token": {
+                    "parameter_name": "new_token",
+                    "parameter_description": "새로운 토큰을 생성하고 싶다면"
+                }
+            }
+        },
+        "prune": {
+            "command_name": "치다",
+            "command_description": "일정 기간 동안 사용하지 않은 문자를 정리합니다.",
+            "params": {
+                "time": {
+                    "parameter_description": "이전에 정리할 날짜(기본적으로 없음)"
+                }
+            }
+        },
+        "purge": {
+            "command_name": "숙청",
+            "command_description": "모든 데이터 삭제(메시지 로그 제외)",
+            "params": {
+                "confirmation": {
+                    "parameter_name": "확인",
+                    "parameter_description": "확인"
+                }
+            }
+        },
+        "proxy-to-variant": {
+            "command_name": "프록시-대-변형",
+            "command_description": "문자를 변형으로 변환",
+            "params": {
+                "original": {
+                    "parameter_name": "원래의",
+                    "parameter_description": "변환할 문자"
+                },
+                "base": {
+                    "parameter_name": "베이스",
+                    "parameter_description": "캐릭터의 새로운 기반"
+                }
+            }
+        },
+        "variant-to-proxy": {
+            "command_name": "변종-프록시",
+            "command_description": "변형을 문자로 변환",
+            "params": {
+                "proxy": {
+                    "parameter_name": "대리",
+                    "parameter_description": "변환할 프록시"
+                },
+                "variant": {
+                    "parameter_name": "변종",
+                    "parameter_description": "변환할 변형"
+                }
+            }
+        },
+        "update": {
+            "command_name": "업데이트",
+            "command_description": "프록시를 업데이트합니다. ",
+            "params": {
+                "proxy": {
+                    "parameter_name": "대리",
+                    "parameter_description": "업데이트할 캐릭터"
+                },
+                "image": {
+                    "parameter_name": "영상",
+                    "parameter_description": "이미지(기본적으로 없음)"
+                }
+            }
+        },
+        "detail": {
+            "command_name": "detail",
+            "command_description": "캐릭터의 세부정보 가져오기",
+            "params": {
+                "proxy": {
+                    "parameter_name": "대리",
+                    "parameter_description": "프록시를 자세히 설명합니다. "
+                }
+            }
+        },
+        "import": {
+            "command_name": "수입",
+            "command_description": "파일이나 토큰에서 캐릭터 가져오기",
+            "params": {
+                "data": {
+                    "parameter_name": "데이터",
+                    "parameter_description": "가져올 파일"
+                },
+                "token": {
+                    "parameter_name": "토큰",
+                    "parameter_description": "가져오기에 사용할 토큰"
+                },
+                "deleting_from_token": {
+                    "parameter_name": "삭제_에서_토큰",
+                    "parameter_description": "토큰에서 문자 삭제"
+                }
+            }
+        },
+        "var": {
+            "group_name": "var",
+            "group_description": "Variant commands.",
+            "groupset": {
+                "command_description": "Set a variant."
+            },
+            "groupuse": {
+                "command_description": "Use a variant."
+            },
+            "groupcreate": {
+                "command_name": "만들다",
+                "command_description": "새로운 캐릭터를 생성하세요.",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "대리",
+                        "parameter_description": " 변형을 생성할 프록시"
+                    },
+                    "image": {
+                        "parameter_name": "영상",
+                        "parameter_description": "이미지(기본적으로 없음)"
+                    },
+                    "prefixes": {
+                        "parameter_description": "Prefixes e.g. A:text, |text|, etc."
+                    }
+                }
+            },
+            "groupdelete": {
+                "command_name": "삭제",
+                "command_description": "캐릭터의 변형 삭제",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "대리",
+                        "parameter_description": "변형을 삭제할 프록시"
+                    },
+                    "variant": {
+                        "parameter_name": "변종",
+                        "parameter_description": "삭제할 변형"
+                    }
+                }
+            },
+            "groupread": {
+                "command_name": "읽다",
+                "command_description": "문자 읽기",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "대리",
+                        "parameter_description": "변형을 읽을 문자"
+                    },
+                    "variant": {
+                        "parameter_name": "변종",
+                        "parameter_description": "읽을 수 있는 변형"
+                    }
+                }
+            },
+            "groupnickname": {
+                "command_name": "별명",
+                "command_description": "캐릭터의 닉네임을 설정하세요",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "대리",
+                        "parameter_description": "닉네임을 설정할 캐릭터"
+                    },
+                    "variant": {
+                        "parameter_name": "변종",
+                        "parameter_description": "닉네임을 설정하는 변형"
+                    },
+                    "nickname": {
+                        "parameter_name": "별명",
+                        "parameter_description": "캐릭터에 설정할 닉네임"
+                    }
+                }
+            },
+            "grouplocal": {
+                "command_name": "현지의",
+                "command_description": "캐릭터의 로컬 설정",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "대리",
+                        "parameter_description": "로컬을 설정할 문자"
+                    },
+                    "variant": {
+                        "parameter_name": "변종",
+                        "parameter_description": "로컬을 설정할 변형"
+                    },
+                    "avatar": {
+                        "parameter_name": "영상",
+                        "parameter_description": "이미지(기본적으로 없음)"
+                    },
+                    "nickname": {
+                        "parameter_name": "별명",
+                        "parameter_description": "닉네임(기본적으로 없음)"
+                    }
+                }
+            },
+            "groupprefix": {
+                "command_name": "접두사",
+                "command_description": "문자의 접두사를 설정합니다.",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "대리",
+                        "parameter_description": "접두사를 설정할 문자"
+                    },
+                    "variant": {
+                        "parameter_name": "변종",
+                        "parameter_description": "접두사를 설정하는 변형"
+                    },
+                    "prefixes": {
+                        "parameter_name": "접두사",
+                        "parameter_description": "접두사(예: "
+                    }
+                }
+            },
+            "groupbirthday": {
+                "command_name": "생일",
+                "command_description": "캐릭터의 생일을 설정하세요",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "대리",
+                        "parameter_description": "생일을 설정할 캐릭터"
+                    },
+                    "variant": {
+                        "parameter_name": "변종",
+                        "parameter_description": "생일을 설정할 변형"
+                    },
+                    "birthday": {
+                        "parameter_name": "생일",
+                        "parameter_description": "생일(기본적으로 없음)"
+                    }
+                }
+            },
+            "groupdescription": {
+                "command_name": "설명",
+                "command_description": "캐릭터에 대한 설명 설정",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "대리",
+                        "parameter_description": "설명을 설정할 문자"
+                    },
+                    "variant": {
+                        "parameter_name": "변종",
+                        "parameter_description": "설명을 설정할 변형"
+                    },
+                    "text": {
+                        "parameter_name": "텍스트",
+                        "parameter_description": "캐릭터에 설정할 설명"
+                    }
+                }
+            },
+            "grouprename": {
+                "command_name": "이름_바꾸기",
+                "command_description": "캐릭터 이름 바꾸기",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "대리",
+                        "parameter_description": "이름을 바꿀 캐릭터"
+                    },
+                    "variant": {
+                        "parameter_name": "변종",
+                        "parameter_description": "이름을 바꿀 변형"
+                    },
+                    "name": {
+                        "parameter_name": "이름",
+                        "parameter_description": "캐릭터의 새 이름"
+                    }
+                }
+            },
+            "groupgroup": {
+                "command_name": "그룹",
+                "command_description": "캐릭터 그룹 설정",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "대리",
+                        "parameter_description": "그룹을 설정할 캐릭터"
+                    },
+                    "variant": {
+                        "parameter_name": "변종",
+                        "parameter_description": "그룹을 설정할 변형"
+                    },
+                    "group": {
+                        "parameter_name": "그룹",
+                        "parameter_description": "그룹(기본적으로 없음)"
+                    }
+                }
+            },
+            "groupnsfw": {
+                "command_name": "nsfw",
+                "command_description": "캐릭터가 NSFW인지 여부 설정",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "대리",
+                        "parameter_description": "NSFW를 설정할 문자"
+                    },
+                    "variant": {
+                        "parameter_name": "변종",
+                        "parameter_description": "NSFW를 설정하는 변형"
+                    },
+                    "nsfw": {
+                        "parameter_name": "nsfw",
+                        "parameter_description": "NSFW, 기본적으로 반대 값으로 전환"
+                    }
+                }
+            },
+            "groupauto": {
+                "command_name": "자동",
+                "command_description": "캐릭터의 자동 설정",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "대리",
+                        "parameter_description": "캐릭터는 기본적으로 자동을 비활성화합니다."
+                    },
+                    "variant": {
+                        "parameter_name": "변종",
+                        "parameter_description": "자동을 설정할 변형"
+                    }
+                }
+            },
+            "groupavatar": {
+                "command_name": "화신",
+                "command_description": "캐릭터의 아바타 설정",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "대리",
+                        "parameter_description": "아바타를 설정할 캐릭터"
+                    },
+                    "variant": {
+                        "parameter_name": "변종",
+                        "parameter_description": "아바타를 설정할 변형"
+                    },
+                    "avatar": {
+                        "parameter_name": "화신",
+                        "parameter_description": "이미지 URL(기본적으로 없음)"
+                    }
+                }
+            },
+            "grouplist": {
+                "command_description": "List all variants."
+            },
+            "groupfind": {
+                "command_description": "Find a variant."
+            },
+            "groupupdate": {
+                "command_name": "업데이트",
+                "command_description": "프록시를 업데이트합니다. ",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "대리",
+                        "parameter_description": "업데이트할 캐릭터"
+                    },
+                    "image": {
+                        "parameter_name": "영상",
+                        "parameter_description": "이미지(기본적으로 없음)"
+                    }
+                }
+            },
+            "groupdetail": {
+                "command_name": "detail",
+                "command_description": "캐릭터의 세부정보 가져오기",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "대리",
+                        "parameter_description": "프록시를 자세히 설명합니다. "
+                    },
+                    "variant": {
+                        "parameter_name": "변종",
+                        "parameter_description": "세부적인 변형"
+                    }
+                }
+            },
+            "groupprune": {
+                "command_name": "치다",
+                "command_description": "일정 기간 동안 사용하지 않은 문자를 정리합니다.",
+                "params": {
+                    "proxy": {
+                        "parameter_description": "대리"
+                    },
+                    "time": {
+                        "parameter_description": "이전에 정리할 날짜(기본적으로 없음)"
+                    }
+                }
+            },
+            "grouppurge": {
+                "command_name": "숙청",
+                "command_description": "모든 데이터 삭제(메시지 로그 제외)",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "대리",
+                        "parameter_description": "대리"
+                    },
+                    "confirmation": {
+                        "parameter_name": "확인",
+                        "parameter_description": "확인"
+                    }
+                }
+            }
+        },
+        "shared": {
+            "group_description": "Shared proxy commands.",
+            "groupset": {
+                "command_description": "Set a proxy as the current one."
+            },
+            "groupcreate": {
+                "command_name": "만들다",
+                "command_description": "새로운 캐릭터를 생성하세요.",
+                "params": {
+                    "image": {
+                        "parameter_name": "영상",
+                        "parameter_description": "이미지(기본적으로 없음)"
+                    }
+                }
+            },
+            "groupdelete": {
+                "command_name": "삭제",
+                "command_description": "캐릭터 삭제",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "대리",
+                        "parameter_description": "변형을 삭제할 프록시"
+                    }
+                }
+            },
+            "groupread": {
+                "command_name": "읽다",
+                "command_description": "문자 읽기",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "대리",
+                        "parameter_description": "변형을 읽을 문자"
+                    }
+                }
+            },
+            "groupauto": {
+                "command_name": "자동",
+                "command_description": "캐릭터의 자동 설정",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "대리",
+                        "parameter_description": "캐릭터는 기본적으로 자동을 비활성화합니다."
+                    }
+                }
+            },
+            "groupprefix": {
+                "command_name": "접두사",
+                "command_description": "문자의 접두사를 설정합니다.",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "대리",
+                        "parameter_description": "접두사를 설정할 문자"
+                    },
+                    "prefixes": {
+                        "parameter_name": "접두사",
+                        "parameter_description": "접두사(예: "
+                    }
+                }
+            },
+            "groupbirthday": {
+                "command_name": "생일",
+                "command_description": "캐릭터의 생일을 설정하세요",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "대리",
+                        "parameter_description": "생일을 설정할 캐릭터"
+                    },
+                    "birthday": {
+                        "parameter_name": "생일",
+                        "parameter_description": "생일(기본적으로 없음)"
+                    }
+                }
+            },
+            "groupdescription": {
+                "command_name": "설명",
+                "command_description": "캐릭터에 대한 설명 설정",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "대리",
+                        "parameter_description": "설명을 설정할 문자"
+                    },
+                    "text": {
+                        "parameter_name": "텍스트",
+                        "parameter_description": "캐릭터에 설정할 설명"
+                    }
+                }
+            },
+            "grouprename": {
+                "command_name": "이름_바꾸기",
+                "command_description": "캐릭터 이름 바꾸기",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "대리",
+                        "parameter_description": "이름을 바꿀 캐릭터"
+                    },
+                    "name": {
+                        "parameter_name": "이름",
+                        "parameter_description": "캐릭터의 새 이름"
+                    }
+                }
+            },
+            "groupnickname": {
+                "command_name": "별명",
+                "command_description": "캐릭터의 닉네임을 설정하세요",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "대리",
+                        "parameter_description": "닉네임을 설정할 캐릭터"
+                    },
+                    "nickname": {
+                        "parameter_name": "별명",
+                        "parameter_description": "캐릭터에 설정할 닉네임"
+                    }
+                }
+            },
+            "groupgroup": {
+                "command_name": "그룹",
+                "command_description": "캐릭터 그룹 설정",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "대리",
+                        "parameter_description": "그룹을 설정할 캐릭터"
+                    },
+                    "group": {
+                        "parameter_name": "그룹",
+                        "parameter_description": "그룹(기본적으로 없음)"
+                    }
+                }
+            },
+            "groupnsfw": {
+                "command_name": "nsfw",
+                "command_description": "캐릭터가 NSFW인지 여부 설정",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "대리",
+                        "parameter_description": "NSFW를 설정할 문자"
+                    },
+                    "nsfw": {
+                        "parameter_name": "nsfw",
+                        "parameter_description": "NSFW, 기본적으로 반대 값으로 전환"
+                    }
+                }
+            },
+            "groupavatar": {
+                "command_name": "화신",
+                "command_description": "캐릭터의 아바타 설정",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "대리",
+                        "parameter_description": "아바타를 설정할 캐릭터"
+                    },
+                    "avatar": {
+                        "parameter_name": "화신",
+                        "parameter_description": "이미지 URL(기본적으로 없음)"
+                    }
+                }
+            },
+            "groupimage": {
+                "params": {
+                    "proxy": {
+                        "parameter_name": "대리",
+                        "parameter_description": "아바타를 설정할 캐릭터"
+                    },
+                    "avatar": {
+                        "parameter_name": "화신",
+                        "parameter_description": "이미지 URL(기본적으로 없음)"
+                    }
+                }
+            },
+            "grouplocal": {
+                "command_name": "현지의",
+                "command_description": "캐릭터의 로컬 설정",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "대리",
+                        "parameter_description": "로컬을 설정할 문자"
+                    },
+                    "avatar": {
+                        "parameter_name": "영상",
+                        "parameter_description": "이미지(기본적으로 없음)"
+                    },
+                    "nickname": {
+                        "parameter_name": "별명",
+                        "parameter_description": "닉네임(기본적으로 없음)"
+                    }
+                }
+            },
+            "groupupdate": {
+                "command_name": "업데이트",
+                "command_description": "프록시를 업데이트합니다. ",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "대리",
+                        "parameter_description": "업데이트할 캐릭터"
+                    },
+                    "image": {
+                        "parameter_name": "영상",
+                        "parameter_description": "이미지(기본적으로 없음)"
+                    }
+                }
+            },
+            "groupdetail": {
+                "command_name": "detail",
+                "command_description": "캐릭터의 세부정보 가져오기",
+                "params": {
+                    "proxy": {
+                        "parameter_name": "대리",
+                        "parameter_description": "프록시를 자세히 설명합니다. "
+                    }
+                }
+            },
+            "groupprune": {
+                "command_name": "치다",
+                "command_description": "일정 기간 동안 사용하지 않은 문자를 정리합니다.",
+                "params": {
+                    "time": {
+                        "parameter_description": "이전에 정리할 날짜(기본적으로 없음)"
+                    }
+                }
+            },
+            "grouppurge": {
+                "command_name": "숙청",
+                "command_description": "모든 데이터 삭제(메시지 로그 제외)",
+                "params": {
+                    "confirmation": {
+                        "parameter_name": "확인",
+                        "parameter_description": "확인"
+                    }
+                }
+            }
+        },
+        "check_permissions": {
+            "command_name": "check_perms",
+            "command_description": "제공된 채널에서 봇이 작동할 수 있는지 확인"
+        },
+        "roll": {
+            "command_description": "Roll a dice."
+        },
+        "afk": {
+            "command_description": "Check if a user is AFK."
+        },
+        "help": {
+            "command_name": "돕다",
+            "command_description": "내장 봇 도움말",
+            "params": {
+                "search": {
+                    "parameter_name": "찾다",
+                    "parameter_description": "조회 용어"
+                }
+            }
+        },
+        "server_wiki": {
+            "command_name": "server_wiki",
+            "command_description": "사용자 정의 서버 위키",
+            "params": {
+                "search": {
+                    "parameter_name": "찾다",
+                    "parameter_description": "조회 용어"
+                }
+            }
+        },
+        "settings": {
+            "command_name": "설정",
+            "command_description": "봇 설정",
+            "params": {
+                "menu": {
+                    "parameter_name": "메뉴",
+                    "parameter_description": "설정을 위해 열리는 메뉴",
+                    "choices": {
+                        "Server": "섬기는 사람",
+                        "Member": "회원",
+                        "User": "사용자"
+                    }
+                }
+            }
+        },
+        "context_menu": {
+            "command_name": "대리"
+        }
+    }
+}
