@@ -1,304 +1,333 @@
 {
     "commands": {
-        "exec": {
-            "command_description": "Execute a command."
+        "afk": {
+            "command_description": "Check if a user is AFK."
         },
-        "proxy": {
-            "command_name": "proxy",
-            "command_description": "Deaktiver tegn på en server",
+        "auto": {
+            "command_description": "Indstil auto for en karakter",
+            "command_name": "auto",
             "params": {
-                "enable": {
-                    "parameter_name": "aktivere",
-                    "parameter_description": "Aktiver eller deaktiver tegn som standardkontakter"
+                "proxy": {
+                    "parameter_description": "Tegn, deaktiverer som standard automatisk",
+                    "parameter_name": "proxy"
                 }
             }
         },
-        "set": {
-            "command_description": "Set a proxy as the current one."
-        },
-        "use": {
+        "avatar": {
+            "command_description": "Indstil avataren for en karakter",
+            "command_name": "avatar",
             "params": {
-                "text": {
-                    "parameter_name": "tekst",
-                    "parameter_description": "tekst"
+                "avatar": {
+                    "parameter_description": "Billed-URL, som standard Ingen",
+                    "parameter_name": "avatar"
+                },
+                "proxy": {
+                    "parameter_description": "Karakter at indstille avataren til",
+                    "parameter_name": "proxy"
                 }
             }
         },
-        "say": {
+        "birthday": {
+            "command_description": "Indstil fødselsdagen for en karakter",
+            "command_name": "fødselsdag",
             "params": {
-                "text": {
-                    "parameter_name": "tekst",
-                    "parameter_description": "tekst"
+                "birthday": {
+                    "parameter_description": "Fødselsdag, som standard Ingen",
+                    "parameter_name": "fødselsdag"
+                },
+                "proxy": {
+                    "parameter_description": "Karakter at indstille fødselsdagen for",
+                    "parameter_name": "proxy"
                 }
             }
         },
-        "npc": {
-            "command_name": "npc",
-            "command_description": "Opret en ny NPC-meddelelse",
-            "params": {
-                "franchise": {
-                    "parameter_name": "franchise",
-                    "parameter_description": "Franchise at bruge",
-                    "choices": {
-                        "Pokemon": "Pokemon",
-                        "Pokemon Shiny": "Pokemon Shiny",
-                        "Trainer": "Trainer",
-                        "Digimon": "Digimon",
-                        "Palworld": "Palworld",
-                        "D&D": "D&D"
-                    }
-                },
-                "npc": {
-                    "parameter_name": "npc",
-                    "parameter_description": "NPC at bruge"
-                },
-                "nickname": {
-                    "parameter_name": "kaldenavn",
-                    "parameter_description": "Kaldenavn, som standard Ingen"
-                },
-                "emotion": {
-                    "parameter_name": "emotion",
-                    "parameter_description": "Følelser, som standard Normal",
-                    "choices": {
-                        "Normal": "Normal",
-                        "Happy": "Happy",
-                        "Pain": "Pain",
-                        "Angry": "Angry",
-                        "Worried": "Worried",
-                        "Sad": "Sad",
-                        "Crying": "Crying",
-                        "Shouting": "Shouting",
-                        "TearyEyed": "TearyEyed",
-                        "Determined": "Determined",
-                        "Joyous": "Joyous",
-                        "Inspired": "Inspired",
-                        "Surprised": "Surprised",
-                        "Dizzy": "Dizzy",
-                        "Sigh": "Sigh",
-                        "Stunned": "Stunned",
-                        "Special0": "Special0",
-                        "Special1": "Special1",
-                        "Special2": "Special2",
-                        "Special3": "Special3"
-                    }
-                },
-                "image": {
-                    "parameter_name": "billede",
-                    "parameter_description": "Billede, som standard Ingen"
-                },
-                "text": {
-                    "parameter_name": "tekst",
-                    "parameter_description": "tekst"
-                }
-            }
+        "check_permissions": {
+            "command_description": "Tjek om bot kan fungere i den angivne kanal",
+            "command_name": "check_perms"
+        },
+        "color": {
+            "command_description": "Set a color for a proxy."
         },
         "create": {
-            "command_description": "Create a new proxy.",
+            "command_description": "Opret en ny karakter.",
+            "command_name": "skab",
             "params": {
+                "image": {
+                    "parameter_description": "Billede, som standard Ingen",
+                    "parameter_name": "billede"
+                },
                 "prefixes": {
                     "parameter_description": "Prefixes e.g. A:text, |text|, etc."
                 }
             }
         },
         "delete": {
-            "command_name": "slette",
             "command_description": "Slet et tegn",
+            "command_name": "slette",
             "params": {
                 "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Proxy for at slette varianten fra"
-                }
-            }
-        },
-        "read": {
-            "command_name": "læs",
-            "command_description": "Læs en karakter",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Karakter at læse varianten af"
-                }
-            }
-        },
-        "nickname": {
-            "command_name": "kaldenavn",
-            "command_description": "Indstil kaldenavnet for en karakter",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Tegn at indstille kaldenavnet for"
-                },
-                "nickname": {
-                    "parameter_name": "kaldenavn",
-                    "parameter_description": "Kaldenavn, der skal angives for karakteren"
-                }
-            }
-        },
-        "local": {
-            "command_name": "lokal",
-            "command_description": "Indstil det lokale for en karakter",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Karakter at indstille det lokale for"
-                },
-                "avatar": {
-                    "parameter_name": "billede",
-                    "parameter_description": "Billede, som standard Ingen"
-                },
-                "nickname": {
-                    "parameter_name": "kaldenavn",
-                    "parameter_description": "Kaldenavn, som standard Ingen"
-                }
-            }
-        },
-        "avatar": {
-            "command_name": "avatar",
-            "command_description": "Indstil avataren for en karakter",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Karakter at indstille avataren til"
-                },
-                "avatar": {
-                    "parameter_name": "avatar",
-                    "parameter_description": "Billed-URL, som standard Ingen"
-                }
-            }
-        },
-        "prefix": {
-            "command_name": "præfiks",
-            "command_description": "Indstil præfikser for et tegn.",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Tegn at indstille præfikset for"
-                },
-                "prefixes": {
-                    "parameter_name": "præfikser",
-                    "parameter_description": "Præfikser f.eks. "
-                }
-            }
-        },
-        "birthday": {
-            "command_name": "fødselsdag",
-            "command_description": "Indstil fødselsdagen for en karakter",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Karakter at indstille fødselsdagen for"
-                },
-                "birthday": {
-                    "parameter_name": "fødselsdag",
-                    "parameter_description": "Fødselsdag, som standard Ingen"
+                    "parameter_description": "Proxy for at slette varianten fra",
+                    "parameter_name": "proxy"
                 }
             }
         },
         "description": {
-            "command_name": "beskrivelse",
             "command_description": "Indstil beskrivelsen for en karakter",
+            "command_name": "beskrivelse",
             "params": {
                 "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Tegn at indstille beskrivelsen til"
+                    "parameter_description": "Tegn at indstille beskrivelsen til",
+                    "parameter_name": "proxy"
                 },
                 "text": {
-                    "parameter_name": "tekst",
-                    "parameter_description": "Beskrivelse, der skal indstilles for karakteren"
+                    "parameter_description": "Beskrivelse, der skal indstilles for karakteren",
+                    "parameter_name": "tekst"
                 }
             }
         },
-        "rename": {
-            "command_name": "omdøbe",
-            "command_description": "Omdøb en karakter",
+        "detail": {
+            "command_description": "Få detaljer om en karakter",
+            "command_name": "detalje",
             "params": {
                 "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Tegn, der skal omdøbes"
+                    "parameter_description": "Detaljer en proxy. ",
+                    "parameter_name": "proxy"
+                }
+            }
+        },
+        "exec": {
+            "command_description": "Execute a command."
+        },
+        "export": {
+            "command_description": "Eksporter dine tegn til en JSON-fil",
+            "command_name": "eksport",
+            "params": {
+                "format": {
+                    "choices": {
+                        "Default": "Default",
+                        "PluralKit": "PluralKit",
+                        "Tupperbox": "Tupperbox"
+                    },
+                    "parameter_description": "Format, der skal eksporteres til, som standard JSON",
+                    "parameter_name": "format"
                 },
-                "name": {
-                    "parameter_name": "navn",
-                    "parameter_description": "Nyt navn til karakteren"
+                "new_token": {
+                    "parameter_description": "Hvis du vil generere et nyt token",
+                    "parameter_name": "ny_token"
                 }
             }
         },
         "group": {
-            "command_name": "gruppe",
             "command_description": "Indstil gruppen til en karakter",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Karakter at indstille gruppen til"
-                },
-                "group": {
-                    "parameter_name": "gruppe",
-                    "parameter_description": "Gruppe, som standard Ingen"
-                }
-            }
-        },
-        "nsfw": {
-            "command_name": "nsfw",
-            "command_description": "Indstil om et tegn er NSFW",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Tegn at indstille NSFW for"
-                },
-                "nsfw": {
-                    "parameter_name": "nsfw",
-                    "parameter_description": "NSFW, skifter som standard til modsat værdi"
-                }
-            }
-        },
-        "auto": {
-            "command_name": "auto",
-            "command_description": "Indstil auto for en karakter",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Tegn, deaktiverer som standard automatisk"
-                }
-            }
-        },
-        "list": {
-            "command_name": "liste",
-            "command_description": "Liste over alle tegn ",
+            "command_name": "gruppe",
             "params": {
                 "group": {
-                    "parameter_name": "gruppe",
-                    "parameter_description": "Gruppe at liste tegn fra"
+                    "parameter_description": "Gruppe, som standard Ingen",
+                    "parameter_name": "gruppe"
+                },
+                "proxy": {
+                    "parameter_description": "Karakter at indstille gruppen til",
+                    "parameter_name": "proxy"
+                }
+            }
+        },
+        "help": {
+            "command_description": "Indbygget bot-hjælp",
+            "command_name": "hjælp",
+            "params": {
+                "search": {
+                    "parameter_description": "Opslagsterm",
+                    "parameter_name": "søg"
+                }
+            }
+        },
+        "import": {
+            "command_description": "Importer dine tegn fra en fil eller token",
+            "command_name": "importere",
+            "params": {
+                "data": {
+                    "parameter_description": "Fil at importere fra",
+                    "parameter_name": "data"
+                },
+                "deleting_from_token": {
+                    "parameter_description": "Slet tegn fra tokenet",
+                    "parameter_name": "sletning_fra_token"
+                },
+                "token": {
+                    "parameter_description": "Token til brug ved import",
+                    "parameter_name": "polet"
                 }
             }
         },
         "latch": {
-            "command_name": "låsen",
             "command_description": "Aktiver eller deaktiver låsetilstand",
+            "command_name": "låsen",
             "params": {
-                "enable": {
-                    "parameter_description": "Aktiver eller deaktiver låsetilstand"
-                },
                 "auto_remove": {
                     "parameter_description": "Om du vil beholde auto for den aktuelle kanal eller ej, som standard True"
+                },
+                "enable": {
+                    "parameter_description": "Aktiver eller deaktiver låsetilstand"
                 }
             }
         },
-        "export": {
-            "command_name": "eksport",
-            "command_description": "Eksporter dine tegn til en JSON-fil",
+        "list": {
+            "command_description": "Liste over alle tegn ",
+            "command_name": "liste",
             "params": {
-                "format": {
-                    "parameter_name": "format",
-                    "parameter_description": "Format, der skal eksporteres til, som standard JSON"
+                "group": {
+                    "parameter_description": "Gruppe at liste tegn fra",
+                    "parameter_name": "gruppe"
+                }
+            }
+        },
+        "local": {
+            "command_description": "Indstil det lokale for en karakter",
+            "command_name": "lokal",
+            "params": {
+                "avatar": {
+                    "parameter_description": "Billede, som standard Ingen",
+                    "parameter_name": "billede"
                 },
-                "new_token": {
-                    "parameter_name": "ny_token",
-                    "parameter_description": "Hvis du vil generere et nyt token"
+                "nickname": {
+                    "parameter_description": "Kaldenavn, som standard Ingen",
+                    "parameter_name": "kaldenavn"
+                },
+                "proxy": {
+                    "parameter_description": "Karakter at indstille det lokale for",
+                    "parameter_name": "proxy"
+                }
+            }
+        },
+        "nickname": {
+            "command_description": "Indstil kaldenavnet for en karakter",
+            "command_name": "kaldenavn",
+            "params": {
+                "nickname": {
+                    "parameter_description": "Kaldenavn, der skal angives for karakteren",
+                    "parameter_name": "kaldenavn"
+                },
+                "proxy": {
+                    "parameter_description": "Tegn at indstille kaldenavnet for",
+                    "parameter_name": "proxy"
+                }
+            }
+        },
+        "npc": {
+            "command_description": "Opret en ny NPC-meddelelse",
+            "command_name": "npc",
+            "params": {
+                "emotion": {
+                    "choices": {
+                        "Angry": "Angry",
+                        "Crying": "Crying",
+                        "Determined": "Determined",
+                        "Dizzy": "Dizzy",
+                        "Happy": "Happy",
+                        "Inspired": "Inspired",
+                        "Joyous": "Joyous",
+                        "Normal": "Normal",
+                        "Pain": "Pain",
+                        "Sad": "Sad",
+                        "Shouting": "Shouting",
+                        "Sigh": "Sigh",
+                        "Special0": "Special0",
+                        "Special1": "Special1",
+                        "Special2": "Special2",
+                        "Special3": "Special3",
+                        "Stunned": "Stunned",
+                        "Surprised": "Surprised",
+                        "TearyEyed": "TearyEyed",
+                        "Worried": "Worried"
+                    },
+                    "parameter_description": "Følelser, som standard Normal",
+                    "parameter_name": "emotion"
+                },
+                "franchise": {
+                    "choices": {
+                        "D&D": "D&D",
+                        "Digimon": "Digimon",
+                        "Palworld": "Palworld",
+                        "Pokemon": "Pokemon",
+                        "Pokemon Shiny": "Pokemon Shiny",
+                        "Trainer": "Trainer"
+                    },
+                    "parameter_description": "Franchise at bruge",
+                    "parameter_name": "franchise"
+                },
+                "image": {
+                    "parameter_description": "Billede, som standard Ingen",
+                    "parameter_name": "billede"
+                },
+                "nickname": {
+                    "parameter_description": "Kaldenavn, som standard Ingen",
+                    "parameter_name": "kaldenavn"
+                },
+                "npc": {
+                    "parameter_description": "NPC at bruge",
+                    "parameter_name": "npc"
+                },
+                "text": {
+                    "parameter_description": "tekst",
+                    "parameter_name": "tekst"
+                }
+            }
+        },
+        "nsfw": {
+            "command_description": "Indstil om et tegn er NSFW",
+            "command_name": "nsfw",
+            "params": {
+                "nsfw": {
+                    "parameter_description": "NSFW, skifter som standard til modsat værdi",
+                    "parameter_name": "nsfw"
+                },
+                "proxy": {
+                    "parameter_description": "Tegn at indstille NSFW for",
+                    "parameter_name": "proxy"
+                }
+            }
+        },
+        "prefix": {
+            "command_description": "Indstil præfikser for et tegn.",
+            "command_name": "præfiks",
+            "params": {
+                "prefixes": {
+                    "parameter_description": "Præfikser f.eks. ",
+                    "parameter_name": "præfikser"
+                },
+                "proxy": {
+                    "parameter_description": "Tegn at indstille præfikset for",
+                    "parameter_name": "proxy"
+                }
+            }
+        },
+        "proxy": {
+            "command_description": "Deaktiver tegn på en server",
+            "command_name": "proxy",
+            "params": {
+                "enable": {
+                    "parameter_description": "Aktiver eller deaktiver tegn som standardkontakter",
+                    "parameter_name": "aktivere"
+                }
+            }
+        },
+        "proxy-to-variant": {
+            "command_description": "Konverter et tegn til en variant",
+            "command_name": "proxy-til-variant",
+            "params": {
+                "base": {
+                    "parameter_description": "Ny base for karakteren",
+                    "parameter_name": "grundlag"
+                },
+                "original": {
+                    "parameter_description": "Karakter at konvertere",
+                    "parameter_name": "original"
                 }
             }
         },
         "prune": {
-            "command_name": "sveske",
             "command_description": "Beskær tegn ubrugte i en vis tid.",
+            "command_name": "sveske",
             "params": {
                 "time": {
                     "parameter_description": "Dato at beskære før, som standard Ingen"
@@ -306,656 +335,674 @@
             }
         },
         "purge": {
-            "command_name": "udrensning",
             "command_description": "Slet alle dine data (undtagen beskedlogfiler)",
+            "command_name": "udrensning",
             "params": {
                 "confirmation": {
-                    "parameter_name": "bekræftelse",
-                    "parameter_description": "bekræftelse"
+                    "parameter_description": "bekræftelse",
+                    "parameter_name": "bekræftelse"
                 }
             }
         },
-        "proxy-to-variant": {
-            "command_name": "proxy-til-variant",
-            "command_description": "Konverter et tegn til en variant",
-            "params": {
-                "original": {
-                    "parameter_name": "original",
-                    "parameter_description": "Karakter at konvertere"
-                },
-                "base": {
-                    "parameter_name": "grundlag",
-                    "parameter_description": "Ny base for karakteren"
-                }
-            }
-        },
-        "variant-to-proxy": {
-            "command_name": "variant-til-proxy",
-            "command_description": "Konverter en variant til en karakter",
+        "read": {
+            "command_description": "Læs en karakter",
+            "command_name": "læs",
             "params": {
                 "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Proxy at konvertere til"
-                },
-                "variant": {
-                    "parameter_name": "variant",
-                    "parameter_description": "Variant til at konvertere"
+                    "parameter_description": "Karakter at læse varianten af",
+                    "parameter_name": "proxy"
                 }
             }
         },
-        "update": {
-            "command_name": "opdatering",
-            "command_description": "Opdater en proxy. ",
+        "rename": {
+            "command_description": "Omdøb en karakter",
+            "command_name": "omdøbe",
             "params": {
+                "name": {
+                    "parameter_description": "Nyt navn til karakteren",
+                    "parameter_name": "navn"
+                },
                 "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Karakter at opdatere"
-                },
-                "image": {
-                    "parameter_name": "billede",
-                    "parameter_description": "Billede, som standard Ingen"
+                    "parameter_description": "Tegn, der skal omdøbes",
+                    "parameter_name": "proxy"
                 }
             }
-        },
-        "detail": {
-            "command_name": "detalje",
-            "command_description": "Få detaljer om en karakter",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Detaljer en proxy. "
-                }
-            }
-        },
-        "import": {
-            "command_name": "importere",
-            "command_description": "Importer dine tegn fra en fil eller token",
-            "params": {
-                "data": {
-                    "parameter_name": "data",
-                    "parameter_description": "Fil at importere fra"
-                },
-                "token": {
-                    "parameter_name": "polet",
-                    "parameter_description": "Token til brug ved import"
-                },
-                "deleting_from_token": {
-                    "parameter_name": "sletning_fra_token",
-                    "parameter_description": "Slet tegn fra tokenet"
-                }
-            }
-        },
-        "var": {
-            "group_name": "var",
-            "group_description": "Variant commands.",
-            "groupset": {
-                "command_description": "Set a variant."
-            },
-            "groupuse": {
-                "command_description": "Use a variant."
-            },
-            "groupcreate": {
-                "command_name": "skab",
-                "command_description": "Opret en ny karakter.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": " Proxy til at oprette varianten for"
-                    },
-                    "image": {
-                        "parameter_name": "billede",
-                        "parameter_description": "Billede, som standard Ingen"
-                    },
-                    "prefixes": {
-                        "parameter_description": "Prefixes e.g. A:text, |text|, etc."
-                    }
-                }
-            },
-            "groupdelete": {
-                "command_name": "slette",
-                "command_description": "Slet en karakters variant",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Proxy for at slette varianten fra"
-                    },
-                    "variant": {
-                        "parameter_name": "variant",
-                        "parameter_description": "Variant skal slettes"
-                    }
-                }
-            },
-            "groupread": {
-                "command_name": "læs",
-                "command_description": "Læs en karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Karakter at læse varianten af"
-                    },
-                    "variant": {
-                        "parameter_name": "variant",
-                        "parameter_description": "Variant at læse"
-                    }
-                }
-            },
-            "groupnickname": {
-                "command_name": "kaldenavn",
-                "command_description": "Indstil kaldenavnet for en karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Tegn at indstille kaldenavnet for"
-                    },
-                    "variant": {
-                        "parameter_name": "variant",
-                        "parameter_description": "Variant at indstille kaldenavnet for"
-                    },
-                    "nickname": {
-                        "parameter_name": "kaldenavn",
-                        "parameter_description": "Kaldenavn, der skal angives for karakteren"
-                    }
-                }
-            },
-            "grouplocal": {
-                "command_name": "lokal",
-                "command_description": "Indstil det lokale for en karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Karakter at indstille det lokale for"
-                    },
-                    "variant": {
-                        "parameter_name": "variant",
-                        "parameter_description": "Variant at indstille det lokale for"
-                    },
-                    "avatar": {
-                        "parameter_name": "billede",
-                        "parameter_description": "Billede, som standard Ingen"
-                    },
-                    "nickname": {
-                        "parameter_name": "kaldenavn",
-                        "parameter_description": "Kaldenavn, som standard Ingen"
-                    }
-                }
-            },
-            "groupprefix": {
-                "command_name": "præfiks",
-                "command_description": "Indstil præfikser for et tegn.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Tegn at indstille præfikset for"
-                    },
-                    "variant": {
-                        "parameter_name": "variant",
-                        "parameter_description": "Variant at indstille præfikset for"
-                    },
-                    "prefixes": {
-                        "parameter_name": "præfikser",
-                        "parameter_description": "Præfikser f.eks. "
-                    }
-                }
-            },
-            "groupbirthday": {
-                "command_name": "fødselsdag",
-                "command_description": "Indstil fødselsdagen for en karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Karakter at indstille fødselsdagen for"
-                    },
-                    "variant": {
-                        "parameter_name": "variant",
-                        "parameter_description": "Variant til at indstille fødselsdagen for"
-                    },
-                    "birthday": {
-                        "parameter_name": "fødselsdag",
-                        "parameter_description": "Fødselsdag, som standard Ingen"
-                    }
-                }
-            },
-            "groupdescription": {
-                "command_name": "beskrivelse",
-                "command_description": "Indstil beskrivelsen for en karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Tegn at indstille beskrivelsen til"
-                    },
-                    "variant": {
-                        "parameter_name": "variant",
-                        "parameter_description": "Variant at indstille beskrivelsen til"
-                    },
-                    "text": {
-                        "parameter_name": "tekst",
-                        "parameter_description": "Beskrivelse, der skal indstilles for karakteren"
-                    }
-                }
-            },
-            "grouprename": {
-                "command_name": "omdøbe",
-                "command_description": "Omdøb en karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Tegn, der skal omdøbes"
-                    },
-                    "variant": {
-                        "parameter_name": "variant",
-                        "parameter_description": "Variant at omdøbe"
-                    },
-                    "name": {
-                        "parameter_name": "navn",
-                        "parameter_description": "Nyt navn til karakteren"
-                    }
-                }
-            },
-            "groupgroup": {
-                "command_name": "gruppe",
-                "command_description": "Indstil gruppen til en karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Karakter at indstille gruppen til"
-                    },
-                    "variant": {
-                        "parameter_name": "variant",
-                        "parameter_description": "Variant at indstille gruppen til"
-                    },
-                    "group": {
-                        "parameter_name": "gruppe",
-                        "parameter_description": "Gruppe, som standard Ingen"
-                    }
-                }
-            },
-            "groupnsfw": {
-                "command_name": "nsfw",
-                "command_description": "Indstil om et tegn er NSFW",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Tegn at indstille NSFW for"
-                    },
-                    "variant": {
-                        "parameter_name": "variant",
-                        "parameter_description": "Variant at indstille NSFW for"
-                    },
-                    "nsfw": {
-                        "parameter_name": "nsfw",
-                        "parameter_description": "NSFW, skifter som standard til modsat værdi"
-                    }
-                }
-            },
-            "groupauto": {
-                "command_name": "auto",
-                "command_description": "Indstil auto for en karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Tegn, deaktiverer som standard automatisk"
-                    },
-                    "variant": {
-                        "parameter_name": "variant",
-                        "parameter_description": "Variant til at indstille auto til"
-                    }
-                }
-            },
-            "groupavatar": {
-                "command_name": "avatar",
-                "command_description": "Indstil avataren for en karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Karakter at indstille avataren til"
-                    },
-                    "variant": {
-                        "parameter_name": "variant",
-                        "parameter_description": "Variant at indstille avataren til"
-                    },
-                    "avatar": {
-                        "parameter_name": "avatar",
-                        "parameter_description": "Billed-URL, som standard Ingen"
-                    }
-                }
-            },
-            "grouplist": {
-                "command_description": "List all variants."
-            },
-            "groupfind": {
-                "command_description": "Find a variant."
-            },
-            "groupupdate": {
-                "command_name": "opdatering",
-                "command_description": "Opdater en proxy. ",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Karakter at opdatere"
-                    },
-                    "image": {
-                        "parameter_name": "billede",
-                        "parameter_description": "Billede, som standard Ingen"
-                    }
-                }
-            },
-            "groupdetail": {
-                "command_name": "detalje",
-                "command_description": "Få detaljer om en karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Detaljer en proxy. "
-                    },
-                    "variant": {
-                        "parameter_name": "variant",
-                        "parameter_description": "Variant til detaljen"
-                    }
-                }
-            },
-            "groupprune": {
-                "command_name": "sveske",
-                "command_description": "Beskær tegn ubrugte i en vis tid.",
-                "params": {
-                    "proxy": {
-                        "parameter_description": "proxy"
-                    },
-                    "time": {
-                        "parameter_description": "Dato at beskære før, som standard Ingen"
-                    }
-                }
-            },
-            "grouppurge": {
-                "command_name": "udrensning",
-                "command_description": "Slet alle dine data (undtagen beskedlogfiler)",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "proxy"
-                    },
-                    "confirmation": {
-                        "parameter_name": "bekræftelse",
-                        "parameter_description": "bekræftelse"
-                    }
-                }
-            }
-        },
-        "shared": {
-            "group_description": "Shared proxy commands.",
-            "groupset": {
-                "command_description": "Set a proxy as the current one."
-            },
-            "groupcreate": {
-                "command_name": "skab",
-                "command_description": "Opret en ny karakter.",
-                "params": {
-                    "image": {
-                        "parameter_name": "billede",
-                        "parameter_description": "Billede, som standard Ingen"
-                    }
-                }
-            },
-            "groupdelete": {
-                "command_name": "slette",
-                "command_description": "Slet et tegn",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Proxy for at slette varianten fra"
-                    }
-                }
-            },
-            "groupread": {
-                "command_name": "læs",
-                "command_description": "Læs en karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Karakter at læse varianten af"
-                    }
-                }
-            },
-            "groupauto": {
-                "command_name": "auto",
-                "command_description": "Indstil auto for en karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Tegn, deaktiverer som standard automatisk"
-                    }
-                }
-            },
-            "groupprefix": {
-                "command_name": "præfiks",
-                "command_description": "Indstil præfikser for et tegn.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Tegn at indstille præfikset for"
-                    },
-                    "prefixes": {
-                        "parameter_name": "præfikser",
-                        "parameter_description": "Præfikser f.eks. "
-                    }
-                }
-            },
-            "groupbirthday": {
-                "command_name": "fødselsdag",
-                "command_description": "Indstil fødselsdagen for en karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Karakter at indstille fødselsdagen for"
-                    },
-                    "birthday": {
-                        "parameter_name": "fødselsdag",
-                        "parameter_description": "Fødselsdag, som standard Ingen"
-                    }
-                }
-            },
-            "groupdescription": {
-                "command_name": "beskrivelse",
-                "command_description": "Indstil beskrivelsen for en karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Tegn at indstille beskrivelsen til"
-                    },
-                    "text": {
-                        "parameter_name": "tekst",
-                        "parameter_description": "Beskrivelse, der skal indstilles for karakteren"
-                    }
-                }
-            },
-            "grouprename": {
-                "command_name": "omdøbe",
-                "command_description": "Omdøb en karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Tegn, der skal omdøbes"
-                    },
-                    "name": {
-                        "parameter_name": "navn",
-                        "parameter_description": "Nyt navn til karakteren"
-                    }
-                }
-            },
-            "groupnickname": {
-                "command_name": "kaldenavn",
-                "command_description": "Indstil kaldenavnet for en karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Tegn at indstille kaldenavnet for"
-                    },
-                    "nickname": {
-                        "parameter_name": "kaldenavn",
-                        "parameter_description": "Kaldenavn, der skal angives for karakteren"
-                    }
-                }
-            },
-            "groupgroup": {
-                "command_name": "gruppe",
-                "command_description": "Indstil gruppen til en karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Karakter at indstille gruppen til"
-                    },
-                    "group": {
-                        "parameter_name": "gruppe",
-                        "parameter_description": "Gruppe, som standard Ingen"
-                    }
-                }
-            },
-            "groupnsfw": {
-                "command_name": "nsfw",
-                "command_description": "Indstil om et tegn er NSFW",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Tegn at indstille NSFW for"
-                    },
-                    "nsfw": {
-                        "parameter_name": "nsfw",
-                        "parameter_description": "NSFW, skifter som standard til modsat værdi"
-                    }
-                }
-            },
-            "groupavatar": {
-                "command_name": "avatar",
-                "command_description": "Indstil avataren for en karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Karakter at indstille avataren til"
-                    },
-                    "avatar": {
-                        "parameter_name": "avatar",
-                        "parameter_description": "Billed-URL, som standard Ingen"
-                    }
-                }
-            },
-            "groupimage": {
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Karakter at indstille avataren til"
-                    },
-                    "avatar": {
-                        "parameter_name": "avatar",
-                        "parameter_description": "Billed-URL, som standard Ingen"
-                    }
-                }
-            },
-            "grouplocal": {
-                "command_name": "lokal",
-                "command_description": "Indstil det lokale for en karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Karakter at indstille det lokale for"
-                    },
-                    "avatar": {
-                        "parameter_name": "billede",
-                        "parameter_description": "Billede, som standard Ingen"
-                    },
-                    "nickname": {
-                        "parameter_name": "kaldenavn",
-                        "parameter_description": "Kaldenavn, som standard Ingen"
-                    }
-                }
-            },
-            "groupupdate": {
-                "command_name": "opdatering",
-                "command_description": "Opdater en proxy. ",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Karakter at opdatere"
-                    },
-                    "image": {
-                        "parameter_name": "billede",
-                        "parameter_description": "Billede, som standard Ingen"
-                    }
-                }
-            },
-            "groupdetail": {
-                "command_name": "detalje",
-                "command_description": "Få detaljer om en karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Detaljer en proxy. "
-                    }
-                }
-            },
-            "groupprune": {
-                "command_name": "sveske",
-                "command_description": "Beskær tegn ubrugte i en vis tid.",
-                "params": {
-                    "time": {
-                        "parameter_description": "Dato at beskære før, som standard Ingen"
-                    }
-                }
-            },
-            "grouppurge": {
-                "command_name": "udrensning",
-                "command_description": "Slet alle dine data (undtagen beskedlogfiler)",
-                "params": {
-                    "confirmation": {
-                        "parameter_name": "bekræftelse",
-                        "parameter_description": "bekræftelse"
-                    }
-                }
-            }
-        },
-        "check_permissions": {
-            "command_name": "check_perms",
-            "command_description": "Tjek om bot kan fungere i den angivne kanal"
         },
         "roll": {
             "command_description": "Roll a dice."
         },
-        "afk": {
-            "command_description": "Check if a user is AFK."
-        },
-        "help": {
-            "command_name": "hjælp",
-            "command_description": "Indbygget bot-hjælp",
+        "say": {
+            "command_description": "Say something.",
             "params": {
-                "search": {
-                    "parameter_name": "søg",
-                    "parameter_description": "Opslagsterm"
+                "text": {
+                    "parameter_description": "tekst",
+                    "parameter_name": "tekst"
                 }
             }
         },
         "server_wiki": {
-            "command_name": "server_wiki",
             "command_description": "Brugerdefineret server-wiki",
+            "command_name": "server_wiki",
             "params": {
                 "search": {
-                    "parameter_name": "søg",
-                    "parameter_description": "Opslagsterm"
+                    "parameter_description": "Opslagsterm",
+                    "parameter_name": "søg"
                 }
             }
         },
+        "set": {
+            "command_description": "Set a proxy as the current one."
+        },
         "settings": {
-            "command_name": "indstillinger",
             "command_description": "Botindstillinger",
+            "command_name": "indstillinger",
             "params": {
                 "menu": {
-                    "parameter_name": "menu",
-                    "parameter_description": "Menu for at åbne for indstillinger",
                     "choices": {
+                        "Member": "Member",
                         "Server": "Server",
-                        "Member": "Medlem",
-                        "User": "Bruger"
+                        "User": "User"
+                    },
+                    "parameter_description": "Menu for at åbne for indstillinger",
+                    "parameter_name": "menu"
+                }
+            }
+        },
+        "shared": {
+            "group": {
+                "auto": {
+                    "command_description": "Indstil auto for en karakter",
+                    "command_name": "auto",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Tegn, deaktiverer som standard automatisk",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "avatar": {
+                    "command_description": "Indstil avataren for en karakter",
+                    "command_name": "avatar",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Billed-URL, som standard Ingen",
+                            "parameter_name": "avatar"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karakter at indstille avataren til",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "birthday": {
+                    "command_description": "Indstil fødselsdagen for en karakter",
+                    "command_name": "fødselsdag",
+                    "params": {
+                        "birthday": {
+                            "parameter_description": "Fødselsdag, som standard Ingen",
+                            "parameter_name": "fødselsdag"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karakter at indstille fødselsdagen for",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "color": {
+                    "command_description": "Set the color for a proxy."
+                },
+                "create": {
+                    "command_description": "Opret en ny karakter.",
+                    "command_name": "skab",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Billede, som standard Ingen",
+                            "parameter_name": "billede"
+                        }
+                    }
+                },
+                "delete": {
+                    "command_description": "Slet et tegn",
+                    "command_name": "slette",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Proxy for at slette varianten fra",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "description": {
+                    "command_description": "Indstil beskrivelsen for en karakter",
+                    "command_name": "beskrivelse",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Tegn at indstille beskrivelsen til",
+                            "parameter_name": "proxy"
+                        },
+                        "text": {
+                            "parameter_description": "Beskrivelse, der skal indstilles for karakteren",
+                            "parameter_name": "tekst"
+                        }
+                    }
+                },
+                "detail": {
+                    "command_description": "Få detaljer om en karakter",
+                    "command_name": "detalje",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Detaljer en proxy. ",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "find": {
+                    "command_description": "Find a proxy."
+                },
+                "group": {
+                    "command_description": "Indstil gruppen til en karakter",
+                    "command_name": "gruppe",
+                    "params": {
+                        "group": {
+                            "parameter_description": "Gruppe, som standard Ingen",
+                            "parameter_name": "gruppe"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karakter at indstille gruppen til",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "image": {
+                    "command_description": "Set the image for a proxy.",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Billed-URL, som standard Ingen",
+                            "parameter_name": "avatar"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karakter at indstille avataren til",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "list": {
+                    "command_description": "List all proxies."
+                },
+                "local": {
+                    "command_description": "Indstil det lokale for en karakter",
+                    "command_name": "lokal",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Billede, som standard Ingen",
+                            "parameter_name": "billede"
+                        },
+                        "nickname": {
+                            "parameter_description": "Kaldenavn, som standard Ingen",
+                            "parameter_name": "kaldenavn"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karakter at indstille det lokale for",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "nickname": {
+                    "command_description": "Indstil kaldenavnet for en karakter",
+                    "command_name": "kaldenavn",
+                    "params": {
+                        "nickname": {
+                            "parameter_description": "Kaldenavn, der skal angives for karakteren",
+                            "parameter_name": "kaldenavn"
+                        },
+                        "proxy": {
+                            "parameter_description": "Tegn at indstille kaldenavnet for",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "nsfw": {
+                    "command_description": "Indstil om et tegn er NSFW",
+                    "command_name": "nsfw",
+                    "params": {
+                        "nsfw": {
+                            "parameter_description": "NSFW, skifter som standard til modsat værdi",
+                            "parameter_name": "nsfw"
+                        },
+                        "proxy": {
+                            "parameter_description": "Tegn at indstille NSFW for",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "prefix": {
+                    "command_description": "Indstil præfikser for et tegn.",
+                    "command_name": "præfiks",
+                    "params": {
+                        "prefixes": {
+                            "parameter_description": "Præfikser f.eks. ",
+                            "parameter_name": "præfikser"
+                        },
+                        "proxy": {
+                            "parameter_description": "Tegn at indstille præfikset for",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "prune": {
+                    "command_description": "Beskær tegn ubrugte i en vis tid.",
+                    "command_name": "sveske",
+                    "params": {
+                        "time": {
+                            "parameter_description": "Dato at beskære før, som standard Ingen"
+                        }
+                    }
+                },
+                "purge": {
+                    "command_description": "Slet alle dine data (undtagen beskedlogfiler)",
+                    "command_name": "udrensning",
+                    "params": {
+                        "confirmation": {
+                            "parameter_description": "bekræftelse",
+                            "parameter_name": "bekræftelse"
+                        }
+                    }
+                },
+                "read": {
+                    "command_description": "Læs en karakter",
+                    "command_name": "læs",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Karakter at læse varianten af",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "rename": {
+                    "command_description": "Omdøb en karakter",
+                    "command_name": "omdøbe",
+                    "params": {
+                        "name": {
+                            "parameter_description": "Nyt navn til karakteren",
+                            "parameter_name": "navn"
+                        },
+                        "proxy": {
+                            "parameter_description": "Tegn, der skal omdøbes",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "set": {
+                    "command_description": "Set a proxy as the current one."
+                },
+                "update": {
+                    "command_description": "Opdater en proxy. ",
+                    "command_name": "opdatering",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Billede, som standard Ingen",
+                            "parameter_name": "billede"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karakter at opdatere",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "use": {
+                    "command_description": "Use a proxy."
+                }
+            },
+            "group_description": "Shared proxy commands."
+        },
+        "store": {
+            "params": {
+                "storage": {
+                    "choices": {
+                        "Global": "Global",
+                        "Local": "Local"
                     }
                 }
             }
         },
+        "update": {
+            "command_description": "Opdater en proxy. ",
+            "command_name": "opdatering",
+            "params": {
+                "image": {
+                    "parameter_description": "Billede, som standard Ingen",
+                    "parameter_name": "billede"
+                },
+                "proxy": {
+                    "parameter_description": "Karakter at opdatere",
+                    "parameter_name": "proxy"
+                }
+            }
+        },
+        "use": {
+            "command_description": "Use a proxy.",
+            "params": {
+                "text": {
+                    "parameter_description": "tekst",
+                    "parameter_name": "tekst"
+                }
+            }
+        },
+        "var": {
+            "group": {
+                "auto": {
+                    "command_description": "Indstil auto for en karakter",
+                    "command_name": "auto",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Tegn, deaktiverer som standard automatisk",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Variant til at indstille auto til",
+                            "parameter_name": "variant"
+                        }
+                    }
+                },
+                "avatar": {
+                    "command_description": "Indstil avataren for en karakter",
+                    "command_name": "avatar",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Billed-URL, som standard Ingen",
+                            "parameter_name": "avatar"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karakter at indstille avataren til",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Variant at indstille avataren til",
+                            "parameter_name": "variant"
+                        }
+                    }
+                },
+                "birthday": {
+                    "command_description": "Indstil fødselsdagen for en karakter",
+                    "command_name": "fødselsdag",
+                    "params": {
+                        "birthday": {
+                            "parameter_description": "Fødselsdag, som standard Ingen",
+                            "parameter_name": "fødselsdag"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karakter at indstille fødselsdagen for",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Variant til at indstille fødselsdagen for",
+                            "parameter_name": "variant"
+                        }
+                    }
+                },
+                "color": {
+                    "command_description": "Change the color of a variant."
+                },
+                "create": {
+                    "command_description": "Opret en ny karakter.",
+                    "command_name": "skab",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Billede, som standard Ingen",
+                            "parameter_name": "billede"
+                        },
+                        "prefixes": {
+                            "parameter_description": "Prefixes e.g. A:text, |text|, etc."
+                        },
+                        "proxy": {
+                            "parameter_description": " Proxy til at oprette varianten for",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "delete": {
+                    "command_description": "Slet en karakters variant",
+                    "command_name": "slette",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Proxy for at slette varianten fra",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Variant skal slettes",
+                            "parameter_name": "variant"
+                        }
+                    }
+                },
+                "description": {
+                    "command_description": "Indstil beskrivelsen for en karakter",
+                    "command_name": "beskrivelse",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Tegn at indstille beskrivelsen til",
+                            "parameter_name": "proxy"
+                        },
+                        "text": {
+                            "parameter_description": "Beskrivelse, der skal indstilles for karakteren",
+                            "parameter_name": "tekst"
+                        },
+                        "variant": {
+                            "parameter_description": "Variant at indstille beskrivelsen til",
+                            "parameter_name": "variant"
+                        }
+                    }
+                },
+                "detail": {
+                    "command_description": "Få detaljer om en karakter",
+                    "command_name": "detalje",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Detaljer en proxy. ",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Variant til detaljen",
+                            "parameter_name": "variant"
+                        }
+                    }
+                },
+                "find": {
+                    "command_description": "Find a variant."
+                },
+                "group": {
+                    "command_description": "Indstil gruppen til en karakter",
+                    "command_name": "gruppe",
+                    "params": {
+                        "group": {
+                            "parameter_description": "Gruppe, som standard Ingen",
+                            "parameter_name": "gruppe"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karakter at indstille gruppen til",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Variant at indstille gruppen til",
+                            "parameter_name": "variant"
+                        }
+                    }
+                },
+                "list": {
+                    "command_description": "List all variants."
+                },
+                "local": {
+                    "command_description": "Indstil det lokale for en karakter",
+                    "command_name": "lokal",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Billede, som standard Ingen",
+                            "parameter_name": "billede"
+                        },
+                        "nickname": {
+                            "parameter_description": "Kaldenavn, som standard Ingen",
+                            "parameter_name": "kaldenavn"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karakter at indstille det lokale for",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Variant at indstille det lokale for",
+                            "parameter_name": "variant"
+                        }
+                    }
+                },
+                "nickname": {
+                    "command_description": "Indstil kaldenavnet for en karakter",
+                    "command_name": "kaldenavn",
+                    "params": {
+                        "nickname": {
+                            "parameter_description": "Kaldenavn, der skal angives for karakteren",
+                            "parameter_name": "kaldenavn"
+                        },
+                        "proxy": {
+                            "parameter_description": "Tegn at indstille kaldenavnet for",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Variant at indstille kaldenavnet for",
+                            "parameter_name": "variant"
+                        }
+                    }
+                },
+                "nsfw": {
+                    "command_description": "Indstil om et tegn er NSFW",
+                    "command_name": "nsfw",
+                    "params": {
+                        "nsfw": {
+                            "parameter_description": "NSFW, skifter som standard til modsat værdi",
+                            "parameter_name": "nsfw"
+                        },
+                        "proxy": {
+                            "parameter_description": "Tegn at indstille NSFW for",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Variant at indstille NSFW for",
+                            "parameter_name": "variant"
+                        }
+                    }
+                },
+                "prefix": {
+                    "command_description": "Indstil præfikser for et tegn.",
+                    "command_name": "præfiks",
+                    "params": {
+                        "prefixes": {
+                            "parameter_description": "Præfikser f.eks. ",
+                            "parameter_name": "præfikser"
+                        },
+                        "proxy": {
+                            "parameter_description": "Tegn at indstille præfikset for",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Variant at indstille præfikset for",
+                            "parameter_name": "variant"
+                        }
+                    }
+                },
+                "prune": {
+                    "command_description": "Beskær tegn ubrugte i en vis tid.",
+                    "command_name": "sveske",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "proxy"
+                        },
+                        "time": {
+                            "parameter_description": "Dato at beskære før, som standard Ingen"
+                        }
+                    }
+                },
+                "purge": {
+                    "command_description": "Slet alle dine data (undtagen beskedlogfiler)",
+                    "command_name": "udrensning",
+                    "params": {
+                        "confirmation": {
+                            "parameter_description": "bekræftelse",
+                            "parameter_name": "bekræftelse"
+                        },
+                        "proxy": {
+                            "parameter_description": "proxy",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "read": {
+                    "command_description": "Læs en karakter",
+                    "command_name": "læs",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Karakter at læse varianten af",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Variant at læse",
+                            "parameter_name": "variant"
+                        }
+                    }
+                },
+                "rename": {
+                    "command_description": "Omdøb en karakter",
+                    "command_name": "omdøbe",
+                    "params": {
+                        "name": {
+                            "parameter_description": "Nyt navn til karakteren",
+                            "parameter_name": "navn"
+                        },
+                        "proxy": {
+                            "parameter_description": "Tegn, der skal omdøbes",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Variant at omdøbe",
+                            "parameter_name": "variant"
+                        }
+                    }
+                },
+                "set": {
+                    "command_description": "Set a variant."
+                },
+                "update": {
+                    "command_description": "Opdater en proxy. ",
+                    "command_name": "opdatering",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Billede, som standard Ingen",
+                            "parameter_name": "billede"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karakter at opdatere",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "use": {
+                    "command_description": "Use a variant."
+                }
+            },
+            "group_description": "Variant commands.",
+            "group_name": "var"
+        },
+        "variant-to-proxy": {
+            "command_description": "Konverter en variant til en karakter",
+            "command_name": "variant-til-proxy",
+            "params": {
+                "proxy": {
+                    "parameter_description": "Proxy at konvertere til",
+                    "parameter_name": "proxy"
+                },
+                "variant": {
+                    "parameter_description": "Variant til at konvertere",
+                    "parameter_name": "variant"
+                }
+            }
+        }
+    },
+    "interactions": {
         "context_menu": {
             "command_name": "Fuldmagt"
         }

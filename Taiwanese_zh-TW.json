@@ -1,304 +1,333 @@
 {
     "commands": {
-        "exec": {
-            "command_description": "Execute a command."
+        "afk": {
+            "command_description": "Check if a user is AFK."
         },
-        "proxy": {
-            "command_name": "代理人",
-            "command_description": "禁用伺服器中的字符",
+        "auto": {
+            "command_description": "設定角色的自動",
+            "command_name": "汽車",
             "params": {
-                "enable": {
-                    "parameter_name": "使能夠",
-                    "parameter_description": "啟用或停用字符，預設開關"
+                "proxy": {
+                    "parameter_description": "字符，預設禁用自動",
+                    "parameter_name": "代理人"
                 }
             }
         },
-        "set": {
-            "command_description": "Set a proxy as the current one."
-        },
-        "use": {
+        "avatar": {
+            "command_description": "設定角色的頭像",
+            "command_name": "頭像",
             "params": {
-                "text": {
-                    "parameter_name": "文字",
-                    "parameter_description": "文字"
+                "avatar": {
+                    "parameter_description": "圖片 URL，預設無",
+                    "parameter_name": "頭像"
+                },
+                "proxy": {
+                    "parameter_description": "要設定頭像的角色",
+                    "parameter_name": "代理人"
                 }
             }
         },
-        "say": {
+        "birthday": {
+            "command_description": "設定角色的生日",
+            "command_name": "生日",
             "params": {
-                "text": {
-                    "parameter_name": "文字",
-                    "parameter_description": "文字"
+                "birthday": {
+                    "parameter_description": "生日，預設無",
+                    "parameter_name": "生日"
+                },
+                "proxy": {
+                    "parameter_description": "要設定生日的字符",
+                    "parameter_name": "代理人"
                 }
             }
         },
-        "npc": {
-            "command_name": "npc",
-            "command_description": "建立新的 NPC 訊息",
-            "params": {
-                "franchise": {
-                    "parameter_name": "franchise",
-                    "parameter_description": "特許經營權使用",
-                    "choices": {
-                        "Pokemon": "Pokemon",
-                        "Pokemon Shiny": "Pokemon Shiny",
-                        "Trainer": "Trainer",
-                        "Digimon": "Digimon",
-                        "Palworld": "Palworld",
-                        "D&D": "D&D"
-                    }
-                },
-                "npc": {
-                    "parameter_name": "npc",
-                    "parameter_description": "使用NPC"
-                },
-                "nickname": {
-                    "parameter_name": "暱稱",
-                    "parameter_description": "暱稱，預設無"
-                },
-                "emotion": {
-                    "parameter_name": "情緒",
-                    "parameter_description": "情緒，預設正常",
-                    "choices": {
-                        "Normal": "Normal",
-                        "Happy": "Happy",
-                        "Pain": "Pain",
-                        "Angry": "Angry",
-                        "Worried": "Worried",
-                        "Sad": "Sad",
-                        "Crying": "Crying",
-                        "Shouting": "Shouting",
-                        "TearyEyed": "TearyEyed",
-                        "Determined": "Determined",
-                        "Joyous": "Joyous",
-                        "Inspired": "Inspired",
-                        "Surprised": "Surprised",
-                        "Dizzy": "Dizzy",
-                        "Sigh": "Sigh",
-                        "Stunned": "Stunned",
-                        "Special0": "Special0",
-                        "Special1": "Special1",
-                        "Special2": "Special2",
-                        "Special3": "Special3"
-                    }
-                },
-                "image": {
-                    "parameter_name": "影像",
-                    "parameter_description": "圖片，預設無"
-                },
-                "text": {
-                    "parameter_name": "文字",
-                    "parameter_description": "文字"
-                }
-            }
+        "check_permissions": {
+            "command_description": "檢查機器人是否可以在提供的通道中運行",
+            "command_name": "檢查權限"
+        },
+        "color": {
+            "command_description": "Set a color for a proxy."
         },
         "create": {
-            "command_description": "Create a new proxy.",
+            "command_description": "創建一個新角色。",
+            "command_name": "創造",
             "params": {
+                "image": {
+                    "parameter_description": "圖片，預設無",
+                    "parameter_name": "影像"
+                },
                 "prefixes": {
                     "parameter_description": "Prefixes e.g. A:text, |text|, etc."
                 }
             }
         },
         "delete": {
-            "command_name": "刪除",
             "command_description": "刪除一個角色",
+            "command_name": "刪除",
             "params": {
                 "proxy": {
-                    "parameter_name": "代理人",
-                    "parameter_description": "從中刪除變體的代理"
-                }
-            }
-        },
-        "read": {
-            "command_name": "讀",
-            "command_description": "讀取一個字符",
-            "params": {
-                "proxy": {
-                    "parameter_name": "代理人",
-                    "parameter_description": "從中讀取變體的字符"
-                }
-            }
-        },
-        "nickname": {
-            "command_name": "暱稱",
-            "command_description": "為角色設定暱稱",
-            "params": {
-                "proxy": {
-                    "parameter_name": "代理人",
-                    "parameter_description": "要為其設定暱稱的字符"
-                },
-                "nickname": {
-                    "parameter_name": "暱稱",
-                    "parameter_description": "為角色設定的暱稱"
-                }
-            }
-        },
-        "local": {
-            "command_name": "當地的",
-            "command_description": "設定角色的本地",
-            "params": {
-                "proxy": {
-                    "parameter_name": "代理人",
-                    "parameter_description": "要設定本地的字符"
-                },
-                "avatar": {
-                    "parameter_name": "影像",
-                    "parameter_description": "圖片，預設無"
-                },
-                "nickname": {
-                    "parameter_name": "暱稱",
-                    "parameter_description": "暱稱，預設無"
-                }
-            }
-        },
-        "avatar": {
-            "command_name": "頭像",
-            "command_description": "設定角色的頭像",
-            "params": {
-                "proxy": {
-                    "parameter_name": "代理人",
-                    "parameter_description": "要設定頭像的角色"
-                },
-                "avatar": {
-                    "parameter_name": "頭像",
-                    "parameter_description": "圖片 URL，預設無"
-                }
-            }
-        },
-        "prefix": {
-            "command_name": "字首",
-            "command_description": "設定字元的前綴。",
-            "params": {
-                "proxy": {
-                    "parameter_name": "代理人",
-                    "parameter_description": "要設定前綴的字符"
-                },
-                "prefixes": {
-                    "parameter_name": "前綴",
-                    "parameter_description": "前綴例如"
-                }
-            }
-        },
-        "birthday": {
-            "command_name": "生日",
-            "command_description": "設定角色的生日",
-            "params": {
-                "proxy": {
-                    "parameter_name": "代理人",
-                    "parameter_description": "要設定生日的字符"
-                },
-                "birthday": {
-                    "parameter_name": "生日",
-                    "parameter_description": "生日，預設無"
+                    "parameter_description": "從中刪除變體的代理",
+                    "parameter_name": "代理人"
                 }
             }
         },
         "description": {
-            "command_name": "描述",
             "command_description": "設定角色的描述",
+            "command_name": "描述",
             "params": {
                 "proxy": {
-                    "parameter_name": "代理人",
-                    "parameter_description": "設定描述的字符"
+                    "parameter_description": "設定描述的字符",
+                    "parameter_name": "代理人"
                 },
                 "text": {
-                    "parameter_name": "文字",
-                    "parameter_description": "為角色設定的描述"
+                    "parameter_description": "為角色設定的描述",
+                    "parameter_name": "文字"
                 }
             }
         },
-        "rename": {
-            "command_name": "改名",
-            "command_description": "重新命名角色",
+        "detail": {
+            "command_description": "獲取角色的詳細信息",
+            "command_name": "細節",
             "params": {
                 "proxy": {
-                    "parameter_name": "代理人",
-                    "parameter_description": "要重新命名的字符"
+                    "parameter_description": "詳細說明代理。",
+                    "parameter_name": "代理人"
+                }
+            }
+        },
+        "exec": {
+            "command_description": "Execute a command."
+        },
+        "export": {
+            "command_description": "將角色匯出到 JSON 文件",
+            "command_name": "出口",
+            "params": {
+                "format": {
+                    "choices": {
+                        "Default": "Default",
+                        "PluralKit": "PluralKit",
+                        "Tupperbox": "Tupperbox"
+                    },
+                    "parameter_description": "導出格式，預設為 JSON",
+                    "parameter_name": "格式"
                 },
-                "name": {
-                    "parameter_name": "姓名",
-                    "parameter_description": "角色的新名字"
+                "new_token": {
+                    "parameter_description": "如果你想產生一個新的令牌",
+                    "parameter_name": "新令牌"
                 }
             }
         },
         "group": {
-            "command_name": "團體",
             "command_description": "為角色設定組",
-            "params": {
-                "proxy": {
-                    "parameter_name": "代理人",
-                    "parameter_description": "要為其設定群組的字符"
-                },
-                "group": {
-                    "parameter_name": "團體",
-                    "parameter_description": "群組，預設無"
-                }
-            }
-        },
-        "nsfw": {
-            "command_name": "nsfw",
-            "command_description": "設定角色是否為 NSFW",
-            "params": {
-                "proxy": {
-                    "parameter_name": "代理人",
-                    "parameter_description": "設定 NSFW 的字符"
-                },
-                "nsfw": {
-                    "parameter_name": "nsfw",
-                    "parameter_description": "NSFW，預設切換到相反的值"
-                }
-            }
-        },
-        "auto": {
-            "command_name": "汽車",
-            "command_description": "設定角色的自動",
-            "params": {
-                "proxy": {
-                    "parameter_name": "代理人",
-                    "parameter_description": "字符，預設禁用自動"
-                }
-            }
-        },
-        "list": {
-            "command_name": "清單",
-            "command_description": "列出所有字符 ",
+            "command_name": "團體",
             "params": {
                 "group": {
-                    "parameter_name": "團體",
-                    "parameter_description": "列出字元的組"
+                    "parameter_description": "群組，預設無",
+                    "parameter_name": "團體"
+                },
+                "proxy": {
+                    "parameter_description": "要為其設定群組的字符",
+                    "parameter_name": "代理人"
+                }
+            }
+        },
+        "help": {
+            "command_description": "內建機器人幫助",
+            "command_name": "幫助",
+            "params": {
+                "search": {
+                    "parameter_description": "查找詞",
+                    "parameter_name": "搜尋"
+                }
+            }
+        },
+        "import": {
+            "command_description": "從檔案或令牌匯入您的角色",
+            "command_name": "進口",
+            "params": {
+                "data": {
+                    "parameter_description": "要導入的文件",
+                    "parameter_name": "數據"
+                },
+                "deleting_from_token": {
+                    "parameter_description": "從令牌中刪除字符",
+                    "parameter_name": "從令牌中刪除"
+                },
+                "token": {
+                    "parameter_description": "用於導入的令牌",
+                    "parameter_name": "代幣"
                 }
             }
         },
         "latch": {
-            "command_name": "閂鎖",
             "command_description": "啟用或停用鎖存模式",
+            "command_name": "閂鎖",
             "params": {
-                "enable": {
-                    "parameter_description": "啟用或停用鎖存模式"
-                },
                 "auto_remove": {
                     "parameter_description": "是否保持目前通道自動，預設True"
+                },
+                "enable": {
+                    "parameter_description": "啟用或停用鎖存模式"
                 }
             }
         },
-        "export": {
-            "command_name": "出口",
-            "command_description": "將角色匯出到 JSON 文件",
+        "list": {
+            "command_description": "列出所有字符 ",
+            "command_name": "清單",
             "params": {
-                "format": {
-                    "parameter_name": "格式",
-                    "parameter_description": "導出格式，預設為 JSON"
+                "group": {
+                    "parameter_description": "列出字元的組",
+                    "parameter_name": "團體"
+                }
+            }
+        },
+        "local": {
+            "command_description": "設定角色的本地",
+            "command_name": "當地的",
+            "params": {
+                "avatar": {
+                    "parameter_description": "圖片，預設無",
+                    "parameter_name": "影像"
                 },
-                "new_token": {
-                    "parameter_name": "新令牌",
-                    "parameter_description": "如果你想產生一個新的令牌"
+                "nickname": {
+                    "parameter_description": "暱稱，預設無",
+                    "parameter_name": "暱稱"
+                },
+                "proxy": {
+                    "parameter_description": "要設定本地的字符",
+                    "parameter_name": "代理人"
+                }
+            }
+        },
+        "nickname": {
+            "command_description": "為角色設定暱稱",
+            "command_name": "暱稱",
+            "params": {
+                "nickname": {
+                    "parameter_description": "為角色設定的暱稱",
+                    "parameter_name": "暱稱"
+                },
+                "proxy": {
+                    "parameter_description": "要為其設定暱稱的字符",
+                    "parameter_name": "代理人"
+                }
+            }
+        },
+        "npc": {
+            "command_description": "建立新的 NPC 訊息",
+            "command_name": "npc",
+            "params": {
+                "emotion": {
+                    "choices": {
+                        "Angry": "Angry",
+                        "Crying": "Crying",
+                        "Determined": "Determined",
+                        "Dizzy": "Dizzy",
+                        "Happy": "Happy",
+                        "Inspired": "Inspired",
+                        "Joyous": "Joyous",
+                        "Normal": "Normal",
+                        "Pain": "Pain",
+                        "Sad": "Sad",
+                        "Shouting": "Shouting",
+                        "Sigh": "Sigh",
+                        "Special0": "Special0",
+                        "Special1": "Special1",
+                        "Special2": "Special2",
+                        "Special3": "Special3",
+                        "Stunned": "Stunned",
+                        "Surprised": "Surprised",
+                        "TearyEyed": "TearyEyed",
+                        "Worried": "Worried"
+                    },
+                    "parameter_description": "情緒，預設正常",
+                    "parameter_name": "情緒"
+                },
+                "franchise": {
+                    "choices": {
+                        "D&D": "D&D",
+                        "Digimon": "Digimon",
+                        "Palworld": "Palworld",
+                        "Pokemon": "Pokemon",
+                        "Pokemon Shiny": "Pokemon Shiny",
+                        "Trainer": "Trainer"
+                    },
+                    "parameter_description": "特許經營權使用",
+                    "parameter_name": "特許經營權"
+                },
+                "image": {
+                    "parameter_description": "圖片，預設無",
+                    "parameter_name": "影像"
+                },
+                "nickname": {
+                    "parameter_description": "暱稱，預設無",
+                    "parameter_name": "暱稱"
+                },
+                "npc": {
+                    "parameter_description": "使用NPC",
+                    "parameter_name": "npc"
+                },
+                "text": {
+                    "parameter_description": "文字",
+                    "parameter_name": "文字"
+                }
+            }
+        },
+        "nsfw": {
+            "command_description": "設定角色是否為 NSFW",
+            "command_name": "nsfw",
+            "params": {
+                "nsfw": {
+                    "parameter_description": "NSFW，預設切換到相反的值",
+                    "parameter_name": "nsfw"
+                },
+                "proxy": {
+                    "parameter_description": "設定 NSFW 的字符",
+                    "parameter_name": "代理人"
+                }
+            }
+        },
+        "prefix": {
+            "command_description": "設定字元的前綴。",
+            "command_name": "字首",
+            "params": {
+                "prefixes": {
+                    "parameter_description": "前綴例如",
+                    "parameter_name": "前綴"
+                },
+                "proxy": {
+                    "parameter_description": "要設定前綴的字符",
+                    "parameter_name": "代理人"
+                }
+            }
+        },
+        "proxy": {
+            "command_description": "禁用伺服器中的字符",
+            "command_name": "代理人",
+            "params": {
+                "enable": {
+                    "parameter_description": "啟用或停用字符，預設開關",
+                    "parameter_name": "使能夠"
+                }
+            }
+        },
+        "proxy-to-variant": {
+            "command_description": "將字元轉換為變體",
+            "command_name": "代理到變體",
+            "params": {
+                "base": {
+                    "parameter_description": "角色的新基礎",
+                    "parameter_name": "根據"
+                },
+                "original": {
+                    "parameter_description": "要轉換的字符",
+                    "parameter_name": "原來的"
                 }
             }
         },
         "prune": {
-            "command_name": "修剪",
             "command_description": "修剪一段時間內未使用的字元。",
+            "command_name": "修剪",
             "params": {
                 "time": {
                     "parameter_description": "之前修剪的日期，預設無"
@@ -306,656 +335,674 @@
             }
         },
         "purge": {
-            "command_name": "清除",
             "command_description": "清除所有資料（訊息日誌除外）",
+            "command_name": "清除",
             "params": {
                 "confirmation": {
-                    "parameter_name": "確認",
-                    "parameter_description": "確認"
+                    "parameter_description": "確認",
+                    "parameter_name": "確認"
                 }
             }
         },
-        "proxy-to-variant": {
-            "command_name": "代理到變體",
-            "command_description": "將字元轉換為變體",
-            "params": {
-                "original": {
-                    "parameter_name": "原來的",
-                    "parameter_description": "要轉換的字符"
-                },
-                "base": {
-                    "parameter_name": "根據",
-                    "parameter_description": "角色的新基礎"
-                }
-            }
-        },
-        "variant-to-proxy": {
-            "command_name": "變體到代理",
-            "command_description": "將變體轉換為字符",
+        "read": {
+            "command_description": "讀取一個字符",
+            "command_name": "讀",
             "params": {
                 "proxy": {
-                    "parameter_name": "代理人",
-                    "parameter_description": "要轉換為的代理"
-                },
-                "variant": {
-                    "parameter_name": "變體",
-                    "parameter_description": "要轉換的變體"
+                    "parameter_description": "從中讀取變體的字符",
+                    "parameter_name": "代理人"
                 }
             }
         },
-        "update": {
-            "command_name": "更新",
-            "command_description": "更新代理程式。",
+        "rename": {
+            "command_description": "重新命名角色",
+            "command_name": "改名",
             "params": {
+                "name": {
+                    "parameter_description": "角色的新名字",
+                    "parameter_name": "姓名"
+                },
                 "proxy": {
-                    "parameter_name": "代理人",
-                    "parameter_description": "要更新的字符"
-                },
-                "image": {
-                    "parameter_name": "影像",
-                    "parameter_description": "圖片，預設無"
+                    "parameter_description": "要重新命名的字符",
+                    "parameter_name": "代理人"
                 }
             }
-        },
-        "detail": {
-            "command_name": "細節",
-            "command_description": "獲取角色的詳細信息",
-            "params": {
-                "proxy": {
-                    "parameter_name": "代理人",
-                    "parameter_description": "詳細說明代理。"
-                }
-            }
-        },
-        "import": {
-            "command_name": "進口",
-            "command_description": "從檔案或令牌匯入您的角色",
-            "params": {
-                "data": {
-                    "parameter_name": "數據",
-                    "parameter_description": "要導入的文件"
-                },
-                "token": {
-                    "parameter_name": "代幣",
-                    "parameter_description": "用於導入的令牌"
-                },
-                "deleting_from_token": {
-                    "parameter_name": "從令牌中刪除",
-                    "parameter_description": "從令牌中刪除字符"
-                }
-            }
-        },
-        "var": {
-            "group_name": "變數",
-            "group_description": "Variant commands.",
-            "groupset": {
-                "command_description": "Set a variant."
-            },
-            "groupuse": {
-                "command_description": "Use a variant."
-            },
-            "groupcreate": {
-                "command_name": "創造",
-                "command_description": "創建一個新角色。",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "代理人",
-                        "parameter_description": " 為其創建變體的代理"
-                    },
-                    "image": {
-                        "parameter_name": "影像",
-                        "parameter_description": "圖片，預設無"
-                    },
-                    "prefixes": {
-                        "parameter_description": "Prefixes e.g. A:text, |text|, etc."
-                    }
-                }
-            },
-            "groupdelete": {
-                "command_name": "刪除",
-                "command_description": "刪除角色的變體",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "代理人",
-                        "parameter_description": "從中刪除變體的代理"
-                    },
-                    "variant": {
-                        "parameter_name": "變體",
-                        "parameter_description": "要刪除的變體"
-                    }
-                }
-            },
-            "groupread": {
-                "command_name": "讀",
-                "command_description": "讀取一個字符",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "代理人",
-                        "parameter_description": "從中讀取變體的字符"
-                    },
-                    "variant": {
-                        "parameter_name": "變體",
-                        "parameter_description": "閱讀變體"
-                    }
-                }
-            },
-            "groupnickname": {
-                "command_name": "暱稱",
-                "command_description": "為角色設定暱稱",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "代理人",
-                        "parameter_description": "要為其設定暱稱的字符"
-                    },
-                    "variant": {
-                        "parameter_name": "變體",
-                        "parameter_description": "設定暱稱的變體"
-                    },
-                    "nickname": {
-                        "parameter_name": "暱稱",
-                        "parameter_description": "為角色設定的暱稱"
-                    }
-                }
-            },
-            "grouplocal": {
-                "command_name": "當地的",
-                "command_description": "設定角色的本地",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "代理人",
-                        "parameter_description": "要設定本地的字符"
-                    },
-                    "variant": {
-                        "parameter_name": "變體",
-                        "parameter_description": "設定本地變數"
-                    },
-                    "avatar": {
-                        "parameter_name": "影像",
-                        "parameter_description": "圖片，預設無"
-                    },
-                    "nickname": {
-                        "parameter_name": "暱稱",
-                        "parameter_description": "暱稱，預設無"
-                    }
-                }
-            },
-            "groupprefix": {
-                "command_name": "字首",
-                "command_description": "設定字元的前綴。",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "代理人",
-                        "parameter_description": "要設定前綴的字符"
-                    },
-                    "variant": {
-                        "parameter_name": "變體",
-                        "parameter_description": "設定前綴的變體"
-                    },
-                    "prefixes": {
-                        "parameter_name": "前綴",
-                        "parameter_description": "前綴例如"
-                    }
-                }
-            },
-            "groupbirthday": {
-                "command_name": "生日",
-                "command_description": "設定角色的生日",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "代理人",
-                        "parameter_description": "要設定生日的字符"
-                    },
-                    "variant": {
-                        "parameter_name": "變體",
-                        "parameter_description": "設定生日的變體"
-                    },
-                    "birthday": {
-                        "parameter_name": "生日",
-                        "parameter_description": "生日，預設無"
-                    }
-                }
-            },
-            "groupdescription": {
-                "command_name": "描述",
-                "command_description": "設定角色的描述",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "代理人",
-                        "parameter_description": "設定描述的字符"
-                    },
-                    "variant": {
-                        "parameter_name": "變體",
-                        "parameter_description": "設定描述的變體"
-                    },
-                    "text": {
-                        "parameter_name": "文字",
-                        "parameter_description": "為角色設定的描述"
-                    }
-                }
-            },
-            "grouprename": {
-                "command_name": "改名",
-                "command_description": "重新命名角色",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "代理人",
-                        "parameter_description": "要重新命名的字符"
-                    },
-                    "variant": {
-                        "parameter_name": "變體",
-                        "parameter_description": "要重新命名的變體"
-                    },
-                    "name": {
-                        "parameter_name": "姓名",
-                        "parameter_description": "角色的新名字"
-                    }
-                }
-            },
-            "groupgroup": {
-                "command_name": "團體",
-                "command_description": "為角色設定組",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "代理人",
-                        "parameter_description": "要為其設定群組的字符"
-                    },
-                    "variant": {
-                        "parameter_name": "變體",
-                        "parameter_description": "設定組的變體"
-                    },
-                    "group": {
-                        "parameter_name": "團體",
-                        "parameter_description": "群組，預設無"
-                    }
-                }
-            },
-            "groupnsfw": {
-                "command_name": "nsfw",
-                "command_description": "設定角色是否為 NSFW",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "代理人",
-                        "parameter_description": "設定 NSFW 的字符"
-                    },
-                    "variant": {
-                        "parameter_name": "變體",
-                        "parameter_description": "設定 NSFW 的變體"
-                    },
-                    "nsfw": {
-                        "parameter_name": "nsfw",
-                        "parameter_description": "NSFW，預設切換到相反的值"
-                    }
-                }
-            },
-            "groupauto": {
-                "command_name": "汽車",
-                "command_description": "設定角色的自動",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "代理人",
-                        "parameter_description": "字符，預設禁用自動"
-                    },
-                    "variant": {
-                        "parameter_name": "變體",
-                        "parameter_description": "設定自動的變體"
-                    }
-                }
-            },
-            "groupavatar": {
-                "command_name": "頭像",
-                "command_description": "設定角色的頭像",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "代理人",
-                        "parameter_description": "要設定頭像的角色"
-                    },
-                    "variant": {
-                        "parameter_name": "變體",
-                        "parameter_description": "設定頭像的變體"
-                    },
-                    "avatar": {
-                        "parameter_name": "頭像",
-                        "parameter_description": "圖片 URL，預設無"
-                    }
-                }
-            },
-            "grouplist": {
-                "command_description": "List all variants."
-            },
-            "groupfind": {
-                "command_description": "Find a variant."
-            },
-            "groupupdate": {
-                "command_name": "更新",
-                "command_description": "更新代理程式。",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "代理人",
-                        "parameter_description": "要更新的字符"
-                    },
-                    "image": {
-                        "parameter_name": "影像",
-                        "parameter_description": "圖片，預設無"
-                    }
-                }
-            },
-            "groupdetail": {
-                "command_name": "細節",
-                "command_description": "獲取角色的詳細信息",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "代理人",
-                        "parameter_description": "詳細說明代理。"
-                    },
-                    "variant": {
-                        "parameter_name": "變體",
-                        "parameter_description": "細節變化"
-                    }
-                }
-            },
-            "groupprune": {
-                "command_name": "修剪",
-                "command_description": "修剪一段時間內未使用的字元。",
-                "params": {
-                    "proxy": {
-                        "parameter_description": "代理人"
-                    },
-                    "time": {
-                        "parameter_description": "之前修剪的日期，預設無"
-                    }
-                }
-            },
-            "grouppurge": {
-                "command_name": "清除",
-                "command_description": "清除所有資料（訊息日誌除外）",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "代理人",
-                        "parameter_description": "代理人"
-                    },
-                    "confirmation": {
-                        "parameter_name": "確認",
-                        "parameter_description": "確認"
-                    }
-                }
-            }
-        },
-        "shared": {
-            "group_description": "Shared proxy commands.",
-            "groupset": {
-                "command_description": "Set a proxy as the current one."
-            },
-            "groupcreate": {
-                "command_name": "創造",
-                "command_description": "創建一個新角色。",
-                "params": {
-                    "image": {
-                        "parameter_name": "影像",
-                        "parameter_description": "圖片，預設無"
-                    }
-                }
-            },
-            "groupdelete": {
-                "command_name": "刪除",
-                "command_description": "刪除一個角色",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "代理人",
-                        "parameter_description": "從中刪除變體的代理"
-                    }
-                }
-            },
-            "groupread": {
-                "command_name": "讀",
-                "command_description": "讀取一個字符",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "代理人",
-                        "parameter_description": "從中讀取變體的字符"
-                    }
-                }
-            },
-            "groupauto": {
-                "command_name": "汽車",
-                "command_description": "設定角色的自動",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "代理人",
-                        "parameter_description": "字符，預設禁用自動"
-                    }
-                }
-            },
-            "groupprefix": {
-                "command_name": "字首",
-                "command_description": "設定字元的前綴。",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "代理人",
-                        "parameter_description": "要設定前綴的字符"
-                    },
-                    "prefixes": {
-                        "parameter_name": "前綴",
-                        "parameter_description": "前綴例如"
-                    }
-                }
-            },
-            "groupbirthday": {
-                "command_name": "生日",
-                "command_description": "設定角色的生日",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "代理人",
-                        "parameter_description": "要設定生日的字符"
-                    },
-                    "birthday": {
-                        "parameter_name": "生日",
-                        "parameter_description": "生日，預設無"
-                    }
-                }
-            },
-            "groupdescription": {
-                "command_name": "描述",
-                "command_description": "設定角色的描述",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "代理人",
-                        "parameter_description": "設定描述的字符"
-                    },
-                    "text": {
-                        "parameter_name": "文字",
-                        "parameter_description": "為角色設定的描述"
-                    }
-                }
-            },
-            "grouprename": {
-                "command_name": "改名",
-                "command_description": "重新命名角色",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "代理人",
-                        "parameter_description": "要重新命名的字符"
-                    },
-                    "name": {
-                        "parameter_name": "姓名",
-                        "parameter_description": "角色的新名字"
-                    }
-                }
-            },
-            "groupnickname": {
-                "command_name": "暱稱",
-                "command_description": "為角色設定暱稱",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "代理人",
-                        "parameter_description": "要為其設定暱稱的字符"
-                    },
-                    "nickname": {
-                        "parameter_name": "暱稱",
-                        "parameter_description": "為角色設定的暱稱"
-                    }
-                }
-            },
-            "groupgroup": {
-                "command_name": "團體",
-                "command_description": "為角色設定組",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "代理人",
-                        "parameter_description": "要為其設定群組的字符"
-                    },
-                    "group": {
-                        "parameter_name": "團體",
-                        "parameter_description": "群組，預設無"
-                    }
-                }
-            },
-            "groupnsfw": {
-                "command_name": "nsfw",
-                "command_description": "設定角色是否為 NSFW",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "代理人",
-                        "parameter_description": "設定 NSFW 的字符"
-                    },
-                    "nsfw": {
-                        "parameter_name": "nsfw",
-                        "parameter_description": "NSFW，預設切換到相反的值"
-                    }
-                }
-            },
-            "groupavatar": {
-                "command_name": "頭像",
-                "command_description": "設定角色的頭像",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "代理人",
-                        "parameter_description": "要設定頭像的角色"
-                    },
-                    "avatar": {
-                        "parameter_name": "頭像",
-                        "parameter_description": "圖片 URL，預設無"
-                    }
-                }
-            },
-            "groupimage": {
-                "params": {
-                    "proxy": {
-                        "parameter_name": "代理人",
-                        "parameter_description": "要設定頭像的角色"
-                    },
-                    "avatar": {
-                        "parameter_name": "頭像",
-                        "parameter_description": "圖片 URL，預設無"
-                    }
-                }
-            },
-            "grouplocal": {
-                "command_name": "當地的",
-                "command_description": "設定角色的本地",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "代理人",
-                        "parameter_description": "要設定本地的字符"
-                    },
-                    "avatar": {
-                        "parameter_name": "影像",
-                        "parameter_description": "圖片，預設無"
-                    },
-                    "nickname": {
-                        "parameter_name": "暱稱",
-                        "parameter_description": "暱稱，預設無"
-                    }
-                }
-            },
-            "groupupdate": {
-                "command_name": "更新",
-                "command_description": "更新代理程式。",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "代理人",
-                        "parameter_description": "要更新的字符"
-                    },
-                    "image": {
-                        "parameter_name": "影像",
-                        "parameter_description": "圖片，預設無"
-                    }
-                }
-            },
-            "groupdetail": {
-                "command_name": "細節",
-                "command_description": "獲取角色的詳細信息",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "代理人",
-                        "parameter_description": "詳細說明代理。"
-                    }
-                }
-            },
-            "groupprune": {
-                "command_name": "修剪",
-                "command_description": "修剪一段時間內未使用的字元。",
-                "params": {
-                    "time": {
-                        "parameter_description": "之前修剪的日期，預設無"
-                    }
-                }
-            },
-            "grouppurge": {
-                "command_name": "清除",
-                "command_description": "清除所有資料（訊息日誌除外）",
-                "params": {
-                    "confirmation": {
-                        "parameter_name": "確認",
-                        "parameter_description": "確認"
-                    }
-                }
-            }
-        },
-        "check_permissions": {
-            "command_name": "檢查權限",
-            "command_description": "檢查機器人是否可以在提供的通道中運行"
         },
         "roll": {
             "command_description": "Roll a dice."
         },
-        "afk": {
-            "command_description": "Check if a user is AFK."
-        },
-        "help": {
-            "command_name": "幫助",
-            "command_description": "內建機器人幫助",
+        "say": {
+            "command_description": "Say something.",
             "params": {
-                "search": {
-                    "parameter_name": "搜尋",
-                    "parameter_description": "查找詞"
+                "text": {
+                    "parameter_description": "文字",
+                    "parameter_name": "文字"
                 }
             }
         },
         "server_wiki": {
-            "command_name": "伺服器維基",
             "command_description": "使用者定義的伺服器維基",
+            "command_name": "伺服器維基",
             "params": {
                 "search": {
-                    "parameter_name": "搜尋",
-                    "parameter_description": "查找詞"
+                    "parameter_description": "查找詞",
+                    "parameter_name": "搜尋"
                 }
             }
         },
+        "set": {
+            "command_description": "Set a proxy as the current one."
+        },
         "settings": {
-            "command_name": "設定",
             "command_description": "機器人設定",
+            "command_name": "設定",
             "params": {
                 "menu": {
-                    "parameter_name": "選單",
-                    "parameter_description": "開啟設定選單",
                     "choices": {
-                        "Server": "伺服器",
-                        "Member": "成員",
-                        "User": "使用者"
+                        "Member": "Member",
+                        "Server": "Server",
+                        "User": "User"
+                    },
+                    "parameter_description": "開啟設定選單",
+                    "parameter_name": "選單"
+                }
+            }
+        },
+        "shared": {
+            "group": {
+                "auto": {
+                    "command_description": "設定角色的自動",
+                    "command_name": "汽車",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "字符，預設禁用自動",
+                            "parameter_name": "代理人"
+                        }
+                    }
+                },
+                "avatar": {
+                    "command_description": "設定角色的頭像",
+                    "command_name": "頭像",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "圖片 URL，預設無",
+                            "parameter_name": "頭像"
+                        },
+                        "proxy": {
+                            "parameter_description": "要設定頭像的角色",
+                            "parameter_name": "代理人"
+                        }
+                    }
+                },
+                "birthday": {
+                    "command_description": "設定角色的生日",
+                    "command_name": "生日",
+                    "params": {
+                        "birthday": {
+                            "parameter_description": "生日，預設無",
+                            "parameter_name": "生日"
+                        },
+                        "proxy": {
+                            "parameter_description": "要設定生日的字符",
+                            "parameter_name": "代理人"
+                        }
+                    }
+                },
+                "color": {
+                    "command_description": "Set the color for a proxy."
+                },
+                "create": {
+                    "command_description": "創建一個新角色。",
+                    "command_name": "創造",
+                    "params": {
+                        "image": {
+                            "parameter_description": "圖片，預設無",
+                            "parameter_name": "影像"
+                        }
+                    }
+                },
+                "delete": {
+                    "command_description": "刪除一個角色",
+                    "command_name": "刪除",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "從中刪除變體的代理",
+                            "parameter_name": "代理人"
+                        }
+                    }
+                },
+                "description": {
+                    "command_description": "設定角色的描述",
+                    "command_name": "描述",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "設定描述的字符",
+                            "parameter_name": "代理人"
+                        },
+                        "text": {
+                            "parameter_description": "為角色設定的描述",
+                            "parameter_name": "文字"
+                        }
+                    }
+                },
+                "detail": {
+                    "command_description": "獲取角色的詳細信息",
+                    "command_name": "細節",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "詳細說明代理。",
+                            "parameter_name": "代理人"
+                        }
+                    }
+                },
+                "find": {
+                    "command_description": "Find a proxy."
+                },
+                "group": {
+                    "command_description": "為角色設定組",
+                    "command_name": "團體",
+                    "params": {
+                        "group": {
+                            "parameter_description": "群組，預設無",
+                            "parameter_name": "團體"
+                        },
+                        "proxy": {
+                            "parameter_description": "要為其設定群組的字符",
+                            "parameter_name": "代理人"
+                        }
+                    }
+                },
+                "image": {
+                    "command_description": "Set the image for a proxy.",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "圖片 URL，預設無",
+                            "parameter_name": "頭像"
+                        },
+                        "proxy": {
+                            "parameter_description": "要設定頭像的角色",
+                            "parameter_name": "代理人"
+                        }
+                    }
+                },
+                "list": {
+                    "command_description": "List all proxies."
+                },
+                "local": {
+                    "command_description": "設定角色的本地",
+                    "command_name": "當地的",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "圖片，預設無",
+                            "parameter_name": "影像"
+                        },
+                        "nickname": {
+                            "parameter_description": "暱稱，預設無",
+                            "parameter_name": "暱稱"
+                        },
+                        "proxy": {
+                            "parameter_description": "要設定本地的字符",
+                            "parameter_name": "代理人"
+                        }
+                    }
+                },
+                "nickname": {
+                    "command_description": "為角色設定暱稱",
+                    "command_name": "暱稱",
+                    "params": {
+                        "nickname": {
+                            "parameter_description": "為角色設定的暱稱",
+                            "parameter_name": "暱稱"
+                        },
+                        "proxy": {
+                            "parameter_description": "要為其設定暱稱的字符",
+                            "parameter_name": "代理人"
+                        }
+                    }
+                },
+                "nsfw": {
+                    "command_description": "設定角色是否為 NSFW",
+                    "command_name": "nsfw",
+                    "params": {
+                        "nsfw": {
+                            "parameter_description": "NSFW，預設切換到相反的值",
+                            "parameter_name": "nsfw"
+                        },
+                        "proxy": {
+                            "parameter_description": "設定 NSFW 的字符",
+                            "parameter_name": "代理人"
+                        }
+                    }
+                },
+                "prefix": {
+                    "command_description": "設定字元的前綴。",
+                    "command_name": "字首",
+                    "params": {
+                        "prefixes": {
+                            "parameter_description": "前綴例如",
+                            "parameter_name": "前綴"
+                        },
+                        "proxy": {
+                            "parameter_description": "要設定前綴的字符",
+                            "parameter_name": "代理人"
+                        }
+                    }
+                },
+                "prune": {
+                    "command_description": "修剪一段時間內未使用的字元。",
+                    "command_name": "修剪",
+                    "params": {
+                        "time": {
+                            "parameter_description": "之前修剪的日期，預設無"
+                        }
+                    }
+                },
+                "purge": {
+                    "command_description": "清除所有資料（訊息日誌除外）",
+                    "command_name": "清除",
+                    "params": {
+                        "confirmation": {
+                            "parameter_description": "確認",
+                            "parameter_name": "確認"
+                        }
+                    }
+                },
+                "read": {
+                    "command_description": "讀取一個字符",
+                    "command_name": "讀",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "從中讀取變體的字符",
+                            "parameter_name": "代理人"
+                        }
+                    }
+                },
+                "rename": {
+                    "command_description": "重新命名角色",
+                    "command_name": "改名",
+                    "params": {
+                        "name": {
+                            "parameter_description": "角色的新名字",
+                            "parameter_name": "姓名"
+                        },
+                        "proxy": {
+                            "parameter_description": "要重新命名的字符",
+                            "parameter_name": "代理人"
+                        }
+                    }
+                },
+                "set": {
+                    "command_description": "Set a proxy as the current one."
+                },
+                "update": {
+                    "command_description": "更新代理程式。",
+                    "command_name": "更新",
+                    "params": {
+                        "image": {
+                            "parameter_description": "圖片，預設無",
+                            "parameter_name": "影像"
+                        },
+                        "proxy": {
+                            "parameter_description": "要更新的字符",
+                            "parameter_name": "代理人"
+                        }
+                    }
+                },
+                "use": {
+                    "command_description": "Use a proxy."
+                }
+            },
+            "group_description": "Shared proxy commands."
+        },
+        "store": {
+            "params": {
+                "storage": {
+                    "choices": {
+                        "Global": "Global",
+                        "Local": "Local"
                     }
                 }
             }
         },
+        "update": {
+            "command_description": "更新代理程式。",
+            "command_name": "更新",
+            "params": {
+                "image": {
+                    "parameter_description": "圖片，預設無",
+                    "parameter_name": "影像"
+                },
+                "proxy": {
+                    "parameter_description": "要更新的字符",
+                    "parameter_name": "代理人"
+                }
+            }
+        },
+        "use": {
+            "command_description": "Use a proxy.",
+            "params": {
+                "text": {
+                    "parameter_description": "文字",
+                    "parameter_name": "文字"
+                }
+            }
+        },
+        "var": {
+            "group": {
+                "auto": {
+                    "command_description": "設定角色的自動",
+                    "command_name": "汽車",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "字符，預設禁用自動",
+                            "parameter_name": "代理人"
+                        },
+                        "variant": {
+                            "parameter_description": "設定自動的變體",
+                            "parameter_name": "變體"
+                        }
+                    }
+                },
+                "avatar": {
+                    "command_description": "設定角色的頭像",
+                    "command_name": "頭像",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "圖片 URL，預設無",
+                            "parameter_name": "頭像"
+                        },
+                        "proxy": {
+                            "parameter_description": "要設定頭像的角色",
+                            "parameter_name": "代理人"
+                        },
+                        "variant": {
+                            "parameter_description": "設定頭像的變體",
+                            "parameter_name": "變體"
+                        }
+                    }
+                },
+                "birthday": {
+                    "command_description": "設定角色的生日",
+                    "command_name": "生日",
+                    "params": {
+                        "birthday": {
+                            "parameter_description": "生日，預設無",
+                            "parameter_name": "生日"
+                        },
+                        "proxy": {
+                            "parameter_description": "要設定生日的字符",
+                            "parameter_name": "代理人"
+                        },
+                        "variant": {
+                            "parameter_description": "設定生日的變體",
+                            "parameter_name": "變體"
+                        }
+                    }
+                },
+                "color": {
+                    "command_description": "Change the color of a variant."
+                },
+                "create": {
+                    "command_description": "創建一個新角色。",
+                    "command_name": "創造",
+                    "params": {
+                        "image": {
+                            "parameter_description": "圖片，預設無",
+                            "parameter_name": "影像"
+                        },
+                        "prefixes": {
+                            "parameter_description": "Prefixes e.g. A:text, |text|, etc."
+                        },
+                        "proxy": {
+                            "parameter_description": " 為其創建變體的代理",
+                            "parameter_name": "代理人"
+                        }
+                    }
+                },
+                "delete": {
+                    "command_description": "刪除角色的變體",
+                    "command_name": "刪除",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "從中刪除變體的代理",
+                            "parameter_name": "代理人"
+                        },
+                        "variant": {
+                            "parameter_description": "要刪除的變體",
+                            "parameter_name": "變體"
+                        }
+                    }
+                },
+                "description": {
+                    "command_description": "設定角色的描述",
+                    "command_name": "描述",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "設定描述的字符",
+                            "parameter_name": "代理人"
+                        },
+                        "text": {
+                            "parameter_description": "為角色設定的描述",
+                            "parameter_name": "文字"
+                        },
+                        "variant": {
+                            "parameter_description": "設定描述的變體",
+                            "parameter_name": "變體"
+                        }
+                    }
+                },
+                "detail": {
+                    "command_description": "獲取角色的詳細信息",
+                    "command_name": "細節",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "詳細說明代理。",
+                            "parameter_name": "代理人"
+                        },
+                        "variant": {
+                            "parameter_description": "細節變化",
+                            "parameter_name": "變體"
+                        }
+                    }
+                },
+                "find": {
+                    "command_description": "Find a variant."
+                },
+                "group": {
+                    "command_description": "為角色設定組",
+                    "command_name": "團體",
+                    "params": {
+                        "group": {
+                            "parameter_description": "群組，預設無",
+                            "parameter_name": "團體"
+                        },
+                        "proxy": {
+                            "parameter_description": "要為其設定群組的字符",
+                            "parameter_name": "代理人"
+                        },
+                        "variant": {
+                            "parameter_description": "設定組的變體",
+                            "parameter_name": "變體"
+                        }
+                    }
+                },
+                "list": {
+                    "command_description": "List all variants."
+                },
+                "local": {
+                    "command_description": "設定角色的本地",
+                    "command_name": "當地的",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "圖片，預設無",
+                            "parameter_name": "影像"
+                        },
+                        "nickname": {
+                            "parameter_description": "暱稱，預設無",
+                            "parameter_name": "暱稱"
+                        },
+                        "proxy": {
+                            "parameter_description": "要設定本地的字符",
+                            "parameter_name": "代理人"
+                        },
+                        "variant": {
+                            "parameter_description": "設定本地變數",
+                            "parameter_name": "變體"
+                        }
+                    }
+                },
+                "nickname": {
+                    "command_description": "為角色設定暱稱",
+                    "command_name": "暱稱",
+                    "params": {
+                        "nickname": {
+                            "parameter_description": "為角色設定的暱稱",
+                            "parameter_name": "暱稱"
+                        },
+                        "proxy": {
+                            "parameter_description": "要為其設定暱稱的字符",
+                            "parameter_name": "代理人"
+                        },
+                        "variant": {
+                            "parameter_description": "設定暱稱的變體",
+                            "parameter_name": "變體"
+                        }
+                    }
+                },
+                "nsfw": {
+                    "command_description": "設定角色是否為 NSFW",
+                    "command_name": "nsfw",
+                    "params": {
+                        "nsfw": {
+                            "parameter_description": "NSFW，預設切換到相反的值",
+                            "parameter_name": "nsfw"
+                        },
+                        "proxy": {
+                            "parameter_description": "設定 NSFW 的字符",
+                            "parameter_name": "代理人"
+                        },
+                        "variant": {
+                            "parameter_description": "設定 NSFW 的變體",
+                            "parameter_name": "變體"
+                        }
+                    }
+                },
+                "prefix": {
+                    "command_description": "設定字元的前綴。",
+                    "command_name": "字首",
+                    "params": {
+                        "prefixes": {
+                            "parameter_description": "前綴例如",
+                            "parameter_name": "前綴"
+                        },
+                        "proxy": {
+                            "parameter_description": "要設定前綴的字符",
+                            "parameter_name": "代理人"
+                        },
+                        "variant": {
+                            "parameter_description": "設定前綴的變體",
+                            "parameter_name": "變體"
+                        }
+                    }
+                },
+                "prune": {
+                    "command_description": "修剪一段時間內未使用的字元。",
+                    "command_name": "修剪",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "代理人"
+                        },
+                        "time": {
+                            "parameter_description": "之前修剪的日期，預設無"
+                        }
+                    }
+                },
+                "purge": {
+                    "command_description": "清除所有資料（訊息日誌除外）",
+                    "command_name": "清除",
+                    "params": {
+                        "confirmation": {
+                            "parameter_description": "確認",
+                            "parameter_name": "確認"
+                        },
+                        "proxy": {
+                            "parameter_description": "代理人",
+                            "parameter_name": "代理人"
+                        }
+                    }
+                },
+                "read": {
+                    "command_description": "讀取一個字符",
+                    "command_name": "讀",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "從中讀取變體的字符",
+                            "parameter_name": "代理人"
+                        },
+                        "variant": {
+                            "parameter_description": "閱讀變體",
+                            "parameter_name": "變體"
+                        }
+                    }
+                },
+                "rename": {
+                    "command_description": "重新命名角色",
+                    "command_name": "改名",
+                    "params": {
+                        "name": {
+                            "parameter_description": "角色的新名字",
+                            "parameter_name": "姓名"
+                        },
+                        "proxy": {
+                            "parameter_description": "要重新命名的字符",
+                            "parameter_name": "代理人"
+                        },
+                        "variant": {
+                            "parameter_description": "要重新命名的變體",
+                            "parameter_name": "變體"
+                        }
+                    }
+                },
+                "set": {
+                    "command_description": "Set a variant."
+                },
+                "update": {
+                    "command_description": "更新代理程式。",
+                    "command_name": "更新",
+                    "params": {
+                        "image": {
+                            "parameter_description": "圖片，預設無",
+                            "parameter_name": "影像"
+                        },
+                        "proxy": {
+                            "parameter_description": "要更新的字符",
+                            "parameter_name": "代理人"
+                        }
+                    }
+                },
+                "use": {
+                    "command_description": "Use a variant."
+                }
+            },
+            "group_description": "Variant commands.",
+            "group_name": "變數"
+        },
+        "variant-to-proxy": {
+            "command_description": "將變體轉換為字符",
+            "command_name": "變體到代理",
+            "params": {
+                "proxy": {
+                    "parameter_description": "要轉換為的代理",
+                    "parameter_name": "代理人"
+                },
+                "variant": {
+                    "parameter_description": "要轉換的變體",
+                    "parameter_name": "變體"
+                }
+            }
+        }
+    },
+    "interactions": {
         "context_menu": {
             "command_name": "代理人"
         }

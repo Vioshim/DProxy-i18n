@@ -1,304 +1,333 @@
 {
     "commands": {
-        "exec": {
-            "command_description": "Execute a command."
+        "afk": {
+            "command_description": "Check if a user is AFK."
         },
-        "proxy": {
-            "command_name": "प्रतिनिधि",
-            "command_description": "सर्वर में वर्ण अक्षम करें",
+        "auto": {
+            "command_description": "किसी कैरेक्टर के लिए ऑटो सेट करें",
+            "command_name": "ऑटो",
             "params": {
-                "enable": {
-                    "parameter_name": "सक्षम",
-                    "parameter_description": "डिफ़ॉल्ट स्विच द्वारा वर्णों को सक्षम या अक्षम करें"
+                "proxy": {
+                    "parameter_description": "कैरेक्टर, डिफ़ॉल्ट रूप से ऑटो को अक्षम कर देता है",
+                    "parameter_name": "प्रतिनिधि"
                 }
             }
         },
-        "set": {
-            "command_description": "Set a proxy as the current one."
-        },
-        "use": {
+        "avatar": {
+            "command_description": "किसी पात्र के लिए अवतार सेट करें",
+            "command_name": "अवतार",
             "params": {
-                "text": {
-                    "parameter_name": "मूलपाठ",
-                    "parameter_description": "मूलपाठ"
+                "avatar": {
+                    "parameter_description": "छवि URL, डिफ़ॉल्ट रूप से कोई नहीं",
+                    "parameter_name": "अवतार"
+                },
+                "proxy": {
+                    "parameter_description": "अवतार सेट करने के लिए पात्र",
+                    "parameter_name": "प्रतिनिधि"
                 }
             }
         },
-        "say": {
+        "birthday": {
+            "command_description": "किसी पात्र का जन्मदिन निर्धारित करें",
+            "command_name": "जन्मदिन",
             "params": {
-                "text": {
-                    "parameter_name": "मूलपाठ",
-                    "parameter_description": "मूलपाठ"
+                "birthday": {
+                    "parameter_description": "जन्मदिन, डिफ़ॉल्ट रूप से कोई नहीं",
+                    "parameter_name": "जन्मदिन"
+                },
+                "proxy": {
+                    "parameter_description": "जन्मदिन निर्धारित करने हेतु पात्र",
+                    "parameter_name": "प्रतिनिधि"
                 }
             }
         },
-        "npc": {
-            "command_name": "एनपीसी",
-            "command_description": "एक नया एनपीसी संदेश बनाएं",
-            "params": {
-                "franchise": {
-                    "parameter_name": "franchise",
-                    "parameter_description": "उपयोग करने के लिए फ्रेंचाइजी",
-                    "choices": {
-                        "Pokemon": "Pokemon",
-                        "Pokemon Shiny": "Pokemon Shiny",
-                        "Trainer": "Trainer",
-                        "Digimon": "Digimon",
-                        "Palworld": "Palworld",
-                        "D&D": "D&D"
-                    }
-                },
-                "npc": {
-                    "parameter_name": "एनपीसी",
-                    "parameter_description": "उपयोग हेतु एन.पी.सी"
-                },
-                "nickname": {
-                    "parameter_name": "उपनाम",
-                    "parameter_description": "उपनाम, डिफ़ॉल्ट रूप से कोई नहीं"
-                },
-                "emotion": {
-                    "parameter_name": "भावना",
-                    "parameter_description": "भावना, डिफ़ॉल्ट रूप से सामान्य",
-                    "choices": {
-                        "Normal": "Normal",
-                        "Happy": "Happy",
-                        "Pain": "Pain",
-                        "Angry": "Angry",
-                        "Worried": "Worried",
-                        "Sad": "Sad",
-                        "Crying": "Crying",
-                        "Shouting": "Shouting",
-                        "TearyEyed": "TearyEyed",
-                        "Determined": "Determined",
-                        "Joyous": "Joyous",
-                        "Inspired": "Inspired",
-                        "Surprised": "Surprised",
-                        "Dizzy": "Dizzy",
-                        "Sigh": "Sigh",
-                        "Stunned": "Stunned",
-                        "Special0": "Special0",
-                        "Special1": "Special1",
-                        "Special2": "Special2",
-                        "Special3": "Special3"
-                    }
-                },
-                "image": {
-                    "parameter_name": "छवि",
-                    "parameter_description": "छवि, डिफ़ॉल्ट रूप से कोई नहीं"
-                },
-                "text": {
-                    "parameter_name": "मूलपाठ",
-                    "parameter_description": "मूलपाठ"
-                }
-            }
+        "check_permissions": {
+            "command_description": "जांचें कि क्या बॉट दिए गए चैनल में काम कर सकता है",
+            "command_name": "check_perms"
+        },
+        "color": {
+            "command_description": "Set a color for a proxy."
         },
         "create": {
-            "command_description": "Create a new proxy.",
+            "command_description": "एक नया चरित्र बनाएँ.",
+            "command_name": "बनाएं",
             "params": {
+                "image": {
+                    "parameter_description": "छवि, डिफ़ॉल्ट रूप से कोई नहीं",
+                    "parameter_name": "छवि"
+                },
                 "prefixes": {
                     "parameter_description": "Prefixes e.g. A:text, |text|, etc."
                 }
             }
         },
         "delete": {
-            "command_name": "मिटाना",
             "command_description": "एक वर्ण हटाएँ",
+            "command_name": "मिटाना",
             "params": {
                 "proxy": {
-                    "parameter_name": "प्रतिनिधि",
-                    "parameter_description": "वैरिएंट को हटाने के लिए प्रॉक्सी"
-                }
-            }
-        },
-        "read": {
-            "command_name": "पढ़ना",
-            "command_description": "एक चरित्र पढ़ें",
-            "params": {
-                "proxy": {
-                    "parameter_name": "प्रतिनिधि",
-                    "parameter_description": "चरित्र से संस्करण को पढ़ने के लिए"
-                }
-            }
-        },
-        "nickname": {
-            "command_name": "उपनाम",
-            "command_description": "किसी पात्र के लिए उपनाम सेट करें",
-            "params": {
-                "proxy": {
-                    "parameter_name": "प्रतिनिधि",
-                    "parameter_description": "उपनाम सेट करने के लिए वर्ण"
-                },
-                "nickname": {
-                    "parameter_name": "उपनाम",
-                    "parameter_description": "चरित्र के लिए निर्धारित उपनाम"
-                }
-            }
-        },
-        "local": {
-            "command_name": "स्थानीय",
-            "command_description": "किसी कैरेक्टर के लिए स्थानीय सेट करें",
-            "params": {
-                "proxy": {
-                    "parameter_name": "प्रतिनिधि",
-                    "parameter_description": "स्थानीय को सेट करने के लिए कैरेक्टर"
-                },
-                "avatar": {
-                    "parameter_name": "छवि",
-                    "parameter_description": "छवि, डिफ़ॉल्ट रूप से कोई नहीं"
-                },
-                "nickname": {
-                    "parameter_name": "उपनाम",
-                    "parameter_description": "उपनाम, डिफ़ॉल्ट रूप से कोई नहीं"
-                }
-            }
-        },
-        "avatar": {
-            "command_name": "अवतार",
-            "command_description": "किसी पात्र के लिए अवतार सेट करें",
-            "params": {
-                "proxy": {
-                    "parameter_name": "प्रतिनिधि",
-                    "parameter_description": "अवतार सेट करने के लिए पात्र"
-                },
-                "avatar": {
-                    "parameter_name": "अवतार",
-                    "parameter_description": "छवि URL, डिफ़ॉल्ट रूप से कोई नहीं"
-                }
-            }
-        },
-        "prefix": {
-            "command_name": "उपसर्ग",
-            "command_description": "किसी वर्ण के लिए उपसर्ग सेट करें.",
-            "params": {
-                "proxy": {
-                    "parameter_name": "प्रतिनिधि",
-                    "parameter_description": "उपसर्ग सेट करने के लिए वर्ण"
-                },
-                "prefixes": {
-                    "parameter_name": "उपसर्गों",
-                    "parameter_description": "उपसर्ग उदा. "
-                }
-            }
-        },
-        "birthday": {
-            "command_name": "जन्मदिन",
-            "command_description": "किसी पात्र का जन्मदिन निर्धारित करें",
-            "params": {
-                "proxy": {
-                    "parameter_name": "प्रतिनिधि",
-                    "parameter_description": "जन्मदिन निर्धारित करने हेतु पात्र"
-                },
-                "birthday": {
-                    "parameter_name": "जन्मदिन",
-                    "parameter_description": "जन्मदिन, डिफ़ॉल्ट रूप से कोई नहीं"
+                    "parameter_description": "वैरिएंट को हटाने के लिए प्रॉक्सी",
+                    "parameter_name": "प्रतिनिधि"
                 }
             }
         },
         "description": {
-            "command_name": "विवरण",
             "command_description": "किसी वर्ण के लिए विवरण सेट करें",
+            "command_name": "विवरण",
             "params": {
                 "proxy": {
-                    "parameter_name": "प्रतिनिधि",
-                    "parameter_description": "विवरण सेट करने के लिए वर्ण"
+                    "parameter_description": "विवरण सेट करने के लिए वर्ण",
+                    "parameter_name": "प्रतिनिधि"
                 },
                 "text": {
-                    "parameter_name": "मूलपाठ",
-                    "parameter_description": "चरित्र के लिए सेट किया जाने वाला विवरण"
+                    "parameter_description": "चरित्र के लिए सेट किया जाने वाला विवरण",
+                    "parameter_name": "मूलपाठ"
                 }
             }
         },
-        "rename": {
-            "command_name": "नाम_बदलने",
-            "command_description": "किसी वर्ण का नाम बदलें",
+        "detail": {
+            "command_description": "किसी पात्र का विवरण प्राप्त करें",
+            "command_name": "detail",
             "params": {
                 "proxy": {
-                    "parameter_name": "प्रतिनिधि",
-                    "parameter_description": "नाम बदलने के लिए चरित्र"
+                    "parameter_description": "एक प्रॉक्सी का विवरण दें. ",
+                    "parameter_name": "प्रतिनिधि"
+                }
+            }
+        },
+        "exec": {
+            "command_description": "Execute a command."
+        },
+        "export": {
+            "command_description": "अपने पात्रों को JSON फ़ाइल में निर्यात करें",
+            "command_name": "निर्यात",
+            "params": {
+                "format": {
+                    "choices": {
+                        "Default": "Default",
+                        "PluralKit": "PluralKit",
+                        "Tupperbox": "Tupperbox"
+                    },
+                    "parameter_description": "निर्यात करने के लिए प्रारूप, डिफ़ॉल्ट रूप से JSON",
+                    "parameter_name": "प्रारूप"
                 },
-                "name": {
-                    "parameter_name": "नाम",
-                    "parameter_description": "किरदार का नया नाम"
+                "new_token": {
+                    "parameter_description": "यदि आप नया टोकन जनरेट करना चाहते हैं",
+                    "parameter_name": "new_token"
                 }
             }
         },
         "group": {
-            "command_name": "समूह",
             "command_description": "किसी वर्ण के लिए समूह सेट करें",
-            "params": {
-                "proxy": {
-                    "parameter_name": "प्रतिनिधि",
-                    "parameter_description": "समूह को निर्धारित करने के लिए चरित्र"
-                },
-                "group": {
-                    "parameter_name": "समूह",
-                    "parameter_description": "समूह, डिफ़ॉल्ट रूप से कोई नहीं"
-                }
-            }
-        },
-        "nsfw": {
-            "command_name": "एनएसएफडब्ल्यू",
-            "command_description": "सेट करें कि कोई कैरेक्टर NSFW है या नहीं",
-            "params": {
-                "proxy": {
-                    "parameter_name": "प्रतिनिधि",
-                    "parameter_description": "एनएसएफडब्ल्यू को सेट करने के लिए चरित्र"
-                },
-                "nsfw": {
-                    "parameter_name": "एनएसएफडब्ल्यू",
-                    "parameter_description": "NSFW, डिफ़ॉल्ट रूप से विपरीत मान पर स्विच करता है"
-                }
-            }
-        },
-        "auto": {
-            "command_name": "ऑटो",
-            "command_description": "किसी कैरेक्टर के लिए ऑटो सेट करें",
-            "params": {
-                "proxy": {
-                    "parameter_name": "प्रतिनिधि",
-                    "parameter_description": "कैरेक्टर, डिफ़ॉल्ट रूप से ऑटो को अक्षम कर देता है"
-                }
-            }
-        },
-        "list": {
-            "command_name": "सूची",
-            "command_description": "सभी पात्रों की सूची बनाएं ",
+            "command_name": "समूह",
             "params": {
                 "group": {
-                    "parameter_name": "समूह",
-                    "parameter_description": "वर्णों को सूचीबद्ध करने के लिए समूह बनाएं"
+                    "parameter_description": "समूह, डिफ़ॉल्ट रूप से कोई नहीं",
+                    "parameter_name": "समूह"
+                },
+                "proxy": {
+                    "parameter_description": "समूह को निर्धारित करने के लिए चरित्र",
+                    "parameter_name": "प्रतिनिधि"
+                }
+            }
+        },
+        "help": {
+            "command_description": "अंतर्निहित बॉट सहायता",
+            "command_name": "help",
+            "params": {
+                "search": {
+                    "parameter_description": "खोज अवधि",
+                    "parameter_name": "खोज"
+                }
+            }
+        },
+        "import": {
+            "command_description": "किसी फ़ाइल या टोकन से अपने अक्षर आयात करें",
+            "command_name": "आयात",
+            "params": {
+                "data": {
+                    "parameter_description": "आयात करने के लिए फ़ाइल",
+                    "parameter_name": "data"
+                },
+                "deleting_from_token": {
+                    "parameter_description": "टोकन से अक्षर हटाएँ",
+                    "parameter_name": "deleting_from_token"
+                },
+                "token": {
+                    "parameter_description": "आयात के लिए उपयोग हेतु टोकन",
+                    "parameter_name": "टोकन"
                 }
             }
         },
         "latch": {
-            "command_name": "कुंडी",
             "command_description": "लैच मोड सक्षम या अक्षम करें",
+            "command_name": "कुंडी",
             "params": {
-                "enable": {
-                    "parameter_description": "लैच मोड सक्षम या अक्षम करें"
-                },
                 "auto_remove": {
                     "parameter_description": "वर्तमान चैनल के लिए ऑटो रखना है या नहीं, डिफ़ॉल्ट रूप से सत्य है"
+                },
+                "enable": {
+                    "parameter_description": "लैच मोड सक्षम या अक्षम करें"
                 }
             }
         },
-        "export": {
-            "command_name": "निर्यात",
-            "command_description": "अपने पात्रों को JSON फ़ाइल में निर्यात करें",
+        "list": {
+            "command_description": "सभी पात्रों की सूची बनाएं ",
+            "command_name": "सूची",
             "params": {
-                "format": {
-                    "parameter_name": "प्रारूप",
-                    "parameter_description": "निर्यात करने के लिए प्रारूप, डिफ़ॉल्ट रूप से JSON"
+                "group": {
+                    "parameter_description": "वर्णों को सूचीबद्ध करने के लिए समूह बनाएं",
+                    "parameter_name": "समूह"
+                }
+            }
+        },
+        "local": {
+            "command_description": "किसी कैरेक्टर के लिए स्थानीय सेट करें",
+            "command_name": "स्थानीय",
+            "params": {
+                "avatar": {
+                    "parameter_description": "छवि, डिफ़ॉल्ट रूप से कोई नहीं",
+                    "parameter_name": "छवि"
                 },
-                "new_token": {
-                    "parameter_name": "new_token",
-                    "parameter_description": "यदि आप नया टोकन जनरेट करना चाहते हैं"
+                "nickname": {
+                    "parameter_description": "उपनाम, डिफ़ॉल्ट रूप से कोई नहीं",
+                    "parameter_name": "उपनाम"
+                },
+                "proxy": {
+                    "parameter_description": "स्थानीय को सेट करने के लिए कैरेक्टर",
+                    "parameter_name": "प्रतिनिधि"
+                }
+            }
+        },
+        "nickname": {
+            "command_description": "किसी पात्र के लिए उपनाम सेट करें",
+            "command_name": "उपनाम",
+            "params": {
+                "nickname": {
+                    "parameter_description": "चरित्र के लिए निर्धारित उपनाम",
+                    "parameter_name": "उपनाम"
+                },
+                "proxy": {
+                    "parameter_description": "उपनाम सेट करने के लिए वर्ण",
+                    "parameter_name": "प्रतिनिधि"
+                }
+            }
+        },
+        "npc": {
+            "command_description": "एक नया एनपीसी संदेश बनाएं",
+            "command_name": "एनपीसी",
+            "params": {
+                "emotion": {
+                    "choices": {
+                        "Angry": "Angry",
+                        "Crying": "Crying",
+                        "Determined": "Determined",
+                        "Dizzy": "Dizzy",
+                        "Happy": "Happy",
+                        "Inspired": "Inspired",
+                        "Joyous": "Joyous",
+                        "Normal": "Normal",
+                        "Pain": "Pain",
+                        "Sad": "Sad",
+                        "Shouting": "Shouting",
+                        "Sigh": "Sigh",
+                        "Special0": "Special0",
+                        "Special1": "Special1",
+                        "Special2": "Special2",
+                        "Special3": "Special3",
+                        "Stunned": "Stunned",
+                        "Surprised": "Surprised",
+                        "TearyEyed": "TearyEyed",
+                        "Worried": "Worried"
+                    },
+                    "parameter_description": "भावना, डिफ़ॉल्ट रूप से सामान्य",
+                    "parameter_name": "भावना"
+                },
+                "franchise": {
+                    "choices": {
+                        "D&D": "D&D",
+                        "Digimon": "Digimon",
+                        "Palworld": "Palworld",
+                        "Pokemon": "Pokemon",
+                        "Pokemon Shiny": "Pokemon Shiny",
+                        "Trainer": "Trainer"
+                    },
+                    "parameter_description": "उपयोग करने के लिए फ्रेंचाइजी",
+                    "parameter_name": "मताधिकार"
+                },
+                "image": {
+                    "parameter_description": "छवि, डिफ़ॉल्ट रूप से कोई नहीं",
+                    "parameter_name": "छवि"
+                },
+                "nickname": {
+                    "parameter_description": "उपनाम, डिफ़ॉल्ट रूप से कोई नहीं",
+                    "parameter_name": "उपनाम"
+                },
+                "npc": {
+                    "parameter_description": "उपयोग हेतु एन.पी.सी",
+                    "parameter_name": "एनपीसी"
+                },
+                "text": {
+                    "parameter_description": "मूलपाठ",
+                    "parameter_name": "मूलपाठ"
+                }
+            }
+        },
+        "nsfw": {
+            "command_description": "सेट करें कि कोई कैरेक्टर NSFW है या नहीं",
+            "command_name": "एनएसएफडब्ल्यू",
+            "params": {
+                "nsfw": {
+                    "parameter_description": "NSFW, डिफ़ॉल्ट रूप से विपरीत मान पर स्विच करता है",
+                    "parameter_name": "एनएसएफडब्ल्यू"
+                },
+                "proxy": {
+                    "parameter_description": "एनएसएफडब्ल्यू को सेट करने के लिए चरित्र",
+                    "parameter_name": "प्रतिनिधि"
+                }
+            }
+        },
+        "prefix": {
+            "command_description": "किसी वर्ण के लिए उपसर्ग सेट करें.",
+            "command_name": "उपसर्ग",
+            "params": {
+                "prefixes": {
+                    "parameter_description": "उपसर्ग उदा. ",
+                    "parameter_name": "उपसर्गों"
+                },
+                "proxy": {
+                    "parameter_description": "उपसर्ग सेट करने के लिए वर्ण",
+                    "parameter_name": "प्रतिनिधि"
+                }
+            }
+        },
+        "proxy": {
+            "command_description": "सर्वर में वर्ण अक्षम करें",
+            "command_name": "प्रतिनिधि",
+            "params": {
+                "enable": {
+                    "parameter_description": "डिफ़ॉल्ट स्विच द्वारा वर्णों को सक्षम या अक्षम करें",
+                    "parameter_name": "सक्षम"
+                }
+            }
+        },
+        "proxy-to-variant": {
+            "command_description": "किसी वर्ण को भिन्न रूप में बदलें",
+            "command_name": "प्रॉक्सी-टू-वेरिएंट",
+            "params": {
+                "base": {
+                    "parameter_description": "चरित्र के लिए नया आधार",
+                    "parameter_name": "आधार"
+                },
+                "original": {
+                    "parameter_description": "परिवर्तित करने के लिए चरित्र",
+                    "parameter_name": "मूल"
                 }
             }
         },
         "prune": {
-            "command_name": "prune",
             "command_description": "एक निश्चित समय के लिए अप्रयुक्त प्रून अक्षर।",
+            "command_name": "prune",
             "params": {
                 "time": {
                     "parameter_description": "पहले छँटाई करने की तिथि, डिफ़ॉल्ट रूप से कोई नहीं"
@@ -306,656 +335,674 @@
             }
         },
         "purge": {
-            "command_name": "शुद्ध",
             "command_description": "अपना सारा डेटा मिटा दें (संदेश लॉग को छोड़कर)",
+            "command_name": "शुद्ध",
             "params": {
                 "confirmation": {
-                    "parameter_name": "confirmation",
-                    "parameter_description": "confirmation"
+                    "parameter_description": "confirmation",
+                    "parameter_name": "confirmation"
                 }
             }
         },
-        "proxy-to-variant": {
-            "command_name": "प्रॉक्सी-टू-वेरिएंट",
-            "command_description": "किसी वर्ण को भिन्न रूप में बदलें",
-            "params": {
-                "original": {
-                    "parameter_name": "मूल",
-                    "parameter_description": "परिवर्तित करने के लिए चरित्र"
-                },
-                "base": {
-                    "parameter_name": "आधार",
-                    "parameter_description": "चरित्र के लिए नया आधार"
-                }
-            }
-        },
-        "variant-to-proxy": {
-            "command_name": "वैरिएंट-टू-प्रॉक्सी",
-            "command_description": "एक वैरिएंट को एक कैरेक्टर में बदलें",
+        "read": {
+            "command_description": "एक चरित्र पढ़ें",
+            "command_name": "पढ़ना",
             "params": {
                 "proxy": {
-                    "parameter_name": "प्रतिनिधि",
-                    "parameter_description": "कनवर्ट करने के लिए प्रॉक्सी"
-                },
-                "variant": {
-                    "parameter_name": "प्रकार",
-                    "parameter_description": "कन्वर्ट करने के लिए वेरिएंट"
+                    "parameter_description": "चरित्र से संस्करण को पढ़ने के लिए",
+                    "parameter_name": "प्रतिनिधि"
                 }
             }
         },
-        "update": {
-            "command_name": "अद्यतन",
-            "command_description": "प्रॉक्सी अपडेट करें. ",
+        "rename": {
+            "command_description": "किसी वर्ण का नाम बदलें",
+            "command_name": "नाम_बदलने",
             "params": {
+                "name": {
+                    "parameter_description": "किरदार का नया नाम",
+                    "parameter_name": "नाम"
+                },
                 "proxy": {
-                    "parameter_name": "प्रतिनिधि",
-                    "parameter_description": "अद्यतन करने के लिए चरित्र"
-                },
-                "image": {
-                    "parameter_name": "छवि",
-                    "parameter_description": "छवि, डिफ़ॉल्ट रूप से कोई नहीं"
+                    "parameter_description": "नाम बदलने के लिए चरित्र",
+                    "parameter_name": "प्रतिनिधि"
                 }
             }
-        },
-        "detail": {
-            "command_name": "detail",
-            "command_description": "किसी पात्र का विवरण प्राप्त करें",
-            "params": {
-                "proxy": {
-                    "parameter_name": "प्रतिनिधि",
-                    "parameter_description": "एक प्रॉक्सी का विवरण दें. "
-                }
-            }
-        },
-        "import": {
-            "command_name": "आयात",
-            "command_description": "किसी फ़ाइल या टोकन से अपने अक्षर आयात करें",
-            "params": {
-                "data": {
-                    "parameter_name": "data",
-                    "parameter_description": "आयात करने के लिए फ़ाइल"
-                },
-                "token": {
-                    "parameter_name": "टोकन",
-                    "parameter_description": "आयात के लिए उपयोग हेतु टोकन"
-                },
-                "deleting_from_token": {
-                    "parameter_name": "deleting_from_token",
-                    "parameter_description": "टोकन से अक्षर हटाएँ"
-                }
-            }
-        },
-        "var": {
-            "group_name": "वर",
-            "group_description": "Variant commands.",
-            "groupset": {
-                "command_description": "Set a variant."
-            },
-            "groupuse": {
-                "command_description": "Use a variant."
-            },
-            "groupcreate": {
-                "command_name": "बनाएं",
-                "command_description": "एक नया चरित्र बनाएँ.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "प्रतिनिधि",
-                        "parameter_description": " वैरिएंट बनाने के लिए प्रॉक्सी"
-                    },
-                    "image": {
-                        "parameter_name": "छवि",
-                        "parameter_description": "छवि, डिफ़ॉल्ट रूप से कोई नहीं"
-                    },
-                    "prefixes": {
-                        "parameter_description": "Prefixes e.g. A:text, |text|, etc."
-                    }
-                }
-            },
-            "groupdelete": {
-                "command_name": "मिटाना",
-                "command_description": "किसी वर्ण का प्रकार हटाएँ",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "प्रतिनिधि",
-                        "parameter_description": "वैरिएंट को हटाने के लिए प्रॉक्सी"
-                    },
-                    "variant": {
-                        "parameter_name": "प्रकार",
-                        "parameter_description": "हटाने के लिए वैरिएंट"
-                    }
-                }
-            },
-            "groupread": {
-                "command_name": "पढ़ना",
-                "command_description": "एक चरित्र पढ़ें",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "प्रतिनिधि",
-                        "parameter_description": "चरित्र से संस्करण को पढ़ने के लिए"
-                    },
-                    "variant": {
-                        "parameter_name": "प्रकार",
-                        "parameter_description": "पढ़ने के लिए भिन्न"
-                    }
-                }
-            },
-            "groupnickname": {
-                "command_name": "उपनाम",
-                "command_description": "किसी पात्र के लिए उपनाम सेट करें",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "प्रतिनिधि",
-                        "parameter_description": "उपनाम सेट करने के लिए वर्ण"
-                    },
-                    "variant": {
-                        "parameter_name": "प्रकार",
-                        "parameter_description": "उपनाम सेट करने के लिए वैरिएंट"
-                    },
-                    "nickname": {
-                        "parameter_name": "उपनाम",
-                        "parameter_description": "चरित्र के लिए निर्धारित उपनाम"
-                    }
-                }
-            },
-            "grouplocal": {
-                "command_name": "स्थानीय",
-                "command_description": "किसी कैरेक्टर के लिए स्थानीय सेट करें",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "प्रतिनिधि",
-                        "parameter_description": "स्थानीय को सेट करने के लिए कैरेक्टर"
-                    },
-                    "variant": {
-                        "parameter_name": "प्रकार",
-                        "parameter_description": "स्थानीय को सेट करने के लिए वैरिएंट"
-                    },
-                    "avatar": {
-                        "parameter_name": "छवि",
-                        "parameter_description": "छवि, डिफ़ॉल्ट रूप से कोई नहीं"
-                    },
-                    "nickname": {
-                        "parameter_name": "उपनाम",
-                        "parameter_description": "उपनाम, डिफ़ॉल्ट रूप से कोई नहीं"
-                    }
-                }
-            },
-            "groupprefix": {
-                "command_name": "उपसर्ग",
-                "command_description": "किसी वर्ण के लिए उपसर्ग सेट करें.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "प्रतिनिधि",
-                        "parameter_description": "उपसर्ग सेट करने के लिए वर्ण"
-                    },
-                    "variant": {
-                        "parameter_name": "प्रकार",
-                        "parameter_description": "उपसर्ग सेट करने के लिए वैरिएंट"
-                    },
-                    "prefixes": {
-                        "parameter_name": "उपसर्गों",
-                        "parameter_description": "उपसर्ग उदा. "
-                    }
-                }
-            },
-            "groupbirthday": {
-                "command_name": "जन्मदिन",
-                "command_description": "किसी पात्र का जन्मदिन निर्धारित करें",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "प्रतिनिधि",
-                        "parameter_description": "जन्मदिन निर्धारित करने हेतु पात्र"
-                    },
-                    "variant": {
-                        "parameter_name": "प्रकार",
-                        "parameter_description": "जन्मदिन निर्धारित करने के लिए भिन्न"
-                    },
-                    "birthday": {
-                        "parameter_name": "जन्मदिन",
-                        "parameter_description": "जन्मदिन, डिफ़ॉल्ट रूप से कोई नहीं"
-                    }
-                }
-            },
-            "groupdescription": {
-                "command_name": "विवरण",
-                "command_description": "किसी वर्ण के लिए विवरण सेट करें",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "प्रतिनिधि",
-                        "parameter_description": "विवरण सेट करने के लिए वर्ण"
-                    },
-                    "variant": {
-                        "parameter_name": "प्रकार",
-                        "parameter_description": "विवरण सेट करने के लिए वैरिएंट"
-                    },
-                    "text": {
-                        "parameter_name": "मूलपाठ",
-                        "parameter_description": "चरित्र के लिए सेट किया जाने वाला विवरण"
-                    }
-                }
-            },
-            "grouprename": {
-                "command_name": "नाम_बदलने",
-                "command_description": "किसी वर्ण का नाम बदलें",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "प्रतिनिधि",
-                        "parameter_description": "नाम बदलने के लिए चरित्र"
-                    },
-                    "variant": {
-                        "parameter_name": "प्रकार",
-                        "parameter_description": "नाम बदलने के लिए भिन्न"
-                    },
-                    "name": {
-                        "parameter_name": "नाम",
-                        "parameter_description": "किरदार का नया नाम"
-                    }
-                }
-            },
-            "groupgroup": {
-                "command_name": "समूह",
-                "command_description": "किसी वर्ण के लिए समूह सेट करें",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "प्रतिनिधि",
-                        "parameter_description": "समूह को निर्धारित करने के लिए चरित्र"
-                    },
-                    "variant": {
-                        "parameter_name": "प्रकार",
-                        "parameter_description": "समूह को सेट करने के लिए वैरिएंट"
-                    },
-                    "group": {
-                        "parameter_name": "समूह",
-                        "parameter_description": "समूह, डिफ़ॉल्ट रूप से कोई नहीं"
-                    }
-                }
-            },
-            "groupnsfw": {
-                "command_name": "एनएसएफडब्ल्यू",
-                "command_description": "सेट करें कि कोई कैरेक्टर NSFW है या नहीं",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "प्रतिनिधि",
-                        "parameter_description": "एनएसएफडब्ल्यू को सेट करने के लिए चरित्र"
-                    },
-                    "variant": {
-                        "parameter_name": "प्रकार",
-                        "parameter_description": "NSFW को सेट करने के लिए वेरिएंट"
-                    },
-                    "nsfw": {
-                        "parameter_name": "एनएसएफडब्ल्यू",
-                        "parameter_description": "NSFW, डिफ़ॉल्ट रूप से विपरीत मान पर स्विच करता है"
-                    }
-                }
-            },
-            "groupauto": {
-                "command_name": "ऑटो",
-                "command_description": "किसी कैरेक्टर के लिए ऑटो सेट करें",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "प्रतिनिधि",
-                        "parameter_description": "कैरेक्टर, डिफ़ॉल्ट रूप से ऑटो को अक्षम कर देता है"
-                    },
-                    "variant": {
-                        "parameter_name": "प्रकार",
-                        "parameter_description": "ऑटो को सेट करने के लिए वैरिएंट"
-                    }
-                }
-            },
-            "groupavatar": {
-                "command_name": "अवतार",
-                "command_description": "किसी पात्र के लिए अवतार सेट करें",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "प्रतिनिधि",
-                        "parameter_description": "अवतार सेट करने के लिए पात्र"
-                    },
-                    "variant": {
-                        "parameter_name": "प्रकार",
-                        "parameter_description": "अवतार सेट करने के लिए वैरिएंट"
-                    },
-                    "avatar": {
-                        "parameter_name": "अवतार",
-                        "parameter_description": "छवि URL, डिफ़ॉल्ट रूप से कोई नहीं"
-                    }
-                }
-            },
-            "grouplist": {
-                "command_description": "List all variants."
-            },
-            "groupfind": {
-                "command_description": "Find a variant."
-            },
-            "groupupdate": {
-                "command_name": "अद्यतन",
-                "command_description": "प्रॉक्सी अपडेट करें. ",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "प्रतिनिधि",
-                        "parameter_description": "अद्यतन करने के लिए चरित्र"
-                    },
-                    "image": {
-                        "parameter_name": "छवि",
-                        "parameter_description": "छवि, डिफ़ॉल्ट रूप से कोई नहीं"
-                    }
-                }
-            },
-            "groupdetail": {
-                "command_name": "detail",
-                "command_description": "किसी पात्र का विवरण प्राप्त करें",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "प्रतिनिधि",
-                        "parameter_description": "एक प्रॉक्सी का विवरण दें. "
-                    },
-                    "variant": {
-                        "parameter_name": "प्रकार",
-                        "parameter_description": "विस्तार से भिन्न"
-                    }
-                }
-            },
-            "groupprune": {
-                "command_name": "prune",
-                "command_description": "एक निश्चित समय के लिए अप्रयुक्त प्रून अक्षर।",
-                "params": {
-                    "proxy": {
-                        "parameter_description": "प्रतिनिधि"
-                    },
-                    "time": {
-                        "parameter_description": "पहले छँटाई करने की तिथि, डिफ़ॉल्ट रूप से कोई नहीं"
-                    }
-                }
-            },
-            "grouppurge": {
-                "command_name": "शुद्ध",
-                "command_description": "अपना सारा डेटा मिटा दें (संदेश लॉग को छोड़कर)",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "प्रतिनिधि",
-                        "parameter_description": "प्रतिनिधि"
-                    },
-                    "confirmation": {
-                        "parameter_name": "confirmation",
-                        "parameter_description": "confirmation"
-                    }
-                }
-            }
-        },
-        "shared": {
-            "group_description": "Shared proxy commands.",
-            "groupset": {
-                "command_description": "Set a proxy as the current one."
-            },
-            "groupcreate": {
-                "command_name": "बनाएं",
-                "command_description": "एक नया चरित्र बनाएँ.",
-                "params": {
-                    "image": {
-                        "parameter_name": "छवि",
-                        "parameter_description": "छवि, डिफ़ॉल्ट रूप से कोई नहीं"
-                    }
-                }
-            },
-            "groupdelete": {
-                "command_name": "मिटाना",
-                "command_description": "एक वर्ण हटाएँ",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "प्रतिनिधि",
-                        "parameter_description": "वैरिएंट को हटाने के लिए प्रॉक्सी"
-                    }
-                }
-            },
-            "groupread": {
-                "command_name": "पढ़ना",
-                "command_description": "एक चरित्र पढ़ें",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "प्रतिनिधि",
-                        "parameter_description": "चरित्र से संस्करण को पढ़ने के लिए"
-                    }
-                }
-            },
-            "groupauto": {
-                "command_name": "ऑटो",
-                "command_description": "किसी कैरेक्टर के लिए ऑटो सेट करें",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "प्रतिनिधि",
-                        "parameter_description": "कैरेक्टर, डिफ़ॉल्ट रूप से ऑटो को अक्षम कर देता है"
-                    }
-                }
-            },
-            "groupprefix": {
-                "command_name": "उपसर्ग",
-                "command_description": "किसी वर्ण के लिए उपसर्ग सेट करें.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "प्रतिनिधि",
-                        "parameter_description": "उपसर्ग सेट करने के लिए वर्ण"
-                    },
-                    "prefixes": {
-                        "parameter_name": "उपसर्गों",
-                        "parameter_description": "उपसर्ग उदा. "
-                    }
-                }
-            },
-            "groupbirthday": {
-                "command_name": "जन्मदिन",
-                "command_description": "किसी पात्र का जन्मदिन निर्धारित करें",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "प्रतिनिधि",
-                        "parameter_description": "जन्मदिन निर्धारित करने हेतु पात्र"
-                    },
-                    "birthday": {
-                        "parameter_name": "जन्मदिन",
-                        "parameter_description": "जन्मदिन, डिफ़ॉल्ट रूप से कोई नहीं"
-                    }
-                }
-            },
-            "groupdescription": {
-                "command_name": "विवरण",
-                "command_description": "किसी वर्ण के लिए विवरण सेट करें",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "प्रतिनिधि",
-                        "parameter_description": "विवरण सेट करने के लिए वर्ण"
-                    },
-                    "text": {
-                        "parameter_name": "मूलपाठ",
-                        "parameter_description": "चरित्र के लिए सेट किया जाने वाला विवरण"
-                    }
-                }
-            },
-            "grouprename": {
-                "command_name": "नाम_बदलने",
-                "command_description": "किसी वर्ण का नाम बदलें",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "प्रतिनिधि",
-                        "parameter_description": "नाम बदलने के लिए चरित्र"
-                    },
-                    "name": {
-                        "parameter_name": "नाम",
-                        "parameter_description": "किरदार का नया नाम"
-                    }
-                }
-            },
-            "groupnickname": {
-                "command_name": "उपनाम",
-                "command_description": "किसी पात्र के लिए उपनाम सेट करें",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "प्रतिनिधि",
-                        "parameter_description": "उपनाम सेट करने के लिए वर्ण"
-                    },
-                    "nickname": {
-                        "parameter_name": "उपनाम",
-                        "parameter_description": "चरित्र के लिए निर्धारित उपनाम"
-                    }
-                }
-            },
-            "groupgroup": {
-                "command_name": "समूह",
-                "command_description": "किसी वर्ण के लिए समूह सेट करें",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "प्रतिनिधि",
-                        "parameter_description": "समूह को निर्धारित करने के लिए चरित्र"
-                    },
-                    "group": {
-                        "parameter_name": "समूह",
-                        "parameter_description": "समूह, डिफ़ॉल्ट रूप से कोई नहीं"
-                    }
-                }
-            },
-            "groupnsfw": {
-                "command_name": "एनएसएफडब्ल्यू",
-                "command_description": "सेट करें कि कोई कैरेक्टर NSFW है या नहीं",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "प्रतिनिधि",
-                        "parameter_description": "एनएसएफडब्ल्यू को सेट करने के लिए चरित्र"
-                    },
-                    "nsfw": {
-                        "parameter_name": "एनएसएफडब्ल्यू",
-                        "parameter_description": "NSFW, डिफ़ॉल्ट रूप से विपरीत मान पर स्विच करता है"
-                    }
-                }
-            },
-            "groupavatar": {
-                "command_name": "अवतार",
-                "command_description": "किसी पात्र के लिए अवतार सेट करें",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "प्रतिनिधि",
-                        "parameter_description": "अवतार सेट करने के लिए पात्र"
-                    },
-                    "avatar": {
-                        "parameter_name": "अवतार",
-                        "parameter_description": "छवि URL, डिफ़ॉल्ट रूप से कोई नहीं"
-                    }
-                }
-            },
-            "groupimage": {
-                "params": {
-                    "proxy": {
-                        "parameter_name": "प्रतिनिधि",
-                        "parameter_description": "अवतार सेट करने के लिए पात्र"
-                    },
-                    "avatar": {
-                        "parameter_name": "अवतार",
-                        "parameter_description": "छवि URL, डिफ़ॉल्ट रूप से कोई नहीं"
-                    }
-                }
-            },
-            "grouplocal": {
-                "command_name": "स्थानीय",
-                "command_description": "किसी कैरेक्टर के लिए स्थानीय सेट करें",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "प्रतिनिधि",
-                        "parameter_description": "स्थानीय को सेट करने के लिए कैरेक्टर"
-                    },
-                    "avatar": {
-                        "parameter_name": "छवि",
-                        "parameter_description": "छवि, डिफ़ॉल्ट रूप से कोई नहीं"
-                    },
-                    "nickname": {
-                        "parameter_name": "उपनाम",
-                        "parameter_description": "उपनाम, डिफ़ॉल्ट रूप से कोई नहीं"
-                    }
-                }
-            },
-            "groupupdate": {
-                "command_name": "अद्यतन",
-                "command_description": "प्रॉक्सी अपडेट करें. ",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "प्रतिनिधि",
-                        "parameter_description": "अद्यतन करने के लिए चरित्र"
-                    },
-                    "image": {
-                        "parameter_name": "छवि",
-                        "parameter_description": "छवि, डिफ़ॉल्ट रूप से कोई नहीं"
-                    }
-                }
-            },
-            "groupdetail": {
-                "command_name": "detail",
-                "command_description": "किसी पात्र का विवरण प्राप्त करें",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "प्रतिनिधि",
-                        "parameter_description": "एक प्रॉक्सी का विवरण दें. "
-                    }
-                }
-            },
-            "groupprune": {
-                "command_name": "prune",
-                "command_description": "एक निश्चित समय के लिए अप्रयुक्त प्रून अक्षर।",
-                "params": {
-                    "time": {
-                        "parameter_description": "पहले छँटाई करने की तिथि, डिफ़ॉल्ट रूप से कोई नहीं"
-                    }
-                }
-            },
-            "grouppurge": {
-                "command_name": "शुद्ध",
-                "command_description": "अपना सारा डेटा मिटा दें (संदेश लॉग को छोड़कर)",
-                "params": {
-                    "confirmation": {
-                        "parameter_name": "confirmation",
-                        "parameter_description": "confirmation"
-                    }
-                }
-            }
-        },
-        "check_permissions": {
-            "command_name": "check_perms",
-            "command_description": "जांचें कि क्या बॉट दिए गए चैनल में काम कर सकता है"
         },
         "roll": {
             "command_description": "Roll a dice."
         },
-        "afk": {
-            "command_description": "Check if a user is AFK."
-        },
-        "help": {
-            "command_name": "help",
-            "command_description": "अंतर्निहित बॉट सहायता",
+        "say": {
+            "command_description": "Say something.",
             "params": {
-                "search": {
-                    "parameter_name": "खोज",
-                    "parameter_description": "खोज अवधि"
+                "text": {
+                    "parameter_description": "मूलपाठ",
+                    "parameter_name": "मूलपाठ"
                 }
             }
         },
         "server_wiki": {
-            "command_name": "server_wiki",
             "command_description": "उपयोगकर्ता परिभाषित सर्वर विकी",
+            "command_name": "server_wiki",
             "params": {
                 "search": {
-                    "parameter_name": "खोज",
-                    "parameter_description": "खोज अवधि"
+                    "parameter_description": "खोज अवधि",
+                    "parameter_name": "खोज"
                 }
             }
         },
+        "set": {
+            "command_description": "Set a proxy as the current one."
+        },
         "settings": {
-            "command_name": "settings",
             "command_description": "बॉट सेटिंग्स",
+            "command_name": "settings",
             "params": {
                 "menu": {
-                    "parameter_name": "मेन्यू",
-                    "parameter_description": "सेटिंग्स के लिए मेनू खोलें",
                     "choices": {
-                        "Server": "सर्वर",
-                        "Member": "सदस्य",
-                        "User": "उपयोगकर्ता"
+                        "Member": "Member",
+                        "Server": "Server",
+                        "User": "User"
+                    },
+                    "parameter_description": "सेटिंग्स के लिए मेनू खोलें",
+                    "parameter_name": "मेन्यू"
+                }
+            }
+        },
+        "shared": {
+            "group": {
+                "auto": {
+                    "command_description": "किसी कैरेक्टर के लिए ऑटो सेट करें",
+                    "command_name": "ऑटो",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "कैरेक्टर, डिफ़ॉल्ट रूप से ऑटो को अक्षम कर देता है",
+                            "parameter_name": "प्रतिनिधि"
+                        }
+                    }
+                },
+                "avatar": {
+                    "command_description": "किसी पात्र के लिए अवतार सेट करें",
+                    "command_name": "अवतार",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "छवि URL, डिफ़ॉल्ट रूप से कोई नहीं",
+                            "parameter_name": "अवतार"
+                        },
+                        "proxy": {
+                            "parameter_description": "अवतार सेट करने के लिए पात्र",
+                            "parameter_name": "प्रतिनिधि"
+                        }
+                    }
+                },
+                "birthday": {
+                    "command_description": "किसी पात्र का जन्मदिन निर्धारित करें",
+                    "command_name": "जन्मदिन",
+                    "params": {
+                        "birthday": {
+                            "parameter_description": "जन्मदिन, डिफ़ॉल्ट रूप से कोई नहीं",
+                            "parameter_name": "जन्मदिन"
+                        },
+                        "proxy": {
+                            "parameter_description": "जन्मदिन निर्धारित करने हेतु पात्र",
+                            "parameter_name": "प्रतिनिधि"
+                        }
+                    }
+                },
+                "color": {
+                    "command_description": "Set the color for a proxy."
+                },
+                "create": {
+                    "command_description": "एक नया चरित्र बनाएँ.",
+                    "command_name": "बनाएं",
+                    "params": {
+                        "image": {
+                            "parameter_description": "छवि, डिफ़ॉल्ट रूप से कोई नहीं",
+                            "parameter_name": "छवि"
+                        }
+                    }
+                },
+                "delete": {
+                    "command_description": "एक वर्ण हटाएँ",
+                    "command_name": "मिटाना",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "वैरिएंट को हटाने के लिए प्रॉक्सी",
+                            "parameter_name": "प्रतिनिधि"
+                        }
+                    }
+                },
+                "description": {
+                    "command_description": "किसी वर्ण के लिए विवरण सेट करें",
+                    "command_name": "विवरण",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "विवरण सेट करने के लिए वर्ण",
+                            "parameter_name": "प्रतिनिधि"
+                        },
+                        "text": {
+                            "parameter_description": "चरित्र के लिए सेट किया जाने वाला विवरण",
+                            "parameter_name": "मूलपाठ"
+                        }
+                    }
+                },
+                "detail": {
+                    "command_description": "किसी पात्र का विवरण प्राप्त करें",
+                    "command_name": "detail",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "एक प्रॉक्सी का विवरण दें. ",
+                            "parameter_name": "प्रतिनिधि"
+                        }
+                    }
+                },
+                "find": {
+                    "command_description": "Find a proxy."
+                },
+                "group": {
+                    "command_description": "किसी वर्ण के लिए समूह सेट करें",
+                    "command_name": "समूह",
+                    "params": {
+                        "group": {
+                            "parameter_description": "समूह, डिफ़ॉल्ट रूप से कोई नहीं",
+                            "parameter_name": "समूह"
+                        },
+                        "proxy": {
+                            "parameter_description": "समूह को निर्धारित करने के लिए चरित्र",
+                            "parameter_name": "प्रतिनिधि"
+                        }
+                    }
+                },
+                "image": {
+                    "command_description": "Set the image for a proxy.",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "छवि URL, डिफ़ॉल्ट रूप से कोई नहीं",
+                            "parameter_name": "अवतार"
+                        },
+                        "proxy": {
+                            "parameter_description": "अवतार सेट करने के लिए पात्र",
+                            "parameter_name": "प्रतिनिधि"
+                        }
+                    }
+                },
+                "list": {
+                    "command_description": "List all proxies."
+                },
+                "local": {
+                    "command_description": "किसी कैरेक्टर के लिए स्थानीय सेट करें",
+                    "command_name": "स्थानीय",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "छवि, डिफ़ॉल्ट रूप से कोई नहीं",
+                            "parameter_name": "छवि"
+                        },
+                        "nickname": {
+                            "parameter_description": "उपनाम, डिफ़ॉल्ट रूप से कोई नहीं",
+                            "parameter_name": "उपनाम"
+                        },
+                        "proxy": {
+                            "parameter_description": "स्थानीय को सेट करने के लिए कैरेक्टर",
+                            "parameter_name": "प्रतिनिधि"
+                        }
+                    }
+                },
+                "nickname": {
+                    "command_description": "किसी पात्र के लिए उपनाम सेट करें",
+                    "command_name": "उपनाम",
+                    "params": {
+                        "nickname": {
+                            "parameter_description": "चरित्र के लिए निर्धारित उपनाम",
+                            "parameter_name": "उपनाम"
+                        },
+                        "proxy": {
+                            "parameter_description": "उपनाम सेट करने के लिए वर्ण",
+                            "parameter_name": "प्रतिनिधि"
+                        }
+                    }
+                },
+                "nsfw": {
+                    "command_description": "सेट करें कि कोई कैरेक्टर NSFW है या नहीं",
+                    "command_name": "एनएसएफडब्ल्यू",
+                    "params": {
+                        "nsfw": {
+                            "parameter_description": "NSFW, डिफ़ॉल्ट रूप से विपरीत मान पर स्विच करता है",
+                            "parameter_name": "एनएसएफडब्ल्यू"
+                        },
+                        "proxy": {
+                            "parameter_description": "एनएसएफडब्ल्यू को सेट करने के लिए चरित्र",
+                            "parameter_name": "प्रतिनिधि"
+                        }
+                    }
+                },
+                "prefix": {
+                    "command_description": "किसी वर्ण के लिए उपसर्ग सेट करें.",
+                    "command_name": "उपसर्ग",
+                    "params": {
+                        "prefixes": {
+                            "parameter_description": "उपसर्ग उदा. ",
+                            "parameter_name": "उपसर्गों"
+                        },
+                        "proxy": {
+                            "parameter_description": "उपसर्ग सेट करने के लिए वर्ण",
+                            "parameter_name": "प्रतिनिधि"
+                        }
+                    }
+                },
+                "prune": {
+                    "command_description": "एक निश्चित समय के लिए अप्रयुक्त प्रून अक्षर।",
+                    "command_name": "prune",
+                    "params": {
+                        "time": {
+                            "parameter_description": "पहले छँटाई करने की तिथि, डिफ़ॉल्ट रूप से कोई नहीं"
+                        }
+                    }
+                },
+                "purge": {
+                    "command_description": "अपना सारा डेटा मिटा दें (संदेश लॉग को छोड़कर)",
+                    "command_name": "शुद्ध",
+                    "params": {
+                        "confirmation": {
+                            "parameter_description": "confirmation",
+                            "parameter_name": "confirmation"
+                        }
+                    }
+                },
+                "read": {
+                    "command_description": "एक चरित्र पढ़ें",
+                    "command_name": "पढ़ना",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "चरित्र से संस्करण को पढ़ने के लिए",
+                            "parameter_name": "प्रतिनिधि"
+                        }
+                    }
+                },
+                "rename": {
+                    "command_description": "किसी वर्ण का नाम बदलें",
+                    "command_name": "नाम_बदलने",
+                    "params": {
+                        "name": {
+                            "parameter_description": "किरदार का नया नाम",
+                            "parameter_name": "नाम"
+                        },
+                        "proxy": {
+                            "parameter_description": "नाम बदलने के लिए चरित्र",
+                            "parameter_name": "प्रतिनिधि"
+                        }
+                    }
+                },
+                "set": {
+                    "command_description": "Set a proxy as the current one."
+                },
+                "update": {
+                    "command_description": "प्रॉक्सी अपडेट करें. ",
+                    "command_name": "अद्यतन",
+                    "params": {
+                        "image": {
+                            "parameter_description": "छवि, डिफ़ॉल्ट रूप से कोई नहीं",
+                            "parameter_name": "छवि"
+                        },
+                        "proxy": {
+                            "parameter_description": "अद्यतन करने के लिए चरित्र",
+                            "parameter_name": "प्रतिनिधि"
+                        }
+                    }
+                },
+                "use": {
+                    "command_description": "Use a proxy."
+                }
+            },
+            "group_description": "Shared proxy commands."
+        },
+        "store": {
+            "params": {
+                "storage": {
+                    "choices": {
+                        "Global": "Global",
+                        "Local": "Local"
                     }
                 }
             }
         },
+        "update": {
+            "command_description": "प्रॉक्सी अपडेट करें. ",
+            "command_name": "अद्यतन",
+            "params": {
+                "image": {
+                    "parameter_description": "छवि, डिफ़ॉल्ट रूप से कोई नहीं",
+                    "parameter_name": "छवि"
+                },
+                "proxy": {
+                    "parameter_description": "अद्यतन करने के लिए चरित्र",
+                    "parameter_name": "प्रतिनिधि"
+                }
+            }
+        },
+        "use": {
+            "command_description": "Use a proxy.",
+            "params": {
+                "text": {
+                    "parameter_description": "मूलपाठ",
+                    "parameter_name": "मूलपाठ"
+                }
+            }
+        },
+        "var": {
+            "group": {
+                "auto": {
+                    "command_description": "किसी कैरेक्टर के लिए ऑटो सेट करें",
+                    "command_name": "ऑटो",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "कैरेक्टर, डिफ़ॉल्ट रूप से ऑटो को अक्षम कर देता है",
+                            "parameter_name": "प्रतिनिधि"
+                        },
+                        "variant": {
+                            "parameter_description": "ऑटो को सेट करने के लिए वैरिएंट",
+                            "parameter_name": "प्रकार"
+                        }
+                    }
+                },
+                "avatar": {
+                    "command_description": "किसी पात्र के लिए अवतार सेट करें",
+                    "command_name": "अवतार",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "छवि URL, डिफ़ॉल्ट रूप से कोई नहीं",
+                            "parameter_name": "अवतार"
+                        },
+                        "proxy": {
+                            "parameter_description": "अवतार सेट करने के लिए पात्र",
+                            "parameter_name": "प्रतिनिधि"
+                        },
+                        "variant": {
+                            "parameter_description": "अवतार सेट करने के लिए वैरिएंट",
+                            "parameter_name": "प्रकार"
+                        }
+                    }
+                },
+                "birthday": {
+                    "command_description": "किसी पात्र का जन्मदिन निर्धारित करें",
+                    "command_name": "जन्मदिन",
+                    "params": {
+                        "birthday": {
+                            "parameter_description": "जन्मदिन, डिफ़ॉल्ट रूप से कोई नहीं",
+                            "parameter_name": "जन्मदिन"
+                        },
+                        "proxy": {
+                            "parameter_description": "जन्मदिन निर्धारित करने हेतु पात्र",
+                            "parameter_name": "प्रतिनिधि"
+                        },
+                        "variant": {
+                            "parameter_description": "जन्मदिन निर्धारित करने के लिए भिन्न",
+                            "parameter_name": "प्रकार"
+                        }
+                    }
+                },
+                "color": {
+                    "command_description": "Change the color of a variant."
+                },
+                "create": {
+                    "command_description": "एक नया चरित्र बनाएँ.",
+                    "command_name": "बनाएं",
+                    "params": {
+                        "image": {
+                            "parameter_description": "छवि, डिफ़ॉल्ट रूप से कोई नहीं",
+                            "parameter_name": "छवि"
+                        },
+                        "prefixes": {
+                            "parameter_description": "Prefixes e.g. A:text, |text|, etc."
+                        },
+                        "proxy": {
+                            "parameter_description": " वैरिएंट बनाने के लिए प्रॉक्सी",
+                            "parameter_name": "प्रतिनिधि"
+                        }
+                    }
+                },
+                "delete": {
+                    "command_description": "किसी वर्ण का प्रकार हटाएँ",
+                    "command_name": "मिटाना",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "वैरिएंट को हटाने के लिए प्रॉक्सी",
+                            "parameter_name": "प्रतिनिधि"
+                        },
+                        "variant": {
+                            "parameter_description": "हटाने के लिए वैरिएंट",
+                            "parameter_name": "प्रकार"
+                        }
+                    }
+                },
+                "description": {
+                    "command_description": "किसी वर्ण के लिए विवरण सेट करें",
+                    "command_name": "विवरण",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "विवरण सेट करने के लिए वर्ण",
+                            "parameter_name": "प्रतिनिधि"
+                        },
+                        "text": {
+                            "parameter_description": "चरित्र के लिए सेट किया जाने वाला विवरण",
+                            "parameter_name": "मूलपाठ"
+                        },
+                        "variant": {
+                            "parameter_description": "विवरण सेट करने के लिए वैरिएंट",
+                            "parameter_name": "प्रकार"
+                        }
+                    }
+                },
+                "detail": {
+                    "command_description": "किसी पात्र का विवरण प्राप्त करें",
+                    "command_name": "detail",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "एक प्रॉक्सी का विवरण दें. ",
+                            "parameter_name": "प्रतिनिधि"
+                        },
+                        "variant": {
+                            "parameter_description": "विस्तार से भिन्न",
+                            "parameter_name": "प्रकार"
+                        }
+                    }
+                },
+                "find": {
+                    "command_description": "Find a variant."
+                },
+                "group": {
+                    "command_description": "किसी वर्ण के लिए समूह सेट करें",
+                    "command_name": "समूह",
+                    "params": {
+                        "group": {
+                            "parameter_description": "समूह, डिफ़ॉल्ट रूप से कोई नहीं",
+                            "parameter_name": "समूह"
+                        },
+                        "proxy": {
+                            "parameter_description": "समूह को निर्धारित करने के लिए चरित्र",
+                            "parameter_name": "प्रतिनिधि"
+                        },
+                        "variant": {
+                            "parameter_description": "समूह को सेट करने के लिए वैरिएंट",
+                            "parameter_name": "प्रकार"
+                        }
+                    }
+                },
+                "list": {
+                    "command_description": "List all variants."
+                },
+                "local": {
+                    "command_description": "किसी कैरेक्टर के लिए स्थानीय सेट करें",
+                    "command_name": "स्थानीय",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "छवि, डिफ़ॉल्ट रूप से कोई नहीं",
+                            "parameter_name": "छवि"
+                        },
+                        "nickname": {
+                            "parameter_description": "उपनाम, डिफ़ॉल्ट रूप से कोई नहीं",
+                            "parameter_name": "उपनाम"
+                        },
+                        "proxy": {
+                            "parameter_description": "स्थानीय को सेट करने के लिए कैरेक्टर",
+                            "parameter_name": "प्रतिनिधि"
+                        },
+                        "variant": {
+                            "parameter_description": "स्थानीय को सेट करने के लिए वैरिएंट",
+                            "parameter_name": "प्रकार"
+                        }
+                    }
+                },
+                "nickname": {
+                    "command_description": "किसी पात्र के लिए उपनाम सेट करें",
+                    "command_name": "उपनाम",
+                    "params": {
+                        "nickname": {
+                            "parameter_description": "चरित्र के लिए निर्धारित उपनाम",
+                            "parameter_name": "उपनाम"
+                        },
+                        "proxy": {
+                            "parameter_description": "उपनाम सेट करने के लिए वर्ण",
+                            "parameter_name": "प्रतिनिधि"
+                        },
+                        "variant": {
+                            "parameter_description": "उपनाम सेट करने के लिए वैरिएंट",
+                            "parameter_name": "प्रकार"
+                        }
+                    }
+                },
+                "nsfw": {
+                    "command_description": "सेट करें कि कोई कैरेक्टर NSFW है या नहीं",
+                    "command_name": "एनएसएफडब्ल्यू",
+                    "params": {
+                        "nsfw": {
+                            "parameter_description": "NSFW, डिफ़ॉल्ट रूप से विपरीत मान पर स्विच करता है",
+                            "parameter_name": "एनएसएफडब्ल्यू"
+                        },
+                        "proxy": {
+                            "parameter_description": "एनएसएफडब्ल्यू को सेट करने के लिए चरित्र",
+                            "parameter_name": "प्रतिनिधि"
+                        },
+                        "variant": {
+                            "parameter_description": "NSFW को सेट करने के लिए वेरिएंट",
+                            "parameter_name": "प्रकार"
+                        }
+                    }
+                },
+                "prefix": {
+                    "command_description": "किसी वर्ण के लिए उपसर्ग सेट करें.",
+                    "command_name": "उपसर्ग",
+                    "params": {
+                        "prefixes": {
+                            "parameter_description": "उपसर्ग उदा. ",
+                            "parameter_name": "उपसर्गों"
+                        },
+                        "proxy": {
+                            "parameter_description": "उपसर्ग सेट करने के लिए वर्ण",
+                            "parameter_name": "प्रतिनिधि"
+                        },
+                        "variant": {
+                            "parameter_description": "उपसर्ग सेट करने के लिए वैरिएंट",
+                            "parameter_name": "प्रकार"
+                        }
+                    }
+                },
+                "prune": {
+                    "command_description": "एक निश्चित समय के लिए अप्रयुक्त प्रून अक्षर।",
+                    "command_name": "prune",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "प्रतिनिधि"
+                        },
+                        "time": {
+                            "parameter_description": "पहले छँटाई करने की तिथि, डिफ़ॉल्ट रूप से कोई नहीं"
+                        }
+                    }
+                },
+                "purge": {
+                    "command_description": "अपना सारा डेटा मिटा दें (संदेश लॉग को छोड़कर)",
+                    "command_name": "शुद्ध",
+                    "params": {
+                        "confirmation": {
+                            "parameter_description": "confirmation",
+                            "parameter_name": "confirmation"
+                        },
+                        "proxy": {
+                            "parameter_description": "प्रतिनिधि",
+                            "parameter_name": "प्रतिनिधि"
+                        }
+                    }
+                },
+                "read": {
+                    "command_description": "एक चरित्र पढ़ें",
+                    "command_name": "पढ़ना",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "चरित्र से संस्करण को पढ़ने के लिए",
+                            "parameter_name": "प्रतिनिधि"
+                        },
+                        "variant": {
+                            "parameter_description": "पढ़ने के लिए भिन्न",
+                            "parameter_name": "प्रकार"
+                        }
+                    }
+                },
+                "rename": {
+                    "command_description": "किसी वर्ण का नाम बदलें",
+                    "command_name": "नाम_बदलने",
+                    "params": {
+                        "name": {
+                            "parameter_description": "किरदार का नया नाम",
+                            "parameter_name": "नाम"
+                        },
+                        "proxy": {
+                            "parameter_description": "नाम बदलने के लिए चरित्र",
+                            "parameter_name": "प्रतिनिधि"
+                        },
+                        "variant": {
+                            "parameter_description": "नाम बदलने के लिए भिन्न",
+                            "parameter_name": "प्रकार"
+                        }
+                    }
+                },
+                "set": {
+                    "command_description": "Set a variant."
+                },
+                "update": {
+                    "command_description": "प्रॉक्सी अपडेट करें. ",
+                    "command_name": "अद्यतन",
+                    "params": {
+                        "image": {
+                            "parameter_description": "छवि, डिफ़ॉल्ट रूप से कोई नहीं",
+                            "parameter_name": "छवि"
+                        },
+                        "proxy": {
+                            "parameter_description": "अद्यतन करने के लिए चरित्र",
+                            "parameter_name": "प्रतिनिधि"
+                        }
+                    }
+                },
+                "use": {
+                    "command_description": "Use a variant."
+                }
+            },
+            "group_description": "Variant commands.",
+            "group_name": "वर"
+        },
+        "variant-to-proxy": {
+            "command_description": "एक वैरिएंट को एक कैरेक्टर में बदलें",
+            "command_name": "वैरिएंट-टू-प्रॉक्सी",
+            "params": {
+                "proxy": {
+                    "parameter_description": "कनवर्ट करने के लिए प्रॉक्सी",
+                    "parameter_name": "प्रतिनिधि"
+                },
+                "variant": {
+                    "parameter_description": "कन्वर्ट करने के लिए वेरिएंट",
+                    "parameter_name": "प्रकार"
+                }
+            }
+        }
+    },
+    "interactions": {
         "context_menu": {
             "command_name": "प्रतिनिधि"
         }

@@ -1,304 +1,333 @@
 {
     "commands": {
-        "exec": {
-            "command_description": "Execute a command."
+        "afk": {
+            "command_description": "Check if a user is AFK."
         },
-        "proxy": {
-            "command_name": "прокси",
-            "command_description": "Деактивиране на символи в сървър",
+        "auto": {
+            "command_description": "Задайте автоматичното за символ",
+            "command_name": "автоматичен",
             "params": {
-                "enable": {
-                    "parameter_name": "активирайте",
-                    "parameter_description": "Активиране или деактивиране на знаци, превключватели по подразбиране"
+                "proxy": {
+                    "parameter_description": "Символ, по подразбиране деактивира автоматичното",
+                    "parameter_name": "прокси"
                 }
             }
         },
-        "set": {
-            "command_description": "Set a proxy as the current one."
-        },
-        "use": {
+        "avatar": {
+            "command_description": "Задайте аватара за герой",
+            "command_name": "аватар",
             "params": {
-                "text": {
-                    "parameter_name": "текст",
-                    "parameter_description": "текст"
+                "avatar": {
+                    "parameter_description": "URL адрес на изображение, по подразбиране Няма",
+                    "parameter_name": "аватар"
+                },
+                "proxy": {
+                    "parameter_description": "Символ, за който да зададете аватара",
+                    "parameter_name": "прокси"
                 }
             }
         },
-        "say": {
+        "birthday": {
+            "command_description": "Задаване на рожден ден за персонаж",
+            "command_name": "birthday",
             "params": {
-                "text": {
-                    "parameter_name": "текст",
-                    "parameter_description": "текст"
+                "birthday": {
+                    "parameter_description": "Рожден ден, по подразбиране Няма",
+                    "parameter_name": "birthday"
+                },
+                "proxy": {
+                    "parameter_description": "Символ, за който да зададете рождения ден",
+                    "parameter_name": "прокси"
                 }
             }
         },
-        "npc": {
-            "command_name": "npc",
-            "command_description": "Създайте ново NPC съобщение",
-            "params": {
-                "franchise": {
-                    "parameter_name": "franchise",
-                    "parameter_description": "Франчайз за използване",
-                    "choices": {
-                        "Pokemon": "Pokemon",
-                        "Pokemon Shiny": "Pokemon Shiny",
-                        "Trainer": "Trainer",
-                        "Digimon": "Digimon",
-                        "Palworld": "Palworld",
-                        "D&D": "D&D"
-                    }
-                },
-                "npc": {
-                    "parameter_name": "npc",
-                    "parameter_description": "NPC за използване"
-                },
-                "nickname": {
-                    "parameter_name": "псевдоним",
-                    "parameter_description": "Псевдоним, по подразбиране Няма"
-                },
-                "emotion": {
-                    "parameter_name": "емоция",
-                    "parameter_description": "Емоция, по подразбиране Нормално",
-                    "choices": {
-                        "Normal": "Normal",
-                        "Happy": "Happy",
-                        "Pain": "Pain",
-                        "Angry": "Angry",
-                        "Worried": "Worried",
-                        "Sad": "Sad",
-                        "Crying": "Crying",
-                        "Shouting": "Shouting",
-                        "TearyEyed": "TearyEyed",
-                        "Determined": "Determined",
-                        "Joyous": "Joyous",
-                        "Inspired": "Inspired",
-                        "Surprised": "Surprised",
-                        "Dizzy": "Dizzy",
-                        "Sigh": "Sigh",
-                        "Stunned": "Stunned",
-                        "Special0": "Special0",
-                        "Special1": "Special1",
-                        "Special2": "Special2",
-                        "Special3": "Special3"
-                    }
-                },
-                "image": {
-                    "parameter_name": "изображение",
-                    "parameter_description": "Изображение, по подразбиране Няма"
-                },
-                "text": {
-                    "parameter_name": "текст",
-                    "parameter_description": "текст"
-                }
-            }
+        "check_permissions": {
+            "command_description": "Проверете дали ботът може да работи в предоставения канал",
+            "command_name": "check_perms"
+        },
+        "color": {
+            "command_description": "Set a color for a proxy."
         },
         "create": {
-            "command_description": "Create a new proxy.",
+            "command_description": "Създайте нов герой.",
+            "command_name": "създавам",
             "params": {
+                "image": {
+                    "parameter_description": "Изображение, по подразбиране Няма",
+                    "parameter_name": "изображение"
+                },
                 "prefixes": {
                     "parameter_description": "Prefixes e.g. A:text, |text|, etc."
                 }
             }
         },
         "delete": {
-            "command_name": "изтрий",
             "command_description": "Изтриване на знак",
+            "command_name": "изтрий",
             "params": {
                 "proxy": {
-                    "parameter_name": "прокси",
-                    "parameter_description": "Прокси, от който да изтриете варианта"
-                }
-            }
-        },
-        "read": {
-            "command_name": "прочети",
-            "command_description": "Прочетете герой",
-            "params": {
-                "proxy": {
-                    "parameter_name": "прокси",
-                    "parameter_description": "Знак за четене на варианта"
-                }
-            }
-        },
-        "nickname": {
-            "command_name": "псевдоним",
-            "command_description": "Задайте псевдоним за герой",
-            "params": {
-                "proxy": {
-                    "parameter_name": "прокси",
-                    "parameter_description": "Символ, за който да зададете псевдоним"
-                },
-                "nickname": {
-                    "parameter_name": "псевдоним",
-                    "parameter_description": "Псевдоним, който да зададете за героя"
-                }
-            }
-        },
-        "local": {
-            "command_name": "местен",
-            "command_description": "Задайте локалното за символ",
-            "params": {
-                "proxy": {
-                    "parameter_name": "прокси",
-                    "parameter_description": "Символ, за който да зададете локалния"
-                },
-                "avatar": {
-                    "parameter_name": "изображение",
-                    "parameter_description": "Изображение, по подразбиране Няма"
-                },
-                "nickname": {
-                    "parameter_name": "псевдоним",
-                    "parameter_description": "Псевдоним, по подразбиране Няма"
-                }
-            }
-        },
-        "avatar": {
-            "command_name": "аватар",
-            "command_description": "Задайте аватара за герой",
-            "params": {
-                "proxy": {
-                    "parameter_name": "прокси",
-                    "parameter_description": "Символ, за който да зададете аватара"
-                },
-                "avatar": {
-                    "parameter_name": "аватар",
-                    "parameter_description": "URL адрес на изображение, по подразбиране Няма"
-                }
-            }
-        },
-        "prefix": {
-            "command_name": "префикс",
-            "command_description": "Задайте префиксите за символ.",
-            "params": {
-                "proxy": {
-                    "parameter_name": "прокси",
-                    "parameter_description": "Знак за задаване на префикса"
-                },
-                "prefixes": {
-                    "parameter_name": "префикси",
-                    "parameter_description": "Префикси напр. "
-                }
-            }
-        },
-        "birthday": {
-            "command_name": "birthday",
-            "command_description": "Задаване на рожден ден за персонаж",
-            "params": {
-                "proxy": {
-                    "parameter_name": "прокси",
-                    "parameter_description": "Символ, за който да зададете рождения ден"
-                },
-                "birthday": {
-                    "parameter_name": "birthday",
-                    "parameter_description": "Рожден ден, по подразбиране Няма"
+                    "parameter_description": "Прокси, от който да изтриете варианта",
+                    "parameter_name": "прокси"
                 }
             }
         },
         "description": {
-            "command_name": "описание",
             "command_description": "Задайте описанието за персонаж",
+            "command_name": "описание",
             "params": {
                 "proxy": {
-                    "parameter_name": "прокси",
-                    "parameter_description": "Символ, за който да зададете описанието"
+                    "parameter_description": "Символ, за който да зададете описанието",
+                    "parameter_name": "прокси"
                 },
                 "text": {
-                    "parameter_name": "текст",
-                    "parameter_description": "Описание, което да зададете за героя"
+                    "parameter_description": "Описание, което да зададете за героя",
+                    "parameter_name": "текст"
                 }
             }
         },
-        "rename": {
-            "command_name": "преименувам",
-            "command_description": "Преименуване на герой",
+        "detail": {
+            "command_description": "Вземете подробности за герой",
+            "command_name": "детайл",
             "params": {
                 "proxy": {
-                    "parameter_name": "прокси",
-                    "parameter_description": "Символ за преименуване"
+                    "parameter_description": "Подробности за прокси. ",
+                    "parameter_name": "прокси"
+                }
+            }
+        },
+        "exec": {
+            "command_description": "Execute a command."
+        },
+        "export": {
+            "command_description": "Експортирайте героите си в JSON файл",
+            "command_name": "износ",
+            "params": {
+                "format": {
+                    "choices": {
+                        "Default": "Default",
+                        "PluralKit": "PluralKit",
+                        "Tupperbox": "Tupperbox"
+                    },
+                    "parameter_description": "Формат за експортиране, по подразбиране JSON",
+                    "parameter_name": "формат"
                 },
-                "name": {
-                    "parameter_name": "име",
-                    "parameter_description": "Ново име за героя"
+                "new_token": {
+                    "parameter_description": "Ако искате да генерирате нов токен",
+                    "parameter_name": "нов_токен"
                 }
             }
         },
         "group": {
-            "command_name": "група",
             "command_description": "Задайте групата за персонаж",
-            "params": {
-                "proxy": {
-                    "parameter_name": "прокси",
-                    "parameter_description": "Символ, за който да зададете групата"
-                },
-                "group": {
-                    "parameter_name": "група",
-                    "parameter_description": "Група, по подразбиране Няма"
-                }
-            }
-        },
-        "nsfw": {
-            "command_name": "nsfw",
-            "command_description": "Задайте дали даден символ е NSFW",
-            "params": {
-                "proxy": {
-                    "parameter_name": "прокси",
-                    "parameter_description": "Символ, за който да зададете NSFW"
-                },
-                "nsfw": {
-                    "parameter_name": "nsfw",
-                    "parameter_description": "NSFW, по подразбиране превключете на противоположна стойност"
-                }
-            }
-        },
-        "auto": {
-            "command_name": "автоматичен",
-            "command_description": "Задайте автоматичното за символ",
-            "params": {
-                "proxy": {
-                    "parameter_name": "прокси",
-                    "parameter_description": "Символ, по подразбиране деактивира автоматичното"
-                }
-            }
-        },
-        "list": {
-            "command_name": "списък",
-            "command_description": "Избройте всички герои ",
+            "command_name": "група",
             "params": {
                 "group": {
-                    "parameter_name": "група",
-                    "parameter_description": "Групирайте героите, от които да изброявате"
+                    "parameter_description": "Група, по подразбиране Няма",
+                    "parameter_name": "група"
+                },
+                "proxy": {
+                    "parameter_description": "Символ, за който да зададете групата",
+                    "parameter_name": "прокси"
+                }
+            }
+        },
+        "help": {
+            "command_description": "Вградена помощ за бот",
+            "command_name": "помогне",
+            "params": {
+                "search": {
+                    "parameter_description": "Термин за търсене",
+                    "parameter_name": "търсене"
+                }
+            }
+        },
+        "import": {
+            "command_description": "Импортирайте героите си от файл или токен",
+            "command_name": "импортиране",
+            "params": {
+                "data": {
+                    "parameter_description": "Файл за импортиране",
+                    "parameter_name": "данни"
+                },
+                "deleting_from_token": {
+                    "parameter_description": "Изтриване на символи от токена",
+                    "parameter_name": "изтриване_от_токен"
+                },
+                "token": {
+                    "parameter_description": "Токен за използване за импортиране",
+                    "parameter_name": "жетон"
                 }
             }
         },
         "latch": {
-            "command_name": "резе",
             "command_description": "Активирайте или деактивирайте режима на заключване",
+            "command_name": "резе",
             "params": {
-                "enable": {
-                    "parameter_description": "Активирайте или деактивирайте режима на заключване"
-                },
                 "auto_remove": {
                     "parameter_description": "Дали да се запази автоматичното за текущия канал или не, по подразбиране True"
+                },
+                "enable": {
+                    "parameter_description": "Активирайте или деактивирайте режима на заключване"
                 }
             }
         },
-        "export": {
-            "command_name": "износ",
-            "command_description": "Експортирайте героите си в JSON файл",
+        "list": {
+            "command_description": "Избройте всички герои ",
+            "command_name": "списък",
             "params": {
-                "format": {
-                    "parameter_name": "формат",
-                    "parameter_description": "Формат за експортиране, по подразбиране JSON"
+                "group": {
+                    "parameter_description": "Групирайте героите, от които да изброявате",
+                    "parameter_name": "група"
+                }
+            }
+        },
+        "local": {
+            "command_description": "Задайте локалното за символ",
+            "command_name": "местен",
+            "params": {
+                "avatar": {
+                    "parameter_description": "Изображение, по подразбиране Няма",
+                    "parameter_name": "изображение"
                 },
-                "new_token": {
-                    "parameter_name": "нов_токен",
-                    "parameter_description": "Ако искате да генерирате нов токен"
+                "nickname": {
+                    "parameter_description": "Псевдоним, по подразбиране Няма",
+                    "parameter_name": "псевдоним"
+                },
+                "proxy": {
+                    "parameter_description": "Символ, за който да зададете локалния",
+                    "parameter_name": "прокси"
+                }
+            }
+        },
+        "nickname": {
+            "command_description": "Задайте псевдоним за герой",
+            "command_name": "псевдоним",
+            "params": {
+                "nickname": {
+                    "parameter_description": "Псевдоним, който да зададете за героя",
+                    "parameter_name": "псевдоним"
+                },
+                "proxy": {
+                    "parameter_description": "Символ, за който да зададете псевдоним",
+                    "parameter_name": "прокси"
+                }
+            }
+        },
+        "npc": {
+            "command_description": "Създайте ново NPC съобщение",
+            "command_name": "npc",
+            "params": {
+                "emotion": {
+                    "choices": {
+                        "Angry": "Angry",
+                        "Crying": "Crying",
+                        "Determined": "Determined",
+                        "Dizzy": "Dizzy",
+                        "Happy": "Happy",
+                        "Inspired": "Inspired",
+                        "Joyous": "Joyous",
+                        "Normal": "Normal",
+                        "Pain": "Pain",
+                        "Sad": "Sad",
+                        "Shouting": "Shouting",
+                        "Sigh": "Sigh",
+                        "Special0": "Special0",
+                        "Special1": "Special1",
+                        "Special2": "Special2",
+                        "Special3": "Special3",
+                        "Stunned": "Stunned",
+                        "Surprised": "Surprised",
+                        "TearyEyed": "TearyEyed",
+                        "Worried": "Worried"
+                    },
+                    "parameter_description": "Емоция, по подразбиране Нормално",
+                    "parameter_name": "емоция"
+                },
+                "franchise": {
+                    "choices": {
+                        "D&D": "D&D",
+                        "Digimon": "Digimon",
+                        "Palworld": "Palworld",
+                        "Pokemon": "Pokemon",
+                        "Pokemon Shiny": "Pokemon Shiny",
+                        "Trainer": "Trainer"
+                    },
+                    "parameter_description": "Франчайз за използване",
+                    "parameter_name": "франчайз"
+                },
+                "image": {
+                    "parameter_description": "Изображение, по подразбиране Няма",
+                    "parameter_name": "изображение"
+                },
+                "nickname": {
+                    "parameter_description": "Псевдоним, по подразбиране Няма",
+                    "parameter_name": "псевдоним"
+                },
+                "npc": {
+                    "parameter_description": "NPC за използване",
+                    "parameter_name": "npc"
+                },
+                "text": {
+                    "parameter_description": "текст",
+                    "parameter_name": "текст"
+                }
+            }
+        },
+        "nsfw": {
+            "command_description": "Задайте дали даден символ е NSFW",
+            "command_name": "nsfw",
+            "params": {
+                "nsfw": {
+                    "parameter_description": "NSFW, по подразбиране превключете на противоположна стойност",
+                    "parameter_name": "nsfw"
+                },
+                "proxy": {
+                    "parameter_description": "Символ, за който да зададете NSFW",
+                    "parameter_name": "прокси"
+                }
+            }
+        },
+        "prefix": {
+            "command_description": "Задайте префиксите за символ.",
+            "command_name": "префикс",
+            "params": {
+                "prefixes": {
+                    "parameter_description": "Префикси напр. ",
+                    "parameter_name": "префикси"
+                },
+                "proxy": {
+                    "parameter_description": "Знак за задаване на префикса",
+                    "parameter_name": "прокси"
+                }
+            }
+        },
+        "proxy": {
+            "command_description": "Деактивиране на символи в сървър",
+            "command_name": "прокси",
+            "params": {
+                "enable": {
+                    "parameter_description": "Активиране или деактивиране на знаци, превключватели по подразбиране",
+                    "parameter_name": "активирайте"
+                }
+            }
+        },
+        "proxy-to-variant": {
+            "command_description": "Преобразуване на знак във вариант",
+            "command_name": "прокси-към-вариант",
+            "params": {
+                "base": {
+                    "parameter_description": "Нова база за героя",
+                    "parameter_name": "база"
+                },
+                "original": {
+                    "parameter_description": "Символ за конвертиране",
+                    "parameter_name": "оригинален"
                 }
             }
         },
         "prune": {
-            "command_name": "подрязвам",
             "command_description": "Подрязване на символи, неизползвани за определено време.",
+            "command_name": "подрязвам",
             "params": {
                 "time": {
                     "parameter_description": "Дата за съкращаване преди, по подразбиране Няма"
@@ -306,656 +335,674 @@
             }
         },
         "purge": {
-            "command_name": "чистка",
             "command_description": "Изчистете всичките си данни (с изключение на регистрационните файлове на съобщенията)",
+            "command_name": "чистка",
             "params": {
                 "confirmation": {
-                    "parameter_name": "потвърждение",
-                    "parameter_description": "потвърждение"
+                    "parameter_description": "потвърждение",
+                    "parameter_name": "потвърждение"
                 }
             }
         },
-        "proxy-to-variant": {
-            "command_name": "прокси-към-вариант",
-            "command_description": "Преобразуване на знак във вариант",
-            "params": {
-                "original": {
-                    "parameter_name": "оригинален",
-                    "parameter_description": "Символ за конвертиране"
-                },
-                "base": {
-                    "parameter_name": "база",
-                    "parameter_description": "Нова база за героя"
-                }
-            }
-        },
-        "variant-to-proxy": {
-            "command_name": "вариант-към-прокси",
-            "command_description": "Преобразуване на вариант в знак",
+        "read": {
+            "command_description": "Прочетете герой",
+            "command_name": "прочети",
             "params": {
                 "proxy": {
-                    "parameter_name": "прокси",
-                    "parameter_description": "Прокси за преобразуване"
-                },
-                "variant": {
-                    "parameter_name": "вариант",
-                    "parameter_description": "Вариант за конвертиране"
+                    "parameter_description": "Знак за четене на варианта",
+                    "parameter_name": "прокси"
                 }
             }
         },
-        "update": {
-            "command_name": "актуализация",
-            "command_description": "Актуализирайте прокси. ",
+        "rename": {
+            "command_description": "Преименуване на герой",
+            "command_name": "преименувам",
             "params": {
+                "name": {
+                    "parameter_description": "Ново име за героя",
+                    "parameter_name": "име"
+                },
                 "proxy": {
-                    "parameter_name": "прокси",
-                    "parameter_description": "Символ за актуализиране"
-                },
-                "image": {
-                    "parameter_name": "изображение",
-                    "parameter_description": "Изображение, по подразбиране Няма"
+                    "parameter_description": "Символ за преименуване",
+                    "parameter_name": "прокси"
                 }
             }
-        },
-        "detail": {
-            "command_name": "детайл",
-            "command_description": "Вземете подробности за герой",
-            "params": {
-                "proxy": {
-                    "parameter_name": "прокси",
-                    "parameter_description": "Подробности за прокси. "
-                }
-            }
-        },
-        "import": {
-            "command_name": "импортиране",
-            "command_description": "Импортирайте героите си от файл или токен",
-            "params": {
-                "data": {
-                    "parameter_name": "данни",
-                    "parameter_description": "Файл за импортиране"
-                },
-                "token": {
-                    "parameter_name": "жетон",
-                    "parameter_description": "Токен за използване за импортиране"
-                },
-                "deleting_from_token": {
-                    "parameter_name": "изтриване_от_токен",
-                    "parameter_description": "Изтриване на символи от токена"
-                }
-            }
-        },
-        "var": {
-            "group_name": "вар",
-            "group_description": "Variant commands.",
-            "groupset": {
-                "command_description": "Set a variant."
-            },
-            "groupuse": {
-                "command_description": "Use a variant."
-            },
-            "groupcreate": {
-                "command_name": "създавам",
-                "command_description": "Създайте нов герой.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "прокси",
-                        "parameter_description": " Прокси за създаване на варианта"
-                    },
-                    "image": {
-                        "parameter_name": "изображение",
-                        "parameter_description": "Изображение, по подразбиране Няма"
-                    },
-                    "prefixes": {
-                        "parameter_description": "Prefixes e.g. A:text, |text|, etc."
-                    }
-                }
-            },
-            "groupdelete": {
-                "command_name": "изтрий",
-                "command_description": "Изтриване на вариант на персонаж",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "прокси",
-                        "parameter_description": "Прокси, от който да изтриете варианта"
-                    },
-                    "variant": {
-                        "parameter_name": "вариант",
-                        "parameter_description": "Вариант за изтриване"
-                    }
-                }
-            },
-            "groupread": {
-                "command_name": "прочети",
-                "command_description": "Прочетете герой",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "прокси",
-                        "parameter_description": "Знак за четене на варианта"
-                    },
-                    "variant": {
-                        "parameter_name": "вариант",
-                        "parameter_description": "Вариант за четене"
-                    }
-                }
-            },
-            "groupnickname": {
-                "command_name": "псевдоним",
-                "command_description": "Задайте псевдоним за герой",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "прокси",
-                        "parameter_description": "Символ, за който да зададете псевдоним"
-                    },
-                    "variant": {
-                        "parameter_name": "вариант",
-                        "parameter_description": "Вариант за задаване на псевдоним"
-                    },
-                    "nickname": {
-                        "parameter_name": "псевдоним",
-                        "parameter_description": "Псевдоним, който да зададете за героя"
-                    }
-                }
-            },
-            "grouplocal": {
-                "command_name": "местен",
-                "command_description": "Задайте локалното за символ",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "прокси",
-                        "parameter_description": "Символ, за който да зададете локалния"
-                    },
-                    "variant": {
-                        "parameter_name": "вариант",
-                        "parameter_description": "Вариант за задаване на локалния"
-                    },
-                    "avatar": {
-                        "parameter_name": "изображение",
-                        "parameter_description": "Изображение, по подразбиране Няма"
-                    },
-                    "nickname": {
-                        "parameter_name": "псевдоним",
-                        "parameter_description": "Псевдоним, по подразбиране Няма"
-                    }
-                }
-            },
-            "groupprefix": {
-                "command_name": "префикс",
-                "command_description": "Задайте префиксите за символ.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "прокси",
-                        "parameter_description": "Знак за задаване на префикса"
-                    },
-                    "variant": {
-                        "parameter_name": "вариант",
-                        "parameter_description": "Вариант за задаване на префикса"
-                    },
-                    "prefixes": {
-                        "parameter_name": "префикси",
-                        "parameter_description": "Префикси напр. "
-                    }
-                }
-            },
-            "groupbirthday": {
-                "command_name": "birthday",
-                "command_description": "Задаване на рожден ден за персонаж",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "прокси",
-                        "parameter_description": "Символ, за който да зададете рождения ден"
-                    },
-                    "variant": {
-                        "parameter_name": "вариант",
-                        "parameter_description": "Вариант за задаване на рожден ден"
-                    },
-                    "birthday": {
-                        "parameter_name": "birthday",
-                        "parameter_description": "Рожден ден, по подразбиране Няма"
-                    }
-                }
-            },
-            "groupdescription": {
-                "command_name": "описание",
-                "command_description": "Задайте описанието за персонаж",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "прокси",
-                        "parameter_description": "Символ, за който да зададете описанието"
-                    },
-                    "variant": {
-                        "parameter_name": "вариант",
-                        "parameter_description": "Вариант за задаване на описанието"
-                    },
-                    "text": {
-                        "parameter_name": "текст",
-                        "parameter_description": "Описание, което да зададете за героя"
-                    }
-                }
-            },
-            "grouprename": {
-                "command_name": "преименувам",
-                "command_description": "Преименуване на герой",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "прокси",
-                        "parameter_description": "Символ за преименуване"
-                    },
-                    "variant": {
-                        "parameter_name": "вариант",
-                        "parameter_description": "Вариант за преименуване"
-                    },
-                    "name": {
-                        "parameter_name": "име",
-                        "parameter_description": "Ново име за героя"
-                    }
-                }
-            },
-            "groupgroup": {
-                "command_name": "група",
-                "command_description": "Задайте групата за персонаж",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "прокси",
-                        "parameter_description": "Символ, за който да зададете групата"
-                    },
-                    "variant": {
-                        "parameter_name": "вариант",
-                        "parameter_description": "Вариант за настройка на групата"
-                    },
-                    "group": {
-                        "parameter_name": "група",
-                        "parameter_description": "Група, по подразбиране Няма"
-                    }
-                }
-            },
-            "groupnsfw": {
-                "command_name": "nsfw",
-                "command_description": "Задайте дали даден символ е NSFW",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "прокси",
-                        "parameter_description": "Символ, за който да зададете NSFW"
-                    },
-                    "variant": {
-                        "parameter_name": "вариант",
-                        "parameter_description": "Вариант за задаване на NSFW"
-                    },
-                    "nsfw": {
-                        "parameter_name": "nsfw",
-                        "parameter_description": "NSFW, по подразбиране превключете на противоположна стойност"
-                    }
-                }
-            },
-            "groupauto": {
-                "command_name": "автоматичен",
-                "command_description": "Задайте автоматичното за символ",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "прокси",
-                        "parameter_description": "Символ, по подразбиране деактивира автоматичното"
-                    },
-                    "variant": {
-                        "parameter_name": "вариант",
-                        "parameter_description": "Вариант за настройка на авто"
-                    }
-                }
-            },
-            "groupavatar": {
-                "command_name": "аватар",
-                "command_description": "Задайте аватара за герой",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "прокси",
-                        "parameter_description": "Символ, за който да зададете аватара"
-                    },
-                    "variant": {
-                        "parameter_name": "вариант",
-                        "parameter_description": "Вариант за настройка на аватара"
-                    },
-                    "avatar": {
-                        "parameter_name": "аватар",
-                        "parameter_description": "URL адрес на изображение, по подразбиране Няма"
-                    }
-                }
-            },
-            "grouplist": {
-                "command_description": "List all variants."
-            },
-            "groupfind": {
-                "command_description": "Find a variant."
-            },
-            "groupupdate": {
-                "command_name": "актуализация",
-                "command_description": "Актуализирайте прокси. ",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "прокси",
-                        "parameter_description": "Символ за актуализиране"
-                    },
-                    "image": {
-                        "parameter_name": "изображение",
-                        "parameter_description": "Изображение, по подразбиране Няма"
-                    }
-                }
-            },
-            "groupdetail": {
-                "command_name": "детайл",
-                "command_description": "Вземете подробности за герой",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "прокси",
-                        "parameter_description": "Подробности за прокси. "
-                    },
-                    "variant": {
-                        "parameter_name": "вариант",
-                        "parameter_description": "Вариант до детайл"
-                    }
-                }
-            },
-            "groupprune": {
-                "command_name": "подрязвам",
-                "command_description": "Подрязване на символи, неизползвани за определено време.",
-                "params": {
-                    "proxy": {
-                        "parameter_description": "прокси"
-                    },
-                    "time": {
-                        "parameter_description": "Дата за съкращаване преди, по подразбиране Няма"
-                    }
-                }
-            },
-            "grouppurge": {
-                "command_name": "чистка",
-                "command_description": "Изчистете всичките си данни (с изключение на регистрационните файлове на съобщенията)",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "прокси",
-                        "parameter_description": "прокси"
-                    },
-                    "confirmation": {
-                        "parameter_name": "потвърждение",
-                        "parameter_description": "потвърждение"
-                    }
-                }
-            }
-        },
-        "shared": {
-            "group_description": "Shared proxy commands.",
-            "groupset": {
-                "command_description": "Set a proxy as the current one."
-            },
-            "groupcreate": {
-                "command_name": "създавам",
-                "command_description": "Създайте нов герой.",
-                "params": {
-                    "image": {
-                        "parameter_name": "изображение",
-                        "parameter_description": "Изображение, по подразбиране Няма"
-                    }
-                }
-            },
-            "groupdelete": {
-                "command_name": "изтрий",
-                "command_description": "Изтриване на знак",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "прокси",
-                        "parameter_description": "Прокси, от който да изтриете варианта"
-                    }
-                }
-            },
-            "groupread": {
-                "command_name": "прочети",
-                "command_description": "Прочетете герой",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "прокси",
-                        "parameter_description": "Знак за четене на варианта"
-                    }
-                }
-            },
-            "groupauto": {
-                "command_name": "автоматичен",
-                "command_description": "Задайте автоматичното за символ",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "прокси",
-                        "parameter_description": "Символ, по подразбиране деактивира автоматичното"
-                    }
-                }
-            },
-            "groupprefix": {
-                "command_name": "префикс",
-                "command_description": "Задайте префиксите за символ.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "прокси",
-                        "parameter_description": "Знак за задаване на префикса"
-                    },
-                    "prefixes": {
-                        "parameter_name": "префикси",
-                        "parameter_description": "Префикси напр. "
-                    }
-                }
-            },
-            "groupbirthday": {
-                "command_name": "birthday",
-                "command_description": "Задаване на рожден ден за персонаж",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "прокси",
-                        "parameter_description": "Символ, за който да зададете рождения ден"
-                    },
-                    "birthday": {
-                        "parameter_name": "birthday",
-                        "parameter_description": "Рожден ден, по подразбиране Няма"
-                    }
-                }
-            },
-            "groupdescription": {
-                "command_name": "описание",
-                "command_description": "Задайте описанието за персонаж",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "прокси",
-                        "parameter_description": "Символ, за който да зададете описанието"
-                    },
-                    "text": {
-                        "parameter_name": "текст",
-                        "parameter_description": "Описание, което да зададете за героя"
-                    }
-                }
-            },
-            "grouprename": {
-                "command_name": "преименувам",
-                "command_description": "Преименуване на герой",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "прокси",
-                        "parameter_description": "Символ за преименуване"
-                    },
-                    "name": {
-                        "parameter_name": "име",
-                        "parameter_description": "Ново име за героя"
-                    }
-                }
-            },
-            "groupnickname": {
-                "command_name": "псевдоним",
-                "command_description": "Задайте псевдоним за герой",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "прокси",
-                        "parameter_description": "Символ, за който да зададете псевдоним"
-                    },
-                    "nickname": {
-                        "parameter_name": "псевдоним",
-                        "parameter_description": "Псевдоним, който да зададете за героя"
-                    }
-                }
-            },
-            "groupgroup": {
-                "command_name": "група",
-                "command_description": "Задайте групата за персонаж",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "прокси",
-                        "parameter_description": "Символ, за който да зададете групата"
-                    },
-                    "group": {
-                        "parameter_name": "група",
-                        "parameter_description": "Група, по подразбиране Няма"
-                    }
-                }
-            },
-            "groupnsfw": {
-                "command_name": "nsfw",
-                "command_description": "Задайте дали даден символ е NSFW",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "прокси",
-                        "parameter_description": "Символ, за който да зададете NSFW"
-                    },
-                    "nsfw": {
-                        "parameter_name": "nsfw",
-                        "parameter_description": "NSFW, по подразбиране превключете на противоположна стойност"
-                    }
-                }
-            },
-            "groupavatar": {
-                "command_name": "аватар",
-                "command_description": "Задайте аватара за герой",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "прокси",
-                        "parameter_description": "Символ, за който да зададете аватара"
-                    },
-                    "avatar": {
-                        "parameter_name": "аватар",
-                        "parameter_description": "URL адрес на изображение, по подразбиране Няма"
-                    }
-                }
-            },
-            "groupimage": {
-                "params": {
-                    "proxy": {
-                        "parameter_name": "прокси",
-                        "parameter_description": "Символ, за който да зададете аватара"
-                    },
-                    "avatar": {
-                        "parameter_name": "аватар",
-                        "parameter_description": "URL адрес на изображение, по подразбиране Няма"
-                    }
-                }
-            },
-            "grouplocal": {
-                "command_name": "местен",
-                "command_description": "Задайте локалното за символ",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "прокси",
-                        "parameter_description": "Символ, за който да зададете локалния"
-                    },
-                    "avatar": {
-                        "parameter_name": "изображение",
-                        "parameter_description": "Изображение, по подразбиране Няма"
-                    },
-                    "nickname": {
-                        "parameter_name": "псевдоним",
-                        "parameter_description": "Псевдоним, по подразбиране Няма"
-                    }
-                }
-            },
-            "groupupdate": {
-                "command_name": "актуализация",
-                "command_description": "Актуализирайте прокси. ",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "прокси",
-                        "parameter_description": "Символ за актуализиране"
-                    },
-                    "image": {
-                        "parameter_name": "изображение",
-                        "parameter_description": "Изображение, по подразбиране Няма"
-                    }
-                }
-            },
-            "groupdetail": {
-                "command_name": "детайл",
-                "command_description": "Вземете подробности за герой",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "прокси",
-                        "parameter_description": "Подробности за прокси. "
-                    }
-                }
-            },
-            "groupprune": {
-                "command_name": "подрязвам",
-                "command_description": "Подрязване на символи, неизползвани за определено време.",
-                "params": {
-                    "time": {
-                        "parameter_description": "Дата за съкращаване преди, по подразбиране Няма"
-                    }
-                }
-            },
-            "grouppurge": {
-                "command_name": "чистка",
-                "command_description": "Изчистете всичките си данни (с изключение на регистрационните файлове на съобщенията)",
-                "params": {
-                    "confirmation": {
-                        "parameter_name": "потвърждение",
-                        "parameter_description": "потвърждение"
-                    }
-                }
-            }
-        },
-        "check_permissions": {
-            "command_name": "check_perms",
-            "command_description": "Проверете дали ботът може да работи в предоставения канал"
         },
         "roll": {
             "command_description": "Roll a dice."
         },
-        "afk": {
-            "command_description": "Check if a user is AFK."
-        },
-        "help": {
-            "command_name": "помогне",
-            "command_description": "Вградена помощ за бот",
+        "say": {
+            "command_description": "Say something.",
             "params": {
-                "search": {
-                    "parameter_name": "търсене",
-                    "parameter_description": "Термин за търсене"
+                "text": {
+                    "parameter_description": "текст",
+                    "parameter_name": "текст"
                 }
             }
         },
         "server_wiki": {
-            "command_name": "server_wiki",
             "command_description": "Дефиниран от потребителя сървър wiki",
+            "command_name": "server_wiki",
             "params": {
                 "search": {
-                    "parameter_name": "търсене",
-                    "parameter_description": "Термин за търсене"
+                    "parameter_description": "Термин за търсене",
+                    "parameter_name": "търсене"
                 }
             }
         },
+        "set": {
+            "command_description": "Set a proxy as the current one."
+        },
         "settings": {
-            "command_name": "настройки",
             "command_description": "Настройки на бот",
+            "command_name": "настройки",
             "params": {
                 "menu": {
-                    "parameter_name": "меню",
-                    "parameter_description": "Меню за отваряне за настройки",
                     "choices": {
-                        "Server": "сървър",
-                        "Member": "Член",
-                        "User": "Потребител"
+                        "Member": "Member",
+                        "Server": "Server",
+                        "User": "User"
+                    },
+                    "parameter_description": "Меню за отваряне за настройки",
+                    "parameter_name": "меню"
+                }
+            }
+        },
+        "shared": {
+            "group": {
+                "auto": {
+                    "command_description": "Задайте автоматичното за символ",
+                    "command_name": "автоматичен",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Символ, по подразбиране деактивира автоматичното",
+                            "parameter_name": "прокси"
+                        }
+                    }
+                },
+                "avatar": {
+                    "command_description": "Задайте аватара за герой",
+                    "command_name": "аватар",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "URL адрес на изображение, по подразбиране Няма",
+                            "parameter_name": "аватар"
+                        },
+                        "proxy": {
+                            "parameter_description": "Символ, за който да зададете аватара",
+                            "parameter_name": "прокси"
+                        }
+                    }
+                },
+                "birthday": {
+                    "command_description": "Задаване на рожден ден за персонаж",
+                    "command_name": "birthday",
+                    "params": {
+                        "birthday": {
+                            "parameter_description": "Рожден ден, по подразбиране Няма",
+                            "parameter_name": "birthday"
+                        },
+                        "proxy": {
+                            "parameter_description": "Символ, за който да зададете рождения ден",
+                            "parameter_name": "прокси"
+                        }
+                    }
+                },
+                "color": {
+                    "command_description": "Set the color for a proxy."
+                },
+                "create": {
+                    "command_description": "Създайте нов герой.",
+                    "command_name": "създавам",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Изображение, по подразбиране Няма",
+                            "parameter_name": "изображение"
+                        }
+                    }
+                },
+                "delete": {
+                    "command_description": "Изтриване на знак",
+                    "command_name": "изтрий",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Прокси, от който да изтриете варианта",
+                            "parameter_name": "прокси"
+                        }
+                    }
+                },
+                "description": {
+                    "command_description": "Задайте описанието за персонаж",
+                    "command_name": "описание",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Символ, за който да зададете описанието",
+                            "parameter_name": "прокси"
+                        },
+                        "text": {
+                            "parameter_description": "Описание, което да зададете за героя",
+                            "parameter_name": "текст"
+                        }
+                    }
+                },
+                "detail": {
+                    "command_description": "Вземете подробности за герой",
+                    "command_name": "детайл",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Подробности за прокси. ",
+                            "parameter_name": "прокси"
+                        }
+                    }
+                },
+                "find": {
+                    "command_description": "Find a proxy."
+                },
+                "group": {
+                    "command_description": "Задайте групата за персонаж",
+                    "command_name": "група",
+                    "params": {
+                        "group": {
+                            "parameter_description": "Група, по подразбиране Няма",
+                            "parameter_name": "група"
+                        },
+                        "proxy": {
+                            "parameter_description": "Символ, за който да зададете групата",
+                            "parameter_name": "прокси"
+                        }
+                    }
+                },
+                "image": {
+                    "command_description": "Set the image for a proxy.",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "URL адрес на изображение, по подразбиране Няма",
+                            "parameter_name": "аватар"
+                        },
+                        "proxy": {
+                            "parameter_description": "Символ, за който да зададете аватара",
+                            "parameter_name": "прокси"
+                        }
+                    }
+                },
+                "list": {
+                    "command_description": "List all proxies."
+                },
+                "local": {
+                    "command_description": "Задайте локалното за символ",
+                    "command_name": "местен",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Изображение, по подразбиране Няма",
+                            "parameter_name": "изображение"
+                        },
+                        "nickname": {
+                            "parameter_description": "Псевдоним, по подразбиране Няма",
+                            "parameter_name": "псевдоним"
+                        },
+                        "proxy": {
+                            "parameter_description": "Символ, за който да зададете локалния",
+                            "parameter_name": "прокси"
+                        }
+                    }
+                },
+                "nickname": {
+                    "command_description": "Задайте псевдоним за герой",
+                    "command_name": "псевдоним",
+                    "params": {
+                        "nickname": {
+                            "parameter_description": "Псевдоним, който да зададете за героя",
+                            "parameter_name": "псевдоним"
+                        },
+                        "proxy": {
+                            "parameter_description": "Символ, за който да зададете псевдоним",
+                            "parameter_name": "прокси"
+                        }
+                    }
+                },
+                "nsfw": {
+                    "command_description": "Задайте дали даден символ е NSFW",
+                    "command_name": "nsfw",
+                    "params": {
+                        "nsfw": {
+                            "parameter_description": "NSFW, по подразбиране превключете на противоположна стойност",
+                            "parameter_name": "nsfw"
+                        },
+                        "proxy": {
+                            "parameter_description": "Символ, за който да зададете NSFW",
+                            "parameter_name": "прокси"
+                        }
+                    }
+                },
+                "prefix": {
+                    "command_description": "Задайте префиксите за символ.",
+                    "command_name": "префикс",
+                    "params": {
+                        "prefixes": {
+                            "parameter_description": "Префикси напр. ",
+                            "parameter_name": "префикси"
+                        },
+                        "proxy": {
+                            "parameter_description": "Знак за задаване на префикса",
+                            "parameter_name": "прокси"
+                        }
+                    }
+                },
+                "prune": {
+                    "command_description": "Подрязване на символи, неизползвани за определено време.",
+                    "command_name": "подрязвам",
+                    "params": {
+                        "time": {
+                            "parameter_description": "Дата за съкращаване преди, по подразбиране Няма"
+                        }
+                    }
+                },
+                "purge": {
+                    "command_description": "Изчистете всичките си данни (с изключение на регистрационните файлове на съобщенията)",
+                    "command_name": "чистка",
+                    "params": {
+                        "confirmation": {
+                            "parameter_description": "потвърждение",
+                            "parameter_name": "потвърждение"
+                        }
+                    }
+                },
+                "read": {
+                    "command_description": "Прочетете герой",
+                    "command_name": "прочети",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Знак за четене на варианта",
+                            "parameter_name": "прокси"
+                        }
+                    }
+                },
+                "rename": {
+                    "command_description": "Преименуване на герой",
+                    "command_name": "преименувам",
+                    "params": {
+                        "name": {
+                            "parameter_description": "Ново име за героя",
+                            "parameter_name": "име"
+                        },
+                        "proxy": {
+                            "parameter_description": "Символ за преименуване",
+                            "parameter_name": "прокси"
+                        }
+                    }
+                },
+                "set": {
+                    "command_description": "Set a proxy as the current one."
+                },
+                "update": {
+                    "command_description": "Актуализирайте прокси. ",
+                    "command_name": "актуализация",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Изображение, по подразбиране Няма",
+                            "parameter_name": "изображение"
+                        },
+                        "proxy": {
+                            "parameter_description": "Символ за актуализиране",
+                            "parameter_name": "прокси"
+                        }
+                    }
+                },
+                "use": {
+                    "command_description": "Use a proxy."
+                }
+            },
+            "group_description": "Shared proxy commands."
+        },
+        "store": {
+            "params": {
+                "storage": {
+                    "choices": {
+                        "Global": "Global",
+                        "Local": "Local"
                     }
                 }
             }
         },
+        "update": {
+            "command_description": "Актуализирайте прокси. ",
+            "command_name": "актуализация",
+            "params": {
+                "image": {
+                    "parameter_description": "Изображение, по подразбиране Няма",
+                    "parameter_name": "изображение"
+                },
+                "proxy": {
+                    "parameter_description": "Символ за актуализиране",
+                    "parameter_name": "прокси"
+                }
+            }
+        },
+        "use": {
+            "command_description": "Use a proxy.",
+            "params": {
+                "text": {
+                    "parameter_description": "текст",
+                    "parameter_name": "текст"
+                }
+            }
+        },
+        "var": {
+            "group": {
+                "auto": {
+                    "command_description": "Задайте автоматичното за символ",
+                    "command_name": "автоматичен",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Символ, по подразбиране деактивира автоматичното",
+                            "parameter_name": "прокси"
+                        },
+                        "variant": {
+                            "parameter_description": "Вариант за настройка на авто",
+                            "parameter_name": "вариант"
+                        }
+                    }
+                },
+                "avatar": {
+                    "command_description": "Задайте аватара за герой",
+                    "command_name": "аватар",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "URL адрес на изображение, по подразбиране Няма",
+                            "parameter_name": "аватар"
+                        },
+                        "proxy": {
+                            "parameter_description": "Символ, за който да зададете аватара",
+                            "parameter_name": "прокси"
+                        },
+                        "variant": {
+                            "parameter_description": "Вариант за настройка на аватара",
+                            "parameter_name": "вариант"
+                        }
+                    }
+                },
+                "birthday": {
+                    "command_description": "Задаване на рожден ден за персонаж",
+                    "command_name": "birthday",
+                    "params": {
+                        "birthday": {
+                            "parameter_description": "Рожден ден, по подразбиране Няма",
+                            "parameter_name": "birthday"
+                        },
+                        "proxy": {
+                            "parameter_description": "Символ, за който да зададете рождения ден",
+                            "parameter_name": "прокси"
+                        },
+                        "variant": {
+                            "parameter_description": "Вариант за задаване на рожден ден",
+                            "parameter_name": "вариант"
+                        }
+                    }
+                },
+                "color": {
+                    "command_description": "Change the color of a variant."
+                },
+                "create": {
+                    "command_description": "Създайте нов герой.",
+                    "command_name": "създавам",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Изображение, по подразбиране Няма",
+                            "parameter_name": "изображение"
+                        },
+                        "prefixes": {
+                            "parameter_description": "Prefixes e.g. A:text, |text|, etc."
+                        },
+                        "proxy": {
+                            "parameter_description": " Прокси за създаване на варианта",
+                            "parameter_name": "прокси"
+                        }
+                    }
+                },
+                "delete": {
+                    "command_description": "Изтриване на вариант на персонаж",
+                    "command_name": "изтрий",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Прокси, от който да изтриете варианта",
+                            "parameter_name": "прокси"
+                        },
+                        "variant": {
+                            "parameter_description": "Вариант за изтриване",
+                            "parameter_name": "вариант"
+                        }
+                    }
+                },
+                "description": {
+                    "command_description": "Задайте описанието за персонаж",
+                    "command_name": "описание",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Символ, за който да зададете описанието",
+                            "parameter_name": "прокси"
+                        },
+                        "text": {
+                            "parameter_description": "Описание, което да зададете за героя",
+                            "parameter_name": "текст"
+                        },
+                        "variant": {
+                            "parameter_description": "Вариант за задаване на описанието",
+                            "parameter_name": "вариант"
+                        }
+                    }
+                },
+                "detail": {
+                    "command_description": "Вземете подробности за герой",
+                    "command_name": "детайл",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Подробности за прокси. ",
+                            "parameter_name": "прокси"
+                        },
+                        "variant": {
+                            "parameter_description": "Вариант до детайл",
+                            "parameter_name": "вариант"
+                        }
+                    }
+                },
+                "find": {
+                    "command_description": "Find a variant."
+                },
+                "group": {
+                    "command_description": "Задайте групата за персонаж",
+                    "command_name": "група",
+                    "params": {
+                        "group": {
+                            "parameter_description": "Група, по подразбиране Няма",
+                            "parameter_name": "група"
+                        },
+                        "proxy": {
+                            "parameter_description": "Символ, за който да зададете групата",
+                            "parameter_name": "прокси"
+                        },
+                        "variant": {
+                            "parameter_description": "Вариант за настройка на групата",
+                            "parameter_name": "вариант"
+                        }
+                    }
+                },
+                "list": {
+                    "command_description": "List all variants."
+                },
+                "local": {
+                    "command_description": "Задайте локалното за символ",
+                    "command_name": "местен",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Изображение, по подразбиране Няма",
+                            "parameter_name": "изображение"
+                        },
+                        "nickname": {
+                            "parameter_description": "Псевдоним, по подразбиране Няма",
+                            "parameter_name": "псевдоним"
+                        },
+                        "proxy": {
+                            "parameter_description": "Символ, за който да зададете локалния",
+                            "parameter_name": "прокси"
+                        },
+                        "variant": {
+                            "parameter_description": "Вариант за задаване на локалния",
+                            "parameter_name": "вариант"
+                        }
+                    }
+                },
+                "nickname": {
+                    "command_description": "Задайте псевдоним за герой",
+                    "command_name": "псевдоним",
+                    "params": {
+                        "nickname": {
+                            "parameter_description": "Псевдоним, който да зададете за героя",
+                            "parameter_name": "псевдоним"
+                        },
+                        "proxy": {
+                            "parameter_description": "Символ, за който да зададете псевдоним",
+                            "parameter_name": "прокси"
+                        },
+                        "variant": {
+                            "parameter_description": "Вариант за задаване на псевдоним",
+                            "parameter_name": "вариант"
+                        }
+                    }
+                },
+                "nsfw": {
+                    "command_description": "Задайте дали даден символ е NSFW",
+                    "command_name": "nsfw",
+                    "params": {
+                        "nsfw": {
+                            "parameter_description": "NSFW, по подразбиране превключете на противоположна стойност",
+                            "parameter_name": "nsfw"
+                        },
+                        "proxy": {
+                            "parameter_description": "Символ, за който да зададете NSFW",
+                            "parameter_name": "прокси"
+                        },
+                        "variant": {
+                            "parameter_description": "Вариант за задаване на NSFW",
+                            "parameter_name": "вариант"
+                        }
+                    }
+                },
+                "prefix": {
+                    "command_description": "Задайте префиксите за символ.",
+                    "command_name": "префикс",
+                    "params": {
+                        "prefixes": {
+                            "parameter_description": "Префикси напр. ",
+                            "parameter_name": "префикси"
+                        },
+                        "proxy": {
+                            "parameter_description": "Знак за задаване на префикса",
+                            "parameter_name": "прокси"
+                        },
+                        "variant": {
+                            "parameter_description": "Вариант за задаване на префикса",
+                            "parameter_name": "вариант"
+                        }
+                    }
+                },
+                "prune": {
+                    "command_description": "Подрязване на символи, неизползвани за определено време.",
+                    "command_name": "подрязвам",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "прокси"
+                        },
+                        "time": {
+                            "parameter_description": "Дата за съкращаване преди, по подразбиране Няма"
+                        }
+                    }
+                },
+                "purge": {
+                    "command_description": "Изчистете всичките си данни (с изключение на регистрационните файлове на съобщенията)",
+                    "command_name": "чистка",
+                    "params": {
+                        "confirmation": {
+                            "parameter_description": "потвърждение",
+                            "parameter_name": "потвърждение"
+                        },
+                        "proxy": {
+                            "parameter_description": "прокси",
+                            "parameter_name": "прокси"
+                        }
+                    }
+                },
+                "read": {
+                    "command_description": "Прочетете герой",
+                    "command_name": "прочети",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Знак за четене на варианта",
+                            "parameter_name": "прокси"
+                        },
+                        "variant": {
+                            "parameter_description": "Вариант за четене",
+                            "parameter_name": "вариант"
+                        }
+                    }
+                },
+                "rename": {
+                    "command_description": "Преименуване на герой",
+                    "command_name": "преименувам",
+                    "params": {
+                        "name": {
+                            "parameter_description": "Ново име за героя",
+                            "parameter_name": "име"
+                        },
+                        "proxy": {
+                            "parameter_description": "Символ за преименуване",
+                            "parameter_name": "прокси"
+                        },
+                        "variant": {
+                            "parameter_description": "Вариант за преименуване",
+                            "parameter_name": "вариант"
+                        }
+                    }
+                },
+                "set": {
+                    "command_description": "Set a variant."
+                },
+                "update": {
+                    "command_description": "Актуализирайте прокси. ",
+                    "command_name": "актуализация",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Изображение, по подразбиране Няма",
+                            "parameter_name": "изображение"
+                        },
+                        "proxy": {
+                            "parameter_description": "Символ за актуализиране",
+                            "parameter_name": "прокси"
+                        }
+                    }
+                },
+                "use": {
+                    "command_description": "Use a variant."
+                }
+            },
+            "group_description": "Variant commands.",
+            "group_name": "вар"
+        },
+        "variant-to-proxy": {
+            "command_description": "Преобразуване на вариант в знак",
+            "command_name": "вариант-към-прокси",
+            "params": {
+                "proxy": {
+                    "parameter_description": "Прокси за преобразуване",
+                    "parameter_name": "прокси"
+                },
+                "variant": {
+                    "parameter_description": "Вариант за конвертиране",
+                    "parameter_name": "вариант"
+                }
+            }
+        }
+    },
+    "interactions": {
         "context_menu": {
             "command_name": "Прокси"
         }

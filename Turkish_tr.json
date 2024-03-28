@@ -1,304 +1,333 @@
 {
     "commands": {
-        "exec": {
-            "command_description": "Execute a command."
+        "afk": {
+            "command_description": "Check if a user is AFK."
         },
-        "proxy": {
-            "command_name": "vekil",
-            "command_description": "Sunucudaki karakterleri devre dışı bırakın",
+        "auto": {
+            "command_description": "Bir Karakter için otomatik ayarı yapma",
+            "command_name": "oto",
             "params": {
-                "enable": {
-                    "parameter_name": "enable",
-                    "parameter_description": "Karakterleri varsayılan olarak etkinleştirme veya devre dışı bırakma anahtarları"
+                "proxy": {
+                    "parameter_description": "Karakter, varsayılan olarak otomatik özelliği devre dışı bırakır",
+                    "parameter_name": "vekil"
                 }
             }
         },
-        "set": {
-            "command_description": "Set a proxy as the current one."
-        },
-        "use": {
+        "avatar": {
+            "command_description": "Bir Karakterin avatarını ayarlama",
+            "command_name": "avatar",
             "params": {
-                "text": {
-                    "parameter_name": "metin",
-                    "parameter_description": "metin"
+                "avatar": {
+                    "parameter_description": "Resim URL'si, varsayılan olarak Yok",
+                    "parameter_name": "avatar"
+                },
+                "proxy": {
+                    "parameter_description": "Avatarın ayarlanacağı karakter",
+                    "parameter_name": "vekil"
                 }
             }
         },
-        "say": {
+        "birthday": {
+            "command_description": "Bir Karakterin doğum gününü ayarlama",
+            "command_name": "birthday",
             "params": {
-                "text": {
-                    "parameter_name": "metin",
-                    "parameter_description": "metin"
+                "birthday": {
+                    "parameter_description": "Doğum günü, varsayılan olarak Yok",
+                    "parameter_name": "birthday"
+                },
+                "proxy": {
+                    "parameter_description": "Doğum gününü ayarlayacak karakter",
+                    "parameter_name": "vekil"
                 }
             }
         },
-        "npc": {
-            "command_name": "npc",
-            "command_description": "Yeni bir NPC mesajı oluştur",
-            "params": {
-                "franchise": {
-                    "parameter_name": "franchise",
-                    "parameter_description": "Kullanılacak franchise",
-                    "choices": {
-                        "Pokemon": "Pokemon",
-                        "Pokemon Shiny": "Pokemon Shiny",
-                        "Trainer": "Trainer",
-                        "Digimon": "Digimon",
-                        "Palworld": "Palworld",
-                        "D&D": "D&D"
-                    }
-                },
-                "npc": {
-                    "parameter_name": "npc",
-                    "parameter_description": "Kullanılacak NPC"
-                },
-                "nickname": {
-                    "parameter_name": "takma_ad",
-                    "parameter_description": "Takma ad, varsayılan olarak Yok"
-                },
-                "emotion": {
-                    "parameter_name": "duygu",
-                    "parameter_description": "Duygu, varsayılan olarak Normal",
-                    "choices": {
-                        "Normal": "Normal",
-                        "Happy": "Happy",
-                        "Pain": "Pain",
-                        "Angry": "Angry",
-                        "Worried": "Worried",
-                        "Sad": "Sad",
-                        "Crying": "Crying",
-                        "Shouting": "Shouting",
-                        "TearyEyed": "TearyEyed",
-                        "Determined": "Determined",
-                        "Joyous": "Joyous",
-                        "Inspired": "Inspired",
-                        "Surprised": "Surprised",
-                        "Dizzy": "Dizzy",
-                        "Sigh": "Sigh",
-                        "Stunned": "Stunned",
-                        "Special0": "Special0",
-                        "Special1": "Special1",
-                        "Special2": "Special2",
-                        "Special3": "Special3"
-                    }
-                },
-                "image": {
-                    "parameter_name": "görüntü",
-                    "parameter_description": "Resim, varsayılan olarak Yok"
-                },
-                "text": {
-                    "parameter_name": "metin",
-                    "parameter_description": "metin"
-                }
-            }
+        "check_permissions": {
+            "command_description": "Botun sağlanan kanalda çalışıp çalışmadığını kontrol edin",
+            "command_name": "check_perms"
+        },
+        "color": {
+            "command_description": "Set a color for a proxy."
         },
         "create": {
-            "command_description": "Create a new proxy.",
+            "command_description": "Yeni bir karakter oluşturun.",
+            "command_name": "yaratmak",
             "params": {
+                "image": {
+                    "parameter_description": "Resim, varsayılan olarak Yok",
+                    "parameter_name": "görüntü"
+                },
                 "prefixes": {
                     "parameter_description": "Prefixes e.g. A:text, |text|, etc."
                 }
             }
         },
         "delete": {
-            "command_name": "silmek",
             "command_description": "Bir Karakteri Sil",
+            "command_name": "silmek",
             "params": {
                 "proxy": {
-                    "parameter_name": "vekil",
-                    "parameter_description": "Varyantın silineceği proxy"
-                }
-            }
-        },
-        "read": {
-            "command_name": "okumak",
-            "command_description": "Bir Karakter Oku",
-            "params": {
-                "proxy": {
-                    "parameter_name": "vekil",
-                    "parameter_description": "Varyantın okunacağı karakter"
-                }
-            }
-        },
-        "nickname": {
-            "command_name": "takma_ad",
-            "command_description": "Bir Karakterin takma adını ayarlama",
-            "params": {
-                "proxy": {
-                    "parameter_name": "vekil",
-                    "parameter_description": "Takma adın belirleneceği karakter"
-                },
-                "nickname": {
-                    "parameter_name": "takma_ad",
-                    "parameter_description": "Karakter için belirlenecek takma ad"
-                }
-            }
-        },
-        "local": {
-            "command_name": "yerel",
-            "command_description": "Bir Karakter için yereli ayarlama",
-            "params": {
-                "proxy": {
-                    "parameter_name": "vekil",
-                    "parameter_description": "Yerelin ayarlanacağı karakter"
-                },
-                "avatar": {
-                    "parameter_name": "görüntü",
-                    "parameter_description": "Resim, varsayılan olarak Yok"
-                },
-                "nickname": {
-                    "parameter_name": "takma_ad",
-                    "parameter_description": "Takma ad, varsayılan olarak Yok"
-                }
-            }
-        },
-        "avatar": {
-            "command_name": "avatar",
-            "command_description": "Bir Karakterin avatarını ayarlama",
-            "params": {
-                "proxy": {
-                    "parameter_name": "vekil",
-                    "parameter_description": "Avatarın ayarlanacağı karakter"
-                },
-                "avatar": {
-                    "parameter_name": "avatar",
-                    "parameter_description": "Resim URL'si, varsayılan olarak Yok"
-                }
-            }
-        },
-        "prefix": {
-            "command_name": "önek",
-            "command_description": "Bir karakter için önekleri ayarlayın.",
-            "params": {
-                "proxy": {
-                    "parameter_name": "vekil",
-                    "parameter_description": "Önekin ayarlanacağı karakter"
-                },
-                "prefixes": {
-                    "parameter_name": "önekler",
-                    "parameter_description": "Ön ekler ör. "
-                }
-            }
-        },
-        "birthday": {
-            "command_name": "birthday",
-            "command_description": "Bir Karakterin doğum gününü ayarlama",
-            "params": {
-                "proxy": {
-                    "parameter_name": "vekil",
-                    "parameter_description": "Doğum gününü ayarlayacak karakter"
-                },
-                "birthday": {
-                    "parameter_name": "birthday",
-                    "parameter_description": "Doğum günü, varsayılan olarak Yok"
+                    "parameter_description": "Varyantın silineceği proxy",
+                    "parameter_name": "vekil"
                 }
             }
         },
         "description": {
-            "command_name": "tanım",
             "command_description": "Bir Karakterin açıklamasını ayarlayın",
+            "command_name": "tanım",
             "params": {
                 "proxy": {
-                    "parameter_name": "vekil",
-                    "parameter_description": "Açıklamanın ayarlanacağı karakter"
+                    "parameter_description": "Açıklamanın ayarlanacağı karakter",
+                    "parameter_name": "vekil"
                 },
                 "text": {
-                    "parameter_name": "metin",
-                    "parameter_description": "Karakter için ayarlanacak açıklama"
+                    "parameter_description": "Karakter için ayarlanacak açıklama",
+                    "parameter_name": "metin"
                 }
             }
         },
-        "rename": {
-            "command_name": "rename",
-            "command_description": "Bir Karakteri Yeniden Adlandırın",
+        "detail": {
+            "command_description": "Bir karakterin ayrıntılarını alma",
+            "command_name": "detay",
             "params": {
                 "proxy": {
-                    "parameter_name": "vekil",
-                    "parameter_description": "Yeniden adlandırılacak karakter"
+                    "parameter_description": "Bir proxy'yi detaylandırın. ",
+                    "parameter_name": "vekil"
+                }
+            }
+        },
+        "exec": {
+            "command_description": "Execute a command."
+        },
+        "export": {
+            "command_description": "Karakterlerinizi bir JSON dosyasına aktarın",
+            "command_name": "ihracat",
+            "params": {
+                "format": {
+                    "choices": {
+                        "Default": "Default",
+                        "PluralKit": "PluralKit",
+                        "Tupperbox": "Tupperbox"
+                    },
+                    "parameter_description": "Dışa aktarılacak biçim, varsayılan olarak JSON",
+                    "parameter_name": "biçim"
                 },
-                "name": {
-                    "parameter_name": "isim",
-                    "parameter_description": "Karaktere yeni isim"
+                "new_token": {
+                    "parameter_description": "Yeni bir jeton oluşturmak istiyorsanız",
+                    "parameter_name": "yeni_token"
                 }
             }
         },
         "group": {
-            "command_name": "grup",
             "command_description": "Bir Karakter için grubu ayarlama",
-            "params": {
-                "proxy": {
-                    "parameter_name": "vekil",
-                    "parameter_description": "Grubun ayarlanacağı karakter"
-                },
-                "group": {
-                    "parameter_name": "grup",
-                    "parameter_description": "Grup, varsayılan olarak Yok"
-                }
-            }
-        },
-        "nsfw": {
-            "command_name": "nsfw",
-            "command_description": "Bir Karakterin NSFW olup olmadığını ayarlama",
-            "params": {
-                "proxy": {
-                    "parameter_name": "vekil",
-                    "parameter_description": "NSFW'yi ayarlayacak karakter"
-                },
-                "nsfw": {
-                    "parameter_name": "nsfw",
-                    "parameter_description": "NSFW, varsayılan olarak zıt değere geçiş yapar"
-                }
-            }
-        },
-        "auto": {
-            "command_name": "oto",
-            "command_description": "Bir Karakter için otomatik ayarı yapma",
-            "params": {
-                "proxy": {
-                    "parameter_name": "vekil",
-                    "parameter_description": "Karakter, varsayılan olarak otomatik özelliği devre dışı bırakır"
-                }
-            }
-        },
-        "list": {
-            "command_name": "liste",
-            "command_description": "Tüm karakterleri listele ",
+            "command_name": "grup",
             "params": {
                 "group": {
-                    "parameter_name": "grup",
-                    "parameter_description": "Karakterlerin listeleneceği grup"
+                    "parameter_description": "Grup, varsayılan olarak Yok",
+                    "parameter_name": "grup"
+                },
+                "proxy": {
+                    "parameter_description": "Grubun ayarlanacağı karakter",
+                    "parameter_name": "vekil"
+                }
+            }
+        },
+        "help": {
+            "command_description": "Yerleşik Bot Yardımı",
+            "command_name": "yardım",
+            "params": {
+                "search": {
+                    "parameter_description": "Arama terimi",
+                    "parameter_name": "aramak"
+                }
+            }
+        },
+        "import": {
+            "command_description": "Karakterlerinizi bir dosyadan veya belirteçten içe aktarın",
+            "command_name": "içe-aktarmak",
+            "params": {
+                "data": {
+                    "parameter_description": "İçe aktarılacak dosya",
+                    "parameter_name": "veri"
+                },
+                "deleting_from_token": {
+                    "parameter_description": "Belirteçteki karakterleri sil",
+                    "parameter_name": "deleteing_from_token"
+                },
+                "token": {
+                    "parameter_description": "İçe aktarma için kullanılacak jeton",
+                    "parameter_name": "jeton"
                 }
             }
         },
         "latch": {
-            "command_name": "mandal",
             "command_description": "Mandal modunu etkinleştirme veya devre dışı bırakma",
+            "command_name": "mandal",
             "params": {
-                "enable": {
-                    "parameter_description": "Mandal modunu etkinleştirme veya devre dışı bırakma"
-                },
                 "auto_remove": {
                     "parameter_description": "Geçerli kanal için otomatikin tutulup tutulmayacağı, varsayılan olarak Doğru"
+                },
+                "enable": {
+                    "parameter_description": "Mandal modunu etkinleştirme veya devre dışı bırakma"
                 }
             }
         },
-        "export": {
-            "command_name": "ihracat",
-            "command_description": "Karakterlerinizi bir JSON dosyasına aktarın",
+        "list": {
+            "command_description": "Tüm karakterleri listele ",
+            "command_name": "liste",
             "params": {
-                "format": {
-                    "parameter_name": "biçim",
-                    "parameter_description": "Dışa aktarılacak biçim, varsayılan olarak JSON"
+                "group": {
+                    "parameter_description": "Karakterlerin listeleneceği grup",
+                    "parameter_name": "grup"
+                }
+            }
+        },
+        "local": {
+            "command_description": "Bir Karakter için yereli ayarlama",
+            "command_name": "yerel",
+            "params": {
+                "avatar": {
+                    "parameter_description": "Resim, varsayılan olarak Yok",
+                    "parameter_name": "görüntü"
                 },
-                "new_token": {
-                    "parameter_name": "yeni_token",
-                    "parameter_description": "Yeni bir jeton oluşturmak istiyorsanız"
+                "nickname": {
+                    "parameter_description": "Takma ad, varsayılan olarak Yok",
+                    "parameter_name": "takma_ad"
+                },
+                "proxy": {
+                    "parameter_description": "Yerelin ayarlanacağı karakter",
+                    "parameter_name": "vekil"
+                }
+            }
+        },
+        "nickname": {
+            "command_description": "Bir Karakterin takma adını ayarlama",
+            "command_name": "takma_ad",
+            "params": {
+                "nickname": {
+                    "parameter_description": "Karakter için belirlenecek takma ad",
+                    "parameter_name": "takma_ad"
+                },
+                "proxy": {
+                    "parameter_description": "Takma adın belirleneceği karakter",
+                    "parameter_name": "vekil"
+                }
+            }
+        },
+        "npc": {
+            "command_description": "Yeni bir NPC mesajı oluştur",
+            "command_name": "npc",
+            "params": {
+                "emotion": {
+                    "choices": {
+                        "Angry": "Angry",
+                        "Crying": "Crying",
+                        "Determined": "Determined",
+                        "Dizzy": "Dizzy",
+                        "Happy": "Happy",
+                        "Inspired": "Inspired",
+                        "Joyous": "Joyous",
+                        "Normal": "Normal",
+                        "Pain": "Pain",
+                        "Sad": "Sad",
+                        "Shouting": "Shouting",
+                        "Sigh": "Sigh",
+                        "Special0": "Special0",
+                        "Special1": "Special1",
+                        "Special2": "Special2",
+                        "Special3": "Special3",
+                        "Stunned": "Stunned",
+                        "Surprised": "Surprised",
+                        "TearyEyed": "TearyEyed",
+                        "Worried": "Worried"
+                    },
+                    "parameter_description": "Duygu, varsayılan olarak Normal",
+                    "parameter_name": "duygu"
+                },
+                "franchise": {
+                    "choices": {
+                        "D&D": "D&D",
+                        "Digimon": "Digimon",
+                        "Palworld": "Palworld",
+                        "Pokemon": "Pokemon",
+                        "Pokemon Shiny": "Pokemon Shiny",
+                        "Trainer": "Trainer"
+                    },
+                    "parameter_description": "Kullanılacak franchise",
+                    "parameter_name": "imtiyaz"
+                },
+                "image": {
+                    "parameter_description": "Resim, varsayılan olarak Yok",
+                    "parameter_name": "görüntü"
+                },
+                "nickname": {
+                    "parameter_description": "Takma ad, varsayılan olarak Yok",
+                    "parameter_name": "takma_ad"
+                },
+                "npc": {
+                    "parameter_description": "Kullanılacak NPC",
+                    "parameter_name": "npc"
+                },
+                "text": {
+                    "parameter_description": "metin",
+                    "parameter_name": "metin"
+                }
+            }
+        },
+        "nsfw": {
+            "command_description": "Bir Karakterin NSFW olup olmadığını ayarlama",
+            "command_name": "nsfw",
+            "params": {
+                "nsfw": {
+                    "parameter_description": "NSFW, varsayılan olarak zıt değere geçiş yapar",
+                    "parameter_name": "nsfw"
+                },
+                "proxy": {
+                    "parameter_description": "NSFW'yi ayarlayacak karakter",
+                    "parameter_name": "vekil"
+                }
+            }
+        },
+        "prefix": {
+            "command_description": "Bir karakter için önekleri ayarlayın.",
+            "command_name": "önek",
+            "params": {
+                "prefixes": {
+                    "parameter_description": "Ön ekler ör. ",
+                    "parameter_name": "önekler"
+                },
+                "proxy": {
+                    "parameter_description": "Önekin ayarlanacağı karakter",
+                    "parameter_name": "vekil"
+                }
+            }
+        },
+        "proxy": {
+            "command_description": "Sunucudaki karakterleri devre dışı bırakın",
+            "command_name": "vekil",
+            "params": {
+                "enable": {
+                    "parameter_description": "Karakterleri varsayılan olarak etkinleştirme veya devre dışı bırakma anahtarları",
+                    "parameter_name": "enable"
+                }
+            }
+        },
+        "proxy-to-variant": {
+            "command_description": "Bir karakteri varyanta dönüştürme",
+            "command_name": "proxy-den-değişkene",
+            "params": {
+                "base": {
+                    "parameter_description": "Karakter için yeni temel",
+                    "parameter_name": "temel"
+                },
+                "original": {
+                    "parameter_description": "Dönüştürülecek karakter",
+                    "parameter_name": "orijinal"
                 }
             }
         },
         "prune": {
-            "command_name": "kuru_erik",
             "command_description": "Belirli bir süre boyunca kullanılmayan karakterleri budayın.",
+            "command_name": "kuru_erik",
             "params": {
                 "time": {
                     "parameter_description": "Varsayılan olarak daha önce budanacak tarih Yok"
@@ -306,656 +335,674 @@
             }
         },
         "purge": {
-            "command_name": "tasfiye",
             "command_description": "Tüm verilerinizi temizleyin (mesaj günlükleri hariç)",
+            "command_name": "tasfiye",
             "params": {
                 "confirmation": {
-                    "parameter_name": "onayla",
-                    "parameter_description": "onayla"
+                    "parameter_description": "onayla",
+                    "parameter_name": "onayla"
                 }
             }
         },
-        "proxy-to-variant": {
-            "command_name": "proxy-den-değişkene",
-            "command_description": "Bir karakteri varyanta dönüştürme",
-            "params": {
-                "original": {
-                    "parameter_name": "orijinal",
-                    "parameter_description": "Dönüştürülecek karakter"
-                },
-                "base": {
-                    "parameter_name": "temel",
-                    "parameter_description": "Karakter için yeni temel"
-                }
-            }
-        },
-        "variant-to-proxy": {
-            "command_name": "varyanttan-proxy-ye",
-            "command_description": "Bir varyantı karaktere dönüştürme",
+        "read": {
+            "command_description": "Bir Karakter Oku",
+            "command_name": "okumak",
             "params": {
                 "proxy": {
-                    "parameter_name": "vekil",
-                    "parameter_description": "Dönüştürülecek proxy"
-                },
-                "variant": {
-                    "parameter_name": "değişken",
-                    "parameter_description": "Dönüştürülecek değişken"
+                    "parameter_description": "Varyantın okunacağı karakter",
+                    "parameter_name": "vekil"
                 }
             }
         },
-        "update": {
-            "command_name": "güncelleme",
-            "command_description": "Bir proxy'yi güncelleyin. ",
+        "rename": {
+            "command_description": "Bir Karakteri Yeniden Adlandırın",
+            "command_name": "rename",
             "params": {
+                "name": {
+                    "parameter_description": "Karaktere yeni isim",
+                    "parameter_name": "isim"
+                },
                 "proxy": {
-                    "parameter_name": "vekil",
-                    "parameter_description": "Güncellenecek karakter"
-                },
-                "image": {
-                    "parameter_name": "görüntü",
-                    "parameter_description": "Resim, varsayılan olarak Yok"
+                    "parameter_description": "Yeniden adlandırılacak karakter",
+                    "parameter_name": "vekil"
                 }
             }
-        },
-        "detail": {
-            "command_name": "detay",
-            "command_description": "Bir karakterin ayrıntılarını alma",
-            "params": {
-                "proxy": {
-                    "parameter_name": "vekil",
-                    "parameter_description": "Bir proxy'yi detaylandırın. "
-                }
-            }
-        },
-        "import": {
-            "command_name": "içe-aktarmak",
-            "command_description": "Karakterlerinizi bir dosyadan veya belirteçten içe aktarın",
-            "params": {
-                "data": {
-                    "parameter_name": "veri",
-                    "parameter_description": "İçe aktarılacak dosya"
-                },
-                "token": {
-                    "parameter_name": "jeton",
-                    "parameter_description": "İçe aktarma için kullanılacak jeton"
-                },
-                "deleting_from_token": {
-                    "parameter_name": "deleteing_from_token",
-                    "parameter_description": "Belirteçteki karakterleri sil"
-                }
-            }
-        },
-        "var": {
-            "group_name": "var",
-            "group_description": "Variant commands.",
-            "groupset": {
-                "command_description": "Set a variant."
-            },
-            "groupuse": {
-                "command_description": "Use a variant."
-            },
-            "groupcreate": {
-                "command_name": "yaratmak",
-                "command_description": "Yeni bir karakter oluşturun.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "vekil",
-                        "parameter_description": " Varyantın oluşturulacağı proxy"
-                    },
-                    "image": {
-                        "parameter_name": "görüntü",
-                        "parameter_description": "Resim, varsayılan olarak Yok"
-                    },
-                    "prefixes": {
-                        "parameter_description": "Prefixes e.g. A:text, |text|, etc."
-                    }
-                }
-            },
-            "groupdelete": {
-                "command_name": "silmek",
-                "command_description": "Bir Karakterin varyantını silme",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "vekil",
-                        "parameter_description": "Varyantın silineceği proxy"
-                    },
-                    "variant": {
-                        "parameter_name": "değişken",
-                        "parameter_description": "Silinecek değişken"
-                    }
-                }
-            },
-            "groupread": {
-                "command_name": "okumak",
-                "command_description": "Bir Karakter Oku",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "vekil",
-                        "parameter_description": "Varyantın okunacağı karakter"
-                    },
-                    "variant": {
-                        "parameter_name": "değişken",
-                        "parameter_description": "Okunacak değişken"
-                    }
-                }
-            },
-            "groupnickname": {
-                "command_name": "takma_ad",
-                "command_description": "Bir Karakterin takma adını ayarlama",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "vekil",
-                        "parameter_description": "Takma adın belirleneceği karakter"
-                    },
-                    "variant": {
-                        "parameter_name": "değişken",
-                        "parameter_description": "Takma adın belirleneceği değişken"
-                    },
-                    "nickname": {
-                        "parameter_name": "takma_ad",
-                        "parameter_description": "Karakter için belirlenecek takma ad"
-                    }
-                }
-            },
-            "grouplocal": {
-                "command_name": "yerel",
-                "command_description": "Bir Karakter için yereli ayarlama",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "vekil",
-                        "parameter_description": "Yerelin ayarlanacağı karakter"
-                    },
-                    "variant": {
-                        "parameter_name": "değişken",
-                        "parameter_description": "Yereli ayarlamak için kullanılan değişken"
-                    },
-                    "avatar": {
-                        "parameter_name": "görüntü",
-                        "parameter_description": "Resim, varsayılan olarak Yok"
-                    },
-                    "nickname": {
-                        "parameter_name": "takma_ad",
-                        "parameter_description": "Takma ad, varsayılan olarak Yok"
-                    }
-                }
-            },
-            "groupprefix": {
-                "command_name": "önek",
-                "command_description": "Bir karakter için önekleri ayarlayın.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "vekil",
-                        "parameter_description": "Önekin ayarlanacağı karakter"
-                    },
-                    "variant": {
-                        "parameter_name": "değişken",
-                        "parameter_description": "Ön eki ayarlamak için kullanılan değişken"
-                    },
-                    "prefixes": {
-                        "parameter_name": "önekler",
-                        "parameter_description": "Ön ekler ör. "
-                    }
-                }
-            },
-            "groupbirthday": {
-                "command_name": "birthday",
-                "command_description": "Bir Karakterin doğum gününü ayarlama",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "vekil",
-                        "parameter_description": "Doğum gününü ayarlayacak karakter"
-                    },
-                    "variant": {
-                        "parameter_name": "değişken",
-                        "parameter_description": "Doğum gününü ayarlamak için kullanılan değişken"
-                    },
-                    "birthday": {
-                        "parameter_name": "birthday",
-                        "parameter_description": "Doğum günü, varsayılan olarak Yok"
-                    }
-                }
-            },
-            "groupdescription": {
-                "command_name": "tanım",
-                "command_description": "Bir Karakterin açıklamasını ayarlayın",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "vekil",
-                        "parameter_description": "Açıklamanın ayarlanacağı karakter"
-                    },
-                    "variant": {
-                        "parameter_name": "değişken",
-                        "parameter_description": "Açıklamayı ayarlamak için değişken"
-                    },
-                    "text": {
-                        "parameter_name": "metin",
-                        "parameter_description": "Karakter için ayarlanacak açıklama"
-                    }
-                }
-            },
-            "grouprename": {
-                "command_name": "rename",
-                "command_description": "Bir Karakteri Yeniden Adlandırın",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "vekil",
-                        "parameter_description": "Yeniden adlandırılacak karakter"
-                    },
-                    "variant": {
-                        "parameter_name": "değişken",
-                        "parameter_description": "Yeniden adlandırılacak değişken"
-                    },
-                    "name": {
-                        "parameter_name": "isim",
-                        "parameter_description": "Karaktere yeni isim"
-                    }
-                }
-            },
-            "groupgroup": {
-                "command_name": "grup",
-                "command_description": "Bir Karakter için grubu ayarlama",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "vekil",
-                        "parameter_description": "Grubun ayarlanacağı karakter"
-                    },
-                    "variant": {
-                        "parameter_name": "değişken",
-                        "parameter_description": "Grubun ayarlanacağı değişken"
-                    },
-                    "group": {
-                        "parameter_name": "grup",
-                        "parameter_description": "Grup, varsayılan olarak Yok"
-                    }
-                }
-            },
-            "groupnsfw": {
-                "command_name": "nsfw",
-                "command_description": "Bir Karakterin NSFW olup olmadığını ayarlama",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "vekil",
-                        "parameter_description": "NSFW'yi ayarlayacak karakter"
-                    },
-                    "variant": {
-                        "parameter_name": "değişken",
-                        "parameter_description": "NSFW'yi ayarlamak için kullanılan değişken"
-                    },
-                    "nsfw": {
-                        "parameter_name": "nsfw",
-                        "parameter_description": "NSFW, varsayılan olarak zıt değere geçiş yapar"
-                    }
-                }
-            },
-            "groupauto": {
-                "command_name": "oto",
-                "command_description": "Bir Karakter için otomatik ayarı yapma",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "vekil",
-                        "parameter_description": "Karakter, varsayılan olarak otomatik özelliği devre dışı bırakır"
-                    },
-                    "variant": {
-                        "parameter_name": "değişken",
-                        "parameter_description": "Otomatik ayarın yapılacağı değişken"
-                    }
-                }
-            },
-            "groupavatar": {
-                "command_name": "avatar",
-                "command_description": "Bir Karakterin avatarını ayarlama",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "vekil",
-                        "parameter_description": "Avatarın ayarlanacağı karakter"
-                    },
-                    "variant": {
-                        "parameter_name": "değişken",
-                        "parameter_description": "Avatarın ayarlanacağı değişken"
-                    },
-                    "avatar": {
-                        "parameter_name": "avatar",
-                        "parameter_description": "Resim URL'si, varsayılan olarak Yok"
-                    }
-                }
-            },
-            "grouplist": {
-                "command_description": "List all variants."
-            },
-            "groupfind": {
-                "command_description": "Find a variant."
-            },
-            "groupupdate": {
-                "command_name": "güncelleme",
-                "command_description": "Bir proxy'yi güncelleyin. ",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "vekil",
-                        "parameter_description": "Güncellenecek karakter"
-                    },
-                    "image": {
-                        "parameter_name": "görüntü",
-                        "parameter_description": "Resim, varsayılan olarak Yok"
-                    }
-                }
-            },
-            "groupdetail": {
-                "command_name": "detay",
-                "command_description": "Bir karakterin ayrıntılarını alma",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "vekil",
-                        "parameter_description": "Bir proxy'yi detaylandırın. "
-                    },
-                    "variant": {
-                        "parameter_name": "değişken",
-                        "parameter_description": "Ayrıntıya göre değişkenlik"
-                    }
-                }
-            },
-            "groupprune": {
-                "command_name": "kuru_erik",
-                "command_description": "Belirli bir süre boyunca kullanılmayan karakterleri budayın.",
-                "params": {
-                    "proxy": {
-                        "parameter_description": "vekil"
-                    },
-                    "time": {
-                        "parameter_description": "Varsayılan olarak daha önce budanacak tarih Yok"
-                    }
-                }
-            },
-            "grouppurge": {
-                "command_name": "tasfiye",
-                "command_description": "Tüm verilerinizi temizleyin (mesaj günlükleri hariç)",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "vekil",
-                        "parameter_description": "vekil"
-                    },
-                    "confirmation": {
-                        "parameter_name": "onayla",
-                        "parameter_description": "onayla"
-                    }
-                }
-            }
-        },
-        "shared": {
-            "group_description": "Shared proxy commands.",
-            "groupset": {
-                "command_description": "Set a proxy as the current one."
-            },
-            "groupcreate": {
-                "command_name": "yaratmak",
-                "command_description": "Yeni bir karakter oluşturun.",
-                "params": {
-                    "image": {
-                        "parameter_name": "görüntü",
-                        "parameter_description": "Resim, varsayılan olarak Yok"
-                    }
-                }
-            },
-            "groupdelete": {
-                "command_name": "silmek",
-                "command_description": "Bir Karakteri Sil",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "vekil",
-                        "parameter_description": "Varyantın silineceği proxy"
-                    }
-                }
-            },
-            "groupread": {
-                "command_name": "okumak",
-                "command_description": "Bir Karakter Oku",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "vekil",
-                        "parameter_description": "Varyantın okunacağı karakter"
-                    }
-                }
-            },
-            "groupauto": {
-                "command_name": "oto",
-                "command_description": "Bir Karakter için otomatik ayarı yapma",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "vekil",
-                        "parameter_description": "Karakter, varsayılan olarak otomatik özelliği devre dışı bırakır"
-                    }
-                }
-            },
-            "groupprefix": {
-                "command_name": "önek",
-                "command_description": "Bir karakter için önekleri ayarlayın.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "vekil",
-                        "parameter_description": "Önekin ayarlanacağı karakter"
-                    },
-                    "prefixes": {
-                        "parameter_name": "önekler",
-                        "parameter_description": "Ön ekler ör. "
-                    }
-                }
-            },
-            "groupbirthday": {
-                "command_name": "birthday",
-                "command_description": "Bir Karakterin doğum gününü ayarlama",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "vekil",
-                        "parameter_description": "Doğum gününü ayarlayacak karakter"
-                    },
-                    "birthday": {
-                        "parameter_name": "birthday",
-                        "parameter_description": "Doğum günü, varsayılan olarak Yok"
-                    }
-                }
-            },
-            "groupdescription": {
-                "command_name": "tanım",
-                "command_description": "Bir Karakterin açıklamasını ayarlayın",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "vekil",
-                        "parameter_description": "Açıklamanın ayarlanacağı karakter"
-                    },
-                    "text": {
-                        "parameter_name": "metin",
-                        "parameter_description": "Karakter için ayarlanacak açıklama"
-                    }
-                }
-            },
-            "grouprename": {
-                "command_name": "rename",
-                "command_description": "Bir Karakteri Yeniden Adlandırın",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "vekil",
-                        "parameter_description": "Yeniden adlandırılacak karakter"
-                    },
-                    "name": {
-                        "parameter_name": "isim",
-                        "parameter_description": "Karaktere yeni isim"
-                    }
-                }
-            },
-            "groupnickname": {
-                "command_name": "takma_ad",
-                "command_description": "Bir Karakterin takma adını ayarlama",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "vekil",
-                        "parameter_description": "Takma adın belirleneceği karakter"
-                    },
-                    "nickname": {
-                        "parameter_name": "takma_ad",
-                        "parameter_description": "Karakter için belirlenecek takma ad"
-                    }
-                }
-            },
-            "groupgroup": {
-                "command_name": "grup",
-                "command_description": "Bir Karakter için grubu ayarlama",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "vekil",
-                        "parameter_description": "Grubun ayarlanacağı karakter"
-                    },
-                    "group": {
-                        "parameter_name": "grup",
-                        "parameter_description": "Grup, varsayılan olarak Yok"
-                    }
-                }
-            },
-            "groupnsfw": {
-                "command_name": "nsfw",
-                "command_description": "Bir Karakterin NSFW olup olmadığını ayarlama",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "vekil",
-                        "parameter_description": "NSFW'yi ayarlayacak karakter"
-                    },
-                    "nsfw": {
-                        "parameter_name": "nsfw",
-                        "parameter_description": "NSFW, varsayılan olarak zıt değere geçiş yapar"
-                    }
-                }
-            },
-            "groupavatar": {
-                "command_name": "avatar",
-                "command_description": "Bir Karakterin avatarını ayarlama",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "vekil",
-                        "parameter_description": "Avatarın ayarlanacağı karakter"
-                    },
-                    "avatar": {
-                        "parameter_name": "avatar",
-                        "parameter_description": "Resim URL'si, varsayılan olarak Yok"
-                    }
-                }
-            },
-            "groupimage": {
-                "params": {
-                    "proxy": {
-                        "parameter_name": "vekil",
-                        "parameter_description": "Avatarın ayarlanacağı karakter"
-                    },
-                    "avatar": {
-                        "parameter_name": "avatar",
-                        "parameter_description": "Resim URL'si, varsayılan olarak Yok"
-                    }
-                }
-            },
-            "grouplocal": {
-                "command_name": "yerel",
-                "command_description": "Bir Karakter için yereli ayarlama",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "vekil",
-                        "parameter_description": "Yerelin ayarlanacağı karakter"
-                    },
-                    "avatar": {
-                        "parameter_name": "görüntü",
-                        "parameter_description": "Resim, varsayılan olarak Yok"
-                    },
-                    "nickname": {
-                        "parameter_name": "takma_ad",
-                        "parameter_description": "Takma ad, varsayılan olarak Yok"
-                    }
-                }
-            },
-            "groupupdate": {
-                "command_name": "güncelleme",
-                "command_description": "Bir proxy'yi güncelleyin. ",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "vekil",
-                        "parameter_description": "Güncellenecek karakter"
-                    },
-                    "image": {
-                        "parameter_name": "görüntü",
-                        "parameter_description": "Resim, varsayılan olarak Yok"
-                    }
-                }
-            },
-            "groupdetail": {
-                "command_name": "detay",
-                "command_description": "Bir karakterin ayrıntılarını alma",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "vekil",
-                        "parameter_description": "Bir proxy'yi detaylandırın. "
-                    }
-                }
-            },
-            "groupprune": {
-                "command_name": "kuru_erik",
-                "command_description": "Belirli bir süre boyunca kullanılmayan karakterleri budayın.",
-                "params": {
-                    "time": {
-                        "parameter_description": "Varsayılan olarak daha önce budanacak tarih Yok"
-                    }
-                }
-            },
-            "grouppurge": {
-                "command_name": "tasfiye",
-                "command_description": "Tüm verilerinizi temizleyin (mesaj günlükleri hariç)",
-                "params": {
-                    "confirmation": {
-                        "parameter_name": "onayla",
-                        "parameter_description": "onayla"
-                    }
-                }
-            }
-        },
-        "check_permissions": {
-            "command_name": "check_perms",
-            "command_description": "Botun sağlanan kanalda çalışıp çalışmadığını kontrol edin"
         },
         "roll": {
             "command_description": "Roll a dice."
         },
-        "afk": {
-            "command_description": "Check if a user is AFK."
-        },
-        "help": {
-            "command_name": "yardım",
-            "command_description": "Yerleşik Bot Yardımı",
+        "say": {
+            "command_description": "Say something.",
             "params": {
-                "search": {
-                    "parameter_name": "aramak",
-                    "parameter_description": "Arama terimi"
+                "text": {
+                    "parameter_description": "metin",
+                    "parameter_name": "metin"
                 }
             }
         },
         "server_wiki": {
-            "command_name": "sunucu_wiki",
             "command_description": "Kullanıcı tanımlı sunucu wiki'si",
+            "command_name": "sunucu_wiki",
             "params": {
                 "search": {
-                    "parameter_name": "aramak",
-                    "parameter_description": "Arama terimi"
+                    "parameter_description": "Arama terimi",
+                    "parameter_name": "aramak"
                 }
             }
         },
+        "set": {
+            "command_description": "Set a proxy as the current one."
+        },
         "settings": {
-            "command_name": "ayarlar",
             "command_description": "Bot Ayarları",
+            "command_name": "ayarlar",
             "params": {
                 "menu": {
-                    "parameter_name": "menü",
-                    "parameter_description": "Ayarlar için açılacak menü",
                     "choices": {
-                        "Server": "Sunucu",
-                        "Member": "Üye",
-                        "User": "Kullanıcı"
+                        "Member": "Member",
+                        "Server": "Server",
+                        "User": "User"
+                    },
+                    "parameter_description": "Ayarlar için açılacak menü",
+                    "parameter_name": "menü"
+                }
+            }
+        },
+        "shared": {
+            "group": {
+                "auto": {
+                    "command_description": "Bir Karakter için otomatik ayarı yapma",
+                    "command_name": "oto",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Karakter, varsayılan olarak otomatik özelliği devre dışı bırakır",
+                            "parameter_name": "vekil"
+                        }
+                    }
+                },
+                "avatar": {
+                    "command_description": "Bir Karakterin avatarını ayarlama",
+                    "command_name": "avatar",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Resim URL'si, varsayılan olarak Yok",
+                            "parameter_name": "avatar"
+                        },
+                        "proxy": {
+                            "parameter_description": "Avatarın ayarlanacağı karakter",
+                            "parameter_name": "vekil"
+                        }
+                    }
+                },
+                "birthday": {
+                    "command_description": "Bir Karakterin doğum gününü ayarlama",
+                    "command_name": "birthday",
+                    "params": {
+                        "birthday": {
+                            "parameter_description": "Doğum günü, varsayılan olarak Yok",
+                            "parameter_name": "birthday"
+                        },
+                        "proxy": {
+                            "parameter_description": "Doğum gününü ayarlayacak karakter",
+                            "parameter_name": "vekil"
+                        }
+                    }
+                },
+                "color": {
+                    "command_description": "Set the color for a proxy."
+                },
+                "create": {
+                    "command_description": "Yeni bir karakter oluşturun.",
+                    "command_name": "yaratmak",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Resim, varsayılan olarak Yok",
+                            "parameter_name": "görüntü"
+                        }
+                    }
+                },
+                "delete": {
+                    "command_description": "Bir Karakteri Sil",
+                    "command_name": "silmek",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Varyantın silineceği proxy",
+                            "parameter_name": "vekil"
+                        }
+                    }
+                },
+                "description": {
+                    "command_description": "Bir Karakterin açıklamasını ayarlayın",
+                    "command_name": "tanım",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Açıklamanın ayarlanacağı karakter",
+                            "parameter_name": "vekil"
+                        },
+                        "text": {
+                            "parameter_description": "Karakter için ayarlanacak açıklama",
+                            "parameter_name": "metin"
+                        }
+                    }
+                },
+                "detail": {
+                    "command_description": "Bir karakterin ayrıntılarını alma",
+                    "command_name": "detay",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Bir proxy'yi detaylandırın. ",
+                            "parameter_name": "vekil"
+                        }
+                    }
+                },
+                "find": {
+                    "command_description": "Find a proxy."
+                },
+                "group": {
+                    "command_description": "Bir Karakter için grubu ayarlama",
+                    "command_name": "grup",
+                    "params": {
+                        "group": {
+                            "parameter_description": "Grup, varsayılan olarak Yok",
+                            "parameter_name": "grup"
+                        },
+                        "proxy": {
+                            "parameter_description": "Grubun ayarlanacağı karakter",
+                            "parameter_name": "vekil"
+                        }
+                    }
+                },
+                "image": {
+                    "command_description": "Set the image for a proxy.",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Resim URL'si, varsayılan olarak Yok",
+                            "parameter_name": "avatar"
+                        },
+                        "proxy": {
+                            "parameter_description": "Avatarın ayarlanacağı karakter",
+                            "parameter_name": "vekil"
+                        }
+                    }
+                },
+                "list": {
+                    "command_description": "List all proxies."
+                },
+                "local": {
+                    "command_description": "Bir Karakter için yereli ayarlama",
+                    "command_name": "yerel",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Resim, varsayılan olarak Yok",
+                            "parameter_name": "görüntü"
+                        },
+                        "nickname": {
+                            "parameter_description": "Takma ad, varsayılan olarak Yok",
+                            "parameter_name": "takma_ad"
+                        },
+                        "proxy": {
+                            "parameter_description": "Yerelin ayarlanacağı karakter",
+                            "parameter_name": "vekil"
+                        }
+                    }
+                },
+                "nickname": {
+                    "command_description": "Bir Karakterin takma adını ayarlama",
+                    "command_name": "takma_ad",
+                    "params": {
+                        "nickname": {
+                            "parameter_description": "Karakter için belirlenecek takma ad",
+                            "parameter_name": "takma_ad"
+                        },
+                        "proxy": {
+                            "parameter_description": "Takma adın belirleneceği karakter",
+                            "parameter_name": "vekil"
+                        }
+                    }
+                },
+                "nsfw": {
+                    "command_description": "Bir Karakterin NSFW olup olmadığını ayarlama",
+                    "command_name": "nsfw",
+                    "params": {
+                        "nsfw": {
+                            "parameter_description": "NSFW, varsayılan olarak zıt değere geçiş yapar",
+                            "parameter_name": "nsfw"
+                        },
+                        "proxy": {
+                            "parameter_description": "NSFW'yi ayarlayacak karakter",
+                            "parameter_name": "vekil"
+                        }
+                    }
+                },
+                "prefix": {
+                    "command_description": "Bir karakter için önekleri ayarlayın.",
+                    "command_name": "önek",
+                    "params": {
+                        "prefixes": {
+                            "parameter_description": "Ön ekler ör. ",
+                            "parameter_name": "önekler"
+                        },
+                        "proxy": {
+                            "parameter_description": "Önekin ayarlanacağı karakter",
+                            "parameter_name": "vekil"
+                        }
+                    }
+                },
+                "prune": {
+                    "command_description": "Belirli bir süre boyunca kullanılmayan karakterleri budayın.",
+                    "command_name": "kuru_erik",
+                    "params": {
+                        "time": {
+                            "parameter_description": "Varsayılan olarak daha önce budanacak tarih Yok"
+                        }
+                    }
+                },
+                "purge": {
+                    "command_description": "Tüm verilerinizi temizleyin (mesaj günlükleri hariç)",
+                    "command_name": "tasfiye",
+                    "params": {
+                        "confirmation": {
+                            "parameter_description": "onayla",
+                            "parameter_name": "onayla"
+                        }
+                    }
+                },
+                "read": {
+                    "command_description": "Bir Karakter Oku",
+                    "command_name": "okumak",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Varyantın okunacağı karakter",
+                            "parameter_name": "vekil"
+                        }
+                    }
+                },
+                "rename": {
+                    "command_description": "Bir Karakteri Yeniden Adlandırın",
+                    "command_name": "rename",
+                    "params": {
+                        "name": {
+                            "parameter_description": "Karaktere yeni isim",
+                            "parameter_name": "isim"
+                        },
+                        "proxy": {
+                            "parameter_description": "Yeniden adlandırılacak karakter",
+                            "parameter_name": "vekil"
+                        }
+                    }
+                },
+                "set": {
+                    "command_description": "Set a proxy as the current one."
+                },
+                "update": {
+                    "command_description": "Bir proxy'yi güncelleyin. ",
+                    "command_name": "güncelleme",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Resim, varsayılan olarak Yok",
+                            "parameter_name": "görüntü"
+                        },
+                        "proxy": {
+                            "parameter_description": "Güncellenecek karakter",
+                            "parameter_name": "vekil"
+                        }
+                    }
+                },
+                "use": {
+                    "command_description": "Use a proxy."
+                }
+            },
+            "group_description": "Shared proxy commands."
+        },
+        "store": {
+            "params": {
+                "storage": {
+                    "choices": {
+                        "Global": "Global",
+                        "Local": "Local"
                     }
                 }
             }
         },
+        "update": {
+            "command_description": "Bir proxy'yi güncelleyin. ",
+            "command_name": "güncelleme",
+            "params": {
+                "image": {
+                    "parameter_description": "Resim, varsayılan olarak Yok",
+                    "parameter_name": "görüntü"
+                },
+                "proxy": {
+                    "parameter_description": "Güncellenecek karakter",
+                    "parameter_name": "vekil"
+                }
+            }
+        },
+        "use": {
+            "command_description": "Use a proxy.",
+            "params": {
+                "text": {
+                    "parameter_description": "metin",
+                    "parameter_name": "metin"
+                }
+            }
+        },
+        "var": {
+            "group": {
+                "auto": {
+                    "command_description": "Bir Karakter için otomatik ayarı yapma",
+                    "command_name": "oto",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Karakter, varsayılan olarak otomatik özelliği devre dışı bırakır",
+                            "parameter_name": "vekil"
+                        },
+                        "variant": {
+                            "parameter_description": "Otomatik ayarın yapılacağı değişken",
+                            "parameter_name": "değişken"
+                        }
+                    }
+                },
+                "avatar": {
+                    "command_description": "Bir Karakterin avatarını ayarlama",
+                    "command_name": "avatar",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Resim URL'si, varsayılan olarak Yok",
+                            "parameter_name": "avatar"
+                        },
+                        "proxy": {
+                            "parameter_description": "Avatarın ayarlanacağı karakter",
+                            "parameter_name": "vekil"
+                        },
+                        "variant": {
+                            "parameter_description": "Avatarın ayarlanacağı değişken",
+                            "parameter_name": "değişken"
+                        }
+                    }
+                },
+                "birthday": {
+                    "command_description": "Bir Karakterin doğum gününü ayarlama",
+                    "command_name": "birthday",
+                    "params": {
+                        "birthday": {
+                            "parameter_description": "Doğum günü, varsayılan olarak Yok",
+                            "parameter_name": "birthday"
+                        },
+                        "proxy": {
+                            "parameter_description": "Doğum gününü ayarlayacak karakter",
+                            "parameter_name": "vekil"
+                        },
+                        "variant": {
+                            "parameter_description": "Doğum gününü ayarlamak için kullanılan değişken",
+                            "parameter_name": "değişken"
+                        }
+                    }
+                },
+                "color": {
+                    "command_description": "Change the color of a variant."
+                },
+                "create": {
+                    "command_description": "Yeni bir karakter oluşturun.",
+                    "command_name": "yaratmak",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Resim, varsayılan olarak Yok",
+                            "parameter_name": "görüntü"
+                        },
+                        "prefixes": {
+                            "parameter_description": "Prefixes e.g. A:text, |text|, etc."
+                        },
+                        "proxy": {
+                            "parameter_description": " Varyantın oluşturulacağı proxy",
+                            "parameter_name": "vekil"
+                        }
+                    }
+                },
+                "delete": {
+                    "command_description": "Bir Karakterin varyantını silme",
+                    "command_name": "silmek",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Varyantın silineceği proxy",
+                            "parameter_name": "vekil"
+                        },
+                        "variant": {
+                            "parameter_description": "Silinecek değişken",
+                            "parameter_name": "değişken"
+                        }
+                    }
+                },
+                "description": {
+                    "command_description": "Bir Karakterin açıklamasını ayarlayın",
+                    "command_name": "tanım",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Açıklamanın ayarlanacağı karakter",
+                            "parameter_name": "vekil"
+                        },
+                        "text": {
+                            "parameter_description": "Karakter için ayarlanacak açıklama",
+                            "parameter_name": "metin"
+                        },
+                        "variant": {
+                            "parameter_description": "Açıklamayı ayarlamak için değişken",
+                            "parameter_name": "değişken"
+                        }
+                    }
+                },
+                "detail": {
+                    "command_description": "Bir karakterin ayrıntılarını alma",
+                    "command_name": "detay",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Bir proxy'yi detaylandırın. ",
+                            "parameter_name": "vekil"
+                        },
+                        "variant": {
+                            "parameter_description": "Ayrıntıya göre değişkenlik",
+                            "parameter_name": "değişken"
+                        }
+                    }
+                },
+                "find": {
+                    "command_description": "Find a variant."
+                },
+                "group": {
+                    "command_description": "Bir Karakter için grubu ayarlama",
+                    "command_name": "grup",
+                    "params": {
+                        "group": {
+                            "parameter_description": "Grup, varsayılan olarak Yok",
+                            "parameter_name": "grup"
+                        },
+                        "proxy": {
+                            "parameter_description": "Grubun ayarlanacağı karakter",
+                            "parameter_name": "vekil"
+                        },
+                        "variant": {
+                            "parameter_description": "Grubun ayarlanacağı değişken",
+                            "parameter_name": "değişken"
+                        }
+                    }
+                },
+                "list": {
+                    "command_description": "List all variants."
+                },
+                "local": {
+                    "command_description": "Bir Karakter için yereli ayarlama",
+                    "command_name": "yerel",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Resim, varsayılan olarak Yok",
+                            "parameter_name": "görüntü"
+                        },
+                        "nickname": {
+                            "parameter_description": "Takma ad, varsayılan olarak Yok",
+                            "parameter_name": "takma_ad"
+                        },
+                        "proxy": {
+                            "parameter_description": "Yerelin ayarlanacağı karakter",
+                            "parameter_name": "vekil"
+                        },
+                        "variant": {
+                            "parameter_description": "Yereli ayarlamak için kullanılan değişken",
+                            "parameter_name": "değişken"
+                        }
+                    }
+                },
+                "nickname": {
+                    "command_description": "Bir Karakterin takma adını ayarlama",
+                    "command_name": "takma_ad",
+                    "params": {
+                        "nickname": {
+                            "parameter_description": "Karakter için belirlenecek takma ad",
+                            "parameter_name": "takma_ad"
+                        },
+                        "proxy": {
+                            "parameter_description": "Takma adın belirleneceği karakter",
+                            "parameter_name": "vekil"
+                        },
+                        "variant": {
+                            "parameter_description": "Takma adın belirleneceği değişken",
+                            "parameter_name": "değişken"
+                        }
+                    }
+                },
+                "nsfw": {
+                    "command_description": "Bir Karakterin NSFW olup olmadığını ayarlama",
+                    "command_name": "nsfw",
+                    "params": {
+                        "nsfw": {
+                            "parameter_description": "NSFW, varsayılan olarak zıt değere geçiş yapar",
+                            "parameter_name": "nsfw"
+                        },
+                        "proxy": {
+                            "parameter_description": "NSFW'yi ayarlayacak karakter",
+                            "parameter_name": "vekil"
+                        },
+                        "variant": {
+                            "parameter_description": "NSFW'yi ayarlamak için kullanılan değişken",
+                            "parameter_name": "değişken"
+                        }
+                    }
+                },
+                "prefix": {
+                    "command_description": "Bir karakter için önekleri ayarlayın.",
+                    "command_name": "önek",
+                    "params": {
+                        "prefixes": {
+                            "parameter_description": "Ön ekler ör. ",
+                            "parameter_name": "önekler"
+                        },
+                        "proxy": {
+                            "parameter_description": "Önekin ayarlanacağı karakter",
+                            "parameter_name": "vekil"
+                        },
+                        "variant": {
+                            "parameter_description": "Ön eki ayarlamak için kullanılan değişken",
+                            "parameter_name": "değişken"
+                        }
+                    }
+                },
+                "prune": {
+                    "command_description": "Belirli bir süre boyunca kullanılmayan karakterleri budayın.",
+                    "command_name": "kuru_erik",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "vekil"
+                        },
+                        "time": {
+                            "parameter_description": "Varsayılan olarak daha önce budanacak tarih Yok"
+                        }
+                    }
+                },
+                "purge": {
+                    "command_description": "Tüm verilerinizi temizleyin (mesaj günlükleri hariç)",
+                    "command_name": "tasfiye",
+                    "params": {
+                        "confirmation": {
+                            "parameter_description": "onayla",
+                            "parameter_name": "onayla"
+                        },
+                        "proxy": {
+                            "parameter_description": "vekil",
+                            "parameter_name": "vekil"
+                        }
+                    }
+                },
+                "read": {
+                    "command_description": "Bir Karakter Oku",
+                    "command_name": "okumak",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Varyantın okunacağı karakter",
+                            "parameter_name": "vekil"
+                        },
+                        "variant": {
+                            "parameter_description": "Okunacak değişken",
+                            "parameter_name": "değişken"
+                        }
+                    }
+                },
+                "rename": {
+                    "command_description": "Bir Karakteri Yeniden Adlandırın",
+                    "command_name": "rename",
+                    "params": {
+                        "name": {
+                            "parameter_description": "Karaktere yeni isim",
+                            "parameter_name": "isim"
+                        },
+                        "proxy": {
+                            "parameter_description": "Yeniden adlandırılacak karakter",
+                            "parameter_name": "vekil"
+                        },
+                        "variant": {
+                            "parameter_description": "Yeniden adlandırılacak değişken",
+                            "parameter_name": "değişken"
+                        }
+                    }
+                },
+                "set": {
+                    "command_description": "Set a variant."
+                },
+                "update": {
+                    "command_description": "Bir proxy'yi güncelleyin. ",
+                    "command_name": "güncelleme",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Resim, varsayılan olarak Yok",
+                            "parameter_name": "görüntü"
+                        },
+                        "proxy": {
+                            "parameter_description": "Güncellenecek karakter",
+                            "parameter_name": "vekil"
+                        }
+                    }
+                },
+                "use": {
+                    "command_description": "Use a variant."
+                }
+            },
+            "group_description": "Variant commands.",
+            "group_name": "var"
+        },
+        "variant-to-proxy": {
+            "command_description": "Bir varyantı karaktere dönüştürme",
+            "command_name": "varyanttan-proxy-ye",
+            "params": {
+                "proxy": {
+                    "parameter_description": "Dönüştürülecek proxy",
+                    "parameter_name": "vekil"
+                },
+                "variant": {
+                    "parameter_description": "Dönüştürülecek değişken",
+                    "parameter_name": "değişken"
+                }
+            }
+        }
+    },
+    "interactions": {
         "context_menu": {
             "command_name": "vekil"
         }

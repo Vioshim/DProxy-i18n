@@ -1,304 +1,333 @@
 {
     "commands": {
-        "exec": {
-            "command_description": "Execute a command."
+        "afk": {
+            "command_description": "Check if a user is AFK."
         },
-        "proxy": {
-            "command_name": "proxy",
-            "command_description": "Dezactivați caracterele pe un server",
+        "auto": {
+            "command_description": "Setați automat pentru un Personaj",
+            "command_name": "auto",
             "params": {
-                "enable": {
-                    "parameter_name": "permite",
-                    "parameter_description": "Activați sau dezactivați caracterele, comutatoare implicite"
+                "proxy": {
+                    "parameter_description": "Caracter, în mod implicit dezactivează automat",
+                    "parameter_name": "proxy"
                 }
             }
         },
-        "set": {
-            "command_description": "Set a proxy as the current one."
-        },
-        "use": {
+        "avatar": {
+            "command_description": "Setați avatarul pentru un Personaj",
+            "command_name": "avatar",
             "params": {
-                "text": {
-                    "parameter_name": "text",
-                    "parameter_description": "text"
+                "avatar": {
+                    "parameter_description": "Adresa URL a imaginii, implicit Niciuna",
+                    "parameter_name": "avatar"
+                },
+                "proxy": {
+                    "parameter_description": "Personaj pentru care să setați avatarul",
+                    "parameter_name": "proxy"
                 }
             }
         },
-        "say": {
+        "birthday": {
+            "command_description": "Setează ziua de naștere pentru un Personaj",
+            "command_name": "zi_de_nastere",
             "params": {
-                "text": {
-                    "parameter_name": "text",
-                    "parameter_description": "text"
+                "birthday": {
+                    "parameter_description": "Ziua de naștere, în mod implicit Niciuna",
+                    "parameter_name": "zi_de_nastere"
+                },
+                "proxy": {
+                    "parameter_description": "Personaj pentru care se stabilește ziua de naștere",
+                    "parameter_name": "proxy"
                 }
             }
         },
-        "npc": {
-            "command_name": "npc",
-            "command_description": "Creați un nou mesaj NPC",
-            "params": {
-                "franchise": {
-                    "parameter_name": "franchise",
-                    "parameter_description": "Franciza de utilizat",
-                    "choices": {
-                        "Pokemon": "Pokemon",
-                        "Pokemon Shiny": "Pokemon Shiny",
-                        "Trainer": "Trainer",
-                        "Digimon": "Digimon",
-                        "Palworld": "Palworld",
-                        "D&D": "D&D"
-                    }
-                },
-                "npc": {
-                    "parameter_name": "npc",
-                    "parameter_description": "NPC de folosit"
-                },
-                "nickname": {
-                    "parameter_name": "poreclă",
-                    "parameter_description": "Pseudonim, implicit Nici unul"
-                },
-                "emotion": {
-                    "parameter_name": "emoţie",
-                    "parameter_description": "Emoție, implicit Normal",
-                    "choices": {
-                        "Normal": "Normal",
-                        "Happy": "Happy",
-                        "Pain": "Pain",
-                        "Angry": "Angry",
-                        "Worried": "Worried",
-                        "Sad": "Sad",
-                        "Crying": "Crying",
-                        "Shouting": "Shouting",
-                        "TearyEyed": "TearyEyed",
-                        "Determined": "Determined",
-                        "Joyous": "Joyous",
-                        "Inspired": "Inspired",
-                        "Surprised": "Surprised",
-                        "Dizzy": "Dizzy",
-                        "Sigh": "Sigh",
-                        "Stunned": "Stunned",
-                        "Special0": "Special0",
-                        "Special1": "Special1",
-                        "Special2": "Special2",
-                        "Special3": "Special3"
-                    }
-                },
-                "image": {
-                    "parameter_name": "imagine",
-                    "parameter_description": "Imagine, implicit Niciuna"
-                },
-                "text": {
-                    "parameter_name": "text",
-                    "parameter_description": "text"
-                }
-            }
+        "check_permissions": {
+            "command_description": "Verificați dacă botul poate funcționa pe canalul furnizat",
+            "command_name": "check_perms"
+        },
+        "color": {
+            "command_description": "Set a color for a proxy."
         },
         "create": {
-            "command_description": "Create a new proxy.",
+            "command_description": "Creați un personaj nou.",
+            "command_name": "crea",
             "params": {
+                "image": {
+                    "parameter_description": "Imagine, implicit Niciuna",
+                    "parameter_name": "imagine"
+                },
                 "prefixes": {
                     "parameter_description": "Prefixes e.g. A:text, |text|, etc."
                 }
             }
         },
         "delete": {
-            "command_name": "șterge",
             "command_description": "Ștergeți un Personaj",
+            "command_name": "șterge",
             "params": {
                 "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Proxy pentru a șterge varianta din"
-                }
-            }
-        },
-        "read": {
-            "command_name": "citit",
-            "command_description": "Citește un Personaj",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Personaj din care să citească varianta"
-                }
-            }
-        },
-        "nickname": {
-            "command_name": "poreclă",
-            "command_description": "Setați porecla pentru un Personaj",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Personaj pentru care se stabilește porecla"
-                },
-                "nickname": {
-                    "parameter_name": "poreclă",
-                    "parameter_description": "Pseudonim de setat pentru personaj"
-                }
-            }
-        },
-        "local": {
-            "command_name": "local",
-            "command_description": "Setați localul pentru un Personaj",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Personaj pentru care se stabilește localul"
-                },
-                "avatar": {
-                    "parameter_name": "imagine",
-                    "parameter_description": "Imagine, implicit Niciuna"
-                },
-                "nickname": {
-                    "parameter_name": "poreclă",
-                    "parameter_description": "Pseudonim, implicit Nici unul"
-                }
-            }
-        },
-        "avatar": {
-            "command_name": "avatar",
-            "command_description": "Setați avatarul pentru un Personaj",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Personaj pentru care să setați avatarul"
-                },
-                "avatar": {
-                    "parameter_name": "avatar",
-                    "parameter_description": "Adresa URL a imaginii, implicit Niciuna"
-                }
-            }
-        },
-        "prefix": {
-            "command_name": "prefix",
-            "command_description": "Setați prefixele pentru un caracter.",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Caracter pentru care se stabilește prefixul"
-                },
-                "prefixes": {
-                    "parameter_name": "prefixe",
-                    "parameter_description": "Prefixe de ex. "
-                }
-            }
-        },
-        "birthday": {
-            "command_name": "zi_de_nastere",
-            "command_description": "Setează ziua de naștere pentru un Personaj",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Personaj pentru care se stabilește ziua de naștere"
-                },
-                "birthday": {
-                    "parameter_name": "zi_de_nastere",
-                    "parameter_description": "Ziua de naștere, în mod implicit Niciuna"
+                    "parameter_description": "Proxy pentru a șterge varianta din",
+                    "parameter_name": "proxy"
                 }
             }
         },
         "description": {
-            "command_name": "descriere",
             "command_description": "Setați descrierea unui Personaj",
+            "command_name": "descriere",
             "params": {
                 "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Personaj pentru care să setați descrierea"
+                    "parameter_description": "Personaj pentru care să setați descrierea",
+                    "parameter_name": "proxy"
                 },
                 "text": {
-                    "parameter_name": "text",
-                    "parameter_description": "Descriere de setat pentru personaj"
+                    "parameter_description": "Descriere de setat pentru personaj",
+                    "parameter_name": "text"
                 }
             }
         },
-        "rename": {
-            "command_name": "redenumiți",
-            "command_description": "Redenumiți un Personaj",
+        "detail": {
+            "command_description": "Obțineți detalii despre un personaj",
+            "command_name": "detaliu",
             "params": {
                 "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Personaj de redenumit"
+                    "parameter_description": "Detaliați un proxy. ",
+                    "parameter_name": "proxy"
+                }
+            }
+        },
+        "exec": {
+            "command_description": "Execute a command."
+        },
+        "export": {
+            "command_description": "Exportați caracterele într-un fișier JSON",
+            "command_name": "export",
+            "params": {
+                "format": {
+                    "choices": {
+                        "Default": "Default",
+                        "PluralKit": "PluralKit",
+                        "Tupperbox": "Tupperbox"
+                    },
+                    "parameter_description": "Format pentru a exporta, în mod implicit JSON",
+                    "parameter_name": "format"
                 },
-                "name": {
-                    "parameter_name": "nume",
-                    "parameter_description": "Nume nou pentru personaj"
+                "new_token": {
+                    "parameter_description": "Dacă doriți să generați un nou token",
+                    "parameter_name": "new_token"
                 }
             }
         },
         "group": {
-            "command_name": "grup",
             "command_description": "Setați grupul pentru un Personaj",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Personaj pentru care se stabilește grupul"
-                },
-                "group": {
-                    "parameter_name": "grup",
-                    "parameter_description": "Grup, implicit Niciunul"
-                }
-            }
-        },
-        "nsfw": {
-            "command_name": "nsfw",
-            "command_description": "Setați dacă un Personaj este NSFW",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Caracter pentru setarea NSFW"
-                },
-                "nsfw": {
-                    "parameter_name": "nsfw",
-                    "parameter_description": "NSFW, comutați implicit la valoarea opusă"
-                }
-            }
-        },
-        "auto": {
-            "command_name": "auto",
-            "command_description": "Setați automat pentru un Personaj",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Caracter, în mod implicit dezactivează automat"
-                }
-            }
-        },
-        "list": {
-            "command_name": "listă",
-            "command_description": "Listați toate personajele ",
+            "command_name": "grup",
             "params": {
                 "group": {
-                    "parameter_name": "grup",
-                    "parameter_description": "Grupați din care să enumerați caracterele"
+                    "parameter_description": "Grup, implicit Niciunul",
+                    "parameter_name": "grup"
+                },
+                "proxy": {
+                    "parameter_description": "Personaj pentru care se stabilește grupul",
+                    "parameter_name": "proxy"
+                }
+            }
+        },
+        "help": {
+            "command_description": "Ajutor pentru bot încorporat",
+            "command_name": "ajutor",
+            "params": {
+                "search": {
+                    "parameter_description": "Termen de căutare",
+                    "parameter_name": "căutare"
+                }
+            }
+        },
+        "import": {
+            "command_description": "Importați-vă personajele dintr-un fișier sau un token",
+            "command_name": "import",
+            "params": {
+                "data": {
+                    "parameter_description": "Fișier din care să importați",
+                    "parameter_name": "date"
+                },
+                "deleting_from_token": {
+                    "parameter_description": "Ștergeți caracterele din simbol",
+                    "parameter_name": "deleting_from_token"
+                },
+                "token": {
+                    "parameter_description": "Token de utilizat pentru import",
+                    "parameter_name": "jeton"
                 }
             }
         },
         "latch": {
-            "command_name": "zăvor",
             "command_description": "Activați sau dezactivați modul de blocare",
+            "command_name": "zăvor",
             "params": {
-                "enable": {
-                    "parameter_description": "Activați sau dezactivați modul de blocare"
-                },
                 "auto_remove": {
                     "parameter_description": "Dacă să păstrați automat sau nu pentru canalul curent, în mod implicit, Adevărat"
+                },
+                "enable": {
+                    "parameter_description": "Activați sau dezactivați modul de blocare"
                 }
             }
         },
-        "export": {
-            "command_name": "export",
-            "command_description": "Exportați caracterele într-un fișier JSON",
+        "list": {
+            "command_description": "Listați toate personajele ",
+            "command_name": "listă",
             "params": {
-                "format": {
-                    "parameter_name": "format",
-                    "parameter_description": "Format pentru a exporta, în mod implicit JSON"
+                "group": {
+                    "parameter_description": "Grupați din care să enumerați caracterele",
+                    "parameter_name": "grup"
+                }
+            }
+        },
+        "local": {
+            "command_description": "Setați localul pentru un Personaj",
+            "command_name": "local",
+            "params": {
+                "avatar": {
+                    "parameter_description": "Imagine, implicit Niciuna",
+                    "parameter_name": "imagine"
                 },
-                "new_token": {
-                    "parameter_name": "new_token",
-                    "parameter_description": "Dacă doriți să generați un nou token"
+                "nickname": {
+                    "parameter_description": "Pseudonim, implicit Nici unul",
+                    "parameter_name": "poreclă"
+                },
+                "proxy": {
+                    "parameter_description": "Personaj pentru care se stabilește localul",
+                    "parameter_name": "proxy"
+                }
+            }
+        },
+        "nickname": {
+            "command_description": "Setați porecla pentru un Personaj",
+            "command_name": "poreclă",
+            "params": {
+                "nickname": {
+                    "parameter_description": "Pseudonim de setat pentru personaj",
+                    "parameter_name": "poreclă"
+                },
+                "proxy": {
+                    "parameter_description": "Personaj pentru care se stabilește porecla",
+                    "parameter_name": "proxy"
+                }
+            }
+        },
+        "npc": {
+            "command_description": "Creați un nou mesaj NPC",
+            "command_name": "npc",
+            "params": {
+                "emotion": {
+                    "choices": {
+                        "Angry": "Angry",
+                        "Crying": "Crying",
+                        "Determined": "Determined",
+                        "Dizzy": "Dizzy",
+                        "Happy": "Happy",
+                        "Inspired": "Inspired",
+                        "Joyous": "Joyous",
+                        "Normal": "Normal",
+                        "Pain": "Pain",
+                        "Sad": "Sad",
+                        "Shouting": "Shouting",
+                        "Sigh": "Sigh",
+                        "Special0": "Special0",
+                        "Special1": "Special1",
+                        "Special2": "Special2",
+                        "Special3": "Special3",
+                        "Stunned": "Stunned",
+                        "Surprised": "Surprised",
+                        "TearyEyed": "TearyEyed",
+                        "Worried": "Worried"
+                    },
+                    "parameter_description": "Emoție, implicit Normal",
+                    "parameter_name": "emoţie"
+                },
+                "franchise": {
+                    "choices": {
+                        "D&D": "D&D",
+                        "Digimon": "Digimon",
+                        "Palworld": "Palworld",
+                        "Pokemon": "Pokemon",
+                        "Pokemon Shiny": "Pokemon Shiny",
+                        "Trainer": "Trainer"
+                    },
+                    "parameter_description": "Franciza de utilizat",
+                    "parameter_name": "franciza"
+                },
+                "image": {
+                    "parameter_description": "Imagine, implicit Niciuna",
+                    "parameter_name": "imagine"
+                },
+                "nickname": {
+                    "parameter_description": "Pseudonim, implicit Nici unul",
+                    "parameter_name": "poreclă"
+                },
+                "npc": {
+                    "parameter_description": "NPC de folosit",
+                    "parameter_name": "npc"
+                },
+                "text": {
+                    "parameter_description": "text",
+                    "parameter_name": "text"
+                }
+            }
+        },
+        "nsfw": {
+            "command_description": "Setați dacă un Personaj este NSFW",
+            "command_name": "nsfw",
+            "params": {
+                "nsfw": {
+                    "parameter_description": "NSFW, comutați implicit la valoarea opusă",
+                    "parameter_name": "nsfw"
+                },
+                "proxy": {
+                    "parameter_description": "Caracter pentru setarea NSFW",
+                    "parameter_name": "proxy"
+                }
+            }
+        },
+        "prefix": {
+            "command_description": "Setați prefixele pentru un caracter.",
+            "command_name": "prefix",
+            "params": {
+                "prefixes": {
+                    "parameter_description": "Prefixe de ex. ",
+                    "parameter_name": "prefixe"
+                },
+                "proxy": {
+                    "parameter_description": "Caracter pentru care se stabilește prefixul",
+                    "parameter_name": "proxy"
+                }
+            }
+        },
+        "proxy": {
+            "command_description": "Dezactivați caracterele pe un server",
+            "command_name": "proxy",
+            "params": {
+                "enable": {
+                    "parameter_description": "Activați sau dezactivați caracterele, comutatoare implicite",
+                    "parameter_name": "permite"
+                }
+            }
+        },
+        "proxy-to-variant": {
+            "command_description": "Convertiți un caracter într-o variantă",
+            "command_name": "proxy-la-variantă",
+            "params": {
+                "base": {
+                    "parameter_description": "O bază nouă pentru personaj",
+                    "parameter_name": "baza"
+                },
+                "original": {
+                    "parameter_description": "Personaj de convertit",
+                    "parameter_name": "original"
                 }
             }
         },
         "prune": {
-            "command_name": "prună_uscată",
             "command_description": "Tăiați caracterele nefolosite pentru un anumit timp.",
+            "command_name": "prună_uscată",
             "params": {
                 "time": {
                     "parameter_description": "Data de tăiat înainte, implicit Niciuna"
@@ -306,656 +335,674 @@
             }
         },
         "purge": {
-            "command_name": "epurare",
             "command_description": "Ștergeți toate datele dvs. (cu excepția jurnalelor de mesaje)",
+            "command_name": "epurare",
             "params": {
                 "confirmation": {
-                    "parameter_name": "confirmare",
-                    "parameter_description": "confirmare"
+                    "parameter_description": "confirmare",
+                    "parameter_name": "confirmare"
                 }
             }
         },
-        "proxy-to-variant": {
-            "command_name": "proxy-la-variantă",
-            "command_description": "Convertiți un caracter într-o variantă",
-            "params": {
-                "original": {
-                    "parameter_name": "original",
-                    "parameter_description": "Personaj de convertit"
-                },
-                "base": {
-                    "parameter_name": "baza",
-                    "parameter_description": "O bază nouă pentru personaj"
-                }
-            }
-        },
-        "variant-to-proxy": {
-            "command_name": "variantă-la-proxy",
-            "command_description": "Convertiți o variantă într-un caracter",
+        "read": {
+            "command_description": "Citește un Personaj",
+            "command_name": "citit",
             "params": {
                 "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Proxy de convertit"
-                },
-                "variant": {
-                    "parameter_name": "variantă",
-                    "parameter_description": "Varianta de convertit"
+                    "parameter_description": "Personaj din care să citească varianta",
+                    "parameter_name": "proxy"
                 }
             }
         },
-        "update": {
-            "command_name": "actualizați",
-            "command_description": "Actualizați un proxy. ",
+        "rename": {
+            "command_description": "Redenumiți un Personaj",
+            "command_name": "redenumiți",
             "params": {
+                "name": {
+                    "parameter_description": "Nume nou pentru personaj",
+                    "parameter_name": "nume"
+                },
                 "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Personaj de actualizat"
-                },
-                "image": {
-                    "parameter_name": "imagine",
-                    "parameter_description": "Imagine, implicit Niciuna"
+                    "parameter_description": "Personaj de redenumit",
+                    "parameter_name": "proxy"
                 }
             }
-        },
-        "detail": {
-            "command_name": "detaliu",
-            "command_description": "Obțineți detalii despre un personaj",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Detaliați un proxy. "
-                }
-            }
-        },
-        "import": {
-            "command_name": "import",
-            "command_description": "Importați-vă personajele dintr-un fișier sau un token",
-            "params": {
-                "data": {
-                    "parameter_name": "date",
-                    "parameter_description": "Fișier din care să importați"
-                },
-                "token": {
-                    "parameter_name": "jeton",
-                    "parameter_description": "Token de utilizat pentru import"
-                },
-                "deleting_from_token": {
-                    "parameter_name": "deleting_from_token",
-                    "parameter_description": "Ștergeți caracterele din simbol"
-                }
-            }
-        },
-        "var": {
-            "group_name": "var",
-            "group_description": "Variant commands.",
-            "groupset": {
-                "command_description": "Set a variant."
-            },
-            "groupuse": {
-                "command_description": "Use a variant."
-            },
-            "groupcreate": {
-                "command_name": "crea",
-                "command_description": "Creați un personaj nou.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": " Proxy pentru a crea varianta pentru"
-                    },
-                    "image": {
-                        "parameter_name": "imagine",
-                        "parameter_description": "Imagine, implicit Niciuna"
-                    },
-                    "prefixes": {
-                        "parameter_description": "Prefixes e.g. A:text, |text|, etc."
-                    }
-                }
-            },
-            "groupdelete": {
-                "command_name": "șterge",
-                "command_description": "Ștergeți varianta unui Personaj",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Proxy pentru a șterge varianta din"
-                    },
-                    "variant": {
-                        "parameter_name": "variantă",
-                        "parameter_description": "Varianta de șters"
-                    }
-                }
-            },
-            "groupread": {
-                "command_name": "citit",
-                "command_description": "Citește un Personaj",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Personaj din care să citească varianta"
-                    },
-                    "variant": {
-                        "parameter_name": "variantă",
-                        "parameter_description": "Varianta de citit"
-                    }
-                }
-            },
-            "groupnickname": {
-                "command_name": "poreclă",
-                "command_description": "Setați porecla pentru un Personaj",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Personaj pentru care se stabilește porecla"
-                    },
-                    "variant": {
-                        "parameter_name": "variantă",
-                        "parameter_description": "Varianta pentru a seta porecla"
-                    },
-                    "nickname": {
-                        "parameter_name": "poreclă",
-                        "parameter_description": "Pseudonim de setat pentru personaj"
-                    }
-                }
-            },
-            "grouplocal": {
-                "command_name": "local",
-                "command_description": "Setați localul pentru un Personaj",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Personaj pentru care se stabilește localul"
-                    },
-                    "variant": {
-                        "parameter_name": "variantă",
-                        "parameter_description": "Varianta pentru setarea localului"
-                    },
-                    "avatar": {
-                        "parameter_name": "imagine",
-                        "parameter_description": "Imagine, implicit Niciuna"
-                    },
-                    "nickname": {
-                        "parameter_name": "poreclă",
-                        "parameter_description": "Pseudonim, implicit Nici unul"
-                    }
-                }
-            },
-            "groupprefix": {
-                "command_name": "prefix",
-                "command_description": "Setați prefixele pentru un caracter.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Caracter pentru care se stabilește prefixul"
-                    },
-                    "variant": {
-                        "parameter_name": "variantă",
-                        "parameter_description": "Varianta pentru setarea prefixului"
-                    },
-                    "prefixes": {
-                        "parameter_name": "prefixe",
-                        "parameter_description": "Prefixe de ex. "
-                    }
-                }
-            },
-            "groupbirthday": {
-                "command_name": "zi_de_nastere",
-                "command_description": "Setează ziua de naștere pentru un Personaj",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Personaj pentru care se stabilește ziua de naștere"
-                    },
-                    "variant": {
-                        "parameter_name": "variantă",
-                        "parameter_description": "Varianta pentru a seta ziua de naștere"
-                    },
-                    "birthday": {
-                        "parameter_name": "zi_de_nastere",
-                        "parameter_description": "Ziua de naștere, în mod implicit Niciuna"
-                    }
-                }
-            },
-            "groupdescription": {
-                "command_name": "descriere",
-                "command_description": "Setați descrierea unui Personaj",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Personaj pentru care să setați descrierea"
-                    },
-                    "variant": {
-                        "parameter_name": "variantă",
-                        "parameter_description": "Varianta pentru a seta descrierea"
-                    },
-                    "text": {
-                        "parameter_name": "text",
-                        "parameter_description": "Descriere de setat pentru personaj"
-                    }
-                }
-            },
-            "grouprename": {
-                "command_name": "redenumiți",
-                "command_description": "Redenumiți un Personaj",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Personaj de redenumit"
-                    },
-                    "variant": {
-                        "parameter_name": "variantă",
-                        "parameter_description": "Varianta de redenumit"
-                    },
-                    "name": {
-                        "parameter_name": "nume",
-                        "parameter_description": "Nume nou pentru personaj"
-                    }
-                }
-            },
-            "groupgroup": {
-                "command_name": "grup",
-                "command_description": "Setați grupul pentru un Personaj",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Personaj pentru care se stabilește grupul"
-                    },
-                    "variant": {
-                        "parameter_name": "variantă",
-                        "parameter_description": "Varianta pentru setarea grupului"
-                    },
-                    "group": {
-                        "parameter_name": "grup",
-                        "parameter_description": "Grup, implicit Niciunul"
-                    }
-                }
-            },
-            "groupnsfw": {
-                "command_name": "nsfw",
-                "command_description": "Setați dacă un Personaj este NSFW",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Caracter pentru setarea NSFW"
-                    },
-                    "variant": {
-                        "parameter_name": "variantă",
-                        "parameter_description": "Varianta pentru setarea NSFW pentru"
-                    },
-                    "nsfw": {
-                        "parameter_name": "nsfw",
-                        "parameter_description": "NSFW, comutați implicit la valoarea opusă"
-                    }
-                }
-            },
-            "groupauto": {
-                "command_name": "auto",
-                "command_description": "Setați automat pentru un Personaj",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Caracter, în mod implicit dezactivează automat"
-                    },
-                    "variant": {
-                        "parameter_name": "variantă",
-                        "parameter_description": "Varianta pentru setarea auto pentru"
-                    }
-                }
-            },
-            "groupavatar": {
-                "command_name": "avatar",
-                "command_description": "Setați avatarul pentru un Personaj",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Personaj pentru care să setați avatarul"
-                    },
-                    "variant": {
-                        "parameter_name": "variantă",
-                        "parameter_description": "Varianta pentru setarea avatarului"
-                    },
-                    "avatar": {
-                        "parameter_name": "avatar",
-                        "parameter_description": "Adresa URL a imaginii, implicit Niciuna"
-                    }
-                }
-            },
-            "grouplist": {
-                "command_description": "List all variants."
-            },
-            "groupfind": {
-                "command_description": "Find a variant."
-            },
-            "groupupdate": {
-                "command_name": "actualizați",
-                "command_description": "Actualizați un proxy. ",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Personaj de actualizat"
-                    },
-                    "image": {
-                        "parameter_name": "imagine",
-                        "parameter_description": "Imagine, implicit Niciuna"
-                    }
-                }
-            },
-            "groupdetail": {
-                "command_name": "detaliu",
-                "command_description": "Obțineți detalii despre un personaj",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Detaliați un proxy. "
-                    },
-                    "variant": {
-                        "parameter_name": "variantă",
-                        "parameter_description": "Varianta la detalii"
-                    }
-                }
-            },
-            "groupprune": {
-                "command_name": "prună_uscată",
-                "command_description": "Tăiați caracterele nefolosite pentru un anumit timp.",
-                "params": {
-                    "proxy": {
-                        "parameter_description": "proxy"
-                    },
-                    "time": {
-                        "parameter_description": "Data de tăiat înainte, implicit Niciuna"
-                    }
-                }
-            },
-            "grouppurge": {
-                "command_name": "epurare",
-                "command_description": "Ștergeți toate datele dvs. (cu excepția jurnalelor de mesaje)",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "proxy"
-                    },
-                    "confirmation": {
-                        "parameter_name": "confirmare",
-                        "parameter_description": "confirmare"
-                    }
-                }
-            }
-        },
-        "shared": {
-            "group_description": "Shared proxy commands.",
-            "groupset": {
-                "command_description": "Set a proxy as the current one."
-            },
-            "groupcreate": {
-                "command_name": "crea",
-                "command_description": "Creați un personaj nou.",
-                "params": {
-                    "image": {
-                        "parameter_name": "imagine",
-                        "parameter_description": "Imagine, implicit Niciuna"
-                    }
-                }
-            },
-            "groupdelete": {
-                "command_name": "șterge",
-                "command_description": "Ștergeți un Personaj",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Proxy pentru a șterge varianta din"
-                    }
-                }
-            },
-            "groupread": {
-                "command_name": "citit",
-                "command_description": "Citește un Personaj",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Personaj din care să citească varianta"
-                    }
-                }
-            },
-            "groupauto": {
-                "command_name": "auto",
-                "command_description": "Setați automat pentru un Personaj",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Caracter, în mod implicit dezactivează automat"
-                    }
-                }
-            },
-            "groupprefix": {
-                "command_name": "prefix",
-                "command_description": "Setați prefixele pentru un caracter.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Caracter pentru care se stabilește prefixul"
-                    },
-                    "prefixes": {
-                        "parameter_name": "prefixe",
-                        "parameter_description": "Prefixe de ex. "
-                    }
-                }
-            },
-            "groupbirthday": {
-                "command_name": "zi_de_nastere",
-                "command_description": "Setează ziua de naștere pentru un Personaj",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Personaj pentru care se stabilește ziua de naștere"
-                    },
-                    "birthday": {
-                        "parameter_name": "zi_de_nastere",
-                        "parameter_description": "Ziua de naștere, în mod implicit Niciuna"
-                    }
-                }
-            },
-            "groupdescription": {
-                "command_name": "descriere",
-                "command_description": "Setați descrierea unui Personaj",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Personaj pentru care să setați descrierea"
-                    },
-                    "text": {
-                        "parameter_name": "text",
-                        "parameter_description": "Descriere de setat pentru personaj"
-                    }
-                }
-            },
-            "grouprename": {
-                "command_name": "redenumiți",
-                "command_description": "Redenumiți un Personaj",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Personaj de redenumit"
-                    },
-                    "name": {
-                        "parameter_name": "nume",
-                        "parameter_description": "Nume nou pentru personaj"
-                    }
-                }
-            },
-            "groupnickname": {
-                "command_name": "poreclă",
-                "command_description": "Setați porecla pentru un Personaj",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Personaj pentru care se stabilește porecla"
-                    },
-                    "nickname": {
-                        "parameter_name": "poreclă",
-                        "parameter_description": "Pseudonim de setat pentru personaj"
-                    }
-                }
-            },
-            "groupgroup": {
-                "command_name": "grup",
-                "command_description": "Setați grupul pentru un Personaj",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Personaj pentru care se stabilește grupul"
-                    },
-                    "group": {
-                        "parameter_name": "grup",
-                        "parameter_description": "Grup, implicit Niciunul"
-                    }
-                }
-            },
-            "groupnsfw": {
-                "command_name": "nsfw",
-                "command_description": "Setați dacă un Personaj este NSFW",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Caracter pentru setarea NSFW"
-                    },
-                    "nsfw": {
-                        "parameter_name": "nsfw",
-                        "parameter_description": "NSFW, comutați implicit la valoarea opusă"
-                    }
-                }
-            },
-            "groupavatar": {
-                "command_name": "avatar",
-                "command_description": "Setați avatarul pentru un Personaj",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Personaj pentru care să setați avatarul"
-                    },
-                    "avatar": {
-                        "parameter_name": "avatar",
-                        "parameter_description": "Adresa URL a imaginii, implicit Niciuna"
-                    }
-                }
-            },
-            "groupimage": {
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Personaj pentru care să setați avatarul"
-                    },
-                    "avatar": {
-                        "parameter_name": "avatar",
-                        "parameter_description": "Adresa URL a imaginii, implicit Niciuna"
-                    }
-                }
-            },
-            "grouplocal": {
-                "command_name": "local",
-                "command_description": "Setați localul pentru un Personaj",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Personaj pentru care se stabilește localul"
-                    },
-                    "avatar": {
-                        "parameter_name": "imagine",
-                        "parameter_description": "Imagine, implicit Niciuna"
-                    },
-                    "nickname": {
-                        "parameter_name": "poreclă",
-                        "parameter_description": "Pseudonim, implicit Nici unul"
-                    }
-                }
-            },
-            "groupupdate": {
-                "command_name": "actualizați",
-                "command_description": "Actualizați un proxy. ",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Personaj de actualizat"
-                    },
-                    "image": {
-                        "parameter_name": "imagine",
-                        "parameter_description": "Imagine, implicit Niciuna"
-                    }
-                }
-            },
-            "groupdetail": {
-                "command_name": "detaliu",
-                "command_description": "Obțineți detalii despre un personaj",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Detaliați un proxy. "
-                    }
-                }
-            },
-            "groupprune": {
-                "command_name": "prună_uscată",
-                "command_description": "Tăiați caracterele nefolosite pentru un anumit timp.",
-                "params": {
-                    "time": {
-                        "parameter_description": "Data de tăiat înainte, implicit Niciuna"
-                    }
-                }
-            },
-            "grouppurge": {
-                "command_name": "epurare",
-                "command_description": "Ștergeți toate datele dvs. (cu excepția jurnalelor de mesaje)",
-                "params": {
-                    "confirmation": {
-                        "parameter_name": "confirmare",
-                        "parameter_description": "confirmare"
-                    }
-                }
-            }
-        },
-        "check_permissions": {
-            "command_name": "check_perms",
-            "command_description": "Verificați dacă botul poate funcționa pe canalul furnizat"
         },
         "roll": {
             "command_description": "Roll a dice."
         },
-        "afk": {
-            "command_description": "Check if a user is AFK."
-        },
-        "help": {
-            "command_name": "ajutor",
-            "command_description": "Ajutor pentru bot încorporat",
+        "say": {
+            "command_description": "Say something.",
             "params": {
-                "search": {
-                    "parameter_name": "căutare",
-                    "parameter_description": "Termen de căutare"
+                "text": {
+                    "parameter_description": "text",
+                    "parameter_name": "text"
                 }
             }
         },
         "server_wiki": {
-            "command_name": "server_wiki",
             "command_description": "wiki server definit de utilizator",
+            "command_name": "server_wiki",
             "params": {
                 "search": {
-                    "parameter_name": "căutare",
-                    "parameter_description": "Termen de căutare"
+                    "parameter_description": "Termen de căutare",
+                    "parameter_name": "căutare"
                 }
             }
         },
+        "set": {
+            "command_description": "Set a proxy as the current one."
+        },
         "settings": {
-            "command_name": "setări",
             "command_description": "Setări bot",
+            "command_name": "setări",
             "params": {
                 "menu": {
-                    "parameter_name": "meniul",
-                    "parameter_description": "Meniu de deschis pentru setări",
                     "choices": {
+                        "Member": "Member",
                         "Server": "Server",
-                        "Member": "Membru",
-                        "User": "Utilizator"
+                        "User": "User"
+                    },
+                    "parameter_description": "Meniu de deschis pentru setări",
+                    "parameter_name": "meniul"
+                }
+            }
+        },
+        "shared": {
+            "group": {
+                "auto": {
+                    "command_description": "Setați automat pentru un Personaj",
+                    "command_name": "auto",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Caracter, în mod implicit dezactivează automat",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "avatar": {
+                    "command_description": "Setați avatarul pentru un Personaj",
+                    "command_name": "avatar",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Adresa URL a imaginii, implicit Niciuna",
+                            "parameter_name": "avatar"
+                        },
+                        "proxy": {
+                            "parameter_description": "Personaj pentru care să setați avatarul",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "birthday": {
+                    "command_description": "Setează ziua de naștere pentru un Personaj",
+                    "command_name": "zi_de_nastere",
+                    "params": {
+                        "birthday": {
+                            "parameter_description": "Ziua de naștere, în mod implicit Niciuna",
+                            "parameter_name": "zi_de_nastere"
+                        },
+                        "proxy": {
+                            "parameter_description": "Personaj pentru care se stabilește ziua de naștere",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "color": {
+                    "command_description": "Set the color for a proxy."
+                },
+                "create": {
+                    "command_description": "Creați un personaj nou.",
+                    "command_name": "crea",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Imagine, implicit Niciuna",
+                            "parameter_name": "imagine"
+                        }
+                    }
+                },
+                "delete": {
+                    "command_description": "Ștergeți un Personaj",
+                    "command_name": "șterge",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Proxy pentru a șterge varianta din",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "description": {
+                    "command_description": "Setați descrierea unui Personaj",
+                    "command_name": "descriere",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Personaj pentru care să setați descrierea",
+                            "parameter_name": "proxy"
+                        },
+                        "text": {
+                            "parameter_description": "Descriere de setat pentru personaj",
+                            "parameter_name": "text"
+                        }
+                    }
+                },
+                "detail": {
+                    "command_description": "Obțineți detalii despre un personaj",
+                    "command_name": "detaliu",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Detaliați un proxy. ",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "find": {
+                    "command_description": "Find a proxy."
+                },
+                "group": {
+                    "command_description": "Setați grupul pentru un Personaj",
+                    "command_name": "grup",
+                    "params": {
+                        "group": {
+                            "parameter_description": "Grup, implicit Niciunul",
+                            "parameter_name": "grup"
+                        },
+                        "proxy": {
+                            "parameter_description": "Personaj pentru care se stabilește grupul",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "image": {
+                    "command_description": "Set the image for a proxy.",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Adresa URL a imaginii, implicit Niciuna",
+                            "parameter_name": "avatar"
+                        },
+                        "proxy": {
+                            "parameter_description": "Personaj pentru care să setați avatarul",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "list": {
+                    "command_description": "List all proxies."
+                },
+                "local": {
+                    "command_description": "Setați localul pentru un Personaj",
+                    "command_name": "local",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Imagine, implicit Niciuna",
+                            "parameter_name": "imagine"
+                        },
+                        "nickname": {
+                            "parameter_description": "Pseudonim, implicit Nici unul",
+                            "parameter_name": "poreclă"
+                        },
+                        "proxy": {
+                            "parameter_description": "Personaj pentru care se stabilește localul",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "nickname": {
+                    "command_description": "Setați porecla pentru un Personaj",
+                    "command_name": "poreclă",
+                    "params": {
+                        "nickname": {
+                            "parameter_description": "Pseudonim de setat pentru personaj",
+                            "parameter_name": "poreclă"
+                        },
+                        "proxy": {
+                            "parameter_description": "Personaj pentru care se stabilește porecla",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "nsfw": {
+                    "command_description": "Setați dacă un Personaj este NSFW",
+                    "command_name": "nsfw",
+                    "params": {
+                        "nsfw": {
+                            "parameter_description": "NSFW, comutați implicit la valoarea opusă",
+                            "parameter_name": "nsfw"
+                        },
+                        "proxy": {
+                            "parameter_description": "Caracter pentru setarea NSFW",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "prefix": {
+                    "command_description": "Setați prefixele pentru un caracter.",
+                    "command_name": "prefix",
+                    "params": {
+                        "prefixes": {
+                            "parameter_description": "Prefixe de ex. ",
+                            "parameter_name": "prefixe"
+                        },
+                        "proxy": {
+                            "parameter_description": "Caracter pentru care se stabilește prefixul",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "prune": {
+                    "command_description": "Tăiați caracterele nefolosite pentru un anumit timp.",
+                    "command_name": "prună_uscată",
+                    "params": {
+                        "time": {
+                            "parameter_description": "Data de tăiat înainte, implicit Niciuna"
+                        }
+                    }
+                },
+                "purge": {
+                    "command_description": "Ștergeți toate datele dvs. (cu excepția jurnalelor de mesaje)",
+                    "command_name": "epurare",
+                    "params": {
+                        "confirmation": {
+                            "parameter_description": "confirmare",
+                            "parameter_name": "confirmare"
+                        }
+                    }
+                },
+                "read": {
+                    "command_description": "Citește un Personaj",
+                    "command_name": "citit",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Personaj din care să citească varianta",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "rename": {
+                    "command_description": "Redenumiți un Personaj",
+                    "command_name": "redenumiți",
+                    "params": {
+                        "name": {
+                            "parameter_description": "Nume nou pentru personaj",
+                            "parameter_name": "nume"
+                        },
+                        "proxy": {
+                            "parameter_description": "Personaj de redenumit",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "set": {
+                    "command_description": "Set a proxy as the current one."
+                },
+                "update": {
+                    "command_description": "Actualizați un proxy. ",
+                    "command_name": "actualizați",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Imagine, implicit Niciuna",
+                            "parameter_name": "imagine"
+                        },
+                        "proxy": {
+                            "parameter_description": "Personaj de actualizat",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "use": {
+                    "command_description": "Use a proxy."
+                }
+            },
+            "group_description": "Shared proxy commands."
+        },
+        "store": {
+            "params": {
+                "storage": {
+                    "choices": {
+                        "Global": "Global",
+                        "Local": "Local"
                     }
                 }
             }
         },
+        "update": {
+            "command_description": "Actualizați un proxy. ",
+            "command_name": "actualizați",
+            "params": {
+                "image": {
+                    "parameter_description": "Imagine, implicit Niciuna",
+                    "parameter_name": "imagine"
+                },
+                "proxy": {
+                    "parameter_description": "Personaj de actualizat",
+                    "parameter_name": "proxy"
+                }
+            }
+        },
+        "use": {
+            "command_description": "Use a proxy.",
+            "params": {
+                "text": {
+                    "parameter_description": "text",
+                    "parameter_name": "text"
+                }
+            }
+        },
+        "var": {
+            "group": {
+                "auto": {
+                    "command_description": "Setați automat pentru un Personaj",
+                    "command_name": "auto",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Caracter, în mod implicit dezactivează automat",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Varianta pentru setarea auto pentru",
+                            "parameter_name": "variantă"
+                        }
+                    }
+                },
+                "avatar": {
+                    "command_description": "Setați avatarul pentru un Personaj",
+                    "command_name": "avatar",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Adresa URL a imaginii, implicit Niciuna",
+                            "parameter_name": "avatar"
+                        },
+                        "proxy": {
+                            "parameter_description": "Personaj pentru care să setați avatarul",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Varianta pentru setarea avatarului",
+                            "parameter_name": "variantă"
+                        }
+                    }
+                },
+                "birthday": {
+                    "command_description": "Setează ziua de naștere pentru un Personaj",
+                    "command_name": "zi_de_nastere",
+                    "params": {
+                        "birthday": {
+                            "parameter_description": "Ziua de naștere, în mod implicit Niciuna",
+                            "parameter_name": "zi_de_nastere"
+                        },
+                        "proxy": {
+                            "parameter_description": "Personaj pentru care se stabilește ziua de naștere",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Varianta pentru a seta ziua de naștere",
+                            "parameter_name": "variantă"
+                        }
+                    }
+                },
+                "color": {
+                    "command_description": "Change the color of a variant."
+                },
+                "create": {
+                    "command_description": "Creați un personaj nou.",
+                    "command_name": "crea",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Imagine, implicit Niciuna",
+                            "parameter_name": "imagine"
+                        },
+                        "prefixes": {
+                            "parameter_description": "Prefixes e.g. A:text, |text|, etc."
+                        },
+                        "proxy": {
+                            "parameter_description": " Proxy pentru a crea varianta pentru",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "delete": {
+                    "command_description": "Ștergeți varianta unui Personaj",
+                    "command_name": "șterge",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Proxy pentru a șterge varianta din",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Varianta de șters",
+                            "parameter_name": "variantă"
+                        }
+                    }
+                },
+                "description": {
+                    "command_description": "Setați descrierea unui Personaj",
+                    "command_name": "descriere",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Personaj pentru care să setați descrierea",
+                            "parameter_name": "proxy"
+                        },
+                        "text": {
+                            "parameter_description": "Descriere de setat pentru personaj",
+                            "parameter_name": "text"
+                        },
+                        "variant": {
+                            "parameter_description": "Varianta pentru a seta descrierea",
+                            "parameter_name": "variantă"
+                        }
+                    }
+                },
+                "detail": {
+                    "command_description": "Obțineți detalii despre un personaj",
+                    "command_name": "detaliu",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Detaliați un proxy. ",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Varianta la detalii",
+                            "parameter_name": "variantă"
+                        }
+                    }
+                },
+                "find": {
+                    "command_description": "Find a variant."
+                },
+                "group": {
+                    "command_description": "Setați grupul pentru un Personaj",
+                    "command_name": "grup",
+                    "params": {
+                        "group": {
+                            "parameter_description": "Grup, implicit Niciunul",
+                            "parameter_name": "grup"
+                        },
+                        "proxy": {
+                            "parameter_description": "Personaj pentru care se stabilește grupul",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Varianta pentru setarea grupului",
+                            "parameter_name": "variantă"
+                        }
+                    }
+                },
+                "list": {
+                    "command_description": "List all variants."
+                },
+                "local": {
+                    "command_description": "Setați localul pentru un Personaj",
+                    "command_name": "local",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Imagine, implicit Niciuna",
+                            "parameter_name": "imagine"
+                        },
+                        "nickname": {
+                            "parameter_description": "Pseudonim, implicit Nici unul",
+                            "parameter_name": "poreclă"
+                        },
+                        "proxy": {
+                            "parameter_description": "Personaj pentru care se stabilește localul",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Varianta pentru setarea localului",
+                            "parameter_name": "variantă"
+                        }
+                    }
+                },
+                "nickname": {
+                    "command_description": "Setați porecla pentru un Personaj",
+                    "command_name": "poreclă",
+                    "params": {
+                        "nickname": {
+                            "parameter_description": "Pseudonim de setat pentru personaj",
+                            "parameter_name": "poreclă"
+                        },
+                        "proxy": {
+                            "parameter_description": "Personaj pentru care se stabilește porecla",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Varianta pentru a seta porecla",
+                            "parameter_name": "variantă"
+                        }
+                    }
+                },
+                "nsfw": {
+                    "command_description": "Setați dacă un Personaj este NSFW",
+                    "command_name": "nsfw",
+                    "params": {
+                        "nsfw": {
+                            "parameter_description": "NSFW, comutați implicit la valoarea opusă",
+                            "parameter_name": "nsfw"
+                        },
+                        "proxy": {
+                            "parameter_description": "Caracter pentru setarea NSFW",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Varianta pentru setarea NSFW pentru",
+                            "parameter_name": "variantă"
+                        }
+                    }
+                },
+                "prefix": {
+                    "command_description": "Setați prefixele pentru un caracter.",
+                    "command_name": "prefix",
+                    "params": {
+                        "prefixes": {
+                            "parameter_description": "Prefixe de ex. ",
+                            "parameter_name": "prefixe"
+                        },
+                        "proxy": {
+                            "parameter_description": "Caracter pentru care se stabilește prefixul",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Varianta pentru setarea prefixului",
+                            "parameter_name": "variantă"
+                        }
+                    }
+                },
+                "prune": {
+                    "command_description": "Tăiați caracterele nefolosite pentru un anumit timp.",
+                    "command_name": "prună_uscată",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "proxy"
+                        },
+                        "time": {
+                            "parameter_description": "Data de tăiat înainte, implicit Niciuna"
+                        }
+                    }
+                },
+                "purge": {
+                    "command_description": "Ștergeți toate datele dvs. (cu excepția jurnalelor de mesaje)",
+                    "command_name": "epurare",
+                    "params": {
+                        "confirmation": {
+                            "parameter_description": "confirmare",
+                            "parameter_name": "confirmare"
+                        },
+                        "proxy": {
+                            "parameter_description": "proxy",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "read": {
+                    "command_description": "Citește un Personaj",
+                    "command_name": "citit",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Personaj din care să citească varianta",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Varianta de citit",
+                            "parameter_name": "variantă"
+                        }
+                    }
+                },
+                "rename": {
+                    "command_description": "Redenumiți un Personaj",
+                    "command_name": "redenumiți",
+                    "params": {
+                        "name": {
+                            "parameter_description": "Nume nou pentru personaj",
+                            "parameter_name": "nume"
+                        },
+                        "proxy": {
+                            "parameter_description": "Personaj de redenumit",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Varianta de redenumit",
+                            "parameter_name": "variantă"
+                        }
+                    }
+                },
+                "set": {
+                    "command_description": "Set a variant."
+                },
+                "update": {
+                    "command_description": "Actualizați un proxy. ",
+                    "command_name": "actualizați",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Imagine, implicit Niciuna",
+                            "parameter_name": "imagine"
+                        },
+                        "proxy": {
+                            "parameter_description": "Personaj de actualizat",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "use": {
+                    "command_description": "Use a variant."
+                }
+            },
+            "group_description": "Variant commands.",
+            "group_name": "var"
+        },
+        "variant-to-proxy": {
+            "command_description": "Convertiți o variantă într-un caracter",
+            "command_name": "variantă-la-proxy",
+            "params": {
+                "proxy": {
+                    "parameter_description": "Proxy de convertit",
+                    "parameter_name": "proxy"
+                },
+                "variant": {
+                    "parameter_description": "Varianta de convertit",
+                    "parameter_name": "variantă"
+                }
+            }
+        }
+    },
+    "interactions": {
         "context_menu": {
             "command_name": "Proxy"
         }

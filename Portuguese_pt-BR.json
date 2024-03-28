@@ -1,304 +1,333 @@
 {
     "commands": {
-        "exec": {
-            "command_description": "Execute a command."
+        "afk": {
+            "command_description": "Check if a user is AFK."
         },
-        "proxy": {
-            "command_name": "procurador",
-            "command_description": "Desabilitar caracteres em um servidor",
+        "auto": {
+            "command_description": "Defina o automático para um personagem",
+            "command_name": "auto",
             "params": {
-                "enable": {
-                    "parameter_name": "habilitar",
-                    "parameter_description": "Habilitar ou desabilitar caracteres, por padrão"
+                "proxy": {
+                    "parameter_description": "Personagem, por padrão desativa automaticamente",
+                    "parameter_name": "procurador"
                 }
             }
         },
-        "set": {
-            "command_description": "Set a proxy as the current one."
-        },
-        "use": {
+        "avatar": {
+            "command_description": "Defina o avatar de um personagem",
+            "command_name": "avatar",
             "params": {
-                "text": {
-                    "parameter_name": "texto",
-                    "parameter_description": "texto"
+                "avatar": {
+                    "parameter_description": "URL da imagem, por padrão Nenhum",
+                    "parameter_name": "avatar"
+                },
+                "proxy": {
+                    "parameter_description": "Personagem para definir o avatar",
+                    "parameter_name": "procurador"
                 }
             }
         },
-        "say": {
+        "birthday": {
+            "command_description": "Defina o aniversário de um personagem",
+            "command_name": "aniversário",
             "params": {
-                "text": {
-                    "parameter_name": "texto",
-                    "parameter_description": "texto"
+                "birthday": {
+                    "parameter_description": "Aniversário, por padrão Nenhum",
+                    "parameter_name": "aniversário"
+                },
+                "proxy": {
+                    "parameter_description": "Personagem para definir o aniversário",
+                    "parameter_name": "procurador"
                 }
             }
         },
-        "npc": {
-            "command_name": "npc",
-            "command_description": "Crie uma nova mensagem NPC",
-            "params": {
-                "franchise": {
-                    "parameter_name": "franchise",
-                    "parameter_description": "Franquia para usar",
-                    "choices": {
-                        "Pokemon": "Pokemon",
-                        "Pokemon Shiny": "Pokemon Shiny",
-                        "Trainer": "Trainer",
-                        "Digimon": "Digimon",
-                        "Palworld": "Palworld",
-                        "D&D": "D&D"
-                    }
-                },
-                "npc": {
-                    "parameter_name": "npc",
-                    "parameter_description": "NPC para usar"
-                },
-                "nickname": {
-                    "parameter_name": "apelido",
-                    "parameter_description": "Apelido, por padrão Nenhum"
-                },
-                "emotion": {
-                    "parameter_name": "emoção",
-                    "parameter_description": "Emoção, por padrão Normal",
-                    "choices": {
-                        "Normal": "Normal",
-                        "Happy": "Happy",
-                        "Pain": "Pain",
-                        "Angry": "Angry",
-                        "Worried": "Worried",
-                        "Sad": "Sad",
-                        "Crying": "Crying",
-                        "Shouting": "Shouting",
-                        "TearyEyed": "TearyEyed",
-                        "Determined": "Determined",
-                        "Joyous": "Joyous",
-                        "Inspired": "Inspired",
-                        "Surprised": "Surprised",
-                        "Dizzy": "Dizzy",
-                        "Sigh": "Sigh",
-                        "Stunned": "Stunned",
-                        "Special0": "Special0",
-                        "Special1": "Special1",
-                        "Special2": "Special2",
-                        "Special3": "Special3"
-                    }
-                },
-                "image": {
-                    "parameter_name": "imagem",
-                    "parameter_description": "Imagem, por padrão Nenhuma"
-                },
-                "text": {
-                    "parameter_name": "texto",
-                    "parameter_description": "texto"
-                }
-            }
+        "check_permissions": {
+            "command_description": "Verifique se o bot pode operar no canal fornecido",
+            "command_name": "check_perms"
+        },
+        "color": {
+            "command_description": "Set a color for a proxy."
         },
         "create": {
-            "command_description": "Create a new proxy.",
+            "command_description": "Crie um novo personagem.",
+            "command_name": "criar",
             "params": {
+                "image": {
+                    "parameter_description": "Imagem, por padrão Nenhuma",
+                    "parameter_name": "imagem"
+                },
                 "prefixes": {
                     "parameter_description": "Prefixes e.g. A:text, |text|, etc."
                 }
             }
         },
         "delete": {
-            "command_name": "excluir",
             "command_description": "Excluir um personagem",
+            "command_name": "excluir",
             "params": {
                 "proxy": {
-                    "parameter_name": "procurador",
-                    "parameter_description": "Proxy para excluir a variante"
-                }
-            }
-        },
-        "read": {
-            "command_name": "ler",
-            "command_description": "Leia um personagem",
-            "params": {
-                "proxy": {
-                    "parameter_name": "procurador",
-                    "parameter_description": "Caractere para ler a variante"
-                }
-            }
-        },
-        "nickname": {
-            "command_name": "apelido",
-            "command_description": "Defina o apelido de um personagem",
-            "params": {
-                "proxy": {
-                    "parameter_name": "procurador",
-                    "parameter_description": "Personagem para definir o apelido"
-                },
-                "nickname": {
-                    "parameter_name": "apelido",
-                    "parameter_description": "Apelido a ser definido para o personagem"
-                }
-            }
-        },
-        "local": {
-            "command_name": "local",
-            "command_description": "Defina o local para um personagem",
-            "params": {
-                "proxy": {
-                    "parameter_name": "procurador",
-                    "parameter_description": "Caractere para definir o local"
-                },
-                "avatar": {
-                    "parameter_name": "imagem",
-                    "parameter_description": "Imagem, por padrão Nenhuma"
-                },
-                "nickname": {
-                    "parameter_name": "apelido",
-                    "parameter_description": "Apelido, por padrão Nenhum"
-                }
-            }
-        },
-        "avatar": {
-            "command_name": "avatar",
-            "command_description": "Defina o avatar de um personagem",
-            "params": {
-                "proxy": {
-                    "parameter_name": "procurador",
-                    "parameter_description": "Personagem para definir o avatar"
-                },
-                "avatar": {
-                    "parameter_name": "avatar",
-                    "parameter_description": "URL da imagem, por padrão Nenhum"
-                }
-            }
-        },
-        "prefix": {
-            "command_name": "prefixo",
-            "command_description": "Defina os prefixos de um caractere.",
-            "params": {
-                "proxy": {
-                    "parameter_name": "procurador",
-                    "parameter_description": "Caractere para definir o prefixo"
-                },
-                "prefixes": {
-                    "parameter_name": "prefixos",
-                    "parameter_description": "Prefixos, por ex. "
-                }
-            }
-        },
-        "birthday": {
-            "command_name": "aniversário",
-            "command_description": "Defina o aniversário de um personagem",
-            "params": {
-                "proxy": {
-                    "parameter_name": "procurador",
-                    "parameter_description": "Personagem para definir o aniversário"
-                },
-                "birthday": {
-                    "parameter_name": "aniversário",
-                    "parameter_description": "Aniversário, por padrão Nenhum"
+                    "parameter_description": "Proxy para excluir a variante",
+                    "parameter_name": "procurador"
                 }
             }
         },
         "description": {
-            "command_name": "descrição",
             "command_description": "Defina a descrição de um personagem",
+            "command_name": "descrição",
             "params": {
                 "proxy": {
-                    "parameter_name": "procurador",
-                    "parameter_description": "Caractere para definir a descrição"
+                    "parameter_description": "Caractere para definir a descrição",
+                    "parameter_name": "procurador"
                 },
                 "text": {
-                    "parameter_name": "texto",
-                    "parameter_description": "Descrição a ser definida para o personagem"
+                    "parameter_description": "Descrição a ser definida para o personagem",
+                    "parameter_name": "texto"
                 }
             }
         },
-        "rename": {
-            "command_name": "renomear",
-            "command_description": "Renomear um personagem",
+        "detail": {
+            "command_description": "Obtenha detalhes de um personagem",
+            "command_name": "detalhe",
             "params": {
                 "proxy": {
-                    "parameter_name": "procurador",
-                    "parameter_description": "Personagem para renomear"
+                    "parameter_description": "Detalhe um proxy. ",
+                    "parameter_name": "procurador"
+                }
+            }
+        },
+        "exec": {
+            "command_description": "Execute a command."
+        },
+        "export": {
+            "command_description": "Exporte seus personagens para um arquivo JSON",
+            "command_name": "exportar",
+            "params": {
+                "format": {
+                    "choices": {
+                        "Default": "Default",
+                        "PluralKit": "PluralKit",
+                        "Tupperbox": "Tupperbox"
+                    },
+                    "parameter_description": "Formato para exportar, por padrão JSON",
+                    "parameter_name": "formatar"
                 },
-                "name": {
-                    "parameter_name": "nome",
-                    "parameter_description": "Novo nome para o personagem"
+                "new_token": {
+                    "parameter_description": "Se você deseja gerar um novo token",
+                    "parameter_name": "novo_token"
                 }
             }
         },
         "group": {
-            "command_name": "grupo",
             "command_description": "Defina o grupo para um personagem",
-            "params": {
-                "proxy": {
-                    "parameter_name": "procurador",
-                    "parameter_description": "Personagem para definir o grupo"
-                },
-                "group": {
-                    "parameter_name": "grupo",
-                    "parameter_description": "Grupo, por padrão Nenhum"
-                }
-            }
-        },
-        "nsfw": {
-            "command_name": "nsfw",
-            "command_description": "Defina se um personagem é NSFW",
-            "params": {
-                "proxy": {
-                    "parameter_name": "procurador",
-                    "parameter_description": "Caractere para definir o NSFW"
-                },
-                "nsfw": {
-                    "parameter_name": "nsfw",
-                    "parameter_description": "NSFW, por padrão mude para o valor oposto"
-                }
-            }
-        },
-        "auto": {
-            "command_name": "auto",
-            "command_description": "Defina o automático para um personagem",
-            "params": {
-                "proxy": {
-                    "parameter_name": "procurador",
-                    "parameter_description": "Personagem, por padrão desativa automaticamente"
-                }
-            }
-        },
-        "list": {
-            "command_name": "lista",
-            "command_description": "Listar todos os personagens ",
+            "command_name": "grupo",
             "params": {
                 "group": {
-                    "parameter_name": "grupo",
-                    "parameter_description": "Grupo para listar os personagens"
+                    "parameter_description": "Grupo, por padrão Nenhum",
+                    "parameter_name": "grupo"
+                },
+                "proxy": {
+                    "parameter_description": "Personagem para definir o grupo",
+                    "parameter_name": "procurador"
+                }
+            }
+        },
+        "help": {
+            "command_description": "Ajuda integrada do bot",
+            "command_name": "ajuda",
+            "params": {
+                "search": {
+                    "parameter_description": "Termo de pesquisa",
+                    "parameter_name": "procurar"
+                }
+            }
+        },
+        "import": {
+            "command_description": "Importe seus personagens de um arquivo ou token",
+            "command_name": "importar",
+            "params": {
+                "data": {
+                    "parameter_description": "Arquivo para importar",
+                    "parameter_name": "dados"
+                },
+                "deleting_from_token": {
+                    "parameter_description": "Excluir caracteres do token",
+                    "parameter_name": "deletando_do_token"
+                },
+                "token": {
+                    "parameter_description": "Token a ser usado para importação",
+                    "parameter_name": "símbolo"
                 }
             }
         },
         "latch": {
-            "command_name": "robusto",
             "command_description": "Ativar ou desativar o modo de trava",
+            "command_name": "robusto",
             "params": {
-                "enable": {
-                    "parameter_description": "Ativar ou desativar o modo de trava"
-                },
                 "auto_remove": {
                     "parameter_description": "Quer manter o automático para o canal atual ou não, por padrão True"
+                },
+                "enable": {
+                    "parameter_description": "Ativar ou desativar o modo de trava"
                 }
             }
         },
-        "export": {
-            "command_name": "exportar",
-            "command_description": "Exporte seus personagens para um arquivo JSON",
+        "list": {
+            "command_description": "Listar todos os personagens ",
+            "command_name": "lista",
             "params": {
-                "format": {
-                    "parameter_name": "formatar",
-                    "parameter_description": "Formato para exportar, por padrão JSON"
+                "group": {
+                    "parameter_description": "Grupo para listar os personagens",
+                    "parameter_name": "grupo"
+                }
+            }
+        },
+        "local": {
+            "command_description": "Defina o local para um personagem",
+            "command_name": "local",
+            "params": {
+                "avatar": {
+                    "parameter_description": "Imagem, por padrão Nenhuma",
+                    "parameter_name": "imagem"
                 },
-                "new_token": {
-                    "parameter_name": "novo_token",
-                    "parameter_description": "Se você deseja gerar um novo token"
+                "nickname": {
+                    "parameter_description": "Apelido, por padrão Nenhum",
+                    "parameter_name": "apelido"
+                },
+                "proxy": {
+                    "parameter_description": "Caractere para definir o local",
+                    "parameter_name": "procurador"
+                }
+            }
+        },
+        "nickname": {
+            "command_description": "Defina o apelido de um personagem",
+            "command_name": "apelido",
+            "params": {
+                "nickname": {
+                    "parameter_description": "Apelido a ser definido para o personagem",
+                    "parameter_name": "apelido"
+                },
+                "proxy": {
+                    "parameter_description": "Personagem para definir o apelido",
+                    "parameter_name": "procurador"
+                }
+            }
+        },
+        "npc": {
+            "command_description": "Crie uma nova mensagem NPC",
+            "command_name": "npc",
+            "params": {
+                "emotion": {
+                    "choices": {
+                        "Angry": "Angry",
+                        "Crying": "Crying",
+                        "Determined": "Determined",
+                        "Dizzy": "Dizzy",
+                        "Happy": "Happy",
+                        "Inspired": "Inspired",
+                        "Joyous": "Joyous",
+                        "Normal": "Normal",
+                        "Pain": "Pain",
+                        "Sad": "Sad",
+                        "Shouting": "Shouting",
+                        "Sigh": "Sigh",
+                        "Special0": "Special0",
+                        "Special1": "Special1",
+                        "Special2": "Special2",
+                        "Special3": "Special3",
+                        "Stunned": "Stunned",
+                        "Surprised": "Surprised",
+                        "TearyEyed": "TearyEyed",
+                        "Worried": "Worried"
+                    },
+                    "parameter_description": "Emoção, por padrão Normal",
+                    "parameter_name": "emoção"
+                },
+                "franchise": {
+                    "choices": {
+                        "D&D": "D&D",
+                        "Digimon": "Digimon",
+                        "Palworld": "Palworld",
+                        "Pokemon": "Pokemon",
+                        "Pokemon Shiny": "Pokemon Shiny",
+                        "Trainer": "Trainer"
+                    },
+                    "parameter_description": "Franquia para usar",
+                    "parameter_name": "franquia"
+                },
+                "image": {
+                    "parameter_description": "Imagem, por padrão Nenhuma",
+                    "parameter_name": "imagem"
+                },
+                "nickname": {
+                    "parameter_description": "Apelido, por padrão Nenhum",
+                    "parameter_name": "apelido"
+                },
+                "npc": {
+                    "parameter_description": "NPC para usar",
+                    "parameter_name": "npc"
+                },
+                "text": {
+                    "parameter_description": "texto",
+                    "parameter_name": "texto"
+                }
+            }
+        },
+        "nsfw": {
+            "command_description": "Defina se um personagem é NSFW",
+            "command_name": "nsfw",
+            "params": {
+                "nsfw": {
+                    "parameter_description": "NSFW, por padrão mude para o valor oposto",
+                    "parameter_name": "nsfw"
+                },
+                "proxy": {
+                    "parameter_description": "Caractere para definir o NSFW",
+                    "parameter_name": "procurador"
+                }
+            }
+        },
+        "prefix": {
+            "command_description": "Defina os prefixos de um caractere.",
+            "command_name": "prefixo",
+            "params": {
+                "prefixes": {
+                    "parameter_description": "Prefixos, por ex. ",
+                    "parameter_name": "prefixos"
+                },
+                "proxy": {
+                    "parameter_description": "Caractere para definir o prefixo",
+                    "parameter_name": "procurador"
+                }
+            }
+        },
+        "proxy": {
+            "command_description": "Desabilitar caracteres em um servidor",
+            "command_name": "procurador",
+            "params": {
+                "enable": {
+                    "parameter_description": "Habilitar ou desabilitar caracteres, por padrão",
+                    "parameter_name": "habilitar"
+                }
+            }
+        },
+        "proxy-to-variant": {
+            "command_description": "Converter um personagem em uma variante",
+            "command_name": "proxy-para-variante",
+            "params": {
+                "base": {
+                    "parameter_description": "Nova base para o personagem",
+                    "parameter_name": "base"
+                },
+                "original": {
+                    "parameter_description": "Personagem para converter",
+                    "parameter_name": "original"
                 }
             }
         },
         "prune": {
-            "command_name": "ameixa-seca",
             "command_description": "Podar caracteres não utilizados por um determinado tempo.",
+            "command_name": "ameixa-seca",
             "params": {
                 "time": {
                     "parameter_description": "Data para podar antes, por padrão Nenhuma"
@@ -306,656 +335,674 @@
             }
         },
         "purge": {
-            "command_name": "purga",
             "command_description": "Limpe todos os seus dados (exceto registros de mensagens)",
+            "command_name": "purga",
             "params": {
                 "confirmation": {
-                    "parameter_name": "confirmação",
-                    "parameter_description": "confirmação"
+                    "parameter_description": "confirmação",
+                    "parameter_name": "confirmação"
                 }
             }
         },
-        "proxy-to-variant": {
-            "command_name": "proxy-para-variante",
-            "command_description": "Converter um personagem em uma variante",
-            "params": {
-                "original": {
-                    "parameter_name": "original",
-                    "parameter_description": "Personagem para converter"
-                },
-                "base": {
-                    "parameter_name": "base",
-                    "parameter_description": "Nova base para o personagem"
-                }
-            }
-        },
-        "variant-to-proxy": {
-            "command_name": "variante-para-proxy",
-            "command_description": "Converter uma variante em um caractere",
+        "read": {
+            "command_description": "Leia um personagem",
+            "command_name": "ler",
             "params": {
                 "proxy": {
-                    "parameter_name": "procurador",
-                    "parameter_description": "Proxy para converter para"
-                },
-                "variant": {
-                    "parameter_name": "variante",
-                    "parameter_description": "Variante para converter"
+                    "parameter_description": "Caractere para ler a variante",
+                    "parameter_name": "procurador"
                 }
             }
         },
-        "update": {
-            "command_name": "atualizar",
-            "command_description": "Atualize um proxy. ",
+        "rename": {
+            "command_description": "Renomear um personagem",
+            "command_name": "renomear",
             "params": {
+                "name": {
+                    "parameter_description": "Novo nome para o personagem",
+                    "parameter_name": "nome"
+                },
                 "proxy": {
-                    "parameter_name": "procurador",
-                    "parameter_description": "Personagem para atualizar"
-                },
-                "image": {
-                    "parameter_name": "imagem",
-                    "parameter_description": "Imagem, por padrão Nenhuma"
+                    "parameter_description": "Personagem para renomear",
+                    "parameter_name": "procurador"
                 }
             }
-        },
-        "detail": {
-            "command_name": "detalhe",
-            "command_description": "Obtenha detalhes de um personagem",
-            "params": {
-                "proxy": {
-                    "parameter_name": "procurador",
-                    "parameter_description": "Detalhe um proxy. "
-                }
-            }
-        },
-        "import": {
-            "command_name": "importar",
-            "command_description": "Importe seus personagens de um arquivo ou token",
-            "params": {
-                "data": {
-                    "parameter_name": "dados",
-                    "parameter_description": "Arquivo para importar"
-                },
-                "token": {
-                    "parameter_name": "símbolo",
-                    "parameter_description": "Token a ser usado para importação"
-                },
-                "deleting_from_token": {
-                    "parameter_name": "deletando_do_token",
-                    "parameter_description": "Excluir caracteres do token"
-                }
-            }
-        },
-        "var": {
-            "group_name": "var",
-            "group_description": "Variant commands.",
-            "groupset": {
-                "command_description": "Set a variant."
-            },
-            "groupuse": {
-                "command_description": "Use a variant."
-            },
-            "groupcreate": {
-                "command_name": "criar",
-                "command_description": "Crie um novo personagem.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "procurador",
-                        "parameter_description": " Proxy para criar a variante para"
-                    },
-                    "image": {
-                        "parameter_name": "imagem",
-                        "parameter_description": "Imagem, por padrão Nenhuma"
-                    },
-                    "prefixes": {
-                        "parameter_description": "Prefixes e.g. A:text, |text|, etc."
-                    }
-                }
-            },
-            "groupdelete": {
-                "command_name": "excluir",
-                "command_description": "Excluir a variante de um personagem",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "procurador",
-                        "parameter_description": "Proxy para excluir a variante"
-                    },
-                    "variant": {
-                        "parameter_name": "variante",
-                        "parameter_description": "Variante a ser excluída"
-                    }
-                }
-            },
-            "groupread": {
-                "command_name": "ler",
-                "command_description": "Leia um personagem",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "procurador",
-                        "parameter_description": "Caractere para ler a variante"
-                    },
-                    "variant": {
-                        "parameter_name": "variante",
-                        "parameter_description": "Variante para ler"
-                    }
-                }
-            },
-            "groupnickname": {
-                "command_name": "apelido",
-                "command_description": "Defina o apelido de um personagem",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "procurador",
-                        "parameter_description": "Personagem para definir o apelido"
-                    },
-                    "variant": {
-                        "parameter_name": "variante",
-                        "parameter_description": "Variante para definir o apelido"
-                    },
-                    "nickname": {
-                        "parameter_name": "apelido",
-                        "parameter_description": "Apelido a ser definido para o personagem"
-                    }
-                }
-            },
-            "grouplocal": {
-                "command_name": "local",
-                "command_description": "Defina o local para um personagem",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "procurador",
-                        "parameter_description": "Caractere para definir o local"
-                    },
-                    "variant": {
-                        "parameter_name": "variante",
-                        "parameter_description": "Variante para definir o local para"
-                    },
-                    "avatar": {
-                        "parameter_name": "imagem",
-                        "parameter_description": "Imagem, por padrão Nenhuma"
-                    },
-                    "nickname": {
-                        "parameter_name": "apelido",
-                        "parameter_description": "Apelido, por padrão Nenhum"
-                    }
-                }
-            },
-            "groupprefix": {
-                "command_name": "prefixo",
-                "command_description": "Defina os prefixos de um caractere.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "procurador",
-                        "parameter_description": "Caractere para definir o prefixo"
-                    },
-                    "variant": {
-                        "parameter_name": "variante",
-                        "parameter_description": "Variante para definir o prefixo para"
-                    },
-                    "prefixes": {
-                        "parameter_name": "prefixos",
-                        "parameter_description": "Prefixos, por ex. "
-                    }
-                }
-            },
-            "groupbirthday": {
-                "command_name": "aniversário",
-                "command_description": "Defina o aniversário de um personagem",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "procurador",
-                        "parameter_description": "Personagem para definir o aniversário"
-                    },
-                    "variant": {
-                        "parameter_name": "variante",
-                        "parameter_description": "Variante para definir o aniversário"
-                    },
-                    "birthday": {
-                        "parameter_name": "aniversário",
-                        "parameter_description": "Aniversário, por padrão Nenhum"
-                    }
-                }
-            },
-            "groupdescription": {
-                "command_name": "descrição",
-                "command_description": "Defina a descrição de um personagem",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "procurador",
-                        "parameter_description": "Caractere para definir a descrição"
-                    },
-                    "variant": {
-                        "parameter_name": "variante",
-                        "parameter_description": "Variante para definir a descrição para"
-                    },
-                    "text": {
-                        "parameter_name": "texto",
-                        "parameter_description": "Descrição a ser definida para o personagem"
-                    }
-                }
-            },
-            "grouprename": {
-                "command_name": "renomear",
-                "command_description": "Renomear um personagem",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "procurador",
-                        "parameter_description": "Personagem para renomear"
-                    },
-                    "variant": {
-                        "parameter_name": "variante",
-                        "parameter_description": "Variante para renomear"
-                    },
-                    "name": {
-                        "parameter_name": "nome",
-                        "parameter_description": "Novo nome para o personagem"
-                    }
-                }
-            },
-            "groupgroup": {
-                "command_name": "grupo",
-                "command_description": "Defina o grupo para um personagem",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "procurador",
-                        "parameter_description": "Personagem para definir o grupo"
-                    },
-                    "variant": {
-                        "parameter_name": "variante",
-                        "parameter_description": "Variante para definir o grupo para"
-                    },
-                    "group": {
-                        "parameter_name": "grupo",
-                        "parameter_description": "Grupo, por padrão Nenhum"
-                    }
-                }
-            },
-            "groupnsfw": {
-                "command_name": "nsfw",
-                "command_description": "Defina se um personagem é NSFW",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "procurador",
-                        "parameter_description": "Caractere para definir o NSFW"
-                    },
-                    "variant": {
-                        "parameter_name": "variante",
-                        "parameter_description": "Variante para definir o NSFW para"
-                    },
-                    "nsfw": {
-                        "parameter_name": "nsfw",
-                        "parameter_description": "NSFW, por padrão mude para o valor oposto"
-                    }
-                }
-            },
-            "groupauto": {
-                "command_name": "auto",
-                "command_description": "Defina o automático para um personagem",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "procurador",
-                        "parameter_description": "Personagem, por padrão desativa automaticamente"
-                    },
-                    "variant": {
-                        "parameter_name": "variante",
-                        "parameter_description": "Variante para definir o automático para"
-                    }
-                }
-            },
-            "groupavatar": {
-                "command_name": "avatar",
-                "command_description": "Defina o avatar de um personagem",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "procurador",
-                        "parameter_description": "Personagem para definir o avatar"
-                    },
-                    "variant": {
-                        "parameter_name": "variante",
-                        "parameter_description": "Variante para definir o avatar"
-                    },
-                    "avatar": {
-                        "parameter_name": "avatar",
-                        "parameter_description": "URL da imagem, por padrão Nenhum"
-                    }
-                }
-            },
-            "grouplist": {
-                "command_description": "List all variants."
-            },
-            "groupfind": {
-                "command_description": "Find a variant."
-            },
-            "groupupdate": {
-                "command_name": "atualizar",
-                "command_description": "Atualize um proxy. ",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "procurador",
-                        "parameter_description": "Personagem para atualizar"
-                    },
-                    "image": {
-                        "parameter_name": "imagem",
-                        "parameter_description": "Imagem, por padrão Nenhuma"
-                    }
-                }
-            },
-            "groupdetail": {
-                "command_name": "detalhe",
-                "command_description": "Obtenha detalhes de um personagem",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "procurador",
-                        "parameter_description": "Detalhe um proxy. "
-                    },
-                    "variant": {
-                        "parameter_name": "variante",
-                        "parameter_description": "Variante ao detalhe"
-                    }
-                }
-            },
-            "groupprune": {
-                "command_name": "ameixa-seca",
-                "command_description": "Podar caracteres não utilizados por um determinado tempo.",
-                "params": {
-                    "proxy": {
-                        "parameter_description": "procurador"
-                    },
-                    "time": {
-                        "parameter_description": "Data para podar antes, por padrão Nenhuma"
-                    }
-                }
-            },
-            "grouppurge": {
-                "command_name": "purga",
-                "command_description": "Limpe todos os seus dados (exceto registros de mensagens)",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "procurador",
-                        "parameter_description": "procurador"
-                    },
-                    "confirmation": {
-                        "parameter_name": "confirmação",
-                        "parameter_description": "confirmação"
-                    }
-                }
-            }
-        },
-        "shared": {
-            "group_description": "Shared proxy commands.",
-            "groupset": {
-                "command_description": "Set a proxy as the current one."
-            },
-            "groupcreate": {
-                "command_name": "criar",
-                "command_description": "Crie um novo personagem.",
-                "params": {
-                    "image": {
-                        "parameter_name": "imagem",
-                        "parameter_description": "Imagem, por padrão Nenhuma"
-                    }
-                }
-            },
-            "groupdelete": {
-                "command_name": "excluir",
-                "command_description": "Excluir um personagem",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "procurador",
-                        "parameter_description": "Proxy para excluir a variante"
-                    }
-                }
-            },
-            "groupread": {
-                "command_name": "ler",
-                "command_description": "Leia um personagem",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "procurador",
-                        "parameter_description": "Caractere para ler a variante"
-                    }
-                }
-            },
-            "groupauto": {
-                "command_name": "auto",
-                "command_description": "Defina o automático para um personagem",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "procurador",
-                        "parameter_description": "Personagem, por padrão desativa automaticamente"
-                    }
-                }
-            },
-            "groupprefix": {
-                "command_name": "prefixo",
-                "command_description": "Defina os prefixos de um caractere.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "procurador",
-                        "parameter_description": "Caractere para definir o prefixo"
-                    },
-                    "prefixes": {
-                        "parameter_name": "prefixos",
-                        "parameter_description": "Prefixos, por ex. "
-                    }
-                }
-            },
-            "groupbirthday": {
-                "command_name": "aniversário",
-                "command_description": "Defina o aniversário de um personagem",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "procurador",
-                        "parameter_description": "Personagem para definir o aniversário"
-                    },
-                    "birthday": {
-                        "parameter_name": "aniversário",
-                        "parameter_description": "Aniversário, por padrão Nenhum"
-                    }
-                }
-            },
-            "groupdescription": {
-                "command_name": "descrição",
-                "command_description": "Defina a descrição de um personagem",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "procurador",
-                        "parameter_description": "Caractere para definir a descrição"
-                    },
-                    "text": {
-                        "parameter_name": "texto",
-                        "parameter_description": "Descrição a ser definida para o personagem"
-                    }
-                }
-            },
-            "grouprename": {
-                "command_name": "renomear",
-                "command_description": "Renomear um personagem",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "procurador",
-                        "parameter_description": "Personagem para renomear"
-                    },
-                    "name": {
-                        "parameter_name": "nome",
-                        "parameter_description": "Novo nome para o personagem"
-                    }
-                }
-            },
-            "groupnickname": {
-                "command_name": "apelido",
-                "command_description": "Defina o apelido de um personagem",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "procurador",
-                        "parameter_description": "Personagem para definir o apelido"
-                    },
-                    "nickname": {
-                        "parameter_name": "apelido",
-                        "parameter_description": "Apelido a ser definido para o personagem"
-                    }
-                }
-            },
-            "groupgroup": {
-                "command_name": "grupo",
-                "command_description": "Defina o grupo para um personagem",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "procurador",
-                        "parameter_description": "Personagem para definir o grupo"
-                    },
-                    "group": {
-                        "parameter_name": "grupo",
-                        "parameter_description": "Grupo, por padrão Nenhum"
-                    }
-                }
-            },
-            "groupnsfw": {
-                "command_name": "nsfw",
-                "command_description": "Defina se um personagem é NSFW",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "procurador",
-                        "parameter_description": "Caractere para definir o NSFW"
-                    },
-                    "nsfw": {
-                        "parameter_name": "nsfw",
-                        "parameter_description": "NSFW, por padrão mude para o valor oposto"
-                    }
-                }
-            },
-            "groupavatar": {
-                "command_name": "avatar",
-                "command_description": "Defina o avatar de um personagem",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "procurador",
-                        "parameter_description": "Personagem para definir o avatar"
-                    },
-                    "avatar": {
-                        "parameter_name": "avatar",
-                        "parameter_description": "URL da imagem, por padrão Nenhum"
-                    }
-                }
-            },
-            "groupimage": {
-                "params": {
-                    "proxy": {
-                        "parameter_name": "procurador",
-                        "parameter_description": "Personagem para definir o avatar"
-                    },
-                    "avatar": {
-                        "parameter_name": "avatar",
-                        "parameter_description": "URL da imagem, por padrão Nenhum"
-                    }
-                }
-            },
-            "grouplocal": {
-                "command_name": "local",
-                "command_description": "Defina o local para um personagem",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "procurador",
-                        "parameter_description": "Caractere para definir o local"
-                    },
-                    "avatar": {
-                        "parameter_name": "imagem",
-                        "parameter_description": "Imagem, por padrão Nenhuma"
-                    },
-                    "nickname": {
-                        "parameter_name": "apelido",
-                        "parameter_description": "Apelido, por padrão Nenhum"
-                    }
-                }
-            },
-            "groupupdate": {
-                "command_name": "atualizar",
-                "command_description": "Atualize um proxy. ",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "procurador",
-                        "parameter_description": "Personagem para atualizar"
-                    },
-                    "image": {
-                        "parameter_name": "imagem",
-                        "parameter_description": "Imagem, por padrão Nenhuma"
-                    }
-                }
-            },
-            "groupdetail": {
-                "command_name": "detalhe",
-                "command_description": "Obtenha detalhes de um personagem",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "procurador",
-                        "parameter_description": "Detalhe um proxy. "
-                    }
-                }
-            },
-            "groupprune": {
-                "command_name": "ameixa-seca",
-                "command_description": "Podar caracteres não utilizados por um determinado tempo.",
-                "params": {
-                    "time": {
-                        "parameter_description": "Data para podar antes, por padrão Nenhuma"
-                    }
-                }
-            },
-            "grouppurge": {
-                "command_name": "purga",
-                "command_description": "Limpe todos os seus dados (exceto registros de mensagens)",
-                "params": {
-                    "confirmation": {
-                        "parameter_name": "confirmação",
-                        "parameter_description": "confirmação"
-                    }
-                }
-            }
-        },
-        "check_permissions": {
-            "command_name": "check_perms",
-            "command_description": "Verifique se o bot pode operar no canal fornecido"
         },
         "roll": {
             "command_description": "Roll a dice."
         },
-        "afk": {
-            "command_description": "Check if a user is AFK."
-        },
-        "help": {
-            "command_name": "ajuda",
-            "command_description": "Ajuda integrada do bot",
+        "say": {
+            "command_description": "Say something.",
             "params": {
-                "search": {
-                    "parameter_name": "procurar",
-                    "parameter_description": "Termo de pesquisa"
+                "text": {
+                    "parameter_description": "texto",
+                    "parameter_name": "texto"
                 }
             }
         },
         "server_wiki": {
-            "command_name": "servidor_wiki",
             "command_description": "Wiki do servidor definido pelo usuário",
+            "command_name": "servidor_wiki",
             "params": {
                 "search": {
-                    "parameter_name": "procurar",
-                    "parameter_description": "Termo de pesquisa"
+                    "parameter_description": "Termo de pesquisa",
+                    "parameter_name": "procurar"
                 }
             }
         },
+        "set": {
+            "command_description": "Set a proxy as the current one."
+        },
         "settings": {
-            "command_name": "configurações",
             "command_description": "Configurações do bot",
+            "command_name": "configurações",
             "params": {
                 "menu": {
-                    "parameter_name": "cardápio",
-                    "parameter_description": "Menu para abrir para configurações",
                     "choices": {
-                        "Server": "Servidor",
-                        "Member": "Membro",
-                        "User": "Do utilizador"
+                        "Member": "Member",
+                        "Server": "Server",
+                        "User": "User"
+                    },
+                    "parameter_description": "Menu para abrir para configurações",
+                    "parameter_name": "cardápio"
+                }
+            }
+        },
+        "shared": {
+            "group": {
+                "auto": {
+                    "command_description": "Defina o automático para um personagem",
+                    "command_name": "auto",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Personagem, por padrão desativa automaticamente",
+                            "parameter_name": "procurador"
+                        }
+                    }
+                },
+                "avatar": {
+                    "command_description": "Defina o avatar de um personagem",
+                    "command_name": "avatar",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "URL da imagem, por padrão Nenhum",
+                            "parameter_name": "avatar"
+                        },
+                        "proxy": {
+                            "parameter_description": "Personagem para definir o avatar",
+                            "parameter_name": "procurador"
+                        }
+                    }
+                },
+                "birthday": {
+                    "command_description": "Defina o aniversário de um personagem",
+                    "command_name": "aniversário",
+                    "params": {
+                        "birthday": {
+                            "parameter_description": "Aniversário, por padrão Nenhum",
+                            "parameter_name": "aniversário"
+                        },
+                        "proxy": {
+                            "parameter_description": "Personagem para definir o aniversário",
+                            "parameter_name": "procurador"
+                        }
+                    }
+                },
+                "color": {
+                    "command_description": "Set the color for a proxy."
+                },
+                "create": {
+                    "command_description": "Crie um novo personagem.",
+                    "command_name": "criar",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Imagem, por padrão Nenhuma",
+                            "parameter_name": "imagem"
+                        }
+                    }
+                },
+                "delete": {
+                    "command_description": "Excluir um personagem",
+                    "command_name": "excluir",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Proxy para excluir a variante",
+                            "parameter_name": "procurador"
+                        }
+                    }
+                },
+                "description": {
+                    "command_description": "Defina a descrição de um personagem",
+                    "command_name": "descrição",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Caractere para definir a descrição",
+                            "parameter_name": "procurador"
+                        },
+                        "text": {
+                            "parameter_description": "Descrição a ser definida para o personagem",
+                            "parameter_name": "texto"
+                        }
+                    }
+                },
+                "detail": {
+                    "command_description": "Obtenha detalhes de um personagem",
+                    "command_name": "detalhe",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Detalhe um proxy. ",
+                            "parameter_name": "procurador"
+                        }
+                    }
+                },
+                "find": {
+                    "command_description": "Find a proxy."
+                },
+                "group": {
+                    "command_description": "Defina o grupo para um personagem",
+                    "command_name": "grupo",
+                    "params": {
+                        "group": {
+                            "parameter_description": "Grupo, por padrão Nenhum",
+                            "parameter_name": "grupo"
+                        },
+                        "proxy": {
+                            "parameter_description": "Personagem para definir o grupo",
+                            "parameter_name": "procurador"
+                        }
+                    }
+                },
+                "image": {
+                    "command_description": "Set the image for a proxy.",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "URL da imagem, por padrão Nenhum",
+                            "parameter_name": "avatar"
+                        },
+                        "proxy": {
+                            "parameter_description": "Personagem para definir o avatar",
+                            "parameter_name": "procurador"
+                        }
+                    }
+                },
+                "list": {
+                    "command_description": "List all proxies."
+                },
+                "local": {
+                    "command_description": "Defina o local para um personagem",
+                    "command_name": "local",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Imagem, por padrão Nenhuma",
+                            "parameter_name": "imagem"
+                        },
+                        "nickname": {
+                            "parameter_description": "Apelido, por padrão Nenhum",
+                            "parameter_name": "apelido"
+                        },
+                        "proxy": {
+                            "parameter_description": "Caractere para definir o local",
+                            "parameter_name": "procurador"
+                        }
+                    }
+                },
+                "nickname": {
+                    "command_description": "Defina o apelido de um personagem",
+                    "command_name": "apelido",
+                    "params": {
+                        "nickname": {
+                            "parameter_description": "Apelido a ser definido para o personagem",
+                            "parameter_name": "apelido"
+                        },
+                        "proxy": {
+                            "parameter_description": "Personagem para definir o apelido",
+                            "parameter_name": "procurador"
+                        }
+                    }
+                },
+                "nsfw": {
+                    "command_description": "Defina se um personagem é NSFW",
+                    "command_name": "nsfw",
+                    "params": {
+                        "nsfw": {
+                            "parameter_description": "NSFW, por padrão mude para o valor oposto",
+                            "parameter_name": "nsfw"
+                        },
+                        "proxy": {
+                            "parameter_description": "Caractere para definir o NSFW",
+                            "parameter_name": "procurador"
+                        }
+                    }
+                },
+                "prefix": {
+                    "command_description": "Defina os prefixos de um caractere.",
+                    "command_name": "prefixo",
+                    "params": {
+                        "prefixes": {
+                            "parameter_description": "Prefixos, por ex. ",
+                            "parameter_name": "prefixos"
+                        },
+                        "proxy": {
+                            "parameter_description": "Caractere para definir o prefixo",
+                            "parameter_name": "procurador"
+                        }
+                    }
+                },
+                "prune": {
+                    "command_description": "Podar caracteres não utilizados por um determinado tempo.",
+                    "command_name": "ameixa-seca",
+                    "params": {
+                        "time": {
+                            "parameter_description": "Data para podar antes, por padrão Nenhuma"
+                        }
+                    }
+                },
+                "purge": {
+                    "command_description": "Limpe todos os seus dados (exceto registros de mensagens)",
+                    "command_name": "purga",
+                    "params": {
+                        "confirmation": {
+                            "parameter_description": "confirmação",
+                            "parameter_name": "confirmação"
+                        }
+                    }
+                },
+                "read": {
+                    "command_description": "Leia um personagem",
+                    "command_name": "ler",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Caractere para ler a variante",
+                            "parameter_name": "procurador"
+                        }
+                    }
+                },
+                "rename": {
+                    "command_description": "Renomear um personagem",
+                    "command_name": "renomear",
+                    "params": {
+                        "name": {
+                            "parameter_description": "Novo nome para o personagem",
+                            "parameter_name": "nome"
+                        },
+                        "proxy": {
+                            "parameter_description": "Personagem para renomear",
+                            "parameter_name": "procurador"
+                        }
+                    }
+                },
+                "set": {
+                    "command_description": "Set a proxy as the current one."
+                },
+                "update": {
+                    "command_description": "Atualize um proxy. ",
+                    "command_name": "atualizar",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Imagem, por padrão Nenhuma",
+                            "parameter_name": "imagem"
+                        },
+                        "proxy": {
+                            "parameter_description": "Personagem para atualizar",
+                            "parameter_name": "procurador"
+                        }
+                    }
+                },
+                "use": {
+                    "command_description": "Use a proxy."
+                }
+            },
+            "group_description": "Shared proxy commands."
+        },
+        "store": {
+            "params": {
+                "storage": {
+                    "choices": {
+                        "Global": "Global",
+                        "Local": "Local"
                     }
                 }
             }
         },
+        "update": {
+            "command_description": "Atualize um proxy. ",
+            "command_name": "atualizar",
+            "params": {
+                "image": {
+                    "parameter_description": "Imagem, por padrão Nenhuma",
+                    "parameter_name": "imagem"
+                },
+                "proxy": {
+                    "parameter_description": "Personagem para atualizar",
+                    "parameter_name": "procurador"
+                }
+            }
+        },
+        "use": {
+            "command_description": "Use a proxy.",
+            "params": {
+                "text": {
+                    "parameter_description": "texto",
+                    "parameter_name": "texto"
+                }
+            }
+        },
+        "var": {
+            "group": {
+                "auto": {
+                    "command_description": "Defina o automático para um personagem",
+                    "command_name": "auto",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Personagem, por padrão desativa automaticamente",
+                            "parameter_name": "procurador"
+                        },
+                        "variant": {
+                            "parameter_description": "Variante para definir o automático para",
+                            "parameter_name": "variante"
+                        }
+                    }
+                },
+                "avatar": {
+                    "command_description": "Defina o avatar de um personagem",
+                    "command_name": "avatar",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "URL da imagem, por padrão Nenhum",
+                            "parameter_name": "avatar"
+                        },
+                        "proxy": {
+                            "parameter_description": "Personagem para definir o avatar",
+                            "parameter_name": "procurador"
+                        },
+                        "variant": {
+                            "parameter_description": "Variante para definir o avatar",
+                            "parameter_name": "variante"
+                        }
+                    }
+                },
+                "birthday": {
+                    "command_description": "Defina o aniversário de um personagem",
+                    "command_name": "aniversário",
+                    "params": {
+                        "birthday": {
+                            "parameter_description": "Aniversário, por padrão Nenhum",
+                            "parameter_name": "aniversário"
+                        },
+                        "proxy": {
+                            "parameter_description": "Personagem para definir o aniversário",
+                            "parameter_name": "procurador"
+                        },
+                        "variant": {
+                            "parameter_description": "Variante para definir o aniversário",
+                            "parameter_name": "variante"
+                        }
+                    }
+                },
+                "color": {
+                    "command_description": "Change the color of a variant."
+                },
+                "create": {
+                    "command_description": "Crie um novo personagem.",
+                    "command_name": "criar",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Imagem, por padrão Nenhuma",
+                            "parameter_name": "imagem"
+                        },
+                        "prefixes": {
+                            "parameter_description": "Prefixes e.g. A:text, |text|, etc."
+                        },
+                        "proxy": {
+                            "parameter_description": " Proxy para criar a variante para",
+                            "parameter_name": "procurador"
+                        }
+                    }
+                },
+                "delete": {
+                    "command_description": "Excluir a variante de um personagem",
+                    "command_name": "excluir",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Proxy para excluir a variante",
+                            "parameter_name": "procurador"
+                        },
+                        "variant": {
+                            "parameter_description": "Variante a ser excluída",
+                            "parameter_name": "variante"
+                        }
+                    }
+                },
+                "description": {
+                    "command_description": "Defina a descrição de um personagem",
+                    "command_name": "descrição",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Caractere para definir a descrição",
+                            "parameter_name": "procurador"
+                        },
+                        "text": {
+                            "parameter_description": "Descrição a ser definida para o personagem",
+                            "parameter_name": "texto"
+                        },
+                        "variant": {
+                            "parameter_description": "Variante para definir a descrição para",
+                            "parameter_name": "variante"
+                        }
+                    }
+                },
+                "detail": {
+                    "command_description": "Obtenha detalhes de um personagem",
+                    "command_name": "detalhe",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Detalhe um proxy. ",
+                            "parameter_name": "procurador"
+                        },
+                        "variant": {
+                            "parameter_description": "Variante ao detalhe",
+                            "parameter_name": "variante"
+                        }
+                    }
+                },
+                "find": {
+                    "command_description": "Find a variant."
+                },
+                "group": {
+                    "command_description": "Defina o grupo para um personagem",
+                    "command_name": "grupo",
+                    "params": {
+                        "group": {
+                            "parameter_description": "Grupo, por padrão Nenhum",
+                            "parameter_name": "grupo"
+                        },
+                        "proxy": {
+                            "parameter_description": "Personagem para definir o grupo",
+                            "parameter_name": "procurador"
+                        },
+                        "variant": {
+                            "parameter_description": "Variante para definir o grupo para",
+                            "parameter_name": "variante"
+                        }
+                    }
+                },
+                "list": {
+                    "command_description": "List all variants."
+                },
+                "local": {
+                    "command_description": "Defina o local para um personagem",
+                    "command_name": "local",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Imagem, por padrão Nenhuma",
+                            "parameter_name": "imagem"
+                        },
+                        "nickname": {
+                            "parameter_description": "Apelido, por padrão Nenhum",
+                            "parameter_name": "apelido"
+                        },
+                        "proxy": {
+                            "parameter_description": "Caractere para definir o local",
+                            "parameter_name": "procurador"
+                        },
+                        "variant": {
+                            "parameter_description": "Variante para definir o local para",
+                            "parameter_name": "variante"
+                        }
+                    }
+                },
+                "nickname": {
+                    "command_description": "Defina o apelido de um personagem",
+                    "command_name": "apelido",
+                    "params": {
+                        "nickname": {
+                            "parameter_description": "Apelido a ser definido para o personagem",
+                            "parameter_name": "apelido"
+                        },
+                        "proxy": {
+                            "parameter_description": "Personagem para definir o apelido",
+                            "parameter_name": "procurador"
+                        },
+                        "variant": {
+                            "parameter_description": "Variante para definir o apelido",
+                            "parameter_name": "variante"
+                        }
+                    }
+                },
+                "nsfw": {
+                    "command_description": "Defina se um personagem é NSFW",
+                    "command_name": "nsfw",
+                    "params": {
+                        "nsfw": {
+                            "parameter_description": "NSFW, por padrão mude para o valor oposto",
+                            "parameter_name": "nsfw"
+                        },
+                        "proxy": {
+                            "parameter_description": "Caractere para definir o NSFW",
+                            "parameter_name": "procurador"
+                        },
+                        "variant": {
+                            "parameter_description": "Variante para definir o NSFW para",
+                            "parameter_name": "variante"
+                        }
+                    }
+                },
+                "prefix": {
+                    "command_description": "Defina os prefixos de um caractere.",
+                    "command_name": "prefixo",
+                    "params": {
+                        "prefixes": {
+                            "parameter_description": "Prefixos, por ex. ",
+                            "parameter_name": "prefixos"
+                        },
+                        "proxy": {
+                            "parameter_description": "Caractere para definir o prefixo",
+                            "parameter_name": "procurador"
+                        },
+                        "variant": {
+                            "parameter_description": "Variante para definir o prefixo para",
+                            "parameter_name": "variante"
+                        }
+                    }
+                },
+                "prune": {
+                    "command_description": "Podar caracteres não utilizados por um determinado tempo.",
+                    "command_name": "ameixa-seca",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "procurador"
+                        },
+                        "time": {
+                            "parameter_description": "Data para podar antes, por padrão Nenhuma"
+                        }
+                    }
+                },
+                "purge": {
+                    "command_description": "Limpe todos os seus dados (exceto registros de mensagens)",
+                    "command_name": "purga",
+                    "params": {
+                        "confirmation": {
+                            "parameter_description": "confirmação",
+                            "parameter_name": "confirmação"
+                        },
+                        "proxy": {
+                            "parameter_description": "procurador",
+                            "parameter_name": "procurador"
+                        }
+                    }
+                },
+                "read": {
+                    "command_description": "Leia um personagem",
+                    "command_name": "ler",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Caractere para ler a variante",
+                            "parameter_name": "procurador"
+                        },
+                        "variant": {
+                            "parameter_description": "Variante para ler",
+                            "parameter_name": "variante"
+                        }
+                    }
+                },
+                "rename": {
+                    "command_description": "Renomear um personagem",
+                    "command_name": "renomear",
+                    "params": {
+                        "name": {
+                            "parameter_description": "Novo nome para o personagem",
+                            "parameter_name": "nome"
+                        },
+                        "proxy": {
+                            "parameter_description": "Personagem para renomear",
+                            "parameter_name": "procurador"
+                        },
+                        "variant": {
+                            "parameter_description": "Variante para renomear",
+                            "parameter_name": "variante"
+                        }
+                    }
+                },
+                "set": {
+                    "command_description": "Set a variant."
+                },
+                "update": {
+                    "command_description": "Atualize um proxy. ",
+                    "command_name": "atualizar",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Imagem, por padrão Nenhuma",
+                            "parameter_name": "imagem"
+                        },
+                        "proxy": {
+                            "parameter_description": "Personagem para atualizar",
+                            "parameter_name": "procurador"
+                        }
+                    }
+                },
+                "use": {
+                    "command_description": "Use a variant."
+                }
+            },
+            "group_description": "Variant commands.",
+            "group_name": "var"
+        },
+        "variant-to-proxy": {
+            "command_description": "Converter uma variante em um caractere",
+            "command_name": "variante-para-proxy",
+            "params": {
+                "proxy": {
+                    "parameter_description": "Proxy para converter para",
+                    "parameter_name": "procurador"
+                },
+                "variant": {
+                    "parameter_description": "Variante para converter",
+                    "parameter_name": "variante"
+                }
+            }
+        }
+    },
+    "interactions": {
         "context_menu": {
             "command_name": "Procurador"
         }

@@ -1,304 +1,333 @@
 {
     "commands": {
-        "exec": {
-            "command_description": "Execute a command."
+        "afk": {
+            "command_description": "Check if a user is AFK."
         },
-        "proxy": {
-            "command_name": "ombud",
-            "command_description": "Inaktivera tecken på en server",
+        "auto": {
+            "command_description": "Ställ in auto för en karaktär",
+            "command_name": "bil",
             "params": {
-                "enable": {
-                    "parameter_name": "enable",
-                    "parameter_description": "Aktivera eller inaktivera tecken, som standardbrytare"
+                "proxy": {
+                    "parameter_description": "Karaktär, inaktiverar automatiskt som standard",
+                    "parameter_name": "ombud"
                 }
             }
         },
-        "set": {
-            "command_description": "Set a proxy as the current one."
-        },
-        "use": {
+        "avatar": {
+            "command_description": "Ställ in avatar för en karaktär",
+            "command_name": "avatar",
             "params": {
-                "text": {
-                    "parameter_name": "text",
-                    "parameter_description": "text"
+                "avatar": {
+                    "parameter_description": "Bild-URL, som standard Ingen",
+                    "parameter_name": "avatar"
+                },
+                "proxy": {
+                    "parameter_description": "Karaktär att ställa in avatar för",
+                    "parameter_name": "ombud"
                 }
             }
         },
-        "say": {
+        "birthday": {
+            "command_description": "Ställ in födelsedagen för en karaktär",
+            "command_name": "födelsedag",
             "params": {
-                "text": {
-                    "parameter_name": "text",
-                    "parameter_description": "text"
+                "birthday": {
+                    "parameter_description": "Födelsedag, som standard Ingen",
+                    "parameter_name": "födelsedag"
+                },
+                "proxy": {
+                    "parameter_description": "Karaktär att ställa in födelsedagen för",
+                    "parameter_name": "ombud"
                 }
             }
         },
-        "npc": {
-            "command_name": "npc",
-            "command_description": "Skapa ett nytt NPC-meddelande",
-            "params": {
-                "franchise": {
-                    "parameter_name": "franchise",
-                    "parameter_description": "Franchise att använda",
-                    "choices": {
-                        "Pokemon": "Pokemon",
-                        "Pokemon Shiny": "Pokemon Shiny",
-                        "Trainer": "Trainer",
-                        "Digimon": "Digimon",
-                        "Palworld": "Palworld",
-                        "D&D": "D&D"
-                    }
-                },
-                "npc": {
-                    "parameter_name": "npc",
-                    "parameter_description": "NPC att använda"
-                },
-                "nickname": {
-                    "parameter_name": "smeknamn",
-                    "parameter_description": "Smeknamn, som standard Inget"
-                },
-                "emotion": {
-                    "parameter_name": "känsla",
-                    "parameter_description": "Känslor, som standard Normal",
-                    "choices": {
-                        "Normal": "Normal",
-                        "Happy": "Happy",
-                        "Pain": "Pain",
-                        "Angry": "Angry",
-                        "Worried": "Worried",
-                        "Sad": "Sad",
-                        "Crying": "Crying",
-                        "Shouting": "Shouting",
-                        "TearyEyed": "TearyEyed",
-                        "Determined": "Determined",
-                        "Joyous": "Joyous",
-                        "Inspired": "Inspired",
-                        "Surprised": "Surprised",
-                        "Dizzy": "Dizzy",
-                        "Sigh": "Sigh",
-                        "Stunned": "Stunned",
-                        "Special0": "Special0",
-                        "Special1": "Special1",
-                        "Special2": "Special2",
-                        "Special3": "Special3"
-                    }
-                },
-                "image": {
-                    "parameter_name": "bild",
-                    "parameter_description": "Bild, som standard Ingen"
-                },
-                "text": {
-                    "parameter_name": "text",
-                    "parameter_description": "text"
-                }
-            }
+        "check_permissions": {
+            "command_description": "Kontrollera om bot kan fungera i den angivna kanalen",
+            "command_name": "check_perms"
+        },
+        "color": {
+            "command_description": "Set a color for a proxy."
         },
         "create": {
-            "command_description": "Create a new proxy.",
+            "command_description": "Skapa en ny karaktär.",
+            "command_name": "skapa",
             "params": {
+                "image": {
+                    "parameter_description": "Bild, som standard Ingen",
+                    "parameter_name": "bild"
+                },
                 "prefixes": {
                     "parameter_description": "Prefixes e.g. A:text, |text|, etc."
                 }
             }
         },
         "delete": {
-            "command_name": "radera",
             "command_description": "Ta bort ett tecken",
+            "command_name": "radera",
             "params": {
                 "proxy": {
-                    "parameter_name": "ombud",
-                    "parameter_description": "Proxy att ta bort varianten från"
-                }
-            }
-        },
-        "read": {
-            "command_name": "läsa",
-            "command_description": "Läs en karaktär",
-            "params": {
-                "proxy": {
-                    "parameter_name": "ombud",
-                    "parameter_description": "Karaktär att läsa varianten från"
-                }
-            }
-        },
-        "nickname": {
-            "command_name": "smeknamn",
-            "command_description": "Ställ in smeknamnet för en karaktär",
-            "params": {
-                "proxy": {
-                    "parameter_name": "ombud",
-                    "parameter_description": "Karaktär att ställa in smeknamnet för"
-                },
-                "nickname": {
-                    "parameter_name": "smeknamn",
-                    "parameter_description": "Smeknamn att ange för karaktären"
-                }
-            }
-        },
-        "local": {
-            "command_name": "lokal",
-            "command_description": "Ställ in det lokala för en karaktär",
-            "params": {
-                "proxy": {
-                    "parameter_name": "ombud",
-                    "parameter_description": "Karaktär att ställa in den lokala för"
-                },
-                "avatar": {
-                    "parameter_name": "bild",
-                    "parameter_description": "Bild, som standard Ingen"
-                },
-                "nickname": {
-                    "parameter_name": "smeknamn",
-                    "parameter_description": "Smeknamn, som standard Inget"
-                }
-            }
-        },
-        "avatar": {
-            "command_name": "avatar",
-            "command_description": "Ställ in avatar för en karaktär",
-            "params": {
-                "proxy": {
-                    "parameter_name": "ombud",
-                    "parameter_description": "Karaktär att ställa in avatar för"
-                },
-                "avatar": {
-                    "parameter_name": "avatar",
-                    "parameter_description": "Bild-URL, som standard Ingen"
-                }
-            }
-        },
-        "prefix": {
-            "command_name": "prefix",
-            "command_description": "Ställ in prefixen för ett tecken.",
-            "params": {
-                "proxy": {
-                    "parameter_name": "ombud",
-                    "parameter_description": "Tecken att ställa in prefixet för"
-                },
-                "prefixes": {
-                    "parameter_name": "prefix",
-                    "parameter_description": "Prefix t.ex. "
-                }
-            }
-        },
-        "birthday": {
-            "command_name": "födelsedag",
-            "command_description": "Ställ in födelsedagen för en karaktär",
-            "params": {
-                "proxy": {
-                    "parameter_name": "ombud",
-                    "parameter_description": "Karaktär att ställa in födelsedagen för"
-                },
-                "birthday": {
-                    "parameter_name": "födelsedag",
-                    "parameter_description": "Födelsedag, som standard Ingen"
+                    "parameter_description": "Proxy att ta bort varianten från",
+                    "parameter_name": "ombud"
                 }
             }
         },
         "description": {
-            "command_name": "beskrivning",
             "command_description": "Ställ in beskrivningen för en karaktär",
+            "command_name": "beskrivning",
             "params": {
                 "proxy": {
-                    "parameter_name": "ombud",
-                    "parameter_description": "Karaktär att ställa in beskrivningen för"
+                    "parameter_description": "Karaktär att ställa in beskrivningen för",
+                    "parameter_name": "ombud"
                 },
                 "text": {
-                    "parameter_name": "text",
-                    "parameter_description": "Beskrivning att ställa in för karaktären"
+                    "parameter_description": "Beskrivning att ställa in för karaktären",
+                    "parameter_name": "text"
                 }
             }
         },
-        "rename": {
-            "command_name": "rename",
-            "command_description": "Byt namn på en karaktär",
+        "detail": {
+            "command_description": "Få detaljer om en karaktär",
+            "command_name": "detalj",
             "params": {
                 "proxy": {
-                    "parameter_name": "ombud",
-                    "parameter_description": "Karaktär att byta namn på"
+                    "parameter_description": "Detaljera en proxy. ",
+                    "parameter_name": "ombud"
+                }
+            }
+        },
+        "exec": {
+            "command_description": "Execute a command."
+        },
+        "export": {
+            "command_description": "Exportera dina karaktärer till en JSON-fil",
+            "command_name": "exportera",
+            "params": {
+                "format": {
+                    "choices": {
+                        "Default": "Default",
+                        "PluralKit": "PluralKit",
+                        "Tupperbox": "Tupperbox"
+                    },
+                    "parameter_description": "Format att exportera till, som standard JSON",
+                    "parameter_name": "formatera"
                 },
-                "name": {
-                    "parameter_name": "namn",
-                    "parameter_description": "Nytt namn på karaktären"
+                "new_token": {
+                    "parameter_description": "Om du vill generera en ny token",
+                    "parameter_name": "new_token"
                 }
             }
         },
         "group": {
-            "command_name": "grupp",
             "command_description": "Ställ in gruppen för en karaktär",
-            "params": {
-                "proxy": {
-                    "parameter_name": "ombud",
-                    "parameter_description": "Karaktär att ställa in gruppen för"
-                },
-                "group": {
-                    "parameter_name": "grupp",
-                    "parameter_description": "Grupp, som standard Ingen"
-                }
-            }
-        },
-        "nsfw": {
-            "command_name": "nsfw",
-            "command_description": "Ställ in om ett tecken är NSFW",
-            "params": {
-                "proxy": {
-                    "parameter_name": "ombud",
-                    "parameter_description": "Tecken att ställa in NSFW för"
-                },
-                "nsfw": {
-                    "parameter_name": "nsfw",
-                    "parameter_description": "NSFW, byter som standard till motsatt värde"
-                }
-            }
-        },
-        "auto": {
-            "command_name": "bil",
-            "command_description": "Ställ in auto för en karaktär",
-            "params": {
-                "proxy": {
-                    "parameter_name": "ombud",
-                    "parameter_description": "Karaktär, inaktiverar automatiskt som standard"
-                }
-            }
-        },
-        "list": {
-            "command_name": "lista",
-            "command_description": "Lista alla tecken ",
+            "command_name": "grupp",
             "params": {
                 "group": {
-                    "parameter_name": "grupp",
-                    "parameter_description": "Grupp att lista tecken från"
+                    "parameter_description": "Grupp, som standard Ingen",
+                    "parameter_name": "grupp"
+                },
+                "proxy": {
+                    "parameter_description": "Karaktär att ställa in gruppen för",
+                    "parameter_name": "ombud"
+                }
+            }
+        },
+        "help": {
+            "command_description": "Inbyggd bothjälp",
+            "command_name": "hjälp",
+            "params": {
+                "search": {
+                    "parameter_description": "Uppslagsterm",
+                    "parameter_name": "sök"
+                }
+            }
+        },
+        "import": {
+            "command_description": "Importera dina karaktärer från en fil eller token",
+            "command_name": "importera",
+            "params": {
+                "data": {
+                    "parameter_description": "Fil att importera från",
+                    "parameter_name": "data"
+                },
+                "deleting_from_token": {
+                    "parameter_description": "Ta bort tecken från token",
+                    "parameter_name": "radera_från_token"
+                },
+                "token": {
+                    "parameter_description": "Token att använda för import",
+                    "parameter_name": "tecken"
                 }
             }
         },
         "latch": {
-            "command_name": "spärr",
             "command_description": "Aktivera eller inaktivera låsläge",
+            "command_name": "spärr",
             "params": {
-                "enable": {
-                    "parameter_description": "Aktivera eller inaktivera låsläge"
-                },
                 "auto_remove": {
                     "parameter_description": "Om du vill behålla auto för aktuell kanal eller inte, som standard Sant"
+                },
+                "enable": {
+                    "parameter_description": "Aktivera eller inaktivera låsläge"
                 }
             }
         },
-        "export": {
-            "command_name": "exportera",
-            "command_description": "Exportera dina karaktärer till en JSON-fil",
+        "list": {
+            "command_description": "Lista alla tecken ",
+            "command_name": "lista",
             "params": {
-                "format": {
-                    "parameter_name": "formatera",
-                    "parameter_description": "Format att exportera till, som standard JSON"
+                "group": {
+                    "parameter_description": "Grupp att lista tecken från",
+                    "parameter_name": "grupp"
+                }
+            }
+        },
+        "local": {
+            "command_description": "Ställ in det lokala för en karaktär",
+            "command_name": "lokal",
+            "params": {
+                "avatar": {
+                    "parameter_description": "Bild, som standard Ingen",
+                    "parameter_name": "bild"
                 },
-                "new_token": {
-                    "parameter_name": "new_token",
-                    "parameter_description": "Om du vill generera en ny token"
+                "nickname": {
+                    "parameter_description": "Smeknamn, som standard Inget",
+                    "parameter_name": "smeknamn"
+                },
+                "proxy": {
+                    "parameter_description": "Karaktär att ställa in den lokala för",
+                    "parameter_name": "ombud"
+                }
+            }
+        },
+        "nickname": {
+            "command_description": "Ställ in smeknamnet för en karaktär",
+            "command_name": "smeknamn",
+            "params": {
+                "nickname": {
+                    "parameter_description": "Smeknamn att ange för karaktären",
+                    "parameter_name": "smeknamn"
+                },
+                "proxy": {
+                    "parameter_description": "Karaktär att ställa in smeknamnet för",
+                    "parameter_name": "ombud"
+                }
+            }
+        },
+        "npc": {
+            "command_description": "Skapa ett nytt NPC-meddelande",
+            "command_name": "npc",
+            "params": {
+                "emotion": {
+                    "choices": {
+                        "Angry": "Angry",
+                        "Crying": "Crying",
+                        "Determined": "Determined",
+                        "Dizzy": "Dizzy",
+                        "Happy": "Happy",
+                        "Inspired": "Inspired",
+                        "Joyous": "Joyous",
+                        "Normal": "Normal",
+                        "Pain": "Pain",
+                        "Sad": "Sad",
+                        "Shouting": "Shouting",
+                        "Sigh": "Sigh",
+                        "Special0": "Special0",
+                        "Special1": "Special1",
+                        "Special2": "Special2",
+                        "Special3": "Special3",
+                        "Stunned": "Stunned",
+                        "Surprised": "Surprised",
+                        "TearyEyed": "TearyEyed",
+                        "Worried": "Worried"
+                    },
+                    "parameter_description": "Känslor, som standard Normal",
+                    "parameter_name": "känsla"
+                },
+                "franchise": {
+                    "choices": {
+                        "D&D": "D&D",
+                        "Digimon": "Digimon",
+                        "Palworld": "Palworld",
+                        "Pokemon": "Pokemon",
+                        "Pokemon Shiny": "Pokemon Shiny",
+                        "Trainer": "Trainer"
+                    },
+                    "parameter_description": "Franchise att använda",
+                    "parameter_name": "franchise"
+                },
+                "image": {
+                    "parameter_description": "Bild, som standard Ingen",
+                    "parameter_name": "bild"
+                },
+                "nickname": {
+                    "parameter_description": "Smeknamn, som standard Inget",
+                    "parameter_name": "smeknamn"
+                },
+                "npc": {
+                    "parameter_description": "NPC att använda",
+                    "parameter_name": "npc"
+                },
+                "text": {
+                    "parameter_description": "text",
+                    "parameter_name": "text"
+                }
+            }
+        },
+        "nsfw": {
+            "command_description": "Ställ in om ett tecken är NSFW",
+            "command_name": "nsfw",
+            "params": {
+                "nsfw": {
+                    "parameter_description": "NSFW, byter som standard till motsatt värde",
+                    "parameter_name": "nsfw"
+                },
+                "proxy": {
+                    "parameter_description": "Tecken att ställa in NSFW för",
+                    "parameter_name": "ombud"
+                }
+            }
+        },
+        "prefix": {
+            "command_description": "Ställ in prefixen för ett tecken.",
+            "command_name": "prefix",
+            "params": {
+                "prefixes": {
+                    "parameter_description": "Prefix t.ex. ",
+                    "parameter_name": "prefix"
+                },
+                "proxy": {
+                    "parameter_description": "Tecken att ställa in prefixet för",
+                    "parameter_name": "ombud"
+                }
+            }
+        },
+        "proxy": {
+            "command_description": "Inaktivera tecken på en server",
+            "command_name": "ombud",
+            "params": {
+                "enable": {
+                    "parameter_description": "Aktivera eller inaktivera tecken, som standardbrytare",
+                    "parameter_name": "enable"
+                }
+            }
+        },
+        "proxy-to-variant": {
+            "command_description": "Konvertera ett tecken till en variant",
+            "command_name": "proxy-till-variant",
+            "params": {
+                "base": {
+                    "parameter_description": "Ny bas för karaktären",
+                    "parameter_name": "bas"
+                },
+                "original": {
+                    "parameter_description": "Karaktär att konvertera",
+                    "parameter_name": "original"
                 }
             }
         },
         "prune": {
-            "command_name": "beskära",
             "command_description": "Beskär tecken oanvända under en viss tid.",
+            "command_name": "beskära",
             "params": {
                 "time": {
                     "parameter_description": "Datum att beskära innan, som standard Ingen"
@@ -306,656 +335,674 @@
             }
         },
         "purge": {
-            "command_name": "rena",
             "command_description": "Rensa alla dina data (förutom meddelandeloggar)",
+            "command_name": "rena",
             "params": {
                 "confirmation": {
-                    "parameter_name": "bekräftelse",
-                    "parameter_description": "bekräftelse"
+                    "parameter_description": "bekräftelse",
+                    "parameter_name": "bekräftelse"
                 }
             }
         },
-        "proxy-to-variant": {
-            "command_name": "proxy-till-variant",
-            "command_description": "Konvertera ett tecken till en variant",
-            "params": {
-                "original": {
-                    "parameter_name": "original",
-                    "parameter_description": "Karaktär att konvertera"
-                },
-                "base": {
-                    "parameter_name": "bas",
-                    "parameter_description": "Ny bas för karaktären"
-                }
-            }
-        },
-        "variant-to-proxy": {
-            "command_name": "variant-till-proxy",
-            "command_description": "Konvertera en variant till en karaktär",
+        "read": {
+            "command_description": "Läs en karaktär",
+            "command_name": "läsa",
             "params": {
                 "proxy": {
-                    "parameter_name": "ombud",
-                    "parameter_description": "Proxy att konvertera till"
-                },
-                "variant": {
-                    "parameter_name": "variant",
-                    "parameter_description": "Variant att konvertera"
+                    "parameter_description": "Karaktär att läsa varianten från",
+                    "parameter_name": "ombud"
                 }
             }
         },
-        "update": {
-            "command_name": "uppdatering",
-            "command_description": "Uppdatera en proxy. ",
+        "rename": {
+            "command_description": "Byt namn på en karaktär",
+            "command_name": "rename",
             "params": {
+                "name": {
+                    "parameter_description": "Nytt namn på karaktären",
+                    "parameter_name": "namn"
+                },
                 "proxy": {
-                    "parameter_name": "ombud",
-                    "parameter_description": "Karaktär att uppdatera"
-                },
-                "image": {
-                    "parameter_name": "bild",
-                    "parameter_description": "Bild, som standard Ingen"
+                    "parameter_description": "Karaktär att byta namn på",
+                    "parameter_name": "ombud"
                 }
             }
-        },
-        "detail": {
-            "command_name": "detalj",
-            "command_description": "Få detaljer om en karaktär",
-            "params": {
-                "proxy": {
-                    "parameter_name": "ombud",
-                    "parameter_description": "Detaljera en proxy. "
-                }
-            }
-        },
-        "import": {
-            "command_name": "importera",
-            "command_description": "Importera dina karaktärer från en fil eller token",
-            "params": {
-                "data": {
-                    "parameter_name": "data",
-                    "parameter_description": "Fil att importera från"
-                },
-                "token": {
-                    "parameter_name": "tecken",
-                    "parameter_description": "Token att använda för import"
-                },
-                "deleting_from_token": {
-                    "parameter_name": "radera_från_token",
-                    "parameter_description": "Ta bort tecken från token"
-                }
-            }
-        },
-        "var": {
-            "group_name": "var",
-            "group_description": "Variant commands.",
-            "groupset": {
-                "command_description": "Set a variant."
-            },
-            "groupuse": {
-                "command_description": "Use a variant."
-            },
-            "groupcreate": {
-                "command_name": "skapa",
-                "command_description": "Skapa en ny karaktär.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "ombud",
-                        "parameter_description": " Proxy för att skapa varianten för"
-                    },
-                    "image": {
-                        "parameter_name": "bild",
-                        "parameter_description": "Bild, som standard Ingen"
-                    },
-                    "prefixes": {
-                        "parameter_description": "Prefixes e.g. A:text, |text|, etc."
-                    }
-                }
-            },
-            "groupdelete": {
-                "command_name": "radera",
-                "command_description": "Ta bort en karaktärs variant",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "ombud",
-                        "parameter_description": "Proxy att ta bort varianten från"
-                    },
-                    "variant": {
-                        "parameter_name": "variant",
-                        "parameter_description": "Variant att radera"
-                    }
-                }
-            },
-            "groupread": {
-                "command_name": "läsa",
-                "command_description": "Läs en karaktär",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "ombud",
-                        "parameter_description": "Karaktär att läsa varianten från"
-                    },
-                    "variant": {
-                        "parameter_name": "variant",
-                        "parameter_description": "Variant att läsa"
-                    }
-                }
-            },
-            "groupnickname": {
-                "command_name": "smeknamn",
-                "command_description": "Ställ in smeknamnet för en karaktär",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "ombud",
-                        "parameter_description": "Karaktär att ställa in smeknamnet för"
-                    },
-                    "variant": {
-                        "parameter_name": "variant",
-                        "parameter_description": "Variant att ställa in smeknamnet för"
-                    },
-                    "nickname": {
-                        "parameter_name": "smeknamn",
-                        "parameter_description": "Smeknamn att ange för karaktären"
-                    }
-                }
-            },
-            "grouplocal": {
-                "command_name": "lokal",
-                "command_description": "Ställ in det lokala för en karaktär",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "ombud",
-                        "parameter_description": "Karaktär att ställa in den lokala för"
-                    },
-                    "variant": {
-                        "parameter_name": "variant",
-                        "parameter_description": "Variant att ställa in den lokala för"
-                    },
-                    "avatar": {
-                        "parameter_name": "bild",
-                        "parameter_description": "Bild, som standard Ingen"
-                    },
-                    "nickname": {
-                        "parameter_name": "smeknamn",
-                        "parameter_description": "Smeknamn, som standard Inget"
-                    }
-                }
-            },
-            "groupprefix": {
-                "command_name": "prefix",
-                "command_description": "Ställ in prefixen för ett tecken.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "ombud",
-                        "parameter_description": "Tecken att ställa in prefixet för"
-                    },
-                    "variant": {
-                        "parameter_name": "variant",
-                        "parameter_description": "Variant att ställa in prefixet för"
-                    },
-                    "prefixes": {
-                        "parameter_name": "prefix",
-                        "parameter_description": "Prefix t.ex. "
-                    }
-                }
-            },
-            "groupbirthday": {
-                "command_name": "födelsedag",
-                "command_description": "Ställ in födelsedagen för en karaktär",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "ombud",
-                        "parameter_description": "Karaktär att ställa in födelsedagen för"
-                    },
-                    "variant": {
-                        "parameter_name": "variant",
-                        "parameter_description": "Variant att ställa in födelsedagen för"
-                    },
-                    "birthday": {
-                        "parameter_name": "födelsedag",
-                        "parameter_description": "Födelsedag, som standard Ingen"
-                    }
-                }
-            },
-            "groupdescription": {
-                "command_name": "beskrivning",
-                "command_description": "Ställ in beskrivningen för en karaktär",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "ombud",
-                        "parameter_description": "Karaktär att ställa in beskrivningen för"
-                    },
-                    "variant": {
-                        "parameter_name": "variant",
-                        "parameter_description": "Variant att ställa in beskrivningen för"
-                    },
-                    "text": {
-                        "parameter_name": "text",
-                        "parameter_description": "Beskrivning att ställa in för karaktären"
-                    }
-                }
-            },
-            "grouprename": {
-                "command_name": "rename",
-                "command_description": "Byt namn på en karaktär",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "ombud",
-                        "parameter_description": "Karaktär att byta namn på"
-                    },
-                    "variant": {
-                        "parameter_name": "variant",
-                        "parameter_description": "Variant att byta namn på"
-                    },
-                    "name": {
-                        "parameter_name": "namn",
-                        "parameter_description": "Nytt namn på karaktären"
-                    }
-                }
-            },
-            "groupgroup": {
-                "command_name": "grupp",
-                "command_description": "Ställ in gruppen för en karaktär",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "ombud",
-                        "parameter_description": "Karaktär att ställa in gruppen för"
-                    },
-                    "variant": {
-                        "parameter_name": "variant",
-                        "parameter_description": "Variant att ställa in gruppen för"
-                    },
-                    "group": {
-                        "parameter_name": "grupp",
-                        "parameter_description": "Grupp, som standard Ingen"
-                    }
-                }
-            },
-            "groupnsfw": {
-                "command_name": "nsfw",
-                "command_description": "Ställ in om ett tecken är NSFW",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "ombud",
-                        "parameter_description": "Tecken att ställa in NSFW för"
-                    },
-                    "variant": {
-                        "parameter_name": "variant",
-                        "parameter_description": "Variant att ställa in NSFW för"
-                    },
-                    "nsfw": {
-                        "parameter_name": "nsfw",
-                        "parameter_description": "NSFW, byter som standard till motsatt värde"
-                    }
-                }
-            },
-            "groupauto": {
-                "command_name": "bil",
-                "command_description": "Ställ in auto för en karaktär",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "ombud",
-                        "parameter_description": "Karaktär, inaktiverar automatiskt som standard"
-                    },
-                    "variant": {
-                        "parameter_name": "variant",
-                        "parameter_description": "Variant att ställa in auto för"
-                    }
-                }
-            },
-            "groupavatar": {
-                "command_name": "avatar",
-                "command_description": "Ställ in avatar för en karaktär",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "ombud",
-                        "parameter_description": "Karaktär att ställa in avatar för"
-                    },
-                    "variant": {
-                        "parameter_name": "variant",
-                        "parameter_description": "Variant att ställa in avatar för"
-                    },
-                    "avatar": {
-                        "parameter_name": "avatar",
-                        "parameter_description": "Bild-URL, som standard Ingen"
-                    }
-                }
-            },
-            "grouplist": {
-                "command_description": "List all variants."
-            },
-            "groupfind": {
-                "command_description": "Find a variant."
-            },
-            "groupupdate": {
-                "command_name": "uppdatering",
-                "command_description": "Uppdatera en proxy. ",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "ombud",
-                        "parameter_description": "Karaktär att uppdatera"
-                    },
-                    "image": {
-                        "parameter_name": "bild",
-                        "parameter_description": "Bild, som standard Ingen"
-                    }
-                }
-            },
-            "groupdetail": {
-                "command_name": "detalj",
-                "command_description": "Få detaljer om en karaktär",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "ombud",
-                        "parameter_description": "Detaljera en proxy. "
-                    },
-                    "variant": {
-                        "parameter_name": "variant",
-                        "parameter_description": "Variant till detalj"
-                    }
-                }
-            },
-            "groupprune": {
-                "command_name": "beskära",
-                "command_description": "Beskär tecken oanvända under en viss tid.",
-                "params": {
-                    "proxy": {
-                        "parameter_description": "ombud"
-                    },
-                    "time": {
-                        "parameter_description": "Datum att beskära innan, som standard Ingen"
-                    }
-                }
-            },
-            "grouppurge": {
-                "command_name": "rena",
-                "command_description": "Rensa alla dina data (förutom meddelandeloggar)",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "ombud",
-                        "parameter_description": "ombud"
-                    },
-                    "confirmation": {
-                        "parameter_name": "bekräftelse",
-                        "parameter_description": "bekräftelse"
-                    }
-                }
-            }
-        },
-        "shared": {
-            "group_description": "Shared proxy commands.",
-            "groupset": {
-                "command_description": "Set a proxy as the current one."
-            },
-            "groupcreate": {
-                "command_name": "skapa",
-                "command_description": "Skapa en ny karaktär.",
-                "params": {
-                    "image": {
-                        "parameter_name": "bild",
-                        "parameter_description": "Bild, som standard Ingen"
-                    }
-                }
-            },
-            "groupdelete": {
-                "command_name": "radera",
-                "command_description": "Ta bort ett tecken",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "ombud",
-                        "parameter_description": "Proxy att ta bort varianten från"
-                    }
-                }
-            },
-            "groupread": {
-                "command_name": "läsa",
-                "command_description": "Läs en karaktär",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "ombud",
-                        "parameter_description": "Karaktär att läsa varianten från"
-                    }
-                }
-            },
-            "groupauto": {
-                "command_name": "bil",
-                "command_description": "Ställ in auto för en karaktär",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "ombud",
-                        "parameter_description": "Karaktär, inaktiverar automatiskt som standard"
-                    }
-                }
-            },
-            "groupprefix": {
-                "command_name": "prefix",
-                "command_description": "Ställ in prefixen för ett tecken.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "ombud",
-                        "parameter_description": "Tecken att ställa in prefixet för"
-                    },
-                    "prefixes": {
-                        "parameter_name": "prefix",
-                        "parameter_description": "Prefix t.ex. "
-                    }
-                }
-            },
-            "groupbirthday": {
-                "command_name": "födelsedag",
-                "command_description": "Ställ in födelsedagen för en karaktär",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "ombud",
-                        "parameter_description": "Karaktär att ställa in födelsedagen för"
-                    },
-                    "birthday": {
-                        "parameter_name": "födelsedag",
-                        "parameter_description": "Födelsedag, som standard Ingen"
-                    }
-                }
-            },
-            "groupdescription": {
-                "command_name": "beskrivning",
-                "command_description": "Ställ in beskrivningen för en karaktär",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "ombud",
-                        "parameter_description": "Karaktär att ställa in beskrivningen för"
-                    },
-                    "text": {
-                        "parameter_name": "text",
-                        "parameter_description": "Beskrivning att ställa in för karaktären"
-                    }
-                }
-            },
-            "grouprename": {
-                "command_name": "rename",
-                "command_description": "Byt namn på en karaktär",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "ombud",
-                        "parameter_description": "Karaktär att byta namn på"
-                    },
-                    "name": {
-                        "parameter_name": "namn",
-                        "parameter_description": "Nytt namn på karaktären"
-                    }
-                }
-            },
-            "groupnickname": {
-                "command_name": "smeknamn",
-                "command_description": "Ställ in smeknamnet för en karaktär",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "ombud",
-                        "parameter_description": "Karaktär att ställa in smeknamnet för"
-                    },
-                    "nickname": {
-                        "parameter_name": "smeknamn",
-                        "parameter_description": "Smeknamn att ange för karaktären"
-                    }
-                }
-            },
-            "groupgroup": {
-                "command_name": "grupp",
-                "command_description": "Ställ in gruppen för en karaktär",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "ombud",
-                        "parameter_description": "Karaktär att ställa in gruppen för"
-                    },
-                    "group": {
-                        "parameter_name": "grupp",
-                        "parameter_description": "Grupp, som standard Ingen"
-                    }
-                }
-            },
-            "groupnsfw": {
-                "command_name": "nsfw",
-                "command_description": "Ställ in om ett tecken är NSFW",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "ombud",
-                        "parameter_description": "Tecken att ställa in NSFW för"
-                    },
-                    "nsfw": {
-                        "parameter_name": "nsfw",
-                        "parameter_description": "NSFW, byter som standard till motsatt värde"
-                    }
-                }
-            },
-            "groupavatar": {
-                "command_name": "avatar",
-                "command_description": "Ställ in avatar för en karaktär",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "ombud",
-                        "parameter_description": "Karaktär att ställa in avatar för"
-                    },
-                    "avatar": {
-                        "parameter_name": "avatar",
-                        "parameter_description": "Bild-URL, som standard Ingen"
-                    }
-                }
-            },
-            "groupimage": {
-                "params": {
-                    "proxy": {
-                        "parameter_name": "ombud",
-                        "parameter_description": "Karaktär att ställa in avatar för"
-                    },
-                    "avatar": {
-                        "parameter_name": "avatar",
-                        "parameter_description": "Bild-URL, som standard Ingen"
-                    }
-                }
-            },
-            "grouplocal": {
-                "command_name": "lokal",
-                "command_description": "Ställ in det lokala för en karaktär",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "ombud",
-                        "parameter_description": "Karaktär att ställa in den lokala för"
-                    },
-                    "avatar": {
-                        "parameter_name": "bild",
-                        "parameter_description": "Bild, som standard Ingen"
-                    },
-                    "nickname": {
-                        "parameter_name": "smeknamn",
-                        "parameter_description": "Smeknamn, som standard Inget"
-                    }
-                }
-            },
-            "groupupdate": {
-                "command_name": "uppdatering",
-                "command_description": "Uppdatera en proxy. ",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "ombud",
-                        "parameter_description": "Karaktär att uppdatera"
-                    },
-                    "image": {
-                        "parameter_name": "bild",
-                        "parameter_description": "Bild, som standard Ingen"
-                    }
-                }
-            },
-            "groupdetail": {
-                "command_name": "detalj",
-                "command_description": "Få detaljer om en karaktär",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "ombud",
-                        "parameter_description": "Detaljera en proxy. "
-                    }
-                }
-            },
-            "groupprune": {
-                "command_name": "beskära",
-                "command_description": "Beskär tecken oanvända under en viss tid.",
-                "params": {
-                    "time": {
-                        "parameter_description": "Datum att beskära innan, som standard Ingen"
-                    }
-                }
-            },
-            "grouppurge": {
-                "command_name": "rena",
-                "command_description": "Rensa alla dina data (förutom meddelandeloggar)",
-                "params": {
-                    "confirmation": {
-                        "parameter_name": "bekräftelse",
-                        "parameter_description": "bekräftelse"
-                    }
-                }
-            }
-        },
-        "check_permissions": {
-            "command_name": "check_perms",
-            "command_description": "Kontrollera om bot kan fungera i den angivna kanalen"
         },
         "roll": {
             "command_description": "Roll a dice."
         },
-        "afk": {
-            "command_description": "Check if a user is AFK."
-        },
-        "help": {
-            "command_name": "hjälp",
-            "command_description": "Inbyggd bothjälp",
+        "say": {
+            "command_description": "Say something.",
             "params": {
-                "search": {
-                    "parameter_name": "sök",
-                    "parameter_description": "Uppslagsterm"
+                "text": {
+                    "parameter_description": "text",
+                    "parameter_name": "text"
                 }
             }
         },
         "server_wiki": {
-            "command_name": "server_wiki",
             "command_description": "Användardefinierad serverwiki",
+            "command_name": "server_wiki",
             "params": {
                 "search": {
-                    "parameter_name": "sök",
-                    "parameter_description": "Uppslagsterm"
+                    "parameter_description": "Uppslagsterm",
+                    "parameter_name": "sök"
                 }
             }
         },
+        "set": {
+            "command_description": "Set a proxy as the current one."
+        },
         "settings": {
-            "command_name": "inställningar",
             "command_description": "Botinställningar",
+            "command_name": "inställningar",
             "params": {
                 "menu": {
-                    "parameter_name": "meny",
-                    "parameter_description": "Meny för att öppna för inställningar",
                     "choices": {
+                        "Member": "Member",
                         "Server": "Server",
-                        "Member": "Medlem",
-                        "User": "Användare"
+                        "User": "User"
+                    },
+                    "parameter_description": "Meny för att öppna för inställningar",
+                    "parameter_name": "meny"
+                }
+            }
+        },
+        "shared": {
+            "group": {
+                "auto": {
+                    "command_description": "Ställ in auto för en karaktär",
+                    "command_name": "bil",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Karaktär, inaktiverar automatiskt som standard",
+                            "parameter_name": "ombud"
+                        }
+                    }
+                },
+                "avatar": {
+                    "command_description": "Ställ in avatar för en karaktär",
+                    "command_name": "avatar",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Bild-URL, som standard Ingen",
+                            "parameter_name": "avatar"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karaktär att ställa in avatar för",
+                            "parameter_name": "ombud"
+                        }
+                    }
+                },
+                "birthday": {
+                    "command_description": "Ställ in födelsedagen för en karaktär",
+                    "command_name": "födelsedag",
+                    "params": {
+                        "birthday": {
+                            "parameter_description": "Födelsedag, som standard Ingen",
+                            "parameter_name": "födelsedag"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karaktär att ställa in födelsedagen för",
+                            "parameter_name": "ombud"
+                        }
+                    }
+                },
+                "color": {
+                    "command_description": "Set the color for a proxy."
+                },
+                "create": {
+                    "command_description": "Skapa en ny karaktär.",
+                    "command_name": "skapa",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Bild, som standard Ingen",
+                            "parameter_name": "bild"
+                        }
+                    }
+                },
+                "delete": {
+                    "command_description": "Ta bort ett tecken",
+                    "command_name": "radera",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Proxy att ta bort varianten från",
+                            "parameter_name": "ombud"
+                        }
+                    }
+                },
+                "description": {
+                    "command_description": "Ställ in beskrivningen för en karaktär",
+                    "command_name": "beskrivning",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Karaktär att ställa in beskrivningen för",
+                            "parameter_name": "ombud"
+                        },
+                        "text": {
+                            "parameter_description": "Beskrivning att ställa in för karaktären",
+                            "parameter_name": "text"
+                        }
+                    }
+                },
+                "detail": {
+                    "command_description": "Få detaljer om en karaktär",
+                    "command_name": "detalj",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Detaljera en proxy. ",
+                            "parameter_name": "ombud"
+                        }
+                    }
+                },
+                "find": {
+                    "command_description": "Find a proxy."
+                },
+                "group": {
+                    "command_description": "Ställ in gruppen för en karaktär",
+                    "command_name": "grupp",
+                    "params": {
+                        "group": {
+                            "parameter_description": "Grupp, som standard Ingen",
+                            "parameter_name": "grupp"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karaktär att ställa in gruppen för",
+                            "parameter_name": "ombud"
+                        }
+                    }
+                },
+                "image": {
+                    "command_description": "Set the image for a proxy.",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Bild-URL, som standard Ingen",
+                            "parameter_name": "avatar"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karaktär att ställa in avatar för",
+                            "parameter_name": "ombud"
+                        }
+                    }
+                },
+                "list": {
+                    "command_description": "List all proxies."
+                },
+                "local": {
+                    "command_description": "Ställ in det lokala för en karaktär",
+                    "command_name": "lokal",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Bild, som standard Ingen",
+                            "parameter_name": "bild"
+                        },
+                        "nickname": {
+                            "parameter_description": "Smeknamn, som standard Inget",
+                            "parameter_name": "smeknamn"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karaktär att ställa in den lokala för",
+                            "parameter_name": "ombud"
+                        }
+                    }
+                },
+                "nickname": {
+                    "command_description": "Ställ in smeknamnet för en karaktär",
+                    "command_name": "smeknamn",
+                    "params": {
+                        "nickname": {
+                            "parameter_description": "Smeknamn att ange för karaktären",
+                            "parameter_name": "smeknamn"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karaktär att ställa in smeknamnet för",
+                            "parameter_name": "ombud"
+                        }
+                    }
+                },
+                "nsfw": {
+                    "command_description": "Ställ in om ett tecken är NSFW",
+                    "command_name": "nsfw",
+                    "params": {
+                        "nsfw": {
+                            "parameter_description": "NSFW, byter som standard till motsatt värde",
+                            "parameter_name": "nsfw"
+                        },
+                        "proxy": {
+                            "parameter_description": "Tecken att ställa in NSFW för",
+                            "parameter_name": "ombud"
+                        }
+                    }
+                },
+                "prefix": {
+                    "command_description": "Ställ in prefixen för ett tecken.",
+                    "command_name": "prefix",
+                    "params": {
+                        "prefixes": {
+                            "parameter_description": "Prefix t.ex. ",
+                            "parameter_name": "prefix"
+                        },
+                        "proxy": {
+                            "parameter_description": "Tecken att ställa in prefixet för",
+                            "parameter_name": "ombud"
+                        }
+                    }
+                },
+                "prune": {
+                    "command_description": "Beskär tecken oanvända under en viss tid.",
+                    "command_name": "beskära",
+                    "params": {
+                        "time": {
+                            "parameter_description": "Datum att beskära innan, som standard Ingen"
+                        }
+                    }
+                },
+                "purge": {
+                    "command_description": "Rensa alla dina data (förutom meddelandeloggar)",
+                    "command_name": "rena",
+                    "params": {
+                        "confirmation": {
+                            "parameter_description": "bekräftelse",
+                            "parameter_name": "bekräftelse"
+                        }
+                    }
+                },
+                "read": {
+                    "command_description": "Läs en karaktär",
+                    "command_name": "läsa",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Karaktär att läsa varianten från",
+                            "parameter_name": "ombud"
+                        }
+                    }
+                },
+                "rename": {
+                    "command_description": "Byt namn på en karaktär",
+                    "command_name": "rename",
+                    "params": {
+                        "name": {
+                            "parameter_description": "Nytt namn på karaktären",
+                            "parameter_name": "namn"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karaktär att byta namn på",
+                            "parameter_name": "ombud"
+                        }
+                    }
+                },
+                "set": {
+                    "command_description": "Set a proxy as the current one."
+                },
+                "update": {
+                    "command_description": "Uppdatera en proxy. ",
+                    "command_name": "uppdatering",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Bild, som standard Ingen",
+                            "parameter_name": "bild"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karaktär att uppdatera",
+                            "parameter_name": "ombud"
+                        }
+                    }
+                },
+                "use": {
+                    "command_description": "Use a proxy."
+                }
+            },
+            "group_description": "Shared proxy commands."
+        },
+        "store": {
+            "params": {
+                "storage": {
+                    "choices": {
+                        "Global": "Global",
+                        "Local": "Local"
                     }
                 }
             }
         },
+        "update": {
+            "command_description": "Uppdatera en proxy. ",
+            "command_name": "uppdatering",
+            "params": {
+                "image": {
+                    "parameter_description": "Bild, som standard Ingen",
+                    "parameter_name": "bild"
+                },
+                "proxy": {
+                    "parameter_description": "Karaktär att uppdatera",
+                    "parameter_name": "ombud"
+                }
+            }
+        },
+        "use": {
+            "command_description": "Use a proxy.",
+            "params": {
+                "text": {
+                    "parameter_description": "text",
+                    "parameter_name": "text"
+                }
+            }
+        },
+        "var": {
+            "group": {
+                "auto": {
+                    "command_description": "Ställ in auto för en karaktär",
+                    "command_name": "bil",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Karaktär, inaktiverar automatiskt som standard",
+                            "parameter_name": "ombud"
+                        },
+                        "variant": {
+                            "parameter_description": "Variant att ställa in auto för",
+                            "parameter_name": "variant"
+                        }
+                    }
+                },
+                "avatar": {
+                    "command_description": "Ställ in avatar för en karaktär",
+                    "command_name": "avatar",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Bild-URL, som standard Ingen",
+                            "parameter_name": "avatar"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karaktär att ställa in avatar för",
+                            "parameter_name": "ombud"
+                        },
+                        "variant": {
+                            "parameter_description": "Variant att ställa in avatar för",
+                            "parameter_name": "variant"
+                        }
+                    }
+                },
+                "birthday": {
+                    "command_description": "Ställ in födelsedagen för en karaktär",
+                    "command_name": "födelsedag",
+                    "params": {
+                        "birthday": {
+                            "parameter_description": "Födelsedag, som standard Ingen",
+                            "parameter_name": "födelsedag"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karaktär att ställa in födelsedagen för",
+                            "parameter_name": "ombud"
+                        },
+                        "variant": {
+                            "parameter_description": "Variant att ställa in födelsedagen för",
+                            "parameter_name": "variant"
+                        }
+                    }
+                },
+                "color": {
+                    "command_description": "Change the color of a variant."
+                },
+                "create": {
+                    "command_description": "Skapa en ny karaktär.",
+                    "command_name": "skapa",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Bild, som standard Ingen",
+                            "parameter_name": "bild"
+                        },
+                        "prefixes": {
+                            "parameter_description": "Prefixes e.g. A:text, |text|, etc."
+                        },
+                        "proxy": {
+                            "parameter_description": " Proxy för att skapa varianten för",
+                            "parameter_name": "ombud"
+                        }
+                    }
+                },
+                "delete": {
+                    "command_description": "Ta bort en karaktärs variant",
+                    "command_name": "radera",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Proxy att ta bort varianten från",
+                            "parameter_name": "ombud"
+                        },
+                        "variant": {
+                            "parameter_description": "Variant att radera",
+                            "parameter_name": "variant"
+                        }
+                    }
+                },
+                "description": {
+                    "command_description": "Ställ in beskrivningen för en karaktär",
+                    "command_name": "beskrivning",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Karaktär att ställa in beskrivningen för",
+                            "parameter_name": "ombud"
+                        },
+                        "text": {
+                            "parameter_description": "Beskrivning att ställa in för karaktären",
+                            "parameter_name": "text"
+                        },
+                        "variant": {
+                            "parameter_description": "Variant att ställa in beskrivningen för",
+                            "parameter_name": "variant"
+                        }
+                    }
+                },
+                "detail": {
+                    "command_description": "Få detaljer om en karaktär",
+                    "command_name": "detalj",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Detaljera en proxy. ",
+                            "parameter_name": "ombud"
+                        },
+                        "variant": {
+                            "parameter_description": "Variant till detalj",
+                            "parameter_name": "variant"
+                        }
+                    }
+                },
+                "find": {
+                    "command_description": "Find a variant."
+                },
+                "group": {
+                    "command_description": "Ställ in gruppen för en karaktär",
+                    "command_name": "grupp",
+                    "params": {
+                        "group": {
+                            "parameter_description": "Grupp, som standard Ingen",
+                            "parameter_name": "grupp"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karaktär att ställa in gruppen för",
+                            "parameter_name": "ombud"
+                        },
+                        "variant": {
+                            "parameter_description": "Variant att ställa in gruppen för",
+                            "parameter_name": "variant"
+                        }
+                    }
+                },
+                "list": {
+                    "command_description": "List all variants."
+                },
+                "local": {
+                    "command_description": "Ställ in det lokala för en karaktär",
+                    "command_name": "lokal",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Bild, som standard Ingen",
+                            "parameter_name": "bild"
+                        },
+                        "nickname": {
+                            "parameter_description": "Smeknamn, som standard Inget",
+                            "parameter_name": "smeknamn"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karaktär att ställa in den lokala för",
+                            "parameter_name": "ombud"
+                        },
+                        "variant": {
+                            "parameter_description": "Variant att ställa in den lokala för",
+                            "parameter_name": "variant"
+                        }
+                    }
+                },
+                "nickname": {
+                    "command_description": "Ställ in smeknamnet för en karaktär",
+                    "command_name": "smeknamn",
+                    "params": {
+                        "nickname": {
+                            "parameter_description": "Smeknamn att ange för karaktären",
+                            "parameter_name": "smeknamn"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karaktär att ställa in smeknamnet för",
+                            "parameter_name": "ombud"
+                        },
+                        "variant": {
+                            "parameter_description": "Variant att ställa in smeknamnet för",
+                            "parameter_name": "variant"
+                        }
+                    }
+                },
+                "nsfw": {
+                    "command_description": "Ställ in om ett tecken är NSFW",
+                    "command_name": "nsfw",
+                    "params": {
+                        "nsfw": {
+                            "parameter_description": "NSFW, byter som standard till motsatt värde",
+                            "parameter_name": "nsfw"
+                        },
+                        "proxy": {
+                            "parameter_description": "Tecken att ställa in NSFW för",
+                            "parameter_name": "ombud"
+                        },
+                        "variant": {
+                            "parameter_description": "Variant att ställa in NSFW för",
+                            "parameter_name": "variant"
+                        }
+                    }
+                },
+                "prefix": {
+                    "command_description": "Ställ in prefixen för ett tecken.",
+                    "command_name": "prefix",
+                    "params": {
+                        "prefixes": {
+                            "parameter_description": "Prefix t.ex. ",
+                            "parameter_name": "prefix"
+                        },
+                        "proxy": {
+                            "parameter_description": "Tecken att ställa in prefixet för",
+                            "parameter_name": "ombud"
+                        },
+                        "variant": {
+                            "parameter_description": "Variant att ställa in prefixet för",
+                            "parameter_name": "variant"
+                        }
+                    }
+                },
+                "prune": {
+                    "command_description": "Beskär tecken oanvända under en viss tid.",
+                    "command_name": "beskära",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "ombud"
+                        },
+                        "time": {
+                            "parameter_description": "Datum att beskära innan, som standard Ingen"
+                        }
+                    }
+                },
+                "purge": {
+                    "command_description": "Rensa alla dina data (förutom meddelandeloggar)",
+                    "command_name": "rena",
+                    "params": {
+                        "confirmation": {
+                            "parameter_description": "bekräftelse",
+                            "parameter_name": "bekräftelse"
+                        },
+                        "proxy": {
+                            "parameter_description": "ombud",
+                            "parameter_name": "ombud"
+                        }
+                    }
+                },
+                "read": {
+                    "command_description": "Läs en karaktär",
+                    "command_name": "läsa",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Karaktär att läsa varianten från",
+                            "parameter_name": "ombud"
+                        },
+                        "variant": {
+                            "parameter_description": "Variant att läsa",
+                            "parameter_name": "variant"
+                        }
+                    }
+                },
+                "rename": {
+                    "command_description": "Byt namn på en karaktär",
+                    "command_name": "rename",
+                    "params": {
+                        "name": {
+                            "parameter_description": "Nytt namn på karaktären",
+                            "parameter_name": "namn"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karaktär att byta namn på",
+                            "parameter_name": "ombud"
+                        },
+                        "variant": {
+                            "parameter_description": "Variant att byta namn på",
+                            "parameter_name": "variant"
+                        }
+                    }
+                },
+                "set": {
+                    "command_description": "Set a variant."
+                },
+                "update": {
+                    "command_description": "Uppdatera en proxy. ",
+                    "command_name": "uppdatering",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Bild, som standard Ingen",
+                            "parameter_name": "bild"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karaktär att uppdatera",
+                            "parameter_name": "ombud"
+                        }
+                    }
+                },
+                "use": {
+                    "command_description": "Use a variant."
+                }
+            },
+            "group_description": "Variant commands.",
+            "group_name": "var"
+        },
+        "variant-to-proxy": {
+            "command_description": "Konvertera en variant till en karaktär",
+            "command_name": "variant-till-proxy",
+            "params": {
+                "proxy": {
+                    "parameter_description": "Proxy att konvertera till",
+                    "parameter_name": "ombud"
+                },
+                "variant": {
+                    "parameter_description": "Variant att konvertera",
+                    "parameter_name": "variant"
+                }
+            }
+        }
+    },
+    "interactions": {
         "context_menu": {
             "command_name": "Ombud"
         }

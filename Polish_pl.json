@@ -1,304 +1,333 @@
 {
     "commands": {
-        "exec": {
-            "command_description": "Execute a command."
+        "afk": {
+            "command_description": "Check if a user is AFK."
         },
-        "proxy": {
-            "command_name": "pełnomocnik",
-            "command_description": "Wyłącz znaki na serwerze",
+        "auto": {
+            "command_description": "Ustaw auto dla postaci",
+            "command_name": "automatyczny",
             "params": {
-                "enable": {
-                    "parameter_name": "włączać",
-                    "parameter_description": "Włącz lub wyłącz znaki, domyślnie przełączniki"
+                "proxy": {
+                    "parameter_description": "Znak domyślnie wyłącza funkcję auto",
+                    "parameter_name": "pełnomocnik"
                 }
             }
         },
-        "set": {
-            "command_description": "Set a proxy as the current one."
-        },
-        "use": {
+        "avatar": {
+            "command_description": "Ustaw awatar dla postaci",
+            "command_name": "awatara",
             "params": {
-                "text": {
-                    "parameter_name": "tekst",
-                    "parameter_description": "tekst"
+                "avatar": {
+                    "parameter_description": "Adres URL obrazu, domyślnie Brak",
+                    "parameter_name": "awatara"
+                },
+                "proxy": {
+                    "parameter_description": "Postać, dla której chcesz ustawić awatar",
+                    "parameter_name": "pełnomocnik"
                 }
             }
         },
-        "say": {
+        "birthday": {
+            "command_description": "Ustaw datę urodzin postaci",
+            "command_name": "urodziny",
             "params": {
-                "text": {
-                    "parameter_name": "tekst",
-                    "parameter_description": "tekst"
+                "birthday": {
+                    "parameter_description": "Urodziny, domyślnie Brak",
+                    "parameter_name": "urodziny"
+                },
+                "proxy": {
+                    "parameter_description": "Postać, dla której chcesz ustawić urodziny",
+                    "parameter_name": "pełnomocnik"
                 }
             }
         },
-        "npc": {
-            "command_name": "npc",
-            "command_description": "Utwórz nową wiadomość NPC",
-            "params": {
-                "franchise": {
-                    "parameter_name": "franchise",
-                    "parameter_description": "Franczyza do wykorzystania",
-                    "choices": {
-                        "Pokemon": "Pokemon",
-                        "Pokemon Shiny": "Pokemon Shiny",
-                        "Trainer": "Trainer",
-                        "Digimon": "Digimon",
-                        "Palworld": "Palworld",
-                        "D&D": "D&D"
-                    }
-                },
-                "npc": {
-                    "parameter_name": "npc",
-                    "parameter_description": "NPC do użycia"
-                },
-                "nickname": {
-                    "parameter_name": "przezwisko",
-                    "parameter_description": "Pseudonim, domyślnie Brak"
-                },
-                "emotion": {
-                    "parameter_name": "emocja",
-                    "parameter_description": "Emocja, domyślnie Normalna",
-                    "choices": {
-                        "Normal": "Normal",
-                        "Happy": "Happy",
-                        "Pain": "Pain",
-                        "Angry": "Angry",
-                        "Worried": "Worried",
-                        "Sad": "Sad",
-                        "Crying": "Crying",
-                        "Shouting": "Shouting",
-                        "TearyEyed": "TearyEyed",
-                        "Determined": "Determined",
-                        "Joyous": "Joyous",
-                        "Inspired": "Inspired",
-                        "Surprised": "Surprised",
-                        "Dizzy": "Dizzy",
-                        "Sigh": "Sigh",
-                        "Stunned": "Stunned",
-                        "Special0": "Special0",
-                        "Special1": "Special1",
-                        "Special2": "Special2",
-                        "Special3": "Special3"
-                    }
-                },
-                "image": {
-                    "parameter_name": "obraz",
-                    "parameter_description": "Obraz, domyślnie Brak"
-                },
-                "text": {
-                    "parameter_name": "tekst",
-                    "parameter_description": "tekst"
-                }
-            }
+        "check_permissions": {
+            "command_description": "Sprawdź czy bot może działać na podanym kanale",
+            "command_name": "check_perms"
+        },
+        "color": {
+            "command_description": "Set a color for a proxy."
         },
         "create": {
-            "command_description": "Create a new proxy.",
+            "command_description": "Utwórz nową postać.",
+            "command_name": "tworzyć",
             "params": {
+                "image": {
+                    "parameter_description": "Obraz, domyślnie Brak",
+                    "parameter_name": "obraz"
+                },
                 "prefixes": {
                     "parameter_description": "Prefixes e.g. A:text, |text|, etc."
                 }
             }
         },
         "delete": {
-            "command_name": "usuwać",
             "command_description": "Usuń postać",
+            "command_name": "usuwać",
             "params": {
                 "proxy": {
-                    "parameter_name": "pełnomocnik",
-                    "parameter_description": "Serwer proxy, z którego chcesz usunąć wariant"
-                }
-            }
-        },
-        "read": {
-            "command_name": "czytać",
-            "command_description": "Przeczytaj znak",
-            "params": {
-                "proxy": {
-                    "parameter_name": "pełnomocnik",
-                    "parameter_description": "Znak, z którego ma zostać odczytany wariant"
-                }
-            }
-        },
-        "nickname": {
-            "command_name": "przezwisko",
-            "command_description": "Ustaw pseudonim dla postaci",
-            "params": {
-                "proxy": {
-                    "parameter_name": "pełnomocnik",
-                    "parameter_description": "Znak, dla którego chcesz ustawić pseudonim"
-                },
-                "nickname": {
-                    "parameter_name": "przezwisko",
-                    "parameter_description": "Pseudonim do ustawienia dla postaci"
-                }
-            }
-        },
-        "local": {
-            "command_name": "lokalny",
-            "command_description": "Ustaw lokalny dla znaku",
-            "params": {
-                "proxy": {
-                    "parameter_name": "pełnomocnik",
-                    "parameter_description": "Znak, dla którego ma zostać ustawiony lokalny"
-                },
-                "avatar": {
-                    "parameter_name": "obraz",
-                    "parameter_description": "Obraz, domyślnie Brak"
-                },
-                "nickname": {
-                    "parameter_name": "przezwisko",
-                    "parameter_description": "Pseudonim, domyślnie Brak"
-                }
-            }
-        },
-        "avatar": {
-            "command_name": "awatara",
-            "command_description": "Ustaw awatar dla postaci",
-            "params": {
-                "proxy": {
-                    "parameter_name": "pełnomocnik",
-                    "parameter_description": "Postać, dla której chcesz ustawić awatar"
-                },
-                "avatar": {
-                    "parameter_name": "awatara",
-                    "parameter_description": "Adres URL obrazu, domyślnie Brak"
-                }
-            }
-        },
-        "prefix": {
-            "command_name": "prefiks",
-            "command_description": "Ustaw przedrostki znaku.",
-            "params": {
-                "proxy": {
-                    "parameter_name": "pełnomocnik",
-                    "parameter_description": "Znak, dla którego ma zostać ustawiony przedrostek"
-                },
-                "prefixes": {
-                    "parameter_name": "przedrostki",
-                    "parameter_description": "Przedrostki np. "
-                }
-            }
-        },
-        "birthday": {
-            "command_name": "urodziny",
-            "command_description": "Ustaw datę urodzin postaci",
-            "params": {
-                "proxy": {
-                    "parameter_name": "pełnomocnik",
-                    "parameter_description": "Postać, dla której chcesz ustawić urodziny"
-                },
-                "birthday": {
-                    "parameter_name": "urodziny",
-                    "parameter_description": "Urodziny, domyślnie Brak"
+                    "parameter_description": "Serwer proxy, z którego chcesz usunąć wariant",
+                    "parameter_name": "pełnomocnik"
                 }
             }
         },
         "description": {
-            "command_name": "opis",
             "command_description": "Ustaw opis postaci",
+            "command_name": "opis",
             "params": {
                 "proxy": {
-                    "parameter_name": "pełnomocnik",
-                    "parameter_description": "Znak, dla którego należy ustawić opis"
+                    "parameter_description": "Znak, dla którego należy ustawić opis",
+                    "parameter_name": "pełnomocnik"
                 },
                 "text": {
-                    "parameter_name": "tekst",
-                    "parameter_description": "Opis do ustawienia dla znaku"
+                    "parameter_description": "Opis do ustawienia dla znaku",
+                    "parameter_name": "tekst"
                 }
             }
         },
-        "rename": {
-            "command_name": "przemianować",
-            "command_description": "Zmień nazwę postaci",
+        "detail": {
+            "command_description": "Uzyskaj szczegółowe informacje o postaci",
+            "command_name": "szczegół",
             "params": {
                 "proxy": {
-                    "parameter_name": "pełnomocnik",
-                    "parameter_description": "Znak do zmiany nazwy"
+                    "parameter_description": "Wyszczególnij proxy. ",
+                    "parameter_name": "pełnomocnik"
+                }
+            }
+        },
+        "exec": {
+            "command_description": "Execute a command."
+        },
+        "export": {
+            "command_description": "Eksportuj swoje postacie do pliku JSON",
+            "command_name": "eksport",
+            "params": {
+                "format": {
+                    "choices": {
+                        "Default": "Default",
+                        "PluralKit": "PluralKit",
+                        "Tupperbox": "Tupperbox"
+                    },
+                    "parameter_description": "Format do eksportu, domyślnie JSON",
+                    "parameter_name": "format"
                 },
-                "name": {
-                    "parameter_name": "nazwa",
-                    "parameter_description": "Nowa nazwa postaci"
+                "new_token": {
+                    "parameter_description": "Jeśli chcesz wygenerować nowy token",
+                    "parameter_name": "nowy_token"
                 }
             }
         },
         "group": {
-            "command_name": "grupa",
             "command_description": "Ustaw grupę dla postaci",
-            "params": {
-                "proxy": {
-                    "parameter_name": "pełnomocnik",
-                    "parameter_description": "Znak, dla którego ma zostać ustawiona grupa"
-                },
-                "group": {
-                    "parameter_name": "grupa",
-                    "parameter_description": "Grupa, domyślnie Brak"
-                }
-            }
-        },
-        "nsfw": {
-            "command_name": "nsfw",
-            "command_description": "Ustaw, czy postać jest NSFW",
-            "params": {
-                "proxy": {
-                    "parameter_name": "pełnomocnik",
-                    "parameter_description": "Znak, dla którego ma zostać ustawiony NSFW"
-                },
-                "nsfw": {
-                    "parameter_name": "nsfw",
-                    "parameter_description": "NSFW, domyślnie przełącza na wartość przeciwną"
-                }
-            }
-        },
-        "auto": {
-            "command_name": "automatyczny",
-            "command_description": "Ustaw auto dla postaci",
-            "params": {
-                "proxy": {
-                    "parameter_name": "pełnomocnik",
-                    "parameter_description": "Znak domyślnie wyłącza funkcję auto"
-                }
-            }
-        },
-        "list": {
-            "command_name": "lista",
-            "command_description": "Lista wszystkich znaków ",
+            "command_name": "grupa",
             "params": {
                 "group": {
-                    "parameter_name": "grupa",
-                    "parameter_description": "Grupa, z której chcesz wyświetlić listę znaków"
+                    "parameter_description": "Grupa, domyślnie Brak",
+                    "parameter_name": "grupa"
+                },
+                "proxy": {
+                    "parameter_description": "Znak, dla którego ma zostać ustawiona grupa",
+                    "parameter_name": "pełnomocnik"
+                }
+            }
+        },
+        "help": {
+            "command_description": "Wbudowana pomoc dla botów",
+            "command_name": "pomoc",
+            "params": {
+                "search": {
+                    "parameter_description": "Szukany termin",
+                    "parameter_name": "szukaj"
+                }
+            }
+        },
+        "import": {
+            "command_description": "Zaimportuj swoje postacie z pliku lub tokena",
+            "command_name": "import",
+            "params": {
+                "data": {
+                    "parameter_description": "Plik, z którego chcesz importować",
+                    "parameter_name": "dane"
+                },
+                "deleting_from_token": {
+                    "parameter_description": "Usuń znaki z tokena",
+                    "parameter_name": "usuwanie_z_tokenu"
+                },
+                "token": {
+                    "parameter_description": "Token używany do importowania",
+                    "parameter_name": "znak"
                 }
             }
         },
         "latch": {
-            "command_name": "zatrzask",
             "command_description": "Włącz lub wyłącz tryb zatrzasku",
+            "command_name": "zatrzask",
             "params": {
-                "enable": {
-                    "parameter_description": "Włącz lub wyłącz tryb zatrzasku"
-                },
                 "auto_remove": {
                     "parameter_description": "Niezależnie od tego, czy zachować opcję automatyczną dla bieżącego kanału, czy nie, domyślnie True"
+                },
+                "enable": {
+                    "parameter_description": "Włącz lub wyłącz tryb zatrzasku"
                 }
             }
         },
-        "export": {
-            "command_name": "eksport",
-            "command_description": "Eksportuj swoje postacie do pliku JSON",
+        "list": {
+            "command_description": "Lista wszystkich znaków ",
+            "command_name": "lista",
             "params": {
-                "format": {
-                    "parameter_name": "format",
-                    "parameter_description": "Format do eksportu, domyślnie JSON"
+                "group": {
+                    "parameter_description": "Grupa, z której chcesz wyświetlić listę znaków",
+                    "parameter_name": "grupa"
+                }
+            }
+        },
+        "local": {
+            "command_description": "Ustaw lokalny dla znaku",
+            "command_name": "lokalny",
+            "params": {
+                "avatar": {
+                    "parameter_description": "Obraz, domyślnie Brak",
+                    "parameter_name": "obraz"
                 },
-                "new_token": {
-                    "parameter_name": "nowy_token",
-                    "parameter_description": "Jeśli chcesz wygenerować nowy token"
+                "nickname": {
+                    "parameter_description": "Pseudonim, domyślnie Brak",
+                    "parameter_name": "przezwisko"
+                },
+                "proxy": {
+                    "parameter_description": "Znak, dla którego ma zostać ustawiony lokalny",
+                    "parameter_name": "pełnomocnik"
+                }
+            }
+        },
+        "nickname": {
+            "command_description": "Ustaw pseudonim dla postaci",
+            "command_name": "przezwisko",
+            "params": {
+                "nickname": {
+                    "parameter_description": "Pseudonim do ustawienia dla postaci",
+                    "parameter_name": "przezwisko"
+                },
+                "proxy": {
+                    "parameter_description": "Znak, dla którego chcesz ustawić pseudonim",
+                    "parameter_name": "pełnomocnik"
+                }
+            }
+        },
+        "npc": {
+            "command_description": "Utwórz nową wiadomość NPC",
+            "command_name": "npc",
+            "params": {
+                "emotion": {
+                    "choices": {
+                        "Angry": "Angry",
+                        "Crying": "Crying",
+                        "Determined": "Determined",
+                        "Dizzy": "Dizzy",
+                        "Happy": "Happy",
+                        "Inspired": "Inspired",
+                        "Joyous": "Joyous",
+                        "Normal": "Normal",
+                        "Pain": "Pain",
+                        "Sad": "Sad",
+                        "Shouting": "Shouting",
+                        "Sigh": "Sigh",
+                        "Special0": "Special0",
+                        "Special1": "Special1",
+                        "Special2": "Special2",
+                        "Special3": "Special3",
+                        "Stunned": "Stunned",
+                        "Surprised": "Surprised",
+                        "TearyEyed": "TearyEyed",
+                        "Worried": "Worried"
+                    },
+                    "parameter_description": "Emocja, domyślnie Normalna",
+                    "parameter_name": "emocja"
+                },
+                "franchise": {
+                    "choices": {
+                        "D&D": "D&D",
+                        "Digimon": "Digimon",
+                        "Palworld": "Palworld",
+                        "Pokemon": "Pokemon",
+                        "Pokemon Shiny": "Pokemon Shiny",
+                        "Trainer": "Trainer"
+                    },
+                    "parameter_description": "Franczyza do wykorzystania",
+                    "parameter_name": "franczyzowa"
+                },
+                "image": {
+                    "parameter_description": "Obraz, domyślnie Brak",
+                    "parameter_name": "obraz"
+                },
+                "nickname": {
+                    "parameter_description": "Pseudonim, domyślnie Brak",
+                    "parameter_name": "przezwisko"
+                },
+                "npc": {
+                    "parameter_description": "NPC do użycia",
+                    "parameter_name": "npc"
+                },
+                "text": {
+                    "parameter_description": "tekst",
+                    "parameter_name": "tekst"
+                }
+            }
+        },
+        "nsfw": {
+            "command_description": "Ustaw, czy postać jest NSFW",
+            "command_name": "nsfw",
+            "params": {
+                "nsfw": {
+                    "parameter_description": "NSFW, domyślnie przełącza na wartość przeciwną",
+                    "parameter_name": "nsfw"
+                },
+                "proxy": {
+                    "parameter_description": "Znak, dla którego ma zostać ustawiony NSFW",
+                    "parameter_name": "pełnomocnik"
+                }
+            }
+        },
+        "prefix": {
+            "command_description": "Ustaw przedrostki znaku.",
+            "command_name": "prefiks",
+            "params": {
+                "prefixes": {
+                    "parameter_description": "Przedrostki np. ",
+                    "parameter_name": "przedrostki"
+                },
+                "proxy": {
+                    "parameter_description": "Znak, dla którego ma zostać ustawiony przedrostek",
+                    "parameter_name": "pełnomocnik"
+                }
+            }
+        },
+        "proxy": {
+            "command_description": "Wyłącz znaki na serwerze",
+            "command_name": "pełnomocnik",
+            "params": {
+                "enable": {
+                    "parameter_description": "Włącz lub wyłącz znaki, domyślnie przełączniki",
+                    "parameter_name": "włączać"
+                }
+            }
+        },
+        "proxy-to-variant": {
+            "command_description": "Konwertuj znak na wariant",
+            "command_name": "proxy-do-wariantu",
+            "params": {
+                "base": {
+                    "parameter_description": "Nowa baza dla postaci",
+                    "parameter_name": "baza"
+                },
+                "original": {
+                    "parameter_description": "Znak do konwersji",
+                    "parameter_name": "oryginalny"
                 }
             }
         },
         "prune": {
-            "command_name": "suszona_śliwka",
             "command_description": "Przytnij znaki nieużywane przez określony czas.",
+            "command_name": "suszona_śliwka",
             "params": {
                 "time": {
                     "parameter_description": "Data do przycięcia wcześniej, domyślnie Brak"
@@ -306,656 +335,674 @@
             }
         },
         "purge": {
-            "command_name": "oczyszczać",
             "command_description": "Usuń wszystkie dane (z wyjątkiem dzienników wiadomości)",
+            "command_name": "oczyszczać",
             "params": {
                 "confirmation": {
-                    "parameter_name": "potwierdzenie",
-                    "parameter_description": "potwierdzenie"
+                    "parameter_description": "potwierdzenie",
+                    "parameter_name": "potwierdzenie"
                 }
             }
         },
-        "proxy-to-variant": {
-            "command_name": "proxy-do-wariantu",
-            "command_description": "Konwertuj znak na wariant",
-            "params": {
-                "original": {
-                    "parameter_name": "oryginalny",
-                    "parameter_description": "Znak do konwersji"
-                },
-                "base": {
-                    "parameter_name": "baza",
-                    "parameter_description": "Nowa baza dla postaci"
-                }
-            }
-        },
-        "variant-to-proxy": {
-            "command_name": "wariant-do-proxy",
-            "command_description": "Konwertuj wariant na znak",
+        "read": {
+            "command_description": "Przeczytaj znak",
+            "command_name": "czytać",
             "params": {
                 "proxy": {
-                    "parameter_name": "pełnomocnik",
-                    "parameter_description": "Serwer proxy do konwersji"
-                },
-                "variant": {
-                    "parameter_name": "wariant",
-                    "parameter_description": "Wariant do konwersji"
+                    "parameter_description": "Znak, z którego ma zostać odczytany wariant",
+                    "parameter_name": "pełnomocnik"
                 }
             }
         },
-        "update": {
-            "command_name": "aktualizacja",
-            "command_description": "Zaktualizuj serwer proxy. ",
+        "rename": {
+            "command_description": "Zmień nazwę postaci",
+            "command_name": "przemianować",
             "params": {
+                "name": {
+                    "parameter_description": "Nowa nazwa postaci",
+                    "parameter_name": "nazwa"
+                },
                 "proxy": {
-                    "parameter_name": "pełnomocnik",
-                    "parameter_description": "Znak do aktualizacji"
-                },
-                "image": {
-                    "parameter_name": "obraz",
-                    "parameter_description": "Obraz, domyślnie Brak"
+                    "parameter_description": "Znak do zmiany nazwy",
+                    "parameter_name": "pełnomocnik"
                 }
             }
-        },
-        "detail": {
-            "command_name": "szczegół",
-            "command_description": "Uzyskaj szczegółowe informacje o postaci",
-            "params": {
-                "proxy": {
-                    "parameter_name": "pełnomocnik",
-                    "parameter_description": "Wyszczególnij proxy. "
-                }
-            }
-        },
-        "import": {
-            "command_name": "import",
-            "command_description": "Zaimportuj swoje postacie z pliku lub tokena",
-            "params": {
-                "data": {
-                    "parameter_name": "dane",
-                    "parameter_description": "Plik, z którego chcesz importować"
-                },
-                "token": {
-                    "parameter_name": "znak",
-                    "parameter_description": "Token używany do importowania"
-                },
-                "deleting_from_token": {
-                    "parameter_name": "usuwanie_z_tokenu",
-                    "parameter_description": "Usuń znaki z tokena"
-                }
-            }
-        },
-        "var": {
-            "group_name": "war",
-            "group_description": "Variant commands.",
-            "groupset": {
-                "command_description": "Set a variant."
-            },
-            "groupuse": {
-                "command_description": "Use a variant."
-            },
-            "groupcreate": {
-                "command_name": "tworzyć",
-                "command_description": "Utwórz nową postać.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "pełnomocnik",
-                        "parameter_description": " Serwer proxy, dla którego chcesz utworzyć wariant"
-                    },
-                    "image": {
-                        "parameter_name": "obraz",
-                        "parameter_description": "Obraz, domyślnie Brak"
-                    },
-                    "prefixes": {
-                        "parameter_description": "Prefixes e.g. A:text, |text|, etc."
-                    }
-                }
-            },
-            "groupdelete": {
-                "command_name": "usuwać",
-                "command_description": "Usuń wariant postaci",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "pełnomocnik",
-                        "parameter_description": "Serwer proxy, z którego chcesz usunąć wariant"
-                    },
-                    "variant": {
-                        "parameter_name": "wariant",
-                        "parameter_description": "Wariant do usunięcia"
-                    }
-                }
-            },
-            "groupread": {
-                "command_name": "czytać",
-                "command_description": "Przeczytaj znak",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "pełnomocnik",
-                        "parameter_description": "Znak, z którego ma zostać odczytany wariant"
-                    },
-                    "variant": {
-                        "parameter_name": "wariant",
-                        "parameter_description": "Wariant do przeczytania"
-                    }
-                }
-            },
-            "groupnickname": {
-                "command_name": "przezwisko",
-                "command_description": "Ustaw pseudonim dla postaci",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "pełnomocnik",
-                        "parameter_description": "Znak, dla którego chcesz ustawić pseudonim"
-                    },
-                    "variant": {
-                        "parameter_name": "wariant",
-                        "parameter_description": "Wariant, dla którego można ustawić pseudonim"
-                    },
-                    "nickname": {
-                        "parameter_name": "przezwisko",
-                        "parameter_description": "Pseudonim do ustawienia dla postaci"
-                    }
-                }
-            },
-            "grouplocal": {
-                "command_name": "lokalny",
-                "command_description": "Ustaw lokalny dla znaku",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "pełnomocnik",
-                        "parameter_description": "Znak, dla którego ma zostać ustawiony lokalny"
-                    },
-                    "variant": {
-                        "parameter_name": "wariant",
-                        "parameter_description": "Wariant, dla którego należy ustawić wartość lokalną"
-                    },
-                    "avatar": {
-                        "parameter_name": "obraz",
-                        "parameter_description": "Obraz, domyślnie Brak"
-                    },
-                    "nickname": {
-                        "parameter_name": "przezwisko",
-                        "parameter_description": "Pseudonim, domyślnie Brak"
-                    }
-                }
-            },
-            "groupprefix": {
-                "command_name": "prefiks",
-                "command_description": "Ustaw przedrostki znaku.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "pełnomocnik",
-                        "parameter_description": "Znak, dla którego ma zostać ustawiony przedrostek"
-                    },
-                    "variant": {
-                        "parameter_name": "wariant",
-                        "parameter_description": "Wariant, dla którego należy ustawić przedrostek"
-                    },
-                    "prefixes": {
-                        "parameter_name": "przedrostki",
-                        "parameter_description": "Przedrostki np. "
-                    }
-                }
-            },
-            "groupbirthday": {
-                "command_name": "urodziny",
-                "command_description": "Ustaw datę urodzin postaci",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "pełnomocnik",
-                        "parameter_description": "Postać, dla której chcesz ustawić urodziny"
-                    },
-                    "variant": {
-                        "parameter_name": "wariant",
-                        "parameter_description": "Wariant, dla którego można ustawić datę urodzin"
-                    },
-                    "birthday": {
-                        "parameter_name": "urodziny",
-                        "parameter_description": "Urodziny, domyślnie Brak"
-                    }
-                }
-            },
-            "groupdescription": {
-                "command_name": "opis",
-                "command_description": "Ustaw opis postaci",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "pełnomocnik",
-                        "parameter_description": "Znak, dla którego należy ustawić opis"
-                    },
-                    "variant": {
-                        "parameter_name": "wariant",
-                        "parameter_description": "Wariant, dla którego można ustawić opis"
-                    },
-                    "text": {
-                        "parameter_name": "tekst",
-                        "parameter_description": "Opis do ustawienia dla znaku"
-                    }
-                }
-            },
-            "grouprename": {
-                "command_name": "przemianować",
-                "command_description": "Zmień nazwę postaci",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "pełnomocnik",
-                        "parameter_description": "Znak do zmiany nazwy"
-                    },
-                    "variant": {
-                        "parameter_name": "wariant",
-                        "parameter_description": "Wariant do zmiany nazwy"
-                    },
-                    "name": {
-                        "parameter_name": "nazwa",
-                        "parameter_description": "Nowa nazwa postaci"
-                    }
-                }
-            },
-            "groupgroup": {
-                "command_name": "grupa",
-                "command_description": "Ustaw grupę dla postaci",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "pełnomocnik",
-                        "parameter_description": "Znak, dla którego ma zostać ustawiona grupa"
-                    },
-                    "variant": {
-                        "parameter_name": "wariant",
-                        "parameter_description": "Wariant, dla którego należy ustawić grupę"
-                    },
-                    "group": {
-                        "parameter_name": "grupa",
-                        "parameter_description": "Grupa, domyślnie Brak"
-                    }
-                }
-            },
-            "groupnsfw": {
-                "command_name": "nsfw",
-                "command_description": "Ustaw, czy postać jest NSFW",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "pełnomocnik",
-                        "parameter_description": "Znak, dla którego ma zostać ustawiony NSFW"
-                    },
-                    "variant": {
-                        "parameter_name": "wariant",
-                        "parameter_description": "Wariant, dla którego należy ustawić NSFW"
-                    },
-                    "nsfw": {
-                        "parameter_name": "nsfw",
-                        "parameter_description": "NSFW, domyślnie przełącza na wartość przeciwną"
-                    }
-                }
-            },
-            "groupauto": {
-                "command_name": "automatyczny",
-                "command_description": "Ustaw auto dla postaci",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "pełnomocnik",
-                        "parameter_description": "Znak domyślnie wyłącza funkcję auto"
-                    },
-                    "variant": {
-                        "parameter_name": "wariant",
-                        "parameter_description": "Wariant, dla którego można ustawić automat"
-                    }
-                }
-            },
-            "groupavatar": {
-                "command_name": "awatara",
-                "command_description": "Ustaw awatar dla postaci",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "pełnomocnik",
-                        "parameter_description": "Postać, dla której chcesz ustawić awatar"
-                    },
-                    "variant": {
-                        "parameter_name": "wariant",
-                        "parameter_description": "Wariant, dla którego można ustawić awatar"
-                    },
-                    "avatar": {
-                        "parameter_name": "awatara",
-                        "parameter_description": "Adres URL obrazu, domyślnie Brak"
-                    }
-                }
-            },
-            "grouplist": {
-                "command_description": "List all variants."
-            },
-            "groupfind": {
-                "command_description": "Find a variant."
-            },
-            "groupupdate": {
-                "command_name": "aktualizacja",
-                "command_description": "Zaktualizuj serwer proxy. ",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "pełnomocnik",
-                        "parameter_description": "Znak do aktualizacji"
-                    },
-                    "image": {
-                        "parameter_name": "obraz",
-                        "parameter_description": "Obraz, domyślnie Brak"
-                    }
-                }
-            },
-            "groupdetail": {
-                "command_name": "szczegół",
-                "command_description": "Uzyskaj szczegółowe informacje o postaci",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "pełnomocnik",
-                        "parameter_description": "Wyszczególnij proxy. "
-                    },
-                    "variant": {
-                        "parameter_name": "wariant",
-                        "parameter_description": "Wariant do szczegółów"
-                    }
-                }
-            },
-            "groupprune": {
-                "command_name": "suszona_śliwka",
-                "command_description": "Przytnij znaki nieużywane przez określony czas.",
-                "params": {
-                    "proxy": {
-                        "parameter_description": "pełnomocnik"
-                    },
-                    "time": {
-                        "parameter_description": "Data do przycięcia wcześniej, domyślnie Brak"
-                    }
-                }
-            },
-            "grouppurge": {
-                "command_name": "oczyszczać",
-                "command_description": "Usuń wszystkie dane (z wyjątkiem dzienników wiadomości)",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "pełnomocnik",
-                        "parameter_description": "pełnomocnik"
-                    },
-                    "confirmation": {
-                        "parameter_name": "potwierdzenie",
-                        "parameter_description": "potwierdzenie"
-                    }
-                }
-            }
-        },
-        "shared": {
-            "group_description": "Shared proxy commands.",
-            "groupset": {
-                "command_description": "Set a proxy as the current one."
-            },
-            "groupcreate": {
-                "command_name": "tworzyć",
-                "command_description": "Utwórz nową postać.",
-                "params": {
-                    "image": {
-                        "parameter_name": "obraz",
-                        "parameter_description": "Obraz, domyślnie Brak"
-                    }
-                }
-            },
-            "groupdelete": {
-                "command_name": "usuwać",
-                "command_description": "Usuń postać",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "pełnomocnik",
-                        "parameter_description": "Serwer proxy, z którego chcesz usunąć wariant"
-                    }
-                }
-            },
-            "groupread": {
-                "command_name": "czytać",
-                "command_description": "Przeczytaj znak",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "pełnomocnik",
-                        "parameter_description": "Znak, z którego ma zostać odczytany wariant"
-                    }
-                }
-            },
-            "groupauto": {
-                "command_name": "automatyczny",
-                "command_description": "Ustaw auto dla postaci",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "pełnomocnik",
-                        "parameter_description": "Znak domyślnie wyłącza funkcję auto"
-                    }
-                }
-            },
-            "groupprefix": {
-                "command_name": "prefiks",
-                "command_description": "Ustaw przedrostki znaku.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "pełnomocnik",
-                        "parameter_description": "Znak, dla którego ma zostać ustawiony przedrostek"
-                    },
-                    "prefixes": {
-                        "parameter_name": "przedrostki",
-                        "parameter_description": "Przedrostki np. "
-                    }
-                }
-            },
-            "groupbirthday": {
-                "command_name": "urodziny",
-                "command_description": "Ustaw datę urodzin postaci",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "pełnomocnik",
-                        "parameter_description": "Postać, dla której chcesz ustawić urodziny"
-                    },
-                    "birthday": {
-                        "parameter_name": "urodziny",
-                        "parameter_description": "Urodziny, domyślnie Brak"
-                    }
-                }
-            },
-            "groupdescription": {
-                "command_name": "opis",
-                "command_description": "Ustaw opis postaci",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "pełnomocnik",
-                        "parameter_description": "Znak, dla którego należy ustawić opis"
-                    },
-                    "text": {
-                        "parameter_name": "tekst",
-                        "parameter_description": "Opis do ustawienia dla znaku"
-                    }
-                }
-            },
-            "grouprename": {
-                "command_name": "przemianować",
-                "command_description": "Zmień nazwę postaci",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "pełnomocnik",
-                        "parameter_description": "Znak do zmiany nazwy"
-                    },
-                    "name": {
-                        "parameter_name": "nazwa",
-                        "parameter_description": "Nowa nazwa postaci"
-                    }
-                }
-            },
-            "groupnickname": {
-                "command_name": "przezwisko",
-                "command_description": "Ustaw pseudonim dla postaci",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "pełnomocnik",
-                        "parameter_description": "Znak, dla którego chcesz ustawić pseudonim"
-                    },
-                    "nickname": {
-                        "parameter_name": "przezwisko",
-                        "parameter_description": "Pseudonim do ustawienia dla postaci"
-                    }
-                }
-            },
-            "groupgroup": {
-                "command_name": "grupa",
-                "command_description": "Ustaw grupę dla postaci",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "pełnomocnik",
-                        "parameter_description": "Znak, dla którego ma zostać ustawiona grupa"
-                    },
-                    "group": {
-                        "parameter_name": "grupa",
-                        "parameter_description": "Grupa, domyślnie Brak"
-                    }
-                }
-            },
-            "groupnsfw": {
-                "command_name": "nsfw",
-                "command_description": "Ustaw, czy postać jest NSFW",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "pełnomocnik",
-                        "parameter_description": "Znak, dla którego ma zostać ustawiony NSFW"
-                    },
-                    "nsfw": {
-                        "parameter_name": "nsfw",
-                        "parameter_description": "NSFW, domyślnie przełącza na wartość przeciwną"
-                    }
-                }
-            },
-            "groupavatar": {
-                "command_name": "awatara",
-                "command_description": "Ustaw awatar dla postaci",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "pełnomocnik",
-                        "parameter_description": "Postać, dla której chcesz ustawić awatar"
-                    },
-                    "avatar": {
-                        "parameter_name": "awatara",
-                        "parameter_description": "Adres URL obrazu, domyślnie Brak"
-                    }
-                }
-            },
-            "groupimage": {
-                "params": {
-                    "proxy": {
-                        "parameter_name": "pełnomocnik",
-                        "parameter_description": "Postać, dla której chcesz ustawić awatar"
-                    },
-                    "avatar": {
-                        "parameter_name": "awatara",
-                        "parameter_description": "Adres URL obrazu, domyślnie Brak"
-                    }
-                }
-            },
-            "grouplocal": {
-                "command_name": "lokalny",
-                "command_description": "Ustaw lokalny dla znaku",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "pełnomocnik",
-                        "parameter_description": "Znak, dla którego ma zostać ustawiony lokalny"
-                    },
-                    "avatar": {
-                        "parameter_name": "obraz",
-                        "parameter_description": "Obraz, domyślnie Brak"
-                    },
-                    "nickname": {
-                        "parameter_name": "przezwisko",
-                        "parameter_description": "Pseudonim, domyślnie Brak"
-                    }
-                }
-            },
-            "groupupdate": {
-                "command_name": "aktualizacja",
-                "command_description": "Zaktualizuj serwer proxy. ",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "pełnomocnik",
-                        "parameter_description": "Znak do aktualizacji"
-                    },
-                    "image": {
-                        "parameter_name": "obraz",
-                        "parameter_description": "Obraz, domyślnie Brak"
-                    }
-                }
-            },
-            "groupdetail": {
-                "command_name": "szczegół",
-                "command_description": "Uzyskaj szczegółowe informacje o postaci",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "pełnomocnik",
-                        "parameter_description": "Wyszczególnij proxy. "
-                    }
-                }
-            },
-            "groupprune": {
-                "command_name": "suszona_śliwka",
-                "command_description": "Przytnij znaki nieużywane przez określony czas.",
-                "params": {
-                    "time": {
-                        "parameter_description": "Data do przycięcia wcześniej, domyślnie Brak"
-                    }
-                }
-            },
-            "grouppurge": {
-                "command_name": "oczyszczać",
-                "command_description": "Usuń wszystkie dane (z wyjątkiem dzienników wiadomości)",
-                "params": {
-                    "confirmation": {
-                        "parameter_name": "potwierdzenie",
-                        "parameter_description": "potwierdzenie"
-                    }
-                }
-            }
-        },
-        "check_permissions": {
-            "command_name": "check_perms",
-            "command_description": "Sprawdź czy bot może działać na podanym kanale"
         },
         "roll": {
             "command_description": "Roll a dice."
         },
-        "afk": {
-            "command_description": "Check if a user is AFK."
-        },
-        "help": {
-            "command_name": "pomoc",
-            "command_description": "Wbudowana pomoc dla botów",
+        "say": {
+            "command_description": "Say something.",
             "params": {
-                "search": {
-                    "parameter_name": "szukaj",
-                    "parameter_description": "Szukany termin"
+                "text": {
+                    "parameter_description": "tekst",
+                    "parameter_name": "tekst"
                 }
             }
         },
         "server_wiki": {
-            "command_name": "serwer_wiki",
             "command_description": "Wiki serwera zdefiniowanego przez użytkownika",
+            "command_name": "serwer_wiki",
             "params": {
                 "search": {
-                    "parameter_name": "szukaj",
-                    "parameter_description": "Szukany termin"
+                    "parameter_description": "Szukany termin",
+                    "parameter_name": "szukaj"
                 }
             }
         },
+        "set": {
+            "command_description": "Set a proxy as the current one."
+        },
         "settings": {
-            "command_name": "ustawienia",
             "command_description": "Ustawienia bota",
+            "command_name": "ustawienia",
             "params": {
                 "menu": {
-                    "parameter_name": "menu",
-                    "parameter_description": "Menu umożliwiające otwarcie ustawień",
                     "choices": {
-                        "Server": "serwer",
-                        "Member": "Członek",
-                        "User": "Użytkownik"
+                        "Member": "Member",
+                        "Server": "Server",
+                        "User": "User"
+                    },
+                    "parameter_description": "Menu umożliwiające otwarcie ustawień",
+                    "parameter_name": "menu"
+                }
+            }
+        },
+        "shared": {
+            "group": {
+                "auto": {
+                    "command_description": "Ustaw auto dla postaci",
+                    "command_name": "automatyczny",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Znak domyślnie wyłącza funkcję auto",
+                            "parameter_name": "pełnomocnik"
+                        }
+                    }
+                },
+                "avatar": {
+                    "command_description": "Ustaw awatar dla postaci",
+                    "command_name": "awatara",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Adres URL obrazu, domyślnie Brak",
+                            "parameter_name": "awatara"
+                        },
+                        "proxy": {
+                            "parameter_description": "Postać, dla której chcesz ustawić awatar",
+                            "parameter_name": "pełnomocnik"
+                        }
+                    }
+                },
+                "birthday": {
+                    "command_description": "Ustaw datę urodzin postaci",
+                    "command_name": "urodziny",
+                    "params": {
+                        "birthday": {
+                            "parameter_description": "Urodziny, domyślnie Brak",
+                            "parameter_name": "urodziny"
+                        },
+                        "proxy": {
+                            "parameter_description": "Postać, dla której chcesz ustawić urodziny",
+                            "parameter_name": "pełnomocnik"
+                        }
+                    }
+                },
+                "color": {
+                    "command_description": "Set the color for a proxy."
+                },
+                "create": {
+                    "command_description": "Utwórz nową postać.",
+                    "command_name": "tworzyć",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Obraz, domyślnie Brak",
+                            "parameter_name": "obraz"
+                        }
+                    }
+                },
+                "delete": {
+                    "command_description": "Usuń postać",
+                    "command_name": "usuwać",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Serwer proxy, z którego chcesz usunąć wariant",
+                            "parameter_name": "pełnomocnik"
+                        }
+                    }
+                },
+                "description": {
+                    "command_description": "Ustaw opis postaci",
+                    "command_name": "opis",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Znak, dla którego należy ustawić opis",
+                            "parameter_name": "pełnomocnik"
+                        },
+                        "text": {
+                            "parameter_description": "Opis do ustawienia dla znaku",
+                            "parameter_name": "tekst"
+                        }
+                    }
+                },
+                "detail": {
+                    "command_description": "Uzyskaj szczegółowe informacje o postaci",
+                    "command_name": "szczegół",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Wyszczególnij proxy. ",
+                            "parameter_name": "pełnomocnik"
+                        }
+                    }
+                },
+                "find": {
+                    "command_description": "Find a proxy."
+                },
+                "group": {
+                    "command_description": "Ustaw grupę dla postaci",
+                    "command_name": "grupa",
+                    "params": {
+                        "group": {
+                            "parameter_description": "Grupa, domyślnie Brak",
+                            "parameter_name": "grupa"
+                        },
+                        "proxy": {
+                            "parameter_description": "Znak, dla którego ma zostać ustawiona grupa",
+                            "parameter_name": "pełnomocnik"
+                        }
+                    }
+                },
+                "image": {
+                    "command_description": "Set the image for a proxy.",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Adres URL obrazu, domyślnie Brak",
+                            "parameter_name": "awatara"
+                        },
+                        "proxy": {
+                            "parameter_description": "Postać, dla której chcesz ustawić awatar",
+                            "parameter_name": "pełnomocnik"
+                        }
+                    }
+                },
+                "list": {
+                    "command_description": "List all proxies."
+                },
+                "local": {
+                    "command_description": "Ustaw lokalny dla znaku",
+                    "command_name": "lokalny",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Obraz, domyślnie Brak",
+                            "parameter_name": "obraz"
+                        },
+                        "nickname": {
+                            "parameter_description": "Pseudonim, domyślnie Brak",
+                            "parameter_name": "przezwisko"
+                        },
+                        "proxy": {
+                            "parameter_description": "Znak, dla którego ma zostać ustawiony lokalny",
+                            "parameter_name": "pełnomocnik"
+                        }
+                    }
+                },
+                "nickname": {
+                    "command_description": "Ustaw pseudonim dla postaci",
+                    "command_name": "przezwisko",
+                    "params": {
+                        "nickname": {
+                            "parameter_description": "Pseudonim do ustawienia dla postaci",
+                            "parameter_name": "przezwisko"
+                        },
+                        "proxy": {
+                            "parameter_description": "Znak, dla którego chcesz ustawić pseudonim",
+                            "parameter_name": "pełnomocnik"
+                        }
+                    }
+                },
+                "nsfw": {
+                    "command_description": "Ustaw, czy postać jest NSFW",
+                    "command_name": "nsfw",
+                    "params": {
+                        "nsfw": {
+                            "parameter_description": "NSFW, domyślnie przełącza na wartość przeciwną",
+                            "parameter_name": "nsfw"
+                        },
+                        "proxy": {
+                            "parameter_description": "Znak, dla którego ma zostać ustawiony NSFW",
+                            "parameter_name": "pełnomocnik"
+                        }
+                    }
+                },
+                "prefix": {
+                    "command_description": "Ustaw przedrostki znaku.",
+                    "command_name": "prefiks",
+                    "params": {
+                        "prefixes": {
+                            "parameter_description": "Przedrostki np. ",
+                            "parameter_name": "przedrostki"
+                        },
+                        "proxy": {
+                            "parameter_description": "Znak, dla którego ma zostać ustawiony przedrostek",
+                            "parameter_name": "pełnomocnik"
+                        }
+                    }
+                },
+                "prune": {
+                    "command_description": "Przytnij znaki nieużywane przez określony czas.",
+                    "command_name": "suszona_śliwka",
+                    "params": {
+                        "time": {
+                            "parameter_description": "Data do przycięcia wcześniej, domyślnie Brak"
+                        }
+                    }
+                },
+                "purge": {
+                    "command_description": "Usuń wszystkie dane (z wyjątkiem dzienników wiadomości)",
+                    "command_name": "oczyszczać",
+                    "params": {
+                        "confirmation": {
+                            "parameter_description": "potwierdzenie",
+                            "parameter_name": "potwierdzenie"
+                        }
+                    }
+                },
+                "read": {
+                    "command_description": "Przeczytaj znak",
+                    "command_name": "czytać",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Znak, z którego ma zostać odczytany wariant",
+                            "parameter_name": "pełnomocnik"
+                        }
+                    }
+                },
+                "rename": {
+                    "command_description": "Zmień nazwę postaci",
+                    "command_name": "przemianować",
+                    "params": {
+                        "name": {
+                            "parameter_description": "Nowa nazwa postaci",
+                            "parameter_name": "nazwa"
+                        },
+                        "proxy": {
+                            "parameter_description": "Znak do zmiany nazwy",
+                            "parameter_name": "pełnomocnik"
+                        }
+                    }
+                },
+                "set": {
+                    "command_description": "Set a proxy as the current one."
+                },
+                "update": {
+                    "command_description": "Zaktualizuj serwer proxy. ",
+                    "command_name": "aktualizacja",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Obraz, domyślnie Brak",
+                            "parameter_name": "obraz"
+                        },
+                        "proxy": {
+                            "parameter_description": "Znak do aktualizacji",
+                            "parameter_name": "pełnomocnik"
+                        }
+                    }
+                },
+                "use": {
+                    "command_description": "Use a proxy."
+                }
+            },
+            "group_description": "Shared proxy commands."
+        },
+        "store": {
+            "params": {
+                "storage": {
+                    "choices": {
+                        "Global": "Global",
+                        "Local": "Local"
                     }
                 }
             }
         },
+        "update": {
+            "command_description": "Zaktualizuj serwer proxy. ",
+            "command_name": "aktualizacja",
+            "params": {
+                "image": {
+                    "parameter_description": "Obraz, domyślnie Brak",
+                    "parameter_name": "obraz"
+                },
+                "proxy": {
+                    "parameter_description": "Znak do aktualizacji",
+                    "parameter_name": "pełnomocnik"
+                }
+            }
+        },
+        "use": {
+            "command_description": "Use a proxy.",
+            "params": {
+                "text": {
+                    "parameter_description": "tekst",
+                    "parameter_name": "tekst"
+                }
+            }
+        },
+        "var": {
+            "group": {
+                "auto": {
+                    "command_description": "Ustaw auto dla postaci",
+                    "command_name": "automatyczny",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Znak domyślnie wyłącza funkcję auto",
+                            "parameter_name": "pełnomocnik"
+                        },
+                        "variant": {
+                            "parameter_description": "Wariant, dla którego można ustawić automat",
+                            "parameter_name": "wariant"
+                        }
+                    }
+                },
+                "avatar": {
+                    "command_description": "Ustaw awatar dla postaci",
+                    "command_name": "awatara",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Adres URL obrazu, domyślnie Brak",
+                            "parameter_name": "awatara"
+                        },
+                        "proxy": {
+                            "parameter_description": "Postać, dla której chcesz ustawić awatar",
+                            "parameter_name": "pełnomocnik"
+                        },
+                        "variant": {
+                            "parameter_description": "Wariant, dla którego można ustawić awatar",
+                            "parameter_name": "wariant"
+                        }
+                    }
+                },
+                "birthday": {
+                    "command_description": "Ustaw datę urodzin postaci",
+                    "command_name": "urodziny",
+                    "params": {
+                        "birthday": {
+                            "parameter_description": "Urodziny, domyślnie Brak",
+                            "parameter_name": "urodziny"
+                        },
+                        "proxy": {
+                            "parameter_description": "Postać, dla której chcesz ustawić urodziny",
+                            "parameter_name": "pełnomocnik"
+                        },
+                        "variant": {
+                            "parameter_description": "Wariant, dla którego można ustawić datę urodzin",
+                            "parameter_name": "wariant"
+                        }
+                    }
+                },
+                "color": {
+                    "command_description": "Change the color of a variant."
+                },
+                "create": {
+                    "command_description": "Utwórz nową postać.",
+                    "command_name": "tworzyć",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Obraz, domyślnie Brak",
+                            "parameter_name": "obraz"
+                        },
+                        "prefixes": {
+                            "parameter_description": "Prefixes e.g. A:text, |text|, etc."
+                        },
+                        "proxy": {
+                            "parameter_description": " Serwer proxy, dla którego chcesz utworzyć wariant",
+                            "parameter_name": "pełnomocnik"
+                        }
+                    }
+                },
+                "delete": {
+                    "command_description": "Usuń wariant postaci",
+                    "command_name": "usuwać",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Serwer proxy, z którego chcesz usunąć wariant",
+                            "parameter_name": "pełnomocnik"
+                        },
+                        "variant": {
+                            "parameter_description": "Wariant do usunięcia",
+                            "parameter_name": "wariant"
+                        }
+                    }
+                },
+                "description": {
+                    "command_description": "Ustaw opis postaci",
+                    "command_name": "opis",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Znak, dla którego należy ustawić opis",
+                            "parameter_name": "pełnomocnik"
+                        },
+                        "text": {
+                            "parameter_description": "Opis do ustawienia dla znaku",
+                            "parameter_name": "tekst"
+                        },
+                        "variant": {
+                            "parameter_description": "Wariant, dla którego można ustawić opis",
+                            "parameter_name": "wariant"
+                        }
+                    }
+                },
+                "detail": {
+                    "command_description": "Uzyskaj szczegółowe informacje o postaci",
+                    "command_name": "szczegół",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Wyszczególnij proxy. ",
+                            "parameter_name": "pełnomocnik"
+                        },
+                        "variant": {
+                            "parameter_description": "Wariant do szczegółów",
+                            "parameter_name": "wariant"
+                        }
+                    }
+                },
+                "find": {
+                    "command_description": "Find a variant."
+                },
+                "group": {
+                    "command_description": "Ustaw grupę dla postaci",
+                    "command_name": "grupa",
+                    "params": {
+                        "group": {
+                            "parameter_description": "Grupa, domyślnie Brak",
+                            "parameter_name": "grupa"
+                        },
+                        "proxy": {
+                            "parameter_description": "Znak, dla którego ma zostać ustawiona grupa",
+                            "parameter_name": "pełnomocnik"
+                        },
+                        "variant": {
+                            "parameter_description": "Wariant, dla którego należy ustawić grupę",
+                            "parameter_name": "wariant"
+                        }
+                    }
+                },
+                "list": {
+                    "command_description": "List all variants."
+                },
+                "local": {
+                    "command_description": "Ustaw lokalny dla znaku",
+                    "command_name": "lokalny",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Obraz, domyślnie Brak",
+                            "parameter_name": "obraz"
+                        },
+                        "nickname": {
+                            "parameter_description": "Pseudonim, domyślnie Brak",
+                            "parameter_name": "przezwisko"
+                        },
+                        "proxy": {
+                            "parameter_description": "Znak, dla którego ma zostać ustawiony lokalny",
+                            "parameter_name": "pełnomocnik"
+                        },
+                        "variant": {
+                            "parameter_description": "Wariant, dla którego należy ustawić wartość lokalną",
+                            "parameter_name": "wariant"
+                        }
+                    }
+                },
+                "nickname": {
+                    "command_description": "Ustaw pseudonim dla postaci",
+                    "command_name": "przezwisko",
+                    "params": {
+                        "nickname": {
+                            "parameter_description": "Pseudonim do ustawienia dla postaci",
+                            "parameter_name": "przezwisko"
+                        },
+                        "proxy": {
+                            "parameter_description": "Znak, dla którego chcesz ustawić pseudonim",
+                            "parameter_name": "pełnomocnik"
+                        },
+                        "variant": {
+                            "parameter_description": "Wariant, dla którego można ustawić pseudonim",
+                            "parameter_name": "wariant"
+                        }
+                    }
+                },
+                "nsfw": {
+                    "command_description": "Ustaw, czy postać jest NSFW",
+                    "command_name": "nsfw",
+                    "params": {
+                        "nsfw": {
+                            "parameter_description": "NSFW, domyślnie przełącza na wartość przeciwną",
+                            "parameter_name": "nsfw"
+                        },
+                        "proxy": {
+                            "parameter_description": "Znak, dla którego ma zostać ustawiony NSFW",
+                            "parameter_name": "pełnomocnik"
+                        },
+                        "variant": {
+                            "parameter_description": "Wariant, dla którego należy ustawić NSFW",
+                            "parameter_name": "wariant"
+                        }
+                    }
+                },
+                "prefix": {
+                    "command_description": "Ustaw przedrostki znaku.",
+                    "command_name": "prefiks",
+                    "params": {
+                        "prefixes": {
+                            "parameter_description": "Przedrostki np. ",
+                            "parameter_name": "przedrostki"
+                        },
+                        "proxy": {
+                            "parameter_description": "Znak, dla którego ma zostać ustawiony przedrostek",
+                            "parameter_name": "pełnomocnik"
+                        },
+                        "variant": {
+                            "parameter_description": "Wariant, dla którego należy ustawić przedrostek",
+                            "parameter_name": "wariant"
+                        }
+                    }
+                },
+                "prune": {
+                    "command_description": "Przytnij znaki nieużywane przez określony czas.",
+                    "command_name": "suszona_śliwka",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "pełnomocnik"
+                        },
+                        "time": {
+                            "parameter_description": "Data do przycięcia wcześniej, domyślnie Brak"
+                        }
+                    }
+                },
+                "purge": {
+                    "command_description": "Usuń wszystkie dane (z wyjątkiem dzienników wiadomości)",
+                    "command_name": "oczyszczać",
+                    "params": {
+                        "confirmation": {
+                            "parameter_description": "potwierdzenie",
+                            "parameter_name": "potwierdzenie"
+                        },
+                        "proxy": {
+                            "parameter_description": "pełnomocnik",
+                            "parameter_name": "pełnomocnik"
+                        }
+                    }
+                },
+                "read": {
+                    "command_description": "Przeczytaj znak",
+                    "command_name": "czytać",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Znak, z którego ma zostać odczytany wariant",
+                            "parameter_name": "pełnomocnik"
+                        },
+                        "variant": {
+                            "parameter_description": "Wariant do przeczytania",
+                            "parameter_name": "wariant"
+                        }
+                    }
+                },
+                "rename": {
+                    "command_description": "Zmień nazwę postaci",
+                    "command_name": "przemianować",
+                    "params": {
+                        "name": {
+                            "parameter_description": "Nowa nazwa postaci",
+                            "parameter_name": "nazwa"
+                        },
+                        "proxy": {
+                            "parameter_description": "Znak do zmiany nazwy",
+                            "parameter_name": "pełnomocnik"
+                        },
+                        "variant": {
+                            "parameter_description": "Wariant do zmiany nazwy",
+                            "parameter_name": "wariant"
+                        }
+                    }
+                },
+                "set": {
+                    "command_description": "Set a variant."
+                },
+                "update": {
+                    "command_description": "Zaktualizuj serwer proxy. ",
+                    "command_name": "aktualizacja",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Obraz, domyślnie Brak",
+                            "parameter_name": "obraz"
+                        },
+                        "proxy": {
+                            "parameter_description": "Znak do aktualizacji",
+                            "parameter_name": "pełnomocnik"
+                        }
+                    }
+                },
+                "use": {
+                    "command_description": "Use a variant."
+                }
+            },
+            "group_description": "Variant commands.",
+            "group_name": "war"
+        },
+        "variant-to-proxy": {
+            "command_description": "Konwertuj wariant na znak",
+            "command_name": "wariant-do-proxy",
+            "params": {
+                "proxy": {
+                    "parameter_description": "Serwer proxy do konwersji",
+                    "parameter_name": "pełnomocnik"
+                },
+                "variant": {
+                    "parameter_description": "Wariant do konwersji",
+                    "parameter_name": "wariant"
+                }
+            }
+        }
+    },
+    "interactions": {
         "context_menu": {
             "command_name": "Pełnomocnik"
         }

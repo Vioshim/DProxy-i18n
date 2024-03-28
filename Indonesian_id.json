@@ -1,304 +1,333 @@
 {
     "commands": {
-        "exec": {
-            "command_description": "Execute a command."
+        "afk": {
+            "command_description": "Check if a user is AFK."
         },
-        "proxy": {
-            "command_name": "proksi",
-            "command_description": "Nonaktifkan karakter di server",
+        "auto": {
+            "command_description": "Atur otomatis untuk Karakter",
+            "command_name": "mobil",
             "params": {
-                "enable": {
-                    "parameter_name": "memungkinkan",
-                    "parameter_description": "Mengaktifkan atau menonaktifkan karakter, secara default beralih"
+                "proxy": {
+                    "parameter_description": "Karakter, secara default menonaktifkan otomatis",
+                    "parameter_name": "proksi"
                 }
             }
         },
-        "set": {
-            "command_description": "Set a proxy as the current one."
-        },
-        "use": {
+        "avatar": {
+            "command_description": "Atur avatar untuk Karakter",
+            "command_name": "avatar",
             "params": {
-                "text": {
-                    "parameter_name": "teks",
-                    "parameter_description": "teks"
+                "avatar": {
+                    "parameter_description": "URL Gambar, secara default Tidak Ada",
+                    "parameter_name": "avatar"
+                },
+                "proxy": {
+                    "parameter_description": "Karakter untuk mengatur avatarnya",
+                    "parameter_name": "proksi"
                 }
             }
         },
-        "say": {
+        "birthday": {
+            "command_description": "Tetapkan tanggal lahir untuk Karakter",
+            "command_name": "hari_ulang_tahun",
             "params": {
-                "text": {
-                    "parameter_name": "teks",
-                    "parameter_description": "teks"
+                "birthday": {
+                    "parameter_description": "Ulang tahun, secara default Tidak ada",
+                    "parameter_name": "hari_ulang_tahun"
+                },
+                "proxy": {
+                    "parameter_description": "Karakter untuk mengatur ulang tahun",
+                    "parameter_name": "proksi"
                 }
             }
         },
-        "npc": {
-            "command_name": "npc",
-            "command_description": "Buat pesan NPC baru",
-            "params": {
-                "franchise": {
-                    "parameter_name": "franchise",
-                    "parameter_description": "Waralaba untuk digunakan",
-                    "choices": {
-                        "Pokemon": "Pokemon",
-                        "Pokemon Shiny": "Pokemon Shiny",
-                        "Trainer": "Trainer",
-                        "Digimon": "Digimon",
-                        "Palworld": "Palworld",
-                        "D&D": "D&D"
-                    }
-                },
-                "npc": {
-                    "parameter_name": "npc",
-                    "parameter_description": "NPC yang akan digunakan"
-                },
-                "nickname": {
-                    "parameter_name": "nama_panggilan",
-                    "parameter_description": "Nama panggilan, secara default Tidak ada"
-                },
-                "emotion": {
-                    "parameter_name": "emosi",
-                    "parameter_description": "Emosi, secara default Normal",
-                    "choices": {
-                        "Normal": "Normal",
-                        "Happy": "Happy",
-                        "Pain": "Pain",
-                        "Angry": "Angry",
-                        "Worried": "Worried",
-                        "Sad": "Sad",
-                        "Crying": "Crying",
-                        "Shouting": "Shouting",
-                        "TearyEyed": "TearyEyed",
-                        "Determined": "Determined",
-                        "Joyous": "Joyous",
-                        "Inspired": "Inspired",
-                        "Surprised": "Surprised",
-                        "Dizzy": "Dizzy",
-                        "Sigh": "Sigh",
-                        "Stunned": "Stunned",
-                        "Special0": "Special0",
-                        "Special1": "Special1",
-                        "Special2": "Special2",
-                        "Special3": "Special3"
-                    }
-                },
-                "image": {
-                    "parameter_name": "gambar",
-                    "parameter_description": "Gambar, secara default Tidak Ada"
-                },
-                "text": {
-                    "parameter_name": "teks",
-                    "parameter_description": "teks"
-                }
-            }
+        "check_permissions": {
+            "command_description": "Periksa apakah bot dapat beroperasi di saluran yang disediakan",
+            "command_name": "check_perms"
+        },
+        "color": {
+            "command_description": "Set a color for a proxy."
         },
         "create": {
-            "command_description": "Create a new proxy.",
+            "command_description": "Buat karakter baru.",
+            "command_name": "membuat",
             "params": {
+                "image": {
+                    "parameter_description": "Gambar, secara default Tidak Ada",
+                    "parameter_name": "gambar"
+                },
                 "prefixes": {
                     "parameter_description": "Prefixes e.g. A:text, |text|, etc."
                 }
             }
         },
         "delete": {
-            "command_name": "menghapus",
             "command_description": "Hapus Karakter",
+            "command_name": "menghapus",
             "params": {
                 "proxy": {
-                    "parameter_name": "proksi",
-                    "parameter_description": "Proksi untuk menghapus varian"
-                }
-            }
-        },
-        "read": {
-            "command_name": "membaca",
-            "command_description": "Membaca Karakter",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proksi",
-                    "parameter_description": "Karakter untuk membaca variannya"
-                }
-            }
-        },
-        "nickname": {
-            "command_name": "nama_panggilan",
-            "command_description": "Tetapkan nama panggilan untuk Karakter",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proksi",
-                    "parameter_description": "Karakter untuk menetapkan nama panggilannya"
-                },
-                "nickname": {
-                    "parameter_name": "nama_panggilan",
-                    "parameter_description": "Nama panggilan yang akan ditetapkan untuk karakter"
-                }
-            }
-        },
-        "local": {
-            "command_name": "lokal",
-            "command_description": "Tetapkan lokal untuk Karakter",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proksi",
-                    "parameter_description": "Karakter untuk mengatur lokal"
-                },
-                "avatar": {
-                    "parameter_name": "gambar",
-                    "parameter_description": "Gambar, secara default Tidak Ada"
-                },
-                "nickname": {
-                    "parameter_name": "nama_panggilan",
-                    "parameter_description": "Nama panggilan, secara default Tidak ada"
-                }
-            }
-        },
-        "avatar": {
-            "command_name": "avatar",
-            "command_description": "Atur avatar untuk Karakter",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proksi",
-                    "parameter_description": "Karakter untuk mengatur avatarnya"
-                },
-                "avatar": {
-                    "parameter_name": "avatar",
-                    "parameter_description": "URL Gambar, secara default Tidak Ada"
-                }
-            }
-        },
-        "prefix": {
-            "command_name": "awalan",
-            "command_description": "Menetapkan awalan untuk sebuah karakter.",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proksi",
-                    "parameter_description": "Karakter untuk mengatur awalan"
-                },
-                "prefixes": {
-                    "parameter_name": "awalan",
-                    "parameter_description": "Awalan mis. "
-                }
-            }
-        },
-        "birthday": {
-            "command_name": "hari_ulang_tahun",
-            "command_description": "Tetapkan tanggal lahir untuk Karakter",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proksi",
-                    "parameter_description": "Karakter untuk mengatur ulang tahun"
-                },
-                "birthday": {
-                    "parameter_name": "hari_ulang_tahun",
-                    "parameter_description": "Ulang tahun, secara default Tidak ada"
+                    "parameter_description": "Proksi untuk menghapus varian",
+                    "parameter_name": "proksi"
                 }
             }
         },
         "description": {
-            "command_name": "keterangan",
             "command_description": "Tetapkan deskripsi untuk Karakter",
+            "command_name": "keterangan",
             "params": {
                 "proxy": {
-                    "parameter_name": "proksi",
-                    "parameter_description": "Karakter untuk mengatur deskripsinya"
+                    "parameter_description": "Karakter untuk mengatur deskripsinya",
+                    "parameter_name": "proksi"
                 },
                 "text": {
-                    "parameter_name": "teks",
-                    "parameter_description": "Deskripsi yang akan ditetapkan untuk karakter"
+                    "parameter_description": "Deskripsi yang akan ditetapkan untuk karakter",
+                    "parameter_name": "teks"
                 }
             }
         },
-        "rename": {
-            "command_name": "ganti_nama",
-            "command_description": "Ganti Nama Karakter",
+        "detail": {
+            "command_description": "Dapatkan detail karakter",
+            "command_name": "detail",
             "params": {
                 "proxy": {
-                    "parameter_name": "proksi",
-                    "parameter_description": "Karakter untuk diganti namanya"
+                    "parameter_description": "Detailkan proksi. ",
+                    "parameter_name": "proksi"
+                }
+            }
+        },
+        "exec": {
+            "command_description": "Execute a command."
+        },
+        "export": {
+            "command_description": "Ekspor karakter Anda ke file JSON",
+            "command_name": "ekspor",
+            "params": {
+                "format": {
+                    "choices": {
+                        "Default": "Default",
+                        "PluralKit": "PluralKit",
+                        "Tupperbox": "Tupperbox"
+                    },
+                    "parameter_description": "Format untuk mengekspor, secara default JSON",
+                    "parameter_name": "format"
                 },
-                "name": {
-                    "parameter_name": "nama",
-                    "parameter_description": "Nama baru untuk karakter tersebut"
+                "new_token": {
+                    "parameter_description": "Jika Anda ingin membuat token baru",
+                    "parameter_name": "token_baru"
                 }
             }
         },
         "group": {
-            "command_name": "kelompok",
             "command_description": "Tetapkan grup untuk Karakter",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proksi",
-                    "parameter_description": "Karakter untuk mengatur grup"
-                },
-                "group": {
-                    "parameter_name": "kelompok",
-                    "parameter_description": "Grup, secara default Tidak ada"
-                }
-            }
-        },
-        "nsfw": {
-            "command_name": "nsfw",
-            "command_description": "Atur apakah suatu Karakter adalah NSFW",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proksi",
-                    "parameter_description": "Karakter untuk mengatur NSFW"
-                },
-                "nsfw": {
-                    "parameter_name": "nsfw",
-                    "parameter_description": "NSFW, secara default beralih ke nilai yang berlawanan"
-                }
-            }
-        },
-        "auto": {
-            "command_name": "mobil",
-            "command_description": "Atur otomatis untuk Karakter",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proksi",
-                    "parameter_description": "Karakter, secara default menonaktifkan otomatis"
-                }
-            }
-        },
-        "list": {
-            "command_name": "daftar",
-            "command_description": "Daftar semua karakter ",
+            "command_name": "kelompok",
             "params": {
                 "group": {
-                    "parameter_name": "kelompok",
-                    "parameter_description": "Kelompokkan untuk membuat daftar karakter"
+                    "parameter_description": "Grup, secara default Tidak ada",
+                    "parameter_name": "kelompok"
+                },
+                "proxy": {
+                    "parameter_description": "Karakter untuk mengatur grup",
+                    "parameter_name": "proksi"
+                }
+            }
+        },
+        "help": {
+            "command_description": "Bantuan Bot Bawaan",
+            "command_name": "membantu",
+            "params": {
+                "search": {
+                    "parameter_description": "Istilah pencarian",
+                    "parameter_name": "mencari"
+                }
+            }
+        },
+        "import": {
+            "command_description": "Impor karakter Anda dari file atau token",
+            "command_name": "impor",
+            "params": {
+                "data": {
+                    "parameter_description": "File yang akan diimpor",
+                    "parameter_name": "data"
+                },
+                "deleting_from_token": {
+                    "parameter_description": "Hapus karakter dari token",
+                    "parameter_name": "menghapus_dari_token"
+                },
+                "token": {
+                    "parameter_description": "Token yang digunakan untuk mengimpor",
+                    "parameter_name": "token"
                 }
             }
         },
         "latch": {
-            "command_name": "memalangi",
             "command_description": "Mengaktifkan atau menonaktifkan mode kait",
+            "command_name": "memalangi",
             "params": {
-                "enable": {
-                    "parameter_description": "Mengaktifkan atau menonaktifkan mode kait"
-                },
                 "auto_remove": {
                     "parameter_description": "Apakah akan tetap menggunakan otomatis untuk saluran saat ini atau tidak, secara default Benar"
+                },
+                "enable": {
+                    "parameter_description": "Mengaktifkan atau menonaktifkan mode kait"
                 }
             }
         },
-        "export": {
-            "command_name": "ekspor",
-            "command_description": "Ekspor karakter Anda ke file JSON",
+        "list": {
+            "command_description": "Daftar semua karakter ",
+            "command_name": "daftar",
             "params": {
-                "format": {
-                    "parameter_name": "format",
-                    "parameter_description": "Format untuk mengekspor, secara default JSON"
+                "group": {
+                    "parameter_description": "Kelompokkan untuk membuat daftar karakter",
+                    "parameter_name": "kelompok"
+                }
+            }
+        },
+        "local": {
+            "command_description": "Tetapkan lokal untuk Karakter",
+            "command_name": "lokal",
+            "params": {
+                "avatar": {
+                    "parameter_description": "Gambar, secara default Tidak Ada",
+                    "parameter_name": "gambar"
                 },
-                "new_token": {
-                    "parameter_name": "token_baru",
-                    "parameter_description": "Jika Anda ingin membuat token baru"
+                "nickname": {
+                    "parameter_description": "Nama panggilan, secara default Tidak ada",
+                    "parameter_name": "nama_panggilan"
+                },
+                "proxy": {
+                    "parameter_description": "Karakter untuk mengatur lokal",
+                    "parameter_name": "proksi"
+                }
+            }
+        },
+        "nickname": {
+            "command_description": "Tetapkan nama panggilan untuk Karakter",
+            "command_name": "nama_panggilan",
+            "params": {
+                "nickname": {
+                    "parameter_description": "Nama panggilan yang akan ditetapkan untuk karakter",
+                    "parameter_name": "nama_panggilan"
+                },
+                "proxy": {
+                    "parameter_description": "Karakter untuk menetapkan nama panggilannya",
+                    "parameter_name": "proksi"
+                }
+            }
+        },
+        "npc": {
+            "command_description": "Buat pesan NPC baru",
+            "command_name": "npc",
+            "params": {
+                "emotion": {
+                    "choices": {
+                        "Angry": "Angry",
+                        "Crying": "Crying",
+                        "Determined": "Determined",
+                        "Dizzy": "Dizzy",
+                        "Happy": "Happy",
+                        "Inspired": "Inspired",
+                        "Joyous": "Joyous",
+                        "Normal": "Normal",
+                        "Pain": "Pain",
+                        "Sad": "Sad",
+                        "Shouting": "Shouting",
+                        "Sigh": "Sigh",
+                        "Special0": "Special0",
+                        "Special1": "Special1",
+                        "Special2": "Special2",
+                        "Special3": "Special3",
+                        "Stunned": "Stunned",
+                        "Surprised": "Surprised",
+                        "TearyEyed": "TearyEyed",
+                        "Worried": "Worried"
+                    },
+                    "parameter_description": "Emosi, secara default Normal",
+                    "parameter_name": "emosi"
+                },
+                "franchise": {
+                    "choices": {
+                        "D&D": "D&D",
+                        "Digimon": "Digimon",
+                        "Palworld": "Palworld",
+                        "Pokemon": "Pokemon",
+                        "Pokemon Shiny": "Pokemon Shiny",
+                        "Trainer": "Trainer"
+                    },
+                    "parameter_description": "Waralaba untuk digunakan",
+                    "parameter_name": "waralaba"
+                },
+                "image": {
+                    "parameter_description": "Gambar, secara default Tidak Ada",
+                    "parameter_name": "gambar"
+                },
+                "nickname": {
+                    "parameter_description": "Nama panggilan, secara default Tidak ada",
+                    "parameter_name": "nama_panggilan"
+                },
+                "npc": {
+                    "parameter_description": "NPC yang akan digunakan",
+                    "parameter_name": "npc"
+                },
+                "text": {
+                    "parameter_description": "teks",
+                    "parameter_name": "teks"
+                }
+            }
+        },
+        "nsfw": {
+            "command_description": "Atur apakah suatu Karakter adalah NSFW",
+            "command_name": "nsfw",
+            "params": {
+                "nsfw": {
+                    "parameter_description": "NSFW, secara default beralih ke nilai yang berlawanan",
+                    "parameter_name": "nsfw"
+                },
+                "proxy": {
+                    "parameter_description": "Karakter untuk mengatur NSFW",
+                    "parameter_name": "proksi"
+                }
+            }
+        },
+        "prefix": {
+            "command_description": "Menetapkan awalan untuk sebuah karakter.",
+            "command_name": "awalan",
+            "params": {
+                "prefixes": {
+                    "parameter_description": "Awalan mis. ",
+                    "parameter_name": "awalan"
+                },
+                "proxy": {
+                    "parameter_description": "Karakter untuk mengatur awalan",
+                    "parameter_name": "proksi"
+                }
+            }
+        },
+        "proxy": {
+            "command_description": "Nonaktifkan karakter di server",
+            "command_name": "proksi",
+            "params": {
+                "enable": {
+                    "parameter_description": "Mengaktifkan atau menonaktifkan karakter, secara default beralih",
+                    "parameter_name": "memungkinkan"
+                }
+            }
+        },
+        "proxy-to-variant": {
+            "command_description": "Ubah karakter menjadi varian",
+            "command_name": "proksi-ke-varian",
+            "params": {
+                "base": {
+                    "parameter_description": "Basis baru untuk karakter tersebut",
+                    "parameter_name": "basis"
+                },
+                "original": {
+                    "parameter_description": "Karakter untuk dikonversi",
+                    "parameter_name": "asli"
                 }
             }
         },
         "prune": {
-            "command_name": "memangkas",
             "command_description": "Pangkas karakter yang tidak digunakan selama waktu tertentu.",
+            "command_name": "memangkas",
             "params": {
                 "time": {
                     "parameter_description": "Tanggal yang akan dipangkas sebelumnya, secara default Tidak Ada"
@@ -306,656 +335,674 @@
             }
         },
         "purge": {
-            "command_name": "membersihkan",
             "command_description": "Bersihkan semua data Anda (kecuali log pesan)",
+            "command_name": "membersihkan",
             "params": {
                 "confirmation": {
-                    "parameter_name": "konfirmasi",
-                    "parameter_description": "konfirmasi"
+                    "parameter_description": "konfirmasi",
+                    "parameter_name": "konfirmasi"
                 }
             }
         },
-        "proxy-to-variant": {
-            "command_name": "proksi-ke-varian",
-            "command_description": "Ubah karakter menjadi varian",
-            "params": {
-                "original": {
-                    "parameter_name": "asli",
-                    "parameter_description": "Karakter untuk dikonversi"
-                },
-                "base": {
-                    "parameter_name": "basis",
-                    "parameter_description": "Basis baru untuk karakter tersebut"
-                }
-            }
-        },
-        "variant-to-proxy": {
-            "command_name": "varian-ke-proxy",
-            "command_description": "Mengonversi varian menjadi karakter",
+        "read": {
+            "command_description": "Membaca Karakter",
+            "command_name": "membaca",
             "params": {
                 "proxy": {
-                    "parameter_name": "proksi",
-                    "parameter_description": "Proksi untuk dikonversi"
-                },
-                "variant": {
-                    "parameter_name": "varian",
-                    "parameter_description": "Varian untuk dikonversi"
+                    "parameter_description": "Karakter untuk membaca variannya",
+                    "parameter_name": "proksi"
                 }
             }
         },
-        "update": {
-            "command_name": "memperbarui",
-            "command_description": "Perbarui proksi. ",
+        "rename": {
+            "command_description": "Ganti Nama Karakter",
+            "command_name": "ganti_nama",
             "params": {
+                "name": {
+                    "parameter_description": "Nama baru untuk karakter tersebut",
+                    "parameter_name": "nama"
+                },
                 "proxy": {
-                    "parameter_name": "proksi",
-                    "parameter_description": "Karakter untuk diperbarui"
-                },
-                "image": {
-                    "parameter_name": "gambar",
-                    "parameter_description": "Gambar, secara default Tidak Ada"
+                    "parameter_description": "Karakter untuk diganti namanya",
+                    "parameter_name": "proksi"
                 }
             }
-        },
-        "detail": {
-            "command_name": "detail",
-            "command_description": "Dapatkan detail karakter",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proksi",
-                    "parameter_description": "Detailkan proksi. "
-                }
-            }
-        },
-        "import": {
-            "command_name": "impor",
-            "command_description": "Impor karakter Anda dari file atau token",
-            "params": {
-                "data": {
-                    "parameter_name": "data",
-                    "parameter_description": "File yang akan diimpor"
-                },
-                "token": {
-                    "parameter_name": "token",
-                    "parameter_description": "Token yang digunakan untuk mengimpor"
-                },
-                "deleting_from_token": {
-                    "parameter_name": "menghapus_dari_token",
-                    "parameter_description": "Hapus karakter dari token"
-                }
-            }
-        },
-        "var": {
-            "group_name": "var",
-            "group_description": "Variant commands.",
-            "groupset": {
-                "command_description": "Set a variant."
-            },
-            "groupuse": {
-                "command_description": "Use a variant."
-            },
-            "groupcreate": {
-                "command_name": "membuat",
-                "command_description": "Buat karakter baru.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proksi",
-                        "parameter_description": " Proksi untuk membuat varian"
-                    },
-                    "image": {
-                        "parameter_name": "gambar",
-                        "parameter_description": "Gambar, secara default Tidak Ada"
-                    },
-                    "prefixes": {
-                        "parameter_description": "Prefixes e.g. A:text, |text|, etc."
-                    }
-                }
-            },
-            "groupdelete": {
-                "command_name": "menghapus",
-                "command_description": "Hapus varian Karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proksi",
-                        "parameter_description": "Proksi untuk menghapus varian"
-                    },
-                    "variant": {
-                        "parameter_name": "varian",
-                        "parameter_description": "Varian yang akan dihapus"
-                    }
-                }
-            },
-            "groupread": {
-                "command_name": "membaca",
-                "command_description": "Membaca Karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proksi",
-                        "parameter_description": "Karakter untuk membaca variannya"
-                    },
-                    "variant": {
-                        "parameter_name": "varian",
-                        "parameter_description": "Varian untuk dibaca"
-                    }
-                }
-            },
-            "groupnickname": {
-                "command_name": "nama_panggilan",
-                "command_description": "Tetapkan nama panggilan untuk Karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proksi",
-                        "parameter_description": "Karakter untuk menetapkan nama panggilannya"
-                    },
-                    "variant": {
-                        "parameter_name": "varian",
-                        "parameter_description": "Varian untuk mengatur nama panggilannya"
-                    },
-                    "nickname": {
-                        "parameter_name": "nama_panggilan",
-                        "parameter_description": "Nama panggilan yang akan ditetapkan untuk karakter"
-                    }
-                }
-            },
-            "grouplocal": {
-                "command_name": "lokal",
-                "command_description": "Tetapkan lokal untuk Karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proksi",
-                        "parameter_description": "Karakter untuk mengatur lokal"
-                    },
-                    "variant": {
-                        "parameter_name": "varian",
-                        "parameter_description": "Varian untuk mengatur lokal"
-                    },
-                    "avatar": {
-                        "parameter_name": "gambar",
-                        "parameter_description": "Gambar, secara default Tidak Ada"
-                    },
-                    "nickname": {
-                        "parameter_name": "nama_panggilan",
-                        "parameter_description": "Nama panggilan, secara default Tidak ada"
-                    }
-                }
-            },
-            "groupprefix": {
-                "command_name": "awalan",
-                "command_description": "Menetapkan awalan untuk sebuah karakter.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proksi",
-                        "parameter_description": "Karakter untuk mengatur awalan"
-                    },
-                    "variant": {
-                        "parameter_name": "varian",
-                        "parameter_description": "Varian untuk mengatur awalan"
-                    },
-                    "prefixes": {
-                        "parameter_name": "awalan",
-                        "parameter_description": "Awalan mis. "
-                    }
-                }
-            },
-            "groupbirthday": {
-                "command_name": "hari_ulang_tahun",
-                "command_description": "Tetapkan tanggal lahir untuk Karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proksi",
-                        "parameter_description": "Karakter untuk mengatur ulang tahun"
-                    },
-                    "variant": {
-                        "parameter_name": "varian",
-                        "parameter_description": "Varian untuk mengatur ulang tahun"
-                    },
-                    "birthday": {
-                        "parameter_name": "hari_ulang_tahun",
-                        "parameter_description": "Ulang tahun, secara default Tidak ada"
-                    }
-                }
-            },
-            "groupdescription": {
-                "command_name": "keterangan",
-                "command_description": "Tetapkan deskripsi untuk Karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proksi",
-                        "parameter_description": "Karakter untuk mengatur deskripsinya"
-                    },
-                    "variant": {
-                        "parameter_name": "varian",
-                        "parameter_description": "Varian untuk mengatur deskripsinya"
-                    },
-                    "text": {
-                        "parameter_name": "teks",
-                        "parameter_description": "Deskripsi yang akan ditetapkan untuk karakter"
-                    }
-                }
-            },
-            "grouprename": {
-                "command_name": "ganti_nama",
-                "command_description": "Ganti Nama Karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proksi",
-                        "parameter_description": "Karakter untuk diganti namanya"
-                    },
-                    "variant": {
-                        "parameter_name": "varian",
-                        "parameter_description": "Varian untuk diganti namanya"
-                    },
-                    "name": {
-                        "parameter_name": "nama",
-                        "parameter_description": "Nama baru untuk karakter tersebut"
-                    }
-                }
-            },
-            "groupgroup": {
-                "command_name": "kelompok",
-                "command_description": "Tetapkan grup untuk Karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proksi",
-                        "parameter_description": "Karakter untuk mengatur grup"
-                    },
-                    "variant": {
-                        "parameter_name": "varian",
-                        "parameter_description": "Varian untuk mengatur grup"
-                    },
-                    "group": {
-                        "parameter_name": "kelompok",
-                        "parameter_description": "Grup, secara default Tidak ada"
-                    }
-                }
-            },
-            "groupnsfw": {
-                "command_name": "nsfw",
-                "command_description": "Atur apakah suatu Karakter adalah NSFW",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proksi",
-                        "parameter_description": "Karakter untuk mengatur NSFW"
-                    },
-                    "variant": {
-                        "parameter_name": "varian",
-                        "parameter_description": "Varian untuk menyetel NSFW"
-                    },
-                    "nsfw": {
-                        "parameter_name": "nsfw",
-                        "parameter_description": "NSFW, secara default beralih ke nilai yang berlawanan"
-                    }
-                }
-            },
-            "groupauto": {
-                "command_name": "mobil",
-                "command_description": "Atur otomatis untuk Karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proksi",
-                        "parameter_description": "Karakter, secara default menonaktifkan otomatis"
-                    },
-                    "variant": {
-                        "parameter_name": "varian",
-                        "parameter_description": "Varian untuk menyetel otomatis"
-                    }
-                }
-            },
-            "groupavatar": {
-                "command_name": "avatar",
-                "command_description": "Atur avatar untuk Karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proksi",
-                        "parameter_description": "Karakter untuk mengatur avatarnya"
-                    },
-                    "variant": {
-                        "parameter_name": "varian",
-                        "parameter_description": "Varian untuk mengatur avatarnya"
-                    },
-                    "avatar": {
-                        "parameter_name": "avatar",
-                        "parameter_description": "URL Gambar, secara default Tidak Ada"
-                    }
-                }
-            },
-            "grouplist": {
-                "command_description": "List all variants."
-            },
-            "groupfind": {
-                "command_description": "Find a variant."
-            },
-            "groupupdate": {
-                "command_name": "memperbarui",
-                "command_description": "Perbarui proksi. ",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proksi",
-                        "parameter_description": "Karakter untuk diperbarui"
-                    },
-                    "image": {
-                        "parameter_name": "gambar",
-                        "parameter_description": "Gambar, secara default Tidak Ada"
-                    }
-                }
-            },
-            "groupdetail": {
-                "command_name": "detail",
-                "command_description": "Dapatkan detail karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proksi",
-                        "parameter_description": "Detailkan proksi. "
-                    },
-                    "variant": {
-                        "parameter_name": "varian",
-                        "parameter_description": "Varian hingga detail"
-                    }
-                }
-            },
-            "groupprune": {
-                "command_name": "memangkas",
-                "command_description": "Pangkas karakter yang tidak digunakan selama waktu tertentu.",
-                "params": {
-                    "proxy": {
-                        "parameter_description": "proksi"
-                    },
-                    "time": {
-                        "parameter_description": "Tanggal yang akan dipangkas sebelumnya, secara default Tidak Ada"
-                    }
-                }
-            },
-            "grouppurge": {
-                "command_name": "membersihkan",
-                "command_description": "Bersihkan semua data Anda (kecuali log pesan)",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proksi",
-                        "parameter_description": "proksi"
-                    },
-                    "confirmation": {
-                        "parameter_name": "konfirmasi",
-                        "parameter_description": "konfirmasi"
-                    }
-                }
-            }
-        },
-        "shared": {
-            "group_description": "Shared proxy commands.",
-            "groupset": {
-                "command_description": "Set a proxy as the current one."
-            },
-            "groupcreate": {
-                "command_name": "membuat",
-                "command_description": "Buat karakter baru.",
-                "params": {
-                    "image": {
-                        "parameter_name": "gambar",
-                        "parameter_description": "Gambar, secara default Tidak Ada"
-                    }
-                }
-            },
-            "groupdelete": {
-                "command_name": "menghapus",
-                "command_description": "Hapus Karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proksi",
-                        "parameter_description": "Proksi untuk menghapus varian"
-                    }
-                }
-            },
-            "groupread": {
-                "command_name": "membaca",
-                "command_description": "Membaca Karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proksi",
-                        "parameter_description": "Karakter untuk membaca variannya"
-                    }
-                }
-            },
-            "groupauto": {
-                "command_name": "mobil",
-                "command_description": "Atur otomatis untuk Karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proksi",
-                        "parameter_description": "Karakter, secara default menonaktifkan otomatis"
-                    }
-                }
-            },
-            "groupprefix": {
-                "command_name": "awalan",
-                "command_description": "Menetapkan awalan untuk sebuah karakter.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proksi",
-                        "parameter_description": "Karakter untuk mengatur awalan"
-                    },
-                    "prefixes": {
-                        "parameter_name": "awalan",
-                        "parameter_description": "Awalan mis. "
-                    }
-                }
-            },
-            "groupbirthday": {
-                "command_name": "hari_ulang_tahun",
-                "command_description": "Tetapkan tanggal lahir untuk Karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proksi",
-                        "parameter_description": "Karakter untuk mengatur ulang tahun"
-                    },
-                    "birthday": {
-                        "parameter_name": "hari_ulang_tahun",
-                        "parameter_description": "Ulang tahun, secara default Tidak ada"
-                    }
-                }
-            },
-            "groupdescription": {
-                "command_name": "keterangan",
-                "command_description": "Tetapkan deskripsi untuk Karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proksi",
-                        "parameter_description": "Karakter untuk mengatur deskripsinya"
-                    },
-                    "text": {
-                        "parameter_name": "teks",
-                        "parameter_description": "Deskripsi yang akan ditetapkan untuk karakter"
-                    }
-                }
-            },
-            "grouprename": {
-                "command_name": "ganti_nama",
-                "command_description": "Ganti Nama Karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proksi",
-                        "parameter_description": "Karakter untuk diganti namanya"
-                    },
-                    "name": {
-                        "parameter_name": "nama",
-                        "parameter_description": "Nama baru untuk karakter tersebut"
-                    }
-                }
-            },
-            "groupnickname": {
-                "command_name": "nama_panggilan",
-                "command_description": "Tetapkan nama panggilan untuk Karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proksi",
-                        "parameter_description": "Karakter untuk menetapkan nama panggilannya"
-                    },
-                    "nickname": {
-                        "parameter_name": "nama_panggilan",
-                        "parameter_description": "Nama panggilan yang akan ditetapkan untuk karakter"
-                    }
-                }
-            },
-            "groupgroup": {
-                "command_name": "kelompok",
-                "command_description": "Tetapkan grup untuk Karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proksi",
-                        "parameter_description": "Karakter untuk mengatur grup"
-                    },
-                    "group": {
-                        "parameter_name": "kelompok",
-                        "parameter_description": "Grup, secara default Tidak ada"
-                    }
-                }
-            },
-            "groupnsfw": {
-                "command_name": "nsfw",
-                "command_description": "Atur apakah suatu Karakter adalah NSFW",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proksi",
-                        "parameter_description": "Karakter untuk mengatur NSFW"
-                    },
-                    "nsfw": {
-                        "parameter_name": "nsfw",
-                        "parameter_description": "NSFW, secara default beralih ke nilai yang berlawanan"
-                    }
-                }
-            },
-            "groupavatar": {
-                "command_name": "avatar",
-                "command_description": "Atur avatar untuk Karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proksi",
-                        "parameter_description": "Karakter untuk mengatur avatarnya"
-                    },
-                    "avatar": {
-                        "parameter_name": "avatar",
-                        "parameter_description": "URL Gambar, secara default Tidak Ada"
-                    }
-                }
-            },
-            "groupimage": {
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proksi",
-                        "parameter_description": "Karakter untuk mengatur avatarnya"
-                    },
-                    "avatar": {
-                        "parameter_name": "avatar",
-                        "parameter_description": "URL Gambar, secara default Tidak Ada"
-                    }
-                }
-            },
-            "grouplocal": {
-                "command_name": "lokal",
-                "command_description": "Tetapkan lokal untuk Karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proksi",
-                        "parameter_description": "Karakter untuk mengatur lokal"
-                    },
-                    "avatar": {
-                        "parameter_name": "gambar",
-                        "parameter_description": "Gambar, secara default Tidak Ada"
-                    },
-                    "nickname": {
-                        "parameter_name": "nama_panggilan",
-                        "parameter_description": "Nama panggilan, secara default Tidak ada"
-                    }
-                }
-            },
-            "groupupdate": {
-                "command_name": "memperbarui",
-                "command_description": "Perbarui proksi. ",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proksi",
-                        "parameter_description": "Karakter untuk diperbarui"
-                    },
-                    "image": {
-                        "parameter_name": "gambar",
-                        "parameter_description": "Gambar, secara default Tidak Ada"
-                    }
-                }
-            },
-            "groupdetail": {
-                "command_name": "detail",
-                "command_description": "Dapatkan detail karakter",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proksi",
-                        "parameter_description": "Detailkan proksi. "
-                    }
-                }
-            },
-            "groupprune": {
-                "command_name": "memangkas",
-                "command_description": "Pangkas karakter yang tidak digunakan selama waktu tertentu.",
-                "params": {
-                    "time": {
-                        "parameter_description": "Tanggal yang akan dipangkas sebelumnya, secara default Tidak Ada"
-                    }
-                }
-            },
-            "grouppurge": {
-                "command_name": "membersihkan",
-                "command_description": "Bersihkan semua data Anda (kecuali log pesan)",
-                "params": {
-                    "confirmation": {
-                        "parameter_name": "konfirmasi",
-                        "parameter_description": "konfirmasi"
-                    }
-                }
-            }
-        },
-        "check_permissions": {
-            "command_name": "check_perms",
-            "command_description": "Periksa apakah bot dapat beroperasi di saluran yang disediakan"
         },
         "roll": {
             "command_description": "Roll a dice."
         },
-        "afk": {
-            "command_description": "Check if a user is AFK."
-        },
-        "help": {
-            "command_name": "membantu",
-            "command_description": "Bantuan Bot Bawaan",
+        "say": {
+            "command_description": "Say something.",
             "params": {
-                "search": {
-                    "parameter_name": "mencari",
-                    "parameter_description": "Istilah pencarian"
+                "text": {
+                    "parameter_description": "teks",
+                    "parameter_name": "teks"
                 }
             }
         },
         "server_wiki": {
-            "command_name": "server_wiki",
             "command_description": "Wiki server yang ditentukan pengguna",
+            "command_name": "server_wiki",
             "params": {
                 "search": {
-                    "parameter_name": "mencari",
-                    "parameter_description": "Istilah pencarian"
+                    "parameter_description": "Istilah pencarian",
+                    "parameter_name": "mencari"
                 }
             }
         },
+        "set": {
+            "command_description": "Set a proxy as the current one."
+        },
         "settings": {
-            "command_name": "pengaturan",
             "command_description": "Pengaturan Bot",
+            "command_name": "pengaturan",
             "params": {
                 "menu": {
-                    "parameter_name": "menu",
-                    "parameter_description": "Menu untuk membuka pengaturan",
                     "choices": {
-                        "Server": "pelayan",
-                        "Member": "Anggota",
-                        "User": "Pengguna"
+                        "Member": "Member",
+                        "Server": "Server",
+                        "User": "User"
+                    },
+                    "parameter_description": "Menu untuk membuka pengaturan",
+                    "parameter_name": "menu"
+                }
+            }
+        },
+        "shared": {
+            "group": {
+                "auto": {
+                    "command_description": "Atur otomatis untuk Karakter",
+                    "command_name": "mobil",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Karakter, secara default menonaktifkan otomatis",
+                            "parameter_name": "proksi"
+                        }
+                    }
+                },
+                "avatar": {
+                    "command_description": "Atur avatar untuk Karakter",
+                    "command_name": "avatar",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "URL Gambar, secara default Tidak Ada",
+                            "parameter_name": "avatar"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karakter untuk mengatur avatarnya",
+                            "parameter_name": "proksi"
+                        }
+                    }
+                },
+                "birthday": {
+                    "command_description": "Tetapkan tanggal lahir untuk Karakter",
+                    "command_name": "hari_ulang_tahun",
+                    "params": {
+                        "birthday": {
+                            "parameter_description": "Ulang tahun, secara default Tidak ada",
+                            "parameter_name": "hari_ulang_tahun"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karakter untuk mengatur ulang tahun",
+                            "parameter_name": "proksi"
+                        }
+                    }
+                },
+                "color": {
+                    "command_description": "Set the color for a proxy."
+                },
+                "create": {
+                    "command_description": "Buat karakter baru.",
+                    "command_name": "membuat",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Gambar, secara default Tidak Ada",
+                            "parameter_name": "gambar"
+                        }
+                    }
+                },
+                "delete": {
+                    "command_description": "Hapus Karakter",
+                    "command_name": "menghapus",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Proksi untuk menghapus varian",
+                            "parameter_name": "proksi"
+                        }
+                    }
+                },
+                "description": {
+                    "command_description": "Tetapkan deskripsi untuk Karakter",
+                    "command_name": "keterangan",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Karakter untuk mengatur deskripsinya",
+                            "parameter_name": "proksi"
+                        },
+                        "text": {
+                            "parameter_description": "Deskripsi yang akan ditetapkan untuk karakter",
+                            "parameter_name": "teks"
+                        }
+                    }
+                },
+                "detail": {
+                    "command_description": "Dapatkan detail karakter",
+                    "command_name": "detail",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Detailkan proksi. ",
+                            "parameter_name": "proksi"
+                        }
+                    }
+                },
+                "find": {
+                    "command_description": "Find a proxy."
+                },
+                "group": {
+                    "command_description": "Tetapkan grup untuk Karakter",
+                    "command_name": "kelompok",
+                    "params": {
+                        "group": {
+                            "parameter_description": "Grup, secara default Tidak ada",
+                            "parameter_name": "kelompok"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karakter untuk mengatur grup",
+                            "parameter_name": "proksi"
+                        }
+                    }
+                },
+                "image": {
+                    "command_description": "Set the image for a proxy.",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "URL Gambar, secara default Tidak Ada",
+                            "parameter_name": "avatar"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karakter untuk mengatur avatarnya",
+                            "parameter_name": "proksi"
+                        }
+                    }
+                },
+                "list": {
+                    "command_description": "List all proxies."
+                },
+                "local": {
+                    "command_description": "Tetapkan lokal untuk Karakter",
+                    "command_name": "lokal",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Gambar, secara default Tidak Ada",
+                            "parameter_name": "gambar"
+                        },
+                        "nickname": {
+                            "parameter_description": "Nama panggilan, secara default Tidak ada",
+                            "parameter_name": "nama_panggilan"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karakter untuk mengatur lokal",
+                            "parameter_name": "proksi"
+                        }
+                    }
+                },
+                "nickname": {
+                    "command_description": "Tetapkan nama panggilan untuk Karakter",
+                    "command_name": "nama_panggilan",
+                    "params": {
+                        "nickname": {
+                            "parameter_description": "Nama panggilan yang akan ditetapkan untuk karakter",
+                            "parameter_name": "nama_panggilan"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karakter untuk menetapkan nama panggilannya",
+                            "parameter_name": "proksi"
+                        }
+                    }
+                },
+                "nsfw": {
+                    "command_description": "Atur apakah suatu Karakter adalah NSFW",
+                    "command_name": "nsfw",
+                    "params": {
+                        "nsfw": {
+                            "parameter_description": "NSFW, secara default beralih ke nilai yang berlawanan",
+                            "parameter_name": "nsfw"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karakter untuk mengatur NSFW",
+                            "parameter_name": "proksi"
+                        }
+                    }
+                },
+                "prefix": {
+                    "command_description": "Menetapkan awalan untuk sebuah karakter.",
+                    "command_name": "awalan",
+                    "params": {
+                        "prefixes": {
+                            "parameter_description": "Awalan mis. ",
+                            "parameter_name": "awalan"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karakter untuk mengatur awalan",
+                            "parameter_name": "proksi"
+                        }
+                    }
+                },
+                "prune": {
+                    "command_description": "Pangkas karakter yang tidak digunakan selama waktu tertentu.",
+                    "command_name": "memangkas",
+                    "params": {
+                        "time": {
+                            "parameter_description": "Tanggal yang akan dipangkas sebelumnya, secara default Tidak Ada"
+                        }
+                    }
+                },
+                "purge": {
+                    "command_description": "Bersihkan semua data Anda (kecuali log pesan)",
+                    "command_name": "membersihkan",
+                    "params": {
+                        "confirmation": {
+                            "parameter_description": "konfirmasi",
+                            "parameter_name": "konfirmasi"
+                        }
+                    }
+                },
+                "read": {
+                    "command_description": "Membaca Karakter",
+                    "command_name": "membaca",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Karakter untuk membaca variannya",
+                            "parameter_name": "proksi"
+                        }
+                    }
+                },
+                "rename": {
+                    "command_description": "Ganti Nama Karakter",
+                    "command_name": "ganti_nama",
+                    "params": {
+                        "name": {
+                            "parameter_description": "Nama baru untuk karakter tersebut",
+                            "parameter_name": "nama"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karakter untuk diganti namanya",
+                            "parameter_name": "proksi"
+                        }
+                    }
+                },
+                "set": {
+                    "command_description": "Set a proxy as the current one."
+                },
+                "update": {
+                    "command_description": "Perbarui proksi. ",
+                    "command_name": "memperbarui",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Gambar, secara default Tidak Ada",
+                            "parameter_name": "gambar"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karakter untuk diperbarui",
+                            "parameter_name": "proksi"
+                        }
+                    }
+                },
+                "use": {
+                    "command_description": "Use a proxy."
+                }
+            },
+            "group_description": "Shared proxy commands."
+        },
+        "store": {
+            "params": {
+                "storage": {
+                    "choices": {
+                        "Global": "Global",
+                        "Local": "Local"
                     }
                 }
             }
         },
+        "update": {
+            "command_description": "Perbarui proksi. ",
+            "command_name": "memperbarui",
+            "params": {
+                "image": {
+                    "parameter_description": "Gambar, secara default Tidak Ada",
+                    "parameter_name": "gambar"
+                },
+                "proxy": {
+                    "parameter_description": "Karakter untuk diperbarui",
+                    "parameter_name": "proksi"
+                }
+            }
+        },
+        "use": {
+            "command_description": "Use a proxy.",
+            "params": {
+                "text": {
+                    "parameter_description": "teks",
+                    "parameter_name": "teks"
+                }
+            }
+        },
+        "var": {
+            "group": {
+                "auto": {
+                    "command_description": "Atur otomatis untuk Karakter",
+                    "command_name": "mobil",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Karakter, secara default menonaktifkan otomatis",
+                            "parameter_name": "proksi"
+                        },
+                        "variant": {
+                            "parameter_description": "Varian untuk menyetel otomatis",
+                            "parameter_name": "varian"
+                        }
+                    }
+                },
+                "avatar": {
+                    "command_description": "Atur avatar untuk Karakter",
+                    "command_name": "avatar",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "URL Gambar, secara default Tidak Ada",
+                            "parameter_name": "avatar"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karakter untuk mengatur avatarnya",
+                            "parameter_name": "proksi"
+                        },
+                        "variant": {
+                            "parameter_description": "Varian untuk mengatur avatarnya",
+                            "parameter_name": "varian"
+                        }
+                    }
+                },
+                "birthday": {
+                    "command_description": "Tetapkan tanggal lahir untuk Karakter",
+                    "command_name": "hari_ulang_tahun",
+                    "params": {
+                        "birthday": {
+                            "parameter_description": "Ulang tahun, secara default Tidak ada",
+                            "parameter_name": "hari_ulang_tahun"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karakter untuk mengatur ulang tahun",
+                            "parameter_name": "proksi"
+                        },
+                        "variant": {
+                            "parameter_description": "Varian untuk mengatur ulang tahun",
+                            "parameter_name": "varian"
+                        }
+                    }
+                },
+                "color": {
+                    "command_description": "Change the color of a variant."
+                },
+                "create": {
+                    "command_description": "Buat karakter baru.",
+                    "command_name": "membuat",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Gambar, secara default Tidak Ada",
+                            "parameter_name": "gambar"
+                        },
+                        "prefixes": {
+                            "parameter_description": "Prefixes e.g. A:text, |text|, etc."
+                        },
+                        "proxy": {
+                            "parameter_description": " Proksi untuk membuat varian",
+                            "parameter_name": "proksi"
+                        }
+                    }
+                },
+                "delete": {
+                    "command_description": "Hapus varian Karakter",
+                    "command_name": "menghapus",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Proksi untuk menghapus varian",
+                            "parameter_name": "proksi"
+                        },
+                        "variant": {
+                            "parameter_description": "Varian yang akan dihapus",
+                            "parameter_name": "varian"
+                        }
+                    }
+                },
+                "description": {
+                    "command_description": "Tetapkan deskripsi untuk Karakter",
+                    "command_name": "keterangan",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Karakter untuk mengatur deskripsinya",
+                            "parameter_name": "proksi"
+                        },
+                        "text": {
+                            "parameter_description": "Deskripsi yang akan ditetapkan untuk karakter",
+                            "parameter_name": "teks"
+                        },
+                        "variant": {
+                            "parameter_description": "Varian untuk mengatur deskripsinya",
+                            "parameter_name": "varian"
+                        }
+                    }
+                },
+                "detail": {
+                    "command_description": "Dapatkan detail karakter",
+                    "command_name": "detail",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Detailkan proksi. ",
+                            "parameter_name": "proksi"
+                        },
+                        "variant": {
+                            "parameter_description": "Varian hingga detail",
+                            "parameter_name": "varian"
+                        }
+                    }
+                },
+                "find": {
+                    "command_description": "Find a variant."
+                },
+                "group": {
+                    "command_description": "Tetapkan grup untuk Karakter",
+                    "command_name": "kelompok",
+                    "params": {
+                        "group": {
+                            "parameter_description": "Grup, secara default Tidak ada",
+                            "parameter_name": "kelompok"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karakter untuk mengatur grup",
+                            "parameter_name": "proksi"
+                        },
+                        "variant": {
+                            "parameter_description": "Varian untuk mengatur grup",
+                            "parameter_name": "varian"
+                        }
+                    }
+                },
+                "list": {
+                    "command_description": "List all variants."
+                },
+                "local": {
+                    "command_description": "Tetapkan lokal untuk Karakter",
+                    "command_name": "lokal",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Gambar, secara default Tidak Ada",
+                            "parameter_name": "gambar"
+                        },
+                        "nickname": {
+                            "parameter_description": "Nama panggilan, secara default Tidak ada",
+                            "parameter_name": "nama_panggilan"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karakter untuk mengatur lokal",
+                            "parameter_name": "proksi"
+                        },
+                        "variant": {
+                            "parameter_description": "Varian untuk mengatur lokal",
+                            "parameter_name": "varian"
+                        }
+                    }
+                },
+                "nickname": {
+                    "command_description": "Tetapkan nama panggilan untuk Karakter",
+                    "command_name": "nama_panggilan",
+                    "params": {
+                        "nickname": {
+                            "parameter_description": "Nama panggilan yang akan ditetapkan untuk karakter",
+                            "parameter_name": "nama_panggilan"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karakter untuk menetapkan nama panggilannya",
+                            "parameter_name": "proksi"
+                        },
+                        "variant": {
+                            "parameter_description": "Varian untuk mengatur nama panggilannya",
+                            "parameter_name": "varian"
+                        }
+                    }
+                },
+                "nsfw": {
+                    "command_description": "Atur apakah suatu Karakter adalah NSFW",
+                    "command_name": "nsfw",
+                    "params": {
+                        "nsfw": {
+                            "parameter_description": "NSFW, secara default beralih ke nilai yang berlawanan",
+                            "parameter_name": "nsfw"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karakter untuk mengatur NSFW",
+                            "parameter_name": "proksi"
+                        },
+                        "variant": {
+                            "parameter_description": "Varian untuk menyetel NSFW",
+                            "parameter_name": "varian"
+                        }
+                    }
+                },
+                "prefix": {
+                    "command_description": "Menetapkan awalan untuk sebuah karakter.",
+                    "command_name": "awalan",
+                    "params": {
+                        "prefixes": {
+                            "parameter_description": "Awalan mis. ",
+                            "parameter_name": "awalan"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karakter untuk mengatur awalan",
+                            "parameter_name": "proksi"
+                        },
+                        "variant": {
+                            "parameter_description": "Varian untuk mengatur awalan",
+                            "parameter_name": "varian"
+                        }
+                    }
+                },
+                "prune": {
+                    "command_description": "Pangkas karakter yang tidak digunakan selama waktu tertentu.",
+                    "command_name": "memangkas",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "proksi"
+                        },
+                        "time": {
+                            "parameter_description": "Tanggal yang akan dipangkas sebelumnya, secara default Tidak Ada"
+                        }
+                    }
+                },
+                "purge": {
+                    "command_description": "Bersihkan semua data Anda (kecuali log pesan)",
+                    "command_name": "membersihkan",
+                    "params": {
+                        "confirmation": {
+                            "parameter_description": "konfirmasi",
+                            "parameter_name": "konfirmasi"
+                        },
+                        "proxy": {
+                            "parameter_description": "proksi",
+                            "parameter_name": "proksi"
+                        }
+                    }
+                },
+                "read": {
+                    "command_description": "Membaca Karakter",
+                    "command_name": "membaca",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Karakter untuk membaca variannya",
+                            "parameter_name": "proksi"
+                        },
+                        "variant": {
+                            "parameter_description": "Varian untuk dibaca",
+                            "parameter_name": "varian"
+                        }
+                    }
+                },
+                "rename": {
+                    "command_description": "Ganti Nama Karakter",
+                    "command_name": "ganti_nama",
+                    "params": {
+                        "name": {
+                            "parameter_description": "Nama baru untuk karakter tersebut",
+                            "parameter_name": "nama"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karakter untuk diganti namanya",
+                            "parameter_name": "proksi"
+                        },
+                        "variant": {
+                            "parameter_description": "Varian untuk diganti namanya",
+                            "parameter_name": "varian"
+                        }
+                    }
+                },
+                "set": {
+                    "command_description": "Set a variant."
+                },
+                "update": {
+                    "command_description": "Perbarui proksi. ",
+                    "command_name": "memperbarui",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Gambar, secara default Tidak Ada",
+                            "parameter_name": "gambar"
+                        },
+                        "proxy": {
+                            "parameter_description": "Karakter untuk diperbarui",
+                            "parameter_name": "proksi"
+                        }
+                    }
+                },
+                "use": {
+                    "command_description": "Use a variant."
+                }
+            },
+            "group_description": "Variant commands.",
+            "group_name": "var"
+        },
+        "variant-to-proxy": {
+            "command_description": "Mengonversi varian menjadi karakter",
+            "command_name": "varian-ke-proxy",
+            "params": {
+                "proxy": {
+                    "parameter_description": "Proksi untuk dikonversi",
+                    "parameter_name": "proksi"
+                },
+                "variant": {
+                    "parameter_description": "Varian untuk dikonversi",
+                    "parameter_name": "varian"
+                }
+            }
+        }
+    },
+    "interactions": {
         "context_menu": {
             "command_name": "Proksi"
         }

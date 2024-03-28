@@ -1,304 +1,333 @@
 {
     "commands": {
-        "exec": {
-            "command_description": "Execute a command."
+        "afk": {
+            "command_description": "Check if a user is AFK."
         },
-        "proxy": {
-            "command_name": "välityspalvelin",
-            "command_description": "Poista merkit käytöstä palvelimessa",
+        "auto": {
+            "command_description": "Aseta hahmolle automaatti",
+            "command_name": "auto",
             "params": {
-                "enable": {
-                    "parameter_name": "enable",
-                    "parameter_description": "Ota merkit käyttöön tai poista ne käytöstä oletusarvoisesti"
+                "proxy": {
+                    "parameter_description": "Merkki, oletuksena poistaa automaattisen käytöstä",
+                    "parameter_name": "välityspalvelin"
                 }
             }
         },
-        "set": {
-            "command_description": "Set a proxy as the current one."
-        },
-        "use": {
+        "avatar": {
+            "command_description": "Aseta avatar hahmolle",
+            "command_name": "hahmo",
             "params": {
-                "text": {
-                    "parameter_name": "teksti",
-                    "parameter_description": "teksti"
+                "avatar": {
+                    "parameter_description": "Kuvan URL-osoite, oletuksena Ei mitään",
+                    "parameter_name": "hahmo"
+                },
+                "proxy": {
+                    "parameter_description": "Hahmo, jolle avatar asetetaan",
+                    "parameter_name": "välityspalvelin"
                 }
             }
         },
-        "say": {
+        "birthday": {
+            "command_description": "Aseta hahmon syntymäpäivä",
+            "command_name": "syntymäpäivä",
             "params": {
-                "text": {
-                    "parameter_name": "teksti",
-                    "parameter_description": "teksti"
+                "birthday": {
+                    "parameter_description": "Syntymäpäivä, oletuksena Ei mitään",
+                    "parameter_name": "syntymäpäivä"
+                },
+                "proxy": {
+                    "parameter_description": "Hahmo, jolle syntymäpäivä asetetaan",
+                    "parameter_name": "välityspalvelin"
                 }
             }
         },
-        "npc": {
-            "command_name": "npc",
-            "command_description": "Luo uusi NPC-viesti",
-            "params": {
-                "franchise": {
-                    "parameter_name": "franchise",
-                    "parameter_description": "Franchise käytettäväksi",
-                    "choices": {
-                        "Pokemon": "Pokemon",
-                        "Pokemon Shiny": "Pokemon Shiny",
-                        "Trainer": "Trainer",
-                        "Digimon": "Digimon",
-                        "Palworld": "Palworld",
-                        "D&D": "D&D"
-                    }
-                },
-                "npc": {
-                    "parameter_name": "npc",
-                    "parameter_description": "NPC käytettäväksi"
-                },
-                "nickname": {
-                    "parameter_name": "nimimerkki",
-                    "parameter_description": "Lempinimi, oletuksena Ei mitään"
-                },
-                "emotion": {
-                    "parameter_name": "tunne",
-                    "parameter_description": "Tunteet, oletuksena Normaali",
-                    "choices": {
-                        "Normal": "Normal",
-                        "Happy": "Happy",
-                        "Pain": "Pain",
-                        "Angry": "Angry",
-                        "Worried": "Worried",
-                        "Sad": "Sad",
-                        "Crying": "Crying",
-                        "Shouting": "Shouting",
-                        "TearyEyed": "TearyEyed",
-                        "Determined": "Determined",
-                        "Joyous": "Joyous",
-                        "Inspired": "Inspired",
-                        "Surprised": "Surprised",
-                        "Dizzy": "Dizzy",
-                        "Sigh": "Sigh",
-                        "Stunned": "Stunned",
-                        "Special0": "Special0",
-                        "Special1": "Special1",
-                        "Special2": "Special2",
-                        "Special3": "Special3"
-                    }
-                },
-                "image": {
-                    "parameter_name": "kuva",
-                    "parameter_description": "Kuva, oletuksena Ei mitään"
-                },
-                "text": {
-                    "parameter_name": "teksti",
-                    "parameter_description": "teksti"
-                }
-            }
+        "check_permissions": {
+            "command_description": "Tarkista, voiko botti toimia tarjotussa kanavassa",
+            "command_name": "check_perms"
+        },
+        "color": {
+            "command_description": "Set a color for a proxy."
         },
         "create": {
-            "command_description": "Create a new proxy.",
+            "command_description": "Luo uusi hahmo.",
+            "command_name": "luoda",
             "params": {
+                "image": {
+                    "parameter_description": "Kuva, oletuksena Ei mitään",
+                    "parameter_name": "kuva"
+                },
                 "prefixes": {
                     "parameter_description": "Prefixes e.g. A:text, |text|, etc."
                 }
             }
         },
         "delete": {
-            "command_name": "poistaa",
             "command_description": "Poista hahmo",
+            "command_name": "poistaa",
             "params": {
                 "proxy": {
-                    "parameter_name": "välityspalvelin",
-                    "parameter_description": "Välityspalvelin muunnelman poistamiseksi"
-                }
-            }
-        },
-        "read": {
-            "command_name": "lukea",
-            "command_description": "Lue hahmo",
-            "params": {
-                "proxy": {
-                    "parameter_name": "välityspalvelin",
-                    "parameter_description": "Hahmo, josta muunnelma luetaan"
-                }
-            }
-        },
-        "nickname": {
-            "command_name": "nimimerkki",
-            "command_description": "Aseta hahmolle lempinimi",
-            "params": {
-                "proxy": {
-                    "parameter_name": "välityspalvelin",
-                    "parameter_description": "Merkki, jolle asetetaan lempinimi"
-                },
-                "nickname": {
-                    "parameter_name": "nimimerkki",
-                    "parameter_description": "Hahmolle asetettava lempinimi"
-                }
-            }
-        },
-        "local": {
-            "command_name": "paikallinen",
-            "command_description": "Aseta hahmolle paikallinen",
-            "params": {
-                "proxy": {
-                    "parameter_name": "välityspalvelin",
-                    "parameter_description": "Paikallinen merkki"
-                },
-                "avatar": {
-                    "parameter_name": "kuva",
-                    "parameter_description": "Kuva, oletuksena Ei mitään"
-                },
-                "nickname": {
-                    "parameter_name": "nimimerkki",
-                    "parameter_description": "Lempinimi, oletuksena Ei mitään"
-                }
-            }
-        },
-        "avatar": {
-            "command_name": "hahmo",
-            "command_description": "Aseta avatar hahmolle",
-            "params": {
-                "proxy": {
-                    "parameter_name": "välityspalvelin",
-                    "parameter_description": "Hahmo, jolle avatar asetetaan"
-                },
-                "avatar": {
-                    "parameter_name": "hahmo",
-                    "parameter_description": "Kuvan URL-osoite, oletuksena Ei mitään"
-                }
-            }
-        },
-        "prefix": {
-            "command_name": "etuliite",
-            "command_description": "Aseta merkin etuliitteet.",
-            "params": {
-                "proxy": {
-                    "parameter_name": "välityspalvelin",
-                    "parameter_description": "Merkki, jolle asetetaan etuliite"
-                },
-                "prefixes": {
-                    "parameter_name": "etuliitteet",
-                    "parameter_description": "Etuliitteet esim. "
-                }
-            }
-        },
-        "birthday": {
-            "command_name": "syntymäpäivä",
-            "command_description": "Aseta hahmon syntymäpäivä",
-            "params": {
-                "proxy": {
-                    "parameter_name": "välityspalvelin",
-                    "parameter_description": "Hahmo, jolle syntymäpäivä asetetaan"
-                },
-                "birthday": {
-                    "parameter_name": "syntymäpäivä",
-                    "parameter_description": "Syntymäpäivä, oletuksena Ei mitään"
+                    "parameter_description": "Välityspalvelin muunnelman poistamiseksi",
+                    "parameter_name": "välityspalvelin"
                 }
             }
         },
         "description": {
-            "command_name": "kuvaus",
             "command_description": "Aseta hahmon kuvaus",
+            "command_name": "kuvaus",
             "params": {
                 "proxy": {
-                    "parameter_name": "välityspalvelin",
-                    "parameter_description": "Merkki, jolle asetetaan kuvaus"
+                    "parameter_description": "Merkki, jolle asetetaan kuvaus",
+                    "parameter_name": "välityspalvelin"
                 },
                 "text": {
-                    "parameter_name": "teksti",
-                    "parameter_description": "Hahmolle asetettava kuvaus"
+                    "parameter_description": "Hahmolle asetettava kuvaus",
+                    "parameter_name": "teksti"
                 }
             }
         },
-        "rename": {
-            "command_name": "nimeä_uudelleen",
-            "command_description": "Nimeä hahmo uudelleen",
+        "detail": {
+            "command_description": "Hanki tietoja hahmosta",
+            "command_name": "yksityiskohta",
             "params": {
                 "proxy": {
-                    "parameter_name": "välityspalvelin",
-                    "parameter_description": "Uudelleennimettävä hahmo"
+                    "parameter_description": "Yksityiskohta välityspalvelin. ",
+                    "parameter_name": "välityspalvelin"
+                }
+            }
+        },
+        "exec": {
+            "command_description": "Execute a command."
+        },
+        "export": {
+            "command_description": "Vie merkit JSON-tiedostoon",
+            "command_name": "viedä",
+            "params": {
+                "format": {
+                    "choices": {
+                        "Default": "Default",
+                        "PluralKit": "PluralKit",
+                        "Tupperbox": "Tupperbox"
+                    },
+                    "parameter_description": "Muoto, johon viedään, oletuksena JSON",
+                    "parameter_name": "muoto"
                 },
-                "name": {
-                    "parameter_name": "nimi",
-                    "parameter_description": "Hahmolle uusi nimi"
+                "new_token": {
+                    "parameter_description": "Jos haluat luoda uuden tunnuksen",
+                    "parameter_name": "uusi_tunnus"
                 }
             }
         },
         "group": {
-            "command_name": "ryhmä",
             "command_description": "Aseta ryhmä hahmolle",
-            "params": {
-                "proxy": {
-                    "parameter_name": "välityspalvelin",
-                    "parameter_description": "Merkki, jolle ryhmä asetetaan"
-                },
-                "group": {
-                    "parameter_name": "ryhmä",
-                    "parameter_description": "Ryhmä, oletuksena Ei mitään"
-                }
-            }
-        },
-        "nsfw": {
-            "command_name": "nsfw",
-            "command_description": "Määritä, onko hahmo NSFW",
-            "params": {
-                "proxy": {
-                    "parameter_name": "välityspalvelin",
-                    "parameter_description": "Merkki, jolle NSFW asetetaan"
-                },
-                "nsfw": {
-                    "parameter_name": "nsfw",
-                    "parameter_description": "NSFW, oletuksena vaihda päinvastaiseen arvoon"
-                }
-            }
-        },
-        "auto": {
-            "command_name": "auto",
-            "command_description": "Aseta hahmolle automaatti",
-            "params": {
-                "proxy": {
-                    "parameter_name": "välityspalvelin",
-                    "parameter_description": "Merkki, oletuksena poistaa automaattisen käytöstä"
-                }
-            }
-        },
-        "list": {
-            "command_name": "lista",
-            "command_description": "Listaa kaikki hahmot ",
+            "command_name": "ryhmä",
             "params": {
                 "group": {
-                    "parameter_name": "ryhmä",
-                    "parameter_description": "Ryhmä, josta merkit luetellaan"
+                    "parameter_description": "Ryhmä, oletuksena Ei mitään",
+                    "parameter_name": "ryhmä"
+                },
+                "proxy": {
+                    "parameter_description": "Merkki, jolle ryhmä asetetaan",
+                    "parameter_name": "välityspalvelin"
+                }
+            }
+        },
+        "help": {
+            "command_description": "Sisäänrakennettu bot-ohje",
+            "command_name": "auta",
+            "params": {
+                "search": {
+                    "parameter_description": "Hakutermi",
+                    "parameter_name": "hae"
+                }
+            }
+        },
+        "import": {
+            "command_description": "Tuo hahmosi tiedostosta tai tunnuksesta",
+            "command_name": "tuonti",
+            "params": {
+                "data": {
+                    "parameter_description": "Tiedosto, josta tuodaan",
+                    "parameter_name": "tiedot"
+                },
+                "deleting_from_token": {
+                    "parameter_description": "Poista merkit tunnuksesta",
+                    "parameter_name": "deleting_from_token"
+                },
+                "token": {
+                    "parameter_description": "Tuonnissa käytettävä tunnus",
+                    "parameter_name": "merkki"
                 }
             }
         },
         "latch": {
-            "command_name": "salpa",
             "command_description": "Ota salpatila käyttöön tai poista se käytöstä",
+            "command_name": "salpa",
             "params": {
-                "enable": {
-                    "parameter_description": "Ota salpatila käyttöön tai poista se käytöstä"
-                },
                 "auto_remove": {
                     "parameter_description": "Säilytetäänkö automaattinen nykyinen kanava vai ei, oletuksena True"
+                },
+                "enable": {
+                    "parameter_description": "Ota salpatila käyttöön tai poista se käytöstä"
                 }
             }
         },
-        "export": {
-            "command_name": "viedä",
-            "command_description": "Vie merkit JSON-tiedostoon",
+        "list": {
+            "command_description": "Listaa kaikki hahmot ",
+            "command_name": "lista",
             "params": {
-                "format": {
-                    "parameter_name": "muoto",
-                    "parameter_description": "Muoto, johon viedään, oletuksena JSON"
+                "group": {
+                    "parameter_description": "Ryhmä, josta merkit luetellaan",
+                    "parameter_name": "ryhmä"
+                }
+            }
+        },
+        "local": {
+            "command_description": "Aseta hahmolle paikallinen",
+            "command_name": "paikallinen",
+            "params": {
+                "avatar": {
+                    "parameter_description": "Kuva, oletuksena Ei mitään",
+                    "parameter_name": "kuva"
                 },
-                "new_token": {
-                    "parameter_name": "uusi_tunnus",
-                    "parameter_description": "Jos haluat luoda uuden tunnuksen"
+                "nickname": {
+                    "parameter_description": "Lempinimi, oletuksena Ei mitään",
+                    "parameter_name": "nimimerkki"
+                },
+                "proxy": {
+                    "parameter_description": "Paikallinen merkki",
+                    "parameter_name": "välityspalvelin"
+                }
+            }
+        },
+        "nickname": {
+            "command_description": "Aseta hahmolle lempinimi",
+            "command_name": "nimimerkki",
+            "params": {
+                "nickname": {
+                    "parameter_description": "Hahmolle asetettava lempinimi",
+                    "parameter_name": "nimimerkki"
+                },
+                "proxy": {
+                    "parameter_description": "Merkki, jolle asetetaan lempinimi",
+                    "parameter_name": "välityspalvelin"
+                }
+            }
+        },
+        "npc": {
+            "command_description": "Luo uusi NPC-viesti",
+            "command_name": "npc",
+            "params": {
+                "emotion": {
+                    "choices": {
+                        "Angry": "Angry",
+                        "Crying": "Crying",
+                        "Determined": "Determined",
+                        "Dizzy": "Dizzy",
+                        "Happy": "Happy",
+                        "Inspired": "Inspired",
+                        "Joyous": "Joyous",
+                        "Normal": "Normal",
+                        "Pain": "Pain",
+                        "Sad": "Sad",
+                        "Shouting": "Shouting",
+                        "Sigh": "Sigh",
+                        "Special0": "Special0",
+                        "Special1": "Special1",
+                        "Special2": "Special2",
+                        "Special3": "Special3",
+                        "Stunned": "Stunned",
+                        "Surprised": "Surprised",
+                        "TearyEyed": "TearyEyed",
+                        "Worried": "Worried"
+                    },
+                    "parameter_description": "Tunteet, oletuksena Normaali",
+                    "parameter_name": "tunne"
+                },
+                "franchise": {
+                    "choices": {
+                        "D&D": "D&D",
+                        "Digimon": "Digimon",
+                        "Palworld": "Palworld",
+                        "Pokemon": "Pokemon",
+                        "Pokemon Shiny": "Pokemon Shiny",
+                        "Trainer": "Trainer"
+                    },
+                    "parameter_description": "Franchise käytettäväksi",
+                    "parameter_name": "toimilupa"
+                },
+                "image": {
+                    "parameter_description": "Kuva, oletuksena Ei mitään",
+                    "parameter_name": "kuva"
+                },
+                "nickname": {
+                    "parameter_description": "Lempinimi, oletuksena Ei mitään",
+                    "parameter_name": "nimimerkki"
+                },
+                "npc": {
+                    "parameter_description": "NPC käytettäväksi",
+                    "parameter_name": "npc"
+                },
+                "text": {
+                    "parameter_description": "teksti",
+                    "parameter_name": "teksti"
+                }
+            }
+        },
+        "nsfw": {
+            "command_description": "Määritä, onko hahmo NSFW",
+            "command_name": "nsfw",
+            "params": {
+                "nsfw": {
+                    "parameter_description": "NSFW, oletuksena vaihda päinvastaiseen arvoon",
+                    "parameter_name": "nsfw"
+                },
+                "proxy": {
+                    "parameter_description": "Merkki, jolle NSFW asetetaan",
+                    "parameter_name": "välityspalvelin"
+                }
+            }
+        },
+        "prefix": {
+            "command_description": "Aseta merkin etuliitteet.",
+            "command_name": "etuliite",
+            "params": {
+                "prefixes": {
+                    "parameter_description": "Etuliitteet esim. ",
+                    "parameter_name": "etuliitteet"
+                },
+                "proxy": {
+                    "parameter_description": "Merkki, jolle asetetaan etuliite",
+                    "parameter_name": "välityspalvelin"
+                }
+            }
+        },
+        "proxy": {
+            "command_description": "Poista merkit käytöstä palvelimessa",
+            "command_name": "välityspalvelin",
+            "params": {
+                "enable": {
+                    "parameter_description": "Ota merkit käyttöön tai poista ne käytöstä oletusarvoisesti",
+                    "parameter_name": "enable"
+                }
+            }
+        },
+        "proxy-to-variant": {
+            "command_description": "Muunna hahmo muunnelmaksi",
+            "command_name": "välityspalvelin-variantti",
+            "params": {
+                "base": {
+                    "parameter_description": "Hahmolle uusi pohja",
+                    "parameter_name": "pohja"
+                },
+                "original": {
+                    "parameter_description": "Muunnettava hahmo",
+                    "parameter_name": "alkuperäinen"
                 }
             }
         },
         "prune": {
-            "command_name": "karsia",
             "command_description": "Leikkaa merkit käyttämättä tietyn ajan.",
+            "command_name": "karsia",
             "params": {
                 "time": {
                     "parameter_description": "Leikkauspäivämäärä ennen, oletuksena Ei mitään"
@@ -306,656 +335,674 @@
             }
         },
         "purge": {
-            "command_name": "puhdistaa",
             "command_description": "Tyhjennä kaikki tietosi (paitsi viestilokit)",
+            "command_name": "puhdistaa",
             "params": {
                 "confirmation": {
-                    "parameter_name": "vahvistus",
-                    "parameter_description": "vahvistus"
+                    "parameter_description": "vahvistus",
+                    "parameter_name": "vahvistus"
                 }
             }
         },
-        "proxy-to-variant": {
-            "command_name": "välityspalvelin-variantti",
-            "command_description": "Muunna hahmo muunnelmaksi",
-            "params": {
-                "original": {
-                    "parameter_name": "alkuperäinen",
-                    "parameter_description": "Muunnettava hahmo"
-                },
-                "base": {
-                    "parameter_name": "pohja",
-                    "parameter_description": "Hahmolle uusi pohja"
-                }
-            }
-        },
-        "variant-to-proxy": {
-            "command_name": "variantista-välityspalvelimeen",
-            "command_description": "Muunna muunnelma merkiksi",
+        "read": {
+            "command_description": "Lue hahmo",
+            "command_name": "lukea",
             "params": {
                 "proxy": {
-                    "parameter_name": "välityspalvelin",
-                    "parameter_description": "Välityspalvelin, johon muunnetaan"
-                },
-                "variant": {
-                    "parameter_name": "variantti",
-                    "parameter_description": "Muunnettava variantti"
+                    "parameter_description": "Hahmo, josta muunnelma luetaan",
+                    "parameter_name": "välityspalvelin"
                 }
             }
         },
-        "update": {
-            "command_name": "päivittää",
-            "command_description": "Päivitä välityspalvelin. ",
+        "rename": {
+            "command_description": "Nimeä hahmo uudelleen",
+            "command_name": "nimeä_uudelleen",
             "params": {
+                "name": {
+                    "parameter_description": "Hahmolle uusi nimi",
+                    "parameter_name": "nimi"
+                },
                 "proxy": {
-                    "parameter_name": "välityspalvelin",
-                    "parameter_description": "Päivitettävä hahmo"
-                },
-                "image": {
-                    "parameter_name": "kuva",
-                    "parameter_description": "Kuva, oletuksena Ei mitään"
+                    "parameter_description": "Uudelleennimettävä hahmo",
+                    "parameter_name": "välityspalvelin"
                 }
             }
-        },
-        "detail": {
-            "command_name": "yksityiskohta",
-            "command_description": "Hanki tietoja hahmosta",
-            "params": {
-                "proxy": {
-                    "parameter_name": "välityspalvelin",
-                    "parameter_description": "Yksityiskohta välityspalvelin. "
-                }
-            }
-        },
-        "import": {
-            "command_name": "tuonti",
-            "command_description": "Tuo hahmosi tiedostosta tai tunnuksesta",
-            "params": {
-                "data": {
-                    "parameter_name": "tiedot",
-                    "parameter_description": "Tiedosto, josta tuodaan"
-                },
-                "token": {
-                    "parameter_name": "merkki",
-                    "parameter_description": "Tuonnissa käytettävä tunnus"
-                },
-                "deleting_from_token": {
-                    "parameter_name": "deleting_from_token",
-                    "parameter_description": "Poista merkit tunnuksesta"
-                }
-            }
-        },
-        "var": {
-            "group_name": "var",
-            "group_description": "Variant commands.",
-            "groupset": {
-                "command_description": "Set a variant."
-            },
-            "groupuse": {
-                "command_description": "Use a variant."
-            },
-            "groupcreate": {
-                "command_name": "luoda",
-                "command_description": "Luo uusi hahmo.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "välityspalvelin",
-                        "parameter_description": " Välityspalvelin muunnelman luomiseksi"
-                    },
-                    "image": {
-                        "parameter_name": "kuva",
-                        "parameter_description": "Kuva, oletuksena Ei mitään"
-                    },
-                    "prefixes": {
-                        "parameter_description": "Prefixes e.g. A:text, |text|, etc."
-                    }
-                }
-            },
-            "groupdelete": {
-                "command_name": "poistaa",
-                "command_description": "Poista hahmon muunnelma",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "välityspalvelin",
-                        "parameter_description": "Välityspalvelin muunnelman poistamiseksi"
-                    },
-                    "variant": {
-                        "parameter_name": "variantti",
-                        "parameter_description": "Poistettava variantti"
-                    }
-                }
-            },
-            "groupread": {
-                "command_name": "lukea",
-                "command_description": "Lue hahmo",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "välityspalvelin",
-                        "parameter_description": "Hahmo, josta muunnelma luetaan"
-                    },
-                    "variant": {
-                        "parameter_name": "variantti",
-                        "parameter_description": "Variantti luettavaksi"
-                    }
-                }
-            },
-            "groupnickname": {
-                "command_name": "nimimerkki",
-                "command_description": "Aseta hahmolle lempinimi",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "välityspalvelin",
-                        "parameter_description": "Merkki, jolle asetetaan lempinimi"
-                    },
-                    "variant": {
-                        "parameter_name": "variantti",
-                        "parameter_description": "Variantti, jolle lempinimi asetetaan"
-                    },
-                    "nickname": {
-                        "parameter_name": "nimimerkki",
-                        "parameter_description": "Hahmolle asetettava lempinimi"
-                    }
-                }
-            },
-            "grouplocal": {
-                "command_name": "paikallinen",
-                "command_description": "Aseta hahmolle paikallinen",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "välityspalvelin",
-                        "parameter_description": "Paikallinen merkki"
-                    },
-                    "variant": {
-                        "parameter_name": "variantti",
-                        "parameter_description": "Paikallinen vaihtoehto"
-                    },
-                    "avatar": {
-                        "parameter_name": "kuva",
-                        "parameter_description": "Kuva, oletuksena Ei mitään"
-                    },
-                    "nickname": {
-                        "parameter_name": "nimimerkki",
-                        "parameter_description": "Lempinimi, oletuksena Ei mitään"
-                    }
-                }
-            },
-            "groupprefix": {
-                "command_name": "etuliite",
-                "command_description": "Aseta merkin etuliitteet.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "välityspalvelin",
-                        "parameter_description": "Merkki, jolle asetetaan etuliite"
-                    },
-                    "variant": {
-                        "parameter_name": "variantti",
-                        "parameter_description": "Vaihtoehto, jonka etuliite asetetaan"
-                    },
-                    "prefixes": {
-                        "parameter_name": "etuliitteet",
-                        "parameter_description": "Etuliitteet esim. "
-                    }
-                }
-            },
-            "groupbirthday": {
-                "command_name": "syntymäpäivä",
-                "command_description": "Aseta hahmon syntymäpäivä",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "välityspalvelin",
-                        "parameter_description": "Hahmo, jolle syntymäpäivä asetetaan"
-                    },
-                    "variant": {
-                        "parameter_name": "variantti",
-                        "parameter_description": "Vaihtoehto syntymäpäivän asettamiseen"
-                    },
-                    "birthday": {
-                        "parameter_name": "syntymäpäivä",
-                        "parameter_description": "Syntymäpäivä, oletuksena Ei mitään"
-                    }
-                }
-            },
-            "groupdescription": {
-                "command_name": "kuvaus",
-                "command_description": "Aseta hahmon kuvaus",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "välityspalvelin",
-                        "parameter_description": "Merkki, jolle asetetaan kuvaus"
-                    },
-                    "variant": {
-                        "parameter_name": "variantti",
-                        "parameter_description": "Vaihtoehto, jolle määritetään kuvaus"
-                    },
-                    "text": {
-                        "parameter_name": "teksti",
-                        "parameter_description": "Hahmolle asetettava kuvaus"
-                    }
-                }
-            },
-            "grouprename": {
-                "command_name": "nimeä_uudelleen",
-                "command_description": "Nimeä hahmo uudelleen",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "välityspalvelin",
-                        "parameter_description": "Uudelleennimettävä hahmo"
-                    },
-                    "variant": {
-                        "parameter_name": "variantti",
-                        "parameter_description": "Uudelleen nimettävä vaihtoehto"
-                    },
-                    "name": {
-                        "parameter_name": "nimi",
-                        "parameter_description": "Hahmolle uusi nimi"
-                    }
-                }
-            },
-            "groupgroup": {
-                "command_name": "ryhmä",
-                "command_description": "Aseta ryhmä hahmolle",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "välityspalvelin",
-                        "parameter_description": "Merkki, jolle ryhmä asetetaan"
-                    },
-                    "variant": {
-                        "parameter_name": "variantti",
-                        "parameter_description": "Vaihtoehto ryhmän asettamiseen"
-                    },
-                    "group": {
-                        "parameter_name": "ryhmä",
-                        "parameter_description": "Ryhmä, oletuksena Ei mitään"
-                    }
-                }
-            },
-            "groupnsfw": {
-                "command_name": "nsfw",
-                "command_description": "Määritä, onko hahmo NSFW",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "välityspalvelin",
-                        "parameter_description": "Merkki, jolle NSFW asetetaan"
-                    },
-                    "variant": {
-                        "parameter_name": "variantti",
-                        "parameter_description": "Vaihtoehto, jolle NSFW asetetaan"
-                    },
-                    "nsfw": {
-                        "parameter_name": "nsfw",
-                        "parameter_description": "NSFW, oletuksena vaihda päinvastaiseen arvoon"
-                    }
-                }
-            },
-            "groupauto": {
-                "command_name": "auto",
-                "command_description": "Aseta hahmolle automaatti",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "välityspalvelin",
-                        "parameter_description": "Merkki, oletuksena poistaa automaattisen käytöstä"
-                    },
-                    "variant": {
-                        "parameter_name": "variantti",
-                        "parameter_description": "Vaihtoehto automaattiselle asetukselle"
-                    }
-                }
-            },
-            "groupavatar": {
-                "command_name": "hahmo",
-                "command_description": "Aseta avatar hahmolle",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "välityspalvelin",
-                        "parameter_description": "Hahmo, jolle avatar asetetaan"
-                    },
-                    "variant": {
-                        "parameter_name": "variantti",
-                        "parameter_description": "Vaihtoehto avatarin asettamiseen"
-                    },
-                    "avatar": {
-                        "parameter_name": "hahmo",
-                        "parameter_description": "Kuvan URL-osoite, oletuksena Ei mitään"
-                    }
-                }
-            },
-            "grouplist": {
-                "command_description": "List all variants."
-            },
-            "groupfind": {
-                "command_description": "Find a variant."
-            },
-            "groupupdate": {
-                "command_name": "päivittää",
-                "command_description": "Päivitä välityspalvelin. ",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "välityspalvelin",
-                        "parameter_description": "Päivitettävä hahmo"
-                    },
-                    "image": {
-                        "parameter_name": "kuva",
-                        "parameter_description": "Kuva, oletuksena Ei mitään"
-                    }
-                }
-            },
-            "groupdetail": {
-                "command_name": "yksityiskohta",
-                "command_description": "Hanki tietoja hahmosta",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "välityspalvelin",
-                        "parameter_description": "Yksityiskohta välityspalvelin. "
-                    },
-                    "variant": {
-                        "parameter_name": "variantti",
-                        "parameter_description": "Variantti yksityiskohtiin"
-                    }
-                }
-            },
-            "groupprune": {
-                "command_name": "karsia",
-                "command_description": "Leikkaa merkit käyttämättä tietyn ajan.",
-                "params": {
-                    "proxy": {
-                        "parameter_description": "välityspalvelin"
-                    },
-                    "time": {
-                        "parameter_description": "Leikkauspäivämäärä ennen, oletuksena Ei mitään"
-                    }
-                }
-            },
-            "grouppurge": {
-                "command_name": "puhdistaa",
-                "command_description": "Tyhjennä kaikki tietosi (paitsi viestilokit)",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "välityspalvelin",
-                        "parameter_description": "välityspalvelin"
-                    },
-                    "confirmation": {
-                        "parameter_name": "vahvistus",
-                        "parameter_description": "vahvistus"
-                    }
-                }
-            }
-        },
-        "shared": {
-            "group_description": "Shared proxy commands.",
-            "groupset": {
-                "command_description": "Set a proxy as the current one."
-            },
-            "groupcreate": {
-                "command_name": "luoda",
-                "command_description": "Luo uusi hahmo.",
-                "params": {
-                    "image": {
-                        "parameter_name": "kuva",
-                        "parameter_description": "Kuva, oletuksena Ei mitään"
-                    }
-                }
-            },
-            "groupdelete": {
-                "command_name": "poistaa",
-                "command_description": "Poista hahmo",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "välityspalvelin",
-                        "parameter_description": "Välityspalvelin muunnelman poistamiseksi"
-                    }
-                }
-            },
-            "groupread": {
-                "command_name": "lukea",
-                "command_description": "Lue hahmo",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "välityspalvelin",
-                        "parameter_description": "Hahmo, josta muunnelma luetaan"
-                    }
-                }
-            },
-            "groupauto": {
-                "command_name": "auto",
-                "command_description": "Aseta hahmolle automaatti",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "välityspalvelin",
-                        "parameter_description": "Merkki, oletuksena poistaa automaattisen käytöstä"
-                    }
-                }
-            },
-            "groupprefix": {
-                "command_name": "etuliite",
-                "command_description": "Aseta merkin etuliitteet.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "välityspalvelin",
-                        "parameter_description": "Merkki, jolle asetetaan etuliite"
-                    },
-                    "prefixes": {
-                        "parameter_name": "etuliitteet",
-                        "parameter_description": "Etuliitteet esim. "
-                    }
-                }
-            },
-            "groupbirthday": {
-                "command_name": "syntymäpäivä",
-                "command_description": "Aseta hahmon syntymäpäivä",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "välityspalvelin",
-                        "parameter_description": "Hahmo, jolle syntymäpäivä asetetaan"
-                    },
-                    "birthday": {
-                        "parameter_name": "syntymäpäivä",
-                        "parameter_description": "Syntymäpäivä, oletuksena Ei mitään"
-                    }
-                }
-            },
-            "groupdescription": {
-                "command_name": "kuvaus",
-                "command_description": "Aseta hahmon kuvaus",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "välityspalvelin",
-                        "parameter_description": "Merkki, jolle asetetaan kuvaus"
-                    },
-                    "text": {
-                        "parameter_name": "teksti",
-                        "parameter_description": "Hahmolle asetettava kuvaus"
-                    }
-                }
-            },
-            "grouprename": {
-                "command_name": "nimeä_uudelleen",
-                "command_description": "Nimeä hahmo uudelleen",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "välityspalvelin",
-                        "parameter_description": "Uudelleennimettävä hahmo"
-                    },
-                    "name": {
-                        "parameter_name": "nimi",
-                        "parameter_description": "Hahmolle uusi nimi"
-                    }
-                }
-            },
-            "groupnickname": {
-                "command_name": "nimimerkki",
-                "command_description": "Aseta hahmolle lempinimi",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "välityspalvelin",
-                        "parameter_description": "Merkki, jolle asetetaan lempinimi"
-                    },
-                    "nickname": {
-                        "parameter_name": "nimimerkki",
-                        "parameter_description": "Hahmolle asetettava lempinimi"
-                    }
-                }
-            },
-            "groupgroup": {
-                "command_name": "ryhmä",
-                "command_description": "Aseta ryhmä hahmolle",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "välityspalvelin",
-                        "parameter_description": "Merkki, jolle ryhmä asetetaan"
-                    },
-                    "group": {
-                        "parameter_name": "ryhmä",
-                        "parameter_description": "Ryhmä, oletuksena Ei mitään"
-                    }
-                }
-            },
-            "groupnsfw": {
-                "command_name": "nsfw",
-                "command_description": "Määritä, onko hahmo NSFW",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "välityspalvelin",
-                        "parameter_description": "Merkki, jolle NSFW asetetaan"
-                    },
-                    "nsfw": {
-                        "parameter_name": "nsfw",
-                        "parameter_description": "NSFW, oletuksena vaihda päinvastaiseen arvoon"
-                    }
-                }
-            },
-            "groupavatar": {
-                "command_name": "hahmo",
-                "command_description": "Aseta avatar hahmolle",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "välityspalvelin",
-                        "parameter_description": "Hahmo, jolle avatar asetetaan"
-                    },
-                    "avatar": {
-                        "parameter_name": "hahmo",
-                        "parameter_description": "Kuvan URL-osoite, oletuksena Ei mitään"
-                    }
-                }
-            },
-            "groupimage": {
-                "params": {
-                    "proxy": {
-                        "parameter_name": "välityspalvelin",
-                        "parameter_description": "Hahmo, jolle avatar asetetaan"
-                    },
-                    "avatar": {
-                        "parameter_name": "hahmo",
-                        "parameter_description": "Kuvan URL-osoite, oletuksena Ei mitään"
-                    }
-                }
-            },
-            "grouplocal": {
-                "command_name": "paikallinen",
-                "command_description": "Aseta hahmolle paikallinen",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "välityspalvelin",
-                        "parameter_description": "Paikallinen merkki"
-                    },
-                    "avatar": {
-                        "parameter_name": "kuva",
-                        "parameter_description": "Kuva, oletuksena Ei mitään"
-                    },
-                    "nickname": {
-                        "parameter_name": "nimimerkki",
-                        "parameter_description": "Lempinimi, oletuksena Ei mitään"
-                    }
-                }
-            },
-            "groupupdate": {
-                "command_name": "päivittää",
-                "command_description": "Päivitä välityspalvelin. ",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "välityspalvelin",
-                        "parameter_description": "Päivitettävä hahmo"
-                    },
-                    "image": {
-                        "parameter_name": "kuva",
-                        "parameter_description": "Kuva, oletuksena Ei mitään"
-                    }
-                }
-            },
-            "groupdetail": {
-                "command_name": "yksityiskohta",
-                "command_description": "Hanki tietoja hahmosta",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "välityspalvelin",
-                        "parameter_description": "Yksityiskohta välityspalvelin. "
-                    }
-                }
-            },
-            "groupprune": {
-                "command_name": "karsia",
-                "command_description": "Leikkaa merkit käyttämättä tietyn ajan.",
-                "params": {
-                    "time": {
-                        "parameter_description": "Leikkauspäivämäärä ennen, oletuksena Ei mitään"
-                    }
-                }
-            },
-            "grouppurge": {
-                "command_name": "puhdistaa",
-                "command_description": "Tyhjennä kaikki tietosi (paitsi viestilokit)",
-                "params": {
-                    "confirmation": {
-                        "parameter_name": "vahvistus",
-                        "parameter_description": "vahvistus"
-                    }
-                }
-            }
-        },
-        "check_permissions": {
-            "command_name": "check_perms",
-            "command_description": "Tarkista, voiko botti toimia tarjotussa kanavassa"
         },
         "roll": {
             "command_description": "Roll a dice."
         },
-        "afk": {
-            "command_description": "Check if a user is AFK."
-        },
-        "help": {
-            "command_name": "auta",
-            "command_description": "Sisäänrakennettu bot-ohje",
+        "say": {
+            "command_description": "Say something.",
             "params": {
-                "search": {
-                    "parameter_name": "hae",
-                    "parameter_description": "Hakutermi"
+                "text": {
+                    "parameter_description": "teksti",
+                    "parameter_name": "teksti"
                 }
             }
         },
         "server_wiki": {
-            "command_name": "server_wiki",
             "command_description": "Käyttäjän määrittämä palvelinwiki",
+            "command_name": "server_wiki",
             "params": {
                 "search": {
-                    "parameter_name": "hae",
-                    "parameter_description": "Hakutermi"
+                    "parameter_description": "Hakutermi",
+                    "parameter_name": "hae"
                 }
             }
         },
+        "set": {
+            "command_description": "Set a proxy as the current one."
+        },
         "settings": {
-            "command_name": "asetukset",
             "command_description": "Botin asetukset",
+            "command_name": "asetukset",
             "params": {
                 "menu": {
-                    "parameter_name": "valikosta",
-                    "parameter_description": "Asetuksille avautuva valikko",
                     "choices": {
-                        "Server": "Palvelin",
-                        "Member": "Jäsen",
-                        "User": "Käyttäjä"
+                        "Member": "Member",
+                        "Server": "Server",
+                        "User": "User"
+                    },
+                    "parameter_description": "Asetuksille avautuva valikko",
+                    "parameter_name": "valikosta"
+                }
+            }
+        },
+        "shared": {
+            "group": {
+                "auto": {
+                    "command_description": "Aseta hahmolle automaatti",
+                    "command_name": "auto",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Merkki, oletuksena poistaa automaattisen käytöstä",
+                            "parameter_name": "välityspalvelin"
+                        }
+                    }
+                },
+                "avatar": {
+                    "command_description": "Aseta avatar hahmolle",
+                    "command_name": "hahmo",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Kuvan URL-osoite, oletuksena Ei mitään",
+                            "parameter_name": "hahmo"
+                        },
+                        "proxy": {
+                            "parameter_description": "Hahmo, jolle avatar asetetaan",
+                            "parameter_name": "välityspalvelin"
+                        }
+                    }
+                },
+                "birthday": {
+                    "command_description": "Aseta hahmon syntymäpäivä",
+                    "command_name": "syntymäpäivä",
+                    "params": {
+                        "birthday": {
+                            "parameter_description": "Syntymäpäivä, oletuksena Ei mitään",
+                            "parameter_name": "syntymäpäivä"
+                        },
+                        "proxy": {
+                            "parameter_description": "Hahmo, jolle syntymäpäivä asetetaan",
+                            "parameter_name": "välityspalvelin"
+                        }
+                    }
+                },
+                "color": {
+                    "command_description": "Set the color for a proxy."
+                },
+                "create": {
+                    "command_description": "Luo uusi hahmo.",
+                    "command_name": "luoda",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Kuva, oletuksena Ei mitään",
+                            "parameter_name": "kuva"
+                        }
+                    }
+                },
+                "delete": {
+                    "command_description": "Poista hahmo",
+                    "command_name": "poistaa",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Välityspalvelin muunnelman poistamiseksi",
+                            "parameter_name": "välityspalvelin"
+                        }
+                    }
+                },
+                "description": {
+                    "command_description": "Aseta hahmon kuvaus",
+                    "command_name": "kuvaus",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Merkki, jolle asetetaan kuvaus",
+                            "parameter_name": "välityspalvelin"
+                        },
+                        "text": {
+                            "parameter_description": "Hahmolle asetettava kuvaus",
+                            "parameter_name": "teksti"
+                        }
+                    }
+                },
+                "detail": {
+                    "command_description": "Hanki tietoja hahmosta",
+                    "command_name": "yksityiskohta",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Yksityiskohta välityspalvelin. ",
+                            "parameter_name": "välityspalvelin"
+                        }
+                    }
+                },
+                "find": {
+                    "command_description": "Find a proxy."
+                },
+                "group": {
+                    "command_description": "Aseta ryhmä hahmolle",
+                    "command_name": "ryhmä",
+                    "params": {
+                        "group": {
+                            "parameter_description": "Ryhmä, oletuksena Ei mitään",
+                            "parameter_name": "ryhmä"
+                        },
+                        "proxy": {
+                            "parameter_description": "Merkki, jolle ryhmä asetetaan",
+                            "parameter_name": "välityspalvelin"
+                        }
+                    }
+                },
+                "image": {
+                    "command_description": "Set the image for a proxy.",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Kuvan URL-osoite, oletuksena Ei mitään",
+                            "parameter_name": "hahmo"
+                        },
+                        "proxy": {
+                            "parameter_description": "Hahmo, jolle avatar asetetaan",
+                            "parameter_name": "välityspalvelin"
+                        }
+                    }
+                },
+                "list": {
+                    "command_description": "List all proxies."
+                },
+                "local": {
+                    "command_description": "Aseta hahmolle paikallinen",
+                    "command_name": "paikallinen",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Kuva, oletuksena Ei mitään",
+                            "parameter_name": "kuva"
+                        },
+                        "nickname": {
+                            "parameter_description": "Lempinimi, oletuksena Ei mitään",
+                            "parameter_name": "nimimerkki"
+                        },
+                        "proxy": {
+                            "parameter_description": "Paikallinen merkki",
+                            "parameter_name": "välityspalvelin"
+                        }
+                    }
+                },
+                "nickname": {
+                    "command_description": "Aseta hahmolle lempinimi",
+                    "command_name": "nimimerkki",
+                    "params": {
+                        "nickname": {
+                            "parameter_description": "Hahmolle asetettava lempinimi",
+                            "parameter_name": "nimimerkki"
+                        },
+                        "proxy": {
+                            "parameter_description": "Merkki, jolle asetetaan lempinimi",
+                            "parameter_name": "välityspalvelin"
+                        }
+                    }
+                },
+                "nsfw": {
+                    "command_description": "Määritä, onko hahmo NSFW",
+                    "command_name": "nsfw",
+                    "params": {
+                        "nsfw": {
+                            "parameter_description": "NSFW, oletuksena vaihda päinvastaiseen arvoon",
+                            "parameter_name": "nsfw"
+                        },
+                        "proxy": {
+                            "parameter_description": "Merkki, jolle NSFW asetetaan",
+                            "parameter_name": "välityspalvelin"
+                        }
+                    }
+                },
+                "prefix": {
+                    "command_description": "Aseta merkin etuliitteet.",
+                    "command_name": "etuliite",
+                    "params": {
+                        "prefixes": {
+                            "parameter_description": "Etuliitteet esim. ",
+                            "parameter_name": "etuliitteet"
+                        },
+                        "proxy": {
+                            "parameter_description": "Merkki, jolle asetetaan etuliite",
+                            "parameter_name": "välityspalvelin"
+                        }
+                    }
+                },
+                "prune": {
+                    "command_description": "Leikkaa merkit käyttämättä tietyn ajan.",
+                    "command_name": "karsia",
+                    "params": {
+                        "time": {
+                            "parameter_description": "Leikkauspäivämäärä ennen, oletuksena Ei mitään"
+                        }
+                    }
+                },
+                "purge": {
+                    "command_description": "Tyhjennä kaikki tietosi (paitsi viestilokit)",
+                    "command_name": "puhdistaa",
+                    "params": {
+                        "confirmation": {
+                            "parameter_description": "vahvistus",
+                            "parameter_name": "vahvistus"
+                        }
+                    }
+                },
+                "read": {
+                    "command_description": "Lue hahmo",
+                    "command_name": "lukea",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Hahmo, josta muunnelma luetaan",
+                            "parameter_name": "välityspalvelin"
+                        }
+                    }
+                },
+                "rename": {
+                    "command_description": "Nimeä hahmo uudelleen",
+                    "command_name": "nimeä_uudelleen",
+                    "params": {
+                        "name": {
+                            "parameter_description": "Hahmolle uusi nimi",
+                            "parameter_name": "nimi"
+                        },
+                        "proxy": {
+                            "parameter_description": "Uudelleennimettävä hahmo",
+                            "parameter_name": "välityspalvelin"
+                        }
+                    }
+                },
+                "set": {
+                    "command_description": "Set a proxy as the current one."
+                },
+                "update": {
+                    "command_description": "Päivitä välityspalvelin. ",
+                    "command_name": "päivittää",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Kuva, oletuksena Ei mitään",
+                            "parameter_name": "kuva"
+                        },
+                        "proxy": {
+                            "parameter_description": "Päivitettävä hahmo",
+                            "parameter_name": "välityspalvelin"
+                        }
+                    }
+                },
+                "use": {
+                    "command_description": "Use a proxy."
+                }
+            },
+            "group_description": "Shared proxy commands."
+        },
+        "store": {
+            "params": {
+                "storage": {
+                    "choices": {
+                        "Global": "Global",
+                        "Local": "Local"
                     }
                 }
             }
         },
+        "update": {
+            "command_description": "Päivitä välityspalvelin. ",
+            "command_name": "päivittää",
+            "params": {
+                "image": {
+                    "parameter_description": "Kuva, oletuksena Ei mitään",
+                    "parameter_name": "kuva"
+                },
+                "proxy": {
+                    "parameter_description": "Päivitettävä hahmo",
+                    "parameter_name": "välityspalvelin"
+                }
+            }
+        },
+        "use": {
+            "command_description": "Use a proxy.",
+            "params": {
+                "text": {
+                    "parameter_description": "teksti",
+                    "parameter_name": "teksti"
+                }
+            }
+        },
+        "var": {
+            "group": {
+                "auto": {
+                    "command_description": "Aseta hahmolle automaatti",
+                    "command_name": "auto",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Merkki, oletuksena poistaa automaattisen käytöstä",
+                            "parameter_name": "välityspalvelin"
+                        },
+                        "variant": {
+                            "parameter_description": "Vaihtoehto automaattiselle asetukselle",
+                            "parameter_name": "variantti"
+                        }
+                    }
+                },
+                "avatar": {
+                    "command_description": "Aseta avatar hahmolle",
+                    "command_name": "hahmo",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Kuvan URL-osoite, oletuksena Ei mitään",
+                            "parameter_name": "hahmo"
+                        },
+                        "proxy": {
+                            "parameter_description": "Hahmo, jolle avatar asetetaan",
+                            "parameter_name": "välityspalvelin"
+                        },
+                        "variant": {
+                            "parameter_description": "Vaihtoehto avatarin asettamiseen",
+                            "parameter_name": "variantti"
+                        }
+                    }
+                },
+                "birthday": {
+                    "command_description": "Aseta hahmon syntymäpäivä",
+                    "command_name": "syntymäpäivä",
+                    "params": {
+                        "birthday": {
+                            "parameter_description": "Syntymäpäivä, oletuksena Ei mitään",
+                            "parameter_name": "syntymäpäivä"
+                        },
+                        "proxy": {
+                            "parameter_description": "Hahmo, jolle syntymäpäivä asetetaan",
+                            "parameter_name": "välityspalvelin"
+                        },
+                        "variant": {
+                            "parameter_description": "Vaihtoehto syntymäpäivän asettamiseen",
+                            "parameter_name": "variantti"
+                        }
+                    }
+                },
+                "color": {
+                    "command_description": "Change the color of a variant."
+                },
+                "create": {
+                    "command_description": "Luo uusi hahmo.",
+                    "command_name": "luoda",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Kuva, oletuksena Ei mitään",
+                            "parameter_name": "kuva"
+                        },
+                        "prefixes": {
+                            "parameter_description": "Prefixes e.g. A:text, |text|, etc."
+                        },
+                        "proxy": {
+                            "parameter_description": " Välityspalvelin muunnelman luomiseksi",
+                            "parameter_name": "välityspalvelin"
+                        }
+                    }
+                },
+                "delete": {
+                    "command_description": "Poista hahmon muunnelma",
+                    "command_name": "poistaa",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Välityspalvelin muunnelman poistamiseksi",
+                            "parameter_name": "välityspalvelin"
+                        },
+                        "variant": {
+                            "parameter_description": "Poistettava variantti",
+                            "parameter_name": "variantti"
+                        }
+                    }
+                },
+                "description": {
+                    "command_description": "Aseta hahmon kuvaus",
+                    "command_name": "kuvaus",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Merkki, jolle asetetaan kuvaus",
+                            "parameter_name": "välityspalvelin"
+                        },
+                        "text": {
+                            "parameter_description": "Hahmolle asetettava kuvaus",
+                            "parameter_name": "teksti"
+                        },
+                        "variant": {
+                            "parameter_description": "Vaihtoehto, jolle määritetään kuvaus",
+                            "parameter_name": "variantti"
+                        }
+                    }
+                },
+                "detail": {
+                    "command_description": "Hanki tietoja hahmosta",
+                    "command_name": "yksityiskohta",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Yksityiskohta välityspalvelin. ",
+                            "parameter_name": "välityspalvelin"
+                        },
+                        "variant": {
+                            "parameter_description": "Variantti yksityiskohtiin",
+                            "parameter_name": "variantti"
+                        }
+                    }
+                },
+                "find": {
+                    "command_description": "Find a variant."
+                },
+                "group": {
+                    "command_description": "Aseta ryhmä hahmolle",
+                    "command_name": "ryhmä",
+                    "params": {
+                        "group": {
+                            "parameter_description": "Ryhmä, oletuksena Ei mitään",
+                            "parameter_name": "ryhmä"
+                        },
+                        "proxy": {
+                            "parameter_description": "Merkki, jolle ryhmä asetetaan",
+                            "parameter_name": "välityspalvelin"
+                        },
+                        "variant": {
+                            "parameter_description": "Vaihtoehto ryhmän asettamiseen",
+                            "parameter_name": "variantti"
+                        }
+                    }
+                },
+                "list": {
+                    "command_description": "List all variants."
+                },
+                "local": {
+                    "command_description": "Aseta hahmolle paikallinen",
+                    "command_name": "paikallinen",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Kuva, oletuksena Ei mitään",
+                            "parameter_name": "kuva"
+                        },
+                        "nickname": {
+                            "parameter_description": "Lempinimi, oletuksena Ei mitään",
+                            "parameter_name": "nimimerkki"
+                        },
+                        "proxy": {
+                            "parameter_description": "Paikallinen merkki",
+                            "parameter_name": "välityspalvelin"
+                        },
+                        "variant": {
+                            "parameter_description": "Paikallinen vaihtoehto",
+                            "parameter_name": "variantti"
+                        }
+                    }
+                },
+                "nickname": {
+                    "command_description": "Aseta hahmolle lempinimi",
+                    "command_name": "nimimerkki",
+                    "params": {
+                        "nickname": {
+                            "parameter_description": "Hahmolle asetettava lempinimi",
+                            "parameter_name": "nimimerkki"
+                        },
+                        "proxy": {
+                            "parameter_description": "Merkki, jolle asetetaan lempinimi",
+                            "parameter_name": "välityspalvelin"
+                        },
+                        "variant": {
+                            "parameter_description": "Variantti, jolle lempinimi asetetaan",
+                            "parameter_name": "variantti"
+                        }
+                    }
+                },
+                "nsfw": {
+                    "command_description": "Määritä, onko hahmo NSFW",
+                    "command_name": "nsfw",
+                    "params": {
+                        "nsfw": {
+                            "parameter_description": "NSFW, oletuksena vaihda päinvastaiseen arvoon",
+                            "parameter_name": "nsfw"
+                        },
+                        "proxy": {
+                            "parameter_description": "Merkki, jolle NSFW asetetaan",
+                            "parameter_name": "välityspalvelin"
+                        },
+                        "variant": {
+                            "parameter_description": "Vaihtoehto, jolle NSFW asetetaan",
+                            "parameter_name": "variantti"
+                        }
+                    }
+                },
+                "prefix": {
+                    "command_description": "Aseta merkin etuliitteet.",
+                    "command_name": "etuliite",
+                    "params": {
+                        "prefixes": {
+                            "parameter_description": "Etuliitteet esim. ",
+                            "parameter_name": "etuliitteet"
+                        },
+                        "proxy": {
+                            "parameter_description": "Merkki, jolle asetetaan etuliite",
+                            "parameter_name": "välityspalvelin"
+                        },
+                        "variant": {
+                            "parameter_description": "Vaihtoehto, jonka etuliite asetetaan",
+                            "parameter_name": "variantti"
+                        }
+                    }
+                },
+                "prune": {
+                    "command_description": "Leikkaa merkit käyttämättä tietyn ajan.",
+                    "command_name": "karsia",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "välityspalvelin"
+                        },
+                        "time": {
+                            "parameter_description": "Leikkauspäivämäärä ennen, oletuksena Ei mitään"
+                        }
+                    }
+                },
+                "purge": {
+                    "command_description": "Tyhjennä kaikki tietosi (paitsi viestilokit)",
+                    "command_name": "puhdistaa",
+                    "params": {
+                        "confirmation": {
+                            "parameter_description": "vahvistus",
+                            "parameter_name": "vahvistus"
+                        },
+                        "proxy": {
+                            "parameter_description": "välityspalvelin",
+                            "parameter_name": "välityspalvelin"
+                        }
+                    }
+                },
+                "read": {
+                    "command_description": "Lue hahmo",
+                    "command_name": "lukea",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Hahmo, josta muunnelma luetaan",
+                            "parameter_name": "välityspalvelin"
+                        },
+                        "variant": {
+                            "parameter_description": "Variantti luettavaksi",
+                            "parameter_name": "variantti"
+                        }
+                    }
+                },
+                "rename": {
+                    "command_description": "Nimeä hahmo uudelleen",
+                    "command_name": "nimeä_uudelleen",
+                    "params": {
+                        "name": {
+                            "parameter_description": "Hahmolle uusi nimi",
+                            "parameter_name": "nimi"
+                        },
+                        "proxy": {
+                            "parameter_description": "Uudelleennimettävä hahmo",
+                            "parameter_name": "välityspalvelin"
+                        },
+                        "variant": {
+                            "parameter_description": "Uudelleen nimettävä vaihtoehto",
+                            "parameter_name": "variantti"
+                        }
+                    }
+                },
+                "set": {
+                    "command_description": "Set a variant."
+                },
+                "update": {
+                    "command_description": "Päivitä välityspalvelin. ",
+                    "command_name": "päivittää",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Kuva, oletuksena Ei mitään",
+                            "parameter_name": "kuva"
+                        },
+                        "proxy": {
+                            "parameter_description": "Päivitettävä hahmo",
+                            "parameter_name": "välityspalvelin"
+                        }
+                    }
+                },
+                "use": {
+                    "command_description": "Use a variant."
+                }
+            },
+            "group_description": "Variant commands.",
+            "group_name": "var"
+        },
+        "variant-to-proxy": {
+            "command_description": "Muunna muunnelma merkiksi",
+            "command_name": "variantista-välityspalvelimeen",
+            "params": {
+                "proxy": {
+                    "parameter_description": "Välityspalvelin, johon muunnetaan",
+                    "parameter_name": "välityspalvelin"
+                },
+                "variant": {
+                    "parameter_description": "Muunnettava variantti",
+                    "parameter_name": "variantti"
+                }
+            }
+        }
+    },
+    "interactions": {
         "context_menu": {
             "command_name": "Välityspalvelin"
         }

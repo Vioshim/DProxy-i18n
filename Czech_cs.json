@@ -1,304 +1,333 @@
 {
     "commands": {
-        "exec": {
-            "command_description": "Execute a command."
+        "afk": {
+            "command_description": "Check if a user is AFK."
         },
-        "proxy": {
-            "command_name": "proxy",
-            "command_description": "Zakázat znaky na serveru",
+        "auto": {
+            "command_description": "Nastavte auto pro znak",
+            "command_name": "auto",
             "params": {
-                "enable": {
-                    "parameter_name": "umožnit",
-                    "parameter_description": "Ve výchozím nastavení povolit nebo zakázat znaky"
+                "proxy": {
+                    "parameter_description": "Znak, ve výchozím nastavení zakáže auto",
+                    "parameter_name": "proxy"
                 }
             }
         },
-        "set": {
-            "command_description": "Set a proxy as the current one."
-        },
-        "use": {
+        "avatar": {
+            "command_description": "Nastavte avatar pro postavu",
+            "command_name": "avatar",
             "params": {
-                "text": {
-                    "parameter_name": "text",
-                    "parameter_description": "text"
+                "avatar": {
+                    "parameter_description": "Adresa URL obrázku, ve výchozím nastavení Žádná",
+                    "parameter_name": "avatar"
+                },
+                "proxy": {
+                    "parameter_description": "Postava, pro kterou chcete nastavit avatara",
+                    "parameter_name": "proxy"
                 }
             }
         },
-        "say": {
+        "birthday": {
+            "command_description": "Nastavte datum narození pro postavu",
+            "command_name": "narozeniny",
             "params": {
-                "text": {
-                    "parameter_name": "text",
-                    "parameter_description": "text"
+                "birthday": {
+                    "parameter_description": "Narozeniny, ve výchozím nastavení Žádné",
+                    "parameter_name": "narozeniny"
+                },
+                "proxy": {
+                    "parameter_description": "Postava, pro kterou chcete nastavit narozeniny",
+                    "parameter_name": "proxy"
                 }
             }
         },
-        "npc": {
-            "command_name": "npc",
-            "command_description": "Vytvořte novou zprávu NPC",
-            "params": {
-                "franchise": {
-                    "parameter_name": "franchise",
-                    "parameter_description": "Franšíza k použití",
-                    "choices": {
-                        "Pokemon": "Pokemon",
-                        "Pokemon Shiny": "Pokemon Shiny",
-                        "Trainer": "Trainer",
-                        "Digimon": "Digimon",
-                        "Palworld": "Palworld",
-                        "D&D": "D&D"
-                    }
-                },
-                "npc": {
-                    "parameter_name": "npc",
-                    "parameter_description": "NPC k použití"
-                },
-                "nickname": {
-                    "parameter_name": "přezdívka",
-                    "parameter_description": "Přezdívka, ve výchozím nastavení Žádná"
-                },
-                "emotion": {
-                    "parameter_name": "emoce",
-                    "parameter_description": "Emoce, standardně Normální",
-                    "choices": {
-                        "Normal": "Normal",
-                        "Happy": "Happy",
-                        "Pain": "Pain",
-                        "Angry": "Angry",
-                        "Worried": "Worried",
-                        "Sad": "Sad",
-                        "Crying": "Crying",
-                        "Shouting": "Shouting",
-                        "TearyEyed": "TearyEyed",
-                        "Determined": "Determined",
-                        "Joyous": "Joyous",
-                        "Inspired": "Inspired",
-                        "Surprised": "Surprised",
-                        "Dizzy": "Dizzy",
-                        "Sigh": "Sigh",
-                        "Stunned": "Stunned",
-                        "Special0": "Special0",
-                        "Special1": "Special1",
-                        "Special2": "Special2",
-                        "Special3": "Special3"
-                    }
-                },
-                "image": {
-                    "parameter_name": "obraz",
-                    "parameter_description": "Obrázek, ve výchozím nastavení Žádný"
-                },
-                "text": {
-                    "parameter_name": "text",
-                    "parameter_description": "text"
-                }
-            }
+        "check_permissions": {
+            "command_description": "Zkontrolujte, zda robot může pracovat na poskytnutém kanálu",
+            "command_name": "check_perms"
+        },
+        "color": {
+            "command_description": "Set a color for a proxy."
         },
         "create": {
-            "command_description": "Create a new proxy.",
+            "command_description": "Vytvořte novou postavu.",
+            "command_name": "vytvořit",
             "params": {
+                "image": {
+                    "parameter_description": "Obrázek, ve výchozím nastavení Žádný",
+                    "parameter_name": "obraz"
+                },
                 "prefixes": {
                     "parameter_description": "Prefixes e.g. A:text, |text|, etc."
                 }
             }
         },
         "delete": {
-            "command_name": "vymazat",
             "command_description": "Smazat znak",
+            "command_name": "vymazat",
             "params": {
                 "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Proxy pro smazání varianty"
-                }
-            }
-        },
-        "read": {
-            "command_name": "číst",
-            "command_description": "Přečtěte si postavu",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Znak, ze kterého se má varianta přečíst"
-                }
-            }
-        },
-        "nickname": {
-            "command_name": "přezdívka",
-            "command_description": "Nastavte přezdívku pro postavu",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Znak pro nastavení přezdívky"
-                },
-                "nickname": {
-                    "parameter_name": "přezdívka",
-                    "parameter_description": "Přezdívka k nastavení postavy"
-                }
-            }
-        },
-        "local": {
-            "command_name": "místní",
-            "command_description": "Nastavte místní pro znak",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Znak, pro který chcete nastavit místní"
-                },
-                "avatar": {
-                    "parameter_name": "obraz",
-                    "parameter_description": "Obrázek, ve výchozím nastavení Žádný"
-                },
-                "nickname": {
-                    "parameter_name": "přezdívka",
-                    "parameter_description": "Přezdívka, ve výchozím nastavení Žádná"
-                }
-            }
-        },
-        "avatar": {
-            "command_name": "avatar",
-            "command_description": "Nastavte avatar pro postavu",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Postava, pro kterou chcete nastavit avatara"
-                },
-                "avatar": {
-                    "parameter_name": "avatar",
-                    "parameter_description": "Adresa URL obrázku, ve výchozím nastavení Žádná"
-                }
-            }
-        },
-        "prefix": {
-            "command_name": "předpona",
-            "command_description": "Nastavte předpony pro znak.",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Znak, pro který se má nastavit předpona"
-                },
-                "prefixes": {
-                    "parameter_name": "předpony",
-                    "parameter_description": "Předpony např. "
-                }
-            }
-        },
-        "birthday": {
-            "command_name": "narozeniny",
-            "command_description": "Nastavte datum narození pro postavu",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Postava, pro kterou chcete nastavit narozeniny"
-                },
-                "birthday": {
-                    "parameter_name": "narozeniny",
-                    "parameter_description": "Narozeniny, ve výchozím nastavení Žádné"
+                    "parameter_description": "Proxy pro smazání varianty",
+                    "parameter_name": "proxy"
                 }
             }
         },
         "description": {
-            "command_name": "popis",
             "command_description": "Nastavte popis pro postavu",
+            "command_name": "popis",
             "params": {
                 "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Znak, pro který chcete nastavit popis"
+                    "parameter_description": "Znak, pro který chcete nastavit popis",
+                    "parameter_name": "proxy"
                 },
                 "text": {
-                    "parameter_name": "text",
-                    "parameter_description": "Popis k nastavení postavy"
+                    "parameter_description": "Popis k nastavení postavy",
+                    "parameter_name": "text"
                 }
             }
         },
-        "rename": {
-            "command_name": "přejmenovat",
-            "command_description": "Přejmenujte postavu",
+        "detail": {
+            "command_description": "Získejte podrobnosti o postavě",
+            "command_name": "detail",
             "params": {
                 "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Postava k přejmenování"
+                    "parameter_description": "Podrobnosti o proxy. ",
+                    "parameter_name": "proxy"
+                }
+            }
+        },
+        "exec": {
+            "command_description": "Execute a command."
+        },
+        "export": {
+            "command_description": "Exportujte své znaky do souboru JSON",
+            "command_name": "vývozní",
+            "params": {
+                "format": {
+                    "choices": {
+                        "Default": "Default",
+                        "PluralKit": "PluralKit",
+                        "Tupperbox": "Tupperbox"
+                    },
+                    "parameter_description": "Formát k exportu, ve výchozím nastavení JSON",
+                    "parameter_name": "formát"
                 },
-                "name": {
-                    "parameter_name": "název",
-                    "parameter_description": "Nové jméno pro postavu"
+                "new_token": {
+                    "parameter_description": "Pokud chcete vygenerovat nový token",
+                    "parameter_name": "nový_token"
                 }
             }
         },
         "group": {
-            "command_name": "skupina",
             "command_description": "Nastavte skupinu pro postavu",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Postava, pro kterou se má skupina nastavit"
-                },
-                "group": {
-                    "parameter_name": "skupina",
-                    "parameter_description": "Skupina, ve výchozím nastavení Žádná"
-                }
-            }
-        },
-        "nsfw": {
-            "command_name": "nsfw",
-            "command_description": "Nastavte, zda je postava NSFW",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Znak, pro který se má nastavit NSFW"
-                },
-                "nsfw": {
-                    "parameter_name": "nsfw",
-                    "parameter_description": "NSFW, ve výchozím nastavení přepněte na opačnou hodnotu"
-                }
-            }
-        },
-        "auto": {
-            "command_name": "auto",
-            "command_description": "Nastavte auto pro znak",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Znak, ve výchozím nastavení zakáže auto"
-                }
-            }
-        },
-        "list": {
-            "command_name": "seznam",
-            "command_description": "Uveďte všechny znaky ",
+            "command_name": "skupina",
             "params": {
                 "group": {
-                    "parameter_name": "skupina",
-                    "parameter_description": "Skupina, ze které chcete vypsat znaky"
+                    "parameter_description": "Skupina, ve výchozím nastavení Žádná",
+                    "parameter_name": "skupina"
+                },
+                "proxy": {
+                    "parameter_description": "Postava, pro kterou se má skupina nastavit",
+                    "parameter_name": "proxy"
+                }
+            }
+        },
+        "help": {
+            "command_description": "Vestavěná nápověda pro roboty",
+            "command_name": "pomoc",
+            "params": {
+                "search": {
+                    "parameter_description": "Termín vyhledávání",
+                    "parameter_name": "vyhledávání"
+                }
+            }
+        },
+        "import": {
+            "command_description": "Importujte své postavy ze souboru nebo tokenu",
+            "command_name": "import",
+            "params": {
+                "data": {
+                    "parameter_description": "Soubor, ze kterého se má importovat",
+                    "parameter_name": "data"
+                },
+                "deleting_from_token": {
+                    "parameter_description": "Odstraňte znaky z tokenu",
+                    "parameter_name": "odstranění_z_tokenu"
+                },
+                "token": {
+                    "parameter_description": "Token, který se má použít pro import",
+                    "parameter_name": "žeton"
                 }
             }
         },
         "latch": {
-            "command_name": "západka",
             "command_description": "Povolit nebo zakázat režim západky",
+            "command_name": "západka",
             "params": {
-                "enable": {
-                    "parameter_description": "Povolit nebo zakázat režim západky"
-                },
                 "auto_remove": {
                     "parameter_description": "Zda zachovat auto pro aktuální kanál nebo ne, ve výchozím nastavení True"
+                },
+                "enable": {
+                    "parameter_description": "Povolit nebo zakázat režim západky"
                 }
             }
         },
-        "export": {
-            "command_name": "vývozní",
-            "command_description": "Exportujte své znaky do souboru JSON",
+        "list": {
+            "command_description": "Uveďte všechny znaky ",
+            "command_name": "seznam",
             "params": {
-                "format": {
-                    "parameter_name": "formát",
-                    "parameter_description": "Formát k exportu, ve výchozím nastavení JSON"
+                "group": {
+                    "parameter_description": "Skupina, ze které chcete vypsat znaky",
+                    "parameter_name": "skupina"
+                }
+            }
+        },
+        "local": {
+            "command_description": "Nastavte místní pro znak",
+            "command_name": "místní",
+            "params": {
+                "avatar": {
+                    "parameter_description": "Obrázek, ve výchozím nastavení Žádný",
+                    "parameter_name": "obraz"
                 },
-                "new_token": {
-                    "parameter_name": "nový_token",
-                    "parameter_description": "Pokud chcete vygenerovat nový token"
+                "nickname": {
+                    "parameter_description": "Přezdívka, ve výchozím nastavení Žádná",
+                    "parameter_name": "přezdívka"
+                },
+                "proxy": {
+                    "parameter_description": "Znak, pro který chcete nastavit místní",
+                    "parameter_name": "proxy"
+                }
+            }
+        },
+        "nickname": {
+            "command_description": "Nastavte přezdívku pro postavu",
+            "command_name": "přezdívka",
+            "params": {
+                "nickname": {
+                    "parameter_description": "Přezdívka k nastavení postavy",
+                    "parameter_name": "přezdívka"
+                },
+                "proxy": {
+                    "parameter_description": "Znak pro nastavení přezdívky",
+                    "parameter_name": "proxy"
+                }
+            }
+        },
+        "npc": {
+            "command_description": "Vytvořte novou zprávu NPC",
+            "command_name": "npc",
+            "params": {
+                "emotion": {
+                    "choices": {
+                        "Angry": "Angry",
+                        "Crying": "Crying",
+                        "Determined": "Determined",
+                        "Dizzy": "Dizzy",
+                        "Happy": "Happy",
+                        "Inspired": "Inspired",
+                        "Joyous": "Joyous",
+                        "Normal": "Normal",
+                        "Pain": "Pain",
+                        "Sad": "Sad",
+                        "Shouting": "Shouting",
+                        "Sigh": "Sigh",
+                        "Special0": "Special0",
+                        "Special1": "Special1",
+                        "Special2": "Special2",
+                        "Special3": "Special3",
+                        "Stunned": "Stunned",
+                        "Surprised": "Surprised",
+                        "TearyEyed": "TearyEyed",
+                        "Worried": "Worried"
+                    },
+                    "parameter_description": "Emoce, standardně Normální",
+                    "parameter_name": "emoce"
+                },
+                "franchise": {
+                    "choices": {
+                        "D&D": "D&D",
+                        "Digimon": "Digimon",
+                        "Palworld": "Palworld",
+                        "Pokemon": "Pokemon",
+                        "Pokemon Shiny": "Pokemon Shiny",
+                        "Trainer": "Trainer"
+                    },
+                    "parameter_description": "Franšíza k použití",
+                    "parameter_name": "franšíza"
+                },
+                "image": {
+                    "parameter_description": "Obrázek, ve výchozím nastavení Žádný",
+                    "parameter_name": "obraz"
+                },
+                "nickname": {
+                    "parameter_description": "Přezdívka, ve výchozím nastavení Žádná",
+                    "parameter_name": "přezdívka"
+                },
+                "npc": {
+                    "parameter_description": "NPC k použití",
+                    "parameter_name": "npc"
+                },
+                "text": {
+                    "parameter_description": "text",
+                    "parameter_name": "text"
+                }
+            }
+        },
+        "nsfw": {
+            "command_description": "Nastavte, zda je postava NSFW",
+            "command_name": "nsfw",
+            "params": {
+                "nsfw": {
+                    "parameter_description": "NSFW, ve výchozím nastavení přepněte na opačnou hodnotu",
+                    "parameter_name": "nsfw"
+                },
+                "proxy": {
+                    "parameter_description": "Znak, pro který se má nastavit NSFW",
+                    "parameter_name": "proxy"
+                }
+            }
+        },
+        "prefix": {
+            "command_description": "Nastavte předpony pro znak.",
+            "command_name": "předpona",
+            "params": {
+                "prefixes": {
+                    "parameter_description": "Předpony např. ",
+                    "parameter_name": "předpony"
+                },
+                "proxy": {
+                    "parameter_description": "Znak, pro který se má nastavit předpona",
+                    "parameter_name": "proxy"
+                }
+            }
+        },
+        "proxy": {
+            "command_description": "Zakázat znaky na serveru",
+            "command_name": "proxy",
+            "params": {
+                "enable": {
+                    "parameter_description": "Ve výchozím nastavení povolit nebo zakázat znaky",
+                    "parameter_name": "umožnit"
+                }
+            }
+        },
+        "proxy-to-variant": {
+            "command_description": "Převeďte znak na variantu",
+            "command_name": "proxy-to-variant",
+            "params": {
+                "base": {
+                    "parameter_description": "Nový základ pro postavu",
+                    "parameter_name": "základna"
+                },
+                "original": {
+                    "parameter_description": "Znak k převodu",
+                    "parameter_name": "originál"
                 }
             }
         },
         "prune": {
-            "command_name": "prořezávat",
             "command_description": "Prořezávat znaky nepoužívané po určitou dobu.",
+            "command_name": "prořezávat",
             "params": {
                 "time": {
                     "parameter_description": "Datum před prořezáním, ve výchozím nastavení Žádné"
@@ -306,656 +335,674 @@
             }
         },
         "purge": {
-            "command_name": "očistit",
             "command_description": "Vymazat všechna vaše data (kromě protokolů zpráv)",
+            "command_name": "očistit",
             "params": {
                 "confirmation": {
-                    "parameter_name": "potvrzení",
-                    "parameter_description": "potvrzení"
+                    "parameter_description": "potvrzení",
+                    "parameter_name": "potvrzení"
                 }
             }
         },
-        "proxy-to-variant": {
-            "command_name": "proxy-to-variant",
-            "command_description": "Převeďte znak na variantu",
-            "params": {
-                "original": {
-                    "parameter_name": "originál",
-                    "parameter_description": "Znak k převodu"
-                },
-                "base": {
-                    "parameter_name": "základna",
-                    "parameter_description": "Nový základ pro postavu"
-                }
-            }
-        },
-        "variant-to-proxy": {
-            "command_name": "varianta-to-proxy",
-            "command_description": "Převeďte variantu na znak",
+        "read": {
+            "command_description": "Přečtěte si postavu",
+            "command_name": "číst",
             "params": {
                 "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Proxy, na který se má převést"
-                },
-                "variant": {
-                    "parameter_name": "varianta",
-                    "parameter_description": "Varianta k převodu"
+                    "parameter_description": "Znak, ze kterého se má varianta přečíst",
+                    "parameter_name": "proxy"
                 }
             }
         },
-        "update": {
-            "command_name": "aktualizace",
-            "command_description": "Aktualizujte proxy. ",
+        "rename": {
+            "command_description": "Přejmenujte postavu",
+            "command_name": "přejmenovat",
             "params": {
+                "name": {
+                    "parameter_description": "Nové jméno pro postavu",
+                    "parameter_name": "název"
+                },
                 "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Postava k aktualizaci"
-                },
-                "image": {
-                    "parameter_name": "obraz",
-                    "parameter_description": "Obrázek, ve výchozím nastavení Žádný"
+                    "parameter_description": "Postava k přejmenování",
+                    "parameter_name": "proxy"
                 }
             }
-        },
-        "detail": {
-            "command_name": "detail",
-            "command_description": "Získejte podrobnosti o postavě",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Podrobnosti o proxy. "
-                }
-            }
-        },
-        "import": {
-            "command_name": "import",
-            "command_description": "Importujte své postavy ze souboru nebo tokenu",
-            "params": {
-                "data": {
-                    "parameter_name": "data",
-                    "parameter_description": "Soubor, ze kterého se má importovat"
-                },
-                "token": {
-                    "parameter_name": "žeton",
-                    "parameter_description": "Token, který se má použít pro import"
-                },
-                "deleting_from_token": {
-                    "parameter_name": "odstranění_z_tokenu",
-                    "parameter_description": "Odstraňte znaky z tokenu"
-                }
-            }
-        },
-        "var": {
-            "group_name": "var",
-            "group_description": "Variant commands.",
-            "groupset": {
-                "command_description": "Set a variant."
-            },
-            "groupuse": {
-                "command_description": "Use a variant."
-            },
-            "groupcreate": {
-                "command_name": "vytvořit",
-                "command_description": "Vytvořte novou postavu.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": " Proxy pro vytvoření varianty"
-                    },
-                    "image": {
-                        "parameter_name": "obraz",
-                        "parameter_description": "Obrázek, ve výchozím nastavení Žádný"
-                    },
-                    "prefixes": {
-                        "parameter_description": "Prefixes e.g. A:text, |text|, etc."
-                    }
-                }
-            },
-            "groupdelete": {
-                "command_name": "vymazat",
-                "command_description": "Smazat variantu postavy",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Proxy pro smazání varianty"
-                    },
-                    "variant": {
-                        "parameter_name": "varianta",
-                        "parameter_description": "Varianta ke smazání"
-                    }
-                }
-            },
-            "groupread": {
-                "command_name": "číst",
-                "command_description": "Přečtěte si postavu",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Znak, ze kterého se má varianta přečíst"
-                    },
-                    "variant": {
-                        "parameter_name": "varianta",
-                        "parameter_description": "Varianta ke čtení"
-                    }
-                }
-            },
-            "groupnickname": {
-                "command_name": "přezdívka",
-                "command_description": "Nastavte přezdívku pro postavu",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Znak pro nastavení přezdívky"
-                    },
-                    "variant": {
-                        "parameter_name": "varianta",
-                        "parameter_description": "Varianta pro nastavení přezdívky"
-                    },
-                    "nickname": {
-                        "parameter_name": "přezdívka",
-                        "parameter_description": "Přezdívka k nastavení postavy"
-                    }
-                }
-            },
-            "grouplocal": {
-                "command_name": "místní",
-                "command_description": "Nastavte místní pro znak",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Znak, pro který chcete nastavit místní"
-                    },
-                    "variant": {
-                        "parameter_name": "varianta",
-                        "parameter_description": "Varianta pro místní nastavení"
-                    },
-                    "avatar": {
-                        "parameter_name": "obraz",
-                        "parameter_description": "Obrázek, ve výchozím nastavení Žádný"
-                    },
-                    "nickname": {
-                        "parameter_name": "přezdívka",
-                        "parameter_description": "Přezdívka, ve výchozím nastavení Žádná"
-                    }
-                }
-            },
-            "groupprefix": {
-                "command_name": "předpona",
-                "command_description": "Nastavte předpony pro znak.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Znak, pro který se má nastavit předpona"
-                    },
-                    "variant": {
-                        "parameter_name": "varianta",
-                        "parameter_description": "Varianta, pro kterou se má nastavit předpona"
-                    },
-                    "prefixes": {
-                        "parameter_name": "předpony",
-                        "parameter_description": "Předpony např. "
-                    }
-                }
-            },
-            "groupbirthday": {
-                "command_name": "narozeniny",
-                "command_description": "Nastavte datum narození pro postavu",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Postava, pro kterou chcete nastavit narozeniny"
-                    },
-                    "variant": {
-                        "parameter_name": "varianta",
-                        "parameter_description": "Varianta pro nastavení narozenin"
-                    },
-                    "birthday": {
-                        "parameter_name": "narozeniny",
-                        "parameter_description": "Narozeniny, ve výchozím nastavení Žádné"
-                    }
-                }
-            },
-            "groupdescription": {
-                "command_name": "popis",
-                "command_description": "Nastavte popis pro postavu",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Znak, pro který chcete nastavit popis"
-                    },
-                    "variant": {
-                        "parameter_name": "varianta",
-                        "parameter_description": "Varianta pro nastavení popisu"
-                    },
-                    "text": {
-                        "parameter_name": "text",
-                        "parameter_description": "Popis k nastavení postavy"
-                    }
-                }
-            },
-            "grouprename": {
-                "command_name": "přejmenovat",
-                "command_description": "Přejmenujte postavu",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Postava k přejmenování"
-                    },
-                    "variant": {
-                        "parameter_name": "varianta",
-                        "parameter_description": "Varianta k přejmenování"
-                    },
-                    "name": {
-                        "parameter_name": "název",
-                        "parameter_description": "Nové jméno pro postavu"
-                    }
-                }
-            },
-            "groupgroup": {
-                "command_name": "skupina",
-                "command_description": "Nastavte skupinu pro postavu",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Postava, pro kterou se má skupina nastavit"
-                    },
-                    "variant": {
-                        "parameter_name": "varianta",
-                        "parameter_description": "Varianta pro nastavení skupiny"
-                    },
-                    "group": {
-                        "parameter_name": "skupina",
-                        "parameter_description": "Skupina, ve výchozím nastavení Žádná"
-                    }
-                }
-            },
-            "groupnsfw": {
-                "command_name": "nsfw",
-                "command_description": "Nastavte, zda je postava NSFW",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Znak, pro který se má nastavit NSFW"
-                    },
-                    "variant": {
-                        "parameter_name": "varianta",
-                        "parameter_description": "Varianta pro nastavení NSFW"
-                    },
-                    "nsfw": {
-                        "parameter_name": "nsfw",
-                        "parameter_description": "NSFW, ve výchozím nastavení přepněte na opačnou hodnotu"
-                    }
-                }
-            },
-            "groupauto": {
-                "command_name": "auto",
-                "command_description": "Nastavte auto pro znak",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Znak, ve výchozím nastavení zakáže auto"
-                    },
-                    "variant": {
-                        "parameter_name": "varianta",
-                        "parameter_description": "Varianta pro nastavení automatiky"
-                    }
-                }
-            },
-            "groupavatar": {
-                "command_name": "avatar",
-                "command_description": "Nastavte avatar pro postavu",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Postava, pro kterou chcete nastavit avatara"
-                    },
-                    "variant": {
-                        "parameter_name": "varianta",
-                        "parameter_description": "Varianta pro nastavení avatara"
-                    },
-                    "avatar": {
-                        "parameter_name": "avatar",
-                        "parameter_description": "Adresa URL obrázku, ve výchozím nastavení Žádná"
-                    }
-                }
-            },
-            "grouplist": {
-                "command_description": "List all variants."
-            },
-            "groupfind": {
-                "command_description": "Find a variant."
-            },
-            "groupupdate": {
-                "command_name": "aktualizace",
-                "command_description": "Aktualizujte proxy. ",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Postava k aktualizaci"
-                    },
-                    "image": {
-                        "parameter_name": "obraz",
-                        "parameter_description": "Obrázek, ve výchozím nastavení Žádný"
-                    }
-                }
-            },
-            "groupdetail": {
-                "command_name": "detail",
-                "command_description": "Získejte podrobnosti o postavě",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Podrobnosti o proxy. "
-                    },
-                    "variant": {
-                        "parameter_name": "varianta",
-                        "parameter_description": "Varianta do detailu"
-                    }
-                }
-            },
-            "groupprune": {
-                "command_name": "prořezávat",
-                "command_description": "Prořezávat znaky nepoužívané po určitou dobu.",
-                "params": {
-                    "proxy": {
-                        "parameter_description": "proxy"
-                    },
-                    "time": {
-                        "parameter_description": "Datum před prořezáním, ve výchozím nastavení Žádné"
-                    }
-                }
-            },
-            "grouppurge": {
-                "command_name": "očistit",
-                "command_description": "Vymazat všechna vaše data (kromě protokolů zpráv)",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "proxy"
-                    },
-                    "confirmation": {
-                        "parameter_name": "potvrzení",
-                        "parameter_description": "potvrzení"
-                    }
-                }
-            }
-        },
-        "shared": {
-            "group_description": "Shared proxy commands.",
-            "groupset": {
-                "command_description": "Set a proxy as the current one."
-            },
-            "groupcreate": {
-                "command_name": "vytvořit",
-                "command_description": "Vytvořte novou postavu.",
-                "params": {
-                    "image": {
-                        "parameter_name": "obraz",
-                        "parameter_description": "Obrázek, ve výchozím nastavení Žádný"
-                    }
-                }
-            },
-            "groupdelete": {
-                "command_name": "vymazat",
-                "command_description": "Smazat znak",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Proxy pro smazání varianty"
-                    }
-                }
-            },
-            "groupread": {
-                "command_name": "číst",
-                "command_description": "Přečtěte si postavu",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Znak, ze kterého se má varianta přečíst"
-                    }
-                }
-            },
-            "groupauto": {
-                "command_name": "auto",
-                "command_description": "Nastavte auto pro znak",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Znak, ve výchozím nastavení zakáže auto"
-                    }
-                }
-            },
-            "groupprefix": {
-                "command_name": "předpona",
-                "command_description": "Nastavte předpony pro znak.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Znak, pro který se má nastavit předpona"
-                    },
-                    "prefixes": {
-                        "parameter_name": "předpony",
-                        "parameter_description": "Předpony např. "
-                    }
-                }
-            },
-            "groupbirthday": {
-                "command_name": "narozeniny",
-                "command_description": "Nastavte datum narození pro postavu",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Postava, pro kterou chcete nastavit narozeniny"
-                    },
-                    "birthday": {
-                        "parameter_name": "narozeniny",
-                        "parameter_description": "Narozeniny, ve výchozím nastavení Žádné"
-                    }
-                }
-            },
-            "groupdescription": {
-                "command_name": "popis",
-                "command_description": "Nastavte popis pro postavu",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Znak, pro který chcete nastavit popis"
-                    },
-                    "text": {
-                        "parameter_name": "text",
-                        "parameter_description": "Popis k nastavení postavy"
-                    }
-                }
-            },
-            "grouprename": {
-                "command_name": "přejmenovat",
-                "command_description": "Přejmenujte postavu",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Postava k přejmenování"
-                    },
-                    "name": {
-                        "parameter_name": "název",
-                        "parameter_description": "Nové jméno pro postavu"
-                    }
-                }
-            },
-            "groupnickname": {
-                "command_name": "přezdívka",
-                "command_description": "Nastavte přezdívku pro postavu",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Znak pro nastavení přezdívky"
-                    },
-                    "nickname": {
-                        "parameter_name": "přezdívka",
-                        "parameter_description": "Přezdívka k nastavení postavy"
-                    }
-                }
-            },
-            "groupgroup": {
-                "command_name": "skupina",
-                "command_description": "Nastavte skupinu pro postavu",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Postava, pro kterou se má skupina nastavit"
-                    },
-                    "group": {
-                        "parameter_name": "skupina",
-                        "parameter_description": "Skupina, ve výchozím nastavení Žádná"
-                    }
-                }
-            },
-            "groupnsfw": {
-                "command_name": "nsfw",
-                "command_description": "Nastavte, zda je postava NSFW",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Znak, pro který se má nastavit NSFW"
-                    },
-                    "nsfw": {
-                        "parameter_name": "nsfw",
-                        "parameter_description": "NSFW, ve výchozím nastavení přepněte na opačnou hodnotu"
-                    }
-                }
-            },
-            "groupavatar": {
-                "command_name": "avatar",
-                "command_description": "Nastavte avatar pro postavu",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Postava, pro kterou chcete nastavit avatara"
-                    },
-                    "avatar": {
-                        "parameter_name": "avatar",
-                        "parameter_description": "Adresa URL obrázku, ve výchozím nastavení Žádná"
-                    }
-                }
-            },
-            "groupimage": {
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Postava, pro kterou chcete nastavit avatara"
-                    },
-                    "avatar": {
-                        "parameter_name": "avatar",
-                        "parameter_description": "Adresa URL obrázku, ve výchozím nastavení Žádná"
-                    }
-                }
-            },
-            "grouplocal": {
-                "command_name": "místní",
-                "command_description": "Nastavte místní pro znak",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Znak, pro který chcete nastavit místní"
-                    },
-                    "avatar": {
-                        "parameter_name": "obraz",
-                        "parameter_description": "Obrázek, ve výchozím nastavení Žádný"
-                    },
-                    "nickname": {
-                        "parameter_name": "přezdívka",
-                        "parameter_description": "Přezdívka, ve výchozím nastavení Žádná"
-                    }
-                }
-            },
-            "groupupdate": {
-                "command_name": "aktualizace",
-                "command_description": "Aktualizujte proxy. ",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Postava k aktualizaci"
-                    },
-                    "image": {
-                        "parameter_name": "obraz",
-                        "parameter_description": "Obrázek, ve výchozím nastavení Žádný"
-                    }
-                }
-            },
-            "groupdetail": {
-                "command_name": "detail",
-                "command_description": "Získejte podrobnosti o postavě",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Podrobnosti o proxy. "
-                    }
-                }
-            },
-            "groupprune": {
-                "command_name": "prořezávat",
-                "command_description": "Prořezávat znaky nepoužívané po určitou dobu.",
-                "params": {
-                    "time": {
-                        "parameter_description": "Datum před prořezáním, ve výchozím nastavení Žádné"
-                    }
-                }
-            },
-            "grouppurge": {
-                "command_name": "očistit",
-                "command_description": "Vymazat všechna vaše data (kromě protokolů zpráv)",
-                "params": {
-                    "confirmation": {
-                        "parameter_name": "potvrzení",
-                        "parameter_description": "potvrzení"
-                    }
-                }
-            }
-        },
-        "check_permissions": {
-            "command_name": "check_perms",
-            "command_description": "Zkontrolujte, zda robot může pracovat na poskytnutém kanálu"
         },
         "roll": {
             "command_description": "Roll a dice."
         },
-        "afk": {
-            "command_description": "Check if a user is AFK."
-        },
-        "help": {
-            "command_name": "pomoc",
-            "command_description": "Vestavěná nápověda pro roboty",
+        "say": {
+            "command_description": "Say something.",
             "params": {
-                "search": {
-                    "parameter_name": "vyhledávání",
-                    "parameter_description": "Termín vyhledávání"
+                "text": {
+                    "parameter_description": "text",
+                    "parameter_name": "text"
                 }
             }
         },
         "server_wiki": {
-            "command_name": "server_wiki",
             "command_description": "Uživatelsky definovaná serverová wiki",
+            "command_name": "server_wiki",
             "params": {
                 "search": {
-                    "parameter_name": "vyhledávání",
-                    "parameter_description": "Termín vyhledávání"
+                    "parameter_description": "Termín vyhledávání",
+                    "parameter_name": "vyhledávání"
                 }
             }
         },
+        "set": {
+            "command_description": "Set a proxy as the current one."
+        },
         "settings": {
-            "command_name": "nastavení",
             "command_description": "Nastavení robota",
+            "command_name": "nastavení",
             "params": {
                 "menu": {
-                    "parameter_name": "menu",
-                    "parameter_description": "Nabídka pro otevření nastavení",
                     "choices": {
+                        "Member": "Member",
                         "Server": "Server",
-                        "Member": "Člen",
-                        "User": "Uživatel"
+                        "User": "User"
+                    },
+                    "parameter_description": "Nabídka pro otevření nastavení",
+                    "parameter_name": "menu"
+                }
+            }
+        },
+        "shared": {
+            "group": {
+                "auto": {
+                    "command_description": "Nastavte auto pro znak",
+                    "command_name": "auto",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Znak, ve výchozím nastavení zakáže auto",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "avatar": {
+                    "command_description": "Nastavte avatar pro postavu",
+                    "command_name": "avatar",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Adresa URL obrázku, ve výchozím nastavení Žádná",
+                            "parameter_name": "avatar"
+                        },
+                        "proxy": {
+                            "parameter_description": "Postava, pro kterou chcete nastavit avatara",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "birthday": {
+                    "command_description": "Nastavte datum narození pro postavu",
+                    "command_name": "narozeniny",
+                    "params": {
+                        "birthday": {
+                            "parameter_description": "Narozeniny, ve výchozím nastavení Žádné",
+                            "parameter_name": "narozeniny"
+                        },
+                        "proxy": {
+                            "parameter_description": "Postava, pro kterou chcete nastavit narozeniny",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "color": {
+                    "command_description": "Set the color for a proxy."
+                },
+                "create": {
+                    "command_description": "Vytvořte novou postavu.",
+                    "command_name": "vytvořit",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Obrázek, ve výchozím nastavení Žádný",
+                            "parameter_name": "obraz"
+                        }
+                    }
+                },
+                "delete": {
+                    "command_description": "Smazat znak",
+                    "command_name": "vymazat",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Proxy pro smazání varianty",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "description": {
+                    "command_description": "Nastavte popis pro postavu",
+                    "command_name": "popis",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Znak, pro který chcete nastavit popis",
+                            "parameter_name": "proxy"
+                        },
+                        "text": {
+                            "parameter_description": "Popis k nastavení postavy",
+                            "parameter_name": "text"
+                        }
+                    }
+                },
+                "detail": {
+                    "command_description": "Získejte podrobnosti o postavě",
+                    "command_name": "detail",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Podrobnosti o proxy. ",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "find": {
+                    "command_description": "Find a proxy."
+                },
+                "group": {
+                    "command_description": "Nastavte skupinu pro postavu",
+                    "command_name": "skupina",
+                    "params": {
+                        "group": {
+                            "parameter_description": "Skupina, ve výchozím nastavení Žádná",
+                            "parameter_name": "skupina"
+                        },
+                        "proxy": {
+                            "parameter_description": "Postava, pro kterou se má skupina nastavit",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "image": {
+                    "command_description": "Set the image for a proxy.",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Adresa URL obrázku, ve výchozím nastavení Žádná",
+                            "parameter_name": "avatar"
+                        },
+                        "proxy": {
+                            "parameter_description": "Postava, pro kterou chcete nastavit avatara",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "list": {
+                    "command_description": "List all proxies."
+                },
+                "local": {
+                    "command_description": "Nastavte místní pro znak",
+                    "command_name": "místní",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Obrázek, ve výchozím nastavení Žádný",
+                            "parameter_name": "obraz"
+                        },
+                        "nickname": {
+                            "parameter_description": "Přezdívka, ve výchozím nastavení Žádná",
+                            "parameter_name": "přezdívka"
+                        },
+                        "proxy": {
+                            "parameter_description": "Znak, pro který chcete nastavit místní",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "nickname": {
+                    "command_description": "Nastavte přezdívku pro postavu",
+                    "command_name": "přezdívka",
+                    "params": {
+                        "nickname": {
+                            "parameter_description": "Přezdívka k nastavení postavy",
+                            "parameter_name": "přezdívka"
+                        },
+                        "proxy": {
+                            "parameter_description": "Znak pro nastavení přezdívky",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "nsfw": {
+                    "command_description": "Nastavte, zda je postava NSFW",
+                    "command_name": "nsfw",
+                    "params": {
+                        "nsfw": {
+                            "parameter_description": "NSFW, ve výchozím nastavení přepněte na opačnou hodnotu",
+                            "parameter_name": "nsfw"
+                        },
+                        "proxy": {
+                            "parameter_description": "Znak, pro který se má nastavit NSFW",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "prefix": {
+                    "command_description": "Nastavte předpony pro znak.",
+                    "command_name": "předpona",
+                    "params": {
+                        "prefixes": {
+                            "parameter_description": "Předpony např. ",
+                            "parameter_name": "předpony"
+                        },
+                        "proxy": {
+                            "parameter_description": "Znak, pro který se má nastavit předpona",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "prune": {
+                    "command_description": "Prořezávat znaky nepoužívané po určitou dobu.",
+                    "command_name": "prořezávat",
+                    "params": {
+                        "time": {
+                            "parameter_description": "Datum před prořezáním, ve výchozím nastavení Žádné"
+                        }
+                    }
+                },
+                "purge": {
+                    "command_description": "Vymazat všechna vaše data (kromě protokolů zpráv)",
+                    "command_name": "očistit",
+                    "params": {
+                        "confirmation": {
+                            "parameter_description": "potvrzení",
+                            "parameter_name": "potvrzení"
+                        }
+                    }
+                },
+                "read": {
+                    "command_description": "Přečtěte si postavu",
+                    "command_name": "číst",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Znak, ze kterého se má varianta přečíst",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "rename": {
+                    "command_description": "Přejmenujte postavu",
+                    "command_name": "přejmenovat",
+                    "params": {
+                        "name": {
+                            "parameter_description": "Nové jméno pro postavu",
+                            "parameter_name": "název"
+                        },
+                        "proxy": {
+                            "parameter_description": "Postava k přejmenování",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "set": {
+                    "command_description": "Set a proxy as the current one."
+                },
+                "update": {
+                    "command_description": "Aktualizujte proxy. ",
+                    "command_name": "aktualizace",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Obrázek, ve výchozím nastavení Žádný",
+                            "parameter_name": "obraz"
+                        },
+                        "proxy": {
+                            "parameter_description": "Postava k aktualizaci",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "use": {
+                    "command_description": "Use a proxy."
+                }
+            },
+            "group_description": "Shared proxy commands."
+        },
+        "store": {
+            "params": {
+                "storage": {
+                    "choices": {
+                        "Global": "Global",
+                        "Local": "Local"
                     }
                 }
             }
         },
+        "update": {
+            "command_description": "Aktualizujte proxy. ",
+            "command_name": "aktualizace",
+            "params": {
+                "image": {
+                    "parameter_description": "Obrázek, ve výchozím nastavení Žádný",
+                    "parameter_name": "obraz"
+                },
+                "proxy": {
+                    "parameter_description": "Postava k aktualizaci",
+                    "parameter_name": "proxy"
+                }
+            }
+        },
+        "use": {
+            "command_description": "Use a proxy.",
+            "params": {
+                "text": {
+                    "parameter_description": "text",
+                    "parameter_name": "text"
+                }
+            }
+        },
+        "var": {
+            "group": {
+                "auto": {
+                    "command_description": "Nastavte auto pro znak",
+                    "command_name": "auto",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Znak, ve výchozím nastavení zakáže auto",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Varianta pro nastavení automatiky",
+                            "parameter_name": "varianta"
+                        }
+                    }
+                },
+                "avatar": {
+                    "command_description": "Nastavte avatar pro postavu",
+                    "command_name": "avatar",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Adresa URL obrázku, ve výchozím nastavení Žádná",
+                            "parameter_name": "avatar"
+                        },
+                        "proxy": {
+                            "parameter_description": "Postava, pro kterou chcete nastavit avatara",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Varianta pro nastavení avatara",
+                            "parameter_name": "varianta"
+                        }
+                    }
+                },
+                "birthday": {
+                    "command_description": "Nastavte datum narození pro postavu",
+                    "command_name": "narozeniny",
+                    "params": {
+                        "birthday": {
+                            "parameter_description": "Narozeniny, ve výchozím nastavení Žádné",
+                            "parameter_name": "narozeniny"
+                        },
+                        "proxy": {
+                            "parameter_description": "Postava, pro kterou chcete nastavit narozeniny",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Varianta pro nastavení narozenin",
+                            "parameter_name": "varianta"
+                        }
+                    }
+                },
+                "color": {
+                    "command_description": "Change the color of a variant."
+                },
+                "create": {
+                    "command_description": "Vytvořte novou postavu.",
+                    "command_name": "vytvořit",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Obrázek, ve výchozím nastavení Žádný",
+                            "parameter_name": "obraz"
+                        },
+                        "prefixes": {
+                            "parameter_description": "Prefixes e.g. A:text, |text|, etc."
+                        },
+                        "proxy": {
+                            "parameter_description": " Proxy pro vytvoření varianty",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "delete": {
+                    "command_description": "Smazat variantu postavy",
+                    "command_name": "vymazat",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Proxy pro smazání varianty",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Varianta ke smazání",
+                            "parameter_name": "varianta"
+                        }
+                    }
+                },
+                "description": {
+                    "command_description": "Nastavte popis pro postavu",
+                    "command_name": "popis",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Znak, pro který chcete nastavit popis",
+                            "parameter_name": "proxy"
+                        },
+                        "text": {
+                            "parameter_description": "Popis k nastavení postavy",
+                            "parameter_name": "text"
+                        },
+                        "variant": {
+                            "parameter_description": "Varianta pro nastavení popisu",
+                            "parameter_name": "varianta"
+                        }
+                    }
+                },
+                "detail": {
+                    "command_description": "Získejte podrobnosti o postavě",
+                    "command_name": "detail",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Podrobnosti o proxy. ",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Varianta do detailu",
+                            "parameter_name": "varianta"
+                        }
+                    }
+                },
+                "find": {
+                    "command_description": "Find a variant."
+                },
+                "group": {
+                    "command_description": "Nastavte skupinu pro postavu",
+                    "command_name": "skupina",
+                    "params": {
+                        "group": {
+                            "parameter_description": "Skupina, ve výchozím nastavení Žádná",
+                            "parameter_name": "skupina"
+                        },
+                        "proxy": {
+                            "parameter_description": "Postava, pro kterou se má skupina nastavit",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Varianta pro nastavení skupiny",
+                            "parameter_name": "varianta"
+                        }
+                    }
+                },
+                "list": {
+                    "command_description": "List all variants."
+                },
+                "local": {
+                    "command_description": "Nastavte místní pro znak",
+                    "command_name": "místní",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Obrázek, ve výchozím nastavení Žádný",
+                            "parameter_name": "obraz"
+                        },
+                        "nickname": {
+                            "parameter_description": "Přezdívka, ve výchozím nastavení Žádná",
+                            "parameter_name": "přezdívka"
+                        },
+                        "proxy": {
+                            "parameter_description": "Znak, pro který chcete nastavit místní",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Varianta pro místní nastavení",
+                            "parameter_name": "varianta"
+                        }
+                    }
+                },
+                "nickname": {
+                    "command_description": "Nastavte přezdívku pro postavu",
+                    "command_name": "přezdívka",
+                    "params": {
+                        "nickname": {
+                            "parameter_description": "Přezdívka k nastavení postavy",
+                            "parameter_name": "přezdívka"
+                        },
+                        "proxy": {
+                            "parameter_description": "Znak pro nastavení přezdívky",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Varianta pro nastavení přezdívky",
+                            "parameter_name": "varianta"
+                        }
+                    }
+                },
+                "nsfw": {
+                    "command_description": "Nastavte, zda je postava NSFW",
+                    "command_name": "nsfw",
+                    "params": {
+                        "nsfw": {
+                            "parameter_description": "NSFW, ve výchozím nastavení přepněte na opačnou hodnotu",
+                            "parameter_name": "nsfw"
+                        },
+                        "proxy": {
+                            "parameter_description": "Znak, pro který se má nastavit NSFW",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Varianta pro nastavení NSFW",
+                            "parameter_name": "varianta"
+                        }
+                    }
+                },
+                "prefix": {
+                    "command_description": "Nastavte předpony pro znak.",
+                    "command_name": "předpona",
+                    "params": {
+                        "prefixes": {
+                            "parameter_description": "Předpony např. ",
+                            "parameter_name": "předpony"
+                        },
+                        "proxy": {
+                            "parameter_description": "Znak, pro který se má nastavit předpona",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Varianta, pro kterou se má nastavit předpona",
+                            "parameter_name": "varianta"
+                        }
+                    }
+                },
+                "prune": {
+                    "command_description": "Prořezávat znaky nepoužívané po určitou dobu.",
+                    "command_name": "prořezávat",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "proxy"
+                        },
+                        "time": {
+                            "parameter_description": "Datum před prořezáním, ve výchozím nastavení Žádné"
+                        }
+                    }
+                },
+                "purge": {
+                    "command_description": "Vymazat všechna vaše data (kromě protokolů zpráv)",
+                    "command_name": "očistit",
+                    "params": {
+                        "confirmation": {
+                            "parameter_description": "potvrzení",
+                            "parameter_name": "potvrzení"
+                        },
+                        "proxy": {
+                            "parameter_description": "proxy",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "read": {
+                    "command_description": "Přečtěte si postavu",
+                    "command_name": "číst",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Znak, ze kterého se má varianta přečíst",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Varianta ke čtení",
+                            "parameter_name": "varianta"
+                        }
+                    }
+                },
+                "rename": {
+                    "command_description": "Přejmenujte postavu",
+                    "command_name": "přejmenovat",
+                    "params": {
+                        "name": {
+                            "parameter_description": "Nové jméno pro postavu",
+                            "parameter_name": "název"
+                        },
+                        "proxy": {
+                            "parameter_description": "Postava k přejmenování",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Varianta k přejmenování",
+                            "parameter_name": "varianta"
+                        }
+                    }
+                },
+                "set": {
+                    "command_description": "Set a variant."
+                },
+                "update": {
+                    "command_description": "Aktualizujte proxy. ",
+                    "command_name": "aktualizace",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Obrázek, ve výchozím nastavení Žádný",
+                            "parameter_name": "obraz"
+                        },
+                        "proxy": {
+                            "parameter_description": "Postava k aktualizaci",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "use": {
+                    "command_description": "Use a variant."
+                }
+            },
+            "group_description": "Variant commands.",
+            "group_name": "var"
+        },
+        "variant-to-proxy": {
+            "command_description": "Převeďte variantu na znak",
+            "command_name": "varianta-to-proxy",
+            "params": {
+                "proxy": {
+                    "parameter_description": "Proxy, na který se má převést",
+                    "parameter_name": "proxy"
+                },
+                "variant": {
+                    "parameter_description": "Varianta k převodu",
+                    "parameter_name": "varianta"
+                }
+            }
+        }
+    },
+    "interactions": {
         "context_menu": {
             "command_name": "Proxy"
         }

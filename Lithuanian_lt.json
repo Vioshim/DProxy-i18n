@@ -1,304 +1,333 @@
 {
     "commands": {
-        "exec": {
-            "command_description": "Execute a command."
+        "afk": {
+            "command_description": "Check if a user is AFK."
         },
-        "proxy": {
-            "command_name": "proxy",
-            "command_description": "Išjungti simbolius serveryje",
+        "auto": {
+            "command_description": "Nustatykite simbolio automatinį režimą",
+            "command_name": "automatinis",
             "params": {
-                "enable": {
-                    "parameter_name": "įjungti",
-                    "parameter_description": "Įgalinkite arba išjunkite simbolius pagal numatytuosius jungiklius"
+                "proxy": {
+                    "parameter_description": "Simbolis, pagal numatytuosius nustatymus išjungia automatinį",
+                    "parameter_name": "proxy"
                 }
             }
         },
-        "set": {
-            "command_description": "Set a proxy as the current one."
-        },
-        "use": {
+        "avatar": {
+            "command_description": "Nustatykite veikėjo avatarą",
+            "command_name": "avataras",
             "params": {
-                "text": {
-                    "parameter_name": "tekstą",
-                    "parameter_description": "tekstą"
+                "avatar": {
+                    "parameter_description": "Vaizdo URL, pagal numatytuosius nustatymus Nėra",
+                    "parameter_name": "avataras"
+                },
+                "proxy": {
+                    "parameter_description": "Simbolis, kuriam reikia nustatyti avatarą",
+                    "parameter_name": "proxy"
                 }
             }
         },
-        "say": {
+        "birthday": {
+            "command_description": "Nustatykite veikėjo gimtadienį",
+            "command_name": "gimtadienis",
             "params": {
-                "text": {
-                    "parameter_name": "tekstą",
-                    "parameter_description": "tekstą"
+                "birthday": {
+                    "parameter_description": "Gimtadienis, pagal numatytuosius nustatymus Nėra",
+                    "parameter_name": "gimtadienis"
+                },
+                "proxy": {
+                    "parameter_description": "Simbolis, kuriam reikia nustatyti gimtadienį",
+                    "parameter_name": "proxy"
                 }
             }
         },
-        "npc": {
-            "command_name": "npc",
-            "command_description": "Sukurkite naują NPC pranešimą",
-            "params": {
-                "franchise": {
-                    "parameter_name": "franchise",
-                    "parameter_description": "Naudoti franšizę",
-                    "choices": {
-                        "Pokemon": "Pokemon",
-                        "Pokemon Shiny": "Pokemon Shiny",
-                        "Trainer": "Trainer",
-                        "Digimon": "Digimon",
-                        "Palworld": "Palworld",
-                        "D&D": "D&D"
-                    }
-                },
-                "npc": {
-                    "parameter_name": "npc",
-                    "parameter_description": "NPC naudoti"
-                },
-                "nickname": {
-                    "parameter_name": "slapyvardis",
-                    "parameter_description": "Slapyvardis, pagal numatytuosius nustatymus Nėra"
-                },
-                "emotion": {
-                    "parameter_name": "emocija",
-                    "parameter_description": "Emocijos, pagal numatytuosius nustatymus Normalus",
-                    "choices": {
-                        "Normal": "Normal",
-                        "Happy": "Happy",
-                        "Pain": "Pain",
-                        "Angry": "Angry",
-                        "Worried": "Worried",
-                        "Sad": "Sad",
-                        "Crying": "Crying",
-                        "Shouting": "Shouting",
-                        "TearyEyed": "TearyEyed",
-                        "Determined": "Determined",
-                        "Joyous": "Joyous",
-                        "Inspired": "Inspired",
-                        "Surprised": "Surprised",
-                        "Dizzy": "Dizzy",
-                        "Sigh": "Sigh",
-                        "Stunned": "Stunned",
-                        "Special0": "Special0",
-                        "Special1": "Special1",
-                        "Special2": "Special2",
-                        "Special3": "Special3"
-                    }
-                },
-                "image": {
-                    "parameter_name": "vaizdas",
-                    "parameter_description": "Vaizdas, pagal numatytuosius nustatymus Nėra"
-                },
-                "text": {
-                    "parameter_name": "tekstą",
-                    "parameter_description": "tekstą"
-                }
-            }
+        "check_permissions": {
+            "command_description": "Patikrinkite, ar robotas gali veikti pateiktame kanale",
+            "command_name": "check_perms"
+        },
+        "color": {
+            "command_description": "Set a color for a proxy."
         },
         "create": {
-            "command_description": "Create a new proxy.",
+            "command_description": "Sukurkite naują personažą.",
+            "command_name": "sukurti",
             "params": {
+                "image": {
+                    "parameter_description": "Vaizdas, pagal numatytuosius nustatymus Nėra",
+                    "parameter_name": "vaizdas"
+                },
                 "prefixes": {
                     "parameter_description": "Prefixes e.g. A:text, |text|, etc."
                 }
             }
         },
         "delete": {
-            "command_name": "ištrinti",
             "command_description": "Ištrinkite simbolį",
+            "command_name": "ištrinti",
             "params": {
                 "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Įgaliotasis serveris, iš kurio galima ištrinti variantą"
-                }
-            }
-        },
-        "read": {
-            "command_name": "skaityti",
-            "command_description": "Skaityti veikėją",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Simbolis, iš kurio galima skaityti variantą"
-                }
-            }
-        },
-        "nickname": {
-            "command_name": "slapyvardis",
-            "command_description": "Nustatykite veikėjo slapyvardį",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Simbolis, kuriam reikia nustatyti slapyvardį"
-                },
-                "nickname": {
-                    "parameter_name": "slapyvardis",
-                    "parameter_description": "Slapyvardis, kurį reikia nustatyti personažui"
-                }
-            }
-        },
-        "local": {
-            "command_name": "vietinis",
-            "command_description": "Nustatykite vietinį veikėją",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Simbolis, kuriam reikia nustatyti vietinį"
-                },
-                "avatar": {
-                    "parameter_name": "vaizdas",
-                    "parameter_description": "Vaizdas, pagal numatytuosius nustatymus Nėra"
-                },
-                "nickname": {
-                    "parameter_name": "slapyvardis",
-                    "parameter_description": "Slapyvardis, pagal numatytuosius nustatymus Nėra"
-                }
-            }
-        },
-        "avatar": {
-            "command_name": "avataras",
-            "command_description": "Nustatykite veikėjo avatarą",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Simbolis, kuriam reikia nustatyti avatarą"
-                },
-                "avatar": {
-                    "parameter_name": "avataras",
-                    "parameter_description": "Vaizdo URL, pagal numatytuosius nustatymus Nėra"
-                }
-            }
-        },
-        "prefix": {
-            "command_name": "priešdėlis",
-            "command_description": "Nustatykite simbolio priešdėlius.",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Simbolis, kuriam reikia nustatyti priešdėlį"
-                },
-                "prefixes": {
-                    "parameter_name": "priešdėliai",
-                    "parameter_description": "Priešdėliai pvz. "
-                }
-            }
-        },
-        "birthday": {
-            "command_name": "gimtadienis",
-            "command_description": "Nustatykite veikėjo gimtadienį",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Simbolis, kuriam reikia nustatyti gimtadienį"
-                },
-                "birthday": {
-                    "parameter_name": "gimtadienis",
-                    "parameter_description": "Gimtadienis, pagal numatytuosius nustatymus Nėra"
+                    "parameter_description": "Įgaliotasis serveris, iš kurio galima ištrinti variantą",
+                    "parameter_name": "proxy"
                 }
             }
         },
         "description": {
-            "command_name": "apibūdinimas",
             "command_description": "Nustatykite veikėjo aprašymą",
+            "command_name": "apibūdinimas",
             "params": {
                 "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Simbolis, kuriam reikia nustatyti aprašą"
+                    "parameter_description": "Simbolis, kuriam reikia nustatyti aprašą",
+                    "parameter_name": "proxy"
                 },
                 "text": {
-                    "parameter_name": "tekstą",
-                    "parameter_description": "Aprašymas, kurį reikia nustatyti veikėjui"
+                    "parameter_description": "Aprašymas, kurį reikia nustatyti veikėjui",
+                    "parameter_name": "tekstą"
                 }
             }
         },
-        "rename": {
-            "command_name": "pervadinti",
-            "command_description": "Pervardykite veikėją",
+        "detail": {
+            "command_description": "Gaukite informacijos apie veikėją",
+            "command_name": "detalė",
             "params": {
                 "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Pervardyti veikėją"
+                    "parameter_description": "Išsamiau apie įgaliotąjį serverį. ",
+                    "parameter_name": "proxy"
+                }
+            }
+        },
+        "exec": {
+            "command_description": "Execute a command."
+        },
+        "export": {
+            "command_description": "Eksportuokite simbolius į JSON failą",
+            "command_name": "eksportuoti",
+            "params": {
+                "format": {
+                    "choices": {
+                        "Default": "Default",
+                        "PluralKit": "PluralKit",
+                        "Tupperbox": "Tupperbox"
+                    },
+                    "parameter_description": "Formatas, į kurį norite eksportuoti, pagal numatytuosius nustatymus JSON",
+                    "parameter_name": "formatu"
                 },
-                "name": {
-                    "parameter_name": "vardas",
-                    "parameter_description": "Naujas veikėjo vardas"
+                "new_token": {
+                    "parameter_description": "Jei norite sugeneruoti naują prieigos raktą",
+                    "parameter_name": "naujas_žetonas"
                 }
             }
         },
         "group": {
-            "command_name": "grupė",
             "command_description": "Nustatykite grupę personažui",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Simbolis, kuriam reikia nustatyti grupę"
-                },
-                "group": {
-                    "parameter_name": "grupė",
-                    "parameter_description": "Grupė, pagal numatytuosius nustatymus Nėra"
-                }
-            }
-        },
-        "nsfw": {
-            "command_name": "nsfw",
-            "command_description": "Nustatykite, ar simbolis yra NSFW",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Simbolis, kuriam reikia nustatyti NSFW"
-                },
-                "nsfw": {
-                    "parameter_name": "nsfw",
-                    "parameter_description": "NSFW, pagal numatytuosius nustatymus perjunkite į priešingą reikšmę"
-                }
-            }
-        },
-        "auto": {
-            "command_name": "automatinis",
-            "command_description": "Nustatykite simbolio automatinį režimą",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Simbolis, pagal numatytuosius nustatymus išjungia automatinį"
-                }
-            }
-        },
-        "list": {
-            "command_name": "sąrašą",
-            "command_description": "Išvardykite visus simbolius ",
+            "command_name": "grupė",
             "params": {
                 "group": {
-                    "parameter_name": "grupė",
-                    "parameter_description": "Grupė, iš kurios pateikiami simboliai"
+                    "parameter_description": "Grupė, pagal numatytuosius nustatymus Nėra",
+                    "parameter_name": "grupė"
+                },
+                "proxy": {
+                    "parameter_description": "Simbolis, kuriam reikia nustatyti grupę",
+                    "parameter_name": "proxy"
+                }
+            }
+        },
+        "help": {
+            "command_description": "Integruota roboto pagalba",
+            "command_name": "padėti",
+            "params": {
+                "search": {
+                    "parameter_description": "Paieškos terminas",
+                    "parameter_name": "paieška"
+                }
+            }
+        },
+        "import": {
+            "command_description": "Importuokite simbolius iš failo arba prieigos rakto",
+            "command_name": "importuoti",
+            "params": {
+                "data": {
+                    "parameter_description": "Failas, iš kurio reikia importuoti",
+                    "parameter_name": "duomenis"
+                },
+                "deleting_from_token": {
+                    "parameter_description": "Ištrinkite simbolius iš žetono",
+                    "parameter_name": "deleting_from_token"
+                },
+                "token": {
+                    "parameter_description": "Žetonas, skirtas naudoti importuojant",
+                    "parameter_name": "žetonas"
                 }
             }
         },
         "latch": {
-            "command_name": "skląstis",
             "command_description": "Įjungti arba išjungti fiksavimo režimą",
+            "command_name": "skląstis",
             "params": {
-                "enable": {
-                    "parameter_description": "Įjungti arba išjungti fiksavimo režimą"
-                },
                 "auto_remove": {
                     "parameter_description": "Ar išlaikyti automatinį dabartinio kanalo režimą, ar ne, pagal numatytuosius nustatymus True"
+                },
+                "enable": {
+                    "parameter_description": "Įjungti arba išjungti fiksavimo režimą"
                 }
             }
         },
-        "export": {
-            "command_name": "eksportuoti",
-            "command_description": "Eksportuokite simbolius į JSON failą",
+        "list": {
+            "command_description": "Išvardykite visus simbolius ",
+            "command_name": "sąrašą",
             "params": {
-                "format": {
-                    "parameter_name": "formatu",
-                    "parameter_description": "Formatas, į kurį norite eksportuoti, pagal numatytuosius nustatymus JSON"
+                "group": {
+                    "parameter_description": "Grupė, iš kurios pateikiami simboliai",
+                    "parameter_name": "grupė"
+                }
+            }
+        },
+        "local": {
+            "command_description": "Nustatykite vietinį veikėją",
+            "command_name": "vietinis",
+            "params": {
+                "avatar": {
+                    "parameter_description": "Vaizdas, pagal numatytuosius nustatymus Nėra",
+                    "parameter_name": "vaizdas"
                 },
-                "new_token": {
-                    "parameter_name": "naujas_žetonas",
-                    "parameter_description": "Jei norite sugeneruoti naują prieigos raktą"
+                "nickname": {
+                    "parameter_description": "Slapyvardis, pagal numatytuosius nustatymus Nėra",
+                    "parameter_name": "slapyvardis"
+                },
+                "proxy": {
+                    "parameter_description": "Simbolis, kuriam reikia nustatyti vietinį",
+                    "parameter_name": "proxy"
+                }
+            }
+        },
+        "nickname": {
+            "command_description": "Nustatykite veikėjo slapyvardį",
+            "command_name": "slapyvardis",
+            "params": {
+                "nickname": {
+                    "parameter_description": "Slapyvardis, kurį reikia nustatyti personažui",
+                    "parameter_name": "slapyvardis"
+                },
+                "proxy": {
+                    "parameter_description": "Simbolis, kuriam reikia nustatyti slapyvardį",
+                    "parameter_name": "proxy"
+                }
+            }
+        },
+        "npc": {
+            "command_description": "Sukurkite naują NPC pranešimą",
+            "command_name": "npc",
+            "params": {
+                "emotion": {
+                    "choices": {
+                        "Angry": "Angry",
+                        "Crying": "Crying",
+                        "Determined": "Determined",
+                        "Dizzy": "Dizzy",
+                        "Happy": "Happy",
+                        "Inspired": "Inspired",
+                        "Joyous": "Joyous",
+                        "Normal": "Normal",
+                        "Pain": "Pain",
+                        "Sad": "Sad",
+                        "Shouting": "Shouting",
+                        "Sigh": "Sigh",
+                        "Special0": "Special0",
+                        "Special1": "Special1",
+                        "Special2": "Special2",
+                        "Special3": "Special3",
+                        "Stunned": "Stunned",
+                        "Surprised": "Surprised",
+                        "TearyEyed": "TearyEyed",
+                        "Worried": "Worried"
+                    },
+                    "parameter_description": "Emocijos, pagal numatytuosius nustatymus Normalus",
+                    "parameter_name": "emocija"
+                },
+                "franchise": {
+                    "choices": {
+                        "D&D": "D&D",
+                        "Digimon": "Digimon",
+                        "Palworld": "Palworld",
+                        "Pokemon": "Pokemon",
+                        "Pokemon Shiny": "Pokemon Shiny",
+                        "Trainer": "Trainer"
+                    },
+                    "parameter_description": "Naudoti franšizę",
+                    "parameter_name": "franšizė"
+                },
+                "image": {
+                    "parameter_description": "Vaizdas, pagal numatytuosius nustatymus Nėra",
+                    "parameter_name": "vaizdas"
+                },
+                "nickname": {
+                    "parameter_description": "Slapyvardis, pagal numatytuosius nustatymus Nėra",
+                    "parameter_name": "slapyvardis"
+                },
+                "npc": {
+                    "parameter_description": "NPC naudoti",
+                    "parameter_name": "npc"
+                },
+                "text": {
+                    "parameter_description": "tekstą",
+                    "parameter_name": "tekstą"
+                }
+            }
+        },
+        "nsfw": {
+            "command_description": "Nustatykite, ar simbolis yra NSFW",
+            "command_name": "nsfw",
+            "params": {
+                "nsfw": {
+                    "parameter_description": "NSFW, pagal numatytuosius nustatymus perjunkite į priešingą reikšmę",
+                    "parameter_name": "nsfw"
+                },
+                "proxy": {
+                    "parameter_description": "Simbolis, kuriam reikia nustatyti NSFW",
+                    "parameter_name": "proxy"
+                }
+            }
+        },
+        "prefix": {
+            "command_description": "Nustatykite simbolio priešdėlius.",
+            "command_name": "priešdėlis",
+            "params": {
+                "prefixes": {
+                    "parameter_description": "Priešdėliai pvz. ",
+                    "parameter_name": "priešdėliai"
+                },
+                "proxy": {
+                    "parameter_description": "Simbolis, kuriam reikia nustatyti priešdėlį",
+                    "parameter_name": "proxy"
+                }
+            }
+        },
+        "proxy": {
+            "command_description": "Išjungti simbolius serveryje",
+            "command_name": "proxy",
+            "params": {
+                "enable": {
+                    "parameter_description": "Įgalinkite arba išjunkite simbolius pagal numatytuosius jungiklius",
+                    "parameter_name": "įjungti"
+                }
+            }
+        },
+        "proxy-to-variant": {
+            "command_description": "Konvertuoti simbolį į variantą",
+            "command_name": "tarpinis-serveris-į-variantą",
+            "params": {
+                "base": {
+                    "parameter_description": "Nauja veikėjo bazė",
+                    "parameter_name": "bazė"
+                },
+                "original": {
+                    "parameter_description": "Konvertuojamas simbolis",
+                    "parameter_name": "originalus"
                 }
             }
         },
         "prune": {
-            "command_name": "slyva",
             "command_description": "Iškirpkite tam tikrą laiką nenaudotus simbolius.",
+            "command_name": "slyva",
             "params": {
                 "time": {
                     "parameter_description": "Genėjimo data anksčiau, pagal numatytuosius nustatymus Nėra"
@@ -306,656 +335,674 @@
             }
         },
         "purge": {
-            "command_name": "valymas",
             "command_description": "Išvalykite visus savo duomenis (išskyrus pranešimų žurnalus)",
+            "command_name": "valymas",
             "params": {
                 "confirmation": {
-                    "parameter_name": "patvirtinimas",
-                    "parameter_description": "patvirtinimas"
+                    "parameter_description": "patvirtinimas",
+                    "parameter_name": "patvirtinimas"
                 }
             }
         },
-        "proxy-to-variant": {
-            "command_name": "tarpinis-serveris-į-variantą",
-            "command_description": "Konvertuoti simbolį į variantą",
-            "params": {
-                "original": {
-                    "parameter_name": "originalus",
-                    "parameter_description": "Konvertuojamas simbolis"
-                },
-                "base": {
-                    "parameter_name": "bazė",
-                    "parameter_description": "Nauja veikėjo bazė"
-                }
-            }
-        },
-        "variant-to-proxy": {
-            "command_name": "variantas-į-tarpinį-serverį",
-            "command_description": "Konvertuoti variantą į simbolį",
+        "read": {
+            "command_description": "Skaityti veikėją",
+            "command_name": "skaityti",
             "params": {
                 "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Tarpinis serveris, į kurį reikia konvertuoti"
-                },
-                "variant": {
-                    "parameter_name": "variantas",
-                    "parameter_description": "Variantas konvertuoti"
+                    "parameter_description": "Simbolis, iš kurio galima skaityti variantą",
+                    "parameter_name": "proxy"
                 }
             }
         },
-        "update": {
-            "command_name": "atnaujinti",
-            "command_description": "Atnaujinkite tarpinį serverį. ",
+        "rename": {
+            "command_description": "Pervardykite veikėją",
+            "command_name": "pervadinti",
             "params": {
+                "name": {
+                    "parameter_description": "Naujas veikėjo vardas",
+                    "parameter_name": "vardas"
+                },
                 "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Simbolis, kurį reikia atnaujinti"
-                },
-                "image": {
-                    "parameter_name": "vaizdas",
-                    "parameter_description": "Vaizdas, pagal numatytuosius nustatymus Nėra"
+                    "parameter_description": "Pervardyti veikėją",
+                    "parameter_name": "proxy"
                 }
             }
-        },
-        "detail": {
-            "command_name": "detalė",
-            "command_description": "Gaukite informacijos apie veikėją",
-            "params": {
-                "proxy": {
-                    "parameter_name": "proxy",
-                    "parameter_description": "Išsamiau apie įgaliotąjį serverį. "
-                }
-            }
-        },
-        "import": {
-            "command_name": "importuoti",
-            "command_description": "Importuokite simbolius iš failo arba prieigos rakto",
-            "params": {
-                "data": {
-                    "parameter_name": "duomenis",
-                    "parameter_description": "Failas, iš kurio reikia importuoti"
-                },
-                "token": {
-                    "parameter_name": "žetonas",
-                    "parameter_description": "Žetonas, skirtas naudoti importuojant"
-                },
-                "deleting_from_token": {
-                    "parameter_name": "deleting_from_token",
-                    "parameter_description": "Ištrinkite simbolius iš žetono"
-                }
-            }
-        },
-        "var": {
-            "group_name": "var",
-            "group_description": "Variant commands.",
-            "groupset": {
-                "command_description": "Set a variant."
-            },
-            "groupuse": {
-                "command_description": "Use a variant."
-            },
-            "groupcreate": {
-                "command_name": "sukurti",
-                "command_description": "Sukurkite naują personažą.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": " Įgaliotasis serveris, skirtas variantui sukurti"
-                    },
-                    "image": {
-                        "parameter_name": "vaizdas",
-                        "parameter_description": "Vaizdas, pagal numatytuosius nustatymus Nėra"
-                    },
-                    "prefixes": {
-                        "parameter_description": "Prefixes e.g. A:text, |text|, etc."
-                    }
-                }
-            },
-            "groupdelete": {
-                "command_name": "ištrinti",
-                "command_description": "Ištrinkite veikėjo variantą",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Įgaliotasis serveris, iš kurio galima ištrinti variantą"
-                    },
-                    "variant": {
-                        "parameter_name": "variantas",
-                        "parameter_description": "Variantas, kurį reikia ištrinti"
-                    }
-                }
-            },
-            "groupread": {
-                "command_name": "skaityti",
-                "command_description": "Skaityti veikėją",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Simbolis, iš kurio galima skaityti variantą"
-                    },
-                    "variant": {
-                        "parameter_name": "variantas",
-                        "parameter_description": "Variantas skaityti"
-                    }
-                }
-            },
-            "groupnickname": {
-                "command_name": "slapyvardis",
-                "command_description": "Nustatykite veikėjo slapyvardį",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Simbolis, kuriam reikia nustatyti slapyvardį"
-                    },
-                    "variant": {
-                        "parameter_name": "variantas",
-                        "parameter_description": "Variantas, kuriam reikia nustatyti slapyvardį"
-                    },
-                    "nickname": {
-                        "parameter_name": "slapyvardis",
-                        "parameter_description": "Slapyvardis, kurį reikia nustatyti personažui"
-                    }
-                }
-            },
-            "grouplocal": {
-                "command_name": "vietinis",
-                "command_description": "Nustatykite vietinį veikėją",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Simbolis, kuriam reikia nustatyti vietinį"
-                    },
-                    "variant": {
-                        "parameter_name": "variantas",
-                        "parameter_description": "Variantas vietiniam nustatymui"
-                    },
-                    "avatar": {
-                        "parameter_name": "vaizdas",
-                        "parameter_description": "Vaizdas, pagal numatytuosius nustatymus Nėra"
-                    },
-                    "nickname": {
-                        "parameter_name": "slapyvardis",
-                        "parameter_description": "Slapyvardis, pagal numatytuosius nustatymus Nėra"
-                    }
-                }
-            },
-            "groupprefix": {
-                "command_name": "priešdėlis",
-                "command_description": "Nustatykite simbolio priešdėlius.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Simbolis, kuriam reikia nustatyti priešdėlį"
-                    },
-                    "variant": {
-                        "parameter_name": "variantas",
-                        "parameter_description": "Variantas, skirtas nustatyti priešdėlį"
-                    },
-                    "prefixes": {
-                        "parameter_name": "priešdėliai",
-                        "parameter_description": "Priešdėliai pvz. "
-                    }
-                }
-            },
-            "groupbirthday": {
-                "command_name": "gimtadienis",
-                "command_description": "Nustatykite veikėjo gimtadienį",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Simbolis, kuriam reikia nustatyti gimtadienį"
-                    },
-                    "variant": {
-                        "parameter_name": "variantas",
-                        "parameter_description": "Gimtadienio nustatymo variantas"
-                    },
-                    "birthday": {
-                        "parameter_name": "gimtadienis",
-                        "parameter_description": "Gimtadienis, pagal numatytuosius nustatymus Nėra"
-                    }
-                }
-            },
-            "groupdescription": {
-                "command_name": "apibūdinimas",
-                "command_description": "Nustatykite veikėjo aprašymą",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Simbolis, kuriam reikia nustatyti aprašą"
-                    },
-                    "variant": {
-                        "parameter_name": "variantas",
-                        "parameter_description": "Variantas, kurio aprašui nustatyti"
-                    },
-                    "text": {
-                        "parameter_name": "tekstą",
-                        "parameter_description": "Aprašymas, kurį reikia nustatyti veikėjui"
-                    }
-                }
-            },
-            "grouprename": {
-                "command_name": "pervadinti",
-                "command_description": "Pervardykite veikėją",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Pervardyti veikėją"
-                    },
-                    "variant": {
-                        "parameter_name": "variantas",
-                        "parameter_description": "Variantas pervadinti"
-                    },
-                    "name": {
-                        "parameter_name": "vardas",
-                        "parameter_description": "Naujas veikėjo vardas"
-                    }
-                }
-            },
-            "groupgroup": {
-                "command_name": "grupė",
-                "command_description": "Nustatykite grupę personažui",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Simbolis, kuriam reikia nustatyti grupę"
-                    },
-                    "variant": {
-                        "parameter_name": "variantas",
-                        "parameter_description": "Variantas, skirtas grupei nustatyti"
-                    },
-                    "group": {
-                        "parameter_name": "grupė",
-                        "parameter_description": "Grupė, pagal numatytuosius nustatymus Nėra"
-                    }
-                }
-            },
-            "groupnsfw": {
-                "command_name": "nsfw",
-                "command_description": "Nustatykite, ar simbolis yra NSFW",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Simbolis, kuriam reikia nustatyti NSFW"
-                    },
-                    "variant": {
-                        "parameter_name": "variantas",
-                        "parameter_description": "Variantas, skirtas nustatyti NSFW"
-                    },
-                    "nsfw": {
-                        "parameter_name": "nsfw",
-                        "parameter_description": "NSFW, pagal numatytuosius nustatymus perjunkite į priešingą reikšmę"
-                    }
-                }
-            },
-            "groupauto": {
-                "command_name": "automatinis",
-                "command_description": "Nustatykite simbolio automatinį režimą",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Simbolis, pagal numatytuosius nustatymus išjungia automatinį"
-                    },
-                    "variant": {
-                        "parameter_name": "variantas",
-                        "parameter_description": "Variantas, kuriam nustatyti automatinį režimą"
-                    }
-                }
-            },
-            "groupavatar": {
-                "command_name": "avataras",
-                "command_description": "Nustatykite veikėjo avatarą",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Simbolis, kuriam reikia nustatyti avatarą"
-                    },
-                    "variant": {
-                        "parameter_name": "variantas",
-                        "parameter_description": "Variantas, kuriam nustatyti avatarą"
-                    },
-                    "avatar": {
-                        "parameter_name": "avataras",
-                        "parameter_description": "Vaizdo URL, pagal numatytuosius nustatymus Nėra"
-                    }
-                }
-            },
-            "grouplist": {
-                "command_description": "List all variants."
-            },
-            "groupfind": {
-                "command_description": "Find a variant."
-            },
-            "groupupdate": {
-                "command_name": "atnaujinti",
-                "command_description": "Atnaujinkite tarpinį serverį. ",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Simbolis, kurį reikia atnaujinti"
-                    },
-                    "image": {
-                        "parameter_name": "vaizdas",
-                        "parameter_description": "Vaizdas, pagal numatytuosius nustatymus Nėra"
-                    }
-                }
-            },
-            "groupdetail": {
-                "command_name": "detalė",
-                "command_description": "Gaukite informacijos apie veikėją",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Išsamiau apie įgaliotąjį serverį. "
-                    },
-                    "variant": {
-                        "parameter_name": "variantas",
-                        "parameter_description": "Variantas iki smulkmenų"
-                    }
-                }
-            },
-            "groupprune": {
-                "command_name": "slyva",
-                "command_description": "Iškirpkite tam tikrą laiką nenaudotus simbolius.",
-                "params": {
-                    "proxy": {
-                        "parameter_description": "proxy"
-                    },
-                    "time": {
-                        "parameter_description": "Genėjimo data anksčiau, pagal numatytuosius nustatymus Nėra"
-                    }
-                }
-            },
-            "grouppurge": {
-                "command_name": "valymas",
-                "command_description": "Išvalykite visus savo duomenis (išskyrus pranešimų žurnalus)",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "proxy"
-                    },
-                    "confirmation": {
-                        "parameter_name": "patvirtinimas",
-                        "parameter_description": "patvirtinimas"
-                    }
-                }
-            }
-        },
-        "shared": {
-            "group_description": "Shared proxy commands.",
-            "groupset": {
-                "command_description": "Set a proxy as the current one."
-            },
-            "groupcreate": {
-                "command_name": "sukurti",
-                "command_description": "Sukurkite naują personažą.",
-                "params": {
-                    "image": {
-                        "parameter_name": "vaizdas",
-                        "parameter_description": "Vaizdas, pagal numatytuosius nustatymus Nėra"
-                    }
-                }
-            },
-            "groupdelete": {
-                "command_name": "ištrinti",
-                "command_description": "Ištrinkite simbolį",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Įgaliotasis serveris, iš kurio galima ištrinti variantą"
-                    }
-                }
-            },
-            "groupread": {
-                "command_name": "skaityti",
-                "command_description": "Skaityti veikėją",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Simbolis, iš kurio galima skaityti variantą"
-                    }
-                }
-            },
-            "groupauto": {
-                "command_name": "automatinis",
-                "command_description": "Nustatykite simbolio automatinį režimą",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Simbolis, pagal numatytuosius nustatymus išjungia automatinį"
-                    }
-                }
-            },
-            "groupprefix": {
-                "command_name": "priešdėlis",
-                "command_description": "Nustatykite simbolio priešdėlius.",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Simbolis, kuriam reikia nustatyti priešdėlį"
-                    },
-                    "prefixes": {
-                        "parameter_name": "priešdėliai",
-                        "parameter_description": "Priešdėliai pvz. "
-                    }
-                }
-            },
-            "groupbirthday": {
-                "command_name": "gimtadienis",
-                "command_description": "Nustatykite veikėjo gimtadienį",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Simbolis, kuriam reikia nustatyti gimtadienį"
-                    },
-                    "birthday": {
-                        "parameter_name": "gimtadienis",
-                        "parameter_description": "Gimtadienis, pagal numatytuosius nustatymus Nėra"
-                    }
-                }
-            },
-            "groupdescription": {
-                "command_name": "apibūdinimas",
-                "command_description": "Nustatykite veikėjo aprašymą",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Simbolis, kuriam reikia nustatyti aprašą"
-                    },
-                    "text": {
-                        "parameter_name": "tekstą",
-                        "parameter_description": "Aprašymas, kurį reikia nustatyti veikėjui"
-                    }
-                }
-            },
-            "grouprename": {
-                "command_name": "pervadinti",
-                "command_description": "Pervardykite veikėją",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Pervardyti veikėją"
-                    },
-                    "name": {
-                        "parameter_name": "vardas",
-                        "parameter_description": "Naujas veikėjo vardas"
-                    }
-                }
-            },
-            "groupnickname": {
-                "command_name": "slapyvardis",
-                "command_description": "Nustatykite veikėjo slapyvardį",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Simbolis, kuriam reikia nustatyti slapyvardį"
-                    },
-                    "nickname": {
-                        "parameter_name": "slapyvardis",
-                        "parameter_description": "Slapyvardis, kurį reikia nustatyti personažui"
-                    }
-                }
-            },
-            "groupgroup": {
-                "command_name": "grupė",
-                "command_description": "Nustatykite grupę personažui",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Simbolis, kuriam reikia nustatyti grupę"
-                    },
-                    "group": {
-                        "parameter_name": "grupė",
-                        "parameter_description": "Grupė, pagal numatytuosius nustatymus Nėra"
-                    }
-                }
-            },
-            "groupnsfw": {
-                "command_name": "nsfw",
-                "command_description": "Nustatykite, ar simbolis yra NSFW",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Simbolis, kuriam reikia nustatyti NSFW"
-                    },
-                    "nsfw": {
-                        "parameter_name": "nsfw",
-                        "parameter_description": "NSFW, pagal numatytuosius nustatymus perjunkite į priešingą reikšmę"
-                    }
-                }
-            },
-            "groupavatar": {
-                "command_name": "avataras",
-                "command_description": "Nustatykite veikėjo avatarą",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Simbolis, kuriam reikia nustatyti avatarą"
-                    },
-                    "avatar": {
-                        "parameter_name": "avataras",
-                        "parameter_description": "Vaizdo URL, pagal numatytuosius nustatymus Nėra"
-                    }
-                }
-            },
-            "groupimage": {
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Simbolis, kuriam reikia nustatyti avatarą"
-                    },
-                    "avatar": {
-                        "parameter_name": "avataras",
-                        "parameter_description": "Vaizdo URL, pagal numatytuosius nustatymus Nėra"
-                    }
-                }
-            },
-            "grouplocal": {
-                "command_name": "vietinis",
-                "command_description": "Nustatykite vietinį veikėją",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Simbolis, kuriam reikia nustatyti vietinį"
-                    },
-                    "avatar": {
-                        "parameter_name": "vaizdas",
-                        "parameter_description": "Vaizdas, pagal numatytuosius nustatymus Nėra"
-                    },
-                    "nickname": {
-                        "parameter_name": "slapyvardis",
-                        "parameter_description": "Slapyvardis, pagal numatytuosius nustatymus Nėra"
-                    }
-                }
-            },
-            "groupupdate": {
-                "command_name": "atnaujinti",
-                "command_description": "Atnaujinkite tarpinį serverį. ",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Simbolis, kurį reikia atnaujinti"
-                    },
-                    "image": {
-                        "parameter_name": "vaizdas",
-                        "parameter_description": "Vaizdas, pagal numatytuosius nustatymus Nėra"
-                    }
-                }
-            },
-            "groupdetail": {
-                "command_name": "detalė",
-                "command_description": "Gaukite informacijos apie veikėją",
-                "params": {
-                    "proxy": {
-                        "parameter_name": "proxy",
-                        "parameter_description": "Išsamiau apie įgaliotąjį serverį. "
-                    }
-                }
-            },
-            "groupprune": {
-                "command_name": "slyva",
-                "command_description": "Iškirpkite tam tikrą laiką nenaudotus simbolius.",
-                "params": {
-                    "time": {
-                        "parameter_description": "Genėjimo data anksčiau, pagal numatytuosius nustatymus Nėra"
-                    }
-                }
-            },
-            "grouppurge": {
-                "command_name": "valymas",
-                "command_description": "Išvalykite visus savo duomenis (išskyrus pranešimų žurnalus)",
-                "params": {
-                    "confirmation": {
-                        "parameter_name": "patvirtinimas",
-                        "parameter_description": "patvirtinimas"
-                    }
-                }
-            }
-        },
-        "check_permissions": {
-            "command_name": "check_perms",
-            "command_description": "Patikrinkite, ar robotas gali veikti pateiktame kanale"
         },
         "roll": {
             "command_description": "Roll a dice."
         },
-        "afk": {
-            "command_description": "Check if a user is AFK."
-        },
-        "help": {
-            "command_name": "padėti",
-            "command_description": "Integruota roboto pagalba",
+        "say": {
+            "command_description": "Say something.",
             "params": {
-                "search": {
-                    "parameter_name": "paieška",
-                    "parameter_description": "Paieškos terminas"
+                "text": {
+                    "parameter_description": "tekstą",
+                    "parameter_name": "tekstą"
                 }
             }
         },
         "server_wiki": {
-            "command_name": "server_wiki",
             "command_description": "Vartotojo apibrėžtas serverio wiki",
+            "command_name": "server_wiki",
             "params": {
                 "search": {
-                    "parameter_name": "paieška",
-                    "parameter_description": "Paieškos terminas"
+                    "parameter_description": "Paieškos terminas",
+                    "parameter_name": "paieška"
                 }
             }
         },
+        "set": {
+            "command_description": "Set a proxy as the current one."
+        },
         "settings": {
-            "command_name": "nustatymus",
             "command_description": "Boto nustatymai",
+            "command_name": "nustatymus",
             "params": {
                 "menu": {
-                    "parameter_name": "meniu",
-                    "parameter_description": "Meniu, kad atidarytumėte nustatymus",
                     "choices": {
-                        "Server": "Serveris",
-                        "Member": "narys",
-                        "User": "Vartotojas"
+                        "Member": "Member",
+                        "Server": "Server",
+                        "User": "User"
+                    },
+                    "parameter_description": "Meniu, kad atidarytumėte nustatymus",
+                    "parameter_name": "meniu"
+                }
+            }
+        },
+        "shared": {
+            "group": {
+                "auto": {
+                    "command_description": "Nustatykite simbolio automatinį režimą",
+                    "command_name": "automatinis",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Simbolis, pagal numatytuosius nustatymus išjungia automatinį",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "avatar": {
+                    "command_description": "Nustatykite veikėjo avatarą",
+                    "command_name": "avataras",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Vaizdo URL, pagal numatytuosius nustatymus Nėra",
+                            "parameter_name": "avataras"
+                        },
+                        "proxy": {
+                            "parameter_description": "Simbolis, kuriam reikia nustatyti avatarą",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "birthday": {
+                    "command_description": "Nustatykite veikėjo gimtadienį",
+                    "command_name": "gimtadienis",
+                    "params": {
+                        "birthday": {
+                            "parameter_description": "Gimtadienis, pagal numatytuosius nustatymus Nėra",
+                            "parameter_name": "gimtadienis"
+                        },
+                        "proxy": {
+                            "parameter_description": "Simbolis, kuriam reikia nustatyti gimtadienį",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "color": {
+                    "command_description": "Set the color for a proxy."
+                },
+                "create": {
+                    "command_description": "Sukurkite naują personažą.",
+                    "command_name": "sukurti",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Vaizdas, pagal numatytuosius nustatymus Nėra",
+                            "parameter_name": "vaizdas"
+                        }
+                    }
+                },
+                "delete": {
+                    "command_description": "Ištrinkite simbolį",
+                    "command_name": "ištrinti",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Įgaliotasis serveris, iš kurio galima ištrinti variantą",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "description": {
+                    "command_description": "Nustatykite veikėjo aprašymą",
+                    "command_name": "apibūdinimas",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Simbolis, kuriam reikia nustatyti aprašą",
+                            "parameter_name": "proxy"
+                        },
+                        "text": {
+                            "parameter_description": "Aprašymas, kurį reikia nustatyti veikėjui",
+                            "parameter_name": "tekstą"
+                        }
+                    }
+                },
+                "detail": {
+                    "command_description": "Gaukite informacijos apie veikėją",
+                    "command_name": "detalė",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Išsamiau apie įgaliotąjį serverį. ",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "find": {
+                    "command_description": "Find a proxy."
+                },
+                "group": {
+                    "command_description": "Nustatykite grupę personažui",
+                    "command_name": "grupė",
+                    "params": {
+                        "group": {
+                            "parameter_description": "Grupė, pagal numatytuosius nustatymus Nėra",
+                            "parameter_name": "grupė"
+                        },
+                        "proxy": {
+                            "parameter_description": "Simbolis, kuriam reikia nustatyti grupę",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "image": {
+                    "command_description": "Set the image for a proxy.",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Vaizdo URL, pagal numatytuosius nustatymus Nėra",
+                            "parameter_name": "avataras"
+                        },
+                        "proxy": {
+                            "parameter_description": "Simbolis, kuriam reikia nustatyti avatarą",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "list": {
+                    "command_description": "List all proxies."
+                },
+                "local": {
+                    "command_description": "Nustatykite vietinį veikėją",
+                    "command_name": "vietinis",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Vaizdas, pagal numatytuosius nustatymus Nėra",
+                            "parameter_name": "vaizdas"
+                        },
+                        "nickname": {
+                            "parameter_description": "Slapyvardis, pagal numatytuosius nustatymus Nėra",
+                            "parameter_name": "slapyvardis"
+                        },
+                        "proxy": {
+                            "parameter_description": "Simbolis, kuriam reikia nustatyti vietinį",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "nickname": {
+                    "command_description": "Nustatykite veikėjo slapyvardį",
+                    "command_name": "slapyvardis",
+                    "params": {
+                        "nickname": {
+                            "parameter_description": "Slapyvardis, kurį reikia nustatyti personažui",
+                            "parameter_name": "slapyvardis"
+                        },
+                        "proxy": {
+                            "parameter_description": "Simbolis, kuriam reikia nustatyti slapyvardį",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "nsfw": {
+                    "command_description": "Nustatykite, ar simbolis yra NSFW",
+                    "command_name": "nsfw",
+                    "params": {
+                        "nsfw": {
+                            "parameter_description": "NSFW, pagal numatytuosius nustatymus perjunkite į priešingą reikšmę",
+                            "parameter_name": "nsfw"
+                        },
+                        "proxy": {
+                            "parameter_description": "Simbolis, kuriam reikia nustatyti NSFW",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "prefix": {
+                    "command_description": "Nustatykite simbolio priešdėlius.",
+                    "command_name": "priešdėlis",
+                    "params": {
+                        "prefixes": {
+                            "parameter_description": "Priešdėliai pvz. ",
+                            "parameter_name": "priešdėliai"
+                        },
+                        "proxy": {
+                            "parameter_description": "Simbolis, kuriam reikia nustatyti priešdėlį",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "prune": {
+                    "command_description": "Iškirpkite tam tikrą laiką nenaudotus simbolius.",
+                    "command_name": "slyva",
+                    "params": {
+                        "time": {
+                            "parameter_description": "Genėjimo data anksčiau, pagal numatytuosius nustatymus Nėra"
+                        }
+                    }
+                },
+                "purge": {
+                    "command_description": "Išvalykite visus savo duomenis (išskyrus pranešimų žurnalus)",
+                    "command_name": "valymas",
+                    "params": {
+                        "confirmation": {
+                            "parameter_description": "patvirtinimas",
+                            "parameter_name": "patvirtinimas"
+                        }
+                    }
+                },
+                "read": {
+                    "command_description": "Skaityti veikėją",
+                    "command_name": "skaityti",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Simbolis, iš kurio galima skaityti variantą",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "rename": {
+                    "command_description": "Pervardykite veikėją",
+                    "command_name": "pervadinti",
+                    "params": {
+                        "name": {
+                            "parameter_description": "Naujas veikėjo vardas",
+                            "parameter_name": "vardas"
+                        },
+                        "proxy": {
+                            "parameter_description": "Pervardyti veikėją",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "set": {
+                    "command_description": "Set a proxy as the current one."
+                },
+                "update": {
+                    "command_description": "Atnaujinkite tarpinį serverį. ",
+                    "command_name": "atnaujinti",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Vaizdas, pagal numatytuosius nustatymus Nėra",
+                            "parameter_name": "vaizdas"
+                        },
+                        "proxy": {
+                            "parameter_description": "Simbolis, kurį reikia atnaujinti",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "use": {
+                    "command_description": "Use a proxy."
+                }
+            },
+            "group_description": "Shared proxy commands."
+        },
+        "store": {
+            "params": {
+                "storage": {
+                    "choices": {
+                        "Global": "Global",
+                        "Local": "Local"
                     }
                 }
             }
         },
+        "update": {
+            "command_description": "Atnaujinkite tarpinį serverį. ",
+            "command_name": "atnaujinti",
+            "params": {
+                "image": {
+                    "parameter_description": "Vaizdas, pagal numatytuosius nustatymus Nėra",
+                    "parameter_name": "vaizdas"
+                },
+                "proxy": {
+                    "parameter_description": "Simbolis, kurį reikia atnaujinti",
+                    "parameter_name": "proxy"
+                }
+            }
+        },
+        "use": {
+            "command_description": "Use a proxy.",
+            "params": {
+                "text": {
+                    "parameter_description": "tekstą",
+                    "parameter_name": "tekstą"
+                }
+            }
+        },
+        "var": {
+            "group": {
+                "auto": {
+                    "command_description": "Nustatykite simbolio automatinį režimą",
+                    "command_name": "automatinis",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Simbolis, pagal numatytuosius nustatymus išjungia automatinį",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Variantas, kuriam nustatyti automatinį režimą",
+                            "parameter_name": "variantas"
+                        }
+                    }
+                },
+                "avatar": {
+                    "command_description": "Nustatykite veikėjo avatarą",
+                    "command_name": "avataras",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Vaizdo URL, pagal numatytuosius nustatymus Nėra",
+                            "parameter_name": "avataras"
+                        },
+                        "proxy": {
+                            "parameter_description": "Simbolis, kuriam reikia nustatyti avatarą",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Variantas, kuriam nustatyti avatarą",
+                            "parameter_name": "variantas"
+                        }
+                    }
+                },
+                "birthday": {
+                    "command_description": "Nustatykite veikėjo gimtadienį",
+                    "command_name": "gimtadienis",
+                    "params": {
+                        "birthday": {
+                            "parameter_description": "Gimtadienis, pagal numatytuosius nustatymus Nėra",
+                            "parameter_name": "gimtadienis"
+                        },
+                        "proxy": {
+                            "parameter_description": "Simbolis, kuriam reikia nustatyti gimtadienį",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Gimtadienio nustatymo variantas",
+                            "parameter_name": "variantas"
+                        }
+                    }
+                },
+                "color": {
+                    "command_description": "Change the color of a variant."
+                },
+                "create": {
+                    "command_description": "Sukurkite naują personažą.",
+                    "command_name": "sukurti",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Vaizdas, pagal numatytuosius nustatymus Nėra",
+                            "parameter_name": "vaizdas"
+                        },
+                        "prefixes": {
+                            "parameter_description": "Prefixes e.g. A:text, |text|, etc."
+                        },
+                        "proxy": {
+                            "parameter_description": " Įgaliotasis serveris, skirtas variantui sukurti",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "delete": {
+                    "command_description": "Ištrinkite veikėjo variantą",
+                    "command_name": "ištrinti",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Įgaliotasis serveris, iš kurio galima ištrinti variantą",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Variantas, kurį reikia ištrinti",
+                            "parameter_name": "variantas"
+                        }
+                    }
+                },
+                "description": {
+                    "command_description": "Nustatykite veikėjo aprašymą",
+                    "command_name": "apibūdinimas",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Simbolis, kuriam reikia nustatyti aprašą",
+                            "parameter_name": "proxy"
+                        },
+                        "text": {
+                            "parameter_description": "Aprašymas, kurį reikia nustatyti veikėjui",
+                            "parameter_name": "tekstą"
+                        },
+                        "variant": {
+                            "parameter_description": "Variantas, kurio aprašui nustatyti",
+                            "parameter_name": "variantas"
+                        }
+                    }
+                },
+                "detail": {
+                    "command_description": "Gaukite informacijos apie veikėją",
+                    "command_name": "detalė",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Išsamiau apie įgaliotąjį serverį. ",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Variantas iki smulkmenų",
+                            "parameter_name": "variantas"
+                        }
+                    }
+                },
+                "find": {
+                    "command_description": "Find a variant."
+                },
+                "group": {
+                    "command_description": "Nustatykite grupę personažui",
+                    "command_name": "grupė",
+                    "params": {
+                        "group": {
+                            "parameter_description": "Grupė, pagal numatytuosius nustatymus Nėra",
+                            "parameter_name": "grupė"
+                        },
+                        "proxy": {
+                            "parameter_description": "Simbolis, kuriam reikia nustatyti grupę",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Variantas, skirtas grupei nustatyti",
+                            "parameter_name": "variantas"
+                        }
+                    }
+                },
+                "list": {
+                    "command_description": "List all variants."
+                },
+                "local": {
+                    "command_description": "Nustatykite vietinį veikėją",
+                    "command_name": "vietinis",
+                    "params": {
+                        "avatar": {
+                            "parameter_description": "Vaizdas, pagal numatytuosius nustatymus Nėra",
+                            "parameter_name": "vaizdas"
+                        },
+                        "nickname": {
+                            "parameter_description": "Slapyvardis, pagal numatytuosius nustatymus Nėra",
+                            "parameter_name": "slapyvardis"
+                        },
+                        "proxy": {
+                            "parameter_description": "Simbolis, kuriam reikia nustatyti vietinį",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Variantas vietiniam nustatymui",
+                            "parameter_name": "variantas"
+                        }
+                    }
+                },
+                "nickname": {
+                    "command_description": "Nustatykite veikėjo slapyvardį",
+                    "command_name": "slapyvardis",
+                    "params": {
+                        "nickname": {
+                            "parameter_description": "Slapyvardis, kurį reikia nustatyti personažui",
+                            "parameter_name": "slapyvardis"
+                        },
+                        "proxy": {
+                            "parameter_description": "Simbolis, kuriam reikia nustatyti slapyvardį",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Variantas, kuriam reikia nustatyti slapyvardį",
+                            "parameter_name": "variantas"
+                        }
+                    }
+                },
+                "nsfw": {
+                    "command_description": "Nustatykite, ar simbolis yra NSFW",
+                    "command_name": "nsfw",
+                    "params": {
+                        "nsfw": {
+                            "parameter_description": "NSFW, pagal numatytuosius nustatymus perjunkite į priešingą reikšmę",
+                            "parameter_name": "nsfw"
+                        },
+                        "proxy": {
+                            "parameter_description": "Simbolis, kuriam reikia nustatyti NSFW",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Variantas, skirtas nustatyti NSFW",
+                            "parameter_name": "variantas"
+                        }
+                    }
+                },
+                "prefix": {
+                    "command_description": "Nustatykite simbolio priešdėlius.",
+                    "command_name": "priešdėlis",
+                    "params": {
+                        "prefixes": {
+                            "parameter_description": "Priešdėliai pvz. ",
+                            "parameter_name": "priešdėliai"
+                        },
+                        "proxy": {
+                            "parameter_description": "Simbolis, kuriam reikia nustatyti priešdėlį",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Variantas, skirtas nustatyti priešdėlį",
+                            "parameter_name": "variantas"
+                        }
+                    }
+                },
+                "prune": {
+                    "command_description": "Iškirpkite tam tikrą laiką nenaudotus simbolius.",
+                    "command_name": "slyva",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "proxy"
+                        },
+                        "time": {
+                            "parameter_description": "Genėjimo data anksčiau, pagal numatytuosius nustatymus Nėra"
+                        }
+                    }
+                },
+                "purge": {
+                    "command_description": "Išvalykite visus savo duomenis (išskyrus pranešimų žurnalus)",
+                    "command_name": "valymas",
+                    "params": {
+                        "confirmation": {
+                            "parameter_description": "patvirtinimas",
+                            "parameter_name": "patvirtinimas"
+                        },
+                        "proxy": {
+                            "parameter_description": "proxy",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "read": {
+                    "command_description": "Skaityti veikėją",
+                    "command_name": "skaityti",
+                    "params": {
+                        "proxy": {
+                            "parameter_description": "Simbolis, iš kurio galima skaityti variantą",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Variantas skaityti",
+                            "parameter_name": "variantas"
+                        }
+                    }
+                },
+                "rename": {
+                    "command_description": "Pervardykite veikėją",
+                    "command_name": "pervadinti",
+                    "params": {
+                        "name": {
+                            "parameter_description": "Naujas veikėjo vardas",
+                            "parameter_name": "vardas"
+                        },
+                        "proxy": {
+                            "parameter_description": "Pervardyti veikėją",
+                            "parameter_name": "proxy"
+                        },
+                        "variant": {
+                            "parameter_description": "Variantas pervadinti",
+                            "parameter_name": "variantas"
+                        }
+                    }
+                },
+                "set": {
+                    "command_description": "Set a variant."
+                },
+                "update": {
+                    "command_description": "Atnaujinkite tarpinį serverį. ",
+                    "command_name": "atnaujinti",
+                    "params": {
+                        "image": {
+                            "parameter_description": "Vaizdas, pagal numatytuosius nustatymus Nėra",
+                            "parameter_name": "vaizdas"
+                        },
+                        "proxy": {
+                            "parameter_description": "Simbolis, kurį reikia atnaujinti",
+                            "parameter_name": "proxy"
+                        }
+                    }
+                },
+                "use": {
+                    "command_description": "Use a variant."
+                }
+            },
+            "group_description": "Variant commands.",
+            "group_name": "var"
+        },
+        "variant-to-proxy": {
+            "command_description": "Konvertuoti variantą į simbolį",
+            "command_name": "variantas-į-tarpinį-serverį",
+            "params": {
+                "proxy": {
+                    "parameter_description": "Tarpinis serveris, į kurį reikia konvertuoti",
+                    "parameter_name": "proxy"
+                },
+                "variant": {
+                    "parameter_description": "Variantas konvertuoti",
+                    "parameter_name": "variantas"
+                }
+            }
+        }
+    },
+    "interactions": {
         "context_menu": {
             "command_name": "Proxy"
         }
