@@ -118,7 +118,7 @@
 			"name": "Ping",
 			"description": "Pings owner of the message.",
 			"entries": {
-				"pinged_by": "{{display_name}} (<@{{author_id}}>k, Ping by: <@{[user_id]}> !"
+				"pinged_by": "{{display_name}} (<@{{author_id}}> Ping by: <@{{user_id}}> !"
 			}
 		}
 	},
@@ -198,13 +198,12 @@
 				"description": "Here are the permissions you and I have in {{channel}}",
 				"permissions": "Permissions",
 				"perms": {
+					"attach_files": "This is needed to send files",
 					"embed_links": "This is needed to send embeds",
 					"external_emojis": "This is needed to use external emojis",
 					"manage_messages": "Needed to delete messages after they character and allow edits when a message didn't character.",
-
 					"manage_webhooks": "I need this to create webhooks in the channel.",
 					"read_message_history": "This is needed to edit/delete messages",
-
 					"send_messages": "If you or me can't send messages, my webhooks won't either.",
 					"send_messages_in_threads": "Same goes here, but for threads.",
 					"send_tts_messages": "This is needed to send TTS messages"
@@ -817,7 +816,8 @@
 					"title": "Settings",
 					"description": "Here you can view and change your settings.",
 					"reset": "Reset",
-					"close": "Back to Settings",
+					"close": "Close Menu",
+					"back": "Back to Settings",
 					"options": {
 						"member": "Member",
 						"server": "Server",
@@ -887,6 +887,10 @@
 							"tts": {
 								"title": "TTS",
 								"description": "Whether to use TTS for messages."
+							},
+							"typo_correction": {
+								"title": "Typo Correction",
+								"description": "Allows fixing typos when doing *text"
 							}
 						}
 					},
@@ -967,6 +971,11 @@
 								"description": "Whether NSFW proxies are allowed in this server."
 							}
 						}
+					},
+					"prefix": {
+						"title": "Prefix",
+						"label": "Commands prefix",
+						"description": "Set the prefix for this server."
 					}
 				}
 			}
