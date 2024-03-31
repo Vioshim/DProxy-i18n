@@ -734,8 +734,8 @@
 				}
 			},
 			"entries": {
-				"set": "Name set for {{proxy}}.",
-				"exists": "Name {{name}} already exists."
+				"set": "Name set for {{old}} to {{new}}.",
+				"exists": "Name {{proxy}} already exists."
 			}
 		},
 		"roll": {
