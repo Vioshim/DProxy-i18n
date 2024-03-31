@@ -59,7 +59,7 @@
 		},
 		"use": {
 			"title": "Send Message",
-			"text": "Text to send, can be embed, proxies or normal text.",
+			"text": "Text to send (embeds/proxies work)",
 			"sending": "Sending message..."
 		},
 		"detail": {
