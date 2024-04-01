@@ -7,7 +7,9 @@
 		"text": "text",
 		"last_message": "Last Message",
 		"prefixes": "Prefixes",
-		"notice": "Notice"
+		"notice": "Notice",
+		"page": "Page {{page}}",
+		"check_website": "Please check the website for more information."
 	},
 	"errors": {
 		"detail_error": "Sorry, there was an error with your command:\n{{error}}\n\nPlease check your input and try again.",
@@ -26,6 +28,7 @@
 		"no_last_message": "No last message found.",
 		"not_author": "You are not the author of this message.",
 		"not_found": "Message not found.",
+		"command_not_found": "Command not found: {{command}}",
 		"not_image": "File is not an image: {{file}}",
 		"prefix_already_used": "Prefix {{prefix}} is already used by: {{proxy}}",
 		"premium_only": "This is a premium feature. Please consider supporting the bot by donating and/or requesting access.",
