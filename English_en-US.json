@@ -620,7 +620,8 @@
 			"entries": {
 				"set": "NSFW tag is now set for {{proxy}}.",
 				"clear": "NSFW tag is now removed for {{proxy}}.",
-				"already": "NSFW tag is already set as {{nsfw}}."
+				"already_set": "NSFW tag is already set as True.",
+				"already_clear": "NSFW tag is already set as False"
 			}
 		},
 		"prefix": {
