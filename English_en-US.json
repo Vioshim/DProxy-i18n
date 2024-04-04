@@ -40,7 +40,7 @@
 		"unknown": "Something went wrong.",
 		"unknown_error": "Sorry, there was an unexpected error while processing your command. The development team has been notified.",
 		"url_error": "Error with URL: {{url}}",
-		"wrong_webhook": "Message can't be modified as webhook was deleted, re-adding the bot does this too."
+		"wrong_webhook": "Message can't be modified as webhook was deleted by discord. Feel free to delete and send a new message."
 	},
 	"modals": {
 		"proxy": {
