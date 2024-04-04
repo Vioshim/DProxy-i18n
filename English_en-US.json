@@ -365,6 +365,10 @@
 				"new_token": {
 					"parameter_description": "If you want to generate a new token, by default False",
 					"parameter_name": "new_token"
+				},
+				"local": {
+					"parameter_description": "Export local avatars and nicknames, by default True",
+					"parameter_name": "local"
 				}
 			},
 			"entries": {
@@ -1101,6 +1105,38 @@
 						}
 					}
 				},
+				"export": {
+					"command_description": "Export shared proxies to a JSON file",
+					"command_name": "export",
+					"params": {
+						"format": {
+							"choices": {
+								"Default": "Default",
+								"PluralKit": "PluralKit",
+								"Tupperbox": "Tupperbox"
+							},
+							"parameter_description": "Export Format, by default D-Proxy's",
+							"parameter_name": "format"
+						},
+						"new_token": {
+							"parameter_description": "If you want to generate a new token, by default False",
+							"parameter_name": "new_token"
+						},
+						"local": {
+							"parameter_description": "Export local avatars and nicknames, by default True",
+							"parameter_name": "local"
+						}
+					},
+					"entries": {
+						"exporting_title": "Exporting shared proxies...",
+						"exporting_description": "This may take a while depending on the number of proxies you have.",
+						"token": "Token",
+						"token_warning": "Keep this token safe, you won't be able to import your proxies without it.",
+						"invalid_token": "Invalid token.",
+						"import_own_proxies": "You can't import your own characters.",
+						"too_many_proxies": "You have too many characters, please delete some before importing."
+					}
+				},
 				"find": {
 					"command_description": "Find shared proxies by name.",
 					"command_name": "find",
@@ -1526,6 +1562,38 @@
 							"parameter_description": "Variant to detail",
 							"parameter_name": "variant"
 						}
+					}
+				},
+				"export": {
+					"command_description": "Export your proxy's variants to a JSON file",
+					"command_name": "export",
+					"params": {
+						"format": {
+							"choices": {
+								"Default": "Default",
+								"PluralKit": "PluralKit",
+								"Tupperbox": "Tupperbox"
+							},
+							"parameter_description": "Export Format, by default D-Proxy's",
+							"parameter_name": "format"
+						},
+						"new_token": {
+							"parameter_description": "If you want to generate a new token, by default False",
+							"parameter_name": "new_token"
+						},
+						"local": {
+							"parameter_description": "Export local avatars and nicknames, by default True",
+							"parameter_name": "local"
+						}
+					},
+					"entries": {
+						"exporting_title": "Exporting variants...",
+						"exporting_description": "This may take a while depending on the number of proxies you have.",
+						"token": "Token",
+						"token_warning": "Keep this token safe, you won't be able to import your proxies without it.",
+						"invalid_token": "Invalid token.",
+						"import_own_proxies": "You can't import your own characters.",
+						"too_many_proxies": "You have too many characters, please delete some before importing."
 					}
 				},
 				"find": {
