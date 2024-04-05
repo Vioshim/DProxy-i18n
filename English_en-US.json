@@ -1568,6 +1568,10 @@
 					"command_description": "Export your proxy's variants to a JSON file",
 					"command_name": "export",
 					"params": {
+						"proxy": {
+							"parameter_description": "Base proxy of the variant",
+							"parameter_name": "proxy"
+						},
 						"format": {
 							"choices": {
 								"Default": "Default",
