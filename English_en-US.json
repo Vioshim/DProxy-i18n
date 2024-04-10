@@ -146,9 +146,9 @@
 				}
 			},
 			"entries": {
-				"set": "Auto tag is now set for {{proxy}}.",
-				"clear": "Auto tag is now removed for {{proxy}}.",
-				"not_set": "Auto tag is not set in this channel."
+				"set": "Auto tag has been set for {{channel.mention}}.",
+				"clear": "Auto tag has been removed for {{channel.mention}}.",
+				"not_set": "Auto tag is not set for {{channel.mention}}."
 			}
 		},
 		"avatar": {
