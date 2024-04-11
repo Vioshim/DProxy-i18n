@@ -287,6 +287,26 @@
 				"proxy": {
 					"parameter_description": "Proxy to detail",
 					"parameter_name": "proxy"
+				},
+				"nickname": {
+					"parameter_description": "Nickname to set, by default None",
+					"parameter_name": "nickname"
+				},
+				"description": {
+					"parameter_description": "Description to set, by default None",
+					"parameter_name": "description"
+				},
+				"group": {
+					"parameter_description": "Group to set, by default None",
+					"parameter_name": "group"
+				},
+				"color": {
+					"parameter_description": "Color to set, by default None",
+					"parameter_name": "color"
+				},
+				"birthday": {
+					"parameter_description": "Birthday to set, by default None",
+					"parameter_name": "birthday"
 				}
 			}
 		},
@@ -1102,6 +1122,26 @@
 						"proxy": {
 							"parameter_description": "Proxy to detail",
 							"parameter_name": "proxy"
+						},
+						"nickname": {
+							"parameter_description": "Nickname to set, by default None",
+							"parameter_name": "nickname"
+						},
+						"description": {
+							"parameter_description": "Description to set, by default None",
+							"parameter_name": "description"
+						},
+						"group": {
+							"parameter_description": "Group to set, by default None",
+							"parameter_name": "group"
+						},
+						"color": {
+							"parameter_description": "Color to set, by default None",
+							"parameter_name": "color"
+						},
+						"birthday": {
+							"parameter_description": "Birthday to set, by default None",
+							"parameter_name": "birthday"
 						}
 					}
 				},
@@ -1336,6 +1376,14 @@
 						"url": {
 							"parameter_description": "Image URL to set, by default None",
 							"parameter_name": "url"
+						},
+						"name": {
+							"parameter_description": "Name to set, by default same",
+							"parameter_name": "name"
+						},
+						"prefixes": {
+							"parameter_description": "Prefixes to set, by default same",
+							"parameter_name": "prefixes"
 						}
 					}
 				},
@@ -1395,6 +1443,14 @@
 				"url": {
 					"parameter_description": "Image URL to set, by default None",
 					"parameter_name": "url"
+				},
+				"name": {
+					"parameter_description": "Name to set, by default same",
+					"parameter_name": "name"
+				},
+				"prefixes": {
+					"parameter_description": "Prefixes to set, by default same",
+					"parameter_name": "prefixes"
 				}
 			},
 			"entries": {
@@ -1561,6 +1617,26 @@
 						"variant": {
 							"parameter_description": "Variant to detail",
 							"parameter_name": "variant"
+						},
+						"nickname": {
+							"parameter_description": "Nickname to set, by default None",
+							"parameter_name": "nickname"
+						},
+						"description": {
+							"parameter_description": "Description to set, by default None",
+							"parameter_name": "description"
+						},
+						"group": {
+							"parameter_description": "Group to set, by default None",
+							"parameter_name": "group"
+						},
+						"color": {
+							"parameter_description": "Color to set, by default None",
+							"parameter_name": "color"
+						},
+						"birthday": {
+							"parameter_description": "Birthday to set, by default None",
+							"parameter_name": "birthday"
 						}
 					}
 				},
@@ -1808,16 +1884,32 @@
 					}
 				},
 				"update": {
-					"command_description": "desc",
+					"command_description": "Update a proxy. Old way of updating proxies.",
 					"command_name": "update",
 					"params": {
+						"proxy": {
+							"parameter_description": "Base proxy of the variant",
+							"parameter_name": "proxy"
+						},
+						"variant": {
+							"parameter_description": "Variant to update",
+							"parameter_name": "variant"
+						},
 						"image": {
-							"parameter_description": "image_desc",
+							"parameter_description": " Image to set, by default None",
 							"parameter_name": "image"
 						},
-						"proxy": {
-							"parameter_description": "proxy_desc",
-							"parameter_name": "proxy"
+						"url": {
+							"parameter_description": "Image URL to set, by default None",
+							"parameter_name": "url"
+						},
+						"name": {
+							"parameter_description": "Name to set, by default same",
+							"parameter_name": "name"
+						},
+						"prefixes": {
+							"parameter_description": "Prefixes to set, by default same",
+							"parameter_name": "prefixes"
 						}
 					}
 				},
