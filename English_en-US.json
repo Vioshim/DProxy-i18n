@@ -1,2082 +1,10 @@
 {
-	"common": {
-		"jump_url": "Jump URL",
-		"narrator": "Narrator",
-		"none": "None",
-		"success": "Success",
-		"text": "text",
-		"last_message": "Last Message",
-		"prefixes": "Prefixes",
-		"notice": "Notice",
-		"page": "Page {{page}}",
-		"check_website": "Please check the website for more information."
-	},
-	"errors": {
-		"detail_error": "Sorry, there was an error with your command:\n{{error}}\n\nPlease check your input and try again.",
-		"disabled": "Disabled command.",
-		"error": "⚠️ Error - {{error}}",
-		"forbidden": "I don't have permissions to messages here.",
-		"group_not_found": "Group not found: {{group}}",
-		"guild_not_found": "Server not found.",
-		"guild_only": "This can only be used in a server.",
-		"import_own_proxies": "You can't import your own characters.",
-		"invalid_date": "Invalid date: {{date}}",
-		"invalid_file_type": "Invalid file type, expected: {{type}}",
-		"invalid_token": "Invalid token.",
-		"missing_permissions": "You don't have the required permissions to do this",
-		"no_birthday_set": "No birthday set.",
-		"no_last_message": "No last message found.",
-		"not_author": "You are not the author of this message.",
-		"not_found": "Message not found.",
-		"command_not_found": "Command not found: {{command}}",
-		"not_image": "File is not an image: {{file}}",
-		"prefix_already_used": "Prefix {{prefix}} is already used by: {{proxy}}",
-		"premium_only": "This is a premium feature. Please consider supporting the bot by donating and/or requesting access.",
-		"proxy_not_found": "Character not found: {{proxy}}",
-		"ratelimit": "Ratelimitted: {{time}}.",
-		"timeout": "⚠️ Timed out.",
-		"too_many_proxies": "You have too many characters, please delete some before importing.",
-		"unexpected_error": "⚠️ Unexpected error - {{error}}",
-		"unknown": "Something went wrong.",
-		"unknown_error": "Sorry, there was an unexpected error while processing your command. The development team has been notified.",
-		"url_error": "Error with URL: {{url}}",
-		"wrong_webhook": "Message can't be modified as webhook was deleted by discord. Feel free to delete and send a new message."
-	},
-	"modals": {
-		"proxy": {
-			"title": "Set-up Proxy",
-			"text": "text",
-			"name": "Name",
-			"prefixes": "Prefixes",
-			"nickname": "Nickname",
-			"image_url": "Image URL",
-			"repeat_title": "Repeat",
-			"repeat_description": "It seems like you've already set up a proxy with this name. Would you like to set up another one?",
-			"deleted_count": "Deleted {{count}} proxies."
-		},
-		"store": {
-			"title": "Send Message",
-			"text": "Text to send",
-			"stored_title": "Message stored in database.",
-			"stored_description": "Now release the message using /send. Using /store lets you edit it at any moment, disappears when sent."
-		},
-		"use": {
-			"title": "Send Message",
-			"text": "Text to send (embeds/proxies work)",
-			"sending": "Sending message..."
-		},
-		"detail": {
-			"title": "Detail your Proxy",
-			"nickname": "Nickname",
-			"description": "Description",
-			"birthday": "Birthday",
-			"group": "Group",
-			"color": "Color"
-		},
-		"message": {
-			"title": "Edit Proxy Message",
-			"text": {
-				"label": "Edit Message (Empty : Delete)",
-				"placeholder": "Alright, this message will be deleted afterwards if no embed is provided."
-			},
-			"embed": {
-				"label": "Embed Flags or JSON",
-				"placeholder": "Read more about embeds at our website"
-			}
-		},
-		"prefix": {
-			"title": "Set prefix for commands",
-			"set": "Prefix in server is now set to {{prefix}}.",
-			"range": "Prefix range is from {{min}} to {{max}} characters.",
-			"default": "Prefix is now set to default."
-		}
-	},
-	"reactions": {
-		"delete": {
-			"name": "Delete",
-			"description": "Deletes a message.",
-			"entries": {}
-		},
-		"edit": {
-			"name": "Edit",
-			"description": "Edits a message.",
-			"entries": {
-				"previous_message": "Previous message",
-				"respond_this": "Respond to this message with the new message.",
-				"webhook_changed": "Webhook changed, re-adding the bot does this too.",
-				"message_deleted": "The message was deleted.",
-				"done": "Message has been edited."
-			}
-		},
-		"check": {
-			"name": "Check",
-			"description": "Checks a message.",
-			"entries": {
-				"sent_by": "Sent by <@{{user.id}}> ({{user}} - ID: {{user.id}})",
-				"sent_by_deleted": "Sent by a deleted user (ID: {{user.id}})",
-				"no_info": "No information associated with the message."
-			}
-		},
-		"ping": {
-			"name": "Ping",
-			"description": "Pings owner of the message.",
-			"entries": {
-				"pinged_by": "{{display_name}} (<@{{author_id}}> Ping by: <@{{user_id}}> !"
-			}
-		}
-	},
-	"commands": {
-		"afk": {
-			"command_description": "Check if a user is AFK.",
-			"command_name": "afk",
-			"params": {
-				"user": {
-					"parameter_description": "User, by default you",
-					"parameter_name": "user"
-				}
-			}
-		},
-		"auto": {
-			"command_description": "Set the auto for a proxy.",
-			"command_name": "auto",
-			"params": {
-				"proxy": {
-					"parameter_description": "Proxy to set the auto tag for, by default None",
-					"parameter_name": "proxy"
-				}
-			},
-			"entries": {
-				"set": "Auto tag has been set for {{channel.mention}}.",
-				"clear": "Auto tag has been removed for {{channel.mention}}.",
-				"not_set": "Auto tag is not set for {{channel.mention}}."
-			}
-		},
-		"avatar": {
-			"command_description": "Show or set the avatar for a proxy.",
-			"command_name": "avatar",
-			"params": {
-				"avatar": {
-					"parameter_description": "Image to set, by default shows current",
-					"parameter_name": "avatar"
-				},
-				"proxy": {
-					"parameter_description": "Proxy to set the avatar for",
-					"parameter_name": "proxy"
-				},
-				"url": {
-					"parameter_description": "URL to set, by default shows current",
-					"parameter_name": "url"
-				}
-			},
-			"entries": {
-				"set": "Avatar set for {{proxy}}.",
-				"not_set": "Avatar not set for {{proxy}}.",
-				"no_nsfw": "NSFW avatars are not allowed in this channel."
-			}
-		},
-		"birthday": {
-			"command_description": "Set the birthday for a proxy.",
-			"command_name": "birthday",
-			"params": {
-				"birthday": {
-					"parameter_description": "Birthday to set, by default None",
-					"parameter_name": "birthday"
-				},
-				"proxy": {
-					"parameter_description": "Proxy to set the birthday for",
-					"parameter_name": "proxy"
-				}
-			},
-			"entries": {
-				"set": "Birthday set as {{birthday}} for {{proxy}}.",
-				"clear": "Birthday cleared for {{proxy}}."
-			}
-		},
-		"check_permissions": {
-			"command_description": "Check if bot can operate in the provided channel",
-			"command_name": "check_permissions",
-			"entries": {
-				"attach_files": "This is needed to send files",
-				"bot": "Bot",
-				"description": "Here are the permissions you and I have in {{channel}}",
-				"permissions": "Permissions",
-				"perms": {
-					"attach_files": "This is needed to send files",
-					"embed_links": "This is needed to send embeds",
-					"external_emojis": "This is needed to use external emojis",
-					"manage_messages": "Needed to delete messages after they character and allow edits when a message didn't character.",
-					"manage_webhooks": "I need this to create webhooks in the channel.",
-					"read_message_history": "This is needed to edit/delete messages",
-					"send_messages": "If you or me can't send messages, my webhooks won't either.",
-					"send_messages_in_threads": "Same goes here, but for threads.",
-					"send_tts_messages": "This is needed to send TTS messages"
-				},
-				"user": "User"
-			}
-		},
-		"color": {
-			"command_description": "Set a color for a proxy.",
-			"command_name": "color",
-			"params": {
-				"color": {
-					"parameter_description": "Color to set, by default None",
-					"parameter_name": "color"
-				},
-				"proxy": {
-					"parameter_description": "Proxy to set the color for",
-					"parameter_name": "proxy"
-				}
-			}
-		},
-		"create": {
-			"command_description": "Create a new proxy.",
-			"command_name": "create",
-			"params": {
-				"image": {
-					"parameter_description": "Image, by default None",
-					"parameter_name": "image"
-				},
-				"name": {
-					"parameter_description": "Name of the proxy",
-					"parameter_name": "name"
-				},
-				"prefixes": {
-					"parameter_description": "Prefixes e.g. A:text, |text|, etc.",
-					"parameter_name": "prefixes"
-				},
-				"url": {
-					"parameter_description": "Image URL, by default None",
-					"parameter_name": "url"
-				}
-			},
-			"entries": {
-				"size": "Character image size cannot be more than {{size}}, use a server with higher limits."
-			}
-		},
-		"delete": {
-			"command_description": "Delete a proxy.",
-			"command_name": "delete",
-			"params": {
-				"proxy": {
-					"parameter_description": "Proxy to delete",
-					"parameter_name": "proxy"
-				}
-			},
-			"entries": {
-				"count": "Deleted {{count}} proxies."
-			}
-		},
-		"description": {
-			"command_description": "Set the description for a proxy.",
-			"command_name": "description",
-			"params": {
-				"proxy": {
-					"parameter_description": "Proxy to set the description for",
-					"parameter_name": "proxy"
-				},
-				"text": {
-					"parameter_description": "Description to set, by default None",
-					"parameter_name": "text"
-				}
-			}
-		},
-		"detail": {
-			"command_description": "Detail a proxy. Old way of editing proxies.",
-			"command_name": "detail",
-			"params": {
-				"proxy": {
-					"parameter_description": "Proxy to detail",
-					"parameter_name": "proxy"
-				},
-				"nickname": {
-					"parameter_description": "Nickname to set, by default None",
-					"parameter_name": "nickname"
-				},
-				"description": {
-					"parameter_description": "Description to set, by default None",
-					"parameter_name": "description"
-				},
-				"group": {
-					"parameter_description": "Group to set, by default None",
-					"parameter_name": "group"
-				},
-				"color": {
-					"parameter_description": "Color to set, by default None",
-					"parameter_name": "color"
-				},
-				"birthday": {
-					"parameter_description": "Birthday to set, by default None",
-					"parameter_name": "birthday"
-				}
-			}
-		},
-		"edit": {
-			"group_description": "Edit a proxy message",
-			"group_name": "edit",
-			"groups": {
-				"embed": {
-					"command_description": "Edit the embed of a proxy message.",
-					"command_name": "embed",
-					"params": {
-						"proxy": {
-							"parameter_description": "Proxy to edit",
-							"parameter_name": "proxy"
-						},
-						"embed": {
-							"parameter_description": "Embed to edit",
-							"parameter_name": "embed"
-						}
-					},
-					"entries": {
-						"not_associated": "This message is not associated with your account.",
-						"not_found": "No proxy usage in this message.",
-						"not_same_channel": "This message is not in the same channel as this command.",
-						"not_proxy_message": "This message is not a proxy message, can't edit."
-					}
-				}
-			},
-			"params": {
-				"proxy": {
-					"parameter_description": "Proxy to edit",
-					"parameter_name": "proxy"
-				},
-				"message": {
-					"parameter_description": "Message to edit",
-					"parameter_name": "message"
-				}
-			},
-			"entries": {
-				"not_associated": "This message is not associated with your account.",
-				"not_found": "No proxy usage in this message.",
-				"not_same_channel": "This message is not in the same channel as this command.",
-				"not_proxy_message": "This message is not a proxy message, can't edit."
-			}
-		},
-		"exec": {
-			"command_description": "Execute an inline command.",
-			"command_name": "exec",
-			"params": {
-				"command": {
-					"parameter_description": "Command to execute",
-					"parameter_name": "command"
-				},
-				"text": {
-					"parameter_description": "Text to execute the command in",
-					"parameter_name": "text"
-				}
-			},
-			"entries": {
-				"command_not_found": "Command not found: {{command}}"
-			}
-		},
-		"export": {
-			"command_description": "Export your proxies to a JSON file",
-			"command_name": "export",
-			"params": {
-				"format": {
-					"choices": {
-						"Default": "Default",
-						"PluralKit": "PluralKit",
-						"Tupperbox": "Tupperbox"
-					},
-					"parameter_description": "Export Format, by default D-Proxy's",
-					"parameter_name": "format"
-				},
-				"new_token": {
-					"parameter_description": "If you want to generate a new token, by default False",
-					"parameter_name": "new_token"
-				},
-				"local": {
-					"parameter_description": "Export local avatars and nicknames, by default True",
-					"parameter_name": "local"
-				}
-			},
-			"entries": {
-				"exporting_title": "Exporting proxies...",
-				"exporting_description": "This may take a while depending on the number of proxies you have.",
-				"token": "Token",
-				"token_warning": "Keep this token safe, you won't be able to import your proxies without it.",
-				"invalid_token": "Invalid token.",
-				"import_own_proxies": "You can't import your own characters.",
-				"too_many_proxies": "You have too many characters, please delete some before importing."
-			}
-		},
-		"find": {
-			"command_description": "Find proxies by name.",
-			"command_name": "find",
-			"params": {
-				"text": {
-					"parameter_description": "Text to search for",
-					"parameter_name": "text"
-				}
-			}
-		},
-		"group": {
-			"command_description": "Set the group for a proxy.",
-			"command_name": "group",
-			"params": {
-				"group": {
-					"parameter_description": "Group to set, by default None",
-					"parameter_name": "group"
-				},
-				"proxy": {
-					"parameter_description": "Proxy to set the group for",
-					"parameter_name": "proxy"
-				}
-			},
-			"entries": {
-				"set": "Group set as {{group}} for {{proxy}}.",
-				"clear": "Group cleared for {{proxy}}."
-			}
-		},
-		"help": {
-			"command_description": "Show the help page.",
-			"command_name": "help",
-			"params": {
-				"search": {
-					"parameter_description": "Search query, by default None",
-					"parameter_name": "search"
-				}
-			},
-			"entries": {
-				"amount_pages": "Entry has {{amount}} pages.",
-				"search_results": "Search results for {{search}}:",
-				"select_placeholder": "Select a page to view",
-				"edit_placeholder": "Edit options in the dropdown",
-				"new_title": "This page has no information yet",
-				"new_description": "You can help by adding information to this page.",
-				"options": {
-					"edit": {
-						"label": "Edit",
-						"description": "Edit the current page"
-					},
-					"delete": {
-						"label": "Delete",
-						"description": "Delete the current page"
-					},
-					"new": {
-						"label": "New Page",
-						"description": "Create a new page"
-					},
-					"new_sub_page": {
-						"label": "New Sub Page",
-						"description": "Create a new sub page"
-					},
-					"refresh": {
-						"label": "Refresh",
-						"description": "Refresh the current page"
-					}
-				}
-			}
-		},
-		"import": {
-			"command_description": "Import proxies from a file or token",
-			"command_name": "import",
-			"params": {
-				"data": {
-					"parameter_description": "File to import from",
-					"parameter_name": "data"
-				},
-				"deleting_from_token": {
-					"parameter_description": "Delete from token after import",
-					"parameter_name": "deleting_from_token"
-				},
-				"token": {
-					"parameter_description": "Token to import from",
-					"parameter_name": "token"
-				},
-				"url": {
-					"parameter_description": "URL to import from",
-					"parameter_name": "url"
-				}
-			},
-			"entries": {
-				"not_json_file_type": "File is not a JSON file.",
-				"importing_title": "Importing proxies...",
-				"nothing_new": "No new proxies to import, you brought {{count}} proxies",
-				"too_many_import": "Too many characters to import, please use a smaller file.",
-				"succesful_title": "Succesful import",
-				"succesful_import": "Succesfully imported {{count}} proxies."
-			}
-		},
-		"latch": {
-			"command_description": "Enable or disable latch mode.",
-			"command_name": "latch",
-			"params": {
-				"auto_remove": {
-					"parameter_description": "Whether to keep the auto for current channel or not, by default True",
-					"parameter_name": "auto_remove"
-				},
-				"enable": {
-					"parameter_description": "Whether to enable or disable latch mode",
-					"parameter_name": "enable"
-				}
-			},
-			"entries": {
-				"enabled": "Latch mode is now enabled.",
-				"disabled": "Latch mode is now disabled."
-			}
-		},
-		"list": {
-			"command_description": "List all proxies.",
-			"command_name": "list",
-			"params": {
-				"group": {
-					"parameter_description": "Group to list proxies from, by default None",
-					"parameter_name": "group"
-				}
-			}
-		},
-		"local": {
-			"command_description": "Set a local avatar and nickname for a proxy.",
-			"command_name": "local",
-			"params": {
-				"avatar": {
-					"parameter_description": "Image to set, by default shows current",
-					"parameter_name": "image"
-				},
-				"nickname": {
-					"parameter_description": "Nickname to set, by default None",
-					"parameter_name": "nickname"
-				},
-				"proxy": {
-					"parameter_description": "Proxy to set the local avatar and nickname for",
-					"parameter_name": "proxy"
-				},
-				"url": {
-					"parameter_description": "Image URL to set, by default None",
-					"parameter_name": "url"
-				}
-			},
-			"entries": {
-				"set": "Local avatar and nickname set for {{proxy}}.",
-				"remove": "Local avatar and nickname removed for {{proxy}}."
-			}
-		},
-		"nickname": {
-			"command_description": "Set a nickname for a proxy.",
-			"command_name": "nickname",
-			"params": {
-				"nickname": {
-					"parameter_description": "Nickname, by default None",
-					"parameter_name": "nickname"
-				},
-				"proxy": {
-					"parameter_description": "Proxy to set the nickname for",
-					"parameter_name": "proxy"
-				}
-			},
-			"extras": {
-				"set": "Nickname set for {{proxy}} to {{nickname}}.",
-				"remove": "Nickname removed for {{proxy}}."
-			}
-		},
-		"npc": {
-			"command_description": "Create a NPC message using a slash command.",
-			"command_name": "npc",
-			"params": {
-				"emotion": {
-					"choices": {
-						"Angry": "Angry",
-						"Crying": "Crying",
-						"Determined": "Determined",
-						"Dizzy": "Dizzy",
-						"Happy": "Happy",
-						"Inspired": "Inspired",
-						"Joyous": "Joyous",
-						"Normal": "Normal",
-						"Pain": "Pain",
-						"Sad": "Sad",
-						"Shouting": "Shouting",
-						"Sigh": "Sigh",
-						"Special0": "Special0",
-						"Special1": "Special1",
-						"Special2": "Special2",
-						"Special3": "Special3",
-						"Stunned": "Stunned",
-						"Surprised": "Surprised",
-						"TearyEyed": "Teary-Eyed",
-						"Worried": "Worried"
-					},
-					"parameter_description": "Emotion to use, by default None",
-					"parameter_name": "emotion"
-				},
-				"franchise": {
-					"choices": {
-						"D&D": "D&D",
-						"Digimon": "Digimon",
-						"Palworld": "Palworld",
-						"Pokemon": "Pokemon",
-						"Pokemon Shiny": "Pokemon Shiny",
-						"Trainer": "Trainer"
-					},
-					"parameter_description": "Franchise to use for the NPC",
-					"parameter_name": "franchise"
-				},
-				"image": {
-					"parameter_description": "Image to use, by default None",
-					"parameter_name": "image"
-				},
-				"nickname": {
-					"parameter_description": "Nickname to use, by default same as NPC name",
-					"parameter_name": "nickname"
-				},
-				"npc": {
-					"parameter_description": "NPC to use, by default None",
-					"parameter_name": "npc"
-				},
-				"text": {
-					"parameter_description": "Text to use, by default Empty string",
-					"parameter_name": "text"
-				}
-			}
-		},
-		"nsfw": {
-			"command_description": "Set the nsfw for a proxy.",
-			"command_name": "nsfw",
-			"params": {
-				"nsfw": {
-					"parameter_description": "NSFW, by default reverse current",
-					"parameter_name": "nsfw"
-				},
-				"proxy": {
-					"parameter_description": "Proxy to set the nsfw tag for",
-					"parameter_name": "proxy"
-				}
-			},
-			"entries": {
-				"set": "NSFW tag is now set for {{proxy}}.",
-				"clear": "NSFW tag is now removed for {{proxy}}.",
-				"already_set": "NSFW tag is already set as True.",
-				"already_clear": "NSFW tag is already set as False"
-			}
-		},
-		"prefix": {
-			"command_description": "Set the prefixes for a proxy.",
-			"command_name": "prefix",
-			"params": {
-				"prefixes": {
-					"parameter_description": "Prefixes e.g. A:text, |text|, etc. by default None",
-					"parameter_name": "prefixes"
-				},
-				"proxy": {
-					"parameter_description": "Proxy to set the prefixes for",
-					"parameter_name": "proxy"
-				}
-			},
-			"entries": {
-				"text": "text",
-				"set": "Prefixes set for {{proxy}}."
-			}
-		},
-		"proxy": {
-			"command_description": "Disable proxies in a server",
-			"command_name": "proxy",
-			"params": {
-				"enable": {
-					"parameter_description": "Enable or disable proxies, by default switches",
-					"parameter_name": "enable"
-				}
-			},
-			"entries": {
-				"True": "Proxies are now enabled in this server.",
-				"False": "Proxies are now disabled in this server."
-			}
-		},
-		"proxy-to-shared": {
-			"command_description": "Convert a proxy to a shared one.",
-			"command_name": "proxy-to-shared",
-			"params": {
-				"proxy": {
-					"parameter_description": "Proxy to convert to shared",
-					"parameter_name": "proxy"
-				}
-			}
-		},
-		"proxy-to-variant": {
-			"command_description": "Convert a proxy to a variant of another proxy.",
-			"command_name": "proxy-to-variant",
-			"params": {
-				"base": {
-					"parameter_description": "Base Proxy",
-					"parameter_name": "base"
-				},
-				"original": {
-					"parameter_description": "Original Proxy",
-					"parameter_name": "original"
-				}
-			},
-			"entries": {
-				"already_variant": "Proxy is already a variant.",
-				"set": "Proxy is now a variant of {{base}}."
-			}
-		},
-		"prune": {
-			"command_description": "Prune proxies unused for a certain time.",
-			"command_name": "prune",
-			"params": {
-				"before": {
-					"parameter_description": "Date to prune before, by default None",
-					"parameter_name": "before"
-				}
-			},
-			"entries": {
-				"pruned": "Pruned {{count}} proxies."
-			}
-		},
-		"purge": {
-			"command_description": "Purge all of your data (except message logs)",
-			"command_name": "purge",
-			"params": {
-				"confirmation": {
-					"parameter_description": "Confirmation, by default False",
-					"parameter_name": "confirmation"
-				}
-			},
-			"entries": {
-				"not_confirmed": "You need to confirm this action by setting the confirmation parameter to True.",
-				"done": "Deleted all of your data except message logs."
-			}
-		},
-		"read": {
-			"command_description": "Read a proxy's information.",
-			"command_name": "read",
-			"params": {
-				"proxy": {
-					"parameter_description": "Proxy to read from",
-					"parameter_name": "proxy"
-				}
-			}
-		},
-		"rename": {
-			"command_description": "Set the name for a proxy.",
-			"command_name": "rename",
-			"params": {
-				"name": {
-					"parameter_description": "Name to set",
-					"parameter_name": "name"
-				},
-				"proxy": {
-					"parameter_description": "Proxy to set the name for",
-					"parameter_name": "proxy"
-				}
-			},
-			"entries": {
-				"set": "Name set for {{old}} to {{new}}.",
-				"exists": "Name {{proxy}} already exists."
-			}
-		},
-		"roll": {
-			"command_description": "Roll a dice.",
-			"command_name": "roll",
-			"params": {
-				"expression": {
-					"parameter_description": "Dice expression, such as 1d20",
-					"parameter_name": "expression"
-				}
-			},
-			"entries": {
-				"title": "Rolling {{expression}}",
-				"long_expression": "Rolling expression",
-				"invalid_expression": "Invalid expression, please use a valid one."
-			}
-		},
-		"say": {
-			"command_description": "Say something.",
-			"command_name": "say",
-			"params": {
-				"text": {
-					"parameter_description": "Text to say",
-					"parameter_name": "text"
-				}
-			},
-			"entries": {
-				"no_proxy_set": "No proxy set, please use /use or /set to set one."
-			}
-		},
-		"set": {
-			"command_description": "Set a proxy as the current one.",
-			"command_name": "set",
-			"params": {
-				"proxy": {
-					"parameter_description": "Proxy to set",
-					"parameter_name": "proxy"
-				}
-			}
-		},
-		"send": {
-			"command_description": "Send a stored message.",
-			"command_name": "send",
-			"params": {
-				"storage": {
-					"parameter_description": "From global storage or local, by default local",
-					"parameter_name": "storage",
-					"choices": {
-						"Global": "Global",
-						"Local": "Local"
-					}
-				},
-				"attachment": {
-					"parameter_description": "Attachment to send, by default None",
-					"parameter_name": "attachment"
-				}
-			},
-			"entries": {
-				"no_message": "No message stored, use /store to store one."
-			}
-		},
-		"settings": {
-			"command_description": "Show the settings page.",
-			"command_name": "settings",
-			"params": {
-				"menu": {
-					"choices": {
-						"Member": "Member",
-						"Server": "Server",
-						"User": "User"
-					},
-					"parameter_description": "Menu choice, by default None",
-					"parameter_name": "menu"
-				}
-			},
-			"entries": {
-				"base": {
-					"title": "Settings",
-					"description": "Here you can view and change your settings.",
-					"reset": "Reset",
-					"close": "Close Menu",
-					"back": "Back to Settings",
-					"options": {
-						"member": "Member",
-						"server": "Server",
-						"user": "User"
-					}
-				},
-				"user": {
-					"title": "User Settings",
-					"description": "For your account's settings.",
-					"time": {
-						"format": "%I:%M %p",
-						"title": "Time",
-						"updated": "Clock updated to GMT {{time:+}}",
-						"reset": "Removed time zone."
-					},
-					"user_settings": {
-						"label": "User Settings",
-						"options": {
-							"allow_non_nitro_emojis": {
-								"title": "Allow Non-Nitro Emojis",
-								"description": "Allows the bot to use non-nitro emojis."
-							},
-							"break_long_words": {
-								"title": "Break Long Words",
-								"description": "Breaks long words to fit in a message."
-							},
-							"break_on_hyphens": {
-								"title": "Break on Hyphens",
-								"description": "Breaks on hyphens to fit in a message."
-							},
-							"celebrate_birthday": {
-								"title": "Celebrate Birthday",
-								"description": "Whether to celebrate your birthday."
-							},
-							"drop_whitespace": {
-								"title": "Drop Whitespace",
-								"description": "Drops whitespace at the end of a message."
-							},
-							"embeds_in_json": {
-								"title": "Embeds in JSON",
-								"description": "Whether to send embeds in JSON format."
-							},
-							"fix_sentence_endings": {
-								"title": "Fix Sentence Endings",
-								"description": "Fixes sentence endings to have a period."
-							},
-							"patch_nitro_emojis": {
-								"title": "Patch Nitro Emojis",
-								"description": "Patches nitro emojis to be usable by the bot."
-							},
-							"patch_stickers": {
-								"title": "Patch Stickers",
-								"description": "Patches stickers to be usable by the bot."
-							},
-							"modern_replies": {
-								"title": "Modern Replies",
-								"description": "Whether to use modern replies."
-							},
-							"replace_whitespace": {
-								"title": "Replace Whitespace",
-								"description": "Replaces whitespace with a space."
-							},
-							"silent_mode": {
-								"title": "Silent Mode",
-								"description": "Whether to send messages silently."
-							},
-							"tts": {
-								"title": "TTS",
-								"description": "Whether to use TTS for messages."
-							},
-							"typo_correction": {
-								"title": "Typo Correction",
-								"description": "Allows fixing typos when doing *text"
-							}
-						}
-					},
-					"afk_schedule": {
-						"title": "AFK Schedule",
-						"description": "Set your AFK schedule.",
-						"format": "%I:00 %p",
-						"range_format": "From %I:00 %p to %I:59 %p",
-						"recently_disabled": "Recently Disabled AFK Schedule",
-						"recently_enabled": "Recently Enabled AFK Schedule"
-					}
-				},
-				"member": {
-					"title": "Member Settings",
-					"description": "For your account in this server.",
-					"member_settings": {
-						"label": "Member Settings",
-						"options": {
-							"disabled_guild": {
-								"title": "Disable in server",
-								"description": "Disable the bot in this server."
-							},
-							"latch_mode": {
-								"title": "Latch Mode (Auto-remove auto tag)",
-								"description": "Whether to remove the auto tag after sending a message."
-							}
-						}
-					},
-					"disable_channels": {
-						"title": "Disabled Channels",
-						"description": "Channels where the bot is disabled.",
-						"format": "{{channel.mention}} ({{channel.name}} - ID: {{channel.id}})",
-						"recently_disabled": "Recently Disabled Channels",
-						"recently_enabled": "Recently Enabled Channels"
-					},
-					"disable_categories": {
-						"title": "Disabled Categories",
-						"description": "Categories where the bot is disabled.",
-						"format": "{{category.mention}} ({{category.name}} - ID: {{category.id}})",
-						"recently_disabled": "Recently Disabled Categories",
-						"recently_enabled": "Recently Enabled Categories"
-					}
-				},
-				"server": {
-					"title": "Server Settings",
-					"description": "Settings for this server.",
-					"ban_roles": {
-						"title": "Banned Roles",
-						"label": "Banned Roles (Select again to unban)",
-						"format": "{{role.mention}} ({{role.name}} - ID: {{role.id}})",
-						"recently_banned": "Recently Banned Roles",
-						"recently_unbanned": "Recently Unbanned Roles"
-					},
-					"ban_users": {
-						"title": "Banned Users",
-						"label": "Banned Users (Select again to unban)",
-						"format": "{{m.mention}} ({{m.name}} - ID: {{m.id}})",
-						"recently_banned": "Recently Banned Users",
-						"recently_unbanned": "Recently Unbanned Users"
-					},
-					"enabled_commands": {
-						"label": "Enabled Commands",
-						"options": {
-							"allow_non_nitro_emojis": {
-								"title": "Allow Non-Nitro Emojis",
-								"description": "Allows the bot to use non-nitro emojis."
-							},
-							"patch_nitro_emojis": {
-								"title": "Patch Nitro Emojis",
-								"description": "Patches nitro emojis to be usable by the bot."
-							},
-							"patch_stickers": {
-								"title": "Patch Stickers",
-								"description": "Patches stickers to be usable by the bot."
-							},
-							"nsfw": {
-								"title": "NSFW",
-								"description": "Whether NSFW proxies are allowed in this server."
-							}
-						}
-					},
-					"prefix": {
-						"title": "Prefix",
-						"label": "Commands prefix",
-						"description": "Set the prefix for this server."
-					}
-				}
-			}
-		},
-		"shared": {
-			"group_name": "shared",
-			"group": {
-				"auto": {
-					"command_description": "Set the auto for a proxy.",
-					"command_name": "auto",
-					"params": {
-						"proxy": {
-							"parameter_description": "Proxy to set the auto tag for",
-							"parameter_name": "proxy"
-						}
-					}
-				},
-				"avatar": {
-					"command_description": "Show or set the avatar for a proxy.",
-					"command_name": "avatar",
-					"params": {
-						"avatar": {
-							"parameter_description": "Proxy to set the avatar for",
-							"parameter_name": "avatar"
-						},
-						"proxy": {
-							"parameter_description": "Image to set, by default shows current",
-							"parameter_name": "proxy"
-						},
-						"url": {
-							"parameter_description": "URL to set, by default shows current",
-							"parameter_name": "url"
-						}
-					}
-				},
-				"birthday": {
-					"command_description": "Set the birthday for a proxy.",
-					"command_name": "birthday",
-					"params": {
-						"birthday": {
-							"parameter_description": "Birthday to set",
-							"parameter_name": "birthday"
-						},
-						"proxy": {
-							"parameter_description": "Proxy to set the birthday for",
-							"parameter_name": "proxy"
-						}
-					}
-				},
-				"color": {
-					"command_description": "Set the color for a proxy.",
-					"command_name": "color",
-					"params": {
-						"color": {
-							"parameter_description": "Color to set",
-							"parameter_name": "color"
-						},
-						"proxy": {
-							"parameter_description": "Proxy to set the color for",
-							"parameter_name": "proxy"
-						}
-					}
-				},
-				"create": {
-					"command_description": "Create a new shared proxy.",
-					"command_name": "create",
-					"params": {
-						"image": {
-							"parameter_description": "Image to set, by default None",
-							"parameter_name": "image"
-						},
-						"name": {
-							"parameter_description": "Name of the proxy",
-							"parameter_name": "name"
-						},
-						"url": {
-							"parameter_description": "Image URL, by default None",
-							"parameter_name": "url"
-						}
-					},
-					"entries": {
-						"size": "Character image size cannot be more than {{size}}, use a server with higher limits."
-					}
-				},
-				"delete": {
-					"command_description": "Delete a shared proxy.",
-					"command_name": "delete",
-					"params": {
-						"proxy": {
-							"parameter_description": "Proxy to delete",
-							"parameter_name": "proxy"
-						}
-					},
-					"entries": {
-						"count": "Deleted {{count}} shared proxies."
-					}
-				},
-				"description": {
-					"command_description": "Set the description for a shared proxy.",
-					"command_name": "description",
-					"params": {
-						"proxy": {
-							"parameter_description": "Proxy to set the description for",
-							"parameter_name": "proxy"
-						},
-						"text": {
-							"parameter_description": "Description, by default None",
-							"parameter_name": "text"
-						}
-					}
-				},
-				"detail": {
-					"command_description": "Detail a proxy.",
-					"command_name": "detail",
-					"params": {
-						"proxy": {
-							"parameter_description": "Proxy to detail",
-							"parameter_name": "proxy"
-						},
-						"nickname": {
-							"parameter_description": "Nickname to set, by default None",
-							"parameter_name": "nickname"
-						},
-						"description": {
-							"parameter_description": "Description to set, by default None",
-							"parameter_name": "description"
-						},
-						"group": {
-							"parameter_description": "Group to set, by default None",
-							"parameter_name": "group"
-						},
-						"color": {
-							"parameter_description": "Color to set, by default None",
-							"parameter_name": "color"
-						},
-						"birthday": {
-							"parameter_description": "Birthday to set, by default None",
-							"parameter_name": "birthday"
-						}
-					}
-				},
-				"export": {
-					"command_description": "Export shared proxies to a JSON file",
-					"command_name": "export",
-					"params": {
-						"format": {
-							"choices": {
-								"Default": "Default",
-								"PluralKit": "PluralKit",
-								"Tupperbox": "Tupperbox"
-							},
-							"parameter_description": "Export Format, by default D-Proxy's",
-							"parameter_name": "format"
-						},
-						"new_token": {
-							"parameter_description": "If you want to generate a new token, by default False",
-							"parameter_name": "new_token"
-						},
-						"local": {
-							"parameter_description": "Export local avatars and nicknames, by default True",
-							"parameter_name": "local"
-						}
-					},
-					"entries": {
-						"exporting_title": "Exporting shared proxies...",
-						"exporting_description": "This may take a while depending on the number of proxies you have.",
-						"token": "Token",
-						"token_warning": "Keep this token safe, you won't be able to import your proxies without it.",
-						"invalid_token": "Invalid token.",
-						"import_own_proxies": "You can't import your own characters.",
-						"too_many_proxies": "You have too many characters, please delete some before importing."
-					}
-				},
-				"find": {
-					"command_description": "Find shared proxies by name.",
-					"command_name": "find",
-					"params": {
-						"proxy": {
-							"parameter_description": "Proxy to find",
-							"parameter_name": "proxy"
-						},
-						"text": {
-							"parameter_description": "Text to search for",
-							"parameter_name": "text"
-						}
-					}
-				},
-				"group": {
-					"command_description": "Set the group for a shared proxy.",
-					"command_name": "group",
-					"params": {
-						"group": {
-							"parameter_description": "Group to set, by default None",
-							"parameter_name": "group"
-						},
-						"proxy": {
-							"parameter_description": "Proxy to set the group for",
-							"parameter_name": "proxy"
-						}
-					}
-				},
-				"image": {
-					"command_description": "Set the image of a shared proxy for you.",
-					"command_name": "image",
-					"params": {
-						"avatar": {
-							"parameter_description": "Image to set, by default None",
-							"parameter_name": "avatar"
-						},
-						"proxy": {
-							"parameter_description": "Proxy to set the image for",
-							"parameter_name": "proxy"
-						},
-						"url": {
-							"parameter_description": "Image URL to set, by default None",
-							"parameter_name": "url"
-						}
-					}
-				},
-				"list": {
-					"command_description": "List all shared proxies.",
-					"command_name": "list",
-					"params": {
-						"group": {
-							"parameter_description": "Group to list proxies from, by default None",
-							"parameter_name": "group"
-						}
-					}
-				},
-				"local": {
-					"command_description": "Set the image for a proxy.",
-					"command_name": "local",
-					"params": {
-						"avatar": {
-							"parameter_description": "Image to set, by default None",
-							"parameter_name": "image"
-						},
-						"nickname": {
-							"parameter_description": "Nickname to set, by default None",
-							"parameter_name": "nickname"
-						},
-						"proxy": {
-							"parameter_description": "Proxy to set the image for",
-							"parameter_name": "proxy"
-						},
-						"url": {
-							"parameter_description": "Image URL to set, by default None",
-							"parameter_name": "url"
-						}
-					}
-				},
-				"nickname": {
-					"command_description": "Set the nickname for a shared proxy for you",
-					"command_name": "nickname",
-					"params": {
-						"nickname": {
-							"parameter_description": "Nickname to set, by default None",
-							"parameter_name": "nickname"
-						},
-						"proxy": {
-							"parameter_description": "Proxy to set the nickname for",
-							"parameter_name": "proxy"
-						}
-					}
-				},
-				"nsfw": {
-					"command_description": "Tag a shared proxy as NSFW.",
-					"command_name": "nsfw",
-					"params": {
-						"nsfw": {
-							"parameter_description": "NSFW, by default switches the current value",
-							"parameter_name": "nsfw"
-						},
-						"proxy": {
-							"parameter_description": "Proxy to set the nsfw tag for",
-							"parameter_name": "proxy"
-						}
-					}
-				},
-				"prefix": {
-					"command_description": "Set the prefixes for a shared proxy for you.",
-					"command_name": "prefix",
-					"params": {
-						"prefixes": {
-							"parameter_description": "Prefixes e.g. A:text, |text|, etc. by default None",
-							"parameter_name": "prefixes"
-						},
-						"proxy": {
-							"parameter_description": "Proxy to set the prefixes for",
-							"parameter_name": "proxy"
-						}
-					},
-					"entries": {
-						"set": "Prefixes set for {{proxy}}."
-					}
-				},
-				"prune": {
-					"command_description": "Prune proxies unused for a certain time.",
-					"command_name": "prune",
-					"params": {
-						"before": {
-							"parameter_description": "Date to prune before, by default None",
-							"parameter_name": "before"
-						}
-					},
-					"entries": {
-						"pruned": "Pruned {{count}} proxies."
-					}
-				},
-				"purge": {
-					"command_description": "Purge all of your data (except message logs)",
-					"command_name": "purge",
-					"params": {
-						"confirmation": {
-							"parameter_description": "Confirmation, by default False",
-							"parameter_name": "confirmation"
-						}
-					},
-					"entries": {
-						"not_confirmed": "You need to confirm this action by setting the confirmation parameter to True.",
-						"done": "Deleted all of your data except message logs."
-					}
-				},
-				"read": {
-					"command_description": "Read a shared proxy.",
-					"command_name": "read",
-					"params": {
-						"proxy": {
-							"parameter_description": "Proxy to read",
-							"parameter_name": "proxy"
-						}
-					}
-				},
-				"rename": {
-					"command_description": "Set the name for a shared proxy.",
-					"command_name": "rename",
-					"params": {
-						"name": {
-							"parameter_description": "Name to set",
-							"parameter_name": "name"
-						},
-						"proxy": {
-							"parameter_description": "Proxy to set the name for",
-							"parameter_name": "proxy"
-						}
-					}
-				},
-				"set": {
-					"command_description": "Set a shared proxy as the current to use.",
-					"command_name": "set",
-					"params": {
-						"proxy": {
-							"parameter_description": "Proxy to set",
-							"parameter_name": "proxy"
-						}
-					}
-				},
-				"update": {
-					"command_description": "Update a shared proxy. Old way of updating proxies.",
-					"command_name": "update",
-					"params": {
-						"image": {
-							"parameter_description": "Image to set, by default None",
-							"parameter_name": "image"
-						},
-						"proxy": {
-							"parameter_description": "Proxy to update",
-							"parameter_name": "proxy"
-						},
-						"url": {
-							"parameter_description": "Image URL to set, by default None",
-							"parameter_name": "url"
-						},
-						"name": {
-							"parameter_description": "Name to set, by default same",
-							"parameter_name": "name"
-						},
-						"prefixes": {
-							"parameter_description": "Prefixes to set, by default same",
-							"parameter_name": "prefixes"
-						}
-					}
-				},
-				"use": {
-					"command_description": "Use a shared proxy.",
-					"command_name": "use",
-					"params": {
-						"proxy": {
-							"parameter_description": "Proxy to use",
-							"parameter_name": "proxy"
-						},
-						"text": {
-							"parameter_description": "Text to use",
-							"parameter_name": "text"
-						}
-					}
-				}
-			},
-			"group_description": "Shared proxy commands."
-		},
-		"shared-to-proxy": {
-			"command_description": "Convert a shared proxy to a personal one.",
-			"command_name": "shared-to-proxy",
-			"params": {
-				"proxy": {
-					"parameter_description": "Shared Proxy to copy",
-					"parameter_name": "proxy"
-				}
-			}
-		},
-		"store": {
-			"command_description": "Store a message for later use.",
-			"command_name": "store",
-			"params": {
-				"storage": {
-					"parameter_description": "Storage to store the message in, by default Local",
-					"parameter_name": "storage",
-					"choices": {
-						"Global": "Global",
-						"Local": "Local"
-					}
-				}
-			}
-		},
-		"update": {
-			"command_description": "Update a proxy. Old way of updating proxies.",
-			"command_name": "update",
-			"params": {
-				"image": {
-					"parameter_description": "Image to set, by default None",
-					"parameter_name": "image"
-				},
-				"proxy": {
-					"parameter_description": "Proxy to update",
-					"parameter_name": "proxy"
-				},
-				"url": {
-					"parameter_description": "Image URL to set, by default None",
-					"parameter_name": "url"
-				},
-				"name": {
-					"parameter_description": "Name to set, by default same",
-					"parameter_name": "name"
-				},
-				"prefixes": {
-					"parameter_description": "Prefixes to set, by default same",
-					"parameter_name": "prefixes"
-				}
-			},
-			"entries": {
-				"size": "Character image size cannot be more than {{size}}, use a server with higher limits."
-			}
-		},
-		"use": {
-			"command_description": "Use a proxy.",
-			"command_name": "use",
-			"params": {
-				"proxy": {
-					"parameter_description": "Proxy to use",
-					"parameter_name": "proxy"
-				},
-				"text": {
-					"parameter_description": "Text to use",
-					"parameter_name": "text"
-				}
-			}
-		},
-		"var": {
-			"group": {
-				"auto": {
-					"command_description": "Set the auto for a variant.",
-					"command_name": "auto",
-					"params": {
-						"proxy": {
-							"parameter_description": "Base proxy of the variant",
-							"parameter_name": "proxy"
-						},
-						"variant": {
-							"parameter_description": "Variant to set the auto tag for",
-							"parameter_name": "variant"
-						}
-					}
-				},
-				"avatar": {
-					"command_description": "Set the image for a variant.",
-					"command_name": "avatar",
-					"params": {
-						"avatar": {
-							"parameter_description": "Image to set, by default None",
-							"parameter_name": "avatar"
-						},
-						"proxy": {
-							"parameter_description": "Base proxy of the variant",
-							"parameter_name": "proxy"
-						},
-						"url": {
-							"parameter_description": "Image URL to set, by default None",
-							"parameter_name": "url"
-						},
-						"variant": {
-							"parameter_description": "Variant to set the image for",
-							"parameter_name": "variant"
-						}
-					}
-				},
-				"birthday": {
-					"command_description": "Set the birthday for a proxy variant",
-					"command_name": "birthday",
-					"params": {
-						"birthday": {
-							"parameter_description": "Birthday to set, by default None",
-							"parameter_name": "birthday"
-						},
-						"proxy": {
-							"parameter_description": "Base proxy of the variant",
-							"parameter_name": "proxy"
-						},
-						"variant": {
-							"parameter_description": "Variant to set the birthday for",
-							"parameter_name": "variant"
-						}
-					}
-				},
-				"color": {
-					"command_description": "Change the color of a variant.",
-					"command_name": "color",
-					"params": {
-						"color": {
-							"parameter_description": "Color to set, by default None",
-							"parameter_name": "color"
-						},
-						"proxy": {
-							"parameter_description": "Base proxy of the variant",
-							"parameter_name": "proxy"
-						},
-						"variant": {
-							"parameter_description": "Variant to set the color for",
-							"parameter_name": "variant"
-						}
-					}
-				},
-				"create": {
-					"command_description": "Create a new variant for a proxy.",
-					"command_name": "create",
-					"params": {
-						"image": {
-							"parameter_description": "Image for the variant",
-							"parameter_name": "image"
-						},
-						"name": {
-							"parameter_description": "Name of the variant",
-							"parameter_name": "name"
-						},
-						"prefixes": {
-							"parameter_description": "Prefixes e.g. A:text, |text|, etc.",
-							"parameter_name": "prefixes"
-						},
-						"proxy": {
-							"parameter_description": "Proxy to create the variant for",
-							"parameter_name": "proxy"
-						},
-						"url": {
-							"parameter_description": "URL for the image, by default None",
-							"parameter_name": "url"
-						}
-					}
-				},
-				"delete": {
-					"command_description": "Deletes a variant from a proxy.",
-					"command_name": "delete",
-					"params": {
-						"proxy": {
-							"parameter_description": "Base proxy of the variant",
-							"parameter_name": "proxy"
-						},
-						"variant": {
-							"parameter_description": "Variant to delete",
-							"parameter_name": "variant"
-						}
-					},
-					"entries": {
-						"deleted": "Variant {{variant}} deleted from {{proxy}}."
-					}
-				},
-				"description": {
-					"command_description": "Set the description for a proxy's variant",
-					"command_name": "description",
-					"params": {
-						"proxy": {
-							"parameter_description": "Base proxy of the variant",
-							"parameter_name": "proxy"
-						},
-						"text": {
-							"parameter_description": "Description, by default None",
-							"parameter_name": "text"
-						},
-						"variant": {
-							"parameter_description": "Variant to set the description for",
-							"parameter_name": "variant"
-						}
-					}
-				},
-				"detail": {
-					"command_description": "Detail a proxy. Old way of editing proxies.",
-					"command_name": "detail",
-					"params": {
-						"proxy": {
-							"parameter_description": "Base proxy of the variant",
-							"parameter_name": "proxy"
-						},
-						"variant": {
-							"parameter_description": "Variant to detail",
-							"parameter_name": "variant"
-						},
-						"nickname": {
-							"parameter_description": "Nickname to set, by default None",
-							"parameter_name": "nickname"
-						},
-						"description": {
-							"parameter_description": "Description to set, by default None",
-							"parameter_name": "description"
-						},
-						"group": {
-							"parameter_description": "Group to set, by default None",
-							"parameter_name": "group"
-						},
-						"color": {
-							"parameter_description": "Color to set, by default None",
-							"parameter_name": "color"
-						},
-						"birthday": {
-							"parameter_description": "Birthday to set, by default None",
-							"parameter_name": "birthday"
-						}
-					}
-				},
-				"export": {
-					"command_description": "Export your proxy's variants to a JSON file",
-					"command_name": "export",
-					"params": {
-						"proxy": {
-							"parameter_description": "Base proxy of the variant",
-							"parameter_name": "proxy"
-						},
-						"format": {
-							"choices": {
-								"Default": "Default",
-								"PluralKit": "PluralKit",
-								"Tupperbox": "Tupperbox"
-							},
-							"parameter_description": "Export Format, by default D-Proxy's",
-							"parameter_name": "format"
-						},
-						"new_token": {
-							"parameter_description": "If you want to generate a new token, by default False",
-							"parameter_name": "new_token"
-						},
-						"local": {
-							"parameter_description": "Export local avatars and nicknames, by default True",
-							"parameter_name": "local"
-						}
-					},
-					"entries": {
-						"exporting_title": "Exporting variants...",
-						"exporting_description": "This may take a while depending on the number of proxies you have.",
-						"token": "Token",
-						"token_warning": "Keep this token safe, you won't be able to import your proxies without it.",
-						"invalid_token": "Invalid token.",
-						"import_own_proxies": "You can't import your own characters.",
-						"too_many_proxies": "You have too many characters, please delete some before importing."
-					}
-				},
-				"find": {
-					"command_description": "Find variants of a proxies by name.",
-					"command_name": "find",
-					"params": {
-						"proxy": {
-							"parameter_description": "Base proxy of the variant",
-							"parameter_name": "proxy"
-						},
-						"text": {
-							"parameter_description": "Text to search for",
-							"parameter_name": "text"
-						}
-					}
-				},
-				"group": {
-					"command_description": "Set the group for a variant.",
-					"command_name": "group",
-					"params": {
-						"group": {
-							"parameter_description": "Group to set, by default None",
-							"parameter_name": "group"
-						},
-						"proxy": {
-							"parameter_description": "Base proxy of the variant",
-							"parameter_name": "proxy"
-						},
-						"variant": {
-							"parameter_description": "Variant to set the group for",
-							"parameter_name": "variant"
-						}
-					}
-				},
-				"list": {
-					"command_description": "List all variants of a proxy.",
-					"command_name": "list",
-					"params": {
-						"proxy": {
-							"parameter_description": "Base proxy of the variant",
-							"parameter_name": "proxy"
-						},
-						"group": {
-							"parameter_description": "Group to list variants from, by default None",
-							"parameter_name": "group"
-						}
-					}
-				},
-				"local": {
-					"command_description": "Set the local avatar for a variant.",
-					"command_name": "local",
-					"params": {
-						"avatar": {
-							"parameter_description": "Avatar to set, by default None",
-							"parameter_name": "avatar"
-						},
-						"nickname": {
-							"parameter_description": "Nickname to set, by default None",
-							"parameter_name": "nickname"
-						},
-						"proxy": {
-							"parameter_description": "Base proxy of the variant",
-							"parameter_name": "proxy"
-						},
-						"url": {
-							"parameter_description": "Image URL to set, by default None",
-							"parameter_name": "url"
-						},
-						"variant": {
-							"parameter_description": "Variant to set the info for",
-							"parameter_name": "variant"
-						}
-					}
-				},
-				"nickname": {
-					"command_description": "Change the nickname of a variant.",
-					"command_name": "nickname",
-					"params": {
-						"nickname": {
-							"parameter_description": "Nickname to set, by default None",
-							"parameter_name": "nickname"
-						},
-						"proxy": {
-							"parameter_description": "Base proxy of the variant",
-							"parameter_name": "proxy"
-						},
-						"variant": {
-							"parameter_description": "Variant to change the nickname for",
-							"parameter_name": "variant"
-						}
-					}
-				},
-				"nsfw": {
-					"command_description": "Set the nsfw tag for a variant.",
-					"command_name": "nsfw",
-					"params": {
-						"nsfw": {
-							"parameter_description": "NSFW, by default None",
-							"parameter_name": "nsfw"
-						},
-						"proxy": {
-							"parameter_description": "Base proxy of the variant",
-							"parameter_name": "proxy"
-						},
-						"variant": {
-							"parameter_description": "Variant to set the nsfw tag for",
-							"parameter_name": "variant"
-						}
-					}
-				},
-				"prefix": {
-					"command_description": "Set the prefixes for a variant",
-					"command_name": "prefix",
-					"params": {
-						"prefixes": {
-							"parameter_description": "Prefixes e.g. A:text, |text|, etc. by default None",
-							"parameter_name": "prefixes"
-						},
-						"proxy": {
-							"parameter_description": "Base proxy of the variant",
-							"parameter_name": "proxy"
-						},
-						"variant": {
-							"parameter_description": "Variant to set the prefixes for",
-							"parameter_name": "variant"
-						}
-					}
-				},
-				"prune": {
-					"command_description": "Prune unused variants of a proxy for a certain time.",
-					"command_name": "prune",
-					"params": {
-						"proxy": {
-							"parameter_description": "Proxy to prune the variants from",
-							"parameter_name": "proxy"
-						},
-						"before": {
-							"parameter_description": "Date to prune before, by default None",
-							"parameter_name": "before"
-						}
-					},
-					"entries": {
-						"done": "Pruned {{count}} variants."
-					}
-				},
-				"purge": {
-					"command_description": "Remove all variants of your proxy",
-					"command_name": "purge",
-					"params": {
-						"confirmation": {
-							"parameter_description": "Confirmation, by default False",
-							"parameter_name": "confirmation"
-						},
-						"proxy": {
-							"parameter_description": "Proxy to remove the variants from",
-							"parameter_name": "proxy"
-						}
-					},
-					"entries": {
-						"not_confirmed": "You need to confirm this action by setting the confirmation parameter to True.",
-						"done": "Deleted all variants of {{proxy}}."
-					}
-				},
-				"read": {
-					"command_description": "Read a variant from a proxy.",
-					"command_name": "read",
-					"params": {
-						"proxy": {
-							"parameter_description": "Base proxy of the variant",
-							"parameter_name": "proxy"
-						},
-						"variant": {
-							"parameter_description": "Variant to read",
-							"parameter_name": "variant"
-						}
-					}
-				},
-				"rename": {
-					"command_description": "Set the name for a variant of a proxy.",
-					"command_name": "rename",
-					"params": {
-						"name": {
-							"parameter_description": "Name to set",
-							"parameter_name": "name"
-						},
-						"proxy": {
-							"parameter_description": "Base proxy of the variant",
-							"parameter_name": "proxy"
-						},
-						"variant": {
-							"parameter_description": "Variant to set the name for",
-							"parameter_name": "variant"
-						}
-					}
-				},
-				"set": {
-					"command_description": "Set a variant from a proxy for use.",
-					"command_name": "set",
-					"params": {
-						"proxy": {
-							"parameter_description": "Base proxy of the variant",
-							"parameter_name": "proxy"
-						},
-						"variant": {
-							"parameter_description": "Variant to set for use",
-							"parameter_name": "variant"
-						}
-					}
-				},
-				"update": {
-					"command_description": "Update a proxy. Old way of updating proxies.",
-					"command_name": "update",
-					"params": {
-						"proxy": {
-							"parameter_description": "Base proxy of the variant",
-							"parameter_name": "proxy"
-						},
-						"variant": {
-							"parameter_description": "Variant to update",
-							"parameter_name": "variant"
-						},
-						"image": {
-							"parameter_description": " Image to set, by default None",
-							"parameter_name": "image"
-						},
-						"url": {
-							"parameter_description": "Image URL to set, by default None",
-							"parameter_name": "url"
-						},
-						"name": {
-							"parameter_description": "Name to set, by default same",
-							"parameter_name": "name"
-						},
-						"prefixes": {
-							"parameter_description": "Prefixes to set, by default same",
-							"parameter_name": "prefixes"
-						}
-					}
-				},
-				"use": {
-					"command_description": "Use a proxy's variant for a message.",
-					"command_name": "use",
-					"params": {
-						"proxy": {
-							"parameter_description": "Base proxy of the variant",
-							"parameter_name": "proxy"
-						},
-						"text": {
-							"parameter_description": "Text to use",
-							"parameter_name": "text"
-						},
-						"variant": {
-							"parameter_description": "Variant to use",
-							"parameter_name": "variant"
-						}
-					}
-				}
-			},
-			"group_description": "Variant commands.",
-			"group_name": "var"
-		},
-		"variant-to-proxy": {
-			"command_description": "Convert a variant to a proxy.",
-			"command_name": "variant-to-proxy",
-			"params": {
-				"proxy": {
-					"parameter_description": "Base proxy of the variant",
-					"parameter_name": "proxy"
-				},
-				"variant": {
-					"parameter_description": "Variant to convert",
-					"parameter_name": "variant"
-				}
-			},
-			"entries": {
-				"already_proxy": "Variant is already a proxy.",
-				"done": "{{variant}} is now a proxy."
-			}
-		},
-		"wiki": {
-			"command_description": "Show the server's wiki.",
-			"command_name": "wiki",
-			"params": {
-				"search": {
-					"parameter_description": "Search query, by default None",
-					"parameter_name": "search"
-				}
-			},
-			"entries": {
-				"search_results": "Search results for {{search}}:"
-			}
-		},
-		"who": {
-			"command_description": "Show the user of a proxy message.",
-			"command_name": "who",
-			"params": {
-				"message": {
-					"parameter_description": "Message to show the user of",
-					"parameter_name": "message"
-				}
-			},
-			"entries": {
-				"no_entry": "No entry found for this message.",
-				"sent_by": "Sent by <@{{user.id}}> ({{user}} - ID: {{user.id}})",
-				"sent_by_deleted": "Sent by a deleted user (ID: {{user}})"
-			}
-		}
-	},
-	"inline_commands": {
-		"Avatar": {
-			"title": "Avatar",
-			"description": "Command for displaying a character's avatar"
-		},
-		"Birthday": {
-			"title": "Birthday",
-			"description": "Command for displaying a character's birthday"
-		},
-		"Date": {
-			"title": "Date",
-			"description": "Command for displaying the dates"
-		},
-		"Decrypt": {
-			"title": "Decrypt",
-			"description": "Command for decrypting text"
-		},
-		"Description": {
-			"title": "Description",
-			"description": "Command for displaying a character's description"
-		},
-		"Embed": {
-			"title": "Embed",
-			"description": "Create an embed using flags or json"
-		},
-		"Encrypt": {
-			"title": "Encrypt",
-			"description": "Command for encrypting text"
-		},
-		"Flip": {
-			"title": "Flip",
-			"description": "Command for flipping text"
-		},
-		"Font": {
-			"title": "Font",
-			"description": "Command for using fonts"
-		},
-		"LastMessage": {
-			"title": "LastMessage",
-			"description": "Command for displaying a character's last message"
-		},
-		"Metronome": {
-			"title": "Metronome",
-			"description": "Command for using Metronome"
-		},
-		"Move": {
-			"title": "Move",
-			"description": "Command for using a Pokemon move"
-		},
-		"Music": {
-			"title": "Music",
-			"description": "Command for music"
-		},
-		"Reverse": {
-			"title": "Reverse",
-			"description": "Command for reversing text"
-		},
-		"Roll": {
-			"title": "Roll",
-			"description": "Command for rolling dice"
-		},
-		"Translate": {
-			"title": "Translate",
-			"description": "Command for translating text"
-		},
-		"Type": {
-			"title": "Type",
-			"description": "Command for displaying types"
-		},
-		"UWU": {
-			"title": "UWU",
-			"description": "Command for converting text to uwu"
-		},
-		"Zalgo": {
-			"title": "Zalgo",
-			"description": "Command for using Zalgo"
-		}
-	},
-	"interactions": {
-		"afk_schedule": {
-			"command_name": "AFK Schedule",
-			"commands_description": "Commands for checking an AFK schedule"
-		},
-		"context_menu": {
-			"command_name": "Proxy",
-			"commands_description": "Commands for interacting with proxies"
-		}
-	},
-	"views": {
-		"paginator": {
-			"multiple": "Picked {{count}}, Max: {{max}}, Options: {{options}}",
-			"single": "Single choice, Options: {{options}}"
-		}
-	},
 	"Pokemon": {
+		"Category": {
+			"Physical": "Physical",
+			"Special": "Special",
+			"Status": "Status"
+		},
 		"Move": {
 			"10,000,000 Volt Thunderbolt": "10,000,000 Volt Thunderbolt",
 			"Absorb": "Absorb",
@@ -2434,6 +362,7 @@
 			"Hurricane": "Hurricane",
 			"Hydro Cannon": "Hydro Cannon",
 			"Hydro Pump": "Hydro Pump",
+			"Hydro Steam": "Hydro Steam",
 			"Hydro Vortex": "Hydro Vortex",
 			"Hyper Beam": "Hyper Beam",
 			"Hyper Drill": "Hyper Drill",
@@ -2650,6 +579,7 @@
 			"Prismatic Laser": "Prismatic Laser",
 			"Protect": "Protect",
 			"Psybeam": "Psybeam",
+			"Psyblade": "Psyblade",
 			"Psych Up": "Psych Up",
 			"Psychic": "Psychic",
 			"Psychic Fangs": "Psychic Fangs",
@@ -2934,8 +864,6 @@
 			"Water Spout": "Water Spout",
 			"Waterfall": "Waterfall",
 			"Wave Crash": "Wave Crash",
-			"Psyblade": "Psyblade",
-			"Hydro Steam": "Hydro Steam",
 			"Weather Ball": "Weather Ball",
 			"Whirlpool": "Whirlpool",
 			"Whirlwind": "Whirlwind",
@@ -2961,311 +889,62 @@
 			"Zing Zap": "Zing Zap",
 			"Zippy Zap": "Zippy Zap"
 		},
-		"Type": {
-			"Bug": {
-				"Name": "Bug",
-				"MaxMove": "Max Flutterby",
-				"MaxEffect": "Decreases the Special Attack of the target and its allies by one stage.",
-				"ZMove": "Savage Spin-Out"
-			},
-			"Dark": {
-				"Name": "Dark",
-				"MaxMove": "Max Darkness",
-				"MaxEffect": "Decreases the Special Defense of the target and its allies by one stage.",
-				"ZMove": "Black Hole Eclipse"
-			},
-			"Dragon": {
-				"Name": "Dragon",
-				"MaxMove": "Max Wyrmwind",
-				"MaxEffect": "Decreases the Attack of the target and its allies by one stage.",
-				"ZMove": "Devastating Drake"
-			},
-			"Electric": {
-				"Name": "Electric",
-				"MaxMove": "Max Lightning",
-				"MaxEffect": "Creates Electric Terrain for five turns.",
-				"ZMove": "Gigavolt Havoc"
-			},
-			"Fairy": {
-				"Name": "Fairy",
-				"MaxMove": "Max Starfall",
-				"MaxEffect": "Creates Misty Terrain for five turns.",
-				"ZMove": "Twinkle Tackle"
-			},
-			"Fighting": {
-				"Name": "Fighting",
-				"MaxMove": "Max Knuckle",
-				"MaxEffect": "Increases the Attack of the user and its allies by one stage.",
-				"ZMove": "All-Out Pummeling"
-			},
-			"Fire": {
-				"Name": "Fire",
-				"MaxMove": "Max Flare",
-				"MaxEffect": "Creates harsh sunlight for five turns.",
-				"ZMove": "Inferno Overdrive"
-			},
-			"Flying": {
-				"Name": "Flying",
-				"MaxMove": "Max Airstream",
-				"MaxEffect": "Increases the Speed of the user and its allies by one stage.",
-				"ZMove": "Supersonic Skystrike"
-			},
-			"Ghost": {
-				"Name": "Ghost",
-				"MaxMove": "Max Phantasm",
-				"MaxEffect": "Decreases the Defense of the target and its allies by one stage.",
-				"ZMove": "Never-Ending Nightmare"
-			},
-			"Grass": {
-				"Name": "Grass",
-				"MaxMove": "Max Overgrowth",
-				"MaxEffect": "Creates Grassy Terrain for five turns.",
-				"ZMove": "Bloom Doom"
-			},
-			"Ground": {
-				"Name": "Ground",
-				"MaxMove": "Max Quake",
-				"MaxEffect": "Increases the Special Defense of the user and its allies by one stage",
-				"ZMove": "Tectonic Rage"
-			},
-			"Ice": {
-				"Name": "Ice",
-				"MaxMove": "Max Hailstorm",
-				"MaxEffect": "Creates hail for five turns.",
-				"ZMove": "Subzero Slammer"
-			},
-			"Normal": {
-				"Name": "Normal",
-				"MaxMove": "Max Strike",
-				"MaxEffect": "Decreases the Speed of the target and its allies by one stage.",
-				"ZMove": "Breakneck Blitz"
-			},
-			"Poison": {
-				"Name": "Poison",
-				"MaxMove": "Max Ooze",
-				"MaxEffect": "Increases the Special Attack of the user and its allies by one stage.",
-				"ZMove": "Acid Downpour"
-			},
-			"Psychic": {
-				"Name": "Psychic",
-				"MaxMove": "Max Mindstorm",
-				"MaxEffect": "Creates Psychic Terrain for five turns.",
-				"ZMove": "Shattered Psyche"
-			},
-			"Rock": {
-				"Name": "Rock",
-				"MaxMove": "Max Rockfall",
-				"MaxEffect": "Creates a sandstorm for five turns.",
-				"ZMove": "Continental Crush"
-			},
-			"Steel": {
-				"Name": "Steel",
-				"MaxMove": "Max Steelspike",
-				"MaxEffect": "Increases the Defense of the user and its allies by one stage.",
-				"ZMove": "Corkscrew Crash"
-			},
-			"Water": {
-				"Name": "Water",
-				"MaxMove": "Max Geyser",
-				"MaxEffect": "Creates rain for five turns.",
-				"ZMove": "Hydro Vortex"
-			}
-		},
-		"Z-Effect": [
-			{
-				"Short": "Z-Move",
-				"Long": "Calls a Z-Move"
-			},
-			{
-				"Short": "None",
-				"Long": "No effect"
-			},
-			{
-				"Short": "Attack ↑",
-				"Long": "Raises the user's Attack by 1 stage"
-			},
-			{
-				"Short": "Attack ↑↑↑",
-				"Long": "Raises the user's Attack by 3 stage"
-			},
-			{
-				"Short": "Attack ↑↑",
-				"Long": "Raises the user's Attack by 2 stage, calls a Z Move"
-			},
-			{
-				"Short": "Defense ↑",
-				"Long": "Raises Defense by 1 stage"
-			},
-			{
-				"Short": "Special Attack ↑",
-				"Long": "Raises Special Attack by 1 stage"
-			},
-			{
-				"Short": "Special Attack ↑↑",
-				"Long": "Raises Special Attack by 2 stages"
-			},
-			{
-				"Short": "Special Defense ↑",
-				"Long": "Raises Special Defense by 1 stage"
-			},
-			{
-				"Short": "Special Defense ↑↑",
-				"Long": "Raises Special Defense by 2 stages"
-			},
-			{
-				"Short": "Speed ↑",
-				"Long": "Raises Speed by 1 stage"
-			},
-			{
-				"Short": "Speed ↑↑",
-				"Long": "Raises Speed by 2 stages"
-			},
-			{
-				"Short": "Speed ↑↑",
-				"Long": "Raises Speed by 2 stages, calls a Z-move"
-			},
-			{
-				"Short": "Accuracy ↑",
-				"Long": "Raises accuracy by 1 stage"
-			},
-			{
-				"Short": "Accuracy ↑",
-				"Long": "Raises accuracy by 1 stage, calls a Z-move"
-			},
-			{
-				"Short": "Evasiveness ↑",
-				"Long": "Raises evasiveness by 1 stage"
-			},
-			{
-				"Short": "Stats ↑",
-				"Long": "Raises Attack, Defense, Sp. Atk, Sp. Def, and Speed by 1 stage"
-			},
-			{
-				"Short": "Boosts critical-hit ratio",
-				"Long": "Boosts critical-hit ratio by 2 stages"
-			},
-			{
-				"Short": "Reset Stats",
-				"Long": "Resets user's lowered stats"
-			},
-			{
-				"Short": "Restores HP",
-				"Long": "Fully restores user's HP"
-			},
-			{
-				"Short": "Restores replacement's HP",
-				"Long": "Fully restores switched-in ally's HP"
-			},
-			{
-				"Short": "Center of attention",
-				"Long": "User becomes center of attention"
-			},
-			{
-				"Short": "Changes depending on the type",
-				"Long": "Fully restores user's HP (Ghost-type)\nRaises Attack by 1 stage (non Ghost-type)"
-			}
-		],
 		"MoveEmbed": {
-			"Power": "Move has {{power}} base power",
 			"Accuracy": {
-				"True": "Move has {{acc}} accuracy",
-				"False": "Bypasses accuracy checks to always hit"
+				"False": "Bypasses accuracy checks to always hit",
+				"True": "Move has {{acc}} accuracy"
 			},
-			"PP": {
-				"True": "Move has {{pp}} PP",
-				"False": "It's a gimmick move, therefore PP is not used"
-			},
-			"Priority": "Move has {{priority:+}} priority",
-			"MinHits": "Strikes at least {{min_hits}} times",
-			"MaxHits": "Strikes {{max_hits}} times at most",
 			"CritStage": {
 				"1": "12.5% Crit chance",
 				"2": "50% Crit chance",
 				"6": "Always crits"
 			},
-			"Stat": {
-				"Attack": "{{chance}}% for {{stages:+}} attack stages",
-				"Defense": "{{chance}}% for {{stages:+}} defense stages",
-				"Sp_Atk": "{{chance}}% for {{stages:+}} sp. attack stages",
-				"Sp_Def": "{{chance}}% for {{stages:+}} sp. defense stages",
-				"Speed": "{{chance}}% for {{stages:+}} speed stages",
-				"Accuracy": "{{chance}}% for {{stages:+}} accuracy stages",
-				"Evasiveness": "{{chance}}% for {{stages:+}} evasion stages",
-				"All": "{{chance}}% for ATK{{stages:+}}, DEF{{stages:+}}, SPA{{stages:+}}, SPD{{stages:+}}, SPE{{stages:+}}"
-			},
-			"Target": [
-				"May affect anyone adjacent to the user",
-				"May affect the user or an adjacent ally",
-				"Affects an adjacent ally",
-				"May affect any adjacent foe, but not allies",
-				"Affects all Pokémon adjacent to the user",
-				"Affects all adjactent foes but not allies",
-				"Affects the user and all allies",
-				"Affects the user",
-				"ffects all Pokemon on the field",
-				"After is finished, the user becomes confused due to fatigue",
-				"Affects all Pokémon on the field",
-				"Affects all foes",
-				"Affects the user's side and all allies",
-				"Increased damage dealt by the foe's last attack"
-			],
-			"Original_Type": "Original type: {{type}}",
-			"Flinch": "Has a {{chance}}% chance to flinch",
-			"Recoil": "Has a {{damage}}% of recoil",
-			"Healing": "Heals {{drain}}% Max HP",
 			"Drain": "Removes {{drain}}% Max HP",
 			"Flag": {
-				"Contact": "Makes contact",
-				"Charge": "Charges on first turn",
-				"Recharge": "Recharges on the following turn",
-				"Protect": "Affected by Protect",
-				"Reflect": "Affected by Reflect",
-				"Snatch": "Affected by Snatch",
-				"Mirror": "Affected by Mirror Move",
-				"Punch": "Affected by Iron Fist",
-				"Sound": "Affected by Soundproof",
-				"Dance": "Affected by Dancer",
-				"Gravity": "Affected by Gravity",
-				"Defrost": "Thaws the user",
-				"DistanceTriple": "Can hit a target using Bounce, Dig, Dive, Fly, Shadow Force, Sky Drop, or Sky Uppercut",
-				"IgnoreSubstitute": "Bypasses a target's Substitute",
-				"FailSkyBattle": "Fails if used in a Sky Battle",
 				"AnimateAlly": "Animates the user's ally",
 				"Bite": "Affected by Strong Jaw",
-				"Metronome": {
-					"True": "Affected by Metronome",
-					"False": "Can't be used by Metronome"
-				},
-				"FailEncore": "Fails if the target is already under an Encore effect",
-				"FailMeFirst": "Fails if the target is already under a Me First effect",
-				"FutureAttack": "Strikes some time after",
-				"Pressure": "May cause wild pokemon to call for help",
+				"Bullet": "Affected by Bulletproof",
+				"CantUseTwice": "Can't be used twice in a row",
+				"Charge": "Charges on first turn",
 				"Combo": "Can be used in a combo",
+				"Contact": "Makes contact",
+				"Dance": "Affected by Dancer",
+				"Defrost": "Thaws the user",
+				"DistanceTriple": "Can hit a target using Bounce, Dig, Dive, Fly, Shadow Force, Sky Drop, or Sky Uppercut",
+				"FailCopycat": "Fails if the target is already under a Copycat effect",
+				"FailEncore": "Fails if the target is already under an Encore effect",
+				"FailInstruct": "Fails if the target is already under an Instruct effect",
+				"FailMeFirst": "Fails if the target is already under a Me First effect",
+				"FailMimic": "Fails if the target is already under a Mimic effect",
+				"FailSkyBattle": "Fails if used in a Sky Battle",
+				"FutureAttack": "Strikes some time after",
+				"Gravity": "Affected by Gravity",
+				"Heal": "It's a healing move",
+				"IgnoreSubstitute": "Bypasses a target's Substitute",
+				"Metronome": {
+					"False": "Can't be used by Metronome",
+					"True": "Affected by Metronome"
+				},
+				"Mirror": "Affected by Mirror Move",
+				"NoEffectiveness": "Ignores type effectiveness",
+				"NoMultiHit": "Can't be used in a multi-hit combo",
 				"NoSleepTalk": "Can't be used by Sleep Talk",
 				"Powder": "Affected by Overcoat",
-				"Bullet": "Affected by Bulletproof",
-				"Heal": "It's a healing move",
-				"FailCopycat": "Fails if the target is already under a Copycat effect",
-				"FailMimic": "Fails if the target is already under a Mimic effect",
-				"FailInstruct": "Fails if the target is already under an Instruct effect",
-				"NoMultiHit": "Can't be used in a multi-hit combo",
-				"NoEffectiveness": "Ignores type effectiveness",
+				"Pressure": "May cause wild pokemon to call for help",
+				"Protect": "Affected by Protect",
+				"Punch": "Affected by Iron Fist",
+				"Recharge": "Recharges on the following turn",
+				"Reflect": "Affected by Reflect",
 				"SheerForce": "Affected by Sheer Force",
 				"Slicing": "Affected by Tinted Lens",
-				"Wind": "Affected by Gale Wings",
-				"CantUseTwice": "Can't be used twice in a row"
+				"Snatch": "Affected by Snatch",
+				"Sound": "Affected by Soundproof",
+				"Wind": "Affected by Gale Wings"
 			},
+			"Flinch": "Has a {{chance}}% chance to flinch",
+			"Healing": "Heals {{drain}}% Max HP",
 			"Inflict": {
 				"1": "{{chance}}% chance to inflict paralysis",
-				"2": "{{chance}}% chance to inflict sleep",
-				"3": "{{chance}}% chance to inflict freezing",
-				"4": "{{chance}}% chance to inflict burn",
-				"5": "{{chance}}% chance to inflict poisoning",
-				"5a": "{{chance}}% chance to inflict badly poisoning",
-				"6": "{{chance}}% chance to inflict confusion",
-				"7": "{{chance}}% chance to inflict infatuation",
-				"8": "{{chance}}% chance to inflict wrap/trapped",
-				"9": "A sleeper loses 1/4 HP every turn",
 				"12": "It enrages the foe, making it incapable of using the same move successively",
 				"13": "Disable the foe's last move",
 				"14": "Makes the target yawn and fall asleep next turn",
@@ -3273,23 +952,2356 @@
 				"17": "Enables the user to hit a Ghost type with any type of move",
 				"18": "{{chance}}% to steal some HP from the target every turn",
 				"19": "It prevents the foe from using its held item",
+				"2": "{{chance}}% chance to inflict sleep",
 				"20": "Both user and foe faint in 3 turns",
 				"21": "Lays roots that restore HP. The user can't switch out",
 				"24": "Prevents the target from using sound-based moves for two turns",
+				"3": "{{chance}}% chance to inflict freezing",
+				"4": "{{chance}}% chance to inflict burn",
 				"42": "The target becomes weaker to Fire-type moves",
 				"46": "Inflicts 1/8 of the target's maximum HP (1/4 if Steel or Water type) as damage per turn",
-				"47": "{{chance}}% to either poison the target, paralyze it, or make it drowsy"
+				"47": "{{chance}}% to either poison the target, paralyze it, or make it drowsy",
+				"5": "{{chance}}% chance to inflict poisoning",
+				"5a": "{{chance}}% chance to inflict badly poisoning",
+				"6": "{{chance}}% chance to inflict confusion",
+				"7": "{{chance}}% chance to inflict infatuation",
+				"8": "{{chance}}% chance to inflict wrap/trapped",
+				"9": "A sleeper loses 1/4 HP every turn"
 			},
-			"Max Power": "Max Power",
 			"Max Move": "Max Move",
-			"Z Move": "Z Move",
+			"Max Power": "Max Power",
+			"MaxHits": "Strikes {{max_hits}} times at most",
+			"MinHits": "Strikes at least {{min_hits}} times",
+			"Original_Type": "Original type: {{type}}",
+			"PP": {
+				"False": "It's a gimmick move, therefore PP is not used",
+				"True": "Move has {{pp}} PP"
+			},
+			"Power": "Move has {{power}} base power",
+			"Priority": "Move has {{priority:+}} priority",
+			"Recoil": "Has a {{damage}}% of recoil",
+			"Stat": {
+				"Accuracy": "{{chance}}% for {{stages:+}} accuracy stages",
+				"All": "{{chance}}% for ATK{{stages:+}}, DEF{{stages:+}}, SPA{{stages:+}}, SPD{{stages:+}}, SPE{{stages:+}}",
+				"Attack": "{{chance}}% for {{stages:+}} attack stages",
+				"Defense": "{{chance}}% for {{stages:+}} defense stages",
+				"Evasiveness": "{{chance}}% for {{stages:+}} evasion stages",
+				"Sp_Atk": "{{chance}}% for {{stages:+}} sp. attack stages",
+				"Sp_Def": "{{chance}}% for {{stages:+}} sp. defense stages",
+				"Speed": "{{chance}}% for {{stages:+}} speed stages"
+			},
+			"Target": {
+				"0": "May affect anyone adjacent to the user",
+				"1": "May affect the user or an adjacent ally",
+				"10": "Affects all Pokémon on the field",
+				"11": "Affects all foes",
+				"12": "Affects the user's side and all allies",
+				"13": "Increased damage dealt by the foe's last attack",
+				"2": "Affects an adjacent ally",
+				"3": "May affect any adjacent foe, but not allies",
+				"4": "Affects all Pokémon adjacent to the user",
+				"5": "Affects all adjactent foes but not allies",
+				"6": "Affects the user and all allies",
+				"7": "Affects the user",
+				"8": "ffects all Pokemon on the field",
+				"9": "After is finished, the user becomes confused due to fatigue"
+			},
 			"Z Effect": "Z Effect",
+			"Z Move": "Z Move",
 			"Z Power": "Z Power"
 		},
-		"Category": {
-			"Physical": "Physical",
-			"Special": "Special",
-			"Status": "Status"
+		"Type": {
+			"Bug": {
+				"MaxEffect": "Decreases the Special Attack of the target and its allies by one stage.",
+				"MaxMove": "Max Flutterby",
+				"Name": "Bug",
+				"ZMove": "Savage Spin-Out"
+			},
+			"Dark": {
+				"MaxEffect": "Decreases the Special Defense of the target and its allies by one stage.",
+				"MaxMove": "Max Darkness",
+				"Name": "Dark",
+				"ZMove": "Black Hole Eclipse"
+			},
+			"Dragon": {
+				"MaxEffect": "Decreases the Attack of the target and its allies by one stage.",
+				"MaxMove": "Max Wyrmwind",
+				"Name": "Dragon",
+				"ZMove": "Devastating Drake"
+			},
+			"Electric": {
+				"MaxEffect": "Creates Electric Terrain for five turns.",
+				"MaxMove": "Max Lightning",
+				"Name": "Electric",
+				"ZMove": "Gigavolt Havoc"
+			},
+			"Fairy": {
+				"MaxEffect": "Creates Misty Terrain for five turns.",
+				"MaxMove": "Max Starfall",
+				"Name": "Fairy",
+				"ZMove": "Twinkle Tackle"
+			},
+			"Fighting": {
+				"MaxEffect": "Increases the Attack of the user and its allies by one stage.",
+				"MaxMove": "Max Knuckle",
+				"Name": "Fighting",
+				"ZMove": "All-Out Pummeling"
+			},
+			"Fire": {
+				"MaxEffect": "Creates harsh sunlight for five turns.",
+				"MaxMove": "Max Flare",
+				"Name": "Fire",
+				"ZMove": "Inferno Overdrive"
+			},
+			"Flying": {
+				"MaxEffect": "Increases the Speed of the user and its allies by one stage.",
+				"MaxMove": "Max Airstream",
+				"Name": "Flying",
+				"ZMove": "Supersonic Skystrike"
+			},
+			"Ghost": {
+				"MaxEffect": "Decreases the Defense of the target and its allies by one stage.",
+				"MaxMove": "Max Phantasm",
+				"Name": "Ghost",
+				"ZMove": "Never-Ending Nightmare"
+			},
+			"Grass": {
+				"MaxEffect": "Creates Grassy Terrain for five turns.",
+				"MaxMove": "Max Overgrowth",
+				"Name": "Grass",
+				"ZMove": "Bloom Doom"
+			},
+			"Ground": {
+				"MaxEffect": "Increases the Special Defense of the user and its allies by one stage",
+				"MaxMove": "Max Quake",
+				"Name": "Ground",
+				"ZMove": "Tectonic Rage"
+			},
+			"Ice": {
+				"MaxEffect": "Creates hail for five turns.",
+				"MaxMove": "Max Hailstorm",
+				"Name": "Ice",
+				"ZMove": "Subzero Slammer"
+			},
+			"Normal": {
+				"MaxEffect": "Decreases the Speed of the target and its allies by one stage.",
+				"MaxMove": "Max Strike",
+				"Name": "Normal",
+				"ZMove": "Breakneck Blitz"
+			},
+			"Poison": {
+				"MaxEffect": "Increases the Special Attack of the user and its allies by one stage.",
+				"MaxMove": "Max Ooze",
+				"Name": "Poison",
+				"ZMove": "Acid Downpour"
+			},
+			"Psychic": {
+				"MaxEffect": "Creates Psychic Terrain for five turns.",
+				"MaxMove": "Max Mindstorm",
+				"Name": "Psychic",
+				"ZMove": "Shattered Psyche"
+			},
+			"Rock": {
+				"MaxEffect": "Creates a sandstorm for five turns.",
+				"MaxMove": "Max Rockfall",
+				"Name": "Rock",
+				"ZMove": "Continental Crush"
+			},
+			"Steel": {
+				"MaxEffect": "Increases the Defense of the user and its allies by one stage.",
+				"MaxMove": "Max Steelspike",
+				"Name": "Steel",
+				"ZMove": "Corkscrew Crash"
+			},
+			"Water": {
+				"MaxEffect": "Creates rain for five turns.",
+				"MaxMove": "Max Geyser",
+				"Name": "Water",
+				"ZMove": "Hydro Vortex"
+			}
+		},
+		"Z-Effect": {
+			"0": {
+				"Long": "Calls a Z-Move",
+				"Short": "Z-Move"
+			},
+			"1": {
+				"Long": "No effect",
+				"Short": "None"
+			},
+			"10": {
+				"Long": "Raises Speed by 1 stage",
+				"Short": "Speed ↑"
+			},
+			"11": {
+				"Long": "Raises Speed by 2 stages",
+				"Short": "Speed ↑↑"
+			},
+			"12": {
+				"Long": "Raises Speed by 2 stages, calls a Z-move",
+				"Short": "Speed ↑↑"
+			},
+			"13": {
+				"Long": "Raises accuracy by 1 stage",
+				"Short": "Accuracy ↑"
+			},
+			"14": {
+				"Long": "Raises accuracy by 1 stage, calls a Z-move",
+				"Short": "Accuracy ↑"
+			},
+			"15": {
+				"Long": "Raises evasiveness by 1 stage",
+				"Short": "Evasiveness ↑"
+			},
+			"16": {
+				"Long": "Raises Attack, Defense, Sp. Atk, Sp. Def, and Speed by 1 stage",
+				"Short": "Stats ↑"
+			},
+			"17": {
+				"Long": "Boosts critical-hit ratio by 2 stages",
+				"Short": "Boosts critical-hit ratio"
+			},
+			"18": {
+				"Long": "Resets user's lowered stats",
+				"Short": "Reset Stats"
+			},
+			"19": {
+				"Long": "Fully restores user's HP",
+				"Short": "Restores HP"
+			},
+			"2": {
+				"Long": "Raises the user's Attack by 1 stage",
+				"Short": "Attack ↑"
+			},
+			"20": {
+				"Long": "Fully restores switched-in ally's HP",
+				"Short": "Restores replacement's HP"
+			},
+			"21": {
+				"Long": "User becomes center of attention",
+				"Short": "Center of attention"
+			},
+			"22": {
+				"Long": "Fully restores user's HP (Ghost-type)\nRaises Attack by 1 stage (non Ghost-type)",
+				"Short": "Changes depending on the type"
+			},
+			"3": {
+				"Long": "Raises the user's Attack by 3 stage",
+				"Short": "Attack ↑↑↑"
+			},
+			"4": {
+				"Long": "Raises the user's Attack by 2 stage, calls a Z Move",
+				"Short": "Attack ↑↑"
+			},
+			"5": {
+				"Long": "Raises Defense by 1 stage",
+				"Short": "Defense ↑"
+			},
+			"6": {
+				"Long": "Raises Special Attack by 1 stage",
+				"Short": "Special Attack ↑"
+			},
+			"7": {
+				"Long": "Raises Special Attack by 2 stages",
+				"Short": "Special Attack ↑↑"
+			},
+			"8": {
+				"Long": "Raises Special Defense by 1 stage",
+				"Short": "Special Defense ↑"
+			},
+			"9": {
+				"Long": "Raises Special Defense by 2 stages",
+				"Short": "Special Defense ↑↑"
+			}
+		}
+	},
+	"commands": {
+		"afk": {
+			"command_description": "Check if a user is AFK.",
+			"command_name": "afk",
+			"params": {
+				"user": {
+					"parameter_description": "User, by default you",
+					"parameter_name": "user"
+				}
+			}
+		},
+		"auto": {
+			"group": {
+				"proxy": {
+					"command_description": "Set the auto for a proxy.",
+					"command_name": "proxy",
+					"params": {
+						"proxy": {
+							"parameter_description": "Proxy to set the auto tag for, by default None",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"shared": {
+					"command_description": "Set the auto for a shared proxy.",
+					"command_name": "shared",
+					"params": {
+						"proxy": {
+							"parameter_description": "Shared proxy to set the auto tag for",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"variant": {
+					"command_description": "Set the auto for a variant.",
+					"command_name": "variant",
+					"params": {
+						"proxy": {
+							"parameter_description": "Base proxy of the variant",
+							"parameter_name": "proxy"
+						},
+						"variant": {
+							"parameter_description": "Variant to set the auto tag for",
+							"parameter_name": "variant"
+						}
+					}
+				}
+			},
+			"group_description": "Set the auto tag for a proxy.",
+			"group_entries": {
+				"set": "Auto tag has been set for {{channel.mention}}.",
+				"clear": "Auto tag has been removed for {{channel.mention}}.",
+				"not_set": "Auto tag is not set for {{channel.mention}}."
+			},
+			"group_name": "auto"
+		},
+		"avatar": {
+			"group": {
+				"proxy": {
+					"command_description": "Show or set the avatar for a proxy.",
+					"command_name": "proxy",
+					"params": {
+						"avatar": {
+							"parameter_description": "Image to set, by default shows current",
+							"parameter_name": "avatar"
+						},
+						"proxy": {
+							"parameter_description": "Proxy to set the avatar for",
+							"parameter_name": "proxy"
+						},
+						"url": {
+							"parameter_description": "URL to set, by default None",
+							"parameter_name": "url"
+						}
+					}
+				},
+				"shared": {
+					"command_description": "Set the image for a proxy.",
+					"command_name": "shared",
+					"params": {
+						"avatar": {
+							"parameter_description": "Image to set, by default None",
+							"parameter_name": "avatar"
+						},
+						"proxy": {
+							"parameter_description": "Proxy to set the image for",
+							"parameter_name": "proxy"
+						},
+						"url": {
+							"parameter_description": "Image URL, by default None",
+							"parameter_name": "url"
+						}
+					}
+				},
+				"variant": {
+					"command_description": "Set the image for a variant.",
+					"command_name": "variant",
+					"params": {
+						"avatar": {
+							"parameter_description": "Image to set, by default None",
+							"parameter_name": "avatar"
+						},
+						"proxy": {
+							"parameter_description": "Base proxy of the variant",
+							"parameter_name": "proxy"
+						},
+						"url": {
+							"parameter_description": "URL to set, by default None",
+							"parameter_name": "url"
+						},
+						"variant": {
+							"parameter_description": "Variant to set the image for",
+							"parameter_name": "variant"
+						}
+					}
+				}
+			},
+			"group_description": "Set avatar for a proxy.",
+			"group_entries": {
+				"set": "Avatar set for {{proxy}}.",
+				"not_set": "Avatar not set for {{proxy}}.",
+				"no_nsfw": "NSFW avatars are not allowed in this channel."
+			},
+			"group_name": "avatar"
+		},
+		"birthday": {
+			"group": {
+				"proxy": {
+					"command_description": "Set the birthday for a proxy.",
+					"command_name": "proxy",
+					"params": {
+						"birthday": {
+							"parameter_description": "Birthday to set, by default None",
+							"parameter_name": "birthday"
+						},
+						"proxy": {
+							"parameter_description": "Proxy to set the birthday for",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"shared": {
+					"command_description": "Set the birthday for a shared proxy.",
+					"command_name": "shared",
+					"params": {
+						"birthday": {
+							"parameter_description": "Birthday to set",
+							"parameter_name": "birthday"
+						},
+						"proxy": {
+							"parameter_description": "Proxy to set the birthday for",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"variant": {
+					"command_description": "Set the birthday for a proxy variant",
+					"command_name": "variant",
+					"params": {
+						"birthday": {
+							"parameter_description": "Birthday to set, by default None",
+							"parameter_name": "birthday"
+						},
+						"proxy": {
+							"parameter_description": "Base proxy of the variant",
+							"parameter_name": "proxy"
+						},
+						"variant": {
+							"parameter_description": "Variant to set the birthday for",
+							"parameter_name": "variant"
+						}
+					}
+				}
+			},
+			"group_description": "Set birthday for a proxy.",
+			"group_entries": {
+				"set": "Birthday set as {{birthday}} for {{proxy}}.",
+				"clear": "Birthday cleared for {{proxy}}."
+			},
+			"group_name": "birthday"
+		},
+		"check_permissions": {
+			"command_description": "Check permissions of the bot.",
+			"command_name": "check_permissions"
+		},
+		"color": {
+			"group": {
+				"proxy": {
+					"command_description": "Set a color for a proxy.",
+					"command_name": "proxy",
+					"params": {
+						"color": {
+							"parameter_description": "Color, by default None",
+							"parameter_name": "color"
+						},
+						"proxy": {
+							"parameter_description": "Proxy to set the color for",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"shared": {
+					"command_description": "Set the color for a proxy.",
+					"command_name": "shared",
+					"params": {
+						"color": {
+							"parameter_description": "Color to set, by default None",
+							"parameter_name": "color"
+						},
+						"proxy": {
+							"parameter_description": "Proxy to set the color for",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"variant": {
+					"command_description": "Change the color of a variant.",
+					"command_name": "variant",
+					"params": {
+						"color": {
+							"parameter_description": "Color to set, by default None",
+							"parameter_name": "color"
+						},
+						"proxy": {
+							"parameter_description": "Base proxy",
+							"parameter_name": "proxy"
+						},
+						"variant": {
+							"parameter_description": "Variant to change the color for",
+							"parameter_name": "variant"
+						}
+					}
+				}
+			},
+			"group_entries": {},
+			"group_description": "Set color for a proxy.",
+			"group_name": "color"
+		},
+		"convert": {
+			"group": {
+				"proxy": {
+					"group": {
+						"shared": {
+							"command_description": "Shares your proxy with all server/dm",
+							"command_name": "shared",
+							"params": {
+								"proxy": {
+									"parameter_description": "Original Proxy",
+									"parameter_name": "proxy"
+								}
+							}
+						},
+						"variant": {
+							"command_description": "Convert a proxy to a variant of another proxy.",
+							"command_name": "variant",
+							"params": {
+								"base": {
+									"parameter_description": "Base Proxy",
+									"parameter_name": "base"
+								},
+								"original": {
+									"parameter_description": "Original Proxy",
+									"parameter_name": "original"
+								}
+							}
+						}
+					},
+					"group_entries": {
+						"already_proxy": "Variant is already a proxy.",
+						"already_variant": "Proxy is already a variant.",
+						"set": "Proxy is now a variant of {{base}}.",
+						"done": "{{variant}} is now a proxy."
+					},
+					"group_description": "Convert a proxy to a variant or shared proxy.",
+					"group_name": "proxy"
+				},
+				"shared": {
+					"group": {
+						"proxy": {
+							"command_description": "Convert a shared proxy to a personal one.",
+							"command_name": "proxy",
+							"params": {
+								"proxy": {
+									"parameter_description": "Shared Proxy to copy",
+									"parameter_name": "proxy"
+								}
+							}
+						},
+						"variant": {
+							"command_description": "Convert a shared proxy to a personal one.",
+							"command_name": "variant",
+							"params": {
+								"base": {
+									"parameter_description": "Base Proxy to have as parent",
+									"parameter_name": "base"
+								},
+								"proxy": {
+									"parameter_description": "Shared Proxy to copy",
+									"parameter_name": "proxy"
+								}
+							}
+						}
+					},
+					"group_entries": {
+						"already_proxy": "Variant is already a proxy.",
+						"already_variant": "Proxy is already a variant.",
+						"set": "Proxy is now a variant of {{base}}.",
+						"done": "{{variant}} is now a proxy."
+					},
+					"group_description": "Convert a shared  to a variant or proxy.",
+					"group_name": "shared"
+				},
+				"variant": {
+					"group": {
+						"proxy": {
+							"command_description": "Convert a variant to a proxy.",
+							"command_name": "proxy",
+							"params": {
+								"proxy": {
+									"parameter_description": "Base proxy of the variant",
+									"parameter_name": "proxy"
+								},
+								"variant": {
+									"parameter_description": "Variant to convert",
+									"parameter_name": "variant"
+								}
+							}
+						},
+						"shared": {
+							"command_description": "Shares your variant with all server/dm",
+							"command_name": "shared",
+							"params": {
+								"proxy": {
+									"parameter_description": "Base proxy of the variant",
+									"parameter_name": "proxy"
+								},
+								"variant": {
+									"parameter_description": "Variant to convert",
+									"parameter_name": "variant"
+								}
+							}
+						}
+					},
+					"group_description": "Convert a variant to a proxy or shared.",
+					"group_entries": {
+						"already_proxy": "Variant is already a proxy.",
+						"already_variant": "Proxy is already a variant.",
+						"set": "Proxy is now a variant of {{base}}.",
+						"done": "{{variant}} is now a proxy."
+					},
+					"group_name": "variant"
+				}
+			},
+			"group_description": "Convert a proxy to a variant or shared proxy.",
+			"group_name": "convert"
+		},
+		"create": {
+			"group": {
+				"proxy": {
+					"command_description": "Create a new proxy.",
+					"command_name": "proxy",
+					"params": {
+						"image": {
+							"parameter_description": "Image, by default None",
+							"parameter_name": "image"
+						},
+						"name": {
+							"parameter_description": "Name of the proxy",
+							"parameter_name": "name"
+						},
+						"prefixes": {
+							"parameter_description": "Prefixes e.g. A:text, |text|, etc.",
+							"parameter_name": "prefixes"
+						},
+						"url": {
+							"parameter_description": "URL, by default None",
+							"parameter_name": "url"
+						}
+					}
+				},
+				"shared": {
+					"command_description": "Create a new shared proxy.",
+					"command_name": "shared",
+					"params": {
+						"image": {
+							"parameter_description": "Image to set, by default None",
+							"parameter_name": "image"
+						},
+						"name": {
+							"parameter_description": "Name of the proxy",
+							"parameter_name": "name"
+						},
+						"url": {
+							"parameter_description": "Image URL, by default None",
+							"parameter_name": "url"
+						}
+					}
+				},
+				"variant": {
+					"command_description": "Create a new variant for a proxy.",
+					"command_name": "variant",
+					"params": {
+						"image": {
+							"parameter_description": "Image for the variant",
+							"parameter_name": "image"
+						},
+						"name": {
+							"parameter_description": "Name of the variant",
+							"parameter_name": "name"
+						},
+						"prefixes": {
+							"parameter_description": "Prefixes e.g. A:text, |text|, etc.",
+							"parameter_name": "prefixes"
+						},
+						"proxy": {
+							"parameter_description": "Proxy to create the variant for",
+							"parameter_name": "proxy"
+						},
+						"url": {
+							"parameter_description": "URL for the image, by default None",
+							"parameter_name": "url"
+						}
+					}
+				}
+			},
+			"group_description": "Create a new proxy.",
+			"group_entries": {
+				"size": "Character image size cannot be more than {{size}}, use a server with higher limits."
+			},
+			"group_name": "create"
+		},
+		"delete": {
+			"group": {
+				"proxy": {
+					"command_description": "Deletes a proxy.",
+					"command_name": "proxy",
+					"params": {
+						"proxy": {
+							"parameter_description": "Proxy to delete",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"shared": {
+					"command_description": "Delete a proxy",
+					"command_name": "shared",
+					"params": {
+						"proxy": {
+							"parameter_description": "Proxy to delete",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"variant": {
+					"command_description": "Deletes a variant from a proxy.",
+					"command_name": "variant",
+					"params": {
+						"proxy": {
+							"parameter_description": "Proxy to delete the variant from",
+							"parameter_name": "proxy"
+						},
+						"variant": {
+							"parameter_description": "Variant to delete",
+							"parameter_name": "variant"
+						}
+					}
+				}
+			},
+			"group_description": "Delete a proxy.",
+			"group_entries": {
+				"count": "Deleted {{count}} proxies."
+			},
+			"group_name": "delete"
+		},
+		"description": {
+			"group": {
+				"proxy": {
+					"command_description": "Set the description for a proxy.",
+					"command_name": "proxy",
+					"params": {
+						"proxy": {
+							"parameter_description": "Proxy to set the description for",
+							"parameter_name": "proxy"
+						},
+						"text": {
+							"parameter_description": "Description, by default None",
+							"parameter_name": "text"
+						}
+					}
+				},
+				"shared": {
+					"command_description": "Set the description for a proxy.",
+					"command_name": "shared",
+					"params": {
+						"proxy": {
+							"parameter_description": "Proxy to set the description for",
+							"parameter_name": "proxy"
+						},
+						"text": {
+							"parameter_description": "Description, by default None",
+							"parameter_name": "text"
+						}
+					}
+				},
+				"variant": {
+					"command_description": "Set the description for a proxy's variant",
+					"command_name": "variant",
+					"params": {
+						"proxy": {
+							"parameter_description": "Base proxy of the variant",
+							"parameter_name": "proxy"
+						},
+						"text": {
+							"parameter_description": "Description, by default None",
+							"parameter_name": "text"
+						},
+						"variant": {
+							"parameter_description": "Variant to set the description for",
+							"parameter_name": "variant"
+						}
+					}
+				}
+			},
+			"group_description": "Set the description for a proxy.",
+			"group_entries": {},
+			"group_name": "description"
+		},
+		"detail": {
+			"group": {
+				"proxy": {
+					"command_description": "Detail a proxy. Old way of editing proxies.",
+					"command_name": "proxy",
+					"params": {
+						"birthday": {
+							"parameter_description": "The birthday of the proxy.",
+							"parameter_name": "birthday"
+						},
+						"color": {
+							"parameter_description": "The color of the proxy.",
+							"parameter_name": "color"
+						},
+						"description": {
+							"parameter_description": "The description of the proxy.",
+							"parameter_name": "description"
+						},
+						"group": {
+							"parameter_description": "The group of the proxy.",
+							"parameter_name": "group"
+						},
+						"nickname": {
+							"parameter_description": "The nickname of the proxy.",
+							"parameter_name": "nickname"
+						},
+						"proxy": {
+							"parameter_description": "Proxy to detail",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"shared": {
+					"command_description": "Detail a proxy.",
+					"command_name": "shared",
+					"params": {
+						"birthday": {
+							"parameter_description": "The birthday of the proxy.",
+							"parameter_name": "birthday"
+						},
+						"color": {
+							"parameter_description": "The color of the proxy.",
+							"parameter_name": "color"
+						},
+						"description": {
+							"parameter_description": "The description of the proxy.",
+							"parameter_name": "description"
+						},
+						"group": {
+							"parameter_description": "The group of the proxy.",
+							"parameter_name": "group"
+						},
+						"nickname": {
+							"parameter_description": "The nickname of the proxy.",
+							"parameter_name": "nickname"
+						},
+						"proxy": {
+							"parameter_description": "Proxy to detail",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"variant": {
+					"command_description": "Detail a proxy. Old way of editing proxies.",
+					"command_name": "variant",
+					"params": {
+						"birthday": {
+							"parameter_description": "The birthday of the variant.",
+							"parameter_name": "birthday"
+						},
+						"color": {
+							"parameter_description": "The color of the variant.",
+							"parameter_name": "color"
+						},
+						"description": {
+							"parameter_description": "The description of the variant.",
+							"parameter_name": "description"
+						},
+						"group": {
+							"parameter_description": "The group of the variant.",
+							"parameter_name": "group"
+						},
+						"nickname": {
+							"parameter_description": "The nickname of the variant.",
+							"parameter_name": "nickname"
+						},
+						"proxy": {
+							"parameter_description": "Base proxy of the variant",
+							"parameter_name": "proxy"
+						},
+						"variant": {
+							"parameter_description": "Variant to detail",
+							"parameter_name": "variant"
+						}
+					}
+				}
+			},
+			"group_description": "Detail a proxy.",
+			"group_entries": {},
+			"group_name": "detail"
+		},
+		"edit": {
+			"group_description": "Edit a proxy message",
+			"group_name": "edit",
+			"groups": {
+				"embed": {
+					"command_description": "Edit the embed of a proxy message.",
+					"command_name": "embed",
+					"params": {
+						"proxy": {
+							"parameter_description": "Proxy to edit",
+							"parameter_name": "proxy"
+						},
+						"embed": {
+							"parameter_description": "Embed to edit",
+							"parameter_name": "embed"
+						},
+						"message": {
+							"parameter_description": "Message to edit",
+							"parameter_name": "message"
+						}
+					}
+				}
+			},
+			"group_entries": {
+				"not_associated": "This message is not associated with your account.",
+				"not_found": "No proxy usage in this message.",
+				"not_same_channel": "This message is not in the same channel as this command.",
+				"not_proxy_message": "This message is not a proxy message, can't edit."
+			},
+			"params": {
+				"proxy": {
+					"parameter_description": "Proxy to edit",
+					"parameter_name": "proxy"
+				},
+				"message": {
+					"parameter_description": "Message to edit",
+					"parameter_name": "message"
+				}
+			}
+		},
+		"exec": {
+			"command_description": "Execute a command.",
+			"command_name": "exec",
+			"params": {
+				"command": {
+					"parameter_description": "Command to execute",
+					"parameter_name": "command"
+				},
+				"text": {
+					"parameter_description": "Text to execute the command in",
+					"parameter_name": "text"
+				}
+			},
+			"entries": {
+				"command_not_found": "Command not found: {{command}}"
+			}
+		},
+		"export": {
+			"group": {
+				"proxy": {
+					"command_description": "Export your proxies to a JSON file",
+					"command_name": "proxy",
+					"params": {
+						"format": {
+							"parameter_description": "Export Format, by default D-Proxy's",
+							"parameter_name": "format"
+						},
+						"local": {
+							"parameter_description": "If you want to export using local looks, by default True",
+							"parameter_name": "local"
+						},
+						"new_token": {
+							"parameter_description": "If you want to generate a new token, by default False",
+							"parameter_name": "new_token"
+						}
+					}
+				},
+				"variant": {
+					"command_description": "Export your proxies to a JSON file",
+					"command_name": "variant",
+					"params": {
+						"format": {
+							"parameter_description": "Export Format, by default D-Proxy's",
+							"parameter_name": "format"
+						},
+						"local": {
+							"parameter_description": "Export local proxies, by default False",
+							"parameter_name": "local"
+						},
+						"new_token": {
+							"parameter_description": "Generate a new token, by default False",
+							"parameter_name": "new_token"
+						},
+						"proxy": {
+							"parameter_description": "Proxy to export from",
+							"parameter_name": "proxy"
+						}
+					}
+				}
+			},
+			"group_description": "Export your proxies to a JSON file.",
+			"group_entries": {
+				"exporting_title": "Exporting proxies...",
+				"exporting_description": "This may take a while depending on the number of proxies you have.",
+				"token": "Token",
+				"token_warning": "Keep this token safe, you won't be able to import your proxies without it.",
+				"invalid_token": "Invalid token.",
+				"import_own_proxies": "You can't import your own characters.",
+				"too_many_proxies": "You have too many characters, please delete some before importing."
+			},
+			"group_name": "export"
+		},
+		"find": {
+			"group": {
+				"proxy": {
+					"command_description": "Find proxies by name.",
+					"command_name": "proxy",
+					"params": {
+						"text": {
+							"parameter_description": "Text to search for",
+							"parameter_name": "text"
+						}
+					}
+				},
+				"shared": {
+					"command_description": "Find shared proxies by name.",
+					"command_name": "shared",
+					"params": {
+						"text": {
+							"parameter_description": "Text to search for",
+							"parameter_name": "text"
+						}
+					}
+				},
+				"variant": {
+					"command_description": "Find variants of a proxies by name.",
+					"command_name": "variant",
+					"params": {
+						"proxy": {
+							"parameter_description": "Proxy to find the variant from",
+							"parameter_name": "proxy"
+						},
+						"text": {
+							"parameter_description": "Text to find",
+							"parameter_name": "text"
+						}
+					}
+				}
+			},
+			"group_description": "Find proxies by name.",
+			"group_name": "find"
+		},
+		"group": {
+			"group": {
+				"proxy": {
+					"command_description": "Set the group for a proxy.",
+					"command_name": "proxy",
+					"params": {
+						"group": {
+							"parameter_description": "Group to set, by default None",
+							"parameter_name": "group"
+						},
+						"proxy": {
+							"parameter_description": "Proxy to set the group for",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"shared": {
+					"command_description": "Set the group for a shared proxy.",
+					"command_name": "shared",
+					"params": {
+						"group": {
+							"parameter_description": "Group to set, by default None",
+							"parameter_name": "group"
+						},
+						"proxy": {
+							"parameter_description": "Proxy to set the group for",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"variant": {
+					"command_description": "Set the group for a variant.",
+					"command_name": "variant",
+					"params": {
+						"group": {
+							"parameter_description": "Group to set, by default None",
+							"parameter_name": "group"
+						},
+						"proxy": {
+							"parameter_description": "Base proxy of the variant",
+							"parameter_name": "proxy"
+						},
+						"variant": {
+							"parameter_description": "Variant to set the group for",
+							"parameter_name": "variant"
+						}
+					}
+				}
+			},
+			"group_description": "Set the group for a proxy.",
+			"group_entries": {
+				"set": "Group set as {{group}} for {{proxy}}.",
+				"clear": "Group cleared for {{proxy}}."
+			},
+			"group_name": "group"
+		},
+		"import": {
+			"group": {
+				"proxy": {
+					"command_description": "Import proxies from a file or token",
+					"command_name": "proxy",
+					"params": {
+						"data": {
+							"parameter_description": "File to import from",
+							"parameter_name": "data"
+						},
+						"deleting_from_token": {
+							"parameter_description": "Delete from token after import",
+							"parameter_name": "deleting_from_token"
+						},
+						"token": {
+							"parameter_description": "Token to import from",
+							"parameter_name": "token"
+						},
+						"url": {
+							"parameter_description": "URL to import from",
+							"parameter_name": "url"
+						}
+					}
+				}
+			},
+			"group_description": "Import proxies from a file or token.",
+			"group_entries": {
+				"not_json_file_type": "File is not a JSON file.",
+				"importing_title": "Importing proxies...",
+				"nothing_new": "No new proxies to import, you brought {{count}} proxies",
+				"too_many_import": "Too many characters to import, please use a smaller file.",
+				"succesful_title": "Succesful import",
+				"succesful_import": "Succesfully imported {{count}} proxies."
+			},
+			"group_name": "import"
+		},
+		"latch": {
+			"command_description": "Enable or disable latch mode.",
+			"command_name": "latch",
+			"params": {
+				"auto_remove": {
+					"parameter_description": "Whether to keep the auto for current channel or not, by default True",
+					"parameter_name": "auto_remove"
+				},
+				"enable": {
+					"parameter_description": "Whether to enable or disable latch mode",
+					"parameter_name": "enable"
+				}
+			},
+			"entries": {
+				"enabled": "Latch mode is now enabled.",
+				"disabled": "Latch mode is now disabled."
+			}
+		},
+		"list": {
+			"group": {
+				"proxy": {
+					"command_description": "List all proxies.",
+					"command_name": "proxy",
+					"params": {
+						"group": {
+							"parameter_description": "Group to list proxies from, by default None",
+							"parameter_name": "group"
+						}
+					}
+				},
+				"shared": {
+					"command_description": "List all shared proxies.",
+					"command_name": "shared",
+					"params": {
+						"group": {
+							"parameter_description": "Group to list the proxies from, by default None",
+							"parameter_name": "group"
+						}
+					}
+				},
+				"variant": {
+					"command_description": "List all variants of a proxy.",
+					"command_name": "variant",
+					"params": {
+						"group": {
+							"parameter_description": "Group to list the variants from, by default None",
+							"parameter_name": "group"
+						},
+						"proxy": {
+							"parameter_description": "Proxy to list the variants from",
+							"parameter_name": "proxy"
+						}
+					}
+				}
+			},
+			"group_description": "List all proxies.",
+			"group_entries": {},
+			"group_name": "list"
+		},
+		"local": {
+			"group": {
+				"proxy": {
+					"command_description": "Set a local avatar and nickname for a proxy.",
+					"command_name": "proxy",
+					"params": {
+						"avatar": {
+							"parameter_description": "Image to set, by default None",
+							"parameter_name": "avatar"
+						},
+						"nickname": {
+							"parameter_description": "Nickname to set, by default None",
+							"parameter_name": "nickname"
+						},
+						"proxy": {
+							"parameter_description": "Proxy to set the local avatar and nickname for",
+							"parameter_name": "proxy"
+						},
+						"url": {
+							"parameter_description": "URL to set, by default None",
+							"parameter_name": "url"
+						}
+					}
+				},
+				"shared": {
+					"command_description": "Set the image for a proxy.",
+					"command_name": "shared",
+					"params": {
+						"avatar": {
+							"parameter_description": "Image to set, by default None",
+							"parameter_name": "avatar"
+						},
+						"nickname": {
+							"parameter_description": "Nickname to set, by default None",
+							"parameter_name": "nickname"
+						},
+						"proxy": {
+							"parameter_description": "Proxy to set the image for",
+							"parameter_name": "proxy"
+						},
+						"url": {
+							"parameter_description": "Image URL, by default None",
+							"parameter_name": "url"
+						}
+					}
+				},
+				"variant": {
+					"command_description": "Set the local avatar for a variant.",
+					"command_name": "variant",
+					"params": {
+						"avatar": {
+							"parameter_description": "Avatar to set, by default None",
+							"parameter_name": "avatar"
+						},
+						"nickname": {
+							"parameter_description": "Nickname to set, by default None",
+							"parameter_name": "nickname"
+						},
+						"proxy": {
+							"parameter_description": "Base proxy of the variant",
+							"parameter_name": "proxy"
+						},
+						"url": {
+							"parameter_description": "Image URL, by default None",
+							"parameter_name": "url"
+						},
+						"variant": {
+							"parameter_description": "Variant to set the info for",
+							"parameter_name": "variant"
+						}
+					}
+				}
+			},
+			"group_description": "Set a local avatar and nickname for a proxy.",
+			"group_entries": {
+				"set": "Local avatar and nickname set for {{proxy}}.",
+				"remove": "Local avatar and nickname removed for {{proxy}}."
+			},
+			"group_name": "local"
+		},
+		"nickname": {
+			"group": {
+				"proxy": {
+					"command_description": "Set a nickname for a proxy.",
+					"command_name": "proxy",
+					"params": {
+						"nickname": {
+							"parameter_description": "Nickname, by default None",
+							"parameter_name": "nickname"
+						},
+						"proxy": {
+							"parameter_description": "Proxy to set the nickname for",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"shared": {
+					"command_description": "Set the nickname for a shared proxy for you",
+					"command_name": "shared",
+					"params": {
+						"nickname": {
+							"parameter_description": "Nickname to set, by default None",
+							"parameter_name": "nickname"
+						},
+						"proxy": {
+							"parameter_description": "Proxy to set the nickname for",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"variant": {
+					"command_description": "Change the nickname of a variant.",
+					"command_name": "variant",
+					"params": {
+						"nickname": {
+							"parameter_description": "Nickname to set, by default None",
+							"parameter_name": "nickname"
+						},
+						"proxy": {
+							"parameter_description": "Base proxy of the variant",
+							"parameter_name": "proxy"
+						},
+						"variant": {
+							"parameter_description": "Variant to change the nickname for",
+							"parameter_name": "variant"
+						}
+					}
+				}
+			},
+			"group_description": "Set a nickname for a proxy.",
+			"group_entries": {
+				"set": "Nickname set for {{proxy}} to {{nickname}}.",
+				"remove": "Nickname removed for {{proxy}}."
+			},
+			"group_name": "nickname"
+		},
+		"npc": {
+			"command_description": "Create a NPC message using a slash command.",
+			"command_name": "npc",
+			"params": {
+				"emotion": {
+					"choices": {
+						"Angry": "Angry",
+						"Crying": "Crying",
+						"Determined": "Determined",
+						"Dizzy": "Dizzy",
+						"Happy": "Happy",
+						"Inspired": "Inspired",
+						"Joyous": "Joyous",
+						"Normal": "Normal",
+						"Pain": "Pain",
+						"Sad": "Sad",
+						"Shouting": "Shouting",
+						"Sigh": "Sigh",
+						"Special0": "Special0",
+						"Special1": "Special1",
+						"Special2": "Special2",
+						"Special3": "Special3",
+						"Stunned": "Stunned",
+						"Surprised": "Surprised",
+						"TearyEyed": "TearyEyed",
+						"Worried": "Worried"
+					},
+					"parameter_description": "Emotion to use, by default None",
+					"parameter_name": "emotion"
+				},
+				"franchise": {
+					"choices": {
+						"D&D": "D&D",
+						"Digimon": "Digimon",
+						"Palworld": "Palworld",
+						"Pokemon": "Pokemon",
+						"Pokemon Shiny": "Pokemon Shiny",
+						"Trainer": "Trainer"
+					},
+					"parameter_description": "Franchise to use for the NPC",
+					"parameter_name": "franchise"
+				},
+				"image": {
+					"parameter_description": "Image to use, by default None",
+					"parameter_name": "image"
+				},
+				"nickname": {
+					"parameter_description": "Nickname to use, by default same as NPC name",
+					"parameter_name": "nickname"
+				},
+				"npc": {
+					"parameter_description": "NPC to use, by default None",
+					"parameter_name": "npc"
+				},
+				"text": {
+					"parameter_description": "Text to use, by default Empty string",
+					"parameter_name": "text"
+				}
+			}
+		},
+		"nsfw": {
+			"group": {
+				"proxy": {
+					"command_description": "Set the nsfw for a proxy.",
+					"command_name": "proxy",
+					"params": {
+						"nsfw": {
+							"parameter_description": "NSFW, by default None",
+							"parameter_name": "nsfw"
+						},
+						"proxy": {
+							"parameter_description": "Proxy to set the nsfw tag for",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"shared": {
+					"command_description": "Tag a shared proxy as NSFW.",
+					"command_name": "shared",
+					"params": {
+						"nsfw": {
+							"parameter_description": "NSFW, by default switches the current value",
+							"parameter_name": "nsfw"
+						},
+						"proxy": {
+							"parameter_description": "Proxy to set the nsfw tag for",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"variant": {
+					"command_description": "Set the nsfw tag for a variant.",
+					"command_name": "variant",
+					"params": {
+						"nsfw": {
+							"parameter_description": "NSFW, by default None",
+							"parameter_name": "nsfw"
+						},
+						"proxy": {
+							"parameter_description": "Base proxy of the variant",
+							"parameter_name": "proxy"
+						},
+						"variant": {
+							"parameter_description": "Variant to set the nsfw tag for",
+							"parameter_name": "variant"
+						}
+					}
+				}
+			},
+			"group_description": "Set the nsfw tag for a proxy.",
+			"group_entries": {
+				"set": "NSFW tag is now set for {{proxy}}.",
+				"clear": "NSFW tag is now removed for {{proxy}}.",
+				"already_set": "NSFW tag is already set as True.",
+				"already_clear": "NSFW tag is already set as False"
+			},
+			"group_name": "nsfw"
+		},
+		"prefix": {
+			"group": {
+				"proxy": {
+					"command_description": "Set the prefixes for a proxy.",
+					"command_name": "proxy",
+					"params": {
+						"prefixes": {
+							"parameter_description": "Prefixes e.g. A:text, |text|, etc. by default None",
+							"parameter_name": "prefixes"
+						},
+						"proxy": {
+							"parameter_description": "Proxy to set the prefixes for",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"shared": {
+					"command_description": "Set the prefixes for a proxy.",
+					"command_name": "shared",
+					"params": {
+						"prefixes": {
+							"parameter_description": "Prefixes e.g. A:text, |text|, etc. by default None",
+							"parameter_name": "prefixes"
+						},
+						"proxy": {
+							"parameter_description": "Proxy to set the prefixes for",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"variant": {
+					"command_description": "Set the prefixes for a variant",
+					"command_name": "variant",
+					"params": {
+						"prefixes": {
+							"parameter_description": "Prefixes e.g. A:text, |text|, etc. by default None",
+							"parameter_name": "prefixes"
+						},
+						"proxy": {
+							"parameter_description": "Base proxy of the variant",
+							"parameter_name": "proxy"
+						},
+						"variant": {
+							"parameter_description": "Variant to set the prefixes for",
+							"parameter_name": "variant"
+						}
+					}
+				}
+			},
+			"group_description": "Set the prefixes for a proxy.",
+			"group_entries": {
+				"text": "text",
+				"set": "Prefixes set for {{proxy}}."
+			},
+			"group_name": "prefix"
+		},
+		"proxy": {
+			"command_description": "Disable proxies in a server",
+			"command_name": "proxy",
+			"entries": {
+				"True": "Proxies are now enabled in this server.",
+				"False": "Proxies are now disabled in this server."
+			},
+			"params": {
+				"enable": {
+					"parameter_description": "Enable or disable proxies, by default switches",
+					"parameter_name": "enable"
+				}
+			}
+		},
+		"prune": {
+			"group": {
+				"proxy": {
+					"command_description": "Prune proxies unused for a certain time.",
+					"command_name": "proxy",
+					"params": {
+						"before": {
+							"parameter_description": "Date to prune before, by default None",
+							"parameter_name": "before"
+						}
+					}
+				},
+				"shared": {
+					"command_description": "Prune proxies unused for a certain time.",
+					"command_name": "shared",
+					"params": {
+						"before": {
+							"parameter_description": "Date to prune before, by default None",
+							"parameter_name": "before"
+						}
+					}
+				},
+				"variant": {
+					"command_description": "Prune unused variants of a proxy for a certain time.",
+					"command_name": "variant",
+					"params": {
+						"before": {
+							"parameter_description": "Date to prune before, by default None",
+							"parameter_name": "before"
+						},
+						"proxy": {
+							"parameter_description": "Proxy to prune the variants from",
+							"parameter_name": "proxy"
+						}
+					}
+				}
+			},
+			"group_description": "Prune unused proxies for a certain time.",
+			"group_name": "prune"
+		},
+		"purge": {
+			"group": {
+				"proxy": {
+					"command_description": "Purge all of your data (except message logs)",
+					"command_name": "proxy",
+					"params": {
+						"confirmation": {
+							"parameter_description": "Confirmation, by default False",
+							"parameter_name": "confirmation"
+						}
+					}
+				},
+				"shared": {
+					"command_description": "Purge all of your data (except message logs)",
+					"command_name": "shared",
+					"params": {
+						"confirmation": {
+							"parameter_description": "Confirmation, by default False",
+							"parameter_name": "confirmation"
+						}
+					}
+				},
+				"variant": {
+					"command_description": "Remove all variants of your proxy",
+					"command_name": "variant",
+					"params": {
+						"confirmation": {
+							"parameter_description": "Confirmation, by default False",
+							"parameter_name": "confirmation"
+						},
+						"proxy": {
+							"parameter_description": "Proxy to remove the variants from",
+							"parameter_name": "proxy"
+						}
+					}
+				}
+			},
+			"group_description": "Purge all of your data (except message logs)",
+			"group_name": "purge"
+		},
+		"read": {
+			"group": {
+				"proxy": {
+					"command_description": "Read a proxy's information.",
+					"command_name": "proxy",
+					"params": {
+						"proxy": {
+							"parameter_description": "Proxy to read from",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"shared": {
+					"command_description": "Read a shared proxy.",
+					"command_name": "shared",
+					"params": {
+						"proxy": {
+							"parameter_description": "Proxy to read",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"variant": {
+					"command_description": "Read a variant from a proxy.",
+					"command_name": "variant",
+					"params": {
+						"proxy": {
+							"parameter_description": "Base proxy of the variant",
+							"parameter_name": "proxy"
+						},
+						"variant": {
+							"parameter_description": "Variant to read",
+							"parameter_name": "variant"
+						}
+					}
+				}
+			},
+			"group_description": "Read a proxy's information.",
+			"group_name": "read"
+		},
+		"rename": {
+			"group": {
+				"proxy": {
+					"command_description": "Set the name for a proxy.",
+					"command_name": "proxy",
+					"params": {
+						"name": {
+							"parameter_description": "Name to set",
+							"parameter_name": "name"
+						},
+						"proxy": {
+							"parameter_description": "Proxy to set the name for",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"shared": {
+					"command_description": "Set the name for a shared proxy.",
+					"command_name": "shared",
+					"params": {
+						"name": {
+							"parameter_description": "Name to set",
+							"parameter_name": "name"
+						},
+						"proxy": {
+							"parameter_description": "Proxy to set the name for",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"variant": {
+					"command_description": "Set the name for a variant of a proxy.",
+					"command_name": "variant",
+					"params": {
+						"name": {
+							"parameter_description": "Name to set",
+							"parameter_name": "name"
+						},
+						"proxy": {
+							"parameter_description": "Base proxy of the variant",
+							"parameter_name": "proxy"
+						},
+						"variant": {
+							"parameter_description": "Variant to set the name for",
+							"parameter_name": "variant"
+						}
+					}
+				}
+			},
+			"group_entries": {
+				"set": "Name set for {{old}} to {{new}}.",
+				"exists": "Name {{proxy}} already exists."
+			},
+			"group_description": "Set the name for a proxy.",
+			"group_name": "rename"
+		},
+		"roll": {
+			"command_description": "Roll a dice.",
+			"command_name": "roll",
+			"entries": {
+				"title": "Rolling {{expression}}",
+				"long_expression": "Rolling expression",
+				"invalid_expression": "Invalid expression, please use a valid one."
+			},
+			"params": {
+				"expression": {
+					"parameter_description": "Expression to roll",
+					"parameter_name": "expression"
+				}
+			}
+		},
+		"say": {
+			"command_description": "Say something.",
+			"command_name": "say",
+			"entries": {
+				"no_proxy_set": "No proxy set, please use /use or /set to set one."
+			},
+			"params": {
+				"text": {
+					"parameter_description": "Text to say",
+					"parameter_name": "text"
+				}
+			}
+		},
+		"send": {
+			"command_description": "Send a stored message",
+			"command_name": "send",
+			"params": {
+				"attachment": {
+					"parameter_description": "Attachment, by default None",
+					"parameter_name": "attachment"
+				},
+				"storage": {
+					"choices": {
+						"Global": "Global",
+						"Local": "Local"
+					},
+					"parameter_description": "Storage type, by default \"Local\"",
+					"parameter_name": "storage"
+				}
+			}
+		},
+		"set": {
+			"group": {
+				"proxy": {
+					"command_description": "Set a proxy as the current one.",
+					"command_name": "proxy",
+					"params": {
+						"proxy": {
+							"parameter_description": "Proxy to set",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"shared": {
+					"command_description": "Set a shared proxy as the current to use.",
+					"command_name": "shared",
+					"params": {
+						"proxy": {
+							"parameter_description": "Proxy to set as the current",
+							"parameter_name": "proxy"
+						}
+					}
+				},
+				"variant": {
+					"command_description": "Set a variant from a proxy for use.",
+					"command_name": "variant",
+					"params": {
+						"proxy": {
+							"parameter_description": "Proxy to set the variant for",
+							"parameter_name": "proxy"
+						},
+						"variant": {
+							"parameter_description": "Variant to set for use",
+							"parameter_name": "variant"
+						}
+					}
+				}
+			},
+			"group_description": "Set a proxy as the current one.",
+			"group_name": "set"
+		},
+		"settings": {
+			"command_description": "Show the settings page.",
+			"command_name": "settings",
+			"params": {
+				"menu": {
+					"choices": {
+						"Member": "Member",
+						"Server": "Server",
+						"User": "User"
+					},
+					"parameter_description": "Menu choice, by default None",
+					"parameter_name": "menu"
+				}
+			},
+			"entries": {
+				"base": {
+					"title": "Settings",
+					"description": "Here you can view and change your settings.",
+					"reset": "Reset",
+					"close": "Close Menu",
+					"back": "Back to Settings",
+					"options": {
+						"member": "Member",
+						"server": "Server",
+						"user": "User"
+					}
+				},
+				"user": {
+					"title": "User Settings",
+					"description": "For your account's settings.",
+					"time": {
+						"format": "%I:%M %p",
+						"title": "Time",
+						"updated": "Clock updated to GMT {{time:+}}",
+						"reset": "Removed time zone."
+					},
+					"user_settings": {
+						"label": "User Settings",
+						"options": {
+							"allow_non_nitro_emojis": {
+								"title": "Allow Non-Nitro Emojis",
+								"description": "Allows the bot to use non-nitro emojis."
+							},
+							"break_long_words": {
+								"title": "Break Long Words",
+								"description": "Breaks long words to fit in a message."
+							},
+							"break_on_hyphens": {
+								"title": "Break on Hyphens",
+								"description": "Breaks on hyphens to fit in a message."
+							},
+							"celebrate_birthday": {
+								"title": "Celebrate Birthday",
+								"description": "Whether to celebrate your birthday."
+							},
+							"drop_whitespace": {
+								"title": "Drop Whitespace",
+								"description": "Drops whitespace at the end of a message."
+							},
+							"embeds_in_json": {
+								"title": "Embeds in JSON",
+								"description": "Whether to send embeds in JSON format."
+							},
+							"fix_sentence_endings": {
+								"title": "Fix Sentence Endings",
+								"description": "Fixes sentence endings to have a period."
+							},
+							"patch_nitro_emojis": {
+								"title": "Patch Nitro Emojis",
+								"description": "Patches nitro emojis to be usable by the bot."
+							},
+							"patch_stickers": {
+								"title": "Patch Stickers",
+								"description": "Patches stickers to be usable by the bot."
+							},
+							"modern_replies": {
+								"title": "Modern Replies",
+								"description": "Whether to use modern replies."
+							},
+							"replace_whitespace": {
+								"title": "Replace Whitespace",
+								"description": "Replaces whitespace with a space."
+							},
+							"silent_mode": {
+								"title": "Silent Mode",
+								"description": "Whether to send messages silently."
+							},
+							"tts": {
+								"title": "TTS",
+								"description": "Whether to use TTS for messages."
+							},
+							"typo_correction": {
+								"title": "Typo Correction",
+								"description": "Allows fixing typos when doing *text"
+							}
+						}
+					},
+					"afk_schedule": {
+						"title": "AFK Schedule",
+						"description": "Set your AFK schedule.",
+						"format": "%I:00 %p",
+						"range_format": "From %I:00 %p to %I:59 %p",
+						"recently_disabled": "Recently Disabled AFK Schedule",
+						"recently_enabled": "Recently Enabled AFK Schedule"
+					}
+				},
+				"member": {
+					"title": "Member Settings",
+					"description": "For your account in this server.",
+					"member_settings": {
+						"label": "Member Settings",
+						"options": {
+							"disabled_guild": {
+								"title": "Disable in server",
+								"description": "Disable the bot in this server."
+							},
+							"latch_mode": {
+								"title": "Latch Mode (Auto-remove auto tag)",
+								"description": "Whether to remove the auto tag after sending a message."
+							}
+						}
+					},
+					"disable_channels": {
+						"title": "Disabled Channels",
+						"description": "Channels where the bot is disabled.",
+						"format": "{{channel.mention}} ({{channel.name}} - ID: {{channel.id}})",
+						"recently_disabled": "Recently Disabled Channels",
+						"recently_enabled": "Recently Enabled Channels"
+					},
+					"disable_categories": {
+						"title": "Disabled Categories",
+						"description": "Categories where the bot is disabled.",
+						"format": "{{category.mention}} ({{category.name}} - ID: {{category.id}})",
+						"recently_disabled": "Recently Disabled Categories",
+						"recently_enabled": "Recently Enabled Categories"
+					}
+				},
+				"server": {
+					"title": "Server Settings",
+					"description": "Settings for this server.",
+					"ban_roles": {
+						"title": "Banned Roles",
+						"label": "Banned Roles (Select again to unban)",
+						"format": "{{role.mention}} ({{role.name}} - ID: {{role.id}})",
+						"recently_banned": "Recently Banned Roles",
+						"recently_unbanned": "Recently Unbanned Roles"
+					},
+					"ban_users": {
+						"title": "Banned Users",
+						"label": "Banned Users (Select again to unban)",
+						"format": "{{m.mention}} ({{m.name}} - ID: {{m.id}})",
+						"recently_banned": "Recently Banned Users",
+						"recently_unbanned": "Recently Unbanned Users"
+					},
+					"enabled_commands": {
+						"label": "Enabled Commands",
+						"options": {
+							"allow_non_nitro_emojis": {
+								"title": "Allow Non-Nitro Emojis",
+								"description": "Allows the bot to use non-nitro emojis."
+							},
+							"patch_nitro_emojis": {
+								"title": "Patch Nitro Emojis",
+								"description": "Patches nitro emojis to be usable by the bot."
+							},
+							"patch_stickers": {
+								"title": "Patch Stickers",
+								"description": "Patches stickers to be usable by the bot."
+							},
+							"nsfw": {
+								"title": "NSFW",
+								"description": "Whether NSFW proxies are allowed in this server."
+							}
+						}
+					},
+					"prefix": {
+						"title": "Prefix",
+						"label": "Commands prefix",
+						"description": "Set the prefix for this server."
+					}
+				}
+			}
+		},
+		"store": {
+			"command_description": "Store a message to /send",
+			"command_name": "store",
+			"params": {
+				"storage": {
+					"choices": {
+						"Global": "Global",
+						"Local": "Local"
+					},
+					"parameter_description": "Storage type, by default \"Local\"",
+					"parameter_name": "storage"
+				}
+			}
+		},
+		"update": {
+			"group": {
+				"proxy": {
+					"command_description": "Update a proxy. Old way of updating proxies.",
+					"command_name": "proxy",
+					"params": {
+						"image": {
+							"parameter_description": "Image to set, by default None",
+							"parameter_name": "image"
+						},
+						"name": {
+							"parameter_description": "Name to set, by default same",
+							"parameter_name": "name"
+						},
+						"prefixes": {
+							"parameter_description": "Prefixes to set, by default same",
+							"parameter_name": "prefixes"
+						},
+						"proxy": {
+							"parameter_description": "Proxy to update",
+							"parameter_name": "proxy"
+						},
+						"url": {
+							"parameter_description": "URL to set, by default None",
+							"parameter_name": "url"
+						}
+					}
+				},
+				"shared": {
+					"command_description": "Update a shared proxy. Old way of updating proxies.",
+					"command_name": "shared",
+					"params": {
+						"image": {
+							"parameter_description": "Image to set, by default None",
+							"parameter_name": "image"
+						},
+						"name": {
+							"parameter_description": "The name of the proxy.",
+							"parameter_name": "name"
+						},
+						"prefixes": {
+							"parameter_description": "The prefixes of the proxy.",
+							"parameter_name": "prefixes"
+						},
+						"proxy": {
+							"parameter_description": "Proxy to update",
+							"parameter_name": "proxy"
+						},
+						"url": {
+							"parameter_description": "Image URL, by default None",
+							"parameter_name": "url"
+						}
+					}
+				},
+				"variant": {
+					"command_description": "Update a proxy variant. Old way of updating proxies.",
+					"command_name": "variant",
+					"params": {
+						"image": {
+							"parameter_description": "Image to set, by default None",
+							"parameter_name": "image"
+						},
+						"name": {
+							"parameter_description": "The name of the variant.",
+							"parameter_name": "name"
+						},
+						"prefixes": {
+							"parameter_description": "The prefixes of the variant.",
+							"parameter_name": "prefixes"
+						},
+						"proxy": {
+							"parameter_description": "Base proxy",
+							"parameter_name": "proxy"
+						},
+						"url": {
+							"parameter_description": "Image URL, by default None",
+							"parameter_name": "url"
+						},
+						"variant": {
+							"parameter_description": "Variant to update",
+							"parameter_name": "variant"
+						}
+					}
+				}
+			},
+			"group_description": "Update a proxy.",
+			"group_name": "update"
+		},
+		"use": {
+			"group": {
+				"proxy": {
+					"command_description": "Use a proxy.",
+					"command_name": "proxy",
+					"params": {
+						"proxy": {
+							"parameter_description": "Proxy to use",
+							"parameter_name": "proxy"
+						},
+						"text": {
+							"parameter_description": "Text to use",
+							"parameter_name": "text"
+						}
+					}
+				},
+				"shared": {
+					"command_description": "Use a shared proxy.",
+					"command_name": "shared",
+					"params": {
+						"proxy": {
+							"parameter_description": "Proxy to use",
+							"parameter_name": "proxy"
+						},
+						"text": {
+							"parameter_description": "Text to use, by default None",
+							"parameter_name": "text"
+						}
+					}
+				},
+				"variant": {
+					"command_description": "Use a proxy's variant for a message.",
+					"command_name": "variant",
+					"params": {
+						"proxy": {
+							"parameter_description": "Proxy to use the variant from",
+							"parameter_name": "proxy"
+						},
+						"text": {
+							"parameter_description": "Text to use, by default None",
+							"parameter_name": "text"
+						},
+						"variant": {
+							"parameter_description": "Variant to use",
+							"parameter_name": "variant"
+						}
+					}
+				}
+			},
+			"group_description": "Use a proxy.",
+			"group_name": "use"
+		},
+		"who": {
+			"command_description": "Show the user of a proxy message.",
+			"command_name": "who",
+			"params": {
+				"message": {
+					"parameter_description": "Message to show the user of",
+					"parameter_name": "message"
+				}
+			},
+			"entries": {
+				"no_entry": "No entry found for this message.",
+				"sent_by": "Sent by <@{{user.id}}> ({{user}} - ID: {{user.id}})",
+				"sent_by_deleted": "Sent by a deleted user (ID: {{user}})"
+			}
+		}
+	},
+	"common": {
+		"check_website": "Please check the website for more information.",
+		"jump_url": "Jump URL",
+		"last_message": "Last Message",
+		"narrator": "Narrator",
+		"none": "None",
+		"notice": "Notice",
+		"page": "Page {{page}}",
+		"prefixes": "Prefixes",
+		"success": "Success",
+		"text": "text"
+	},
+	"errors": {
+		"command_not_found": "Command not found: {{command}}",
+		"detail_error": "Sorry, there was an error with your command:\n{{error}}\n\nPlease check your input and try again.",
+		"disabled": "Disabled command.",
+		"error": "⚠️ Error - {{error}}",
+		"forbidden": "I don't have permissions to messages here.",
+		"group_not_found": "Group not found: {{group}}",
+		"guild_not_found": "Server not found.",
+		"guild_only": "This can only be used in a server.",
+		"import_own_proxies": "You can't import your own characters.",
+		"invalid_date": "Invalid date: {{date}}",
+		"invalid_file_type": "Invalid file type, expected: {{type}}",
+		"invalid_token": "Invalid token.",
+		"missing_permissions": "You don't have the required permissions to do this",
+		"no_birthday_set": "No birthday set.",
+		"no_last_message": "No last message found.",
+		"not_author": "You are not the author of this message.",
+		"not_found": "Message not found.",
+		"not_image": "File is not an image: {{file}}",
+		"prefix_already_used": "Prefix {{prefix}} is already used by: {{proxy}}",
+		"premium_only": "This is a premium feature. Please consider supporting the bot by donating and/or requesting access.",
+		"proxy_not_found": "Character not found: {{proxy}}",
+		"ratelimit": "Ratelimitted: {{time}}.",
+		"timeout": "⚠️ Timed out.",
+		"too_many_proxies": "You have too many characters, please delete some before importing.",
+		"unexpected_error": "⚠️ Unexpected error - {{error}}",
+		"unknown": "Something went wrong.",
+		"unknown_error": "Sorry, there was an unexpected error while processing your command. The development team has been notified.",
+		"url_error": "Error with URL: {{url}}",
+		"wrong_webhook": "Message can't be modified as webhook was deleted by discord. Feel free to delete and send a new message."
+	},
+	"inline_commands": {
+		"Avatar": {
+			"description": "Command for displaying a character's avatar",
+			"title": "Avatar"
+		},
+		"Birthday": {
+			"description": "Command for displaying a character's birthday",
+			"title": "Birthday"
+		},
+		"Date": {
+			"description": "Command for displaying the dates",
+			"title": "Date"
+		},
+		"Decrypt": {
+			"description": "Command for decrypting text",
+			"title": "Decrypt"
+		},
+		"Description": {
+			"description": "Command for displaying a character's description",
+			"title": "Description"
+		},
+		"Embed": {
+			"description": "Create an embed using flags or json",
+			"title": "Embed"
+		},
+		"Encrypt": {
+			"description": "Command for encrypting text",
+			"title": "Encrypt"
+		},
+		"Flip": {
+			"description": "Command for flipping text",
+			"title": "Flip"
+		},
+		"Font": {
+			"description": "Command for using fonts",
+			"title": "Font"
+		},
+		"LastMessage": {
+			"description": "Command for displaying a character's last message",
+			"title": "LastMessage"
+		},
+		"Metronome": {
+			"description": "Command for using Metronome",
+			"title": "Metronome"
+		},
+		"Move": {
+			"description": "Command for using a Pokemon move",
+			"title": "Move"
+		},
+		"Music": {
+			"description": "Command for music",
+			"title": "Music"
+		},
+		"Reverse": {
+			"description": "Command for reversing text",
+			"title": "Reverse"
+		},
+		"Roll": {
+			"description": "Command for rolling dice",
+			"title": "Roll"
+		},
+		"Translate": {
+			"description": "Command for translating text",
+			"title": "Translate"
+		},
+		"Type": {
+			"description": "Command for displaying types",
+			"title": "Type"
+		},
+		"UWU": {
+			"description": "Command for converting text to uwu",
+			"title": "UWU"
+		},
+		"Zalgo": {
+			"description": "Command for using Zalgo",
+			"title": "Zalgo"
+		}
+	},
+	"interactions": {
+		"afk_schedule": {
+			"command_name": "AFK Schedule",
+			"commands_description": "Commands for checking an AFK schedule"
+		},
+		"context_menu": {
+			"command_name": "Proxy",
+			"commands_description": "Commands for interacting with proxies"
+		}
+	},
+	"modals": {
+		"detail": {
+			"birthday": "Birthday",
+			"color": "Color",
+			"description": "Description",
+			"group": "Group",
+			"nickname": "Nickname",
+			"title": "Detail your Proxy"
+		},
+		"message": {
+			"embed": {
+				"label": "Embed Flags or JSON",
+				"placeholder": "Read more about embeds at our website"
+			},
+			"text": {
+				"label": "Edit Message (Empty : Delete)",
+				"placeholder": "Alright, this message will be deleted afterwards if no embed is provided."
+			},
+			"title": "Edit Proxy Message"
+		},
+		"prefix": {
+			"default": "Prefix is now set to default.",
+			"range": "Prefix range is from {{min}} to {{max}} characters.",
+			"set": "Prefix in server is now set to {{prefix}}.",
+			"title": "Set prefix for commands"
+		},
+		"proxy": {
+			"deleted_count": "Deleted {{count}} proxies.",
+			"image_url": "Image URL",
+			"name": "Name",
+			"nickname": "Nickname",
+			"prefixes": "Prefixes",
+			"repeat_description": "It seems like you've already set up a proxy with this name. Would you like to set up another one?",
+			"repeat_title": "Repeat",
+			"text": "text",
+			"title": "Set-up Proxy"
+		},
+		"store": {
+			"stored_description": "Now release the message using /send. Using /store lets you edit it at any moment, disappears when sent.",
+			"stored_title": "Message stored in database.",
+			"text": "Text to send",
+			"title": "Send Message"
+		},
+		"use": {
+			"sending": "Sending message...",
+			"text": "Text to send (embeds/proxies work)",
+			"title": "Send Message"
+		}
+	},
+	"reactions": {
+		"check": {
+			"description": "Checks a message.",
+			"entries": {
+				"no_info": "No information associated with the message.",
+				"sent_by": "Sent by <@{{user.id}}> ({{user}} - ID: {{user.id}})",
+				"sent_by_deleted": "Sent by a deleted user (ID: {{user.id}})"
+			},
+			"name": "Check"
+		},
+		"delete": {
+			"description": "Deletes a message.",
+			"name": "Delete"
+		},
+		"edit": {
+			"description": "Edits a message.",
+			"entries": {
+				"done": "Message has been edited.",
+				"message_deleted": "The message was deleted.",
+				"previous_message": "Previous message",
+				"respond_this": "Respond to this message with the new message.",
+				"webhook_changed": "Webhook changed, re-adding the bot does this too."
+			},
+			"name": "Edit"
+		},
+		"ping": {
+			"description": "Pings owner of the message.",
+			"entries": {
+				"pinged_by": "{{display_name}} (<@{{author_id}}> Ping by: <@{{user_id}}> !"
+			},
+			"name": "Ping"
+		}
+	},
+	"views": {
+		"paginator": {
+			"multiple": "Picked {{count}}, Max: {{max}}, Options: {{options}}",
+			"single": "Single choice, Options: {{options}}"
 		}
 	}
 }
