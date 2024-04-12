@@ -2100,6 +2100,7 @@
 			"group_entries": {
 				"not_json_file_type": "File is not a JSON file.",
 				"importing_title": "Importing proxies...",
+				"failed_import": "Failed to import proxies. Status code: {{status}}",
 				"nothing_new": "No new proxies to import, you brought {{count}} proxies",
 				"too_many_import": "Too many characters to import, please use a smaller file.",
 				"succesful_title": "Succesful import",
