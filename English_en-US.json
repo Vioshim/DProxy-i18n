@@ -2389,6 +2389,20 @@
 							"parameter_name": "variant"
 						}
 					}
+				},
+				"enable": {
+					"command_description": "Enable or disable nsfw for a server.",
+					"command_name": "enable",
+					"entries": {
+						"True": "NSFW is now enabled in this server.",
+						"False": "NSFW is now disabled in this server."
+					},
+					"params": {
+						"enable": {
+							"parameter_description": "Enable or disable nsfw, by default switches",
+							"parameter_name": "enable"
+						}
+					}
 				}
 			},
 			"group_description": "Set the nsfw tag for a proxy.",
@@ -2733,186 +2747,94 @@
 			"group_name": "set"
 		},
 		"settings": {
-			"command_description": "Show the settings page.",
-			"command_name": "settings",
-			"params": {
-				"menu": {
-					"choices": {
-						"Member": "Member",
-						"Server": "Server",
-						"User": "User"
-					},
-					"parameter_description": "Menu choice, by default None",
-					"parameter_name": "menu"
-				}
-			},
-			"entries": {
-				"base": {
-					"title": "Settings",
-					"description": "Here you can view and change your settings.",
-					"reset": "Reset",
-					"close": "Close Menu",
-					"back": "Back to Settings",
-					"options": {
-						"member": "Member",
-						"server": "Server",
-						"user": "User"
-					}
-				},
-				"user": {
-					"title": "User Settings",
-					"description": "For your account's settings.",
-					"time": {
-						"format": "%I:%M %p",
-						"title": "Time",
-						"updated": "Clock updated to GMT {{time:+}}",
-						"reset": "Removed time zone."
-					},
-					"user_settings": {
-						"label": "User Settings",
-						"options": {
-							"allow_non_nitro_emojis": {
-								"title": "Allow Non-Nitro Emojis",
-								"description": "Allows the bot to use non-nitro emojis."
-							},
-							"break_long_words": {
-								"title": "Break Long Words",
-								"description": "Breaks long words to fit in a message."
-							},
-							"break_on_hyphens": {
-								"title": "Break on Hyphens",
-								"description": "Breaks on hyphens to fit in a message."
-							},
-							"celebrate_birthday": {
-								"title": "Celebrate Birthday",
-								"description": "Whether to celebrate your birthday."
-							},
-							"drop_whitespace": {
-								"title": "Drop Whitespace",
-								"description": "Drops whitespace at the end of a message."
-							},
-							"embeds_in_json": {
-								"title": "Embeds in JSON",
-								"description": "Whether to send embeds in JSON format."
-							},
-							"fix_sentence_endings": {
-								"title": "Fix Sentence Endings",
-								"description": "Fixes sentence endings to have a period."
-							},
-							"patch_nitro_emojis": {
-								"title": "Patch Nitro Emojis",
-								"description": "Patches nitro emojis to be usable by the bot."
-							},
-							"patch_stickers": {
-								"title": "Patch Stickers",
-								"description": "Patches stickers to be usable by the bot."
-							},
-							"modern_replies": {
-								"title": "Modern Replies",
-								"description": "Whether to use modern replies."
-							},
-							"replace_whitespace": {
-								"title": "Replace Whitespace",
-								"description": "Replaces whitespace with a space."
-							},
-							"silent_mode": {
-								"title": "Silent Mode",
-								"description": "Whether to send messages silently."
-							},
-							"tts": {
-								"title": "TTS",
-								"description": "Whether to use TTS for messages."
-							},
-							"typo_correction": {
-								"title": "Typo Correction",
-								"description": "Allows fixing typos when doing *text"
-							}
+			"group_description": "Show the settings page.",
+			"group_name": "settings",
+			"group": {
+				"server": {
+					"command_description": "Show the server settings.",
+					"command_name": "server",
+					"params": {
+						"prefix": {
+							"parameter_description": "Prefix to set, by default None",
+							"parameter_name": "prefix"
 						}
-					},
-					"afk_schedule": {
-						"title": "AFK Schedule",
-						"description": "Set your AFK schedule.",
-						"format": "%I:00 %p",
-						"range_format": "From %I:00 %p to %I:59 %p",
-						"recently_disabled": "Recently Disabled AFK Schedule",
-						"recently_enabled": "Recently Enabled AFK Schedule"
 					}
 				},
 				"member": {
-					"title": "Member Settings",
-					"description": "For your account in this server.",
-					"member_settings": {
-						"label": "Member Settings",
-						"options": {
-							"disabled_guild": {
-								"title": "Disable in server",
-								"description": "Disable the bot in this server."
-							},
-							"latch_mode": {
-								"title": "Latch Mode (Auto-remove auto tag)",
-								"description": "Whether to remove the auto tag after sending a message."
-							}
+					"command_description": "Show the member settings.",
+					"command_name": "member",
+					"params": {
+						"ignore_me": {
+							"parameter_description": "Ignore your own messages, by default False",
+							"parameter_name": "ignore_me"
+						},
+						"latch": {
+							"parameter_description": "Latch mode, by default False",
+							"parameter_name": "latch"
 						}
-					},
-					"disable_channels": {
-						"title": "Disabled Channels",
-						"description": "Channels where the bot is disabled.",
-						"format": "{{channel.mention}} ({{channel.name}} - ID: {{channel.id}})",
-						"recently_disabled": "Recently Disabled Channels",
-						"recently_enabled": "Recently Enabled Channels"
-					},
-					"disable_categories": {
-						"title": "Disabled Categories",
-						"description": "Categories where the bot is disabled.",
-						"format": "{{category.mention}} ({{category.name}} - ID: {{category.id}})",
-						"recently_disabled": "Recently Disabled Categories",
-						"recently_enabled": "Recently Enabled Categories"
 					}
 				},
-				"server": {
-					"title": "Server Settings",
-					"description": "Settings for this server.",
-					"ban_roles": {
-						"title": "Banned Roles",
-						"label": "Banned Roles (Select again to unban)",
-						"format": "{{role.mention}} ({{role.name}} - ID: {{role.id}})",
-						"recently_banned": "Recently Banned Roles",
-						"recently_unbanned": "Recently Unbanned Roles"
-					},
-					"ban_users": {
-						"title": "Banned Users",
-						"label": "Banned Users (Select again to unban)",
-						"format": "{{m.mention}} ({{m.name}} - ID: {{m.id}})",
-						"recently_banned": "Recently Banned Users",
-						"recently_unbanned": "Recently Unbanned Users"
-					},
-					"enabled_commands": {
-						"label": "Enabled Commands",
-						"options": {
-							"allow_non_nitro_emojis": {
-								"title": "Allow Non-Nitro Emojis",
-								"description": "Allows the bot to use non-nitro emojis."
-							},
-							"patch_nitro_emojis": {
-								"title": "Patch Nitro Emojis",
-								"description": "Patches nitro emojis to be usable by the bot."
-							},
-							"patch_stickers": {
-								"title": "Patch Stickers",
-								"description": "Patches stickers to be usable by the bot."
-							},
-							"nsfw": {
-								"title": "NSFW",
-								"description": "Whether NSFW proxies are allowed in this server."
-							}
+				"user": {
+					"command_description": "Show the user settings.",
+					"command_name": "user",
+					"params": {
+						"time": {
+							"parameter_description": "Time to set, by default None",
+							"parameter_name": "time"
+						},
+						"afk_time": {
+							"parameter_description": "Busy time in hours. e.g: 1 2 3 4",
+							"parameter_name": "afk_time"
+						},
+						"embeds_in_json": {
+							"parameter_description": "Whether to send embeds in JSON format, by default False",
+							"parameter_name": "embeds_in_json"
+						},
+						"celebrate_birthday": {
+							"parameter_description": "Whether to celebrate proxies' birthdays, by default True",
+							"parameter_name": "celebrate_birthday"
+						},
+						"modern_replies": {
+							"parameter_description": "Whether to use modern replies, by default True",
+							"parameter_name": "modern_replies"
+						},
+						"fix_sentence_endings": {
+							"parameter_description": "Whether to fix sentence endings, by default False",
+							"parameter_name": "fix_sentence_endings"
+						},
+						"replace_whitespace": {
+							"parameter_description": "Whether to replace whitespace, by default False",
+							"parameter_name": "replace_whitespace"
+						},
+						"break_long_words": {
+							"parameter_description": "Whether to break long words, by default True",
+							"parameter_name": "break_long_words"
+						},
+						"drop_whitespace": {
+							"parameter_description": "Whether to drop whitespace, by default True",
+							"parameter_name": "drop_whitespace"
+						},
+						"break_on_hyphens": {
+							"parameter_description": "Whether to break on hyphens, by default False",
+							"parameter_name": "break_on_hyphens"
+						},
+						"silent_mode": {
+							"parameter_description": "Whether to use silent mode, by default False",
+							"parameter_name": "silent_mode"
+						},
+						"tts": {
+							"parameter_description": "Whether to use TTS, by default False",
+							"parameter_name": "tts"
+						},
+						"typo_correction": {
+							"parameter_description": "Whether to use typo correction, by default True",
+							"parameter_name": "typo_correction"
 						}
-					},
-					"prefix": {
-						"title": "Prefix",
-						"label": "Commands prefix",
-						"description": "Set the prefix for this server."
 					}
 				}
+			},
+			"group_entries": {
+				"settings_updated": "Settings have been updated."
 			}
 		},
 		"store": {
