@@ -2562,6 +2562,10 @@
 				}
 			},
 			"group_description": "Purge all of your data (except message logs)",
+			"group_entries": {
+				"not_confirmed": "You need to confirm the purge by setting the confirmation to True.",
+				"done": "Purged {{count}} proxies."
+			},
 			"group_name": "purge"
 		},
 		"read": {
