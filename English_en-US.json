@@ -1941,7 +1941,7 @@
 					}
 				},
 				"variant": {
-					"command_description": "Export your proxies to a JSON file",
+					"command_description": "Export your variant proxies to a JSON file",
 					"command_name": "variant",
 					"params": {
 						"format": {
@@ -1959,6 +1959,24 @@
 						"proxy": {
 							"parameter_description": "Proxy to export from",
 							"parameter_name": "proxy"
+						}
+					}
+				},
+				"shared": {
+					"command_description": "Export your shared proxies to a JSON file",
+					"command_name": "shared",
+					"params": {
+						"format": {
+							"parameter_description": "Export Format, by default D-Proxy's",
+							"parameter_name": "format"
+						},
+						"local": {
+							"parameter_description": "Export local proxies, by default False",
+							"parameter_name": "local"
+						},
+						"new_token": {
+							"parameter_description": "Generate a new token, by default False",
+							"parameter_name": "new_token"
 						}
 					}
 				}
@@ -2076,6 +2094,50 @@
 				"proxy": {
 					"command_description": "Import proxies from a file or token",
 					"command_name": "proxy",
+					"params": {
+						"data": {
+							"parameter_description": "File to import from",
+							"parameter_name": "data"
+						},
+						"deleting_from_token": {
+							"parameter_description": "Delete from token after import",
+							"parameter_name": "deleting_from_token"
+						},
+						"token": {
+							"parameter_description": "Token to import from",
+							"parameter_name": "token"
+						},
+						"url": {
+							"parameter_description": "URL to import from",
+							"parameter_name": "url"
+						}
+					}
+				},
+				"variant": {
+					"command_description": "Import proxy variants from a file or token",
+					"command_name": "variant",
+					"params": {
+						"data": {
+							"parameter_description": "File to import from",
+							"parameter_name": "data"
+						},
+						"deleting_from_token": {
+							"parameter_description": "Delete from token after import",
+							"parameter_name": "deleting_from_token"
+						},
+						"token": {
+							"parameter_description": "Token to import from",
+							"parameter_name": "token"
+						},
+						"url": {
+							"parameter_description": "URL to import from",
+							"parameter_name": "url"
+						}
+					}
+				},
+				"shared": {
+					"command_description": "Import shared proxies from a file or token",
+					"command_name": "shared",
 					"params": {
 						"data": {
 							"parameter_description": "File to import from",
