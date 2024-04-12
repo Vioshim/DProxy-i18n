@@ -2104,7 +2104,7 @@
 				"nothing_new": "No new proxies to import, you brought {{count}} proxies",
 				"too_many_import": "Too many characters to import, please use a smaller file.",
 				"succesful_title": "Succesful import",
-				"succesful_import": "Succesfully imported {{count}} proxies."
+				"succesful_import": "Succesfully imported: Updated {{updated}} proxies, Created {{created}} proxies"
 			},
 			"group_name": "import"
 		},
