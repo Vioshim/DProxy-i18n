@@ -2163,7 +2163,6 @@
 				}
 			},
 			"group_description": "List all proxies.",
-			"group_entries": {},
 			"group_name": "list"
 		},
 		"local": {
@@ -2541,6 +2540,9 @@
 					}
 				}
 			},
+			"group_entries": {
+				"done": "Pruned {{count}} proxies."
+			},
 			"group_description": "Prune unused proxies for a certain time.",
 			"group_name": "prune"
 		},
@@ -2728,6 +2730,9 @@
 					"parameter_description": "Storage type, by default \"Local\"",
 					"parameter_name": "storage"
 				}
+			},
+			"entries": {
+				"no_message": "No message stored, use /store to store one."
 			}
 		},
 		"set": {
@@ -2959,6 +2964,9 @@
 						}
 					}
 				}
+			},
+			"group_entries": {
+				"size": "Character image size cannot be more than {{size}}, use a server with higher limits."
 			},
 			"group_description": "Update a proxy.",
 			"group_name": "update"
