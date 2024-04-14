@@ -1217,188 +1217,254 @@
 	},
 	"commands": {
 		"afk": {
-			"command_description": "Check if a user is AFK.",
-			"command_name": "afk",
+			"description": "Check if a user is AFK.",
+			"name": "afk",
 			"params": {
 				"user": {
-					"parameter_description": "User, by default you",
-					"parameter_name": "user"
+					"description": "User, by default you",
+					"name": "user"
 				}
 			}
 		},
 		"auto": {
 			"group": {
+				"clear": {
+					"description": "Clear the auto tags.",
+					"name": "clear",
+					"params": {
+						"latch_mode": {
+							"description": "Last proxy becomes the default auto, by default False",
+							"name": "latch_mode"
+						}
+					}
+				},
+				"npc": {
+					"description": "Set the auto tag for an NPC.",
+					"name": "npc",
+					"params": {
+						"emotion": {
+							"choices": {
+								"Angry": "Angry",
+								"Crying": "Crying",
+								"Determined": "Determined",
+								"Dizzy": "Dizzy",
+								"Happy": "Happy",
+								"Inspired": "Inspired",
+								"Joyous": "Joyous",
+								"Normal": "Normal",
+								"Pain": "Pain",
+								"Sad": "Sad",
+								"Shouting": "Shouting",
+								"Sigh": "Sigh",
+								"Special0": "Special0",
+								"Special1": "Special1",
+								"Special2": "Special2",
+								"Special3": "Special3",
+								"Stunned": "Stunned",
+								"Surprised": "Surprised",
+								"TearyEyed": "TearyEyed",
+								"Worried": "Worried"
+							},
+							"description": "Emotion to use, by default None",
+							"name": "emotion"
+						},
+						"franchise": {
+							"choices": {
+								"D&D": "D&D",
+								"Digimon": "Digimon",
+								"Palworld": "Palworld",
+								"Pokemon": "Pokemon",
+								"Pokemon Shiny": "Pokemon Shiny",
+								"Trainer": "Trainer"
+							},
+							"description": "Franchise to use for the NPC",
+							"name": "franchise"
+						},
+						"image": {
+							"description": "Image to use, by default None",
+							"name": "image"
+						},
+						"nickname": {
+							"description": "Nickname to use, by default same as NPC name",
+							"name": "nickname"
+						},
+						"npc": {
+							"description": "NPC to use, by default None",
+							"name": "npc"
+						}
+					}
+				},
 				"proxy": {
-					"command_description": "Set the auto for a proxy.",
-					"command_name": "proxy",
+					"description": "Set the auto for a proxy.",
+					"name": "proxy",
 					"params": {
 						"proxy": {
-							"parameter_description": "Proxy to set the auto tag for, by default None",
-							"parameter_name": "proxy"
+							"description": "Proxy to set the auto tag for, by default None",
+							"name": "proxy"
 						}
 					}
 				},
 				"shared": {
-					"command_description": "Set the auto for a shared proxy.",
-					"command_name": "shared",
+					"description": "Set the auto for a shared proxy.",
+					"name": "shared",
 					"params": {
 						"proxy": {
-							"parameter_description": "Shared proxy to set the auto tag for",
-							"parameter_name": "proxy"
+							"description": "Shared proxy to set the auto tag for",
+							"name": "proxy"
 						}
 					}
 				},
 				"variant": {
-					"command_description": "Set the auto for a variant.",
-					"command_name": "variant",
+					"description": "Set the auto for a variant.",
+					"name": "variant",
 					"params": {
 						"proxy": {
-							"parameter_description": "Base proxy of the variant",
-							"parameter_name": "proxy"
+							"description": "Base proxy of the variant",
+							"name": "proxy"
 						},
 						"variant": {
-							"parameter_description": "Variant to set the auto tag for",
-							"parameter_name": "variant"
+							"description": "Variant to set the auto tag for",
+							"name": "variant"
 						}
 					}
 				}
 			},
-			"group_description": "Set the auto tag for a proxy.",
+			"description": "Set the auto tag for a proxy.",
 			"group_entries": {
 				"set": "Auto tag has been set for {{channel.mention}}.",
 				"clear": "Auto tag has been removed for {{channel.mention}}.",
 				"not_set": "Auto tag is not set for {{channel.mention}}."
 			},
-			"group_name": "auto"
+			"name": "auto"
 		},
 		"avatar": {
 			"group": {
 				"proxy": {
-					"command_description": "Show or set the avatar for a proxy.",
-					"command_name": "proxy",
+					"description": "Show or set the avatar for a proxy.",
+					"name": "proxy",
 					"params": {
 						"avatar": {
-							"parameter_description": "Image to set, by default shows current",
-							"parameter_name": "avatar"
+							"description": "Image to set, by default shows current",
+							"name": "avatar"
 						},
 						"proxy": {
-							"parameter_description": "Proxy to set the avatar for",
-							"parameter_name": "proxy"
+							"description": "Proxy to set the avatar for",
+							"name": "proxy"
 						},
 						"url": {
-							"parameter_description": "URL to set, by default None",
-							"parameter_name": "url"
+							"description": "URL to set, by default None",
+							"name": "url"
 						}
 					}
 				},
 				"shared": {
-					"command_description": "Set the image for a proxy.",
-					"command_name": "shared",
+					"description": "Set the image for a proxy.",
+					"name": "shared",
 					"params": {
 						"avatar": {
-							"parameter_description": "Image to set, by default None",
-							"parameter_name": "avatar"
+							"description": "Image to set, by default None",
+							"name": "avatar"
 						},
 						"proxy": {
-							"parameter_description": "Proxy to set the image for",
-							"parameter_name": "proxy"
+							"description": "Proxy to set the image for",
+							"name": "proxy"
 						},
 						"url": {
-							"parameter_description": "Image URL, by default None",
-							"parameter_name": "url"
+							"description": "Image URL, by default None",
+							"name": "url"
 						}
 					}
 				},
 				"variant": {
-					"command_description": "Set the image for a variant.",
-					"command_name": "variant",
+					"description": "Set the image for a variant.",
+					"name": "variant",
 					"params": {
 						"avatar": {
-							"parameter_description": "Image to set, by default None",
-							"parameter_name": "avatar"
+							"description": "Image to set, by default None",
+							"name": "avatar"
 						},
 						"proxy": {
-							"parameter_description": "Base proxy of the variant",
-							"parameter_name": "proxy"
+							"description": "Base proxy of the variant",
+							"name": "proxy"
 						},
 						"url": {
-							"parameter_description": "URL to set, by default None",
-							"parameter_name": "url"
+							"description": "URL to set, by default None",
+							"name": "url"
 						},
 						"variant": {
-							"parameter_description": "Variant to set the image for",
-							"parameter_name": "variant"
+							"description": "Variant to set the image for",
+							"name": "variant"
 						}
 					}
 				}
 			},
-			"group_description": "Set avatar for a proxy.",
+			"description": "Set avatar for a proxy.",
 			"group_entries": {
 				"set": "Avatar set for {{proxy}}.",
 				"not_set": "Avatar not set for {{proxy}}.",
 				"no_nsfw": "NSFW avatars are not allowed in this channel."
 			},
-			"group_name": "avatar"
+			"name": "avatar"
 		},
 		"birthday": {
 			"group": {
 				"proxy": {
-					"command_description": "Set the birthday for a proxy.",
-					"command_name": "proxy",
+					"description": "Set the birthday for a proxy.",
+					"name": "proxy",
 					"params": {
 						"birthday": {
-							"parameter_description": "Birthday to set, by default None",
-							"parameter_name": "birthday"
+							"description": "Birthday to set, by default None",
+							"name": "birthday"
 						},
 						"proxy": {
-							"parameter_description": "Proxy to set the birthday for",
-							"parameter_name": "proxy"
+							"description": "Proxy to set the birthday for",
+							"name": "proxy"
 						}
 					}
 				},
 				"shared": {
-					"command_description": "Set the birthday for a shared proxy.",
-					"command_name": "shared",
+					"description": "Set the birthday for a shared proxy.",
+					"name": "shared",
 					"params": {
 						"birthday": {
-							"parameter_description": "Birthday to set",
-							"parameter_name": "birthday"
+							"description": "Birthday to set",
+							"name": "birthday"
 						},
 						"proxy": {
-							"parameter_description": "Proxy to set the birthday for",
-							"parameter_name": "proxy"
+							"description": "Proxy to set the birthday for",
+							"name": "proxy"
 						}
 					}
 				},
 				"variant": {
-					"command_description": "Set the birthday for a proxy variant",
-					"command_name": "variant",
+					"description": "Set the birthday for a proxy variant",
+					"name": "variant",
 					"params": {
 						"birthday": {
-							"parameter_description": "Birthday to set, by default None",
-							"parameter_name": "birthday"
+							"description": "Birthday to set, by default None",
+							"name": "birthday"
 						},
 						"proxy": {
-							"parameter_description": "Base proxy of the variant",
-							"parameter_name": "proxy"
+							"description": "Base proxy of the variant",
+							"name": "proxy"
 						},
 						"variant": {
-							"parameter_description": "Variant to set the birthday for",
-							"parameter_name": "variant"
+							"description": "Variant to set the birthday for",
+							"name": "variant"
 						}
 					}
 				}
 			},
-			"group_description": "Set birthday for a proxy.",
+			"description": "Set birthday for a proxy.",
 			"group_entries": {
 				"set": "Birthday set as {{birthday}} for {{proxy}}.",
 				"clear": "Birthday cleared for {{proxy}}."
 			},
-			"group_name": "birthday"
+			"name": "birthday"
 		},
 		"check_permissions": {
-			"command_description": "Check permissions of the bot.",
-			"command_name": "check_permissions",
+			"description": "Check permissions of the bot.",
+			"name": "check_permissions",
 			"entries": {
 				"bot": "Bot",
 				"description": "Here are the permissions you and I have in {{channel}}",
@@ -1423,81 +1489,81 @@
 		"color": {
 			"group": {
 				"proxy": {
-					"command_description": "Set a color for a proxy.",
-					"command_name": "proxy",
+					"description": "Set a color for a proxy.",
+					"name": "proxy",
 					"params": {
 						"color": {
-							"parameter_description": "Color, by default None",
-							"parameter_name": "color"
+							"description": "Color, by default None",
+							"name": "color"
 						},
 						"proxy": {
-							"parameter_description": "Proxy to set the color for",
-							"parameter_name": "proxy"
+							"description": "Proxy to set the color for",
+							"name": "proxy"
 						}
 					}
 				},
 				"shared": {
-					"command_description": "Set the color for a proxy.",
-					"command_name": "shared",
+					"description": "Set the color for a proxy.",
+					"name": "shared",
 					"params": {
 						"color": {
-							"parameter_description": "Color to set, by default None",
-							"parameter_name": "color"
+							"description": "Color to set, by default None",
+							"name": "color"
 						},
 						"proxy": {
-							"parameter_description": "Proxy to set the color for",
-							"parameter_name": "proxy"
+							"description": "Proxy to set the color for",
+							"name": "proxy"
 						}
 					}
 				},
 				"variant": {
-					"command_description": "Change the color of a variant.",
-					"command_name": "variant",
+					"description": "Change the color of a variant.",
+					"name": "variant",
 					"params": {
 						"color": {
-							"parameter_description": "Color to set, by default None",
-							"parameter_name": "color"
+							"description": "Color to set, by default None",
+							"name": "color"
 						},
 						"proxy": {
-							"parameter_description": "Base proxy",
-							"parameter_name": "proxy"
+							"description": "Base proxy",
+							"name": "proxy"
 						},
 						"variant": {
-							"parameter_description": "Variant to change the color for",
-							"parameter_name": "variant"
+							"description": "Variant to change the color for",
+							"name": "variant"
 						}
 					}
 				}
 			},
 			"group_entries": {},
-			"group_description": "Set color for a proxy.",
-			"group_name": "color"
+			"description": "Set color for a proxy.",
+			"name": "color"
 		},
 		"convert": {
 			"group": {
 				"proxy": {
 					"group": {
 						"shared": {
-							"command_description": "Shares your proxy with all server/dm",
-							"command_name": "shared",
+							"description": "Shares your proxy with all server/dm",
+							"name": "shared",
 							"params": {
 								"proxy": {
-									"parameter_description": "Original Proxy",
-									"parameter_name": "proxy"
+									"description": "Original Proxy",
+									"name": "proxy"
 								}
 							}
 						},
 						"variant": {
-							"command_description": "Convert a proxy to a variant of another proxy.",
-							"command_name": "variant",
+							"description": "Convert a proxy to a variant of another proxy.",
+							"name": "variant",
 							"params": {
 								"base": {
-									"parameter_description": "Base Proxy",
-									"parameter_name": "base"
+									"description": "Base Proxy",
+									"name": "base"
 								},
 								"original": {
-									"parameter_description": "Original Proxy",
-									"parameter_name": "original"
+									"description": "Original Proxy",
+									"name": "original"
 								}
 							}
 						}
@@ -1508,32 +1574,32 @@
 						"set": "Proxy is now a variant of {{base}}.",
 						"done": "{{variant}} is now a proxy."
 					},
-					"group_description": "Convert a proxy to a variant or shared proxy.",
-					"group_name": "proxy"
+					"description": "Convert a proxy to a variant or shared proxy.",
+					"name": "proxy"
 				},
 				"shared": {
 					"group": {
 						"proxy": {
-							"command_description": "Convert a shared proxy to a personal one.",
-							"command_name": "proxy",
+							"description": "Convert a shared proxy to a personal one.",
+							"name": "proxy",
 							"params": {
 								"proxy": {
-									"parameter_description": "Shared Proxy to copy",
-									"parameter_name": "proxy"
+									"description": "Shared Proxy to copy",
+									"name": "proxy"
 								}
 							}
 						},
 						"variant": {
-							"command_description": "Convert a shared proxy to a personal one.",
-							"command_name": "variant",
+							"description": "Convert a shared proxy to a personal one.",
+							"name": "variant",
 							"params": {
 								"base": {
-									"parameter_description": "Base Proxy to have as parent",
-									"parameter_name": "base"
+									"description": "Base Proxy to have as parent",
+									"name": "base"
 								},
 								"proxy": {
-									"parameter_description": "Shared Proxy to copy",
-									"parameter_name": "proxy"
+									"description": "Shared Proxy to copy",
+									"name": "proxy"
 								}
 							}
 						}
@@ -1544,344 +1610,344 @@
 						"set": "Proxy is now a variant of {{base}}.",
 						"done": "{{variant}} is now a proxy."
 					},
-					"group_description": "Convert a shared  to a variant or proxy.",
-					"group_name": "shared"
+					"description": "Convert a shared  to a variant or proxy.",
+					"name": "shared"
 				},
 				"variant": {
 					"group": {
 						"proxy": {
-							"command_description": "Convert a variant to a proxy.",
-							"command_name": "proxy",
+							"description": "Convert a variant to a proxy.",
+							"name": "proxy",
 							"params": {
 								"proxy": {
-									"parameter_description": "Base proxy of the variant",
-									"parameter_name": "proxy"
+									"description": "Base proxy of the variant",
+									"name": "proxy"
 								},
 								"variant": {
-									"parameter_description": "Variant to convert",
-									"parameter_name": "variant"
+									"description": "Variant to convert",
+									"name": "variant"
 								}
 							}
 						},
 						"shared": {
-							"command_description": "Shares your variant with all server/dm",
-							"command_name": "shared",
+							"description": "Shares your variant with all server/dm",
+							"name": "shared",
 							"params": {
 								"proxy": {
-									"parameter_description": "Base proxy of the variant",
-									"parameter_name": "proxy"
+									"description": "Base proxy of the variant",
+									"name": "proxy"
 								},
 								"variant": {
-									"parameter_description": "Variant to convert",
-									"parameter_name": "variant"
+									"description": "Variant to convert",
+									"name": "variant"
 								}
 							}
 						}
 					},
-					"group_description": "Convert a variant to a proxy or shared.",
+					"description": "Convert a variant to a proxy or shared.",
 					"group_entries": {
 						"already_proxy": "Variant is already a proxy.",
 						"already_variant": "Proxy is already a variant.",
 						"set": "Proxy is now a variant of {{base}}.",
 						"done": "{{variant}} is now a proxy."
 					},
-					"group_name": "variant"
+					"name": "variant"
 				}
 			},
-			"group_description": "Convert a proxy to a variant or shared proxy.",
-			"group_name": "convert"
+			"description": "Convert a proxy to a variant or shared proxy.",
+			"name": "convert"
 		},
 		"create": {
 			"group": {
 				"proxy": {
-					"command_description": "Create a new proxy.",
-					"command_name": "proxy",
+					"description": "Create a new proxy.",
+					"name": "proxy",
 					"params": {
 						"image": {
-							"parameter_description": "Image, by default None",
-							"parameter_name": "image"
+							"description": "Image, by default None",
+							"name": "image"
 						},
 						"name": {
-							"parameter_description": "Name of the proxy",
-							"parameter_name": "name"
+							"description": "Name of the proxy",
+							"name": "name"
 						},
 						"prefixes": {
-							"parameter_description": "Prefixes e.g. A:text, |text|, etc.",
-							"parameter_name": "prefixes"
+							"description": "Prefixes e.g. A:text, |text|, etc.",
+							"name": "prefixes"
 						},
 						"url": {
-							"parameter_description": "URL, by default None",
-							"parameter_name": "url"
+							"description": "URL, by default None",
+							"name": "url"
 						}
 					}
 				},
 				"shared": {
-					"command_description": "Create a new shared proxy.",
-					"command_name": "shared",
+					"description": "Create a new shared proxy.",
+					"name": "shared",
 					"params": {
 						"image": {
-							"parameter_description": "Image to set, by default None",
-							"parameter_name": "image"
+							"description": "Image to set, by default None",
+							"name": "image"
 						},
 						"name": {
-							"parameter_description": "Name of the proxy",
-							"parameter_name": "name"
+							"description": "Name of the proxy",
+							"name": "name"
 						},
 						"url": {
-							"parameter_description": "Image URL, by default None",
-							"parameter_name": "url"
+							"description": "Image URL, by default None",
+							"name": "url"
 						}
 					}
 				},
 				"variant": {
-					"command_description": "Create a new variant for a proxy.",
-					"command_name": "variant",
+					"description": "Create a new variant for a proxy.",
+					"name": "variant",
 					"params": {
 						"image": {
-							"parameter_description": "Image for the variant",
-							"parameter_name": "image"
+							"description": "Image for the variant",
+							"name": "image"
 						},
 						"name": {
-							"parameter_description": "Name of the variant",
-							"parameter_name": "name"
+							"description": "Name of the variant",
+							"name": "name"
 						},
 						"prefixes": {
-							"parameter_description": "Prefixes e.g. A:text, |text|, etc.",
-							"parameter_name": "prefixes"
+							"description": "Prefixes e.g. A:text, |text|, etc.",
+							"name": "prefixes"
 						},
 						"proxy": {
-							"parameter_description": "Proxy to create the variant for",
-							"parameter_name": "proxy"
+							"description": "Proxy to create the variant for",
+							"name": "proxy"
 						},
 						"url": {
-							"parameter_description": "URL for the image, by default None",
-							"parameter_name": "url"
+							"description": "URL for the image, by default None",
+							"name": "url"
 						}
 					}
 				}
 			},
-			"group_description": "Create a new proxy.",
+			"description": "Create a new proxy.",
 			"group_entries": {
 				"size": "Character image size cannot be more than {{size}}, use a server with higher limits."
 			},
-			"group_name": "create"
+			"name": "create"
 		},
 		"delete": {
 			"group": {
 				"proxy": {
-					"command_description": "Deletes a proxy.",
-					"command_name": "proxy",
+					"description": "Deletes a proxy.",
+					"name": "proxy",
 					"params": {
 						"proxy": {
-							"parameter_description": "Proxy to delete",
-							"parameter_name": "proxy"
+							"description": "Proxy to delete",
+							"name": "proxy"
 						}
 					}
 				},
 				"shared": {
-					"command_description": "Delete a proxy",
-					"command_name": "shared",
+					"description": "Delete a proxy",
+					"name": "shared",
 					"params": {
 						"proxy": {
-							"parameter_description": "Proxy to delete",
-							"parameter_name": "proxy"
+							"description": "Proxy to delete",
+							"name": "proxy"
 						}
 					}
 				},
 				"variant": {
-					"command_description": "Deletes a variant from a proxy.",
-					"command_name": "variant",
+					"description": "Deletes a variant from a proxy.",
+					"name": "variant",
 					"params": {
 						"proxy": {
-							"parameter_description": "Proxy to delete the variant from",
-							"parameter_name": "proxy"
+							"description": "Proxy to delete the variant from",
+							"name": "proxy"
 						},
 						"variant": {
-							"parameter_description": "Variant to delete",
-							"parameter_name": "variant"
+							"description": "Variant to delete",
+							"name": "variant"
 						}
 					}
 				}
 			},
-			"group_description": "Delete a proxy.",
+			"description": "Delete a proxy.",
 			"group_entries": {
 				"count": "Deleted {{count}} proxies."
 			},
-			"group_name": "delete"
+			"name": "delete"
 		},
 		"description": {
 			"group": {
 				"proxy": {
-					"command_description": "Set the description for a proxy.",
-					"command_name": "proxy",
+					"description": "Set the description for a proxy.",
+					"name": "proxy",
 					"params": {
 						"proxy": {
-							"parameter_description": "Proxy to set the description for",
-							"parameter_name": "proxy"
+							"description": "Proxy to set the description for",
+							"name": "proxy"
 						},
 						"text": {
-							"parameter_description": "Description, by default None",
-							"parameter_name": "text"
+							"description": "Description, by default None",
+							"name": "text"
 						}
 					}
 				},
 				"shared": {
-					"command_description": "Set the description for a proxy.",
-					"command_name": "shared",
+					"description": "Set the description for a proxy.",
+					"name": "shared",
 					"params": {
 						"proxy": {
-							"parameter_description": "Proxy to set the description for",
-							"parameter_name": "proxy"
+							"description": "Proxy to set the description for",
+							"name": "proxy"
 						},
 						"text": {
-							"parameter_description": "Description, by default None",
-							"parameter_name": "text"
+							"description": "Description, by default None",
+							"name": "text"
 						}
 					}
 				},
 				"variant": {
-					"command_description": "Set the description for a proxy's variant",
-					"command_name": "variant",
+					"description": "Set the description for a proxy's variant",
+					"name": "variant",
 					"params": {
 						"proxy": {
-							"parameter_description": "Base proxy of the variant",
-							"parameter_name": "proxy"
+							"description": "Base proxy of the variant",
+							"name": "proxy"
 						},
 						"text": {
-							"parameter_description": "Description, by default None",
-							"parameter_name": "text"
+							"description": "Description, by default None",
+							"name": "text"
 						},
 						"variant": {
-							"parameter_description": "Variant to set the description for",
-							"parameter_name": "variant"
+							"description": "Variant to set the description for",
+							"name": "variant"
 						}
 					}
 				}
 			},
-			"group_description": "Set the description for a proxy.",
+			"description": "Set the description for a proxy.",
 			"group_entries": {},
-			"group_name": "description"
+			"name": "description"
 		},
 		"detail": {
 			"group": {
 				"proxy": {
-					"command_description": "Detail a proxy. Old way of editing proxies.",
-					"command_name": "proxy",
+					"description": "Detail a proxy. Old way of editing proxies.",
+					"name": "proxy",
 					"params": {
 						"birthday": {
-							"parameter_description": "The birthday of the proxy.",
-							"parameter_name": "birthday"
+							"description": "The birthday of the proxy.",
+							"name": "birthday"
 						},
 						"color": {
-							"parameter_description": "The color of the proxy.",
-							"parameter_name": "color"
+							"description": "The color of the proxy.",
+							"name": "color"
 						},
 						"description": {
-							"parameter_description": "The description of the proxy.",
-							"parameter_name": "description"
+							"description": "The description of the proxy.",
+							"name": "description"
 						},
 						"group": {
-							"parameter_description": "The group of the proxy.",
-							"parameter_name": "group"
+							"description": "The group of the proxy.",
+							"name": "group"
 						},
 						"nickname": {
-							"parameter_description": "The nickname of the proxy.",
-							"parameter_name": "nickname"
+							"description": "The nickname of the proxy.",
+							"name": "nickname"
 						},
 						"proxy": {
-							"parameter_description": "Proxy to detail",
-							"parameter_name": "proxy"
+							"description": "Proxy to detail",
+							"name": "proxy"
 						}
 					}
 				},
 				"shared": {
-					"command_description": "Detail a proxy.",
-					"command_name": "shared",
+					"description": "Detail a proxy.",
+					"name": "shared",
 					"params": {
 						"birthday": {
-							"parameter_description": "The birthday of the proxy.",
-							"parameter_name": "birthday"
+							"description": "The birthday of the proxy.",
+							"name": "birthday"
 						},
 						"color": {
-							"parameter_description": "The color of the proxy.",
-							"parameter_name": "color"
+							"description": "The color of the proxy.",
+							"name": "color"
 						},
 						"description": {
-							"parameter_description": "The description of the proxy.",
-							"parameter_name": "description"
+							"description": "The description of the proxy.",
+							"name": "description"
 						},
 						"group": {
-							"parameter_description": "The group of the proxy.",
-							"parameter_name": "group"
+							"description": "The group of the proxy.",
+							"name": "group"
 						},
 						"nickname": {
-							"parameter_description": "The nickname of the proxy.",
-							"parameter_name": "nickname"
+							"description": "The nickname of the proxy.",
+							"name": "nickname"
 						},
 						"proxy": {
-							"parameter_description": "Proxy to detail",
-							"parameter_name": "proxy"
+							"description": "Proxy to detail",
+							"name": "proxy"
 						}
 					}
 				},
 				"variant": {
-					"command_description": "Detail a proxy. Old way of editing proxies.",
-					"command_name": "variant",
+					"description": "Detail a proxy. Old way of editing proxies.",
+					"name": "variant",
 					"params": {
 						"birthday": {
-							"parameter_description": "The birthday of the variant.",
-							"parameter_name": "birthday"
+							"description": "The birthday of the variant.",
+							"name": "birthday"
 						},
 						"color": {
-							"parameter_description": "The color of the variant.",
-							"parameter_name": "color"
+							"description": "The color of the variant.",
+							"name": "color"
 						},
 						"description": {
-							"parameter_description": "The description of the variant.",
-							"parameter_name": "description"
+							"description": "The description of the variant.",
+							"name": "description"
 						},
 						"group": {
-							"parameter_description": "The group of the variant.",
-							"parameter_name": "group"
+							"description": "The group of the variant.",
+							"name": "group"
 						},
 						"nickname": {
-							"parameter_description": "The nickname of the variant.",
-							"parameter_name": "nickname"
+							"description": "The nickname of the variant.",
+							"name": "nickname"
 						},
 						"proxy": {
-							"parameter_description": "Base proxy of the variant",
-							"parameter_name": "proxy"
+							"description": "Base proxy of the variant",
+							"name": "proxy"
 						},
 						"variant": {
-							"parameter_description": "Variant to detail",
-							"parameter_name": "variant"
+							"description": "Variant to detail",
+							"name": "variant"
 						}
 					}
 				}
 			},
-			"group_description": "Detail a proxy.",
+			"description": "Detail a proxy.",
 			"group_entries": {},
-			"group_name": "detail"
+			"name": "detail"
 		},
 		"edit": {
-			"group_description": "Edit a proxy message",
-			"group_name": "edit",
+			"description": "Edit a proxy message",
+			"name": "edit",
 			"groups": {
 				"embed": {
-					"command_description": "Edit the embed of a proxy message.",
-					"command_name": "embed",
+					"description": "Edit the embed of a proxy message.",
+					"name": "embed",
 					"params": {
 						"proxy": {
-							"parameter_description": "Proxy to edit",
-							"parameter_name": "proxy"
+							"description": "Proxy to edit",
+							"name": "proxy"
 						},
 						"embed": {
-							"parameter_description": "Embed to edit",
-							"parameter_name": "embed"
+							"description": "Embed to edit",
+							"name": "embed"
 						},
 						"message": {
-							"parameter_description": "Message to edit",
-							"parameter_name": "message"
+							"description": "Message to edit",
+							"name": "message"
 						}
 					}
 				}
@@ -1894,26 +1960,26 @@
 			},
 			"params": {
 				"proxy": {
-					"parameter_description": "Proxy to edit",
-					"parameter_name": "proxy"
+					"description": "Proxy to edit",
+					"name": "proxy"
 				},
 				"message": {
-					"parameter_description": "Message to edit",
-					"parameter_name": "message"
+					"description": "Message to edit",
+					"name": "message"
 				}
 			}
 		},
 		"exec": {
-			"command_description": "Execute a command.",
-			"command_name": "exec",
+			"description": "Execute a command.",
+			"name": "exec",
 			"params": {
 				"command": {
-					"parameter_description": "Command to execute",
-					"parameter_name": "command"
+					"description": "Command to execute",
+					"name": "command"
 				},
 				"text": {
-					"parameter_description": "Text to execute the command in",
-					"parameter_name": "text"
+					"description": "Text to execute the command in",
+					"name": "text"
 				}
 			},
 			"entries": {
@@ -1923,65 +1989,65 @@
 		"export": {
 			"group": {
 				"proxy": {
-					"command_description": "Export your proxies to a JSON file",
-					"command_name": "proxy",
+					"description": "Export your proxies to a JSON file",
+					"name": "proxy",
 					"params": {
 						"format": {
-							"parameter_description": "Export Format, by default D-Proxy's",
-							"parameter_name": "format"
+							"description": "Export Format, by default D-Proxy's",
+							"name": "format"
 						},
 						"local": {
-							"parameter_description": "If you want to export using local looks, by default True",
-							"parameter_name": "local"
+							"description": "If you want to export using local looks, by default True",
+							"name": "local"
 						},
 						"new_token": {
-							"parameter_description": "If you want to generate a new token, by default False",
-							"parameter_name": "new_token"
+							"description": "If you want to generate a new token, by default False",
+							"name": "new_token"
 						}
 					}
 				},
 				"variant": {
-					"command_description": "Export your variant proxies to a JSON file",
-					"command_name": "variant",
+					"description": "Export your variant proxies to a JSON file",
+					"name": "variant",
 					"params": {
 						"format": {
-							"parameter_description": "Export Format, by default D-Proxy's",
-							"parameter_name": "format"
+							"description": "Export Format, by default D-Proxy's",
+							"name": "format"
 						},
 						"local": {
-							"parameter_description": "Export local proxies, by default False",
-							"parameter_name": "local"
+							"description": "Export local proxies, by default False",
+							"name": "local"
 						},
 						"new_token": {
-							"parameter_description": "Generate a new token, by default False",
-							"parameter_name": "new_token"
+							"description": "Generate a new token, by default False",
+							"name": "new_token"
 						},
 						"proxy": {
-							"parameter_description": "Proxy to export from",
-							"parameter_name": "proxy"
+							"description": "Proxy to export from",
+							"name": "proxy"
 						}
 					}
 				},
 				"shared": {
-					"command_description": "Export your shared proxies to a JSON file",
-					"command_name": "shared",
+					"description": "Export your shared proxies to a JSON file",
+					"name": "shared",
 					"params": {
 						"format": {
-							"parameter_description": "Export Format, by default D-Proxy's",
-							"parameter_name": "format"
+							"description": "Export Format, by default D-Proxy's",
+							"name": "format"
 						},
 						"local": {
-							"parameter_description": "Export local proxies, by default False",
-							"parameter_name": "local"
+							"description": "Export local proxies, by default False",
+							"name": "local"
 						},
 						"new_token": {
-							"parameter_description": "Generate a new token, by default False",
-							"parameter_name": "new_token"
+							"description": "Generate a new token, by default False",
+							"name": "new_token"
 						}
 					}
 				}
 			},
-			"group_description": "Export your proxies to a JSON file.",
+			"description": "Export your proxies to a JSON file.",
 			"group_entries": {
 				"exporting_title": "Exporting proxies...",
 				"exporting_description": "This may take a while depending on the number of proxies you have.",
@@ -1991,174 +2057,174 @@
 				"import_own_proxies": "You can't import your own characters.",
 				"too_many_proxies": "You have too many characters, please delete some before importing."
 			},
-			"group_name": "export"
+			"name": "export"
 		},
 		"find": {
 			"group": {
 				"proxy": {
-					"command_description": "Find proxies by name.",
-					"command_name": "proxy",
+					"description": "Find proxies by name.",
+					"name": "proxy",
 					"params": {
 						"text": {
-							"parameter_description": "Text to search for",
-							"parameter_name": "text"
+							"description": "Text to search for",
+							"name": "text"
 						}
 					}
 				},
 				"shared": {
-					"command_description": "Find shared proxies by name.",
-					"command_name": "shared",
+					"description": "Find shared proxies by name.",
+					"name": "shared",
 					"params": {
 						"text": {
-							"parameter_description": "Text to search for",
-							"parameter_name": "text"
+							"description": "Text to search for",
+							"name": "text"
 						}
 					}
 				},
 				"variant": {
-					"command_description": "Find variants of a proxies by name.",
-					"command_name": "variant",
+					"description": "Find variants of a proxies by name.",
+					"name": "variant",
 					"params": {
 						"proxy": {
-							"parameter_description": "Proxy to find the variant from",
-							"parameter_name": "proxy"
+							"description": "Proxy to find the variant from",
+							"name": "proxy"
 						},
 						"text": {
-							"parameter_description": "Text to find",
-							"parameter_name": "text"
+							"description": "Text to find",
+							"name": "text"
 						}
 					}
 				}
 			},
-			"group_description": "Find proxies by name.",
-			"group_name": "find"
+			"description": "Find proxies by name.",
+			"name": "find"
 		},
 		"group": {
 			"group": {
 				"proxy": {
-					"command_description": "Set the group for a proxy.",
-					"command_name": "proxy",
+					"description": "Set the group for a proxy.",
+					"name": "proxy",
 					"params": {
 						"group": {
-							"parameter_description": "Group to set, by default None",
-							"parameter_name": "group"
+							"description": "Group to set, by default None",
+							"name": "group"
 						},
 						"proxy": {
-							"parameter_description": "Proxy to set the group for",
-							"parameter_name": "proxy"
+							"description": "Proxy to set the group for",
+							"name": "proxy"
 						}
 					}
 				},
 				"shared": {
-					"command_description": "Set the group for a shared proxy.",
-					"command_name": "shared",
+					"description": "Set the group for a shared proxy.",
+					"name": "shared",
 					"params": {
 						"group": {
-							"parameter_description": "Group to set, by default None",
-							"parameter_name": "group"
+							"description": "Group to set, by default None",
+							"name": "group"
 						},
 						"proxy": {
-							"parameter_description": "Proxy to set the group for",
-							"parameter_name": "proxy"
+							"description": "Proxy to set the group for",
+							"name": "proxy"
 						}
 					}
 				},
 				"variant": {
-					"command_description": "Set the group for a variant.",
-					"command_name": "variant",
+					"description": "Set the group for a variant.",
+					"name": "variant",
 					"params": {
 						"group": {
-							"parameter_description": "Group to set, by default None",
-							"parameter_name": "group"
+							"description": "Group to set, by default None",
+							"name": "group"
 						},
 						"proxy": {
-							"parameter_description": "Base proxy of the variant",
-							"parameter_name": "proxy"
+							"description": "Base proxy of the variant",
+							"name": "proxy"
 						},
 						"variant": {
-							"parameter_description": "Variant to set the group for",
-							"parameter_name": "variant"
+							"description": "Variant to set the group for",
+							"name": "variant"
 						}
 					}
 				}
 			},
-			"group_description": "Set the group for a proxy.",
+			"description": "Set the group for a proxy.",
 			"group_entries": {
 				"set": "Group set as {{group}} for {{proxy}}.",
 				"clear": "Group cleared for {{proxy}}."
 			},
-			"group_name": "group"
+			"name": "group"
 		},
 		"import": {
 			"group": {
 				"proxy": {
-					"command_description": "Import proxies from a file or token",
-					"command_name": "proxy",
+					"description": "Import proxies from a file or token",
+					"name": "proxy",
 					"params": {
 						"data": {
-							"parameter_description": "File to import from",
-							"parameter_name": "data"
+							"description": "File to import from",
+							"name": "data"
 						},
 						"deleting_from_token": {
-							"parameter_description": "Delete from token after import",
-							"parameter_name": "deleting_from_token"
+							"description": "Delete from token after import",
+							"name": "deleting_from_token"
 						},
 						"token": {
-							"parameter_description": "Token to import from",
-							"parameter_name": "token"
+							"description": "Token to import from",
+							"name": "token"
 						},
 						"url": {
-							"parameter_description": "URL to import from",
-							"parameter_name": "url"
+							"description": "URL to import from",
+							"name": "url"
 						}
 					}
 				},
 				"variant": {
-					"command_description": "Import proxy variants from a file or token",
-					"command_name": "variant",
+					"description": "Import proxy variants from a file or token",
+					"name": "variant",
 					"params": {
 						"data": {
-							"parameter_description": "File to import from",
-							"parameter_name": "data"
+							"description": "File to import from",
+							"name": "data"
 						},
 						"deleting_from_token": {
-							"parameter_description": "Delete from token after import",
-							"parameter_name": "deleting_from_token"
+							"description": "Delete from token after import",
+							"name": "deleting_from_token"
 						},
 						"token": {
-							"parameter_description": "Token to import from",
-							"parameter_name": "token"
+							"description": "Token to import from",
+							"name": "token"
 						},
 						"url": {
-							"parameter_description": "URL to import from",
-							"parameter_name": "url"
+							"description": "URL to import from",
+							"name": "url"
 						}
 					}
 				},
 				"shared": {
-					"command_description": "Import shared proxies from a file or token",
-					"command_name": "shared",
+					"description": "Import shared proxies from a file or token",
+					"name": "shared",
 					"params": {
 						"data": {
-							"parameter_description": "File to import from",
-							"parameter_name": "data"
+							"description": "File to import from",
+							"name": "data"
 						},
 						"deleting_from_token": {
-							"parameter_description": "Delete from token after import",
-							"parameter_name": "deleting_from_token"
+							"description": "Delete from token after import",
+							"name": "deleting_from_token"
 						},
 						"token": {
-							"parameter_description": "Token to import from",
-							"parameter_name": "token"
+							"description": "Token to import from",
+							"name": "token"
 						},
 						"url": {
-							"parameter_description": "URL to import from",
-							"parameter_name": "url"
+							"description": "URL to import from",
+							"name": "url"
 						}
 					}
 				}
 			},
-			"group_description": "Import proxies from a file or token.",
+			"description": "Import proxies from a file or token.",
 			"group_entries": {
 				"not_json_file_type": "File is not a JSON file.",
 				"importing_title": "Importing proxies...",
@@ -2168,19 +2234,19 @@
 				"succesful_title": "Succesful import",
 				"succesful_import": "Succesfully imported: Updated {{updated}} proxies, Created {{created}} proxies"
 			},
-			"group_name": "import"
+			"name": "import"
 		},
 		"latch": {
-			"command_description": "Enable or disable latch mode.",
-			"command_name": "latch",
+			"description": "Last proxy becomes the default auto",
+			"name": "latch",
 			"params": {
 				"auto_remove": {
-					"parameter_description": "Whether to keep the auto for current channel or not, by default True",
-					"parameter_name": "auto_remove"
+					"description": "Whether to keep the auto for current channel or not, by default True",
+					"name": "auto_remove"
 				},
 				"enable": {
-					"parameter_description": "Whether to enable or disable latch mode",
-					"parameter_name": "enable"
+					"description": "Whether to enable or disable latch mode",
+					"name": "enable"
 				}
 			},
 			"entries": {
@@ -2191,414 +2257,354 @@
 		"list": {
 			"group": {
 				"proxy": {
-					"command_description": "List all proxies.",
-					"command_name": "proxy",
+					"description": "List all proxies.",
+					"name": "proxy",
 					"params": {
 						"group": {
-							"parameter_description": "Group to list proxies from, by default None",
-							"parameter_name": "group"
+							"description": "Group to list proxies from, by default None",
+							"name": "group"
 						}
 					}
 				},
 				"shared": {
-					"command_description": "List all shared proxies.",
-					"command_name": "shared",
+					"description": "List all shared proxies.",
+					"name": "shared",
 					"params": {
 						"group": {
-							"parameter_description": "Group to list the proxies from, by default None",
-							"parameter_name": "group"
+							"description": "Group to list the proxies from, by default None",
+							"name": "group"
 						}
 					}
 				},
 				"variant": {
-					"command_description": "List all variants of a proxy.",
-					"command_name": "variant",
+					"description": "List all variants of a proxy.",
+					"name": "variant",
 					"params": {
 						"group": {
-							"parameter_description": "Group to list the variants from, by default None",
-							"parameter_name": "group"
+							"description": "Group to list the variants from, by default None",
+							"name": "group"
 						},
 						"proxy": {
-							"parameter_description": "Proxy to list the variants from",
-							"parameter_name": "proxy"
+							"description": "Proxy to list the variants from",
+							"name": "proxy"
 						}
 					}
 				}
 			},
-			"group_description": "List all proxies.",
-			"group_name": "list"
+			"description": "List all proxies.",
+			"name": "list"
 		},
 		"local": {
 			"group": {
 				"proxy": {
-					"command_description": "Set a local avatar and nickname for a proxy.",
-					"command_name": "proxy",
+					"description": "Set a local avatar and nickname for a proxy.",
+					"name": "proxy",
 					"params": {
 						"avatar": {
-							"parameter_description": "Image to set, by default None",
-							"parameter_name": "avatar"
+							"description": "Image to set, by default None",
+							"name": "avatar"
 						},
 						"nickname": {
-							"parameter_description": "Nickname to set, by default None",
-							"parameter_name": "nickname"
+							"description": "Nickname to set, by default None",
+							"name": "nickname"
 						},
 						"proxy": {
-							"parameter_description": "Proxy to set the local avatar and nickname for",
-							"parameter_name": "proxy"
+							"description": "Proxy to set the local avatar and nickname for",
+							"name": "proxy"
 						},
 						"url": {
-							"parameter_description": "URL to set, by default None",
-							"parameter_name": "url"
+							"description": "URL to set, by default None",
+							"name": "url"
 						}
 					}
 				},
 				"shared": {
-					"command_description": "Set the image for a proxy.",
-					"command_name": "shared",
+					"description": "Set the image for a proxy.",
+					"name": "shared",
 					"params": {
 						"avatar": {
-							"parameter_description": "Image to set, by default None",
-							"parameter_name": "avatar"
+							"description": "Image to set, by default None",
+							"name": "avatar"
 						},
 						"nickname": {
-							"parameter_description": "Nickname to set, by default None",
-							"parameter_name": "nickname"
+							"description": "Nickname to set, by default None",
+							"name": "nickname"
 						},
 						"proxy": {
-							"parameter_description": "Proxy to set the image for",
-							"parameter_name": "proxy"
+							"description": "Proxy to set the image for",
+							"name": "proxy"
 						},
 						"url": {
-							"parameter_description": "Image URL, by default None",
-							"parameter_name": "url"
+							"description": "Image URL, by default None",
+							"name": "url"
 						}
 					}
 				},
 				"variant": {
-					"command_description": "Set the local avatar for a variant.",
-					"command_name": "variant",
+					"description": "Set the local avatar for a variant.",
+					"name": "variant",
 					"params": {
 						"avatar": {
-							"parameter_description": "Avatar to set, by default None",
-							"parameter_name": "avatar"
+							"description": "Avatar to set, by default None",
+							"name": "avatar"
 						},
 						"nickname": {
-							"parameter_description": "Nickname to set, by default None",
-							"parameter_name": "nickname"
+							"description": "Nickname to set, by default None",
+							"name": "nickname"
 						},
 						"proxy": {
-							"parameter_description": "Base proxy of the variant",
-							"parameter_name": "proxy"
+							"description": "Base proxy of the variant",
+							"name": "proxy"
 						},
 						"url": {
-							"parameter_description": "Image URL, by default None",
-							"parameter_name": "url"
+							"description": "Image URL, by default None",
+							"name": "url"
 						},
 						"variant": {
-							"parameter_description": "Variant to set the info for",
-							"parameter_name": "variant"
+							"description": "Variant to set the info for",
+							"name": "variant"
 						}
 					}
 				}
 			},
-			"group_description": "Set a local avatar and nickname for a proxy.",
+			"description": "Set a local avatar and nickname for a proxy.",
 			"group_entries": {
 				"set": "Local avatar and nickname set for {{proxy}}.",
 				"remove": "Local avatar and nickname removed for {{proxy}}."
 			},
-			"group_name": "local"
+			"name": "local"
 		},
 		"nickname": {
 			"group": {
 				"proxy": {
-					"command_description": "Set a nickname for a proxy.",
-					"command_name": "proxy",
+					"description": "Set a nickname for a proxy.",
+					"name": "proxy",
 					"params": {
 						"nickname": {
-							"parameter_description": "Nickname, by default None",
-							"parameter_name": "nickname"
+							"description": "Nickname, by default None",
+							"name": "nickname"
 						},
 						"proxy": {
-							"parameter_description": "Proxy to set the nickname for",
-							"parameter_name": "proxy"
+							"description": "Proxy to set the nickname for",
+							"name": "proxy"
 						}
 					}
 				},
 				"shared": {
-					"command_description": "Set the nickname for a shared proxy for you",
-					"command_name": "shared",
+					"description": "Set the nickname for a shared proxy for you",
+					"name": "shared",
 					"params": {
 						"nickname": {
-							"parameter_description": "Nickname to set, by default None",
-							"parameter_name": "nickname"
+							"description": "Nickname to set, by default None",
+							"name": "nickname"
 						},
 						"proxy": {
-							"parameter_description": "Proxy to set the nickname for",
-							"parameter_name": "proxy"
+							"description": "Proxy to set the nickname for",
+							"name": "proxy"
 						}
 					}
 				},
 				"variant": {
-					"command_description": "Change the nickname of a variant.",
-					"command_name": "variant",
+					"description": "Change the nickname of a variant.",
+					"name": "variant",
 					"params": {
 						"nickname": {
-							"parameter_description": "Nickname to set, by default None",
-							"parameter_name": "nickname"
+							"description": "Nickname to set, by default None",
+							"name": "nickname"
 						},
 						"proxy": {
-							"parameter_description": "Base proxy of the variant",
-							"parameter_name": "proxy"
+							"description": "Base proxy of the variant",
+							"name": "proxy"
 						},
 						"variant": {
-							"parameter_description": "Variant to change the nickname for",
-							"parameter_name": "variant"
+							"description": "Variant to change the nickname for",
+							"name": "variant"
 						}
 					}
 				}
 			},
-			"group_description": "Set a nickname for a proxy.",
+			"description": "Set a nickname for a proxy.",
 			"group_entries": {
 				"set": "Nickname set for {{proxy}} to {{nickname}}.",
 				"remove": "Nickname removed for {{proxy}}."
 			},
-			"group_name": "nickname"
-		},
-		"npc": {
-			"command_description": "Create a NPC message using a slash command.",
-			"command_name": "npc",
-			"params": {
-				"emotion": {
-					"choices": {
-						"Angry": "Angry",
-						"Crying": "Crying",
-						"Determined": "Determined",
-						"Dizzy": "Dizzy",
-						"Happy": "Happy",
-						"Inspired": "Inspired",
-						"Joyous": "Joyous",
-						"Normal": "Normal",
-						"Pain": "Pain",
-						"Sad": "Sad",
-						"Shouting": "Shouting",
-						"Sigh": "Sigh",
-						"Special0": "Special0",
-						"Special1": "Special1",
-						"Special2": "Special2",
-						"Special3": "Special3",
-						"Stunned": "Stunned",
-						"Surprised": "Surprised",
-						"TearyEyed": "TearyEyed",
-						"Worried": "Worried"
-					},
-					"parameter_description": "Emotion to use, by default None",
-					"parameter_name": "emotion"
-				},
-				"franchise": {
-					"choices": {
-						"D&D": "D&D",
-						"Digimon": "Digimon",
-						"Palworld": "Palworld",
-						"Pokemon": "Pokemon",
-						"Pokemon Shiny": "Pokemon Shiny",
-						"Trainer": "Trainer"
-					},
-					"parameter_description": "Franchise to use for the NPC",
-					"parameter_name": "franchise"
-				},
-				"image": {
-					"parameter_description": "Image to use, by default None",
-					"parameter_name": "image"
-				},
-				"nickname": {
-					"parameter_description": "Nickname to use, by default same as NPC name",
-					"parameter_name": "nickname"
-				},
-				"npc": {
-					"parameter_description": "NPC to use, by default None",
-					"parameter_name": "npc"
-				},
-				"text": {
-					"parameter_description": "Text to use, by default Empty string",
-					"parameter_name": "text"
-				}
-			}
+			"name": "nickname"
 		},
 		"nsfw": {
 			"group": {
 				"proxy": {
-					"command_description": "Set the nsfw for a proxy.",
-					"command_name": "proxy",
+					"description": "Set the nsfw for a proxy.",
+					"name": "proxy",
 					"params": {
 						"nsfw": {
-							"parameter_description": "NSFW, by default None",
-							"parameter_name": "nsfw"
+							"description": "NSFW, by default None",
+							"name": "nsfw"
 						},
 						"proxy": {
-							"parameter_description": "Proxy to set the nsfw tag for",
-							"parameter_name": "proxy"
+							"description": "Proxy to set the nsfw tag for",
+							"name": "proxy"
 						}
 					}
 				},
 				"shared": {
-					"command_description": "Tag a shared proxy as NSFW.",
-					"command_name": "shared",
+					"description": "Tag a shared proxy as NSFW.",
+					"name": "shared",
 					"params": {
 						"nsfw": {
-							"parameter_description": "NSFW, by default switches the current value",
-							"parameter_name": "nsfw"
+							"description": "NSFW, by default switches the current value",
+							"name": "nsfw"
 						},
 						"proxy": {
-							"parameter_description": "Proxy to set the nsfw tag for",
-							"parameter_name": "proxy"
+							"description": "Proxy to set the nsfw tag for",
+							"name": "proxy"
 						}
 					}
 				},
 				"variant": {
-					"command_description": "Set the nsfw tag for a variant.",
-					"command_name": "variant",
+					"description": "Set the nsfw tag for a variant.",
+					"name": "variant",
 					"params": {
 						"nsfw": {
-							"parameter_description": "NSFW, by default None",
-							"parameter_name": "nsfw"
+							"description": "NSFW, by default None",
+							"name": "nsfw"
 						},
 						"proxy": {
-							"parameter_description": "Base proxy of the variant",
-							"parameter_name": "proxy"
+							"description": "Base proxy of the variant",
+							"name": "proxy"
 						},
 						"variant": {
-							"parameter_description": "Variant to set the nsfw tag for",
-							"parameter_name": "variant"
+							"description": "Variant to set the nsfw tag for",
+							"name": "variant"
 						}
 					}
 				},
 				"enable": {
-					"command_description": "Enable or disable nsfw for a server.",
-					"command_name": "enable",
+					"description": "Enable or disable nsfw for a server.",
+					"name": "enable",
 					"entries": {
 						"True": "NSFW is now enabled in this server.",
 						"False": "NSFW is now disabled in this server."
 					},
 					"params": {
 						"enable": {
-							"parameter_description": "Enable or disable nsfw, by default switches",
-							"parameter_name": "enable"
+							"description": "Enable or disable nsfw, by default switches",
+							"name": "enable"
 						}
 					}
 				}
 			},
-			"group_description": "Set the nsfw tag for a proxy.",
+			"description": "Set the nsfw tag for a proxy.",
 			"group_entries": {
 				"set": "NSFW tag is now set for {{proxy}}.",
 				"clear": "NSFW tag is now removed for {{proxy}}.",
 				"already_set": "NSFW tag is already set as True.",
 				"already_clear": "NSFW tag is already set as False"
 			},
-			"group_name": "nsfw"
+			"name": "nsfw"
 		},
 		"prefix": {
 			"group": {
 				"proxy": {
-					"command_description": "Set the prefixes for a proxy.",
-					"command_name": "proxy",
+					"description": "Set the prefixes for a proxy.",
+					"name": "proxy",
 					"params": {
 						"prefixes": {
-							"parameter_description": "Prefixes e.g. A:text, |text|, etc. by default None",
-							"parameter_name": "prefixes"
+							"description": "Prefixes e.g. A:text, |text|, etc. by default None",
+							"name": "prefixes"
 						},
 						"proxy": {
-							"parameter_description": "Proxy to set the prefixes for",
-							"parameter_name": "proxy"
+							"description": "Proxy to set the prefixes for",
+							"name": "proxy"
 						}
 					}
 				},
 				"shared": {
-					"command_description": "Set the prefixes for a proxy.",
-					"command_name": "shared",
+					"description": "Set the prefixes for a proxy.",
+					"name": "shared",
 					"params": {
 						"prefixes": {
-							"parameter_description": "Prefixes e.g. A:text, |text|, etc. by default None",
-							"parameter_name": "prefixes"
+							"description": "Prefixes e.g. A:text, |text|, etc. by default None",
+							"name": "prefixes"
 						},
 						"proxy": {
-							"parameter_description": "Proxy to set the prefixes for",
-							"parameter_name": "proxy"
+							"description": "Proxy to set the prefixes for",
+							"name": "proxy"
 						}
 					}
 				},
 				"variant": {
-					"command_description": "Set the prefixes for a variant",
-					"command_name": "variant",
+					"description": "Set the prefixes for a variant",
+					"name": "variant",
 					"params": {
 						"prefixes": {
-							"parameter_description": "Prefixes e.g. A:text, |text|, etc. by default None",
-							"parameter_name": "prefixes"
+							"description": "Prefixes e.g. A:text, |text|, etc. by default None",
+							"name": "prefixes"
 						},
 						"proxy": {
-							"parameter_description": "Base proxy of the variant",
-							"parameter_name": "proxy"
+							"description": "Base proxy of the variant",
+							"name": "proxy"
 						},
 						"variant": {
-							"parameter_description": "Variant to set the prefixes for",
-							"parameter_name": "variant"
+							"description": "Variant to set the prefixes for",
+							"name": "variant"
 						}
 					}
 				}
 			},
-			"group_description": "Set the prefixes for a proxy.",
+			"description": "Set the prefixes for a proxy.",
 			"group_entries": {
 				"text": "text",
 				"set": "Prefixes set for {{proxy}}."
 			},
-			"group_name": "prefix"
+			"name": "prefix"
 		},
 		"proxy": {
-			"command_description": "Disable proxies in a server",
-			"command_name": "proxy",
+			"description": "Disable proxies in a server",
+			"name": "proxy",
 			"entries": {
 				"True": "Proxies are now enabled in this server.",
 				"False": "Proxies are now disabled in this server."
 			},
 			"params": {
 				"enable": {
-					"parameter_description": "Enable or disable proxies, by default switches",
-					"parameter_name": "enable"
+					"description": "Enable or disable proxies, by default switches",
+					"name": "enable"
 				}
 			}
 		},
 		"prune": {
 			"group": {
 				"proxy": {
-					"command_description": "Prune proxies unused for a certain time.",
-					"command_name": "proxy",
+					"description": "Prune proxies unused for a certain time.",
+					"name": "proxy",
 					"params": {
 						"before": {
-							"parameter_description": "Date to prune before, by default None",
-							"parameter_name": "before"
+							"description": "Date to prune before, by default None",
+							"name": "before"
 						}
 					}
 				},
 				"shared": {
-					"command_description": "Prune proxies unused for a certain time.",
-					"command_name": "shared",
+					"description": "Prune proxies unused for a certain time.",
+					"name": "shared",
 					"params": {
 						"before": {
-							"parameter_description": "Date to prune before, by default None",
-							"parameter_name": "before"
+							"description": "Date to prune before, by default None",
+							"name": "before"
 						}
 					}
 				},
 				"variant": {
-					"command_description": "Prune unused variants of a proxy for a certain time.",
-					"command_name": "variant",
+					"description": "Prune unused variants of a proxy for a certain time.",
+					"name": "variant",
 					"params": {
 						"before": {
-							"parameter_description": "Date to prune before, by default None",
-							"parameter_name": "before"
+							"description": "Date to prune before, by default None",
+							"name": "before"
 						},
 						"proxy": {
-							"parameter_description": "Proxy to prune the variants from",
-							"parameter_name": "proxy"
+							"description": "Proxy to prune the variants from",
+							"name": "proxy"
 						}
 					}
 				}
@@ -2606,138 +2612,138 @@
 			"group_entries": {
 				"done": "Pruned {{count}} proxies."
 			},
-			"group_description": "Prune unused proxies for a certain time.",
-			"group_name": "prune"
+			"description": "Prune unused proxies for a certain time.",
+			"name": "prune"
 		},
 		"purge": {
 			"group": {
 				"proxy": {
-					"command_description": "Purge all of your data (except message logs)",
-					"command_name": "proxy",
+					"description": "Purge all of your data (except message logs)",
+					"name": "proxy",
 					"params": {
 						"confirmation": {
-							"parameter_description": "Confirmation, by default False",
-							"parameter_name": "confirmation"
+							"description": "Confirmation, by default False",
+							"name": "confirmation"
 						}
 					}
 				},
 				"shared": {
-					"command_description": "Purge all of your data (except message logs)",
-					"command_name": "shared",
+					"description": "Purge all of your data (except message logs)",
+					"name": "shared",
 					"params": {
 						"confirmation": {
-							"parameter_description": "Confirmation, by default False",
-							"parameter_name": "confirmation"
+							"description": "Confirmation, by default False",
+							"name": "confirmation"
 						}
 					}
 				},
 				"variant": {
-					"command_description": "Remove all variants of your proxy",
-					"command_name": "variant",
+					"description": "Remove all variants of your proxy",
+					"name": "variant",
 					"params": {
 						"confirmation": {
-							"parameter_description": "Confirmation, by default False",
-							"parameter_name": "confirmation"
+							"description": "Confirmation, by default False",
+							"name": "confirmation"
 						},
 						"proxy": {
-							"parameter_description": "Proxy to remove the variants from",
-							"parameter_name": "proxy"
+							"description": "Proxy to remove the variants from",
+							"name": "proxy"
 						}
 					}
 				}
 			},
-			"group_description": "Purge all of your data (except message logs)",
+			"description": "Purge all of your data (except message logs)",
 			"group_entries": {
 				"not_confirmed": "You need to confirm the purge by setting the confirmation to True.",
 				"done": "Purged {{count}} proxies."
 			},
-			"group_name": "purge"
+			"name": "purge"
 		},
 		"read": {
 			"group": {
 				"proxy": {
-					"command_description": "Read a proxy's information.",
-					"command_name": "proxy",
+					"description": "Read a proxy's information.",
+					"name": "proxy",
 					"params": {
 						"proxy": {
-							"parameter_description": "Proxy to read from",
-							"parameter_name": "proxy"
+							"description": "Proxy to read from",
+							"name": "proxy"
 						}
 					}
 				},
 				"shared": {
-					"command_description": "Read a shared proxy.",
-					"command_name": "shared",
+					"description": "Read a shared proxy.",
+					"name": "shared",
 					"params": {
 						"proxy": {
-							"parameter_description": "Proxy to read",
-							"parameter_name": "proxy"
+							"description": "Proxy to read",
+							"name": "proxy"
 						}
 					}
 				},
 				"variant": {
-					"command_description": "Read a variant from a proxy.",
-					"command_name": "variant",
+					"description": "Read a variant from a proxy.",
+					"name": "variant",
 					"params": {
 						"proxy": {
-							"parameter_description": "Base proxy of the variant",
-							"parameter_name": "proxy"
+							"description": "Base proxy of the variant",
+							"name": "proxy"
 						},
 						"variant": {
-							"parameter_description": "Variant to read",
-							"parameter_name": "variant"
+							"description": "Variant to read",
+							"name": "variant"
 						}
 					}
 				}
 			},
-			"group_description": "Read a proxy's information.",
-			"group_name": "read"
+			"description": "Read a proxy's information.",
+			"name": "read"
 		},
 		"rename": {
 			"group": {
 				"proxy": {
-					"command_description": "Set the name for a proxy.",
-					"command_name": "proxy",
+					"description": "Set the name for a proxy.",
+					"name": "proxy",
 					"params": {
 						"name": {
-							"parameter_description": "Name to set",
-							"parameter_name": "name"
+							"description": "Name to set",
+							"name": "name"
 						},
 						"proxy": {
-							"parameter_description": "Proxy to set the name for",
-							"parameter_name": "proxy"
+							"description": "Proxy to set the name for",
+							"name": "proxy"
 						}
 					}
 				},
 				"shared": {
-					"command_description": "Set the name for a shared proxy.",
-					"command_name": "shared",
+					"description": "Set the name for a shared proxy.",
+					"name": "shared",
 					"params": {
 						"name": {
-							"parameter_description": "Name to set",
-							"parameter_name": "name"
+							"description": "Name to set",
+							"name": "name"
 						},
 						"proxy": {
-							"parameter_description": "Proxy to set the name for",
-							"parameter_name": "proxy"
+							"description": "Proxy to set the name for",
+							"name": "proxy"
 						}
 					}
 				},
 				"variant": {
-					"command_description": "Set the name for a variant of a proxy.",
-					"command_name": "variant",
+					"description": "Set the name for a variant of a proxy.",
+					"name": "variant",
 					"params": {
 						"name": {
-							"parameter_description": "Name to set",
-							"parameter_name": "name"
+							"description": "Name to set",
+							"name": "name"
 						},
 						"proxy": {
-							"parameter_description": "Base proxy of the variant",
-							"parameter_name": "proxy"
+							"description": "Base proxy of the variant",
+							"name": "proxy"
 						},
 						"variant": {
-							"parameter_description": "Variant to set the name for",
-							"parameter_name": "variant"
+							"description": "Variant to set the name for",
+							"name": "variant"
 						}
 					}
 				}
@@ -2746,12 +2752,12 @@
 				"set": "Name set for {{old}} to {{new}}.",
 				"exists": "Name {{proxy}} already exists."
 			},
-			"group_description": "Set the name for a proxy.",
-			"group_name": "rename"
+			"description": "Set the name for a proxy.",
+			"name": "rename"
 		},
 		"roll": {
-			"command_description": "Roll a dice.",
-			"command_name": "roll",
+			"description": "Roll a dice.",
+			"name": "roll",
 			"entries": {
 				"title": "Rolling {{expression}}",
 				"long_expression": "Rolling expression",
@@ -2759,39 +2765,39 @@
 			},
 			"params": {
 				"expression": {
-					"parameter_description": "Expression to roll",
-					"parameter_name": "expression"
+					"description": "Expression to roll",
+					"name": "expression"
 				}
 			}
 		},
 		"say": {
-			"command_description": "Say something.",
-			"command_name": "say",
+			"description": "Say something.",
+			"name": "say",
 			"entries": {
 				"no_proxy_set": "No proxy set, please use /use or /set to set one."
 			},
 			"params": {
 				"text": {
-					"parameter_description": "Text to say",
-					"parameter_name": "text"
+					"description": "Text to say",
+					"name": "text"
 				}
 			}
 		},
 		"send": {
-			"command_description": "Send a stored message",
-			"command_name": "send",
+			"description": "Send a stored message",
+			"name": "send",
 			"params": {
 				"attachment": {
-					"parameter_description": "Attachment, by default None",
-					"parameter_name": "attachment"
+					"description": "Attachment, by default None",
+					"name": "attachment"
 				},
 				"storage": {
 					"choices": {
 						"Global": "Global",
 						"Local": "Local"
 					},
-					"parameter_description": "Storage type, by default \"Local\"",
-					"parameter_name": "storage"
+					"description": "Storage type, by default \"Local\"",
+					"name": "storage"
 				}
 			},
 			"entries": {
@@ -2800,127 +2806,312 @@
 		},
 		"set": {
 			"group": {
+				"npc": {
+					"description": "Set a NPC as the current to use.",
+					"name": "npc",
+					"group": {
+						"pokemon": {
+							"description": "Set a Pokemon NPC as the current to use.",
+							"name": "pokemon",
+							"params": {
+								"emotion": {
+									"choices": {
+										"Angry": "Angry",
+										"Crying": "Crying",
+										"Determined": "Determined",
+										"Dizzy": "Dizzy",
+										"Happy": "Happy",
+										"Inspired": "Inspired",
+										"Joyous": "Joyous",
+										"Normal": "Normal",
+										"Pain": "Pain",
+										"Sad": "Sad",
+										"Shouting": "Shouting",
+										"Sigh": "Sigh",
+										"Special0": "Special0",
+										"Special1": "Special1",
+										"Special2": "Special2",
+										"Special3": "Special3",
+										"Stunned": "Stunned",
+										"Surprised": "Surprised",
+										"TearyEyed": "TearyEyed",
+										"Worried": "Worried"
+									},
+									"description": "Emotion to set, by default None",
+									"name": "emotion"
+								},
+								"image": {
+									"description": "Image to use, by default None",
+									"name": "image"
+								},
+								"shiny": {
+									"description": "Whether to use a shiny sprite, by default False",
+									"name": "shiny"
+								},
+								"sprite": {
+									"description": "Sprite to use, by default None",
+									"name": "sprite"
+								},
+								"nickname": {
+									"description": "Nickname to set, by default None",
+									"name": "nickname"
+								},
+								"url": {
+									"description": "Image URL to use, by default None",
+									"name": "url"
+								}
+							}
+						},
+						"trainer": {
+							"description": "Set a Pokemon Trainer NPC as the current to use.",
+							"name": "trainer",
+							"params": {
+								"image": {
+									"description": "Image to use, by default None",
+									"name": "image"
+								},
+								"sprite": {
+									"description": "Sprite to use, by default None",
+									"name": "sprite"
+								},
+								"nickname": {
+									"description": "Nickname to set, by default None",
+									"name": "nickname"
+								},
+								"url": {
+									"description": "Image URL to use, by default None",
+									"name": "url"
+								}
+							}
+						},
+						"digimon": {
+							"description": "Set a Digimon NPC as the current to use.",
+							"name": "digimon",
+							"params": {
+								"image": {
+									"description": "Image to use, by default None",
+									"name": "image"
+								},
+								"sprite": {
+									"description": "Sprite to use, by default None",
+									"name": "sprite"
+								},
+								"nickname": {
+									"description": "Nickname to set, by default None",
+									"name": "nickname"
+								},
+								"url": {
+									"description": "Image URL to use, by default None",
+									"name": "url"
+								}
+							}
+						},
+						"palworld": {
+							"description": "Set a Palworld NPC as the current to use.",
+							"name": "palworld",
+							"params": {
+								"image": {
+									"description": "Image to use, by default None",
+									"name": "image"
+								},
+								"sprite": {
+									"description": "Sprite to use, by default None",
+									"name": "sprite"
+								},
+								"nickname": {
+									"description": "Nickname to set, by default None",
+									"name": "nickname"
+								},
+								"url": {
+									"description": "Image URL to use, by default None",
+									"name": "url"
+								}
+							}
+						},
+						"dnd": {
+							"description": "Set a D&D NPC as the current to use.",
+							"name": "dnd",
+							"params": {
+								"image": {
+									"description": "Image to use, by default None",
+									"name": "image"
+								},
+								"sprite": {
+									"description": "Sprite to use, by default None",
+									"name": "sprite"
+								},
+								"nickname": {
+									"description": "Nickname to set, by default None",
+									"name": "nickname"
+								},
+								"url": {
+									"description": "Image URL to use, by default None",
+									"name": "url"
+								}
+							}
+						},
+						"other": {
+							"description": "Set a custom NPC as the current to use.",
+							"name": "other",
+							"params": {
+								"image": {
+									"description": "Image to use, by default None",
+									"name": "image"
+								},
+								"nickname": {
+									"description": "Nickname to set, by default None",
+									"name": "nickname"
+								},
+								"url": {
+									"description": "Image URL to use, by default None",
+									"name": "url"
+								}
+							}
+						}
+					},
+					"group_entries": {
+						"npc_created": "NPC Set, now you can use `d!say` or `/say`"
+					},
+					"params": {
+						"nickname": {
+							"description": "Nickname to set, by default None",
+							"name": "nickname"
+						},
+						"image": {
+							"description": "Image to use, by default None",
+							"name": "image"
+						},
+						"url": {
+							"description": "Image URL to use, by default None",
+							"name": "url"
+						}
+					}
+				},
 				"proxy": {
-					"command_description": "Set a proxy as the current one.",
-					"command_name": "proxy",
+					"description": "Set a proxy as the current to use.",
+					"name": "proxy",
 					"params": {
 						"proxy": {
-							"parameter_description": "Proxy to set",
-							"parameter_name": "proxy"
+							"description": "Proxy to set",
+							"name": "proxy"
 						}
 					}
 				},
 				"shared": {
-					"command_description": "Set a shared proxy as the current to use.",
-					"command_name": "shared",
+					"description": "Set a shared proxy as the current to use.",
+					"name": "shared",
 					"params": {
 						"proxy": {
-							"parameter_description": "Proxy to set as the current",
-							"parameter_name": "proxy"
+							"description": "Proxy to set as the current",
+							"name": "proxy"
 						}
 					}
 				},
 				"variant": {
-					"command_description": "Set a variant from a proxy for use.",
-					"command_name": "variant",
+					"description": "Set a variant from a proxy as the current to use.",
+					"name": "variant",
 					"params": {
 						"proxy": {
-							"parameter_description": "Proxy to set the variant for",
-							"parameter_name": "proxy"
+							"description": "Proxy to set the variant for",
+							"name": "proxy"
 						},
 						"variant": {
-							"parameter_description": "Variant to set for use",
-							"parameter_name": "variant"
+							"description": "Variant to set for use",
+							"name": "variant"
 						}
 					}
 				}
 			},
-			"group_description": "Set a proxy as the current one.",
-			"group_name": "set"
+			"description": "Set a proxy as the current one.",
+			"name": "set"
 		},
 		"settings": {
-			"group_description": "Show the settings page.",
-			"group_name": "settings",
+			"description": "Show the settings page.",
+			"name": "settings",
 			"group": {
 				"server": {
-					"command_description": "Show the server settings.",
-					"command_name": "server",
+					"description": "Show the server settings.",
+					"name": "server",
 					"params": {
 						"prefix": {
-							"parameter_description": "Prefix to set, by default None",
-							"parameter_name": "prefix"
+							"description": "Prefix to set, by default None",
+							"name": "prefix"
 						}
 					}
 				},
 				"member": {
-					"command_description": "Show the member settings.",
-					"command_name": "member",
+					"description": "Show the member settings.",
+					"name": "member",
 					"params": {
 						"ignore_me": {
-							"parameter_description": "Ignore your own messages, by default False",
-							"parameter_name": "ignore_me"
+							"description": "Ignore your own messages, by default False",
+							"name": "ignore_me"
 						},
 						"latch": {
-							"parameter_description": "Latch mode, by default False",
-							"parameter_name": "latch"
+							"description": "Latch mode, by default False",
+							"name": "latch"
 						}
 					}
 				},
 				"user": {
-					"command_description": "Show the user settings.",
-					"command_name": "user",
+					"description": "Show the user settings.",
+					"name": "user",
 					"params": {
 						"time": {
-							"parameter_description": "Time to set, by default None",
-							"parameter_name": "time"
+							"description": "Time to set, by default None",
+							"name": "time"
 						},
 						"afk_time": {
-							"parameter_description": "Busy time in hours. e.g: 1 2 3 4",
-							"parameter_name": "afk_time"
+							"description": "Busy time in hours. e.g: 1 2 3 4",
+							"name": "afk_time"
 						},
 						"embeds_in_json": {
-							"parameter_description": "Whether to send embeds in JSON format, by default False",
-							"parameter_name": "embeds_in_json"
+							"description": "Whether to send embeds in JSON format, by default False",
+							"name": "embeds_in_json"
 						},
 						"celebrate_birthday": {
-							"parameter_description": "Whether to celebrate proxies' birthdays, by default True",
-							"parameter_name": "celebrate_birthday"
+							"description": "Whether to celebrate proxies' birthdays, by default True",
+							"name": "celebrate_birthday"
 						},
 						"modern_replies": {
-							"parameter_description": "Whether to use modern replies, by default True",
-							"parameter_name": "modern_replies"
+							"description": "Whether to use modern replies, by default True",
+							"name": "modern_replies"
 						},
 						"fix_sentence_endings": {
-							"parameter_description": "Whether to fix sentence endings, by default False",
-							"parameter_name": "fix_sentence_endings"
+							"description": "Whether to fix sentence endings, by default False",
+							"name": "fix_sentence_endings"
 						},
 						"replace_whitespace": {
-							"parameter_description": "Whether to replace whitespace, by default False",
-							"parameter_name": "replace_whitespace"
+							"description": "Whether to replace whitespace, by default False",
+							"name": "replace_whitespace"
 						},
 						"break_long_words": {
-							"parameter_description": "Whether to break long words, by default True",
-							"parameter_name": "break_long_words"
+							"description": "Whether to break long words, by default True",
+							"name": "break_long_words"
 						},
 						"drop_whitespace": {
-							"parameter_description": "Whether to drop whitespace, by default True",
-							"parameter_name": "drop_whitespace"
+							"description": "Whether to drop whitespace, by default True",
+							"name": "drop_whitespace"
 						},
 						"break_on_hyphens": {
-							"parameter_description": "Whether to break on hyphens, by default False",
-							"parameter_name": "break_on_hyphens"
+							"description": "Whether to break on hyphens, by default False",
+							"name": "break_on_hyphens"
 						},
 						"silent_mode": {
-							"parameter_description": "Whether to use silent mode, by default False",
-							"parameter_name": "silent_mode"
+							"description": "Whether to use silent mode, by default False",
+							"name": "silent_mode"
 						},
 						"tts": {
-							"parameter_description": "Whether to use TTS, by default False",
-							"parameter_name": "tts"
+							"description": "Whether to use TTS, by default False",
+							"name": "tts"
 						},
 						"typo_correction": {
-							"parameter_description": "Whether to use typo correction, by default True",
-							"parameter_name": "typo_correction"
+							"description": "Whether to use typo correction, by default True",
+							"name": "typo_correction"
+						},
+						"dm_notifications": {
+							"description": "Whether to send notifications in DM, by default False",
+							"name": "dm_notifications"
 						}
 					}
 				}
@@ -2930,100 +3121,100 @@
 			}
 		},
 		"store": {
-			"command_description": "Store a message to /send",
-			"command_name": "store",
+			"description": "Store a message to /send",
+			"name": "store",
 			"params": {
 				"storage": {
 					"choices": {
 						"Global": "Global",
 						"Local": "Local"
 					},
-					"parameter_description": "Storage type, by default \"Local\"",
-					"parameter_name": "storage"
+					"description": "Storage type, by default \"Local\"",
+					"name": "storage"
 				}
 			}
 		},
 		"update": {
 			"group": {
 				"proxy": {
-					"command_description": "Update a proxy. Old way of updating proxies.",
-					"command_name": "proxy",
+					"description": "Update a proxy. Old way of updating proxies.",
+					"name": "proxy",
 					"params": {
 						"image": {
-							"parameter_description": "Image to set, by default None",
-							"parameter_name": "image"
+							"description": "Image to set, by default None",
+							"name": "image"
 						},
 						"name": {
-							"parameter_description": "Name to set, by default same",
-							"parameter_name": "name"
+							"description": "Name to set, by default same",
+							"name": "name"
 						},
 						"prefixes": {
-							"parameter_description": "Prefixes to set, by default same",
-							"parameter_name": "prefixes"
+							"description": "Prefixes to set, by default same",
+							"name": "prefixes"
 						},
 						"proxy": {
-							"parameter_description": "Proxy to update",
-							"parameter_name": "proxy"
+							"description": "Proxy to update",
+							"name": "proxy"
 						},
 						"url": {
-							"parameter_description": "URL to set, by default None",
-							"parameter_name": "url"
+							"description": "URL to set, by default None",
+							"name": "url"
 						}
 					}
 				},
 				"shared": {
-					"command_description": "Update a shared proxy. Old way of updating proxies.",
-					"command_name": "shared",
+					"description": "Update a shared proxy. Old way of updating proxies.",
+					"name": "shared",
 					"params": {
 						"image": {
-							"parameter_description": "Image to set, by default None",
-							"parameter_name": "image"
+							"description": "Image to set, by default None",
+							"name": "image"
 						},
 						"name": {
-							"parameter_description": "The name of the proxy.",
-							"parameter_name": "name"
+							"description": "The name of the proxy.",
+							"name": "name"
 						},
 						"prefixes": {
-							"parameter_description": "The prefixes of the proxy.",
-							"parameter_name": "prefixes"
+							"description": "The prefixes of the proxy.",
+							"name": "prefixes"
 						},
 						"proxy": {
-							"parameter_description": "Proxy to update",
-							"parameter_name": "proxy"
+							"description": "Proxy to update",
+							"name": "proxy"
 						},
 						"url": {
-							"parameter_description": "Image URL, by default None",
-							"parameter_name": "url"
+							"description": "Image URL, by default None",
+							"name": "url"
 						}
 					}
 				},
 				"variant": {
-					"command_description": "Update a proxy variant. Old way of updating proxies.",
-					"command_name": "variant",
+					"description": "Update a proxy variant. Old way of updating proxies.",
+					"name": "variant",
 					"params": {
 						"image": {
-							"parameter_description": "Image to set, by default None",
-							"parameter_name": "image"
+							"description": "Image to set, by default None",
+							"name": "image"
 						},
 						"name": {
-							"parameter_description": "The name of the variant.",
-							"parameter_name": "name"
+							"description": "The name of the variant.",
+							"name": "name"
 						},
 						"prefixes": {
-							"parameter_description": "The prefixes of the variant.",
-							"parameter_name": "prefixes"
+							"description": "The prefixes of the variant.",
+							"name": "prefixes"
 						},
 						"proxy": {
-							"parameter_description": "Base proxy",
-							"parameter_name": "proxy"
+							"description": "Base proxy",
+							"name": "proxy"
 						},
 						"url": {
-							"parameter_description": "Image URL, by default None",
-							"parameter_name": "url"
+							"description": "Image URL, by default None",
+							"name": "url"
 						},
 						"variant": {
-							"parameter_description": "Variant to update",
-							"parameter_name": "variant"
+							"description": "Variant to update",
+							"name": "variant"
 						}
 					}
 				}
@@ -3031,68 +3222,128 @@
 			"group_entries": {
 				"size": "Character image size cannot be more than {{size}}, use a server with higher limits."
 			},
-			"group_description": "Update a proxy.",
-			"group_name": "update"
+			"description": "Update a proxy.",
+			"name": "update"
 		},
 		"use": {
 			"group": {
-				"proxy": {
-					"command_description": "Use a proxy.",
-					"command_name": "proxy",
+				"npc": {
+					"description": "Create a NPC with a custom image.",
+					"name": "npc",
 					"params": {
-						"proxy": {
-							"parameter_description": "Proxy to use",
-							"parameter_name": "proxy"
+						"emotion": {
+							"choices": {
+								"Angry": "Angry",
+								"Crying": "Crying",
+								"Determined": "Determined",
+								"Dizzy": "Dizzy",
+								"Happy": "Happy",
+								"Inspired": "Inspired",
+								"Joyous": "Joyous",
+								"Normal": "Normal",
+								"Pain": "Pain",
+								"Sad": "Sad",
+								"Shouting": "Shouting",
+								"Sigh": "Sigh",
+								"Special0": "Special0",
+								"Special1": "Special1",
+								"Special2": "Special2",
+								"Special3": "Special3",
+								"Stunned": "Stunned",
+								"Surprised": "Surprised",
+								"TearyEyed": "TearyEyed",
+								"Worried": "Worried"
+							},
+							"description": "Emotion to use, by default None",
+							"name": "emotion"
+						},
+						"franchise": {
+							"choices": {
+								"D&D": "D&D",
+								"Digimon": "Digimon",
+								"Palworld": "Palworld",
+								"Pokemon": "Pokemon",
+								"Pokemon Shiny": "Pokemon Shiny",
+								"Trainer": "Trainer"
+							},
+							"description": "Franchise to use for the NPC",
+							"name": "franchise"
+						},
+						"image": {
+							"description": "Image to use, by default None",
+							"name": "image"
+						},
+						"nickname": {
+							"description": "Nickname to use, by default same as NPC name",
+							"name": "nickname"
+						},
+						"npc": {
+							"description": "NPC to use, by default None",
+							"name": "npc"
 						},
 						"text": {
-							"parameter_description": "Text to use",
-							"parameter_name": "text"
+							"description": "Text to use, by default Empty string",
+							"name": "text"
+						}
+					}
+				},
+				"proxy": {
+					"description": "Use a proxy.",
+					"name": "proxy",
+					"params": {
+						"proxy": {
+							"description": "Proxy to use",
+							"name": "proxy"
+						},
+						"text": {
+							"description": "Text to use",
+							"name": "text"
 						}
 					}
 				},
 				"shared": {
-					"command_description": "Use a shared proxy.",
-					"command_name": "shared",
+					"description": "Use a shared proxy.",
+					"name": "shared",
 					"params": {
 						"proxy": {
-							"parameter_description": "Proxy to use",
-							"parameter_name": "proxy"
+							"description": "Proxy to use",
+							"name": "proxy"
 						},
 						"text": {
-							"parameter_description": "Text to use, by default None",
-							"parameter_name": "text"
+							"description": "Text to use, by default None",
+							"name": "text"
 						}
 					}
 				},
 				"variant": {
-					"command_description": "Use a proxy's variant for a message.",
-					"command_name": "variant",
+					"description": "Use a proxy's variant for a message.",
+					"name": "variant",
 					"params": {
 						"proxy": {
-							"parameter_description": "Proxy to use the variant from",
-							"parameter_name": "proxy"
+							"description": "Proxy to use the variant from",
+							"name": "proxy"
 						},
 						"text": {
-							"parameter_description": "Text to use, by default None",
-							"parameter_name": "text"
+							"description": "Text to use, by default None",
+							"name": "text"
 						},
 						"variant": {
-							"parameter_description": "Variant to use",
-							"parameter_name": "variant"
+							"description": "Variant to use",
+							"name": "variant"
 						}
 					}
 				}
 			},
-			"group_description": "Use a proxy.",
-			"group_name": "use"
+			"description": "Use a proxy.",
+			"name": "use"
 		},
 		"who": {
-			"command_description": "Show the user of a proxy message.",
-			"command_name": "who",
+			"description": "Show the user of a proxy message.",
+			"name": "who",
 			"params": {
 				"message": {
-					"parameter_description": "Message to show the user of",
-					"parameter_name": "message"
+					"description": "Message to show the user of",
+					"name": "message"
 				}
 			},
 			"entries": {
@@ -3225,12 +3476,12 @@
 	},
 	"interactions": {
 		"afk_schedule": {
-			"command_name": "AFK Schedule",
-			"commands_description": "Commands for checking an AFK schedule"
+			"name": "AFK Schedule",
+			"description": "Commands for checking an AFK schedule"
 		},
 		"context_menu": {
-			"command_name": "Proxy",
-			"commands_description": "Commands for interacting with proxies"
+			"name": "Proxy",
+			"description": "Commands for interacting with proxies"
 		}
 	},
 	"modals": {
