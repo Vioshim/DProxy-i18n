@@ -1952,6 +1952,12 @@
 					}
 				}
 			},
+			"entries": {
+				"not_associated": "This message is not associated with your account.",
+				"not_found": "No proxy usage in this message.",
+				"not_same_channel": "This message is not in the same channel as this command.",
+				"not_proxy_message": "This message is not a proxy message, can't edit."
+			},
 			"group_entries": {
 				"not_associated": "This message is not associated with your account.",
 				"not_found": "No proxy usage in this message.",
