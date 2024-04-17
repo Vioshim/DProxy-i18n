@@ -3088,32 +3088,32 @@
 							"name": "afk_time"
 						},
 						"embeds_in_json": {
-							"description": "Whether to send embeds in JSON format, by default False",
+							"description": "Use it to send embeds in JSON format, by default False",
 							"name": "embeds_in_json"
 						},
-						"celebrate_birthday": {
-							"description": "Whether to celebrate proxies' birthdays, by default True",
-							"name": "celebrate_birthday"
+						"no_celebrate_birthday": {
+							"description": "Use it to not celebrate proxies' birthdays, by default False",
+							"name": "no_celebrate_birthday"
 						},
-						"modern_replies": {
-							"description": "Whether to use modern replies, by default True",
-							"name": "modern_replies"
+						"no_modern_replies": {
+							"description": "Whether to use modern replies, by default False",
+							"name": "no_modern_replies"
 						},
 						"fix_sentence_endings": {
-							"description": "Whether to fix sentence endings, by default False",
+							"description": "Use it to fix sentence endings, by default False",
 							"name": "fix_sentence_endings"
 						},
 						"replace_whitespace": {
-							"description": "Whether to replace whitespace, by default False",
+							"description": "Use it to replace whitespace, by default False",
 							"name": "replace_whitespace"
 						},
-						"break_long_words": {
-							"description": "Whether to break long words, by default True",
-							"name": "break_long_words"
+						"no_break_long_words": {
+							"description": "Use it to not break long words, by default False",
+							"name": "no_break_long_words"
 						},
-						"drop_whitespace": {
-							"description": "Whether to drop whitespace, by default True",
-							"name": "drop_whitespace"
+						"no_drop_whitespace": {
+							"description": "Use it to not drop whitespace, by default False",
+							"name": "no_drop_whitespace"
 						},
 						"break_on_hyphens": {
 							"description": "Whether to break on hyphens, by default False",
@@ -3127,9 +3127,9 @@
 							"description": "Whether to use TTS, by default False",
 							"name": "tts"
 						},
-						"typo_correction": {
-							"description": "Whether to use typo correction, by default True",
-							"name": "typo_correction"
+						"no_typo_correction": {
+							"description": "Use it to not be able to correct typos, by default False",
+							"name": "no_typo_correction"
 						},
 						"dm_notifications": {
 							"description": "Whether to send notifications in DM, by default False",
