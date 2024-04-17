@@ -2269,6 +2269,10 @@
 						"group": {
 							"description": "Group to list proxies from, by default None",
 							"name": "group"
+						},
+						"local": {
+							"description": "List local proxies, by default True",
+							"name": "local"
 						}
 					}
 				},
@@ -2279,6 +2283,10 @@
 						"group": {
 							"description": "Group to list the proxies from, by default None",
 							"name": "group"
+						},
+						"local": {
+							"description": "List local proxies, by default True",
+							"name": "local"
 						}
 					}
 				},
@@ -2289,6 +2297,10 @@
 						"group": {
 							"description": "Group to list the variants from, by default None",
 							"name": "group"
+						},
+						"local": {
+							"description": "List local proxies, by default True",
+							"name": "local"
 						},
 						"proxy": {
 							"description": "Proxy to list the variants from",
