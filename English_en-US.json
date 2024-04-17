@@ -2795,6 +2795,10 @@
 				"no_proxy_set": "No proxy set, please use /use or /set to set one."
 			},
 			"params": {
+				"attachment": {
+					"description": "Attachment, by default None",
+					"name": "attachment"
+				},
 				"text": {
 					"description": "Text to say",
 					"name": "text"
@@ -3249,6 +3253,10 @@
 					"description": "Create a NPC with a custom image.",
 					"name": "npc",
 					"params": {
+						"attachment": {
+							"description": "Attachment, by default None",
+							"name": "attachment"
+						},
 						"emotion": {
 							"choices": {
 								"Angry": "Angry",
@@ -3309,6 +3317,10 @@
 					"description": "Use a proxy.",
 					"name": "proxy",
 					"params": {
+						"attachment": {
+							"description": "Attachment, by default None",
+							"name": "attachment"
+						},
 						"proxy": {
 							"description": "Proxy to use",
 							"name": "proxy"
@@ -3323,6 +3335,10 @@
 					"description": "Use a shared proxy.",
 					"name": "shared",
 					"params": {
+						"attachment": {
+							"description": "Attachment, by default None",
+							"name": "attachment"
+						},
 						"proxy": {
 							"description": "Proxy to use",
 							"name": "proxy"
@@ -3337,6 +3353,10 @@
 					"description": "Use a proxy's variant for a message.",
 					"name": "variant",
 					"params": {
+						"attachment": {
+							"description": "Attachment, by default None",
+							"name": "attachment"
+						},
 						"proxy": {
 							"description": "Proxy to use the variant from",
 							"name": "proxy"
