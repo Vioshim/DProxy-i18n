@@ -3063,17 +3063,7 @@
 				},
 				"member": {
 					"description": "Show the member settings.",
-					"name": "member",
-					"params": {
-						"ignore_me": {
-							"description": "Ignore your own messages, by default False",
-							"name": "ignore_me"
-						},
-						"latch": {
-							"description": "Latch mode, by default False",
-							"name": "latch"
-						}
-					}
+					"name": "member"
 				},
 				"user": {
 					"description": "Show the user settings.",
@@ -3086,54 +3076,6 @@
 						"afk_time": {
 							"description": "Busy time in hours. e.g: 1 2 3 4",
 							"name": "afk_time"
-						},
-						"embeds_in_json": {
-							"description": "Use it to send embeds in JSON format, by default False",
-							"name": "embeds_in_json"
-						},
-						"no_celebrate_birthday": {
-							"description": "Use it to not celebrate proxies' birthdays, by default False",
-							"name": "no_celebrate_birthday"
-						},
-						"no_modern_replies": {
-							"description": "Whether to use modern replies, by default False",
-							"name": "no_modern_replies"
-						},
-						"fix_sentence_endings": {
-							"description": "Use it to fix sentence endings, by default False",
-							"name": "fix_sentence_endings"
-						},
-						"replace_whitespace": {
-							"description": "Use it to replace whitespace, by default False",
-							"name": "replace_whitespace"
-						},
-						"no_break_long_words": {
-							"description": "Use it to not break long words, by default False",
-							"name": "no_break_long_words"
-						},
-						"no_drop_whitespace": {
-							"description": "Use it to not drop whitespace, by default False",
-							"name": "no_drop_whitespace"
-						},
-						"break_on_hyphens": {
-							"description": "Whether to break on hyphens, by default False",
-							"name": "break_on_hyphens"
-						},
-						"silent_mode": {
-							"description": "Whether to use silent mode, by default False",
-							"name": "silent_mode"
-						},
-						"tts": {
-							"description": "Whether to use TTS, by default False",
-							"name": "tts"
-						},
-						"no_typo_correction": {
-							"description": "Use it to not be able to correct typos, by default False",
-							"name": "no_typo_correction"
-						},
-						"dm_notifications": {
-							"description": "Whether to send notifications in DM, by default False",
-							"name": "dm_notifications"
 						}
 					}
 				}
@@ -3605,6 +3547,104 @@
 		}
 	},
 	"views": {
+		"settings": {
+			"Base": {
+				"Close": {
+					"description": "Close the settings.",
+					"name": "Close"
+				},
+				"Back": {
+					"description": "Go back to the previous page.",
+					"name": "Back"
+				},
+				"Member": {
+					"name": "Member Settings",
+					"description": "Modify your server preferences."
+				},
+				"Server": {
+					"name": "Server Settings",
+					"description": "Modify server's settings'."
+				},
+				"User": {
+					"name": "User Settings",
+					"description": "Modify your user preferences."
+				}
+			},
+			"Member": {
+				"disabled_guild": {
+					"description": "Ignore your own messages.",
+					"name": "Ignore Me"
+				},
+				"latch_mode": {
+					"description": "Last proxy becomes the default auto",
+					"name": "Latch"
+				}
+			},
+			"Server": {
+				"prefix": {
+					"description": "Set the prefix for the server.",
+					"name": "Prefix"
+				},
+				"nsfw": {
+					"description": "Enable NSFW proxies to be usable.",
+					"name": "NSFW"
+				}
+			},
+			"User": {
+				"afk_time": {
+					"description": "Set the time to be AFK.",
+					"name": "AFK Time"
+				},
+				"embeds_in_json": {
+					"description": "Use it to send embeds in JSON format.",
+					"name": "Embeds in JSON"
+				},
+				"no_celebrate_birthday": {
+					"description": "Use it to not celebrate proxies' birthdays.",
+					"name": "No Celebrate Birthday"
+				},
+				"no_modern_replies": {
+					"description": "Whether to use modern replies.",
+					"name": "No Modern Replies"
+				},
+				"fix_sentence_endings": {
+					"description": "Use it to fix sentence endings.",
+					"name": "Fix Sentence Endings"
+				},
+				"replace_whitespace": {
+					"description": "Use it to replace whitespace.",
+					"name": "Replace Whitespace"
+				},
+				"no_break_long_words": {
+					"description": "Use it to not break long words.",
+					"name": "No Break Long Words"
+				},
+				"no_drop_whitespace": {
+					"description": "Use it to not drop whitespace.",
+					"name": "No Drop Whitespace"
+				},
+				"break_on_hyphens": {
+					"description": "Whether to break on hyphens.",
+					"name": "Break on Hyphens"
+				},
+				"silent_mode": {
+					"description": "Whether to use silent mode.",
+					"name": "Silent Mode"
+				},
+				"tts": {
+					"description": "Whether to use TTS.",
+					"name": "TTS"
+				},
+				"no_typo_correction": {
+					"description": "Use it to not be able to correct typos.",
+					"name": "No Typo Correction"
+				},
+				"dm_notifications": {
+					"description": "Whether to send notifications in DM.",
+					"name": "DM Notifications"
+				}
+			}
+		},
 		"paginator": {
 			"multiple": "Picked {{count}}, Max: {{max}}, Options: {{options}}",
 			"single": "Single choice, Options: {{options}}"
