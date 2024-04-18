@@ -3051,6 +3051,16 @@
 			"description": "Show the settings page.",
 			"name": "settings",
 			"group": {
+				"afk": {
+					"description": "Set the AFK time for a user.",
+					"name": "afk",
+					"params": {
+						"time": {
+							"description": "Time to set, by default None",
+							"name": "time"
+						}
+					}
+				},
 				"server": {
 					"description": "Show the server settings.",
 					"name": "server",
@@ -3067,17 +3077,7 @@
 				},
 				"user": {
 					"description": "Show the user settings.",
-					"name": "user",
-					"params": {
-						"time": {
-							"description": "Time to set, by default None",
-							"name": "time"
-						},
-						"afk_time": {
-							"description": "Busy time in hours. e.g: 1 2 3 4",
-							"name": "afk_time"
-						}
-					}
+					"name": "user"
 				}
 			},
 			"group_entries": {
