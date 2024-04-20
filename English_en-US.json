@@ -1831,7 +1831,7 @@
 		"detail": {
 			"group": {
 				"proxy": {
-					"description": "Detail a proxy. Old way of editing proxies.",
+					"description": "Detail a proxy. Use for local descriptions",
 					"name": "proxy",
 					"params": {
 						"birthday": {
@@ -1857,11 +1857,19 @@
 						"proxy": {
 							"description": "Proxy to detail",
 							"name": "proxy"
+						},
+						"allow_read": {
+							"description": "Allow reading of the proxy",
+							"name": "allow_read"
+						},
+						"local": {
+							"description": "If you want to use local looks, by default True",
+							"name": "local"
 						}
 					}
 				},
 				"shared": {
-					"description": "Detail a proxy.",
+					"description": "Detail a proxy. Use for local descriptions",
 					"name": "shared",
 					"params": {
 						"birthday": {
@@ -1887,11 +1895,19 @@
 						"proxy": {
 							"description": "Proxy to detail",
 							"name": "proxy"
+						},
+						"allow_read": {
+							"description": "Allow reading of the proxy",
+							"name": "allow_read"
+						},
+						"local": {
+							"description": "If you want to use local looks, by default True",
+							"name": "local"
 						}
 					}
 				},
 				"variant": {
-					"description": "Detail a proxy. Old way of editing proxies.",
+					"description": "Detail a proxy. Use for local descriptions.",
 					"name": "variant",
 					"params": {
 						"birthday": {
@@ -1921,6 +1937,14 @@
 						"variant": {
 							"description": "Variant to detail",
 							"name": "variant"
+						},
+						"allow_read": {
+							"description": "Allow reading of the proxy",
+							"name": "allow_read"
+						},
+						"local": {
+							"description": "If you want to use local looks, by default True",
+							"name": "local"
 						}
 					}
 				}
@@ -2273,6 +2297,10 @@
 						"local": {
 							"description": "List local proxies, by default True",
 							"name": "local"
+						},
+						"showing_to": {
+							"description": "User to show the proxies to, by default None",
+							"name": "showing_to"
 						}
 					}
 				},
@@ -2287,6 +2315,10 @@
 						"local": {
 							"description": "List local proxies, by default True",
 							"name": "local"
+						},
+						"showing_to": {
+							"description": "User to show the proxies to, by default None",
+							"name": "showing_to"
 						}
 					}
 				},
@@ -2305,6 +2337,10 @@
 						"proxy": {
 							"description": "Proxy to list the variants from",
 							"name": "proxy"
+						},
+						"showing_to": {
+							"description": "User to show the proxies to, by default None",
+							"name": "showing_to"
 						}
 					}
 				}
@@ -2678,43 +2714,13 @@
 			"name": "purge"
 		},
 		"read": {
-			"group": {
-				"proxy": {
-					"description": "Read a proxy's information.",
-					"name": "proxy",
-					"params": {
-						"proxy": {
-							"description": "Proxy to read from",
-							"name": "proxy"
-						}
-					}
-				},
-				"shared": {
-					"description": "Read a shared proxy.",
-					"name": "shared",
-					"params": {
-						"proxy": {
-							"description": "Proxy to read",
-							"name": "proxy"
-						}
-					}
-				},
-				"variant": {
-					"description": "Read a variant from a proxy.",
-					"name": "variant",
-					"params": {
-						"proxy": {
-							"description": "Base proxy of the variant",
-							"name": "proxy"
-						},
-						"variant": {
-							"description": "Variant to read",
-							"name": "variant"
-						}
-					}
+			"description": "Read user information.",
+			"params": {
+				"user": {
+					"description": "User to read, by default you",
+					"name": "user"
 				}
 			},
-			"description": "Read a proxy's information.",
 			"name": "read"
 		},
 		"rename": {
@@ -3455,11 +3461,11 @@
 		}
 	},
 	"interactions": {
-		"afk_schedule": {
-			"name": "AFK Schedule",
-			"description": "Commands for checking an AFK schedule"
+		"Proxy Info": {
+			"name": "Proxy Info",
+			"description": "Check user provided info"
 		},
-		"context_menu": {
+		"Proxy": {
 			"name": "Proxy",
 			"description": "Commands for interacting with proxies"
 		}
@@ -3642,6 +3648,10 @@
 				"dm_notifications": {
 					"description": "Whether to send notifications in DM.",
 					"name": "DM Notifications"
+				},
+				"allow_read": {
+					"description": "Whether to allow reading user information.",
+					"name": "Allow Read"
 				}
 			}
 		},
