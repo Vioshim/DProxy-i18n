@@ -1462,6 +1462,56 @@
 			},
 			"name": "birthday"
 		},
+		"blacklist": {
+			"group": {
+				"proxy": {
+					"description": "Blacklist a proxy.",
+					"name": "proxy",
+					"params": {
+						"blacklist": {
+							"description": "Blacklist the proxy, by default switch",
+							"name": "blacklist"
+						},
+						"proxy": {
+							"description": "Proxy to blacklist",
+							"name": "proxy"
+						}
+					}
+				},
+				"shared": {
+					"description": "Blacklist a shared proxy.",
+					"name": "shared",
+					"params": {
+						"blacklist": {
+							"description": "Blacklist the proxy, by default switch",
+							"name": "blacklist"
+						},
+						"proxy": {
+							"description": "Shared proxy to blacklist",
+							"name": "proxy"
+						}
+					}
+				},
+				"variant": {
+					"description": "Blacklist a variant.",
+					"name": "variant",
+					"params": {
+						"blacklist": {
+							"description": "Blacklist the proxy, by default switch",
+							"name": "blacklist"
+						},
+						"proxy": {
+							"description": "Base proxy of the variant",
+							"name": "proxy"
+						},
+						"variant": {
+							"description": "Variant to blacklist",
+							"name": "variant"
+						}
+					}
+				}
+			}
+		},
 		"check_permissions": {
 			"description": "Check permissions of the bot.",
 			"name": "check_permissions",
@@ -1858,10 +1908,6 @@
 							"description": "Proxy to detail",
 							"name": "proxy"
 						},
-						"allow_read": {
-							"description": "Allow reading of the proxy",
-							"name": "allow_read"
-						},
 						"local": {
 							"description": "If you want to use local looks, by default True",
 							"name": "local"
@@ -1895,10 +1941,6 @@
 						"proxy": {
 							"description": "Proxy to detail",
 							"name": "proxy"
-						},
-						"allow_read": {
-							"description": "Allow reading of the proxy",
-							"name": "allow_read"
 						},
 						"local": {
 							"description": "If you want to use local looks, by default True",
@@ -1937,10 +1979,6 @@
 						"variant": {
 							"description": "Variant to detail",
 							"name": "variant"
-						},
-						"allow_read": {
-							"description": "Allow reading of the proxy",
-							"name": "allow_read"
 						},
 						"local": {
 							"description": "If you want to use local looks, by default True",
@@ -3648,10 +3686,6 @@
 				"dm_notifications": {
 					"description": "Whether to send notifications in DM.",
 					"name": "DM Notifications"
-				},
-				"allow_read": {
-					"description": "Whether to allow reading user information.",
-					"name": "Allow Read"
 				}
 			}
 		},
