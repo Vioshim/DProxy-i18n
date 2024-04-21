@@ -3112,6 +3112,10 @@
 						"prefix": {
 							"description": "Prefix to set, by default None",
 							"name": "prefix"
+						},
+						"default_automod": {
+							"description": "Default automod, by default None",
+							"name": "default_automod"
 						}
 					}
 				},
