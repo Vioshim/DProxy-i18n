@@ -1518,17 +1518,52 @@
 			"entries": {
 				"bot": "Bot",
 				"description": "Here are the permissions you and I have in {{channel}}",
-				"permissions": "Permissions",
+				"shard": "Shard ID: {{shard_id}}",
 				"perms": {
-					"attach_files": "This is needed to send files",
-					"embed_links": "This is needed to send embeds",
-					"external_emojis": "This is needed to use external emojis",
-					"manage_messages": "Needed to delete messages after they character and allow edits when a message didn't character.",
-					"manage_webhooks": "I need this to create webhooks in the channel.",
-					"read_message_history": "This is needed to edit/delete messages",
-					"send_messages": "If you or me can't send messages, my webhooks won't either.",
-					"send_messages_in_threads": "Same goes here, but for threads.",
-					"send_tts_messages": "This is needed to send TTS messages"
+					"send_messages": {
+						"name": "Send Messages",
+						"description": "This is needed to send messages"
+					},
+					"send_messages_in_threads": {
+						"name": "Send Messages in Threads",
+						"description": "This is needed to send messages in threads"
+					},
+					"read_message_history": {
+						"name": "Read Message History",
+						"description": "This is needed to fetch messages"
+					},
+					"manage_messages": {
+						"name": "Manage Messages",
+						"description": "Needed to delete messages after they character and allow edits when a message didn't character."
+					},
+					"manage_webhooks": {
+						"name": "Manage Webhooks",
+						"description": "I need this to create webhooks in the channel."
+					},
+					"embed_links": {
+						"name": "Embed Links",
+						"description": "This is needed to send embeds"
+					},
+					"external_emojis": {
+						"name": "Use External Emojis",
+						"description": "This is needed to use emojis from servers I'm not in"
+					},
+					"attach_files": {
+						"name": "Attach Files",
+						"description": "This is needed to send images"
+					},
+					"use_external_stickers": {
+						"name": "Use External Stickers",
+						"description": "This is needed to indicate whether bot should adapt stickers or not"
+					},
+					"send_tts_messages": {
+						"name": "Send TTS Messages",
+						"description": "This is needed to send TTS messages"
+					},
+					"manage_guild": {
+						"name": "Manage Guild",
+						"description": "This is needed to add automod rules"
+					}
 				},
 				"user": "User",
 				"unable_fetch_webhook": "I was unable to fetch the webhook for this channel.",
