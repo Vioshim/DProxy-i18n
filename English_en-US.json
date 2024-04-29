@@ -3187,51 +3187,43 @@
 					"description": "Update a proxy. Old way of updating proxies.",
 					"name": "proxy",
 					"params": {
-						"image": {
-							"description": "Image to set, by default None",
-							"name": "image"
+						"group": {
+							"description": "Group to list proxies from, by default None",
+							"name": "group"
 						},
-						"name": {
-							"description": "Name to set, by default same",
-							"name": "name"
-						},
-						"prefixes": {
-							"description": "Prefixes to set, by default same",
-							"name": "prefixes"
+						"local": {
+							"description": "List local proxies, by default True",
+							"name": "local"
 						},
 						"proxy": {
 							"description": "Proxy to update",
 							"name": "proxy"
 						},
-						"url": {
-							"description": "URL to set, by default None",
-							"name": "url"
+						"showing_to": {
+							"description": "User to show the proxies to, by default None",
+							"name": "showing_to"
 						}
 					}
 				},
 				"shared": {
 					"description": "Update a shared proxy. Old way of updating proxies.",
 					"name": "shared",
-					"params": {
-						"image": {
-							"description": "Image to set, by default None",
-							"name": "image"
+					"parmas": {
+						"group": {
+							"description": "Group to list proxies from, by default None",
+							"name": "group"
 						},
-						"name": {
-							"description": "The name of the proxy.",
-							"name": "name"
-						},
-						"prefixes": {
-							"description": "The prefixes of the proxy.",
-							"name": "prefixes"
+						"local": {
+							"description": "List local proxies, by default True",
+							"name": "local"
 						},
 						"proxy": {
 							"description": "Proxy to update",
 							"name": "proxy"
 						},
-						"url": {
-							"description": "Image URL, by default None",
-							"name": "url"
+						"showing_to": {
+							"description": "User to show the proxies to, by default None",
+							"name": "showing_to"
 						}
 					}
 				},
@@ -3239,25 +3231,21 @@
 					"description": "Update a proxy variant. Old way of updating proxies.",
 					"name": "variant",
 					"params": {
-						"image": {
-							"description": "Image to set, by default None",
-							"name": "image"
+						"group": {
+							"description": "Group to list proxies from, by default None",
+							"name": "group"
 						},
-						"name": {
-							"description": "The name of the variant.",
-							"name": "name"
-						},
-						"prefixes": {
-							"description": "The prefixes of the variant.",
-							"name": "prefixes"
+						"local": {
+							"description": "List local proxies, by default True",
+							"name": "local"
 						},
 						"proxy": {
 							"description": "Base proxy",
 							"name": "proxy"
 						},
-						"url": {
-							"description": "Image URL, by default None",
-							"name": "url"
+						"showing_to": {
+							"description": "User to show the proxies to, by default None",
+							"name": "showing_to"
 						},
 						"variant": {
 							"description": "Variant to update",
