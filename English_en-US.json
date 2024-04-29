@@ -1921,10 +1921,6 @@
 					"description": "Detail a proxy. Use for local descriptions",
 					"name": "proxy",
 					"params": {
-						"group": {
-							"description": "Group to list proxies from, by default None",
-							"name": "group"
-						},
 						"local": {
 							"description": "List local proxies, by default True",
 							"name": "local"
@@ -1943,10 +1939,6 @@
 					"description": "Detail a proxy. Use for local descriptions",
 					"name": "shared",
 					"params": {
-						"group": {
-							"description": "Group to list proxies from, by default None",
-							"name": "group"
-						},
 						"local": {
 							"description": "List local proxies, by default True",
 							"name": "local"
@@ -1965,10 +1957,6 @@
 					"description": "Detail a proxy. Use for local descriptions.",
 					"name": "variant",
 					"params": {
-						"group": {
-							"description": "Group to list proxies from, by default None",
-							"name": "group"
-						},
 						"local": {
 							"description": "List local proxies, by default True",
 							"name": "local"
@@ -3157,10 +3145,6 @@
 					"description": "Update a proxy. Old way of updating proxies.",
 					"name": "proxy",
 					"params": {
-						"group": {
-							"description": "Group to list proxies from, by default None",
-							"name": "group"
-						},
 						"local": {
 							"description": "List local proxies, by default True",
 							"name": "local"
@@ -3179,10 +3163,6 @@
 					"description": "Update a shared proxy. Old way of updating proxies.",
 					"name": "shared",
 					"params": {
-						"group": {
-							"description": "Group to list proxies from, by default None",
-							"name": "group"
-						},
 						"local": {
 							"description": "List local proxies, by default True",
 							"name": "local"
@@ -3201,10 +3181,6 @@
 					"description": "Update a proxy variant. Old way of updating proxies.",
 					"name": "variant",
 					"params": {
-						"group": {
-							"description": "Group to list proxies from, by default None",
-							"name": "group"
-						},
 						"local": {
 							"description": "List local proxies, by default True",
 							"name": "local"
