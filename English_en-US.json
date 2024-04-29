@@ -1919,33 +1919,21 @@
 					"description": "Detail a proxy. Use for local descriptions",
 					"name": "proxy",
 					"params": {
-						"birthday": {
-							"description": "The birthday of the proxy.",
-							"name": "birthday"
-						},
-						"color": {
-							"description": "The color of the proxy.",
-							"name": "color"
-						},
-						"description": {
-							"description": "The description of the proxy.",
-							"name": "description"
-						},
 						"group": {
-							"description": "The group of the proxy.",
+							"description": "Group to list proxies from, by default None",
 							"name": "group"
 						},
-						"nickname": {
-							"description": "The nickname of the proxy.",
-							"name": "nickname"
+						"local": {
+							"description": "List local proxies, by default True",
+							"name": "local"
+						},
+						"showing_to": {
+							"description": "User to show the proxies to, by default None",
+							"name": "showing_to"
 						},
 						"proxy": {
 							"description": "Proxy to detail",
 							"name": "proxy"
-						},
-						"local": {
-							"description": "If you want to use local looks, by default True",
-							"name": "local"
 						}
 					}
 				},
@@ -1953,33 +1941,21 @@
 					"description": "Detail a proxy. Use for local descriptions",
 					"name": "shared",
 					"params": {
-						"birthday": {
-							"description": "The birthday of the proxy.",
-							"name": "birthday"
-						},
-						"color": {
-							"description": "The color of the proxy.",
-							"name": "color"
-						},
-						"description": {
-							"description": "The description of the proxy.",
-							"name": "description"
-						},
 						"group": {
-							"description": "The group of the proxy.",
+							"description": "Group to list proxies from, by default None",
 							"name": "group"
 						},
-						"nickname": {
-							"description": "The nickname of the proxy.",
-							"name": "nickname"
+						"local": {
+							"description": "List local proxies, by default True",
+							"name": "local"
+						},
+						"showing_to": {
+							"description": "User to show the proxies to, by default None",
+							"name": "showing_to"
 						},
 						"proxy": {
 							"description": "Proxy to detail",
 							"name": "proxy"
-						},
-						"local": {
-							"description": "If you want to use local looks, by default True",
-							"name": "local"
 						}
 					}
 				},
@@ -1987,25 +1963,17 @@
 					"description": "Detail a proxy. Use for local descriptions.",
 					"name": "variant",
 					"params": {
-						"birthday": {
-							"description": "The birthday of the variant.",
-							"name": "birthday"
-						},
-						"color": {
-							"description": "The color of the variant.",
-							"name": "color"
-						},
-						"description": {
-							"description": "The description of the variant.",
-							"name": "description"
-						},
 						"group": {
-							"description": "The group of the variant.",
+							"description": "Group to list proxies from, by default None",
 							"name": "group"
 						},
-						"nickname": {
-							"description": "The nickname of the variant.",
-							"name": "nickname"
+						"local": {
+							"description": "List local proxies, by default True",
+							"name": "local"
+						},
+						"showing_to": {
+							"description": "User to show the proxies to, by default None",
+							"name": "showing_to"
 						},
 						"proxy": {
 							"description": "Base proxy of the variant",
@@ -2014,10 +1982,6 @@
 						"variant": {
 							"description": "Variant to detail",
 							"name": "variant"
-						},
-						"local": {
-							"description": "If you want to use local looks, by default True",
-							"name": "local"
 						}
 					}
 				}
@@ -3387,6 +3351,56 @@
 			},
 			"description": "Use a proxy.",
 			"name": "use"
+		},
+		"whitelist": {
+			"group": {
+				"proxy": {
+					"description": "Let anyone read this proxy",
+					"name": "proxy",
+					"params": {
+						"whitelist": {
+							"description": "Whitelist the proxy, by default switch",
+							"name": "whitelist"
+						},
+						"proxy": {
+							"description": "Proxy to whitelist",
+							"name": "proxy"
+						}
+					}
+				},
+				"shared": {
+					"description": "Let anyone read this shared proxy.",
+					"name": "shared",
+					"params": {
+						"whitelist": {
+							"description": "Whitelist the proxy, by default switch",
+							"name": "whitelist"
+						},
+						"proxy": {
+							"description": "Shared proxy to whitelist",
+							"name": "proxy"
+						}
+					}
+				},
+				"variant": {
+					"description": "Let anyone read this variant.",
+					"name": "variant",
+					"params": {
+						"whitelist": {
+							"description": "Whitelist the proxy, by default switch",
+							"name": "whitelist"
+						},
+						"proxy": {
+							"description": "Base proxy of the variant",
+							"name": "proxy"
+						},
+						"variant": {
+							"description": "Variant to whitelist",
+							"name": "variant"
+						}
+					}
+				}
+			}
 		},
 		"who": {
 			"description": "Show the user of a proxy message.",
