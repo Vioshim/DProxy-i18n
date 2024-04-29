@@ -1463,9 +1463,11 @@
 			"name": "birthday"
 		},
 		"blacklist": {
+			"name": "blacklist",
+			"description": "Don't allow anyone to read the proxy.",
 			"group": {
 				"proxy": {
-					"description": "Blacklist a proxy.",
+					"description": "Don't allow anyone to read the proxy.",
 					"name": "proxy",
 					"params": {
 						"blacklist": {
@@ -1479,7 +1481,7 @@
 					}
 				},
 				"shared": {
-					"description": "Blacklist a shared proxy.",
+					"description": "Don't allow anyone to read the shared proxy.",
 					"name": "shared",
 					"params": {
 						"blacklist": {
@@ -1493,7 +1495,7 @@
 					}
 				},
 				"variant": {
-					"description": "Blacklist a variant.",
+					"description": "Don't allow anyone to read the variant.",
 					"name": "variant",
 					"params": {
 						"blacklist": {
@@ -3353,6 +3355,8 @@
 			"name": "use"
 		},
 		"whitelist": {
+			"name": "whitelist",
+			"description": "Allow any user to read the proxy.",
 			"group": {
 				"proxy": {
 					"description": "Let anyone read this proxy",
