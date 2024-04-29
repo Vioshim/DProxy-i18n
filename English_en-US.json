@@ -3174,7 +3174,7 @@
 				"shared": {
 					"description": "Update a shared proxy. Old way of updating proxies.",
 					"name": "shared",
-					"parmas": {
+					"params": {
 						"group": {
 							"description": "Group to list proxies from, by default None",
 							"name": "group"
