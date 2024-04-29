@@ -2224,6 +2224,10 @@
 			},
 			"name": "group"
 		},
+		"help": {
+			"name": "help",
+			"description": "Get help on a command"
+		},
 		"import": {
 			"group": {
 				"proxy": {
