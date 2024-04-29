@@ -1684,9 +1684,9 @@
 							"description": "Type to convert to",
 							"name": "to"
 						},
-						"base": {
+						"proxy": {
 							"description": "Base proxy for the variant",
-							"name": "base"
+							"name": "proxy"
 						},
 						"variant": {
 							"description": "Variant to convert",
