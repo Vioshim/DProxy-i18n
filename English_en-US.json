@@ -1629,117 +1629,77 @@
 		"convert": {
 			"group": {
 				"proxy": {
-					"group": {
-						"shared": {
-							"description": "Shares your proxy with all server/dm",
-							"name": "shared",
-							"params": {
-								"proxy": {
-									"description": "Original Proxy",
-									"name": "proxy"
-								}
-							}
-						},
-						"variant": {
-							"description": "Convert a proxy to a variant of another proxy.",
-							"name": "variant",
-							"params": {
-								"base": {
-									"description": "Base Proxy",
-									"name": "base"
-								},
-								"original": {
-									"description": "Original Proxy",
-									"name": "original"
-								}
-							}
-						}
-					},
-					"group_entries": {
-						"already_proxy": "Variant is already a proxy.",
-						"already_variant": "Proxy is already a variant.",
-						"set": "Proxy is now a variant of {{base}}.",
-						"done": "{{variant}} is now a proxy."
-					},
 					"description": "Convert a proxy to a variant or shared proxy.",
-					"name": "proxy"
+					"name": "proxy",
+					"params": {
+						"to": {
+							"choices": {
+								"shared": "Shared Proxy",
+								"variant": "Variant"
+							},
+							"description": "Type to convert to",
+							"name": "to"
+						},
+						"base": {
+							"description": "Base Proxy",
+							"name": "base"
+						},
+						"proxy": {
+							"description": "Original Proxy",
+							"name": "proxy"
+						}
+					}
 				},
 				"shared": {
-					"group": {
-						"proxy": {
-							"description": "Convert a shared proxy to a personal one.",
-							"name": "proxy",
-							"params": {
-								"proxy": {
-									"description": "Shared Proxy to copy",
-									"name": "proxy"
-								}
-							}
-						},
-						"variant": {
-							"description": "Convert a shared proxy to a personal one.",
-							"name": "variant",
-							"params": {
-								"base": {
-									"description": "Base Proxy to have as parent",
-									"name": "base"
-								},
-								"proxy": {
-									"description": "Shared Proxy to copy",
-									"name": "proxy"
-								}
-							}
-						}
-					},
-					"group_entries": {
-						"already_proxy": "Variant is already a proxy.",
-						"already_variant": "Proxy is already a variant.",
-						"set": "Proxy is now a variant of {{base}}.",
-						"done": "{{variant}} is now a proxy."
-					},
 					"description": "Convert a shared  to a variant or proxy.",
-					"name": "shared"
+					"name": "shared",
+					"params": {
+						"to": {
+							"choices": {
+								"proxy": "Proxy",
+								"variant": "Variant"
+							},
+							"description": "Type to convert to",
+							"name": "to"
+						},
+						"base": {
+							"description": "Base proxy for the variant",
+							"name": "base"
+						},
+						"proxy": {
+							"description": "Shared to convert",
+							"name": "proxy"
+						}
+					}
 				},
 				"variant": {
-					"group": {
-						"proxy": {
-							"description": "Convert a variant to a proxy.",
-							"name": "proxy",
-							"params": {
-								"proxy": {
-									"description": "Base proxy of the variant",
-									"name": "proxy"
-								},
-								"variant": {
-									"description": "Variant to convert",
-									"name": "variant"
-								}
-							}
-						},
-						"shared": {
-							"description": "Shares your variant with all server/dm",
-							"name": "shared",
-							"params": {
-								"proxy": {
-									"description": "Base proxy of the variant",
-									"name": "proxy"
-								},
-								"variant": {
-									"description": "Variant to convert",
-									"name": "variant"
-								}
-							}
-						}
-					},
 					"description": "Convert a variant to a proxy or shared.",
-					"group_entries": {
-						"already_proxy": "Variant is already a proxy.",
-						"already_variant": "Proxy is already a variant.",
-						"set": "Proxy is now a variant of {{base}}.",
-						"done": "{{variant}} is now a proxy."
-					},
-					"name": "variant"
+					"name": "variant",
+					"params": {
+						"to": {
+							"choices": {
+								"proxy": "Proxy",
+								"shared": "Shared"
+							},
+							"description": "Type to convert to",
+							"name": "to"
+						},
+						"base": {
+							"description": "Base proxy for the variant",
+							"name": "base"
+						},
+						"variant": {
+							"description": "Variant to convert",
+							"name": "variant"
+						}
+					}
 				}
+			},
+			"group_entries": {
+				"already_proxy": "Variant is already a proxy.",
+				"already_variant": "Proxy is already a variant.",
+				"set": "Proxy is now a variant of {{base}}.",
+				"done": "{{variant}} is now a proxy."
 			},
 			"description": "Convert a proxy to a variant or shared proxy.",
 			"name": "convert"
