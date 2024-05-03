@@ -1239,58 +1239,184 @@
 					}
 				},
 				"npc": {
-					"description": "Set the auto tag for an NPC.",
+					"description": "Set a NPC as the current to use.",
 					"name": "npc",
-					"params": {
-						"emotion": {
-							"choices": {
-								"Angry": "Angry",
-								"Crying": "Crying",
-								"Determined": "Determined",
-								"Dizzy": "Dizzy",
-								"Happy": "Happy",
-								"Inspired": "Inspired",
-								"Joyous": "Joyous",
-								"Normal": "Normal",
-								"Pain": "Pain",
-								"Sad": "Sad",
-								"Shouting": "Shouting",
-								"Sigh": "Sigh",
-								"Special0": "Special0",
-								"Special1": "Special1",
-								"Special2": "Special2",
-								"Special3": "Special3",
-								"Stunned": "Stunned",
-								"Surprised": "Surprised",
-								"TearyEyed": "TearyEyed",
-								"Worried": "Worried"
-							},
-							"description": "Emotion to use, by default None",
-							"name": "emotion"
+					"group": {
+						"pokemon": {
+							"description": "Set a Pokemon NPC as the current to use.",
+							"name": "pokemon",
+							"params": {
+								"emotion": {
+									"choices": {
+										"Angry": "Angry",
+										"Crying": "Crying",
+										"Determined": "Determined",
+										"Dizzy": "Dizzy",
+										"Happy": "Happy",
+										"Inspired": "Inspired",
+										"Joyous": "Joyous",
+										"Normal": "Normal",
+										"Pain": "Pain",
+										"Sad": "Sad",
+										"Shouting": "Shouting",
+										"Sigh": "Sigh",
+										"Special0": "Special0",
+										"Special1": "Special1",
+										"Special2": "Special2",
+										"Special3": "Special3",
+										"Stunned": "Stunned",
+										"Surprised": "Surprised",
+										"TearyEyed": "TearyEyed",
+										"Worried": "Worried"
+									},
+									"description": "Emotion to set, by default None",
+									"name": "emotion"
+								},
+								"image": {
+									"description": "Image to use, by default None",
+									"name": "image"
+								},
+								"shiny": {
+									"description": "Whether to use a shiny sprite, by default False",
+									"name": "shiny"
+								},
+								"sprite": {
+									"description": "Sprite to use, by default None",
+									"name": "sprite"
+								},
+								"nickname": {
+									"description": "Nickname to set, by default None",
+									"name": "nickname"
+								},
+								"url": {
+									"description": "Image URL to use, by default None",
+									"name": "url"
+								}
+							}
 						},
-						"franchise": {
-							"choices": {
-								"D&D": "D&D",
-								"Digimon": "Digimon",
-								"Palworld": "Palworld",
-								"Pokemon": "Pokemon",
-								"Pokemon Shiny": "Pokemon Shiny",
-								"Trainer": "Trainer"
-							},
-							"description": "Franchise to use for the NPC",
-							"name": "franchise"
+						"trainer": {
+							"description": "Set a Pokemon Trainer NPC as the current to use.",
+							"name": "trainer",
+							"params": {
+								"image": {
+									"description": "Image to use, by default None",
+									"name": "image"
+								},
+								"sprite": {
+									"description": "Sprite to use, by default None",
+									"name": "sprite"
+								},
+								"nickname": {
+									"description": "Nickname to set, by default None",
+									"name": "nickname"
+								},
+								"url": {
+									"description": "Image URL to use, by default None",
+									"name": "url"
+								}
+							}
+						},
+						"digimon": {
+							"description": "Set a Digimon NPC as the current to use.",
+							"name": "digimon",
+							"params": {
+								"image": {
+									"description": "Image to use, by default None",
+									"name": "image"
+								},
+								"sprite": {
+									"description": "Sprite to use, by default None",
+									"name": "sprite"
+								},
+								"nickname": {
+									"description": "Nickname to set, by default None",
+									"name": "nickname"
+								},
+								"url": {
+									"description": "Image URL to use, by default None",
+									"name": "url"
+								}
+							}
+						},
+						"palworld": {
+							"description": "Set a Palworld NPC as the current to use.",
+							"name": "palworld",
+							"params": {
+								"image": {
+									"description": "Image to use, by default None",
+									"name": "image"
+								},
+								"sprite": {
+									"description": "Sprite to use, by default None",
+									"name": "sprite"
+								},
+								"nickname": {
+									"description": "Nickname to set, by default None",
+									"name": "nickname"
+								},
+								"url": {
+									"description": "Image URL to use, by default None",
+									"name": "url"
+								}
+							}
+						},
+						"dnd": {
+							"description": "Set a D&D NPC as the current to use.",
+							"name": "dnd",
+							"params": {
+								"image": {
+									"description": "Image to use, by default None",
+									"name": "image"
+								},
+								"sprite": {
+									"description": "Sprite to use, by default None",
+									"name": "sprite"
+								},
+								"nickname": {
+									"description": "Nickname to set, by default None",
+									"name": "nickname"
+								},
+								"url": {
+									"description": "Image URL to use, by default None",
+									"name": "url"
+								}
+							}
+						},
+						"other": {
+							"description": "Set a custom NPC as the current to use.",
+							"name": "other",
+							"params": {
+								"image": {
+									"description": "Image to use, by default None",
+									"name": "image"
+								},
+								"nickname": {
+									"description": "Nickname to set, by default None",
+									"name": "nickname"
+								},
+								"url": {
+									"description": "Image URL to use, by default None",
+									"name": "url"
+								}
+							}
+						}
+					},
+					"group_entries": {
+						"auto_created": "NPC Set, now your messages will be proxied as such",
+						"npc_created": "NPC Set, now you can use `d!say` or `/say`"
+					},
+					"params": {
+						"nickname": {
+							"description": "Nickname to set, by default None",
+							"name": "nickname"
 						},
 						"image": {
 							"description": "Image to use, by default None",
 							"name": "image"
 						},
-						"nickname": {
-							"description": "Nickname to use, by default same as NPC name",
-							"name": "nickname"
-						},
-						"npc": {
-							"description": "NPC to use, by default None",
-							"name": "npc"
+						"url": {
+							"description": "Image URL to use, by default None",
+							"name": "url"
 						}
 					}
 				},
@@ -2789,7 +2915,7 @@
 			"description": "Say something.",
 			"name": "say",
 			"entries": {
-				"no_proxy_set": "No proxy set, please use /use or /set to set one."
+				"no_proxy_set": "No proxy set, please use /auto to set one."
 			},
 			"params": {
 				"attachment": {
@@ -2822,227 +2948,6 @@
 			"entries": {
 				"no_message": "No message stored, use /store to store one."
 			}
-		},
-		"set": {
-			"group": {
-				"npc": {
-					"description": "Set a NPC as the current to use.",
-					"name": "npc",
-					"group": {
-						"pokemon": {
-							"description": "Set a Pokemon NPC as the current to use.",
-							"name": "pokemon",
-							"params": {
-								"emotion": {
-									"choices": {
-										"Angry": "Angry",
-										"Crying": "Crying",
-										"Determined": "Determined",
-										"Dizzy": "Dizzy",
-										"Happy": "Happy",
-										"Inspired": "Inspired",
-										"Joyous": "Joyous",
-										"Normal": "Normal",
-										"Pain": "Pain",
-										"Sad": "Sad",
-										"Shouting": "Shouting",
-										"Sigh": "Sigh",
-										"Special0": "Special0",
-										"Special1": "Special1",
-										"Special2": "Special2",
-										"Special3": "Special3",
-										"Stunned": "Stunned",
-										"Surprised": "Surprised",
-										"TearyEyed": "TearyEyed",
-										"Worried": "Worried"
-									},
-									"description": "Emotion to set, by default None",
-									"name": "emotion"
-								},
-								"image": {
-									"description": "Image to use, by default None",
-									"name": "image"
-								},
-								"shiny": {
-									"description": "Whether to use a shiny sprite, by default False",
-									"name": "shiny"
-								},
-								"sprite": {
-									"description": "Sprite to use, by default None",
-									"name": "sprite"
-								},
-								"nickname": {
-									"description": "Nickname to set, by default None",
-									"name": "nickname"
-								},
-								"url": {
-									"description": "Image URL to use, by default None",
-									"name": "url"
-								}
-							}
-						},
-						"trainer": {
-							"description": "Set a Pokemon Trainer NPC as the current to use.",
-							"name": "trainer",
-							"params": {
-								"image": {
-									"description": "Image to use, by default None",
-									"name": "image"
-								},
-								"sprite": {
-									"description": "Sprite to use, by default None",
-									"name": "sprite"
-								},
-								"nickname": {
-									"description": "Nickname to set, by default None",
-									"name": "nickname"
-								},
-								"url": {
-									"description": "Image URL to use, by default None",
-									"name": "url"
-								}
-							}
-						},
-						"digimon": {
-							"description": "Set a Digimon NPC as the current to use.",
-							"name": "digimon",
-							"params": {
-								"image": {
-									"description": "Image to use, by default None",
-									"name": "image"
-								},
-								"sprite": {
-									"description": "Sprite to use, by default None",
-									"name": "sprite"
-								},
-								"nickname": {
-									"description": "Nickname to set, by default None",
-									"name": "nickname"
-								},
-								"url": {
-									"description": "Image URL to use, by default None",
-									"name": "url"
-								}
-							}
-						},
-						"palworld": {
-							"description": "Set a Palworld NPC as the current to use.",
-							"name": "palworld",
-							"params": {
-								"image": {
-									"description": "Image to use, by default None",
-									"name": "image"
-								},
-								"sprite": {
-									"description": "Sprite to use, by default None",
-									"name": "sprite"
-								},
-								"nickname": {
-									"description": "Nickname to set, by default None",
-									"name": "nickname"
-								},
-								"url": {
-									"description": "Image URL to use, by default None",
-									"name": "url"
-								}
-							}
-						},
-						"dnd": {
-							"description": "Set a D&D NPC as the current to use.",
-							"name": "dnd",
-							"params": {
-								"image": {
-									"description": "Image to use, by default None",
-									"name": "image"
-								},
-								"sprite": {
-									"description": "Sprite to use, by default None",
-									"name": "sprite"
-								},
-								"nickname": {
-									"description": "Nickname to set, by default None",
-									"name": "nickname"
-								},
-								"url": {
-									"description": "Image URL to use, by default None",
-									"name": "url"
-								}
-							}
-						},
-						"other": {
-							"description": "Set a custom NPC as the current to use.",
-							"name": "other",
-							"params": {
-								"image": {
-									"description": "Image to use, by default None",
-									"name": "image"
-								},
-								"nickname": {
-									"description": "Nickname to set, by default None",
-									"name": "nickname"
-								},
-								"url": {
-									"description": "Image URL to use, by default None",
-									"name": "url"
-								}
-							}
-						}
-					},
-					"group_entries": {
-						"npc_created": "NPC Set, now you can use `d!say` or `/say`"
-					},
-					"params": {
-						"nickname": {
-							"description": "Nickname to set, by default None",
-							"name": "nickname"
-						},
-						"image": {
-							"description": "Image to use, by default None",
-							"name": "image"
-						},
-						"url": {
-							"description": "Image URL to use, by default None",
-							"name": "url"
-						}
-					}
-				},
-				"proxy": {
-					"description": "Set a proxy as the current to use.",
-					"name": "proxy",
-					"params": {
-						"proxy": {
-							"description": "Proxy to set",
-							"name": "proxy"
-						}
-					}
-				},
-				"shared": {
-					"description": "Set a shared proxy as the current to use.",
-					"name": "shared",
-					"params": {
-						"proxy": {
-							"description": "Proxy to set as the current",
-							"name": "proxy"
-						}
-					}
-				},
-				"variant": {
-					"description": "Set a variant from a proxy as the current to use.",
-					"name": "variant",
-					"params": {
-						"proxy": {
-							"description": "Proxy to set the variant for",
-							"name": "proxy"
-						},
-						"variant": {
-							"description": "Variant to set for use",
-							"name": "variant"
-						}
-					}
-				}
-			},
-			"description": "Set a proxy as the current one.",
-			"name": "set"
 		},
 		"settings": {
 			"description": "Show the settings page.",
