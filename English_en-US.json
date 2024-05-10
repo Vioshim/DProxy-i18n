@@ -2849,6 +2849,18 @@
 						"proxy": {
 							"description": "Proxy to read",
 							"name": "proxy"
+						},
+						"group": {
+							"description": "Group to list the variants from, by default None",
+							"name": "group"
+						},
+						"local": {
+							"description": "List local proxies, by default True",
+							"name": "local"
+						},
+						"showing_to": {
+							"description": "User to show the proxies to, by default None",
+							"name": "showing_to"
 						}
 					}
 				},
@@ -2859,6 +2871,18 @@
 						"proxy": {
 							"description": "Proxy to read",
 							"name": "proxy"
+						},
+						"group": {
+							"description": "Group to list the variants from, by default None",
+							"name": "group"
+						},
+						"local": {
+							"description": "List local proxies, by default True",
+							"name": "local"
+						},
+						"showing_to": {
+							"description": "User to show the proxies to, by default None",
+							"name": "showing_to"
 						}
 					}
 				},
@@ -2873,6 +2897,18 @@
 						"variant": {
 							"description": "Variant to read",
 							"name": "variant"
+						},
+						"group": {
+							"description": "Group to list the variants from, by default None",
+							"name": "group"
+						},
+						"local": {
+							"description": "List local proxies, by default True",
+							"name": "local"
+						},
+						"showing_to": {
+							"description": "User to show the proxies to, by default None",
+							"name": "showing_to"
 						}
 					}
 				}
