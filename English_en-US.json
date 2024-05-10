@@ -2383,6 +2383,16 @@
 			},
 			"name": "import"
 		},
+		"info": {
+			"description": "Read user information.",
+			"params": {
+				"user": {
+					"description": "User to read, by default you",
+					"name": "user"
+				}
+			},
+			"name": "info"
+		},
 		"latch": {
 			"description": "Last proxy becomes the default auto",
 			"name": "latch",
@@ -2831,13 +2841,43 @@
 			"name": "purge"
 		},
 		"read": {
-			"description": "Read user information.",
-			"params": {
-				"user": {
-					"description": "User to read, by default you",
-					"name": "user"
+			"group": {
+				"proxy": {
+					"description": "Read a proxy.",
+					"name": "proxy",
+					"params": {
+						"proxy": {
+							"description": "Proxy to read",
+							"name": "proxy"
+						}
+					}
+				},
+				"shared": {
+					"description": "Read a shared proxy.",
+					"name": "shared",
+					"params": {
+						"proxy": {
+							"description": "Proxy to read",
+							"name": "proxy"
+						}
+					}
+				},
+				"variant": {
+					"description": "Read a proxy's variant",
+					"name": "variant",
+					"params": {
+						"proxy": {
+							"description": "Base proxy of the variant",
+							"name": "proxy"
+						},
+						"variant": {
+							"description": "Variant to read",
+							"name": "variant"
+						}
+					}
 				}
 			},
+			"description": "Read a proxy.",
 			"name": "read"
 		},
 		"rename": {
