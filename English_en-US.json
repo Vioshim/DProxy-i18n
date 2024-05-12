@@ -3613,9 +3613,9 @@
 					"description": "Use it to not celebrate proxies' birthdays.",
 					"name": "No Celebrate Birthday"
 				},
-				"no_modern_replies": {
-					"description": "Whether to use modern replies.",
-					"name": "No Modern Replies"
+				"tupper_replies": {
+					"description": "Use tupperbox replies instead of buttons",
+					"name": "Tupperbox-like Replies"
 				},
 				"fix_sentence_endings": {
 					"description": "Use it to fix sentence endings.",
