@@ -3649,9 +3649,9 @@
 					"description": "Use it to not be able to correct typos.",
 					"name": "No Typo Correction"
 				},
-				"dm_notifications": {
-					"description": "Whether to send notifications in DM.",
-					"name": "DM Notifications"
+				"no_dm_notifications": {
+					"description": "Don't DM with emoji reactions",
+					"name": "No DM Notifications"
 				},
 				"parse_dates": {
 					"description": "Whether to parse dates to discord format.",
