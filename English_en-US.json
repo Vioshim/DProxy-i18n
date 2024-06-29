@@ -3591,6 +3591,10 @@
 				}
 			},
 			"Server": {
+				"embed_builder": {
+					"description": "Allow any user to use the embed builder.",
+					"name": "Embed Builder"
+				},
 				"prefix": {
 					"description": "Set the prefix for the server.",
 					"name": "Prefix"
