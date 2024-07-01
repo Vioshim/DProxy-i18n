@@ -3035,7 +3035,7 @@
 					"params": {
 						"tz": {
 							"description": "Timezone to use, by default None",
-							"name": "tz"
+							"name": "timezone"
 						}
 					}
 				},
