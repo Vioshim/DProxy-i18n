@@ -2120,9 +2120,9 @@
 					"description": "Command to execute",
 					"name": "command"
 				},
-				"text": {
+				"info": {
 					"description": "Text to execute the command in",
-					"name": "text"
+					"name": "info"
 				}
 			},
 			"entries": {
@@ -3033,9 +3033,9 @@
 					"description": "Set the AFK time for a user.",
 					"name": "afk",
 					"params": {
-						"time": {
-							"description": "Time to set, by default None",
-							"name": "time"
+						"tz": {
+							"description": "Timezone to use, by default None",
+							"name": "tz"
 						}
 					}
 				},
