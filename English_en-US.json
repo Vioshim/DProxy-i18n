@@ -2972,6 +2972,102 @@
 			"description": "Set the name for a proxy.",
 			"name": "rename"
 		},
+		"reproxy": {
+			"group": {
+				"npc": {
+					"description": "Resend a message with a NPC.",
+					"name": "npc",
+					"params": {
+						"emotion": {
+							"choices": {
+								"Angry": "Angry",
+								"Crying": "Crying",
+								"Determined": "Determined",
+								"Dizzy": "Dizzy",
+								"Happy": "Happy",
+								"Inspired": "Inspired",
+								"Joyous": "Joyous",
+								"Normal": "Normal",
+								"Pain": "Pain",
+								"Sad": "Sad",
+								"Shouting": "Shouting",
+								"Sigh": "Sigh",
+								"Special0": "Special0",
+								"Special1": "Special1",
+								"Special2": "Special2",
+								"Special3": "Special3",
+								"Stunned": "Stunned",
+								"Surprised": "Surprised",
+								"TearyEyed": "TearyEyed",
+								"Worried": "Worried"
+							},
+							"description": "Emotion to use, by default None",
+							"name": "emotion"
+						},
+						"franchise": {
+							"choices": {
+								"D&D": "D&D",
+								"Digimon": "Digimon",
+								"Palworld": "Palworld",
+								"Pokemon": "Pokemon",
+								"Pokemon Shiny": "Pokemon Shiny",
+								"Trainer": "Trainer"
+							},
+							"description": "Franchise to use for the NPC",
+							"name": "franchise"
+						},
+						"image": {
+							"description": "Image to use, by default None",
+							"name": "image"
+						},
+						"nickname": {
+							"description": "Nickname to use, by default same as NPC name",
+							"name": "nickname"
+						},
+						"npc": {
+							"description": "NPC to use, by default None",
+							"name": "npc"
+						}
+					}
+				},
+				"proxy": {
+					"description": "Resend a message with a proxy.",
+					"name": "proxy",
+					"params": {
+						"proxy": {
+							"description": "Proxy to use",
+							"name": "proxy"
+						}
+					}
+				},
+				"shared": {
+					"description": "Resend a message with a shared proxy.",
+					"name": "shared",
+					"params": {
+						"proxy": {
+							"description": "Proxy to use",
+							"name": "proxy"
+						}
+					}
+				},
+				"variant": {
+					"description": "Resend a message with a variant.",
+					"name": "variant",
+					"params": {
+						"proxy": {
+							"description": "Proxy to use the variant from",
+							"name": "proxy"
+						},
+						"variant": {
+							"description": "Variant to use",
+							"name": "variant"
+						}
+					}
+				}
+			},
+			"description": "Resend a message with a proxy.",
+			"name": "reproxy"
+		},
 		"roll": {
 			"description": "Roll a dice.",
 			"name": "roll",
