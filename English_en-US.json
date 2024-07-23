@@ -2555,6 +2555,26 @@
 			},
 			"name": "local"
 		},
+		"logging": {
+			"group": {
+				"set": {
+					"description": "Set logging for the server.",
+					"name": "set",
+					"params": {
+						"channel": {
+							"description": "Channel to set the logging channel to",
+							"name": "channel"
+						}
+					}
+				},
+				"clear": {
+					"description": "Remove logging for the server.",
+					"name": "clear"
+				}
+			},
+			"description": "Set the logging channel for the server.",
+			"name": "logging"
+		},
 		"nickname": {
 			"group": {
 				"proxy": {
