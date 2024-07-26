@@ -3707,6 +3707,10 @@
 				}
 			},
 			"Server": {
+				"embed_mode": {
+					"description": "Use embeds for messages instead.",
+					"name": "Embed Mode"
+				},
 				"embed_builder": {
 					"description": "Allow any user to use the embed builder.",
 					"name": "Embed Builder"
@@ -3718,6 +3722,10 @@
 				"nsfw": {
 					"description": "Enable NSFW proxies to be usable.",
 					"name": "NSFW"
+				},
+				"auto": {
+					"description": "Allow auto message proxying for the server.",
+					"name": "Auto Proxying"
 				}
 			},
 			"User": {
