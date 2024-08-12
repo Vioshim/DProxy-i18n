@@ -3169,6 +3169,16 @@
 						}
 					}
 				},
+				"system": {
+					"description": "Modify system tag",
+					"name": "system",
+					"params": {
+						"tags": {
+							"description": "System Tag, by default None",
+							"name": "tags"
+						}
+					}
+				},
 				"member": {
 					"description": "Show the member settings.",
 					"name": "member"
