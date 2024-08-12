@@ -3173,9 +3173,9 @@
 					"description": "Modify system tag",
 					"name": "system_tag",
 					"params": {
-						"tags": {
+						"tag": {
 							"description": "System Tag, by default None",
-							"name": "tags"
+							"name": "tag"
 						}
 					}
 				},
