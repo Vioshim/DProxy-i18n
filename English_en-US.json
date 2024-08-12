@@ -3169,9 +3169,9 @@
 						}
 					}
 				},
-				"system": {
+				"system_tag": {
 					"description": "Modify system tag",
-					"name": "system",
+					"name": "system_tag",
 					"params": {
 						"tags": {
 							"description": "System Tag, by default None",
