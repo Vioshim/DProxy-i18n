@@ -3798,6 +3798,10 @@
 				"parse_dates": {
 					"description": "Whether to parse dates to discord format.",
 					"name": "Parse Dates"
+				},
+				"allow_pinging": {
+					"description": "Lets people ping you 🔔",
+					"name": "Allow Pings"
 				}
 			}
 		},
