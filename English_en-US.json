@@ -1228,6 +1228,16 @@
 		},
 		"auto": {
 			"group": {
+				"info": {
+					"description": "Show auto info.",
+					"name": "info",
+					"params": {
+						"channel": {
+							"description": "Channel to show the auto info for",
+							"name": "channel"
+						}
+					}
+				},
 				"clear": {
 					"description": "Clear the auto tags.",
 					"name": "clear",
