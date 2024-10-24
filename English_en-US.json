@@ -1228,13 +1228,23 @@
 		},
 		"auto": {
 			"group": {
+				"info": {
+					"description": "Show auto info.",
+					"name": "info",
+					"params": {
+						"channel": {
+							"description": "Channel to show the auto info for",
+							"name": "channel"
+						}
+					}
+				},
 				"clear": {
 					"description": "Clear the auto tags.",
 					"name": "clear",
 					"params": {
-						"latch_mode": {
-							"description": "Last proxy becomes the default auto, by default False",
-							"name": "latch_mode"
+						"channel": {
+							"description": "Channel for setting rather than server",
+							"name": "channel"
 						}
 					}
 				},
@@ -1427,6 +1437,10 @@
 						"proxy": {
 							"description": "Proxy to set the auto tag for, by default None",
 							"name": "proxy"
+						},
+						"channel": {
+							"description": "Channel for setting rather than server",
+							"name": "channel"
 						}
 					}
 				},
@@ -1437,6 +1451,10 @@
 						"proxy": {
 							"description": "Shared proxy to set the auto tag for",
 							"name": "proxy"
+						},
+						"channel": {
+							"description": "Channel for setting rather than server",
+							"name": "channel"
 						}
 					}
 				},
@@ -1451,6 +1469,10 @@
 						"variant": {
 							"description": "Variant to set the auto tag for",
 							"name": "variant"
+						},
+						"channel": {
+							"description": "Channel for setting rather than server",
+							"name": "channel"
 						}
 					}
 				}
