@@ -1232,9 +1232,9 @@
 					"description": "Show auto info.",
 					"name": "info",
 					"params": {
-						"channel": {
-							"description": "Channel to show the auto info for",
-							"name": "channel"
+						"here": {
+							"description": "Check in current channel",
+							"name": "here"
 						}
 					}
 				},
@@ -1242,9 +1242,9 @@
 					"description": "Clear the auto tags.",
 					"name": "clear",
 					"params": {
-						"channel": {
-							"description": "Channel for setting rather than server",
-							"name": "channel"
+						"here": {
+							"description": "Clear auto in current channel",
+							"name": "here"
 						}
 					}
 				},
@@ -1438,9 +1438,9 @@
 							"description": "Proxy to set the auto tag for, by default None",
 							"name": "proxy"
 						},
-						"channel": {
-							"description": "Channel for setting rather than server",
-							"name": "channel"
+						"here": {
+							"description": "Set in current channel",
+							"name": "here"
 						}
 					}
 				},
@@ -1452,9 +1452,9 @@
 							"description": "Shared proxy to set the auto tag for",
 							"name": "proxy"
 						},
-						"channel": {
-							"description": "Channel for setting rather than server",
-							"name": "channel"
+						"here": {
+							"description": "Set in current channel",
+							"name": "here"
 						}
 					}
 				},
@@ -1470,9 +1470,9 @@
 							"description": "Variant to set the auto tag for",
 							"name": "variant"
 						},
-						"channel": {
-							"description": "Channel for setting rather than server",
-							"name": "channel"
+						"here": {
+							"description": "Set in current channel",
+							"name": "here"
 						}
 					}
 				}
