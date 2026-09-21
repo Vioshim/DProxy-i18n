@@ -3782,7 +3782,7 @@
 					"name": "Traditional Reply Style (No buttons)"
 				},
 				"proxy_visibility": {
-					"description": "Shows your proxy’s details from the Proxy menu",
+					"description": "Enables users to read your proxies's details.",
 					"name": "Proxy Visibility"
 				}
 			}
