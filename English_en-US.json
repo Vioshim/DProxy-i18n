@@ -3778,52 +3778,12 @@
 					"name": "No Celebrate Birthday"
 				},
 				"tupper_replies": {
-					"description": "Use tupperbox replies instead of buttons",
-					"name": "Tupperbox-like Replies"
+					"description": "Use a traditional reply style instead of buttons",
+					"name": "Traditional Reply Style (No buttons)"
 				},
-				"fix_sentence_endings": {
-					"description": "Use it to fix sentence endings.",
-					"name": "Fix Sentence Endings"
-				},
-				"replace_whitespace": {
-					"description": "Use it to replace whitespace.",
-					"name": "Replace Whitespace"
-				},
-				"no_break_long_words": {
-					"description": "Use it to not break long words.",
-					"name": "No Break Long Words"
-				},
-				"no_drop_whitespace": {
-					"description": "Use it to not drop whitespace.",
-					"name": "No Drop Whitespace"
-				},
-				"break_on_hyphens": {
-					"description": "Whether to break on hyphens.",
-					"name": "Break on Hyphens"
-				},
-				"silent_mode": {
-					"description": "Whether to use silent mode.",
-					"name": "Silent Mode"
-				},
-				"tts": {
-					"description": "Whether to use TTS.",
-					"name": "TTS"
-				},
-				"no_typo_correction": {
-					"description": "Use it to not be able to correct typos.",
-					"name": "No Typo Correction"
-				},
-				"no_dm_notifications": {
-					"description": "Don't DM with emoji reactions",
-					"name": "No DM Notifications"
-				},
-				"parse_dates": {
-					"description": "Whether to parse dates to discord format.",
-					"name": "Parse Dates"
-				},
-				"allow_pinging": {
-					"description": "Lets people ping you 🔔",
-					"name": "Allow Pings"
+				"privacy_enabled": {
+					"description": "Hides your proxy’s details from the Proxy menu",
+					"name": "Privacy Enabled"
 				}
 			}
 		},
