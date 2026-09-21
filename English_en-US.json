@@ -3781,9 +3781,9 @@
 					"description": "Use a traditional reply style instead of buttons",
 					"name": "Traditional Reply Style (No buttons)"
 				},
-				"privacy_enabled": {
-					"description": "Hides your proxy’s details from the Proxy menu",
-					"name": "Privacy Enabled"
+				"proxy_visibility": {
+					"description": "Shows your proxy’s details from the Proxy menu",
+					"name": "Proxy Visibility"
 				}
 			}
 		},
