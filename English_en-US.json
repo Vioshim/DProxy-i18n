@@ -3784,6 +3784,10 @@
 				"proxy_visibility": {
 					"description": "Enables users to read your proxies's details.",
 					"name": "Proxy Visibility"
+				},
+				"split_emoji_lines": {
+					"description": "Send emoji-only lines as their own messages.",
+					"name": "Separate Emoji Lines"
 				}
 			}
 		},
