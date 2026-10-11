@@ -3788,6 +3788,10 @@
 				"split_emoji_lines": {
 					"description": "Send emoji-only lines as their own messages.",
 					"name": "Separate Emoji Lines"
+				},
+				"no_typo_correction":{
+					"description": "Disables correcting typos in messages using *",
+					"name": "Disable Typo Correction"
 				}
 			}
 		},
