@@ -3789,9 +3789,13 @@
 					"description": "Keep emoji-only lines in messages.",
 					"name": "Keep Emoji Lines"
 				},
-				"no_typo_correction":{
+				"no_typo_correction": {
 					"description": "Disables correcting typos in messages using *",
 					"name": "Disable Typo Correction"
+				},
+				"v2_text": {
+					"description": "Enables messages with 4000 characters.",
+					"name": "Send Text as V2 Components"
 				}
 			}
 		},
