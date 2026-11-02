@@ -3758,10 +3758,6 @@
 				"auto": {
 					"description": "Allow auto message proxying for the server.",
 					"name": "Auto Proxying"
-				},
-				"slash_only": {
-					"description": "Only allow slash commands.",
-					"name": "Slash Only"
 				}
 			},
 			"User": {
